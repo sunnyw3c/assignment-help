@@ -1,3 +1,180 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Programming Website Custom Styles */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Code Background Animation */
+@keyframes code-flow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
+.code-bg {
+    animation: code-flow 20s linear infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Programming Language Icons */
+.lang-icon {
+    transition: all 0.3s ease;
+}
+
+.lang-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Code Syntax Highlighting Styles */
+.code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.code-keyword { color: #569cd6; }
+.code-string { color: #ce9178; }
+.code-comment { color: #6a9955; font-style: italic; }
+.code-function { color: #dcdcaa; }
+.code-variable { color: #9cdcfe; }
+
+/* Custom Button Animations */
+.btn-hover-effect {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-hover-effect:hover::before {
+    left: 100%;
+}
+
+/* Programming Service Cards */
+.service-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1);
+}
+
+/* Form Styling */
+.form-input {
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.1);
+}
+
+/* File Upload Styling */
+.file-upload-area {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.file-upload-area:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(59, 130, 246, 0.05));
+    border-color: #8b5cf6;
+}
+
+.file-upload-area.dragging {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+    border-color: #8b5cf6;
+    transform: scale(1.02);
+}
+
+/* Loading Animation */
+@keyframes pulse-purple {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.loading-pulse {
+    animation: pulse-purple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Trust Indicators Animation */
+@keyframes counter-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.trust-indicator {
+    animation: counter-up 0.6s ease-out;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-enter {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+        line-height: 1.4;
+    }
+}
+
+/* Dark Mode Support (if needed later) */
+@media (prefers-color-scheme: dark) {
+    .auto-dark {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+}
+
+/* Custom animations and utilities that extend Tailwind */
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-1000 { animation-delay: 1000ms; }
