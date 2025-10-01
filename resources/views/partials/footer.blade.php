@@ -1,4 +1,4 @@
-<footer class="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white mt-16">
+<footer class="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
     <!-- Main Footer Content -->
     <div class="container mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -6,22 +6,28 @@
             <div class="lg:col-span-2">
                 <div class="flex items-center space-x-2 mb-6">
                     <div class="text-3xl">💻</div>
-                    <span class="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">CodeHelp</span>
+                    <span
+                        class="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">CodeHelp</span>
                 </div>
                 <p class="text-gray-300 mb-6 text-lg leading-relaxed max-w-md">
-                    Get expert programming help 24/7. From Python to Java, our skilled developers are ready to assist with your coding challenges.
+                    Get expert programming help 24/7. From Python to Java, our skilled developers are ready to assist
+                    with your coding challenges.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-500 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <a href="#"
+                        class="w-10 h-10 bg-purple-600 hover:bg-purple-500 rounded-full flex items-center justify-center transition-colors duration-200">
                         <span class="text-white text-sm font-bold">f</span>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-blue-500 hover:bg-blue-400 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <a href="#"
+                        class="w-10 h-10 bg-blue-500 hover:bg-blue-400 rounded-full flex items-center justify-center transition-colors duration-200">
                         <span class="text-white text-sm font-bold">t</span>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <a href="#"
+                        class="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors duration-200">
                         <span class="text-white text-sm font-bold">y</span>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-blue-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <a href="#"
+                        class="w-10 h-10 bg-blue-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
                         <span class="text-white text-sm font-bold">in</span>
                     </a>
                 </div>
@@ -31,12 +37,24 @@
             <div>
                 <h4 class="text-xl font-bold mb-6 text-orange-400">Programming Languages</h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🐍</span>Python Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">☕</span>Java Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🟨</span>JavaScript Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">⚡</span>C++ Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🟦</span>C# Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🟣</span>PHP Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🐍</span>Python Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">☕</span>Java Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🟨</span>JavaScript Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">⚡</span>C++ Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🟦</span>C# Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🟣</span>PHP Help</a></li>
                 </ul>
             </div>
 
@@ -44,12 +62,24 @@
             <div>
                 <h4 class="text-xl font-bold mb-6 text-orange-400">Our Services</h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🔧</span>Code Debugging</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">💻</span>Project Development</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">📝</span>Code Review</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🎯</span>Programming Tutoring</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">📚</span>Assignment Help</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span class="mr-2">🧪</span>Testing & QA</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🔧</span>Code Debugging</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">💻</span>Project Development</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">📝</span>Code Review</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🎯</span>Programming Tutoring</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">📚</span>Assignment Help</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🧪</span>Testing & QA</a></li>
                 </ul>
             </div>
         </div>
@@ -71,7 +101,8 @@
             <div>
                 <h4 class="text-lg font-bold mb-4 text-white">Quick Links</h4>
                 <ul class="space-y-2 text-gray-300">
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">How It Works</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">How It Works</a>
+                    </li>
                     <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">Pricing</a></li>
                     <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">FAQ</a></li>
                     <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>

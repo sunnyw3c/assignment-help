@@ -93,7 +93,7 @@
                     <!-- Trust Indicators -->
                     <div class="grid grid-cols-3 gap-6">
                         <div class="text-center">
-                            <div class="text-2xl font-bold text-purple-600 mb-1">12+</div>
+                            <div class="text-2xl font-bold text-purple-600 mb-1">{{ count($services) }}+</div>
                             <div class="text-sm text-gray-500">Services</div>
                         </div>
                         <div class="text-center">
@@ -118,10 +118,10 @@
                         <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center space-x-3">
                                 <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xl font-bold">CS</span>
+                                    <span class="text-white text-xl font-bold">PS</span>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-bold text-gray-900">CodeHelp Services</h3>
+                                    <h3 class="text-lg font-bold text-gray-900">Programming Services</h3>
                                     <div class="flex items-center text-sm text-green-600">
                                         <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
                                         Live Dashboard
@@ -136,26 +136,20 @@
 
                         <!-- Services Grid -->
                         <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="group p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">🌐</div>
-                                <div class="text-sm font-semibold text-purple-700">Web Dev</div>
-                                <div class="text-xs text-purple-600">950+ projects</div>
-                            </div>
-                            <div class="group p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">📱</div>
-                                <div class="text-sm font-semibold text-blue-700">Mobile Apps</div>
-                                <div class="text-xs text-blue-600">420+ projects</div>
-                            </div>
-                            <div class="group p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
-                                <div class="text-sm font-semibold text-green-700">AI/ML</div>
-                                <div class="text-xs text-green-600">350+ projects</div>
-                            </div>
-                            <div class="group p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">☁️</div>
-                                <div class="text-sm font-semibold text-orange-700">Cloud</div>
-                                <div class="text-xs text-orange-600">520+ projects</div>
-                            </div>
+                            @php
+                                $featuredServices = array_slice($services, 0, 4);
+                            @endphp
+                            @foreach($featuredServices as $index => $service)
+                                @php
+                                    $colors = ['purple', 'blue', 'green', 'orange'];
+                                    $color = $colors[$index % 4];
+                                @endphp
+                                <div class="group p-4 bg-gradient-to-br from-{{ $color }}-50 to-{{ $color }}-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
+                                    <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">{{ $service['icon'] }}</div>
+                                    <div class="text-sm font-semibold text-{{ $color }}-700">{{ Str::limit($service['name'], 15) }}</div>
+                                    <div class="text-xs text-{{ $color }}-600">{{ $service['orders_completed'] }}+ projects</div>
+                                </div>
+                            @endforeach
                         </div>
 
                         <!-- Live Activity Feed -->
@@ -166,11 +160,11 @@
                                         <span class="text-green-600 text-xs">✓</span>
                                     </div>
                                     <div>
-                                        <div class="text-sm font-medium text-gray-900">React Project Completed</div>
+                                        <div class="text-sm font-medium text-gray-900">{{ $services[0]['name'] ?? 'Project' }} Completed</div>
                                         <div class="text-xs text-gray-500">2 minutes ago</div>
                                     </div>
                                 </div>
-                                <div class="text-green-600 font-semibold text-sm">$45</div>
+                                <div class="text-green-600 font-semibold text-sm">{{ $services[0]['price_from'] ?? '$45' }}</div>
                             </div>
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                 <div class="flex items-center space-x-3">
@@ -178,11 +172,11 @@
                                         <span class="text-blue-600 text-xs">●</span>
                                     </div>
                                     <div>
-                                        <div class="text-sm font-medium text-gray-900">Python ML Model</div>
+                                        <div class="text-sm font-medium text-gray-900">{{ $services[1]['name'] ?? 'Project' }}</div>
                                         <div class="text-xs text-gray-500">In progress</div>
                                     </div>
                                 </div>
-                                <div class="text-blue-600 font-semibold text-sm">$60</div>
+                                <div class="text-blue-600 font-semibold text-sm">{{ $services[1]['price_from'] ?? '$60' }}</div>
                             </div>
                         </div>
                     </div>
@@ -295,13 +289,21 @@
                                 </div>
                             </div>
 
-                            <a href="{{ route('assignments.create') }}" class="group/btn w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">{{ $service['icon'] }}</span>
-                                Get {{ $service['name'] }} Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                            <div class="flex gap-3">
+                                <a href="{{ route('services.show', $service['slug']) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
+                                    Learn More
+                                    <svg class="ml-2 w-4 h-4 group-hover/learn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                <a href="{{ route('assignments.create') }}" class="group/btn flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                    <span class="mr-2">🚀</span>
+                                    Get Help
+                                    <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -437,6 +439,120 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Programming Services Information -->
+    <section class="py-24 bg-white relative overflow-hidden" aria-labelledby="comprehensive-info-heading">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
+                        <span class="mr-3 text-xl">📚</span>
+                        COMPREHENSIVE PROGRAMMING SOLUTIONS
+                    </div>
+                    <h2 id="comprehensive-info-heading" class="text-4xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">
+                        Everything You Need to Know About Our
+                        <br>
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Programming Services</span>
+                    </h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Left Column -->
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-lg">🎯</span>
+                                </span>
+                                Our Programming Expertise
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Our team of certified programming professionals brings together decades of combined experience across multiple programming languages, frameworks, and development methodologies. We specialize in delivering custom software solutions that meet academic requirements while maintaining industry-standard best practices.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                From beginner-level assignments involving basic syntax and algorithms to advanced enterprise-level applications incorporating complex design patterns, microservices architecture, and cloud deployment strategies, our experts handle projects of all complexity levels with precision and attention to detail.
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-lg">⚡</span>
+                                </span>
+                                Quality Assurance Process
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Every programming project undergoes our rigorous quality assurance process, which includes comprehensive code review, testing across multiple environments, and verification against academic requirements. Our multi-stage review system ensures that your code not only works flawlessly but also demonstrates best practices in software engineering.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                We implement automated testing frameworks, conduct manual code audits, and perform security assessments to guarantee that your delivered solution meets the highest standards of quality, performance, and reliability that academic institutions expect.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-lg">🚀</span>
+                                </span>
+                                Technology Stack Coverage
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Our comprehensive programming services cover an extensive range of technologies including but not limited to Python, Java, JavaScript, C++, C#, Ruby, PHP, Go, Rust, and emerging languages like Swift and Kotlin. We're equally proficient in modern frameworks such as React, Angular, Vue.js, Django, Flask, Spring Boot, Laravel, and Node.js.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Whether you need help with database design using MySQL, PostgreSQL, MongoDB, or Redis, cloud computing solutions on AWS, Azure, or Google Cloud Platform, or mobile app development for iOS and Android platforms, our diverse expertise ensures we can handle any programming challenge you encounter.
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                <span class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-lg">📋</span>
+                                </span>
+                                Academic Excellence Support
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Understanding the unique demands of academic programming assignments, we provide detailed documentation, comprehensive comments explaining complex logic, and educational resources that help you understand the implemented solutions. Our goal is not just to complete your assignment but to enhance your learning experience.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Each delivered project includes step-by-step explanations, alternative implementation approaches, performance analysis, and suggestions for further improvement. We also provide ongoing support to help you understand the code and prepare for related coursework or examinations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Statistics Section -->
+                <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold mb-4">Trusted by Students Worldwide</h3>
+                        <p class="text-gray-300 text-lg">Our programming services have helped thousands of students achieve academic excellence</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="text-4xl font-black text-blue-400 mb-2">2500+</div>
+                            <div class="text-gray-300">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black text-green-400 mb-2">150+</div>
+                            <div class="text-gray-300">Programming Languages</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black text-purple-400 mb-2">98.5%</div>
+                            <div class="text-gray-300">Client Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black text-orange-400 mb-2">24/7</div>
+                            <div class="text-gray-300">Expert Support</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
