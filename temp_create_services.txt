@@ -1,0 +1,6 @@
+api-development
+devops
+game-development
+cybersecurity
+desktop-app
+cloud-computing

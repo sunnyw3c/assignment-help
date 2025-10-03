@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Mobile App Development - Expert Help Available')
-@section('description', 'Get professional help with mobile app development projects. Expert developers available 24/7
-    for React Native, Flutter, Swift, Kotlin, and more.')
+@section('title', 'API Development - Expert Help Available')
+@section('description', 'Get professional help with API development projects. Expert developers available 24/7 for REST APIs, GraphQL, microservices, authentication, and API integration.')
 
 @section('content')
     <div class="min-h-screen">
@@ -32,86 +31,80 @@
 
             <!-- Enhanced Floating Code Snippets -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <!-- Floating React Native -->
+                <!-- Floating REST API -->
                 <div
                     class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">App.jsx</span>
+                        <span class="text-gray-400 text-xs">api.js</span>
                     </div>
-                    <div class="text-green-400">// React Native Component</div>
-                    <div>const <span class="text-yellow-400">MobileApp</span> = () => {</div>
-                    <div class="ml-2 text-orange-400">return &lt;AppNavigator /&gt;;</div>
+                    <div><span class="text-green-400">app</span>.<span class="text-yellow-400">get</span>(<span class="text-orange-400">'/api/users'</span>, <span class="text-blue-400">async</span> (req, res) => {</div>
+                    <div class="ml-2"><span class="text-purple-400">const</span> users = <span class="text-blue-400">await</span> User.<span class="text-yellow-400">findAll</span>();</div>
+                    <div class="ml-2">res.<span class="text-yellow-400">json</span>(users);</div>
+                    <div>});</div>
+                </div>
+
+                <!-- Floating GraphQL -->
+                <div
+                    class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">schema.graphql</span>
+                    </div>
+                    <div><span class="text-purple-400">type</span> <span class="text-yellow-400">Query</span> {</div>
+                    <div class="ml-2">users: [<span class="text-blue-400">User</span>]</div>
+                    <div class="ml-2">user(id: <span class="text-blue-400">ID!</span>): <span class="text-blue-400">User</span></div>
+                    <div>}</div>
+                </div>
+
+                <!-- Floating JWT Auth -->
+                <div
+                    class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">auth.js</span>
+                    </div>
+                    <div><span class="text-purple-400">const</span> token = jwt.<span class="text-yellow-400">sign</span>({</div>
+                    <div class="ml-2">userId: user.id</div>
+                    <div>}, <span class="text-orange-400">SECRET_KEY</span>);</div>
+                </div>
+
+                <!-- Floating Middleware -->
+                <div
+                    class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">middleware.js</span>
+                    </div>
+                    <div><span class="text-purple-400">const</span> <span class="text-yellow-400">auth</span> = (req, res, next) => {</div>
+                    <div class="ml-2"><span class="text-purple-400">const</span> token = req.headers.auth;</div>
+                    <div class="ml-2"><span class="text-blue-400">if</span> (token) <span class="text-yellow-400">next</span>();</div>
                     <div>};</div>
                 </div>
 
-                <!-- Floating Flutter -->
-                <div
-                    class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">MyApp.dart</span>
-                    </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">MyApp</span> extends StatelessWidget {</div>
-                    <div class="ml-2 text-green-400">Widget build(context) {</div>
-                    <div class="ml-4">return MaterialApp();</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Swift -->
-                <div
-                    class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">ViewController.swift</span>
-                    </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">ViewController</span>: UIViewController {</div>
-                    <div class="ml-2 text-green-400">override func viewDidLoad() {</div>
-                    <div class="ml-4">super.viewDidLoad()</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Kotlin -->
-                <div
-                    class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">MainActivity.kt</span>
-                    </div>
-                    <div class="text-blue-400">class</div>
-                    <div><span class="text-yellow-400">MainActivity</span> : AppCompatActivity() {</div>
-                    <div class="ml-2 text-green-400">override fun onCreate() {</div>
-                    <div class="ml-4">setContentView(R.layout.main)</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Firebase Config -->
-                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
+                <!-- Floating Express Route -->
+                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
                     style="animation-delay: 1s;">
                     <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">firebase.js</span>
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">routes.js</span>
                     </div>
-                    <div><span class="text-purple-400">import</span> { initializeApp } from 'firebase/app';</div>
-                    <div><span class="text-purple-400">const</span> app = initializeApp(config);</div>
+                    <div>router.<span class="text-yellow-400">post</span>(<span class="text-orange-400">'/api/login'</span>,</div>
+                    <div class="ml-2">validateBody,</div>
+                    <div class="ml-2">authController.<span class="text-yellow-400">login</span></div>
+                    <div>);</div>
                 </div>
 
-                <!-- Floating API Integration -->
-                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
+                <!-- Floating API Response -->
+                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
                     style="animation-delay: 2s;">
                     <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">api.js</span>
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">response.json</span>
                     </div>
-                    <div><span class="text-purple-400">const</span> <span class="text-blue-400">fetchData</span> = <span
-                            class="text-yellow-400">async</span> () =&gt; {</div>
-                    <div class="ml-2">const response = await fetch('/api');</div>
-                    <div class="ml-2">return response.json();</div>
+                    <div>{</div>
+                    <div class="ml-2"><span class="text-blue-400">"status"</span>: <span class="text-orange-400">"success"</span>,</div>
+                    <div class="ml-2"><span class="text-blue-400">"data"</span>: [...]</div>
                     <div>}</div>
                 </div>
             </div>
@@ -122,20 +115,17 @@
                     <div>
                         <div
                             class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            📱 Mobile App Development Expert Help
+                            🔗 API Development Expert Help
                         </div>
 
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Professional<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Mobile
-                                App</span><br>
-                            Development
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">API Development</span><br>
+                            Solutions
                         </h1>
 
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Get expert help with your mobile app development projects. From React Native and Flutter to
-                            native iOS and Android development, our experienced developers deliver high-quality mobile
-                            solutions.
+                            Get expert help with API development projects. From RESTful APIs and GraphQL to microservices architecture and API integration, our experienced developers deliver secure, scalable API solutions.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -156,11 +146,11 @@
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-1">✓</span>
-                                <span>500+ apps developed</span>
+                                <span>650+ APIs built</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-blue-500 mr-1">⚡</span>
-                                <span>3-7 day delivery</span>
+                                <span>12-48 hour delivery</span>
                             </div>
                         </div>
                     </div>
@@ -175,33 +165,27 @@
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
-                                <div class="ml-4 text-gray-400 text-sm font-mono">MobileApp.dart</div>
+                                <div class="ml-4 text-gray-400 text-sm font-mono">api-endpoint.js</div>
                             </div>
 
                             <!-- Code Content -->
                             <div class="font-mono text-sm space-y-1 p-6">
-                                <div class="text-purple-400">// Mobile App Development Solution</div>
-                                <div class="text-blue-400">class <span class="text-yellow-400">MobileApp</span> extends
-                                    StatelessWidget {</div>
-                                <div class="text-gray-300 ml-4">@override</div>
-                                <div class="text-gray-300 ml-4">Widget build(BuildContext context) {</div>
-                                <div class="text-gray-300 ml-8">return MaterialApp(</div>
-                                <div class="text-gray-300 ml-12">home: <span class="text-green-400">MainScreen()</span>,
-                                </div>
-                                <div class="text-gray-300 ml-8">);</div>
-                                <div class="text-gray-300 ml-4">}</div>
-                                <div class="text-blue-400">}</div>
+                                <div class="text-purple-400">// RESTful API Endpoint</div>
+                                <div class="text-green-400">app<span class="text-white">.</span><span class="text-yellow-400">get</span><span class="text-white">(</span><span class="text-orange-400">'/api/data'</span><span class="text-white">, </span><span class="text-blue-400">async</span> <span class="text-white">(req, res)</span> <span class="text-blue-400">=></span> <span class="text-white">{</span></div>
+                                <div class="ml-4 text-purple-400">const <span class="text-cyan-400">data</span> <span class="text-white">=</span> <span class="text-blue-400">await</span> fetch<span class="text-white">();</span></div>
+                                <div class="ml-4 text-white">res<span class="text-white">.</span><span class="text-yellow-400">json</span><span class="text-white">(</span>data<span class="text-white">);</span></div>
+                                <div class="text-white">});</div>
                                 <div class="text-gray-500"></div>
-                                <div class="text-purple-400">// Expert Available 4.8/5 ⭐</div>
+                                <div class="text-purple-400">// Secure & Scalable API 4.8/5 ⭐</div>
                             </div>
                         </div>
 
                         <!-- Floating Elements -->
                         <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-bounce">
-                            <div class="text-2xl">📱</div>
+                            <div class="text-2xl">🔗</div>
                         </div>
                         <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-pulse">
-                            <div class="text-2xl">🚀</div>
+                            <div class="text-2xl">⚡</div>
                         </div>
                     </div>
                 </div>
@@ -212,107 +196,106 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mobile Technologies We Master</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert mobile developers work with cutting-edge
-                        technologies to build native and cross-platform mobile applications.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">API Technologies We Master</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert API developers work with modern frameworks, protocols, and tools to build robust, scalable APIs.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Cross-Platform -->
+                    <!-- API Frameworks -->
                     <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Cross-Platform</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">API Frameworks</h3>
                         <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">⚛️</div>
-                                    <h4 class="font-semibold text-gray-900">React Native</h4>
+                                    <div class="text-3xl mb-2">🚀</div>
+                                    <h4 class="font-semibold text-gray-900">Express.js</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎯</div>
-                                    <h4 class="font-semibold text-gray-900">Flutter</h4>
+                                    <div class="text-3xl mb-2">⚙️</div>
+                                    <h4 class="font-semibold text-gray-900">FastAPI</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">⚡</div>
-                                    <h4 class="font-semibold text-gray-900">Xamarin</h4>
+                                    <div class="text-3xl mb-2">🔷</div>
+                                    <h4 class="font-semibold text-gray-900">Django REST</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- iOS Development -->
+                    <!-- API Standards -->
                     <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">iOS Development</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🍎</div>
-                                    <h4 class="font-semibold text-gray-900">Swift</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">📱</div>
-                                    <h4 class="font-semibold text-gray-900">Objective-C</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎨</div>
-                                    <h4 class="font-semibold text-gray-900">SwiftUI</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Android Development -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Android Development</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">API Standards</h3>
                         <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🤖</div>
-                                    <h4 class="font-semibold text-gray-900">Kotlin</h4>
+                                    <div class="text-3xl mb-2">🔗</div>
+                                    <h4 class="font-semibold text-gray-900">REST</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">☕</div>
-                                    <h4 class="font-semibold text-gray-900">Java</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎯</div>
-                                    <h4 class="font-semibold text-gray-900">Jetpack Compose</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Backend & APIs -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Backend & APIs</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔥</div>
-                                    <h4 class="font-semibold text-gray-900">Firebase</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">🌐</div>
-                                    <h4 class="font-semibold text-gray-900">REST APIs</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
                                     <div class="text-3xl mb-2">📊</div>
                                     <h4 class="font-semibold text-gray-900">GraphQL</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
+                                    <div class="text-3xl mb-2">⚡</div>
+                                    <h4 class="font-semibold text-gray-900">gRPC</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Authentication -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Authentication</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">🔐</div>
+                                    <h4 class="font-semibold text-gray-900">JWT</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">🛡️</div>
+                                    <h4 class="font-semibold text-gray-900">OAuth 2.0</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">🔑</div>
+                                    <h4 class="font-semibold text-gray-900">API Keys</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentation -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Documentation</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">📝</div>
+                                    <h4 class="font-semibold text-gray-900">Swagger</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">📖</div>
+                                    <h4 class="font-semibold text-gray-900">Postman</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">📚</div>
+                                    <h4 class="font-semibold text-gray-900">OpenAPI</h4>
                                 </div>
                             </div>
                         </div>
@@ -326,31 +309,30 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on app complexity.
-                        No hidden fees, no surprises.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on API complexity and features. No hidden fees, no surprises.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Mobile App</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $75</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Basic API</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $40</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Simple mobile app features
+                                    Simple REST API
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Basic UI/UX design
+                                    CRUD operations
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    3-5 day delivery
+                                    12-24 hour delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Documentation included
+                                    Basic documentation
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -367,28 +349,28 @@
                             Most Popular
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Mobile App</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $150</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced API</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $90</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Cross-platform development
+                                    Complex REST/GraphQL API
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    API integration
+                                    JWT authentication
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    5-7 day delivery
+                                    24-48 hour delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Testing & debugging
+                                    Rate limiting
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    App store guidelines
+                                    Swagger docs
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -400,28 +382,28 @@
 
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Mobile Solution</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $300</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise API</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $180</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Full-featured mobile app
+                                    Microservices architecture
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Backend integration
+                                    OAuth 2.0 integration
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    7-14 day delivery
+                                    2-3 day delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    App store deployment
+                                    API gateway setup
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Post-launch support
+                                    Full testing suite
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -438,9 +420,8 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mobile App Development Process</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering high-quality
-                        mobile applications.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our API Development Process</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering secure, scalable, and well-documented APIs.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -448,18 +429,16 @@
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">1</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Requirements Analysis</h3>
-                        <p class="text-gray-600">We analyze your app requirements, target platform, and user experience
-                            needs.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">API Design</h3>
+                        <p class="text-gray-600">We design RESTful or GraphQL endpoints with clear resource structures and efficient data models.</p>
                     </div>
 
                     <div class="text-center">
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">2</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Design & Architecture</h3>
-                        <p class="text-gray-600">Create wireframes, UI design, and technical architecture for your mobile
-                            app.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Authentication & Security</h3>
+                        <p class="text-gray-600">Implement JWT, OAuth 2.0, or API key authentication with proper validation and rate limiting.</p>
                     </div>
 
                     <div class="text-center">
@@ -467,17 +446,15 @@
                             <span class="text-2xl font-bold text-purple-600">3</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Development & Testing</h3>
-                        <p class="text-gray-600">Build your app with clean code, implement features, and conduct thorough
-                            testing.</p>
+                        <p class="text-gray-600">Build endpoints with error handling, input validation, and comprehensive API testing.</p>
                     </div>
 
                     <div class="text-center">
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">4</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Delivery & Support</h3>
-                        <p class="text-gray-600">Deliver your completed app with documentation and deployment assistance.
-                        </p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Documentation & Delivery</h3>
+                        <p class="text-gray-600">Create Swagger/OpenAPI docs, provide Postman collections, and deliver complete API package.</p>
                     </div>
                 </div>
             </div>
@@ -488,8 +465,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
-                        mobile app development projects.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their API development projects.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -499,16 +475,14 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Incredible work on my React Native app! The developer created a
-                            beautiful, functional mobile app that works perfectly on both iOS and Android. Excellent
-                            communication!"</p>
+                        <p class="text-gray-600 mb-6">"Perfect REST API for my mobile app backend! Clean code, JWT authentication, and excellent Swagger documentation. The expert even added rate limiting. Highly recommend!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                A</div>
+                                M</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Alex T.</div>
-                                <div class="text-sm text-gray-500">Mobile Development Student</div>
+                                <div class="font-semibold text-gray-900">Marcus T.</div>
+                                <div class="text-sm text-gray-500">Mobile Dev Student</div>
                             </div>
                         </div>
                     </div>
@@ -519,16 +493,14 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Amazing Flutter app development! The expert delivered a
-                            cross-platform app with smooth animations and perfect performance. Highly recommend for mobile
-                            projects."</p>
+                        <p class="text-gray-600 mb-6">"Amazing GraphQL API implementation! The schema design was perfect for my requirements. Got full CRUD operations with filtering and pagination. Great work!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                J</div>
+                                E</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Jessica L.</div>
-                                <div class="text-sm text-gray-500">Computer Science Student</div>
+                                <div class="font-semibold text-gray-900">Emily R.</div>
+                                <div class="text-sm text-gray-500">Web Dev Student</div>
                             </div>
                         </div>
                     </div>
@@ -539,15 +511,14 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Professional iOS development with Swift! The app was delivered ahead
-                            of schedule with clean code and excellent documentation. Great experience overall!"</p>
+                        <p class="text-gray-600 mb-6">"Professional microservices architecture! The developer built separate services with API gateway integration. Excellent documentation and deployment guide included!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                R</div>
+                                J</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Ryan M.</div>
-                                <div class="text-sm text-gray-500">iOS Development Student</div>
+                                <div class="font-semibold text-gray-900">James W.</div>
+                                <div class="text-sm text-gray-500">Software Engineering Student</div>
                             </div>
                         </div>
                     </div>
@@ -560,46 +531,33 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our mobile app
-                        development service.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our API development service.</p>
                 </div>
 
                 <div class="max-w-3xl mx-auto space-y-6">
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Which mobile platforms do you support?</h3>
-                        <p class="text-gray-600">We develop for both iOS and Android platforms, using native technologies
-                            (Swift, Kotlin) or cross-platform frameworks (React Native, Flutter). We can help you choose the
-                            best approach for your project.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What types of APIs can you build?</h3>
+                        <p class="text-gray-600">We build RESTful APIs, GraphQL APIs, gRPC services, microservices, webhooks, and third-party API integrations. We work with any framework including Express, FastAPI, Django REST, Spring Boot, and more.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How long does mobile app development take?
-                        </h3>
-                        <p class="text-gray-600">Development time varies by complexity. Simple apps take 3-5 days, advanced
-                            apps with multiple features take 5-7 days, and complete solutions with backend integration take
-                            7-14 days.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you implement authentication and security?</h3>
+                        <p class="text-gray-600">Yes! We implement JWT authentication, OAuth 2.0, API key management, rate limiting, input validation, and security best practices. All APIs include proper error handling and security measures.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you help with app store submission?</h3>
-                        <p class="text-gray-600">Yes! For complete mobile solutions, we provide guidance on app store
-                            submission requirements, help with app store optimization, and assist with the deployment
-                            process for both iOS App Store and Google Play Store.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Is API documentation included?</h3>
+                        <p class="text-gray-600">Absolutely! We provide comprehensive API documentation using Swagger/OpenAPI specifications, Postman collections for testing, and clear README files with endpoint descriptions and examples.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you integrate APIs and backend services?
-                        </h3>
-                        <p class="text-gray-600">Absolutely! We can integrate your app with REST APIs, GraphQL, Firebase,
-                            authentication services, payment gateways, and other third-party services your app requires.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you integrate third-party APIs?</h3>
+                        <p class="text-gray-600">Yes, we can integrate payment gateways (Stripe, PayPal), social media APIs, cloud services (AWS, Google Cloud), mapping services, email services, and any other third-party APIs you need.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What's included in the mobile app delivery?
-                        </h3>
-                        <p class="text-gray-600">You'll receive complete source code, project documentation, setup
-                            instructions, and any necessary configuration files. For advanced projects, we also include
-                            testing documentation and deployment guides.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What's included in the API delivery?</h3>
+                        <p class="text-gray-600">You'll receive complete source code, API documentation (Swagger/Postman), authentication implementation, database schemas, deployment instructions, and testing examples. For advanced projects, we include API gateway configuration and monitoring setup.</p>
                     </div>
                 </div>
             </div>
@@ -608,12 +566,11 @@
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Mobile App?</h2>
-                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully
-                    launched their mobile apps with our expert development help.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your API?</h2>
+                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully completed their API projects with our expert help.</p>
                 <a href="{{ route('assignments.create') }}"
                     class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                    Start Your Mobile App Today
+                    Start Your API Project Today
                 </a>
             </div>
         </section>

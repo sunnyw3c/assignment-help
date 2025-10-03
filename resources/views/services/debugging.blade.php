@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Mobile App Development - Expert Help Available')
-@section('description', 'Get professional help with mobile app development projects. Expert developers available 24/7
-    for React Native, Flutter, Swift, Kotlin, and more.')
+@section('title', 'Code Review & Debugging - Expert Help Available')
+@section('description', 'Get professional code review and debugging services. Expert developers available 24/7 for bug fixing, code optimization, and best practices.')
 
 @section('content')
     <div class="min-h-screen">
@@ -32,87 +31,82 @@
 
             <!-- Enhanced Floating Code Snippets -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <!-- Floating React Native -->
+                <!-- Floating Bug Fix -->
                 <div
-                    class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
+                    class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-red-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
                     <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">App.jsx</span>
+                        <div class="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">bug.js</span>
                     </div>
-                    <div class="text-green-400">// React Native Component</div>
-                    <div>const <span class="text-yellow-400">MobileApp</span> = () => {</div>
-                    <div class="ml-2 text-orange-400">return &lt;AppNavigator /&gt;;</div>
+                    <div class="text-gray-500">// ❌ Before (Bug)</div>
+                    <div class="line-through text-red-400">if (user = admin) {</div>
+                    <div class="text-gray-500">// ✅ After (Fixed)</div>
+                    <div class="text-green-400">if (user === admin) {</div>
+                </div>
+
+                <!-- Floating Code Review -->
+                <div
+                    class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">review.js</span>
+                    </div>
+                    <div class="text-purple-400">// Code Review Comment:</div>
+                    <div class="text-green-400">// ✓ Good: Proper error handling</div>
+                    <div class="text-orange-400">// ⚠ Warning: Missing validation</div>
+                    <div class="text-cyan-400">// 💡 Suggestion: Add type checking</div>
+                </div>
+
+                <!-- Floating Performance Fix -->
+                <div
+                    class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">optimize.js</span>
+                    </div>
+                    <div class="text-gray-500">// Performance Optimization</div>
+                    <div>const <span class="text-yellow-400">memoized</span> = useMemo(() => {</div>
+                    <div class="ml-2">return expensiveCalculation(data);</div>
+                    <div>}, [data]);</div>
+                </div>
+
+                <!-- Floating Error Handling -->
+                <div
+                    class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">error.js</span>
+                    </div>
+                    <div><span class="text-purple-400">try</span> {</div>
+                    <div class="ml-2">await fetchData();</div>
+                    <div>} <span class="text-purple-400">catch</span> (error) {</div>
+                    <div class="ml-2">logger.<span class="text-yellow-400">error</span>(error);</div>
+                    <div>}</div>
+                </div>
+
+                <!-- Floating Refactoring -->
+                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
+                    style="animation-delay: 1s;">
+                    <div class="flex items-center mb-2">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">refactor.js</span>
+                    </div>
+                    <div class="text-gray-500">// Refactored for clarity</div>
+                    <div>const <span class="text-yellow-400">isValid</span> = (data) => {</div>
+                    <div class="ml-2">return data && data.length > 0;</div>
                     <div>};</div>
                 </div>
 
-                <!-- Floating Flutter -->
-                <div
-                    class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">MyApp.dart</span>
-                    </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">MyApp</span> extends StatelessWidget {</div>
-                    <div class="ml-2 text-green-400">Widget build(context) {</div>
-                    <div class="ml-4">return MaterialApp();</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Swift -->
-                <div
-                    class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">ViewController.swift</span>
-                    </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">ViewController</span>: UIViewController {</div>
-                    <div class="ml-2 text-green-400">override func viewDidLoad() {</div>
-                    <div class="ml-4">super.viewDidLoad()</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Kotlin -->
-                <div
-                    class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">MainActivity.kt</span>
-                    </div>
-                    <div class="text-blue-400">class</div>
-                    <div><span class="text-yellow-400">MainActivity</span> : AppCompatActivity() {</div>
-                    <div class="ml-2 text-green-400">override fun onCreate() {</div>
-                    <div class="ml-4">setContentView(R.layout.main)</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Firebase Config -->
-                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
-                    style="animation-delay: 1s;">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">firebase.js</span>
-                    </div>
-                    <div><span class="text-purple-400">import</span> { initializeApp } from 'firebase/app';</div>
-                    <div><span class="text-purple-400">const</span> app = initializeApp(config);</div>
-                </div>
-
-                <!-- Floating API Integration -->
-                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
+                <!-- Floating Test Case -->
+                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
                     style="animation-delay: 2s;">
                     <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">api.js</span>
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
+                        <span class="text-gray-400 text-xs">test.spec.js</span>
                     </div>
-                    <div><span class="text-purple-400">const</span> <span class="text-blue-400">fetchData</span> = <span
-                            class="text-yellow-400">async</span> () =&gt; {</div>
-                    <div class="ml-2">const response = await fetch('/api');</div>
-                    <div class="ml-2">return response.json();</div>
-                    <div>}</div>
+                    <div><span class="text-purple-400">test</span>(<span class="text-orange-400">'should fix bug'</span>, () => {</div>
+                    <div class="ml-2">expect(fixed).<span class="text-green-400">toBeTruthy</span>();</div>
+                    <div>});</div>
                 </div>
             </div>
 
@@ -122,20 +116,19 @@
                     <div>
                         <div
                             class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            📱 Mobile App Development Expert Help
+                            🔧 Code Review & Debugging Expert Help
                         </div>
 
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Professional<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Mobile
-                                App</span><br>
-                            Development
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Code
+                                Review</span><br>
+                            & Debugging
                         </h1>
 
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Get expert help with your mobile app development projects. From React Native and Flutter to
-                            native iOS and Android development, our experienced developers deliver high-quality mobile
-                            solutions.
+                            Get expert code review and debugging services. From bug fixing and performance optimization to
+                            code refactoring and best practices, our experienced developers deliver high-quality solutions.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -156,11 +149,11 @@
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-1">✓</span>
-                                <span>500+ apps developed</span>
+                                <span>2200+ bugs fixed</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-blue-500 mr-1">⚡</span>
-                                <span>3-7 day delivery</span>
+                                <span>1-12 hour delivery</span>
                             </div>
                         </div>
                     </div>
@@ -175,33 +168,27 @@
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
-                                <div class="ml-4 text-gray-400 text-sm font-mono">MobileApp.dart</div>
+                                <div class="ml-4 text-gray-400 text-sm font-mono">fixed_code.js</div>
                             </div>
 
                             <!-- Code Content -->
                             <div class="font-mono text-sm space-y-1 p-6">
-                                <div class="text-purple-400">// Mobile App Development Solution</div>
-                                <div class="text-blue-400">class <span class="text-yellow-400">MobileApp</span> extends
-                                    StatelessWidget {</div>
-                                <div class="text-gray-300 ml-4">@override</div>
-                                <div class="text-gray-300 ml-4">Widget build(BuildContext context) {</div>
-                                <div class="text-gray-300 ml-8">return MaterialApp(</div>
-                                <div class="text-gray-300 ml-12">home: <span class="text-green-400">MainScreen()</span>,
-                                </div>
-                                <div class="text-gray-300 ml-8">);</div>
-                                <div class="text-gray-300 ml-4">}</div>
-                                <div class="text-blue-400">}</div>
+                                <div class="text-purple-400">// Code Review & Debugging Solution</div>
+                                <div class="text-gray-500 line-through">// ❌ Before: if (x = 5)</div>
+                                <div class="text-green-400">// ✅ After: if (x === 5) {</div>
+                                <div class="ml-2 text-gray-300">performAction();</div>
+                                <div class="text-green-400">}</div>
                                 <div class="text-gray-500"></div>
-                                <div class="text-purple-400">// Expert Available 4.8/5 ⭐</div>
+                                <div class="text-purple-400">// Bug Fixed! Expert Available 4.8/5 ⭐</div>
                             </div>
                         </div>
 
                         <!-- Floating Elements -->
                         <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-bounce">
-                            <div class="text-2xl">📱</div>
+                            <div class="text-2xl">🔧</div>
                         </div>
                         <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-pulse">
-                            <div class="text-2xl">🚀</div>
+                            <div class="text-2xl">✅</div>
                         </div>
                     </div>
                 </div>
@@ -212,107 +199,107 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mobile Technologies We Master</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert mobile developers work with cutting-edge
-                        technologies to build native and cross-platform mobile applications.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Debug & Review</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert developers review and debug code across all
+                        major programming languages and frameworks.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Cross-Platform -->
+                    <!-- Bug Fixing -->
                     <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Cross-Platform</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Bug Fixing</h3>
                         <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">⚛️</div>
-                                    <h4 class="font-semibold text-gray-900">React Native</h4>
+                                <div class="bg-red-50 rounded-lg p-4 mb-2 group-hover:bg-red-100 transition-colors">
+                                    <div class="text-3xl mb-2">🐛</div>
+                                    <h4 class="font-semibold text-gray-900">Logic Errors</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎯</div>
-                                    <h4 class="font-semibold text-gray-900">Flutter</h4>
+                                <div class="bg-red-50 rounded-lg p-4 mb-2 group-hover:bg-red-100 transition-colors">
+                                    <div class="text-3xl mb-2">💥</div>
+                                    <h4 class="font-semibold text-gray-900">Runtime Errors</h4>
                                 </div>
                             </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-red-50 rounded-lg p-4 mb-2 group-hover:bg-red-100 transition-colors">
+                                    <div class="text-3xl mb-2">⚠️</div>
+                                    <h4 class="font-semibold text-gray-900">Syntax Issues</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Performance</h3>
+                        <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
                                     <div class="text-3xl mb-2">⚡</div>
-                                    <h4 class="font-semibold text-gray-900">Xamarin</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- iOS Development -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">iOS Development</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🍎</div>
-                                    <h4 class="font-semibold text-gray-900">Swift</h4>
+                                    <h4 class="font-semibold text-gray-900">Speed Optimization</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">📱</div>
-                                    <h4 class="font-semibold text-gray-900">Objective-C</h4>
+                                <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
+                                    <div class="text-3xl mb-2">💾</div>
+                                    <h4 class="font-semibold text-gray-900">Memory Leaks</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎨</div>
-                                    <h4 class="font-semibold text-gray-900">SwiftUI</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Android Development -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Android Development</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🤖</div>
-                                    <h4 class="font-semibold text-gray-900">Kotlin</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">☕</div>
-                                    <h4 class="font-semibold text-gray-900">Java</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🎯</div>
-                                    <h4 class="font-semibold text-gray-900">Jetpack Compose</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Backend & APIs -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Backend & APIs</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔥</div>
-                                    <h4 class="font-semibold text-gray-900">Firebase</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">🌐</div>
-                                    <h4 class="font-semibold text-gray-900">REST APIs</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
                                     <div class="text-3xl mb-2">📊</div>
-                                    <h4 class="font-semibold text-gray-900">GraphQL</h4>
+                                    <h4 class="font-semibold text-gray-900">Profiling</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Quality -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Code Quality</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
+                                    <div class="text-3xl mb-2">♻️</div>
+                                    <h4 class="font-semibold text-gray-900">Refactoring</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
+                                    <div class="text-3xl mb-2">📚</div>
+                                    <h4 class="font-semibold text-gray-900">Best Practices</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
+                                    <div class="text-3xl mb-2">✨</div>
+                                    <h4 class="font-semibold text-gray-900">Clean Code</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security & Testing -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Security & Testing</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">🔒</div>
+                                    <h4 class="font-semibold text-gray-900">Security Fixes</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">🧪</div>
+                                    <h4 class="font-semibold text-gray-900">Unit Tests</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">🛡️</div>
+                                    <h4 class="font-semibold text-gray-900">Code Analysis</h4>
                                 </div>
                             </div>
                         </div>
@@ -326,31 +313,31 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on app complexity.
-                        No hidden fees, no surprises.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on complexity. No
+                        hidden fees, no surprises.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Mobile App</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $75</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quick Bug Fix</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $15</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Simple mobile app features
+                                    Simple bug fixing
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Basic UI/UX design
+                                    Error resolution
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    3-5 day delivery
+                                    1-6 hour delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Documentation included
+                                    Explanation included
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -367,28 +354,28 @@
                             Most Popular
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Mobile App</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $150</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Code Review</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $50</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Cross-platform development
+                                    Comprehensive review
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    API integration
+                                    Performance optimization
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    5-7 day delivery
+                                    6-12 hour delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Testing & debugging
+                                    Best practices applied
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    App store guidelines
+                                    Detailed feedback
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -400,28 +387,28 @@
 
                     <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Mobile Solution</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $300</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Refactoring</h3>
+                            <div class="text-3xl font-bold text-purple-600 mb-4">From $100</div>
                             <ul class="text-left space-y-3 mb-8">
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Full-featured mobile app
+                                    Full code refactoring
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Backend integration
+                                    Architecture improvements
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    7-14 day delivery
+                                    12-24 hour delivery
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    App store deployment
+                                    Security audit
                                 </li>
                                 <li class="flex items-center">
                                     <span class="text-green-500 mr-2">✓</span>
-                                    Post-launch support
+                                    Testing coverage
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
@@ -438,9 +425,9 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mobile App Development Process</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering high-quality
-                        mobile applications.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Debugging Process</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Systematic approach to finding and fixing bugs in your
+                        code.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -448,36 +435,32 @@
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">1</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Requirements Analysis</h3>
-                        <p class="text-gray-600">We analyze your app requirements, target platform, and user experience
-                            needs.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Code Analysis</h3>
+                        <p class="text-gray-600">We analyze your code to understand the issue and identify root causes.</p>
                     </div>
 
                     <div class="text-center">
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">2</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Design & Architecture</h3>
-                        <p class="text-gray-600">Create wireframes, UI design, and technical architecture for your mobile
-                            app.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bug Identification</h3>
+                        <p class="text-gray-600">Locate the exact source of bugs using debugging tools and techniques.</p>
                     </div>
 
                     <div class="text-center">
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">3</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Development & Testing</h3>
-                        <p class="text-gray-600">Build your app with clean code, implement features, and conduct thorough
-                            testing.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fix Implementation</h3>
+                        <p class="text-gray-600">Implement fixes following best practices and clean code principles.</p>
                     </div>
 
                     <div class="text-center">
                         <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                             <span class="text-2xl font-bold text-purple-600">4</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Delivery & Support</h3>
-                        <p class="text-gray-600">Deliver your completed app with documentation and deployment assistance.
-                        </p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Testing & Verification</h3>
+                        <p class="text-gray-600">Thoroughly test fixes and provide detailed explanation of changes.</p>
                     </div>
                 </div>
             </div>
@@ -488,8 +471,8 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
-                        mobile app development projects.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with
+                        debugging and code review.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -499,16 +482,15 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Incredible work on my React Native app! The developer created a
-                            beautiful, functional mobile app that works perfectly on both iOS and Android. Excellent
-                            communication!"</p>
+                        <p class="text-gray-600 mb-6">"Found the bug in my code within an hour! The developer not only fixed
+                            it but also explained why it was happening. Great learning experience!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                A</div>
+                                T</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Alex T.</div>
-                                <div class="text-sm text-gray-500">Mobile Development Student</div>
+                                <div class="font-semibold text-gray-900">Tom H.</div>
+                                <div class="text-sm text-gray-500">CS Student</div>
                             </div>
                         </div>
                     </div>
@@ -519,16 +501,15 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Amazing Flutter app development! The expert delivered a
-                            cross-platform app with smooth animations and perfect performance. Highly recommend for mobile
-                            projects."</p>
+                        <p class="text-gray-600 mb-6">"Amazing code review! They found several performance issues I didn't
+                            notice and optimized my code. My app runs 3x faster now!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                J</div>
+                                E</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Jessica L.</div>
-                                <div class="text-sm text-gray-500">Computer Science Student</div>
+                                <div class="font-semibold text-gray-900">Emma R.</div>
+                                <div class="text-sm text-gray-500">Software Engineering Student</div>
                             </div>
                         </div>
                     </div>
@@ -539,15 +520,15 @@
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-6">"Professional iOS development with Swift! The app was delivered ahead
-                            of schedule with clean code and excellent documentation. Great experience overall!"</p>
+                        <p class="text-gray-600 mb-6">"Professional refactoring service! My messy code is now clean,
+                            organized, and follows best practices. Learned so much from the feedback!"</p>
                         <div class="flex items-center">
                             <div
                                 class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                R</div>
+                                M</div>
                             <div>
-                                <div class="font-semibold text-gray-900">Ryan M.</div>
-                                <div class="text-sm text-gray-500">iOS Development Student</div>
+                                <div class="font-semibold text-gray-900">Mike D.</div>
+                                <div class="text-sm text-gray-500">Web Dev Student</div>
                             </div>
                         </div>
                     </div>
@@ -560,46 +541,39 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our mobile app
-                        development service.</p>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our code review and
+                        debugging service.</p>
                 </div>
 
                 <div class="max-w-3xl mx-auto space-y-6">
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Which mobile platforms do you support?</h3>
-                        <p class="text-gray-600">We develop for both iOS and Android platforms, using native technologies
-                            (Swift, Kotlin) or cross-platform frameworks (React Native, Flutter). We can help you choose the
-                            best approach for your project.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How quickly can you fix my bug?</h3>
+                        <p class="text-gray-600">Most simple bugs are fixed within 1-6 hours. Complex issues may take 6-12
+                            hours. We'll provide an estimated timeline after reviewing your code.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How long does mobile app development take?
-                        </h3>
-                        <p class="text-gray-600">Development time varies by complexity. Simple apps take 3-5 days, advanced
-                            apps with multiple features take 5-7 days, and complete solutions with backend integration take
-                            7-14 days.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What programming languages do you support?</h3>
+                        <p class="text-gray-600">We review and debug code in all major languages including JavaScript,
+                            Python, Java, C++, PHP, Ruby, Go, and more. We also work with all popular frameworks.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you help with app store submission?</h3>
-                        <p class="text-gray-600">Yes! For complete mobile solutions, we provide guidance on app store
-                            submission requirements, help with app store optimization, and assist with the deployment
-                            process for both iOS App Store and Google Play Store.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you provide explanations for the fixes?</h3>
+                        <p class="text-gray-600">Yes! We provide detailed explanations of what was wrong, why it caused
+                            issues, and how we fixed it. This helps you learn and avoid similar bugs in the future.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you integrate APIs and backend services?
-                        </h3>
-                        <p class="text-gray-600">Absolutely! We can integrate your app with REST APIs, GraphQL, Firebase,
-                            authentication services, payment gateways, and other third-party services your app requires.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you help improve my code quality?</h3>
+                        <p class="text-gray-600">Absolutely! Our code review service includes refactoring suggestions,
+                            performance optimizations, and best practice recommendations to improve your code quality.</p>
                     </div>
 
                     <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What's included in the mobile app delivery?
-                        </h3>
-                        <p class="text-gray-600">You'll receive complete source code, project documentation, setup
-                            instructions, and any necessary configuration files. For advanced projects, we also include
-                            testing documentation and deployment guides.</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What if the bug comes back?</h3>
+                        <p class="text-gray-600">We provide a 7-day guarantee. If the same bug reappears within 7 days,
+                            we'll fix it at no additional cost. We stand behind the quality of our work.</p>
                     </div>
                 </div>
             </div>
@@ -608,12 +582,12 @@
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Mobile App?</h2>
-                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully
-                    launched their mobile apps with our expert development help.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Fix Your Code?</h2>
+                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join thousands of developers who have fixed their
+                    bugs and improved their code with our expert help.</p>
                 <a href="{{ route('assignments.create') }}"
                     class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                    Start Your Mobile App Today
+                    Get Your Code Fixed Today
                 </a>
             </div>
         </section>
