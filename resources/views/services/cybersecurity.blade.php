@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Database Programming - Expert Help Available')
-@section('description', 'Get professional help with database programming projects. Expert developers available 24/7 for SQL, NoSQL, database design, optimization, and more.')
+@section('title', 'Cybersecurity Projects - Expert Help Available')
+@section('description', 'Get professional help with cybersecurity projects. Expert security professionals available 24/7 for security analysis, penetration testing, encryption, and secure coding.')
 
 @section('content')
     <div class="min-h-screen">
@@ -31,85 +31,81 @@
 
             <!-- Enhanced Floating Code Snippets -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <!-- Floating SQL Query -->
+                <!-- Floating Encryption -->
                 <div
                     class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">query.sql</span>
+                        <span class="text-gray-400 text-xs">encrypt.py</span>
                     </div>
-                    <div class="text-purple-400">SELECT</div>
-                    <div class="ml-2">u.name, COUNT(o.id) <span class="text-blue-400">AS</span> orders</div>
-                    <div class="text-purple-400">FROM</div>
-                    <div class="ml-2">users u <span class="text-blue-400">JOIN</span> orders o</div>
-                    <div class="text-purple-400">GROUP BY</div>
-                    <div class="ml-2">u.id</div>
+                    <div><span class="text-purple-400">def</span> <span class="text-yellow-400">encrypt_data</span>(data):</div>
+                    <div class="ml-2">key = <span class="text-green-400">generate_key</span>()</div>
+                    <div class="ml-2">cipher = AES.<span class="text-blue-400">new</span>(key)</div>
+                    <div class="ml-2"><span class="text-purple-400">return</span> cipher.encrypt(data)</div>
                 </div>
 
-                <!-- Floating MongoDB Query -->
+                <!-- Floating Security Audit -->
                 <div
                     class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">mongo.js</span>
+                        <span class="text-gray-400 text-xs">audit.py</span>
                     </div>
-                    <div>db.users.<span class="text-yellow-400">aggregate</span>([</div>
-                    <div class="ml-2">{ <span class="text-orange-400">$match</span>: { active: <span class="text-blue-400">true</span> } },</div>
-                    <div class="ml-2">{ <span class="text-orange-400">$group</span>: { _id: "$category" } }</div>
-                    <div>])</div>
+                    <div><span class="text-purple-400">def</span> <span class="text-yellow-400">check_vulnerabilities</span>():</div>
+                    <div class="ml-2">scan = <span class="text-orange-400">SecurityScanner</span>()</div>
+                    <div class="ml-2">results = scan.<span class="text-blue-400">analyze</span>()</div>
+                    <div class="ml-2"><span class="text-purple-400">return</span> results.report()</div>
                 </div>
 
-                <!-- Floating Database Schema -->
+                <!-- Floating Hash Function -->
                 <div
                     class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">schema.sql</span>
+                        <span class="text-gray-400 text-xs">hash.py</span>
                     </div>
-                    <div class="text-purple-400">CREATE TABLE</div>
-                    <div class="ml-2">products (</div>
-                    <div class="ml-4">id <span class="text-yellow-400">INT PRIMARY KEY</span>,</div>
-                    <div class="ml-4">name <span class="text-yellow-400">VARCHAR(255)</span></div>
-                    <div class="ml-2">);</div>
+                    <div><span class="text-purple-400">import</span> hashlib</div>
+                    <div></div>
+                    <div>hash = hashlib.<span class="text-yellow-400">sha256</span>()</div>
+                    <div>hash.<span class="text-green-400">update</span>(password)</div>
+                    <div><span class="text-purple-400">return</span> hash.hexdigest()</div>
                 </div>
 
-                <!-- Floating Index Creation -->
+                <!-- Floating Firewall Rule -->
                 <div
                     class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">optimize.sql</span>
+                        <span class="text-gray-400 text-xs">firewall.sh</span>
                     </div>
-                    <div class="text-purple-400">CREATE INDEX</div>
-                    <div class="ml-2">idx_user_email</div>
-                    <div class="text-purple-400">ON</div>
-                    <div class="ml-2">users(email);</div>
+                    <div><span class="text-blue-400">iptables</span> <span class="text-purple-400">-A</span> INPUT</div>
+                    <div class="ml-2"><span class="text-purple-400">-p</span> tcp <span class="text-purple-400">--dport</span> <span class="text-yellow-400">22</span></div>
+                    <div class="ml-2"><span class="text-purple-400">-j</span> ACCEPT</div>
                 </div>
 
-                <!-- Floating PostgreSQL -->
+                <!-- Floating SQL Injection Prevention -->
                 <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
                     style="animation-delay: 1s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">postgres.sql</span>
+                        <span class="text-gray-400 text-xs">secure_query.py</span>
                     </div>
-                    <div class="text-blue-400">WITH</div>
-                    <div class="ml-2">stats <span class="text-blue-400">AS</span> (</div>
-                    <div class="ml-4">SELECT AVG(price) FROM products</div>
-                    <div class="ml-2">)</div>
-                    <div>SELECT * FROM stats;</div>
+                    <div>cursor.<span class="text-yellow-400">execute</span>(</div>
+                    <div class="ml-2"><span class="text-green-400">"SELECT * FROM users WHERE id = ?"</span>,</div>
+                    <div class="ml-2">(user_id,)</div>
+                    <div>)</div>
                 </div>
 
-                <!-- Floating Transaction -->
+                <!-- Floating JWT Token -->
                 <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
                     style="animation-delay: 2s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">transaction.sql</span>
+                        <span class="text-gray-400 text-xs">auth.py</span>
                     </div>
-                    <div class="text-purple-400">BEGIN TRANSACTION;</div>
-                    <div class="ml-2">UPDATE accounts SET balance -= 100;</div>
-                    <div class="text-purple-400">COMMIT;</div>
+                    <div>token = jwt.<span class="text-cyan-400">encode</span>({</div>
+                    <div class="ml-2"><span class="text-green-400">'user_id'</span>: user.id</div>
+                    <div>}, SECRET_KEY)</div>
                 </div>
             </div>
 
@@ -119,20 +115,19 @@
                     <div>
                         <div
                             class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            🗄️ Database Programming Expert Help
+                            🛡️ Cybersecurity Expert Help
                         </div>
 
                         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Professional<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Database
-                                Programming</span><br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Cybersecurity</span><br>
                             Solutions
                         </h1>
 
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Get expert help with database programming projects. From SQL optimization and database design to
-                            NoSQL solutions and data modeling, our experienced developers deliver high-quality database
-                            solutions.
+                            Get expert help with cybersecurity projects. From penetration testing and security audits to
+                            encryption implementation and secure coding practices, our experienced security professionals
+                            deliver robust security solutions.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -149,15 +144,15 @@
                         <div class="flex items-center space-x-6 text-sm text-gray-600">
                             <div class="flex items-center">
                                 <span class="text-yellow-400 mr-1">⭐</span>
-                                <span class="font-semibold">4.7/5</span> rating
+                                <span class="font-semibold">4.9/5</span> rating
                             </div>
                             <div class="flex items-center">
                                 <span class="text-green-500 mr-1">✓</span>
-                                <span>800+ databases designed</span>
+                                <span>320+ security projects</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="text-blue-500 mr-1">⚡</span>
-                                <span>3-48 hour delivery</span>
+                                <span>3-7 day delivery</span>
                             </div>
                         </div>
                     </div>
@@ -172,28 +167,28 @@
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
-                                <div class="ml-4 text-gray-400 text-sm font-mono">database.sql</div>
+                                <div class="ml-4 text-gray-400 text-sm font-mono">encryption.py</div>
                             </div>
 
                             <!-- Code Content -->
                             <div class="font-mono text-sm space-y-1 p-6">
-                                <div class="text-purple-400">-- Database Programming Solution</div>
-                                <div class="text-blue-400">SELECT <span class="text-cyan-400">*</span> FROM users</div>
-                                <div class="text-blue-400">WHERE <span class="text-yellow-400">status</span> = <span
-                                        class="text-green-400">'active'</span></div>
-                                <div class="text-blue-400">ORDER BY <span class="text-yellow-400">created_at</span> DESC;
-                                </div>
+                                <div class="text-purple-400"># Cybersecurity Solution</div>
+                                <div class="text-blue-400">from <span class="text-cyan-400">cryptography</span> import <span class="text-yellow-400">Fernet</span></div>
+                                <div></div>
+                                <div class="text-blue-400">key = <span class="text-yellow-400">Fernet</span>.<span class="text-green-400">generate_key</span>()</div>
+                                <div class="text-blue-400">cipher = <span class="text-yellow-400">Fernet</span>(key)</div>
+                                <div class="text-blue-400">encrypted = cipher.<span class="text-green-400">encrypt</span>(data)</div>
                                 <div class="text-gray-500"></div>
-                                <div class="text-purple-400">-- Optimized & Expert Available 4.7/5 ⭐</div>
+                                <div class="text-purple-400"># Secure & Expert Available 4.9/5 ⭐</div>
                             </div>
                         </div>
 
                         <!-- Floating Elements -->
                         <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-bounce">
-                            <div class="text-2xl">🗄️</div>
+                            <div class="text-2xl">🛡️</div>
                         </div>
                         <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-pulse">
-                            <div class="text-2xl">⚡</div>
+                            <div class="text-2xl">🔐</div>
                         </div>
                     </div>
                 </div>
@@ -204,107 +199,107 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Database Technologies We Master</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert database developers work with SQL, NoSQL,
-                        and modern database technologies to build efficient data solutions.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cybersecurity Technologies We Master</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert security professionals work with encryption,
+                        penetration testing, and modern security tools to deliver comprehensive security solutions.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- SQL Databases -->
+                    <!-- Encryption & Cryptography -->
                     <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">SQL Databases</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Encryption</h3>
                         <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">🐬</div>
-                                    <h4 class="font-semibold text-gray-900">MySQL</h4>
+                                    <div class="text-3xl mb-2">🔐</div>
+                                    <h4 class="font-semibold text-gray-900">AES Encryption</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">🐘</div>
-                                    <h4 class="font-semibold text-gray-900">PostgreSQL</h4>
+                                    <div class="text-3xl mb-2">🔑</div>
+                                    <h4 class="font-semibold text-gray-900">RSA</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-blue-50 rounded-lg p-4 mb-2 group-hover:bg-blue-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔷</div>
-                                    <h4 class="font-semibold text-gray-900">SQL Server</h4>
+                                    <div class="text-3xl mb-2">🔒</div>
+                                    <h4 class="font-semibold text-gray-900">SSL/TLS</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- NoSQL Databases -->
+                    <!-- Penetration Testing -->
                     <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">NoSQL Databases</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Pen Testing</h3>
                         <div class="space-y-3">
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🍃</div>
-                                    <h4 class="font-semibold text-gray-900">MongoDB</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔥</div>
-                                    <h4 class="font-semibold text-gray-900">Firebase</h4>
+                                    <div class="text-3xl mb-2">🔍</div>
+                                    <h4 class="font-semibold text-gray-900">Metasploit</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
-                                    <div class="text-3xl mb-2">📊</div>
-                                    <h4 class="font-semibold text-gray-900">Redis</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud Databases -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Cloud Databases</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">☁️</div>
-                                    <h4 class="font-semibold text-gray-900">AWS RDS</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🌩️</div>
-                                    <h4 class="font-semibold text-gray-900">Azure SQL</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔵</div>
-                                    <h4 class="font-semibold text-gray-900">Google Cloud SQL</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tools & ORMs -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Tools & ORMs</h3>
-                        <div class="space-y-3">
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">🔧</div>
-                                    <h4 class="font-semibold text-gray-900">Sequelize</h4>
-                                </div>
-                            </div>
-                            <div class="text-center group hover:scale-105 transition-transform duration-200">
-                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
                                     <div class="text-3xl mb-2">🛠️</div>
-                                    <h4 class="font-semibold text-gray-900">Prisma</h4>
+                                    <h4 class="font-semibold text-gray-900">Burp Suite</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-green-50 rounded-lg p-4 mb-2 group-hover:bg-green-100 transition-colors">
+                                    <div class="text-3xl mb-2">🔬</div>
+                                    <h4 class="font-semibold text-gray-900">Nmap</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Analysis -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Security Analysis</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">🛡️</div>
+                                    <h4 class="font-semibold text-gray-900">OWASP Tools</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">🔎</div>
+                                    <h4 class="font-semibold text-gray-900">Wireshark</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-orange-50 rounded-lg p-4 mb-2 group-hover:bg-orange-100 transition-colors">
+                                    <div class="text-3xl mb-2">📊</div>
+                                    <h4 class="font-semibold text-gray-900">Snort</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Languages -->
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Languages & Tools</h3>
+                        <div class="space-y-3">
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">🐍</div>
+                                    <h4 class="font-semibold text-gray-900">Python</h4>
                                 </div>
                             </div>
                             <div class="text-center group hover:scale-105 transition-transform duration-200">
                                 <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
-                                    <div class="text-3xl mb-2">⚙️</div>
-                                    <h4 class="font-semibold text-gray-900">TypeORM</h4>
+                                    <div class="text-3xl mb-2">🐧</div>
+                                    <h4 class="font-semibold text-gray-900">Kali Linux</h4>
+                                </div>
+                            </div>
+                            <div class="text-center group hover:scale-105 transition-transform duration-200">
+                                <div class="bg-purple-50 rounded-lg p-4 mb-2 group-hover:bg-purple-100 transition-colors">
+                                    <div class="text-3xl mb-2">⚡</div>
+                                    <h4 class="font-semibold text-gray-900">Bash Scripting</h4>
                                 </div>
                             </div>
                         </div>
