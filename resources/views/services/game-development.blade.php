@@ -297,6 +297,137 @@
             </div>
         </section>
 
+        <!-- Comprehensive Content Section 1 -->
+        <section class="py-32 bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 relative overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full opacity-20 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-100 to-purple-100 rounded-full opacity-20 blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block mb-4">
+                            <span class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                🎮 Level Up Your Game Dev Skills
+                            </span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Professional Game Development<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">That Players Actually Love</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">Get expert help creating games from experienced developers who've shipped real titles and understand what makes gameplay truly addictive.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100">
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>Ever spent 12 hours trying to fix a jump mechanic that still feels terrible? Or watched your game crash every time the player collects a coin?</strong> Game development is brutal. You're not just writing code – you're creating physics systems, managing animations, designing AI behaviors, handling collision detection, and somehow making all of it feel fun and responsive. When your player controller won't move, your enemy AI runs in circles, or Unity keeps throwing null reference exceptions you can't decipher, it's easy to feel like giving up. That's exactly when you need an expert game developer who's been there, debugged that, and knows how to fix it fast.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>Imagine this instead:</strong> You submit a Unity project where the character movement feels buttery smooth, the enemies actually chase the player intelligently, particles and sound effects trigger at exactly the right moments, and the scoring system works flawlessly. Every script is clean, commented, and follows Unity best practices. Your professor loads it up, plays for a minute, and you see them smile because the game is genuinely fun. That's not a fantasy – that's what happens when you work with developers who've built 600+ games and understand the difference between code that runs and gameplay that engages.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>We don't just write game scripts – we create complete gaming experiences.</strong> Need a 2D platformer in Unity? You'll get precise jump physics with coyote time and jump buffering that makes it feel professional. Building a 3D shooter? Expect smooth camera controls, realistic weapon mechanics, and enemy AI that actually takes cover and flanks. Working on mobile? We optimize for 60 FPS on older devices while keeping your game looking gorgeous. Every project includes player controllers, game managers, UI systems, audio integration, particle effects, and that polish that separates student projects from actual games.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Here's the reality of game dev deadlines:</strong> Your game is due in 3 days, half your scripts have errors, and the physics are completely broken. You message us. Within hours, an expert Unity or Unreal developer analyzes your project, fixes the critical bugs, implements the missing features, and delivers a playable build. We don't just make it work – we make it feel good to play. And because every solution comes with detailed code comments and explanations, you'll actually understand how raycasting works, why we used coroutines instead of Update(), and what makes good game feel different from okay game feel.
+                            </p>
+                        </div>
+
+                        <!-- Feature Highlights -->
+                        <div class="grid md:grid-cols-3 gap-6 mt-12">
+                            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-shadow duration-300">
+                                <div class="text-3xl mb-3">🎯</div>
+                                <h3 class="font-bold text-gray-900 mb-2">Gameplay Mechanics</h3>
+                                <p class="text-gray-600 text-sm">Player controls, physics, AI, and collision that actually work</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-shadow duration-300">
+                                <div class="text-3xl mb-3">🎨</div>
+                                <h3 class="font-bold text-gray-900 mb-2">Visual Polish</h3>
+                                <p class="text-gray-600 text-sm">Particles, animations, UI, and effects that look professional</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 border border-indigo-200 hover:shadow-lg transition-shadow duration-300">
+                                <div class="text-3xl mb-3">⚡</div>
+                                <h3 class="font-bold text-gray-900 mb-2">Performance</h3>
+                                <p class="text-gray-600 text-sm">60 FPS optimized code for smooth gameplay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Content Section 2 -->
+        <section class="py-32 bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20 relative overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div class="absolute top-20 left-0 w-72 h-72 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-10 blur-3xl"></div>
+            <div class="absolute bottom-20 right-0 w-72 h-72 bg-gradient-to-tl from-purple-200 to-indigo-200 rounded-full opacity-10 blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block mb-4">
+                            <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                ⭐ Trusted by 600+ Game Dev Students
+                            </span>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Why Game Developers<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Choose Our Services</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">Real game development expertise, production-ready code, and teaching that actually makes you a better developer.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100">
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>Picture your professor playing your game and being genuinely impressed.</strong> That's what happens when you work with developers who've actually shipped games, not just tutors who read Unity documentation. Our team has built everything from mobile puzzle games to 3D multiplayer shooters. We know the difference between Vector3.Lerp and Vector3.MoveTowards. We understand why you should use FixedUpdate for physics. We've debugged thousands of "why does my player fall through the floor" scenarios. This isn't theoretical knowledge – it's battle-tested expertise from years of making games that people actually play.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>What you actually receive is mind-blowing.</strong> Open your delivery and find a complete, playable Unity or Unreal project. Not just scripts – a full game with scene setup, prefabs configured, animations hooked up, audio integrated, and everything documented. Want to see exactly how the enemy AI works? We include flowcharts. Curious about the physics calculations? Detailed comments explain every formula. Need to modify the gameplay? Our code is modular and clean so you can extend it easily. Plus particle systems, screen shake, sound effects, UI menus, pause functionality, and all those little details that make games feel polished instead of like student projects.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>Speed without compromising quality:</strong> It's midnight. Your 3D platformer is due tomorrow and the camera clips through walls, the double jump doesn't work, and you just realized you forgot to implement collectibles. Panic mode. You submit a request. Within 30 minutes, a game developer responds with a fix plan. Within hours, you're testing a working build where the camera smoothly follows the player, double jump feels responsive, and coins sparkle with particle effects when collected. Every build is tested multiple times – we actually play your game to make sure it's fun, not just functional. Because a game that technically works but feels terrible is still a failed project.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                <strong>Performance and optimization aren't afterthoughts.</strong> We don't write code that makes your game run at 15 FPS. Every solution is profiler-tested and optimized. Object pooling for bullets and enemies. Efficient raycasting. Proper use of layers and tags. Optimized rendering for mobile. Your game will hit 60 FPS on target platforms because we know the tricks: static batching, occlusion culling, LOD groups, and texture atlases. When other students submit laggy, unplayable games, yours runs smoothly because we build like professional game developers, not like coders who happen to use Unity.
+                            </p>
+
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>You don't just get a working game – you become a better game developer.</strong> Every script includes comments that explain not just what the code does, but why we made specific design decisions. Why did we use a state machine for the enemy AI? When should you use ScriptableObjects? What makes a jump feel responsive versus floaty? We answer these questions in our documentation. Many clients start with one project and come back for more – not because they can't code, but because they value learning from experts who explain complex game systems in ways that finally make sense. With 600+ games developed and a 4.9/5 rating, we've proven that expert help accelerates your learning journey instead of replacing it.
+                            </p>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid md:grid-cols-4 gap-6 mt-12">
+                            <div class="text-center bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+                                <div class="text-4xl font-bold text-green-600 mb-2">4.9/5</div>
+                                <div class="text-gray-600 text-sm font-medium">Player Rating</div>
+                            </div>
+                            <div class="text-center bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">30min</div>
+                                <div class="text-gray-600 text-sm font-medium">Avg Response</div>
+                            </div>
+                            <div class="text-center bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200">
+                                <div class="text-4xl font-bold text-purple-600 mb-2">600+</div>
+                                <div class="text-gray-600 text-sm font-medium">Games Built</div>
+                            </div>
+                            <div class="text-center bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-200">
+                                <div class="text-4xl font-bold text-orange-600 mb-2">60 FPS</div>
+                                <div class="text-gray-600 text-sm font-medium">Optimized</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Technologies Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
