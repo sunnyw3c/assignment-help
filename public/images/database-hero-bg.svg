@@ -1,0 +1,105 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e0e7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Database Cylinder Gradient -->
+    <linearGradient id="dbGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.6" />
+    </linearGradient>
+
+    <linearGradient id="dbGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.5" />
+    </linearGradient>
+
+    <linearGradient id="dbGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c7d2fe" stroke-width="1" opacity="0.3"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+
+  <!-- Connection Lines -->
+  <g opacity="0.15">
+    <line x1="200" y1="300" x2="500" y2="200" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="500" y1="200" x2="800" y2="350" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="800" y1="350" x2="1100" y2="250" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="300" y1="600" x2="600" y2="700" stroke="#6366f1" stroke-width="2"/>
+    <line x1="600" y1="700" x2="900" y2="650" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="1200" y1="400" x2="1500" y2="500" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+
+  <!-- Database Cylinders - Large Central -->
+  <g transform="translate(1400, 300)">
+    <!-- Main Database -->
+    <ellipse cx="0" cy="0" rx="120" ry="30" fill="url(#dbGradient1)" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="-120" y="0" width="240" height="200" fill="url(#dbGradient1)"/>
+    <ellipse cx="0" cy="200" rx="120" ry="30" fill="url(#dbGradient1)" stroke="#7c3aed" stroke-width="2"/>
+    <!-- Database Segments -->
+    <ellipse cx="0" cy="50" rx="120" ry="30" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="0" cy="100" rx="120" ry="30" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="0" cy="150" rx="120" ry="30" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Database Cylinders - Medium Left -->
+  <g transform="translate(300, 450)">
+    <ellipse cx="0" cy="0" rx="90" ry="25" fill="url(#dbGradient2)" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="-90" y="0" width="180" height="150" fill="url(#dbGradient2)"/>
+    <ellipse cx="0" cy="150" rx="90" ry="25" fill="url(#dbGradient2)" stroke="#3b82f6" stroke-width="2"/>
+    <ellipse cx="0" cy="50" rx="90" ry="25" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="0" cy="100" rx="90" ry="25" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Database Cylinders - Small Top -->
+  <g transform="translate(800, 200)">
+    <ellipse cx="0" cy="0" rx="70" ry="20" fill="url(#dbGradient3)" stroke="#06b6d4" stroke-width="2"/>
+    <rect x="-70" y="0" width="140" height="120" fill="url(#dbGradient3)"/>
+    <ellipse cx="0" cy="120" rx="70" ry="20" fill="url(#dbGradient3)" stroke="#06b6d4" stroke-width="2"/>
+    <ellipse cx="0" cy="40" rx="70" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+    <ellipse cx="0" cy="80" rx="70" ry="20" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Database Cylinders - Small Bottom Right -->
+  <g transform="translate(1200, 700)">
+    <ellipse cx="0" cy="0" rx="60" ry="18" fill="url(#dbGradient1)" stroke="#8b5cf6" stroke-width="2"/>
+    <rect x="-60" y="0" width="120" height="100" fill="url(#dbGradient1)"/>
+    <ellipse cx="0" cy="100" rx="60" ry="18" fill="url(#dbGradient1)" stroke="#8b5cf6" stroke-width="2"/>
+    <ellipse cx="0" cy="50" rx="60" ry="18" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Data Nodes/Circles -->
+  <circle cx="600" cy="250" r="25" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="1000" cy="450" r="20" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="500" cy="750" r="18" fill="#06b6d4" opacity="0.3"/>
+  <circle cx="1400" cy="600" r="22" fill="#6366f1" opacity="0.3"/>
+
+  <!-- Binary Data Elements -->
+  <g opacity="0.1" font-family="monospace" font-size="12" fill="#1e293b">
+    <text x="150" y="200">01001</text>
+    <text x="400" y="400">11010</text>
+    <text x="900" y="150">10110</text>
+    <text x="1300" y="350">01110</text>
+    <text x="700" y="600">10011</text>
+    <text x="250" y="800">11001</text>
+  </g>
+
+  <!-- Decorative Arrows -->
+  <g opacity="0.2">
+    <path d="M 650 280 L 750 280 L 740 270 M 750 280 L 740 290" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+    <path d="M 1050 480 L 1150 480 L 1140 470 M 1150 480 L 1140 490" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  </g>
+</svg>

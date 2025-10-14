@@ -6,11 +6,37 @@
 @section('content')
     <div class="min-h-screen">
         <!-- Hero Section with Code Background -->
-        <section class="relative hero-bg py-24 overflow-hidden min-h-screen flex items-center">
-            <!-- Enhanced Background Pattern -->
-            <div class="absolute inset-0 opacity-5 md:opacity-10">
-                <div class="absolute inset-0"
-                    style="background-image: url('data:image/svg+xml,<svg width=\"80\" height=\"80\" viewBox=\"0 0 80 80\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23000000\" fill-opacity=\"0.15\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');">
+        <section class="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+            <!-- Database Background Image -->
+            <div class="absolute inset-0 opacity-40">
+                <img src="{{ asset('images/database-hero-bg.svg') }}" alt="Database Background" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
+
+            <!-- Floating Database Icons -->
+            <div class="absolute inset-0 pointer-events-none">
+                <!-- Database Cylinder Icons -->
+                <div class="absolute top-20 left-16 opacity-20 animate-float">
+                    <svg class="w-12 h-12 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9zm0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3z"/>
+                    </svg>
+                </div>
+                <div class="absolute top-40 right-24 opacity-15 animate-float-delayed">
+                    <svg class="w-16 h-16 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9zm0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3z"/>
+                    </svg>
+                </div>
+                <div class="absolute bottom-32 left-24 opacity-10 animate-pulse">
+                    <svg class="w-14 h-14 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9zm0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3z"/>
+                    </svg>
+                </div>
+                <div class="absolute bottom-20 right-32 opacity-20 animate-bounce" style="animation-delay: 1s;">
+                    <svg class="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9z"/>
+                    </svg>
                 </div>
             </div>
 
@@ -30,10 +56,10 @@
             </div>
 
             <!-- Enhanced Floating Code Snippets -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none overflow-hidden" style="z-index: 1;">
                 <!-- Floating SQL Query -->
                 <div
-                    class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
+                    class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">query.sql</span>
@@ -101,8 +127,8 @@
                 </div>
 
                 <!-- Floating Transaction -->
-                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
-                    style="animation-delay: 2s;">
+                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-30 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
+                    style="animation-delay: 2s; z-index: 1;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">transaction.sql</span>
@@ -118,61 +144,81 @@
                     <!-- Left Content -->
                     <div>
                         <div
-                            class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            🗄️ Database Programming Expert Help
+                            class="inline-flex items-center bg-white/80 backdrop-blur-sm text-purple-800 border border-purple-200 px-5 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
+                            <svg class="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9zm0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3z"/>
+                            </svg>
+                            Database Programming Expert Help
                         </div>
 
-                        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                            Professional<br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Database
-                                Programming</span><br>
-                            Solutions
+                        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                            Master Your<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">Database
+                                Projects</span>
                         </h1>
 
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Get expert help with database programming projects. From SQL optimization and database design to
-                            NoSQL solutions and data modeling, our experienced developers deliver high-quality database
-                            solutions.
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl">
+                            From SQL optimization and complex queries to NoSQL solutions and scalable database design—our expert developers deliver production-ready database solutions with <span class="text-purple-600 font-semibold">99.9% uptime performance</span>.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <div class="flex flex-col sm:flex-row gap-4 mb-10">
                             <a href="{{ route('assignments.create') }}"
-                                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl text-center">
-                                Get Help Now
+                                class="group relative bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-2xl hover:shadow-xl text-center overflow-hidden">
+                                <span class="relative z-10">Get Expert Help Now</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                             </a>
                             <a href="#pricing"
-                                class="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-200 text-center">
+                                class="border-2 border-purple-600 text-purple-600 bg-white px-8 py-4 rounded-xl font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 text-center shadow-lg">
                                 View Pricing
                             </a>
                         </div>
 
-                        <div class="flex items-center space-x-6 text-sm text-gray-600">
-                            <div class="flex items-center">
-                                <span class="text-yellow-400 mr-1">⭐</span>
-                                <span class="font-semibold">4.7/5</span> rating
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="bg-white/80 backdrop-blur-sm border border-purple-200 rounded-xl p-4 text-center shadow-lg">
+                                <div class="text-3xl font-bold text-purple-600 mb-1">4.9/5</div>
+                                <div class="text-xs text-gray-600">Rating</div>
                             </div>
-                            <div class="flex items-center">
-                                <span class="text-green-500 mr-1">✓</span>
-                                <span>800+ databases designed</span>
+                            <div class="bg-white/80 backdrop-blur-sm border border-purple-200 rounded-xl p-4 text-center shadow-lg">
+                                <div class="text-3xl font-bold text-purple-600 mb-1">1,200+</div>
+                                <div class="text-xs text-gray-600">DB Delivered</div>
                             </div>
-                            <div class="flex items-center">
-                                <span class="text-blue-500 mr-1">⚡</span>
-                                <span>3-48 hour delivery</span>
+                            <div class="bg-white/80 backdrop-blur-sm border border-purple-200 rounded-xl p-4 text-center shadow-lg">
+                                <div class="text-3xl font-bold text-purple-600 mb-1">24/7</div>
+                                <div class="text-xs text-gray-600">Support</div>
                             </div>
+                        </div>
+
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 border border-blue-200 text-blue-700 rounded-lg text-xs font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-purple-100 border border-purple-200 text-purple-700 rounded-lg text-xs font-semibold">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-green-100 border border-green-200 text-green-700 rounded-lg text-xs font-semibold">MongoDB</span>
+                            <span class="px-3 py-1 bg-orange-100 border border-orange-200 text-orange-700 rounded-lg text-xs font-semibold">Redis</span>
+                            <span class="px-3 py-1 bg-indigo-100 border border-indigo-200 text-indigo-700 rounded-lg text-xs font-semibold">Oracle</span>
                         </div>
                     </div>
 
                     <!-- Right Content - Code Editor Mockup -->
                     <div class="relative">
-                        <div class="bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
+                        <!-- Glow Effect -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-2xl opacity-20 blur-2xl animate-pulse"></div>
+
+                        <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-cyan-500/20">
                             <!-- Editor Header -->
-                            <div class="flex items-center mb-4">
-                                <div class="flex space-x-2">
+                            <div class="flex items-center justify-between px-4 py-3 bg-slate-800/80 backdrop-blur-sm border-b border-slate-700">
+                                <div class="flex items-center space-x-2">
                                     <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
-                                <div class="ml-4 text-gray-400 text-sm font-mono">database.sql</div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zm8 6c0 2.21-3.58 4-8 4s-8-1.79-8-4v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9z"/>
+                                    </svg>
+                                    <span class="text-gray-400 text-sm font-mono">database.sql</span>
+                                </div>
+                                <div class="text-xs text-green-400 font-mono">● Connected</div>
                             </div>
 
                             <!-- Code Content -->

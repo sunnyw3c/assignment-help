@@ -7,28 +7,14 @@
 @section('content')
     <div class="min-h-screen">
         <!-- Hero Section with Code Background -->
-        <section class="relative hero-bg py-24 overflow-hidden min-h-screen flex items-center">
-            <!-- Enhanced Background Pattern -->
-            <div class="absolute inset-0 opacity-5 md:opacity-10">
-                <div class="absolute inset-0"
-                    style="background-image: url('data:image/svg+xml,<svg width=\"80\" height=\"80\" viewBox=\"0 0 80 80\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23000000\" fill-opacity=\"0.15\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');">
-                </div>
+        <section class="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-violet-50 to-blue-50">
+            <!-- Mobile App Background Image -->
+            <div class="absolute inset-0 opacity-50">
+                <img src="{{ asset('images/mobile-app-hero-bg.svg') }}" alt="Mobile App Background" class="w-full h-full object-cover">
             </div>
 
-            <!-- Animated Background Dots -->
-            <div class="absolute inset-0 pointer-events-none">
-                <div
-                    class="absolute top-20 left-20 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-20 md:opacity-30">
-                </div>
-                <div class="absolute top-40 right-32 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-25 md:opacity-40"
-                    style="animation-delay: 0.5s;"></div>
-                <div class="absolute bottom-32 left-16 w-1.5 h-1.5 bg-indigo-400 rounded-full animate-ping opacity-20 md:opacity-35"
-                    style="animation-delay: 1s;"></div>
-                <div class="absolute top-60 left-1/3 w-2.5 h-2.5 bg-green-400 rounded-full animate-ping opacity-15 md:opacity-25"
-                    style="animation-delay: 1.5s;"></div>
-                <div class="absolute bottom-20 right-20 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-20 md:opacity-30"
-                    style="animation-delay: 2s;"></div>
-            </div>
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
 
             <!-- Enhanced Floating Code Snippets -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">

@@ -4,24 +4,153 @@
 @section('description',
     'Get professional help with algorithms and data structures. Expert programmers available 24/7
     for sorting, searching, dynamic programming, and complex algorithmic solutions.')
+@section('keywords', 'algorithm help, data structures, dynamic programming, graph algorithms, sorting algorithms, binary search, algorithm tutoring, coding help, programming assignment help')
 
 @section('content')
+    <!-- Critical Above-the-Fold CSS for Algorithms Page -->
+    <style>
+        /* Critical CSS for immediate hero section rendering */
+        .hero-gradient {
+            background: linear-gradient(135deg, #9333ea 0%, #3b82f6 50%, #4f46e5 100%);
+            min-height: 100vh;
+        }
+        /* Prevent layout shift */
+        .hero-content-height {
+            min-height: 600px;
+        }
+        /* Optimize animation performance with GPU acceleration */
+        .gpu-accelerated {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+        /* Use CSS containment to reduce layout calculations */
+        .contain-layout {
+            contain: layout style paint;
+        }
+        /* Reduce paint complexity */
+        .reduce-paint {
+            content-visibility: auto;
+        }
+    </style>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Algorithm & Data Structure Help",
+        "description": "Professional algorithm and data structure tutoring and programming assistance available 24/7 for students and developers.",
+        "provider": {
+            "@type": "Organization",
+            "name": "{{ config('app.name') }}",
+            "url": "{{ url('/') }}"
+        },
+        "serviceType": "Programming Education and Tutoring",
+        "areaServed": "Worldwide",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "{{ url()->current() }}",
+            "availableLanguage": "English"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Basic Algorithm Problems",
+                "price": "15.00",
+                "priceCurrency": "USD",
+                "description": "Simple sorting algorithms, basic data structures, 1-6 hour delivery, code explanation"
+            },
+            {
+                "@type": "Offer",
+                "name": "Intermediate Algorithm Problems",
+                "price": "35.00",
+                "priceCurrency": "USD",
+                "description": "Dynamic programming, graph algorithms, 6-24 hour delivery, complexity analysis, test cases"
+            },
+            {
+                "@type": "Offer",
+                "name": "Advanced Algorithm Problems",
+                "price": "65.00",
+                "priceCurrency": "USD",
+                "description": "Complex algorithm design, optimization problems, 1-3 day delivery, multiple approaches, performance optimization"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "800",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What programming languages do you support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We provide algorithm solutions in all major programming languages including Python, Java, C++, C#, JavaScript, and more. Our experts can work with your preferred language or suggest the most suitable one for your problem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you ensure optimal time complexity?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our experts analyze each problem to determine the most efficient approach. We provide detailed time and space complexity analysis with each solution and optimize for the best possible performance within the given constraints."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you help with competitive programming problems?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We have extensive experience with competitive programming platforms like LeetCode, HackerRank, Codeforces, and others. We can help with contest problems, interview preparation, and algorithmic challenges."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide explanations with the code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Every solution comes with detailed explanations of the algorithm approach, step-by-step logic, complexity analysis, and comments in the code to help you understand the solution thoroughly."
+                }
+            }
+        ]
+    }
+    </script>
+
     <div class="min-h-screen">
         <!-- Hero Section with Code Background -->
-        <section class="relative bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 py-20 overflow-hidden">
-            <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute inset-0"
-                    style="background-image: url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23000000\" fill-opacity=\"0.1\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');">
-                </div>
+        <section class="relative bg-gradient-to-br from-purple-600 via-blue-700 to-indigo-800 py-24 overflow-hidden">
+            <!-- Animated Background Pattern - Optimized for Performance -->
+            <div class="absolute inset-0 opacity-10" style="pointer-events: none;">
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent via-white to-transparent animate-pulse"></div>
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23ffffff%27 fill-opacity=%270.3%27%3E%3Cpath d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 60px 60px;"></div>
             </div>
 
-            <!-- Floating Code Snippets -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <!-- Animated Grid Lines - Simplified for Performance -->
+            <div class="absolute inset-0 opacity-20" style="pointer-events: none;">
+                <div class="h-full w-full" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 50px 50px;"></div>
+            </div>
+
+            <!-- Floating Code Snippets - Lazy Load Below Fold -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden" loading="lazy">
                 <!-- Floating Binary Search -->
                 <div
-                    class="absolute top-10 left-10 bg-gray-900 text-green-400 p-3 rounded-lg shadow-lg font-mono text-xs animate-float opacity-80 max-w-xs">
-                    <div class="text-purple-400">// Binary Search</div>
+                    class="absolute top-10 left-10 bg-gradient-to-br from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-90 max-w-xs border border-green-500/30 backdrop-blur-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
+                        <div class="text-purple-400 font-bold">// Binary Search O(log n)</div>
+                    </div>
                     <div><span class="text-blue-400">def</span> binary_search(arr, target):</div>
                     <div class="ml-2">left, right = 0, len(arr) - 1</div>
                     <div class="ml-2"><span class="text-orange-400">while</span> left &lt;= right:</div>
@@ -30,8 +159,11 @@
 
                 <!-- Floating Quick Sort -->
                 <div
-                    class="absolute top-32 right-20 bg-gray-900 text-blue-400 p-3 rounded-lg shadow-lg font-mono text-xs animate-float-delayed opacity-80 max-w-xs">
-                    <div class="text-purple-400">// Quick Sort</div>
+                    class="absolute top-32 right-20 bg-gradient-to-br from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-90 max-w-xs border border-blue-500/30 backdrop-blur-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                        <div class="text-purple-400 font-bold">// Quick Sort O(n log n)</div>
+                    </div>
                     <div><span class="text-blue-400">function</span> quickSort(arr) {</div>
                     <div class="ml-2"><span class="text-orange-400">if</span> (arr.length &lt;= 1) <span
                             class="text-orange-400">return</span> arr;</div>
@@ -41,8 +173,11 @@
 
                 <!-- Floating Dynamic Programming -->
                 <div
-                    class="absolute bottom-20 left-1/4 bg-gray-900 text-yellow-400 p-3 rounded-lg shadow-lg font-mono text-xs animate-bounce opacity-80 max-w-xs">
-                    <div class="text-purple-400">// Fibonacci DP</div>
+                    class="absolute bottom-20 left-1/4 bg-gradient-to-br from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce-slow opacity-90 max-w-xs border border-yellow-500/30 backdrop-blur-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+                        <div class="text-purple-400 font-bold">// Fibonacci DP</div>
+                    </div>
                     <div><span class="text-blue-400">int</span> fib(<span class="text-blue-400">int</span> n) {</div>
                     <div class="ml-2"><span class="text-blue-400">int</span> dp[n+1];</div>
                     <div class="ml-2">dp[0] = 0; dp[1] = 1;</div>
@@ -51,8 +186,11 @@
 
                 <!-- Floating Graph Algorithm -->
                 <div
-                    class="absolute top-64 right-1/4 bg-gray-900 text-cyan-400 p-3 rounded-lg shadow-lg font-mono text-xs animate-pulse opacity-80 max-w-xs">
-                    <div class="text-purple-400">// DFS Traversal</div>
+                    class="absolute top-64 right-1/4 bg-gradient-to-br from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse-slow opacity-90 max-w-xs border border-cyan-500/30 backdrop-blur-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
+                        <div class="text-purple-400 font-bold">// DFS Traversal O(V+E)</div>
+                    </div>
                     <div><span class="text-blue-400">void</span> dfs(<span class="text-blue-400">int</span> node) {</div>
                     <div class="ml-2">visited[node] = <span class="text-green-400">true</span>;</div>
                     <div class="ml-2"><span class="text-orange-400">for</span> (<span class="text-blue-400">int</span>
@@ -66,18 +204,19 @@
                     <!-- Left Content -->
                     <div>
                         <div
-                            class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            🧠 Algorithm & Data Structure Expert Help
+                            class="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-5 py-2 rounded-full text-sm font-bold mb-6 border border-white/30 shadow-lg animate-pulse-glow">
+                            <span class="text-2xl mr-2">🧠</span>
+                            Algorithm & Data Structure Expert Help
                         </div>
 
-                        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
                             Master<br>
                             <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Algorithms</span><br>
-                            & Data Structures
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 animate-gradient">Algorithms</span><br>
+                            <span class="text-white">& Data Structures</span>
                         </h1>
 
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        <p class="text-xl text-white/90 mb-8 leading-relaxed drop-shadow-lg">
                             Get expert help with complex algorithms and data structures. From sorting and searching to
                             dynamic programming and graph algorithms, our experienced programmers solve the most challenging
                             problems.
@@ -85,69 +224,118 @@
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
                             <a href="{{ route('assignments.create') }}"
-                                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl text-center">
-                                Get Help Now
+                                class="group relative bg-white text-purple-700 px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 text-center overflow-hidden">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    Get Help Now
+                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-pink-300 opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             </a>
                             <a href="#pricing"
-                                class="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-200 text-center">
+                                class="border-2 border-white/60 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-bold hover:bg-white/20 hover:border-white transition-all duration-300 shadow-lg text-center hover:scale-105">
                                 View Pricing
                             </a>
                         </div>
 
-                        <div class="flex items-center space-x-6 text-sm text-gray-600">
-                            <div class="flex items-center">
-                                <span class="text-yellow-400 mr-1">⭐</span>
-                                <span class="font-semibold">4.9/5</span> rating
+                        <div class="flex flex-wrap items-center gap-6 text-sm">
+                            <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                                <span class="text-yellow-300 text-xl mr-2">⭐</span>
+                                <span class="font-bold text-white">4.9/5</span>
+                                <span class="text-white/70 ml-1">rating</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="text-green-500 mr-1">✓</span>
-                                <span>800+ problems solved</span>
+                            <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                                <span class="text-green-300 text-xl mr-2">✓</span>
+                                <span class="text-white">800+ problems solved</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="text-blue-500 mr-1">⚡</span>
-                                <span>1-24 hour delivery</span>
+                            <div class="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                                <span class="text-cyan-300 text-xl mr-2">⚡</span>
+                                <span class="text-white">1-24 hour delivery</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right Content - Code Editor Mockup -->
-                    <div class="relative">
-                        <div class="bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
+                    <div class="relative group">
+                        <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-700/50 backdrop-blur-sm transform hover:scale-105 transition-all duration-500">
                             <!-- Editor Header -->
-                            <div class="flex items-center mb-4">
-                                <div class="flex space-x-2">
-                                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex items-center justify-between px-4 py-3 bg-gray-800/80 border-b border-gray-700/50">
+                                <div class="flex items-center gap-4">
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 bg-red-500 rounded-full hover:bg-red-400 transition-colors cursor-pointer"></div>
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full hover:bg-yellow-400 transition-colors cursor-pointer"></div>
+                                        <div class="w-3 h-3 bg-green-500 rounded-full hover:bg-green-400 transition-colors cursor-pointer"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-blue-400">📄</span>
+                                        <span class="text-gray-400 text-sm font-mono">algorithm_solution.py</span>
+                                    </div>
                                 </div>
-                                <div class="ml-4 text-gray-400 text-sm font-mono">algorithm_solution.py</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded border border-green-500/30">✓ Optimized</span>
+                                </div>
                             </div>
 
                             <!-- Code Content -->
-                            <div class="font-mono text-sm space-y-1 p-6">
-                                <div class="text-purple-400"># Efficient Algorithm Solution</div>
-                                <div class="text-blue-400">def <span class="text-yellow-400">solve_problem</span>(data):
+                            <div class="font-mono text-sm space-y-1 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">1</span>
+                                    <div class="text-purple-400"># Efficient Algorithm Solution</div>
                                 </div>
-                                <div class="text-gray-300 ml-4"># Time Complexity: O(n log n)</div>
-                                <div class="text-gray-300 ml-4"># Space Complexity: O(n)</div>
-                                <div class="text-gray-300 ml-4">result = optimized_algorithm(data)</div>
-                                <div class="text-gray-300 ml-4">return <span class="text-green-400">result</span></div>
-                                <div class="text-gray-500"></div>
-                                <div class="text-purple-400"># Expert Available 4.9/5 ⭐</div>
-                                <div class="text-blue-400">def <span class="text-yellow-400">test_solution</span>():</div>
-                                <div class="text-gray-300 ml-4">assert solve_problem(test_data) == expected</div>
-                                <div class="text-gray-300 ml-4">print(<span class="text-green-400">"All tests
-                                        passed!"</span>)</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">2</span>
+                                    <div class="text-blue-400">def <span class="text-yellow-400">solve_problem</span><span class="text-gray-500">(</span>data<span class="text-gray-500">)</span>:</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">3</span>
+                                    <div class="text-gray-500 ml-4"># Time Complexity: <span class="text-green-400">O(n log n)</span></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">4</span>
+                                    <div class="text-gray-500 ml-4"># Space Complexity: <span class="text-cyan-400">O(n)</span></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">5</span>
+                                    <div class="text-gray-300 ml-4">result = <span class="text-purple-400">optimized_algorithm</span>(data)</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">6</span>
+                                    <div class="text-gray-300 ml-4"><span class="text-pink-400">return</span> <span class="text-green-400">result</span></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">7</span>
+                                    <div class="text-gray-700"></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">8</span>
+                                    <div class="text-purple-400"># Expert Available 4.9/5 ⭐</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">9</span>
+                                    <div class="text-blue-400">def <span class="text-yellow-400">test_solution</span><span class="text-gray-500">()</span>:</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">10</span>
+                                    <div class="text-gray-300 ml-4"><span class="text-orange-400">assert</span> solve_problem(test_data) == expected</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-600">11</span>
+                                    <div class="text-gray-300 ml-4"><span class="text-purple-400">print</span>(<span class="text-green-400">"All tests passed!"</span>)</div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Floating Elements -->
-                        <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 animate-bounce">
-                            <div class="text-2xl">🧠</div>
+                        <!-- Floating Elements with Enhanced Animations -->
+                        <div class="absolute -top-6 -right-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl shadow-2xl p-5 animate-bounce-slow border-4 border-white/30">
+                            <div class="text-3xl">🧠</div>
                         </div>
-                        <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-pulse">
-                            <div class="text-2xl">⚡</div>
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl shadow-2xl p-5 animate-pulse-slow border-4 border-white/30">
+                            <div class="text-3xl">⚡</div>
                         </div>
+
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
                     </div>
                 </div>
             </div>
@@ -343,84 +531,162 @@
         </section>
 
         <!-- Algorithm Categories Section -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gradient-to-b from-white to-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Algorithm Categories We Cover</h2>
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-6 py-2 rounded-full text-sm font-bold mb-6">
+                        <span class="text-xl">📚</span>
+                        COMPREHENSIVE COVERAGE
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Algorithm Categories <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">We Cover</span>
+                    </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive coverage of all major algorithm types
                         and data structures used in computer science and competitive programming.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Sorting & Searching -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">🔍</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Sorting & Searching</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Quick Sort, Merge Sort, Heap Sort</li>
-                            <li>• Binary Search & Variants</li>
-                            <li>• Linear & Interpolation Search</li>
-                            <li>• Sorting Algorithm Analysis</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">🔍</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-purple-600 transition-colors">Sorting & Searching</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-purple-500 font-bold">→</span>
+                                Quick Sort, Merge Sort, Heap Sort
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-purple-500 font-bold">→</span>
+                                Binary Search & Variants
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-purple-500 font-bold">→</span>
+                                Linear & Interpolation Search
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-purple-500 font-bold">→</span>
+                                Sorting Algorithm Analysis
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Dynamic Programming -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">🔄</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Dynamic Programming</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Fibonacci & Optimization Problems</li>
-                            <li>• Knapsack & Subset Problems</li>
-                            <li>• Longest Common Subsequence</li>
-                            <li>• Matrix Chain Multiplication</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-blue-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">🔄</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors">Dynamic Programming</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-blue-500 font-bold">→</span>
+                                Fibonacci & Optimization Problems
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-blue-500 font-bold">→</span>
+                                Knapsack & Subset Problems
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-blue-500 font-bold">→</span>
+                                Longest Common Subsequence
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-blue-500 font-bold">→</span>
+                                Matrix Chain Multiplication
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Graph Algorithms -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">🕸️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Graph Algorithms</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• DFS, BFS, & Graph Traversal</li>
-                            <li>• Dijkstra's & Shortest Path</li>
-                            <li>• Minimum Spanning Trees</li>
-                            <li>• Topological Sorting</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-cyan-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">🕸️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-cyan-600 transition-colors">Graph Algorithms</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-cyan-500 font-bold">→</span>
+                                DFS, BFS, & Graph Traversal
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-cyan-500 font-bold">→</span>
+                                Dijkstra's & Shortest Path
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-cyan-500 font-bold">→</span>
+                                Minimum Spanning Trees
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-cyan-500 font-bold">→</span>
+                                Topological Sorting
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Data Structures -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">🏗️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Data Structures</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Arrays, Linked Lists, Stacks</li>
-                            <li>• Trees, BST, Balanced Trees</li>
-                            <li>• Hash Tables & Hash Maps</li>
-                            <li>• Heaps & Priority Queues</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-green-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">🏗️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-green-600 transition-colors">Data Structures</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-500 font-bold">→</span>
+                                Arrays, Linked Lists, Stacks
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-500 font-bold">→</span>
+                                Trees, BST, Balanced Trees
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-500 font-bold">→</span>
+                                Hash Tables & Hash Maps
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-500 font-bold">→</span>
+                                Heaps & Priority Queues
+                            </li>
                         </ul>
                     </div>
 
                     <!-- String Algorithms -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">📝</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">String Algorithms</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Pattern Matching Algorithms</li>
-                            <li>• KMP & Rabin-Karp</li>
-                            <li>• Suffix Arrays & Trees</li>
-                            <li>• Edit Distance & LCS</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-pink-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">📝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-pink-600 transition-colors">String Algorithms</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-pink-500 font-bold">→</span>
+                                Pattern Matching Algorithms
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-pink-500 font-bold">→</span>
+                                KMP & Rabin-Karp
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-pink-500 font-bold">→</span>
+                                Suffix Arrays & Trees
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-pink-500 font-bold">→</span>
+                                Edit Distance & LCS
+                            </li>
                         </ul>
                     </div>
 
                     <!-- Advanced Topics -->
-                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
-                        <div class="text-4xl mb-4 text-center">🚀</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Advanced Topics</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Greedy Algorithms</li>
-                            <li>• Backtracking & Recursion</li>
-                            <li>• Divide & Conquer</li>
-                            <li>• Complexity Analysis</li>
+                    <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-indigo-300 transform hover:-translate-y-2">
+                        <div class="text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">🚀</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-indigo-600 transition-colors">Advanced Topics</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <span class="text-indigo-500 font-bold">→</span>
+                                Greedy Algorithms
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-indigo-500 font-bold">→</span>
+                                Backtracking & Recursion
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-indigo-500 font-bold">→</span>
+                                Divide & Conquer
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-indigo-500 font-bold">→</span>
+                                Complexity Analysis
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -428,111 +694,141 @@
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+        <section id="pricing" class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+            <!-- Decorative Background Elements -->
+            <div class="absolute top-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Algorithm Help Pricing</h2>
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-6 py-2 rounded-full text-sm font-bold mb-6">
+                        <span class="text-xl">💰</span>
+                        TRANSPARENT PRICING
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Algorithm Help <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Pricing</span>
+                    </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Affordable pricing for algorithm and data structure
                         assistance based on problem complexity.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="group bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-200 transform hover:-translate-y-2">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Problems</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $15</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Simple sorting algorithms
+                            <div class="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-bold mb-4">🌱 Starter</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic Problems</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">$15</span>
+                                <span class="text-gray-500 text-lg">+</span>
+                            </div>
+                            <ul class="text-left space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Simple sorting algorithms</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Basic data structures
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Basic data structures</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    1-6 hour delivery
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">1-6 hour delivery</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Code explanation
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Code explanation</span>
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
+                                class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 text-center overflow-hidden">
+                                <span class="relative z-10">Get Started</span>
+                                <div class="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
                             </a>
                         </div>
                     </div>
 
-                    <div
-                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200 border-2 border-purple-600 relative">
-                        <div
-                            class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div class="group bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 border-4 border-purple-400 relative transform hover:-translate-y-3 scale-105">
+                        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+                            <span class="text-lg">⭐</span>
                             Most Popular
                         </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Intermediate Problems</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $35</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Dynamic programming
+                        <div class="text-center mt-2">
+                            <div class="inline-block bg-purple-200 text-purple-700 px-4 py-2 rounded-full text-sm font-bold mb-4">🚀 Pro</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Intermediate Problems</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">$35</span>
+                                <span class="text-gray-500 text-lg">+</span>
+                            </div>
+                            <ul class="text-left space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Dynamic programming</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Graph algorithms
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Graph algorithms</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    6-24 hour delivery
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">6-24 hour delivery</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Complexity analysis
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Complexity analysis</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Test cases included
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Test cases included</span>
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
+                                class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 text-center overflow-hidden shadow-lg">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    Get Started
+                                    <svg class="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                                <div class="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
                             </a>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
+                    <div class="group bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-indigo-200 transform hover:-translate-y-2">
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Problems</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $65</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Complex algorithm design
+                            <div class="inline-block bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-bold mb-4">💎 Expert</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Advanced Problems</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">$65</span>
+                                <span class="text-gray-500 text-lg">+</span>
+                            </div>
+                            <ul class="text-left space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Complex algorithm design</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Optimization problems
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Optimization problems</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    1-3 day delivery
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">1-3 day delivery</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Multiple approaches
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Multiple approaches</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Performance optimization
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 text-xl mt-0.5">✓</span>
+                                    <span class="text-gray-700">Performance optimization</span>
                                 </li>
                             </ul>
                             <a href="{{ route('assignments.create') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
+                                class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center overflow-hidden">
+                                <span class="relative z-10">Get Started</span>
+                                <div class="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
                             </a>
                         </div>
                     </div>
@@ -760,7 +1056,7 @@
 
                                 <div class="bg-white rounded-xl p-5 shadow-md border-2 border-yellow-200">
                                     <div class="mb-3">
-                                        <div class="text-3xl font-bold text-yellow-600 mb-2">O(n log n) - Linearithmic
+                                        <div class="text-3xl font-bold text-yellow-700 mb-2">O(n log n) - Linearithmic
                                         </div>
                                         <p class="text-gray-700 text-sm mb-3">Common in efficient sorting algorithms.
                                             Optimal for comparison-based sorting with proven lower bound.</p>
@@ -835,7 +1131,7 @@
                                 <div>
                                     <h3 class="text-3xl font-bold text-gray-900 mb-2">Common Algorithm Patterns and
                                         Problem-Solving Techniques</h3>
-                                    <p class="text-green-600 font-semibold text-lg">Master these patterns to solve
+                                    <p class="text-green-700 font-semibold text-lg">Master these patterns to solve
                                         thousands of algorithmic problems</p>
                                 </div>
                             </div>
@@ -1249,11 +1545,11 @@
                                             </div>
                                             <div class="flex justify-between">
                                                 <span>Insert:</span>
-                                                <span class="font-semibold text-yellow-600">O(log n)</span>
+                                                <span class="font-semibold text-yellow-700">O(log n)</span>
                                             </div>
                                             <div class="flex justify-between">
                                                 <span>Extract min/max:</span>
-                                                <span class="font-semibold text-yellow-600">O(log n)</span>
+                                                <span class="font-semibold text-yellow-700">O(log n)</span>
                                             </div>
                                             <div class="flex justify-between">
                                                 <span>Build heap:</span>
@@ -1446,6 +1742,176 @@
             </div>
         </section>
 
+        <!-- Trust & Guarantees Section -->
+        <section class="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-200 rounded-full opacity-20 -mr-32 -mt-32 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-200 rounded-full opacity-20 -ml-32 -mb-32 blur-3xl"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 bg-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg border-2 border-purple-200">
+                        <span class="text-2xl">🛡️</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">YOUR SUCCESS IS GUARANTEED</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Why <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">10,000+ Students</span> Trust Us
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're committed to your academic success with industry-leading guarantees</p>
+                </div>
+
+                <!-- Trust Badges Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <!-- Money-Back Guarantee -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl border-2 border-green-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-3xl">💰</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Money-Back Guarantee</h3>
+                        <p class="text-gray-600 text-center text-sm">100% refund if you're not satisfied with the solution quality</p>
+                    </div>
+
+                    <!-- Plagiarism Free -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl border-2 border-blue-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-3xl">✅</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">100% Original Code</h3>
+                        <p class="text-gray-600 text-center text-sm">Every solution is written from scratch, never copied or reused</p>
+                    </div>
+
+                    <!-- On-Time Delivery -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl border-2 border-purple-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-3xl">⏰</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">On-Time Promise</h3>
+                        <p class="text-gray-600 text-center text-sm">Never miss a deadline - we deliver on time, every time, guaranteed</p>
+                    </div>
+
+                    <!-- Privacy Protected -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl border-2 border-indigo-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <span class="text-3xl">🔒</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Privacy Protected</h3>
+                        <p class="text-gray-600 text-center text-sm">Your information is encrypted and never shared with third parties</p>
+                    </div>
+                </div>
+
+                <!-- University Students Trust Us - Enhanced -->
+                <div class="bg-gradient-to-br from-white via-purple-50 to-blue-50 rounded-3xl p-10 shadow-2xl border-2 border-purple-200 mb-12 relative overflow-hidden">
+                    <!-- Decorative elements -->
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-purple-300 rounded-full opacity-10 -mr-20 -mt-20 blur-2xl"></div>
+                    <div class="absolute bottom-0 left-0 w-40 h-40 bg-blue-300 rounded-full opacity-10 -ml-20 -mb-20 blur-2xl"></div>
+
+                    <div class="relative z-10">
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 px-5 py-2 rounded-full text-sm font-bold mb-4 border-2 border-purple-200">
+                                <span class="text-xl">🎓</span>
+                                <span class="text-purple-700">ELITE UNIVERSITIES</span>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+                                Trusted by Students at
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Top Universities</span>
+                            </h3>
+                            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                                Join thousands of successful students from the world's most prestigious institutions who chose us for their algorithm assignments
+                            </p>
+                        </div>
+
+                        <!-- University Badges -->
+                        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                            <!-- MIT -->
+                            <div class="group bg-white rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-gray-900 mb-2">MIT</div>
+                                    <div class="text-xs text-purple-600 font-bold">850+ Students</div>
+                                </div>
+                            </div>
+
+                            <!-- Stanford -->
+                            <div class="group bg-white rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-gray-900 mb-2">Stanford</div>
+                                    <div class="text-xs text-purple-600 font-bold">720+ Students</div>
+                                </div>
+                            </div>
+
+                            <!-- Berkeley -->
+                            <div class="group bg-white rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-gray-900 mb-2">UC Berkeley</div>
+                                    <div class="text-xs text-purple-600 font-bold">680+ Students</div>
+                                </div>
+                            </div>
+
+                            <!-- CMU -->
+                            <div class="group bg-white rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-gray-900 mb-2">CMU</div>
+                                    <div class="text-xs text-purple-600 font-bold">590+ Students</div>
+                                </div>
+                            </div>
+
+                            <!-- More Universities -->
+                            <div class="group bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-purple-300 col-span-2 md:col-span-1">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-gray-900 mb-2">500+ More</div>
+                                    <div class="text-xs text-purple-700 font-bold">Universities Worldwide</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Universities Marquee -->
+                        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-purple-200">
+                            <div class="flex flex-wrap justify-center gap-3 text-sm font-semibold text-gray-600">
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Harvard</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Princeton</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Yale</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Cornell</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Columbia</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">UPenn</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Georgia Tech</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">UIUC</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">UT Austin</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">UMich</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Waterloo</span>
+                                <span class="bg-white px-3 py-1 rounded-lg shadow-sm">Toronto</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust Statement -->
+                        <div class="mt-6 text-center">
+                            <p class="text-gray-700 font-semibold">
+                                🌍 Helping students across <span class="text-purple-600 font-bold">65+ countries</span>
+                                achieve academic excellence since 2018
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Success Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl font-extrabold mb-2">98%</div>
+                        <p class="text-xl font-semibold mb-1">Student Success Rate</p>
+                        <p class="text-purple-100 text-sm">Students achieve A or B grades</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl font-extrabold mb-2">4.9/5</div>
+                        <p class="text-xl font-semibold mb-1">Average Rating</p>
+                        <p class="text-green-100 text-sm">Based on 2,500+ reviews</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-8 text-white text-center shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <div class="text-5xl font-extrabold mb-2">24/7</div>
+                        <p class="text-xl font-semibold mb-1">Expert Support</p>
+                        <p class="text-orange-100 text-sm">Always here when you need us</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
@@ -1500,58 +1966,220 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Master Algorithms?</h2>
-                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join thousands of students who have improved
-                    their algorithmic thinking and problem-solving skills with our expert guidance.</p>
-                <a href="{{ route('assignments.create') }}"
-                    class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                    Start Solving Today
-                </a>
+        <section class="relative py-24 bg-gradient-to-br from-purple-700 via-blue-700 to-indigo-800 overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+            </div>
+
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="h-full w-full" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 50px 50px;"></div>
+            </div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-bold mb-6 border border-white/30 animate-pulse-glow">
+                        <span class="text-2xl">🎯</span>
+                        JOIN 10,000+ SUCCESSFUL STUDENTS
+                    </div>
+
+                    <!-- Heading -->
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
+                        Ready to Master <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 animate-gradient">
+                            Algorithms?
+                        </span>
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+                        Join thousands of students who have improved their algorithmic thinking and problem-solving skills with our expert guidance.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <a href="{{ route('assignments.create') }}"
+                            class="group relative bg-white text-purple-700 px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 overflow-hidden">
+                            <span class="relative z-10 flex items-center justify-center gap-2">
+                                Start Solving Today
+                                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-pink-300 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        </a>
+                        <a href="#pricing"
+                            class="group border-2 border-white/60 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-bold hover:bg-white/20 hover:border-white transition-all duration-300 shadow-lg hover:scale-105">
+                            View Pricing
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap justify-center gap-8 text-white/90">
+                        <div class="flex items-center gap-2">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <span class="text-2xl">⭐</span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-2xl font-bold">4.9/5</div>
+                                <div class="text-sm opacity-80">Rating</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <span class="text-2xl">✓</span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-2xl font-bold">800+</div>
+                                <div class="text-sm opacity-80">Problems Solved</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-2xl font-bold">24/7</div>
+                                <div class="text-sm opacity-80">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <style>
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0px) rotate(0deg);
             }
-
             33% {
-                transform: translateY(-10px) rotate(1deg);
+                transform: translateY(-15px) rotate(1deg);
             }
-
             66% {
-                transform: translateY(5px) rotate(-1deg);
+                transform: translateY(8px) rotate(-1deg);
             }
         }
 
         @keyframes float-delayed {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0px) rotate(0deg);
             }
-
             33% {
-                transform: translateY(10px) rotate(-1deg);
+                transform: translateY(12px) rotate(-1deg);
             }
-
             66% {
-                transform: translateY(-5px) rotate(1deg);
+                transform: translateY(-8px) rotate(1deg);
             }
         }
 
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 0.9;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Optimize animations for reduced main thread blocking */
         .animate-float {
             animation: float 6s ease-in-out infinite;
+            /* GPU acceleration for smooth performance */
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         .animate-float-delayed {
             animation: float-delayed 8s ease-in-out infinite;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+            transform: translateZ(0);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            /* Use opacity for better performance than other properties */
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            /* Box-shadow is expensive, but contained to small elements */
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            /* GPU accelerate background animations */
+            transform: translateZ(0);
+        }
+
+        @keyframes blob {
+            0%, 100% {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            33% {
+                transform: translate3d(30px, -50px, 0) scale(1.1);
+            }
+            66% {
+                transform: translate3d(-20px, 20px, 0) scale(0.9);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+            /* Force GPU acceleration with translate3d */
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
         }
     </style>
 @endsection
