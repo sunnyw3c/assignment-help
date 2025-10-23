@@ -38,6 +38,11 @@ class AssignmentServiceController extends Controller
             'research-paper' => 'assignment-services.research-paper',
             'homework-help' => 'assignment-services.homework-help',
             'math-problem-solving' => 'assignment-services.math-problem-solving',
+            'thesis-dissertation' => 'assignment-services.thesis-dissertation',
+            'lab-report' => 'assignment-services.lab-report',
+            'case-study' => 'assignment-services.case-study',
+            'literature-review' => 'assignment-services.literature-review',
+            'presentation-design' => 'assignment-services.presentation-design',
         ];
 
         $view = $customViews[$slug] ?? 'assignment-services.show';
