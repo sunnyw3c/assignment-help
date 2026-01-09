@@ -5,6 +5,7 @@ use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\AssignmentServiceController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AllServicesController;
 use App\Http\Controllers\HowItWorksController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PricingController;
@@ -17,9 +18,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/programming-languages', [LanguageController::class, 'index'])->name('languages.index');
 Route::get('/programming-languages/{slug}', [LanguageController::class, 'show'])->name('languages.show');
 
-// Programming Services (existing - unchanged)
-Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
-Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
+// All Services (Programming + Assignment)
+Route::get('/services', [AllServicesController::class, 'index'])->name('services.index');
+
+// Programming Services
+Route::get('/programming-services', [ServiceController::class, 'index'])->name('programming-services.index');
+Route::get('/programming-services/{slug}', [ServiceController::class, 'show'])->name('programming-services.show');
 
 // Assignment Help Services (new)
 Route::get('/assignment-services', [AssignmentServiceController::class, 'index'])->name('assignment-services.index');

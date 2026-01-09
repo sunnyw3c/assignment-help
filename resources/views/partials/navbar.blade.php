@@ -9,7 +9,7 @@
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex gap-8 text-sm font-medium">
             <li><a href="{{ url('/') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->is('/') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🏠 Home</a></li>
-            <li><a href="{{ route('services.index') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">⚡ Programming</a></li>
+            <li><a href="{{ route('services.index') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">⚡ Services</a></li>
             <li><a href="{{ route('assignment-services.index') }}" class="hover:text-blue-600 transition-colors duration-200 {{ request()->routeIs('assignment-services.*') ? 'text-blue-600 font-semibold' : 'text-gray-700' }}">📝 Assignments</a></li>
             <li><a href="{{ route('languages.index') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🔧 Languages</a></li>
             <li><a href="{{ url('/how-it-works') }}" class="hover:text-purple-600 transition-colors duration-200 text-gray-700">❓ How It Works</a></li>
@@ -42,7 +42,7 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
         <div class="px-4 py-4 space-y-4">
             <a href="{{ url('/') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->is('/') ? 'text-purple-600 font-semibold' : '' }}">🏠 Home</a>
-            <a href="{{ route('services.index') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : '' }}">⚡ Programming</a>
+            <a href="{{ route('services.index') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : '' }}">⚡ Services</a>
             <a href="{{ route('assignment-services.index') }}" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 {{ request()->routeIs('assignment-services.*') ? 'text-blue-600 font-semibold' : '' }}">📝 Assignments</a>
             <a href="{{ route('languages.index') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : '' }}">🔧 Languages</a>
             <a href="{{ url('/how-it-works') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200">❓ How It Works</a>

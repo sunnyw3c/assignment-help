@@ -8,7 +8,14 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $services = [
+        $services = $this->getServices();
+
+        return view('programming-services.index', compact('services'));
+    }
+
+    public function getServices()
+    {
+        return [
             [
                 'name' => 'Web Development Projects',
                 'slug' => 'web-development',
@@ -153,8 +160,6 @@ class ServiceController extends Controller
                 'orders_completed' => 1500
             ]
         ];
-
-        return view('services.index', compact('services'));
     }
 
     public function show($slug)

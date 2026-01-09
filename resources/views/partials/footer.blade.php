@@ -62,13 +62,13 @@
             <div>
                 <h4 class="text-xl font-bold mb-6 text-orange-400">Our Services</h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="{{ route('services.show', 'debugging') }}"
+                    <li><a href="{{ route('programming-services.show', 'debugging') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">🔧</span>Code Debugging</a></li>
-                    <li><a href="{{ route('services.show', 'web-development') }}"
+                    <li><a href="{{ route('programming-services.show', 'web-development') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">💻</span>Web Development</a></li>
-                    <li><a href="{{ route('services.show', 'mobile-app') }}"
+                    <li><a href="{{ route('programming-services.show', 'mobile-app') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">📱</span>Mobile App Development</a></li>
                     <li><a href="{{ route('assignment-services.show', 'homework-help') }}"
@@ -77,7 +77,7 @@
                     <li><a href="{{ route('assignment-services.index') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">📚</span>Assignment Help</a></li>
-                    <li><a href="{{ route('services.show', 'testing-qa') }}"
+                    <li><a href="{{ route('programming-services.show', 'testing-qa') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">🧪</span>Testing & QA</a></li>
                 </ul>
