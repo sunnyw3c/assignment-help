@@ -140,6 +140,17 @@ class ServiceController extends Controller
                 'turnaround' => '3-7 days',
                 'rating' => 4.8,
                 'orders_completed' => 520
+            ],
+            [
+                'name' => 'Software Testing & QA',
+                'slug' => 'testing-qa',
+                'icon' => '🧪',
+                'description' => 'Comprehensive testing and quality assurance services for reliable software.',
+                'features' => ['Unit Testing', 'Integration Testing', 'E2E Testing', 'Test Automation'],
+                'price_from' => '$20',
+                'turnaround' => '2-24 hours',
+                'rating' => 4.9,
+                'orders_completed' => 1500
             ]
         ];
 
@@ -172,6 +183,7 @@ class ServiceController extends Controller
             'cybersecurity' => 'services.cybersecurity',
             'desktop-app' => 'services.desktop-app',
             'cloud-computing' => 'services.cloud-computing',
+            'testing-qa' => 'services.testing-qa',
         ];
 
         // Check if we have a specific view for this service
@@ -318,6 +330,17 @@ class ServiceController extends Controller
                 'turnaround' => '3-7 days',
                 'rating' => 4.8,
                 'orders_completed' => 520
+            ],
+            [
+                'name' => 'Software Testing & QA',
+                'slug' => 'testing-qa',
+                'icon' => '🧪',
+                'description' => 'Comprehensive testing and quality assurance services for reliable software.',
+                'features' => ['Unit Testing', 'Integration Testing', 'E2E Testing', 'Test Automation'],
+                'price_from' => '$20',
+                'turnaround' => '2-24 hours',
+                'rating' => 4.9,
+                'orders_completed' => 1500
             ]
         ];
     }

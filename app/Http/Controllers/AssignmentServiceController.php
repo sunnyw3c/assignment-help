@@ -43,6 +43,7 @@ class AssignmentServiceController extends Controller
             'case-study' => 'assignment-services.case-study',
             'literature-review' => 'assignment-services.literature-review',
             'presentation-design' => 'assignment-services.presentation-design',
+            'proofreading-editing' => 'assignment-services.proofreading-editing',
         ];
 
         $view = $customViews[$slug] ?? 'assignment-services.show';

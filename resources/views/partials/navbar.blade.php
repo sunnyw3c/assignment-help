@@ -13,6 +13,8 @@
             <li><a href="{{ route('assignment-services.index') }}" class="hover:text-blue-600 transition-colors duration-200 {{ request()->routeIs('assignment-services.*') ? 'text-blue-600 font-semibold' : 'text-gray-700' }}">📝 Assignments</a></li>
             <li><a href="{{ route('languages.index') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🔧 Languages</a></li>
             <li><a href="{{ url('/how-it-works') }}" class="hover:text-purple-600 transition-colors duration-200 text-gray-700">❓ How It Works</a></li>
+            <li><a href="{{ route('experts') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('experts') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">👨‍🏫 Experts</a></li>
+            <li><a href="{{ route('reviews') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('reviews') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">⭐ Reviews</a></li>
             <li><a href="{{ route('assignments.create') }}" class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('assignments.create') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">💻 Get Help</a></li>
         </ul>
 
@@ -44,6 +46,8 @@
             <a href="{{ route('assignment-services.index') }}" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 {{ request()->routeIs('assignment-services.*') ? 'text-blue-600 font-semibold' : '' }}">📝 Assignments</a>
             <a href="{{ route('languages.index') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : '' }}">🔧 Languages</a>
             <a href="{{ url('/how-it-works') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200">❓ How It Works</a>
+            <a href="{{ route('experts') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('experts') ? 'text-purple-600 font-semibold' : '' }}">👨‍🏫 Experts</a>
+            <a href="{{ route('reviews') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('reviews') ? 'text-purple-600 font-semibold' : '' }}">⭐ Reviews</a>
             <a href="{{ route('assignments.create') }}" class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('assignments.create') ? 'text-purple-600 font-semibold' : '' }}">💻 Get Help</a>
 
             <div class="pt-4 border-t border-gray-200 space-y-3">

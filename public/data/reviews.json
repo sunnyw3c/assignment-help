@@ -1,0 +1,184 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "course": "Computer Science, Junior",
+      "rating": 5,
+      "date": "2025-11-05",
+      "review": "Outstanding service! The essay I received was well-researched and perfectly formatted according to APA guidelines. The writer followed all my instructions and delivered it before the deadline.",
+      "service": "Essay Writing"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "course": "Business Administration, Senior",
+      "rating": 5,
+      "date": "2025-11-01",
+      "review": "I was struggling with my dissertation for months. The expert assigned to me provided excellent guidance and helped me structure my research methodology. Highly recommend!",
+      "service": "Thesis & Dissertation"
+    },
+    {
+      "id": 3,
+      "name": "Emily Rodriguez",
+      "course": "Mathematics, Sophomore",
+      "rating": 5,
+      "date": "2025-10-28",
+      "review": "The math problem-solving service is incredible. The tutor explained each step clearly and helped me understand complex calculus concepts. My grades have improved significantly!",
+      "service": "Math Problem Solving"
+    },
+    {
+      "id": 4,
+      "name": "David Thompson",
+      "course": "Psychology, Graduate Student",
+      "rating": 5,
+      "date": "2025-10-25",
+      "review": "Excellent research paper assistance. The paper was thoroughly researched with credible sources and met all academic standards. The customer support was also very responsive.",
+      "service": "Research Paper"
+    },
+    {
+      "id": 5,
+      "name": "Jessica Williams",
+      "course": "English Literature, Senior",
+      "rating": 4,
+      "date": "2025-10-20",
+      "review": "Very satisfied with the proofreading service. They caught errors I completely missed and improved the flow of my essay. Quick turnaround time too!",
+      "service": "Proofreading & Editing"
+    },
+    {
+      "id": 6,
+      "name": "Ryan Patel",
+      "course": "Engineering, Junior",
+      "rating": 5,
+      "date": "2025-10-15",
+      "review": "The homework help service saved me during finals week. Clear explanations, timely delivery, and affordable prices. Will definitely use again!",
+      "service": "Homework Help"
+    },
+    {
+      "id": 7,
+      "name": "Amanda Lee",
+      "course": "Nursing, Senior",
+      "rating": 5,
+      "date": "2025-10-10",
+      "review": "Professional and reliable service. The writer had excellent knowledge of nursing topics and delivered a high-quality case study analysis. Thank you!",
+      "service": "Essay Writing"
+    },
+    {
+      "id": 8,
+      "name": "James Anderson",
+      "course": "History, Sophomore",
+      "rating": 5,
+      "date": "2025-10-05",
+      "review": "Great experience overall. The research paper was well-written with proper citations. The writer was open to revisions and made sure I was completely satisfied.",
+      "service": "Research Paper"
+    },
+    {
+      "id": 9,
+      "name": "Olivia Martinez",
+      "course": "Biology, Junior",
+      "rating": 4,
+      "date": "2025-09-28",
+      "review": "Good service with knowledgeable tutors. Helped me with a complex biology lab report. Only minor formatting adjustments needed.",
+      "service": "Homework Help"
+    },
+    {
+      "id": 10,
+      "name": "Ethan Brown",
+      "course": "Economics, Graduate Student",
+      "rating": 5,
+      "date": "2025-09-20",
+      "review": "Exceptional dissertation support! The expert provided valuable feedback on my economic analysis and helped refine my arguments. Worth every penny!",
+      "service": "Thesis & Dissertation"
+    },
+    {
+      "id": 11,
+      "name": "Sophia Davis",
+      "course": "Law, Graduate Student",
+      "rating": 5,
+      "date": "2025-09-15",
+      "review": "Impressed with the legal research quality. The writer demonstrated deep understanding of case law and provided excellent analysis for my assignment.",
+      "service": "Research Paper"
+    },
+    {
+      "id": 12,
+      "name": "Daniel Wilson",
+      "course": "Chemistry, Senior",
+      "rating": 4,
+      "date": "2025-09-10",
+      "review": "Great help with my chemistry lab report. The calculations were accurate and the explanations were clear. Delivered on time as promised.",
+      "service": "Homework Help"
+    },
+    {
+      "id": 13,
+      "name": "Isabella Garcia",
+      "course": "Sociology, Junior",
+      "rating": 5,
+      "date": "2025-09-05",
+      "review": "The essay was insightful and well-structured. The writer incorporated all the required sociological theories and provided excellent examples.",
+      "service": "Essay Writing"
+    },
+    {
+      "id": 14,
+      "name": "Matthew Taylor",
+      "course": "Physics, Sophomore",
+      "rating": 5,
+      "date": "2025-08-30",
+      "review": "Outstanding help with physics problem sets. The tutor showed multiple approaches to solving complex problems. Really helped me understand the concepts.",
+      "service": "Math Problem Solving"
+    },
+    {
+      "id": 15,
+      "name": "Ava Thomas",
+      "course": "Education, Graduate Student",
+      "rating": 5,
+      "date": "2025-08-25",
+      "review": "My thesis wouldn't have been possible without this service. The editor provided constructive feedback and helped improve the overall quality significantly.",
+      "service": "Thesis & Dissertation"
+    },
+    {
+      "id": 16,
+      "name": "Christopher Moore",
+      "course": "Marketing, Senior",
+      "rating": 4,
+      "date": "2025-08-20",
+      "review": "Good quality work on my marketing case study. The analysis was thorough and included relevant industry examples. Minor revisions were handled promptly.",
+      "service": "Essay Writing"
+    },
+    {
+      "id": 17,
+      "name": "Mia Jackson",
+      "course": "Statistics, Junior",
+      "rating": 5,
+      "date": "2025-08-15",
+      "review": "Excellent help with statistical analysis! The tutor explained hypothesis testing and regression analysis in a way I finally understood. Very patient and knowledgeable.",
+      "service": "Math Problem Solving"
+    },
+    {
+      "id": 18,
+      "name": "Joshua White",
+      "course": "Political Science, Senior",
+      "rating": 5,
+      "date": "2025-08-10",
+      "review": "The research paper exceeded my expectations. Well-researched, properly cited, and demonstrated critical thinking. Received an A+ on the assignment!",
+      "service": "Research Paper"
+    },
+    {
+      "id": 19,
+      "name": "Charlotte Harris",
+      "course": "Environmental Science, Sophomore",
+      "rating": 4,
+      "date": "2025-08-05",
+      "review": "Very helpful service for my environmental impact assessment. The writer included current research and real-world examples. Slightly delayed but quality was worth it.",
+      "service": "Homework Help"
+    },
+    {
+      "id": 20,
+      "name": "Andrew Martin",
+      "course": "Finance, Graduate Student",
+      "rating": 5,
+      "date": "2025-07-30",
+      "review": "Phenomenal dissertation assistance! The financial modeling and analysis were spot-on. The expert really understood the complexity of my research topic.",
+      "service": "Thesis & Dissertation"
+    }
+  ]
+}

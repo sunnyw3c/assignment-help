@@ -62,22 +62,22 @@
             <div>
                 <h4 class="text-xl font-bold mb-6 text-orange-400">Our Services</h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="#"
+                    <li><a href="{{ route('services.show', 'debugging') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">🔧</span>Code Debugging</a></li>
-                    <li><a href="#"
+                    <li><a href="{{ route('services.show', 'web-development') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">💻</span>Project Development</a></li>
-                    <li><a href="#"
+                                class="mr-2">💻</span>Web Development</a></li>
+                    <li><a href="{{ route('services.show', 'mobile-app') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">📝</span>Code Review</a></li>
-                    <li><a href="#"
+                                class="mr-2">📱</span>Mobile App Development</a></li>
+                    <li><a href="{{ route('assignment-services.show', 'homework-help') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🎯</span>Programming Tutoring</a></li>
-                    <li><a href="#"
+                                class="mr-2">🎯</span>Homework Help</a></li>
+                    <li><a href="{{ route('assignment-services.index') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">📚</span>Assignment Help</a></li>
-                    <li><a href="#"
+                    <li><a href="{{ route('services.show', 'testing-qa') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
                                 class="mr-2">🧪</span>Testing & QA</a></li>
                 </ul>
@@ -101,11 +101,15 @@
             <div>
                 <h4 class="text-lg font-bold mb-4 text-white">Quick Links</h4>
                 <ul class="space-y-2 text-gray-300">
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">How It Works</a>
+                    <li><a href="{{ route('how-it-works') }}"
+                            class="hover:text-orange-400 transition-colors duration-200">How It Works</a>
                     </li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">Pricing</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">FAQ</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
+                    <li><a href="{{ route('pricing') }}"
+                            class="hover:text-orange-400 transition-colors duration-200">Pricing</a></li>
+                    <li><a href="{{ route('faq') }}"
+                            class="hover:text-orange-400 transition-colors duration-200">FAQ</a></li>
+                    <li><a href="{{ route('about') }}"
+                            class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
                     <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">Blog</a></li>
                 </ul>
             </div>
