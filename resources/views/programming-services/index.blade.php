@@ -290,7 +290,7 @@
                             </div>
 
                             <div class="flex gap-3">
-                                <a href="{{ route('services.show', $service['slug']) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
+                                <a href="{{ route('programming-services.show', $service['slug']) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
                                     Learn More
                                     <svg class="ml-2 w-4 h-4 group-hover/learn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

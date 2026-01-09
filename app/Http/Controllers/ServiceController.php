@@ -176,19 +176,19 @@ class ServiceController extends Controller
 
         // Map slug to specific blade file
         $viewMap = [
-            'web-development' => 'services.web-development',
-            'mobile-app' => 'services.mobile-app',
-            'algorithms' => 'services.algorithms',
-            'database' => 'services.database',
-            'machine-learning' => 'services.machine-learning',
-            'debugging' => 'services.debugging',
-            'api-development' => 'services.api-development',
-            'devops' => 'services.devops',
-            'game-development' => 'services.game-development',
-            'cybersecurity' => 'services.cybersecurity',
-            'desktop-app' => 'services.desktop-app',
-            'cloud-computing' => 'services.cloud-computing',
-            'testing-qa' => 'services.testing-qa',
+            'web-development' => 'programming-services.web-development',
+            'mobile-app' => 'programming-services.mobile-app',
+            'algorithms' => 'programming-services.algorithms',
+            'database' => 'programming-services.database',
+            'machine-learning' => 'programming-services.machine-learning',
+            'debugging' => 'programming-services.debugging',
+            'api-development' => 'programming-services.api-development',
+            'devops' => 'programming-services.devops',
+            'game-development' => 'programming-services.game-development',
+            'cybersecurity' => 'programming-services.cybersecurity',
+            'desktop-app' => 'programming-services.desktop-app',
+            'cloud-computing' => 'programming-services.cloud-computing',
+            'testing-qa' => 'programming-services.testing-qa',
         ];
 
         // Check if we have a specific view for this service
@@ -198,7 +198,7 @@ class ServiceController extends Controller
 
         // Fallback to generic service view for other services
         $serviceDetails = $this->getServiceDetails($slug);
-        return view('services.show', compact('service', 'serviceDetails'));
+        return view('programming-services.show', compact('service', 'serviceDetails'));
     }
 
     private function getAllServices()
