@@ -19,7 +19,7 @@
         "areaServed": "Global",
         "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceUrl": "{{ route('assignment-services.show', $service->slug) }}"
+            "serviceUrl": "{{ route('services.assignment.show', $service->slug) }}"
         },
         "offers": {
             "@type": "Offer",
@@ -101,7 +101,7 @@
                         <div class="flex items-center space-x-2 text-gray-500 text-sm">
                             <a href="{{ route('home') }}" class="hover:text-blue-600 transition-colors">Home</a>
                             <span>›</span>
-                            <a href="{{ route('assignment-services.index') }}" class="hover:text-blue-600 transition-colors">Assignment Services</a>
+                            <a href="{{ route('services.assignment.index') }}" class="hover:text-blue-600 transition-colors">Assignment Services</a>
                             <span>›</span>
                             <span class="text-gray-900 font-medium">{{ $service->name }}</span>
                         </div>
@@ -472,7 +472,7 @@
                             d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
-                <a href="{{ route('assignment-services.index') }}"
+                <a href="{{ route('services.assignment.index') }}"
                     class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300">
                     <span class="mr-4 text-3xl">📚</span>
                     View All Services
@@ -495,7 +495,7 @@
                 const urgencyHours = parseInt(document.getElementById('urgency_hours').value);
                 const serviceId = {{ $service->id }};
 
-                fetch('{{ route('assignment-services.calculate-price') }}', {
+                fetch('{{ route('services.assignment.calculate-price') }}', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

@@ -21,14 +21,14 @@ Route::get('/programming-languages/{slug}', [LanguageController::class, 'show'])
 // All Services (Programming + Assignment)
 Route::get('/services', [AllServicesController::class, 'index'])->name('services.index');
 
-// Programming Services
-Route::get('/programming-services', [ServiceController::class, 'index'])->name('programming-services.index');
-Route::get('/programming-services/{slug}', [ServiceController::class, 'show'])->name('programming-services.show');
+// Programming Services (SEO-friendly hierarchical URLs)
+Route::get('/services/programming', [ServiceController::class, 'index'])->name('services.programming.index');
+Route::get('/services/programming/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
 
-// Assignment Help Services (new)
-Route::get('/assignment-services', [AssignmentServiceController::class, 'index'])->name('assignment-services.index');
-Route::get('/assignment-services/{slug}', [AssignmentServiceController::class, 'show'])->name('assignment-services.show');
-Route::post('/assignment-services/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('assignment-services.calculate-price');
+// Assignment Help Services (SEO-friendly hierarchical URLs)
+Route::get('/services/assignment', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
+Route::get('/services/assignment/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
+Route::post('/services/assignment/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
 
 Route::get('/how-it-works', [HowItWorksController::class, 'index'])->name('how-it-works');
 Route::get('/about', [AboutController::class, 'index'])->name('about');

@@ -90,7 +90,7 @@
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
                     Expert programming help for web development, mobile apps, machine learning, and more.
                 </p>
-                <a href="{{ route('programming-services.index') }}"
+                <a href="{{ route('services.programming.index') }}"
                    class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold group">
                     View All Programming Services
                     <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="flex gap-3">
-                            <a href="{{ route('programming-services.show', $service['slug']) }}"
+                            <a href="{{ route('services.programming.show', $service['slug']) }}"
                                class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm">
                                 Learn More
                             </a>
@@ -160,7 +160,7 @@
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
                     Professional academic writing services for essays, research papers, dissertations, and more.
                 </p>
-                <a href="{{ route('assignment-services.index') }}"
+                <a href="{{ route('services.assignment.index') }}"
                    class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group">
                     View All Assignment Services
                     <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -198,7 +198,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="flex gap-3">
-                            <a href="{{ route('assignment-services.show', $service->slug) }}"
+                            <a href="{{ route('services.assignment.show', $service->slug) }}"
                                class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm">
                                 Learn More
                             </a>

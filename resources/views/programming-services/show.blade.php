@@ -99,7 +99,7 @@
                         <div class="flex items-center space-x-2 text-gray-500 text-sm">
                             <a href="{{ route('home') }}" class="hover:text-purple-600 transition-colors">Home</a>
                             <span>›</span>
-                            <a href="{{ route('programming-services.index') }}"
+                            <a href="{{ route('services.programming.index') }}"
                                 class="hover:text-purple-600 transition-colors">Services</a>
                             <span>›</span>
                             <span class="text-gray-900 font-medium">{{ $service['name'] }}</span>
