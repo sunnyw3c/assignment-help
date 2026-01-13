@@ -55,11 +55,11 @@
                 <!-- Assignment Service Selection (shown when assignment type is selected) -->
                 <div x-show="assignmentType === 'assignment'" x-transition>
                     <label class="block text-sm font-semibold text-gray-700 mb-3">Assignment Service *</label>
-                    <select name="assignment_service_id" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
+                    <select name="service_id" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
                             :required="assignmentType === 'assignment'">
                         <option value="">Select Service Type</option>
                         @php
-                            $assignmentServices = \App\Models\AssignmentService::active()->ordered()->get();
+                            $assignmentServices = \App\Models\Service::active()->ordered()->get();
                         @endphp
                         @foreach($assignmentServices as $assignService)
                             <option value="{{ $assignService->id }}" {{ request('assignment_service') == $assignService->id ? 'selected' : '' }}>
@@ -67,7 +67,7 @@
                             </option>
                         @endforeach
                     </select>
-                    @error('assignment_service_id') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
+                    @error('service_id') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
                 </div>
 
                 <!-- Academic Level (shown for assignment services) -->

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AssignmentService;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class AssignmentServiceController extends Controller
@@ -12,7 +12,7 @@ class AssignmentServiceController extends Controller
      */
     public function index()
     {
-        $services = AssignmentService::with('details')
+        $services = Service::with('details')
             ->active()
             ->ordered()
             ->get();
@@ -25,7 +25,7 @@ class AssignmentServiceController extends Controller
      */
     public function show($slug)
     {
-        $service = AssignmentService::with('details')
+        $service = Service::with('details')
             ->where('slug', $slug)
             ->where('is_active', true)
             ->firstOrFail();
@@ -34,16 +34,7 @@ class AssignmentServiceController extends Controller
 
         // Check for custom view, otherwise use generic
         $customViews = [
-            'essay-writing' => 'assignment-services.essay-writing',
-            'research-paper' => 'assignment-services.research-paper',
-            'homework-help' => 'assignment-services.homework-help',
             'math-problem-solving' => 'assignment-services.math-problem-solving',
-            'thesis-dissertation' => 'assignment-services.thesis-dissertation',
-            'lab-report' => 'assignment-services.lab-report',
-            'case-study' => 'assignment-services.case-study',
-            'literature-review' => 'assignment-services.literature-review',
-            'presentation-design' => 'assignment-services.presentation-design',
-            'proofreading-editing' => 'assignment-services.proofreading-editing',
         ];
 
         $view = $customViews[$slug] ?? 'assignment-services.show';
@@ -57,13 +48,13 @@ class AssignmentServiceController extends Controller
     public function calculatePrice(Request $request)
     {
         $request->validate([
-            'service_id' => 'required|exists:assignment_services,id',
+            'service_id' => 'required|exists:services,id',
             'pages' => 'required|integer|min:1',
             'academic_level' => 'required|string',
             'urgency_hours' => 'required|integer',
         ]);
 
-        $service = AssignmentService::findOrFail($request->service_id);
+        $service = Service::findOrFail($request->service_id);
 
         // Base price calculation
         $basePrice = $service->base_price_per_page * $request->pages;

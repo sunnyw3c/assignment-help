@@ -14,7 +14,7 @@ class Assignment extends Model
         'file_path',
         'description',
         'budget',
-        'assignment_service_id',
+        'service_id',
         'academic_level',
         'citation_style',
         'word_count',
@@ -22,10 +22,10 @@ class Assignment extends Model
     ];
 
     /**
-     * Get the assignment service that owns this assignment.
+     * Get the service that owns this assignment.
      */
-    public function assignmentService()
+    public function service()
     {
-        return $this->belongsTo(AssignmentService::class);
+        return $this->belongsTo(Service::class);
     }
 }

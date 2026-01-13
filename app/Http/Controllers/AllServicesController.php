@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AssignmentService;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class AllServicesController extends Controller
@@ -17,7 +17,7 @@ class AllServicesController extends Controller
         $programmingServices = $serviceController->getServices();
 
         // Get assignment services from database
-        $assignmentServices = AssignmentService::with('details')
+        $assignmentServices = Service::with('details')
             ->active()
             ->ordered()
             ->get();

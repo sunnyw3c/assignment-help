@@ -110,7 +110,7 @@
                             class="hover:text-orange-400 transition-colors duration-200">FAQ</a></li>
                     <li><a href="{{ route('about') }}"
                             class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
-                    <li><a href="#" class="hover:text-orange-400 transition-colors duration-200">Blog</a></li>
+                    <li><a href="{{ url('/blog') }}" class="hover:text-orange-400 transition-colors duration-200">Blog</a></li>
                 </ul>
             </div>
 

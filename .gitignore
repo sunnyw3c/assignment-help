@@ -22,3 +22,13 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# WordPress files
+/public/blog/wp-config.php
+/public/blog/wp-content/uploads/
+/public/blog/wp-content/upgrade/
+/public/blog/wp-content/cache/
+/public/blog/wp-content/backups/
+/public/blog/.htaccess
+/public/blog/sitemap.xml
+/public/blog/sitemap.xml.gz

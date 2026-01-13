@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\AssignmentService;
-use App\Models\AssignmentServiceDetail;
+use App\Models\Service;
+use App\Models\ServiceDetail;
 use Illuminate\Database\Seeder;
 
-class AssignmentServicesSeeder extends Seeder
+class ServicesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,18 +14,18 @@ class AssignmentServicesSeeder extends Seeder
     public function run(): void
     {
         // Clear existing data (using delete instead of truncate to avoid foreign key issues)
-        AssignmentServiceDetail::query()->delete();
-        AssignmentService::query()->delete();
+        ServiceDetail::query()->delete();
+        Service::query()->delete();
 
         $services = $this->getServicesData();
 
         foreach ($services as $data) {
-            $service = AssignmentService::create($data['service']);
+            $service = Service::create($data['service']);
 
             $detailsData = $data['details'];
-            $detailsData['assignment_service_id'] = $service->id;
+            $detailsData['service_id'] = $service->id;
 
-            AssignmentServiceDetail::create($detailsData);
+            ServiceDetail::create($detailsData);
         }
     }
 
