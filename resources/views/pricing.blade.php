@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pricing Plans - Affordable Assignment Help & Tutoring | CodeHelp')
+@section('title', 'Pricing Plans - Affordable Assignment Help & Tutoring | Trending Tutor')
 @section('description',
     'View our transparent pricing plans for assignment help and tutoring services. Choose from Basic, Standard, or Premium packages. No hidden fees, money-back guarantee.')
 @section('keywords',
@@ -16,7 +16,7 @@
         "description": "Professional assignment help and tutoring services",
         "provider": {
             "@type": "Organization",
-            "name": "CodeHelp"
+            "name": "Trending Tutor"
         },
         "offers": [
             @foreach($pricingPlans as $index => $plan)

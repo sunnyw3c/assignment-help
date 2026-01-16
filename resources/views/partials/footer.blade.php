@@ -7,7 +7,7 @@
                 <div class="flex items-center space-x-2 mb-6">
                     <div class="text-3xl">💻</div>
                     <span
-                        class="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">CodeHelp</span>
+                        class="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Trending Tutor</span>
                 </div>
                 <p class="text-gray-300 mb-6 text-lg leading-relaxed max-w-md">
                     Get expert programming help 24/7. From Python to Java, our skilled developers are ready to assist
@@ -134,7 +134,7 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                    &copy; {{ date('Y') }} CodeHelp. All rights reserved. | Professional Programming Help Service
+                    &copy; {{ date('Y') }} Trending Tutor. All rights reserved. | Professional Programming Help Service
                 </p>
                 <div class="flex space-x-6 text-sm text-gray-400">
                     <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'TrendingTutor - Professional Help for Assignments, Programming & Tutoring')
+@section('title', 'TrendingTutor - #1 Assignment Help & Programming Services for College Students')
 @section('description',
-    'Professional help for assignments, programming (Python, Java, C++), essays, and tutoring. Trusted by 50,000+ students
-    across the USA. High school, college & graduate level support. 24/7 availability, 100% original work.')
+    'Get expert help with assignments and programming projects. Trusted by 50,000+ college students
+    across the USA. 24/7 support, affordable prices, 100% original work.')
 @section('keywords',
-    'assignment help, online tutoring, programming help, homework help, essay writing, math tutoring, coding help, python
-    java c++ help, high school tutoring, college tutoring, graduate tutoring services USA')
+    'assignment help, programming help, college assignment help, homework help, coding help, python
+    java c++ help, essay writing, college tutoring services USA')
 
 @section('content')
     <!-- Structured Data for SEO -->
@@ -15,7 +15,7 @@
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "TrendingTutor",
-        "description": "Professional help for assignments, programming (Python, Java, C++), and online tutoring for high school, college, and graduate students across the USA. Get help with homework, essays, coding projects, and 50+ subjects.",
+        "description": "Expert assignment help and programming services for college students across the USA. Get help with homework, projects, and coding assignments.",
         "url": "{{ url('/') }}",
         "areaServed": "United States",
         "contactPoint": {
@@ -183,20 +183,21 @@
                     </div>
                 </div>
 
-                <!-- Main Headline - SEO-Friendly & Inclusive -->
-                <div class="space-y-6 mb-12">
+                <!-- Main Headline - Professional Typography -->
+                <div class="space-y-8 mb-12">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight px-4"
                         itemprop="name">
-                        Professional Help for
-                        <span class="block mt-3 text-blue-400 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                            Assignments, Programming & Tutoring
+                        Professional Academic
+                        <span class="block mt-3 text-blue-400">
+                            Assistance for Students
                         </span>
                     </h1>
 
                     <!-- Subheadline -->
                     <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl mx-auto px-4"
                         itemprop="description">
-                        Get personalized support from verified tutors in Python, Java, C++, essay writing, math, science, and 50+ subjects for high school, college, and graduate students. Available 24/7.
+                        Trusted by students nationwide for expert assignment help, essay writing, and programming support
+                        across all academic disciplines.
                     </p>
                 </div>
 
@@ -325,19 +326,13 @@
     </section>
 
     <!-- Our Services - Visual Elements Section -->
-    <section class="relative py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section class="relative py-20 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header with Trust Badge -->
+            <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
-                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-                    </svg>
-                    <span class="text-blue-900 font-semibold text-sm">Comprehensive Academic Solutions</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Services Designed for Your Success</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Professional support across every academic discipline with verified experts ready to help you excel
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Offer</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive academic support across all subjects and disciplines
                 </p>
             </div>
 
@@ -387,25 +382,17 @@
                             <path d="M88 50 Q100 42 112 50" stroke="#3B82F6" stroke-width="2.5" fill="none" />
                         </svg>
                         <div class="mt-8 text-center">
-                            <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Essay & Research Writing</h3>
-                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
+                            <h3 class="text-gray-900 font-bold text-xl mb-3">Essay & Research</h3>
+                            <p class="text-gray-600 text-base leading-relaxed mb-4">Professional writing help across 50+
+                                academic subjects</p>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research
+                                    Papers</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Thesis</span>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing help across 50+ academic subjects with plagiarism-free guarantee</p>
-                            <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research Papers</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Thesis</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Dissertations</span>
-                            </div>
-                            <a href="{{ route('services.assignment.index') }}" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group">
-                                Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -469,25 +456,17 @@
                             <rect x="70" y="158" width="60" height="4" rx="2" fill="#334155" />
                         </svg>
                         <div class="mt-8 text-center">
-                            <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Programming & Coding Help</h3>
-                                <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
+                            <h3 class="text-gray-900 font-bold text-xl mb-3">Programming Help</h3>
+                            <p class="text-gray-600 text-base leading-relaxed mb-4">Expert coding assistance in 25+
+                                programming languages</p>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">C++</span>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+ programming languages with debugging and optimization</p>
-                            <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">C++</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">JavaScript</span>
-                            </div>
-                            <a href="{{ route('services.programming.index') }}" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold text-sm group">
-                                Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -556,84 +535,44 @@
                             <circle cx="100" cy="36" r="2" fill="#78350F" />
                         </svg>
                         <div class="mt-8 text-center">
-                            <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Tutoring & Study Help</h3>
-                                <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
+                            <h3 class="text-gray-900 font-bold text-xl mb-3">Study Materials</h3>
+                            <p class="text-gray-600 text-base leading-relaxed mb-4">Comprehensive study resources for all
+                                academic disciplines</p>
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Notes</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Guides</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Homework</span>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">One-on-one tutoring and comprehensive study resources for all academic disciplines</p>
-                            <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Math Tutoring</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Science Help</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Homework</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Test Prep</span>
-                            </div>
-                            <a href="{{ route('assignments.create') }}" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold text-sm group">
-                                Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom CTA with Trust Signals -->
-            <div class="text-center mt-20">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Excel in Your Studies?</h3>
-                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students who trust TrendingTutor for their academic needs</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                        <a href="{{ route('assignments.create') }}"
-                            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            Get Started Now
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </a>
-                        <span class="text-gray-500 text-sm">No credit card required</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Free Consultation</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>24/7 Support</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Money-Back Guarantee</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Bottom CTA -->
+            <div class="text-center mt-16">
+                <a href="{{ route('assignments.create') }}"
+                    class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    Get Started Today
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us - Key Value Points Section -->
-    <section class="relative py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <section class="relative py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header with Trust Badge -->
+            <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
-                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-green-900 font-semibold text-sm">Trusted by 50,000+ Students Nationwide</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Students Choose TrendingTutor</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    We're committed to your academic success with proven results, verified experts, and 24/7 support
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose TrendingTutor</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're committed to providing the highest quality academic assistance with guaranteed results
                 </p>
             </div>
 
@@ -732,38 +671,22 @@
                 </div>
             </div>
 
-            <!-- Enhanced Trust Statistics -->
-            <div class="mt-20">
-                <div class="bg-gradient-to-br from-gray-900 to-slate-800 rounded-3xl p-12 shadow-2xl">
-                    <div class="text-center mb-10">
-                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Trusted by Students Worldwide</h3>
-                        <p class="text-gray-300">Real numbers that demonstrate our commitment to excellence</p>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">15M+</div>
-                            <div class="text-gray-300 text-sm font-medium">Successful Projects</div>
-                            <div class="text-gray-500 text-xs mt-1">Since 2015</div>
+            <!-- Additional Trust Elements -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div
+                    class="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-100">
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900 mb-2">15M+</div>
+                            <div class="text-gray-600 text-sm">Projects Completed Successfully</div>
                         </div>
-                        <div class="group">
-                            <div class="flex items-center justify-center gap-1 mb-2">
-                                <span class="text-4xl md:text-5xl font-bold text-yellow-400 group-hover:scale-110 transition-transform">4.9</span>
-                                <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                            <div class="text-gray-300 text-sm font-medium">Average Rating</div>
-                            <div class="text-gray-500 text-xs mt-1">15,000+ Reviews</div>
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900 mb-2">4.9/5</div>
+                            <div class="text-gray-600 text-sm">Average Customer Rating</div>
                         </div>
-                        <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition-transform">98%</div>
-                            <div class="text-gray-300 text-sm font-medium">On-Time Delivery</div>
-                            <div class="text-gray-500 text-xs mt-1">Guaranteed</div>
-                        </div>
-                        <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
-                            <div class="text-gray-300 text-sm font-medium">Support Available</div>
-                            <div class="text-gray-500 text-xs mt-1">365 Days/Year</div>
+                        <div>
+                            <div class="text-3xl font-bold text-gray-900 mb-2">24/7</div>
+                            <div class="text-gray-600 text-sm">Customer Support Available</div>
                         </div>
                     </div>
                 </div>
@@ -1088,9 +1011,9 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert Online Tutoring</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services for College Students</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Whether you're a student or professional needing help with assignments or programming projects, our expert tutors are here to help you
+                    Whether you need help with assignments or programming projects, our expert tutors are here to help you
                     succeed.
                 </p>
             </div>
@@ -1232,85 +1155,74 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 lg:py-28 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-        <!-- Decorative Background Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="how-it-works" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-white border border-indigo-200 px-4 py-2 rounded-full mb-6 shadow-sm">
-                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-indigo-900 font-semibold text-sm">Simple & Fast Process</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How It Works in 4 Easy Steps</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    From submission to completion - our streamlined process ensures you get the help you need quickly and efficiently
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How TrendingTutor Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get help with your assignments in 4 simple steps. It's fast, easy, and secure.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Step 1 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-blue-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                <div
+                    class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="absolute -top-4 -left-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg">
                         1
                     </div>
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Submit Assignment Details</h3>
-                    <p class="text-gray-600 mb-4">Share your requirements, deadline, and upload any files. Our form takes just 2 minutes to complete.</p>
-                    <div class="text-sm text-blue-600 font-medium">Takes 2 minutes →</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Submit Your Assignment</h3>
+                    <p class="text-gray-600">Share your assignment details, requirements, and deadline. Upload any files
+                        if needed.</p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-purple-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-purple-500 to-pink-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                <div
+                    class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="absolute -top-4 -left-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg">
                         2
                     </div>
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Matched with Verified Expert</h3>
-                    <p class="text-gray-600 mb-4">We connect you instantly with a qualified tutor who specializes in your subject area.</p>
-                    <div class="text-sm text-purple-600 font-medium">Under 5 minutes →</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Get Matched with Expert</h3>
+                    <p class="text-gray-600">We connect you with a qualified tutor who specializes in your subject or
+                        programming language.</p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-emerald-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-emerald-500 to-teal-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                <div
+                    class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="absolute -top-4 -left-4 bg-gradient-to-r from-green-500 to-teal-500 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg">
                         3
                     </div>
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">✍️</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Delivers Quality Work</h3>
-                    <p class="text-gray-600 mb-4">Your tutor completes the assignment following all instructions with detailed explanations.</p>
-                    <div class="text-sm text-emerald-600 font-medium">On-time delivery →</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Works on It</h3>
+                    <p class="text-gray-600">Your tutor completes the work with high quality, following all instructions
+                        and guidelines.</p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-orange-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-orange-500 to-red-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                <div
+                    class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="absolute -top-4 -left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg">
                         4
                     </div>
                     <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎓</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Review & Excel</h3>
-                    <p class="text-gray-600 mb-4">Receive your completed work with explanations. Free unlimited revisions until you're satisfied.</p>
-                    <div class="text-sm text-orange-600 font-medium">100% satisfaction →</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Review & Learn</h3>
+                    <p class="text-gray-600">Get your completed work with explanations. Free revisions included to ensure
+                        satisfaction.</p>
                 </div>
             </div>
 
-            <div class="text-center mt-16">
-                <div class="inline-block bg-white rounded-2xl p-8 shadow-xl max-w-2xl">
-                    <p class="text-gray-600 mb-6 text-lg">Ready to get expert help? Start your journey to better grades today!</p>
-                    <a href="{{ route('assignments.create') }}"
-                        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold px-10 py-5 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        Start Now - Get Free Consultation
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                    <p class="text-gray-500 text-sm mt-4">✓ No payment required to get started</p>
-                </div>
+            <div class="text-center mt-12">
+                <a href="{{ route('assignments.create') }}"
+                    class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold px-10 py-5 rounded-xl text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                    Start Now - Get Free Quote
+                </a>
             </div>
         </div>
     </section>

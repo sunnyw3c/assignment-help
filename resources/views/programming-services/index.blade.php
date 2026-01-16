@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Programming Services - Expert Development Help | CodeHelp')
+@section('title', 'Programming Services - Expert Development Help | Trending Tutor')
 @section('description', 'Professional programming services including web development, mobile apps, machine learning, API development, and more. Get expert coding help from certified developers.')
 @section('keywords', 'programming services, web development, mobile app development, machine learning, API development, code review, debugging, algorithm help')
 
@@ -24,7 +24,7 @@
                     "description": "{{ $service['description'] }}",
                     "provider": {
                         "@type": "Organization",
-                        "name": "CodeHelp"
+                        "name": "Trending Tutor"
                     },
                     "offers": {
                         "@type": "Offer",
@@ -214,6 +214,232 @@
         </div>
     </header>
 
+    <!-- Featured Programming Services: PHP & Java -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-gradient-to-r from-orange-100 to-indigo-100 text-orange-800 px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
+                    <span class="mr-2">🔥</span>
+                    MOST POPULAR SERVICES
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Expert PHP & Java <br>
+                    <span class="bg-gradient-to-r from-orange-600 to-indigo-600 bg-clip-text text-transparent">Programming Help</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Get professional help with the two most widely-used programming languages in web and enterprise development
+                </p>
+            </div>
+
+            <!-- PHP & Java Featured Cards -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+                <!-- PHP Service Card -->
+                <div class="group relative bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-500">
+                    <!-- Background Pattern -->
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"white\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>');"></div>
+                    </div>
+
+                    <div class="relative z-10 p-10">
+                        <!-- Icon & Badge -->
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-5xl">🐘</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-3xl font-bold text-white mb-1">PHP Programming</h3>
+                                    <div class="flex items-center text-indigo-200 text-sm">
+                                        <span class="mr-2">⭐</span>
+                                        <span>4.8/5 • 1100+ Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-400 text-indigo-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                                Popular
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-indigo-100 text-lg mb-6 leading-relaxed">
+                            Professional PHP development services for Laravel, Symfony, WordPress, and custom web applications. Expert help from $30.
+                        </p>
+
+                        <!-- Key Features -->
+                        <div class="grid grid-cols-2 gap-3 mb-8">
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">Laravel & Symfony</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">WordPress Dev</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">API Development</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">Database Integration</span>
+                            </div>
+                        </div>
+
+                        <!-- Pricing & CTA -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-white/80 text-sm mb-1">Starting from</div>
+                                <div class="text-4xl font-bold text-white">$30<span class="text-xl text-indigo-200">/project</span></div>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="{{ route('services.programming.show', 'php-help') }}"
+                                    class="group/link bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center border border-white/20">
+                                    View Details
+                                    <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                <a href="{{ route('assignments.create') }}"
+                                    class="group/btn bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center">
+                                    <span class="mr-2">🚀</span>
+                                    Get Help
+                                    <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute top-6 right-6 w-24 h-24 bg-purple-400/20 rounded-full blur-2xl animate-pulse"></div>
+                    <div class="absolute bottom-6 left-6 w-32 h-32 bg-indigo-400/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+                </div>
+
+                <!-- Java Service Card -->
+                <div class="group relative bg-gradient-to-br from-orange-600 to-red-600 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-500">
+                    <!-- Background Pattern -->
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"white\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>');"></div>
+                    </div>
+
+                    <div class="relative z-10 p-10">
+                        <!-- Icon & Badge -->
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-5xl">☕</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-3xl font-bold text-white mb-1">Java Programming</h3>
+                                    <div class="flex items-center text-orange-200 text-sm">
+                                        <span class="mr-2">⭐</span>
+                                        <span>4.9/5 • 1350+ Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-400 text-orange-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                                Top Rated
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-orange-100 text-lg mb-6 leading-relaxed">
+                            Expert Java development help for Spring Boot, Android apps, enterprise applications, and core Java programming. From $35.
+                        </p>
+
+                        <!-- Key Features -->
+                        <div class="grid grid-cols-2 gap-3 mb-8">
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">Spring Boot & MVC</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">Android Apps</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">OOP & Design Patterns</span>
+                            </div>
+                            <div class="flex items-center text-white">
+                                <span class="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-green-400 text-sm">✓</span>
+                                </span>
+                                <span class="text-sm">Enterprise Solutions</span>
+                            </div>
+                        </div>
+
+                        <!-- Pricing & CTA -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-white/80 text-sm mb-1">Starting from</div>
+                                <div class="text-4xl font-bold text-white">$35<span class="text-xl text-orange-200">/project</span></div>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="{{ route('services.programming.show', 'java-help') }}"
+                                    class="group/link bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center border border-white/20">
+                                    View Details
+                                    <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                <a href="{{ route('assignments.create') }}"
+                                    class="group/btn bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center">
+                                    <span class="mr-2">🚀</span>
+                                    Get Help
+                                    <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="absolute top-6 right-6 w-24 h-24 bg-red-400/20 rounded-full blur-2xl animate-pulse"></div>
+                    <div class="absolute bottom-6 left-6 w-32 h-32 bg-orange-400/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+                </div>
+            </div>
+
+            <!-- Cross-Linking Benefits Section -->
+            <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-orange-50 rounded-2xl p-8 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Full-Stack Expertise</h4>
+                        <p class="text-gray-600 text-sm">Combine PHP backend with Java enterprise solutions for complete web applications</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-3">⚡</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Fast Turnaround</h4>
+                        <p class="text-gray-600 text-sm">Both services offer 12-48 hour delivery for urgent projects with quality guaranteed</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-3">💯</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">2450+ Projects Done</h4>
+                        <p class="text-gray-600 text-sm">Combined experience across PHP and Java with 4.8+ star ratings from students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Programming Services Showcase -->
     <section id="services" class="py-24 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 relative overflow-hidden" role="main" aria-labelledby="services-heading">
         <!-- Background Elements -->
@@ -308,6 +534,132 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+
+            <!-- PHP vs Java: When to Use Which -->
+            <div class="max-w-6xl mx-auto mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        PHP vs Java: <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-orange-600">Choose the Right Tool</span>
+                    </h3>
+                    <p class="text-xl text-gray-600">Both are powerful, but serve different purposes. Here's when to use each:</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- PHP Use Cases -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border-2 border-indigo-200">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <span class="text-4xl">🐘</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-2xl font-bold text-gray-900">PHP Programming</h4>
+                                <p class="text-indigo-600 font-semibold">Best for Web Development</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <h5 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    <span class="text-green-500 mr-2">✓</span>
+                                    Perfect For:
+                                </h5>
+                                <ul class="text-gray-600 text-sm space-y-1 ml-6">
+                                    <li>• Dynamic websites & web applications</li>
+                                    <li>• Content Management Systems (WordPress, Drupal)</li>
+                                    <li>• E-commerce platforms & shopping carts</li>
+                                    <li>• RESTful APIs & backend services</li>
+                                    <li>• Rapid prototyping & MVP development</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <h5 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    <span class="text-indigo-500 mr-2">🎯</span>
+                                    Popular Frameworks:
+                                </h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Laravel</span>
+                                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Symfony</span>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">WordPress</span>
+                                    <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold">CodeIgniter</span>
+                                </div>
+                            </div>
+
+                            <a href="{{ route('services.programming.show', 'php-help') }}"
+                                class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                Explore PHP Services →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Java Use Cases -->
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-200">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <span class="text-4xl">☕</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-2xl font-bold text-gray-900">Java Programming</h4>
+                                <p class="text-orange-600 font-semibold">Best for Enterprise & Mobile</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <h5 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    <span class="text-green-500 mr-2">✓</span>
+                                    Perfect For:
+                                </h5>
+                                <ul class="text-gray-600 text-sm space-y-1 ml-6">
+                                    <li>• Enterprise applications & microservices</li>
+                                    <li>• Android mobile app development</li>
+                                    <li>• Large-scale backend systems</li>
+                                    <li>• Desktop applications (JavaFX, Swing)</li>
+                                    <li>• High-performance computing tasks</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white rounded-lg p-4 shadow-sm">
+                                <h5 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    <span class="text-orange-500 mr-2">🎯</span>
+                                    Popular Frameworks:
+                                </h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Spring Boot</span>
+                                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Hibernate</span>
+                                    <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Android SDK</span>
+                                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold">JavaFX</span>
+                                </div>
+                            </div>
+
+                            <a href="{{ route('services.programming.show', 'java-help') }}"
+                                class="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-center py-3 rounded-xl font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                Explore Java Services →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Need Both? Section -->
+                <div class="mt-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-orange-600 rounded-2xl p-8 text-white text-center">
+                    <h4 class="text-2xl font-bold mb-3">Need Both PHP & Java for Your Project?</h4>
+                    <p class="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
+                        Many modern applications use PHP for the web frontend and Java for backend microservices. We can help you build full-stack solutions combining both technologies.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="{{ route('assignments.create') }}"
+                            class="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl inline-flex items-center justify-center">
+                            <span class="mr-2">💬</span>
+                            Discuss Your Project
+                        </a>
+                        <a href="#services"
+                            class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 inline-flex items-center justify-center">
+                            <span class="mr-2">📋</span>
+                            View All Services
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

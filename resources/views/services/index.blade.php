@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Services - Programming & Assignment Help | CodeHelp')
+@section('title', 'All Services - Programming & Assignment Help | Trending Tutor')
 @section('description', 'Explore all our services including programming development, web & mobile apps, machine learning, and academic assignment help. Get expert assistance for coding projects and academic writing.')
 @section('keywords', 'programming services, assignment help, coding assistance, web development, mobile apps, essay writing, homework help, academic writing')
 

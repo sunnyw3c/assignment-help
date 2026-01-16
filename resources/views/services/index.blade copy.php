@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Programming Services - Expert Development Help | CodeHelp')
+@section('title', 'Programming Services - Expert Development Help | Trending Tutor')
 @section('description', 'Professional programming services including web development, mobile apps, machine learning, API development, and more. Get expert coding help from certified developers.')
 @section('keywords', 'programming services, web development, mobile app development, machine learning, API development, code review, debugging, algorithm help')
 
@@ -24,7 +24,7 @@
                     "description": "{{ $service['description'] }}",
                     "provider": {
                         "@type": "Organization",
-                        "name": "CodeHelp"
+                        "name": "Trending Tutor"
                     },
                     "offers": {
                         "@type": "Offer",

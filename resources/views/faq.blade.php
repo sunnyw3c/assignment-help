@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Frequently Asked Questions - Assignment Help & Tutoring FAQ | CodeHelp')
+@section('title', 'Frequently Asked Questions - Assignment Help & Tutoring FAQ | Trending Tutor')
 @section('description',
     'Find answers to common questions about our assignment help and tutoring services. Learn about pricing, delivery, quality, privacy, and more.')
 @section('keywords',
@@ -326,7 +326,7 @@
                     Ready to Get Expert Help?
                 </h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">
-                    Join thousands of students who trust CodeHelp for their assignment needs.
+                    Join thousands of students who trust Trending Tutor for their assignment needs.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">

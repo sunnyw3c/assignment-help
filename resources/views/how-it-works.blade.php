@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'How It Works - Step-by-Step Process | CodeHelp')
+@section('title', 'How It Works - Step-by-Step Process | Trending Tutor')
 @section('description',
     'Learn how our expert programming help service works. Simple 4-step process from submitting
     requirements to receiving your completed project with documentation and support.')

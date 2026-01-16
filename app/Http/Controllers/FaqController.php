@@ -15,8 +15,8 @@ class FaqController extends Controller
                 'color' => 'blue',
                 'questions' => [
                     [
-                        'question' => 'How does CodeHelp work?',
-                        'answer' => 'CodeHelp connects you with expert tutors who can help with your assignments. Simply submit your assignment details, get matched with a qualified tutor, receive your completed work, and request revisions if needed. It\'s that simple!',
+                        'question' => 'How does Trending Tutor work?',
+                        'answer' => 'Trending Tutor connects you with expert tutors who can help with your assignments. Simply submit your assignment details, get matched with a qualified tutor, receive your completed work, and request revisions if needed. It\'s that simple!',
                     ],
                     [
                         'question' => 'How do I place an order?',
@@ -27,7 +27,7 @@ class FaqController extends Controller
                         'answer' => 'Delivery time depends on your chosen plan and deadline. We offer Standard (3-5 days), Fast (1-3 days), and Express (24-48 hours) delivery options. Rush orders can be accommodated for urgent needs.',
                     ],
                     [
-                        'question' => 'Is CodeHelp available 24/7?',
+                        'question' => 'Is Trending Tutor available 24/7?',
                         'answer' => 'Yes! Our support team and tutors are available round the clock, 7 days a week. You can submit assignments, get quotes, and receive help at any time that\'s convenient for you.',
                     ],
                 ],

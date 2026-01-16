@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Programming Languages Help - Expert Support for 20+ Languages | CodeHelp')
+@section('title', 'Programming Languages Help - Expert Support for 20+ Languages | Trending Tutor')
 @section('description', 'Get expert programming help for Python, Java, JavaScript, C++, C#, PHP, Go, Rust, Swift, Kotlin and more. Professional coding assistance with step-by-step solutions and 24/7 support.')
 @section('keywords', 'programming languages, python help, java programming, javascript tutorial, c++ assistance, programming language learning, coding help, software development languages')
 
@@ -24,7 +24,7 @@
                     "description": "{{ $language['description'] }}",
                     "provider": {
                         "@type": "Organization",
-                        "name": "CodeHelp"
+                        "name": "Trending Tutor"
                     }
                 }
             }@if(!$loop->last),@endif

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Expert Assignment Help & Tutoring Service | CodeHelp')
+@section('title', 'About Us - Expert Assignment Help & Tutoring Service | Trending Tutor')
 @section('description',
-    'Learn about CodeHelp - Your trusted partner for assignment help and academic tutoring. We connect students with expert tutors who provide personalized assistance across various subjects.')
+    'Learn about Trending Tutor - Your trusted partner for assignment help and academic tutoring. We connect students with expert tutors who provide personalized assistance across various subjects.')
 @section('keywords',
     'about us, assignment help, tutoring service, expert tutors, academic assistance, student support, educational services')
 
@@ -12,7 +12,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "CodeHelp",
+        "name": "Trending Tutor",
         "description": "Professional assignment help and tutoring service connecting students with expert tutors",
         "url": "{{ url('/') }}",
         "logo": "{{ asset('images/logo.png') }}",
@@ -126,7 +126,7 @@
                 <div class="prose prose-lg max-w-none">
                     <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 mb-8">
                         <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                            CodeHelp was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
+                            Trending Tutor was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
                         </p>
                         <p class="text-lg text-gray-600 leading-relaxed mb-6">
                             We recognized that students often face challenges with complex assignments, tight deadlines, and limited access to personalized support. Our platform bridges this gap by connecting students with experienced tutors who understand their unique needs.
@@ -389,7 +389,7 @@
             <div class="text-center max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
                     Ready to Experience the <br>
-                    CodeHelp Difference?
+                    Trending Tutor Difference?
                 </h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">
                     Join thousands of students who have achieved academic success with our expert guidance.
