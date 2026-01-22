@@ -771,191 +771,673 @@
         </div>
     </section>
 
-    <!-- Search Panel Component (Wyzant-Inspired) -->
-    <section class="relative pb-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Search Panel Component - Modern Glassmorphism Design -->
+    <section class="relative py-12 overflow-hidden">
+        <!-- Animated Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-100/50 via-transparent to-purple-100/50"></div>
+            <!-- Floating Gradient Orbs -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-300/30 to-indigo-300/30 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-5xl mx-auto">
-                <!-- Main Search Card -->
-                <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <!-- Search Header -->
-                    <div class="bg-gradient-to-r from-gray-50 to-white px-6 sm:px-8 py-6 border-b border-gray-100">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Find Expert Help Now</h2>
-                        <p class="text-gray-600">Search by subject, topic, or assignment type to get matched with the
-                            perfect tutor</p>
-                    </div>
+                <!-- Glassmorphism Card with Enhanced Design -->
+                <div class="relative group">
+                    <!-- Glow Effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500"></div>
 
-                    <!-- Search Form -->
-                    <div class="p-6 sm:p-8">
-                        <form action="{{ route('assignments.create') }}" method="GET" class="space-y-6">
-                            <!-- Main Search Input -->
-                            <div>
-                                <label for="subject-search" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    What do you need help with?
-                                </label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                        </svg>
-                                    </div>
-                                    <input type="text" id="subject-search" name="subject"
-                                        class="block w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                        placeholder="e.g., Python Programming, Essay Writing, Calculus, Java..."
-                                        autocomplete="off" />
+                    <!-- Main Card -->
+                    <div class="relative backdrop-blur-xl bg-white/80 rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
+                        <!-- Decorative Top Border -->
+                        <div class="h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500"></div>
+
+                        <!-- Search Header with Gradient -->
+                        <div class="relative px-6 sm:px-8 py-5 overflow-hidden">
+                            <!-- Subtle Background Pattern -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-pink-500/5"></div>
+                            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.3) 1px, transparent 0); background-size: 32px 32px;"></div>
+
+                            <div class="relative">
+                                <div class="inline-block mb-2">
+                                    <span class="px-3 py-1 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 border border-purple-200/50 rounded-full text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600">
+                                        AI-Powered Matching
+                                    </span>
                                 </div>
-                            </div>
-
-                            <!-- Filter Options Grid -->
-                            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <!-- Assignment Type -->
-                                <div>
-                                    <label for="assignment-type" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Assignment Type
-                                    </label>
-                                    <select id="assignment-type" name="type"
-                                        class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900">
-                                        <option value="">All Types</option>
-                                        <option value="homework">Homework Help</option>
-                                        <option value="essay">Essay Writing</option>
-                                        <option value="programming">Programming</option>
-                                        <option value="research">Research Paper</option>
-                                        <option value="lab">Lab Report</option>
-                                        <option value="math">Math Problems</option>
-                                    </select>
-                                </div>
-
-                                <!-- Academic Level -->
-                                <div>
-                                    <label for="academic-level" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Academic Level
-                                    </label>
-                                    <select id="academic-level" name="level"
-                                        class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900">
-                                        <option value="">All Levels</option>
-                                        <option value="high-school">High School</option>
-                                        <option value="undergraduate">Undergraduate</option>
-                                        <option value="graduate">Graduate</option>
-                                        <option value="phd">Ph.D.</option>
-                                    </select>
-                                </div>
-
-                                <!-- Deadline -->
-                                <div>
-                                    <label for="deadline" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Deadline
-                                    </label>
-                                    <select id="deadline" name="deadline"
-                                        class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900">
-                                        <option value="">Any Time</option>
-                                        <option value="24h">Within 24 hours</option>
-                                        <option value="48h">Within 48 hours</option>
-                                        <option value="week">Within 1 week</option>
-                                        <option value="flexible">Flexible</option>
-                                    </select>
-                                </div>
-
-                                <!-- Price Range -->
-                                <div>
-                                    <label for="price-range" class="block text-sm font-medium text-gray-700 mb-2">
-                                        Budget
-                                    </label>
-                                    <select id="price-range" name="budget"
-                                        class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900">
-                                        <option value="">Any Budget</option>
-                                        <option value="0-50">Under $50</option>
-                                        <option value="50-100">$50 - $100</option>
-                                        <option value="100-200">$100 - $200</option>
-                                        <option value="200+">$200+</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Search Button -->
-                            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                <button type="submit"
-                                    class="flex-1 sm:flex-none sm:px-12 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                    </svg>
-                                    Find My Tutor
-                                </button>
-                                <button type="button" onclick="window.location.href='{{ route('assignments.create') }}'"
-                                    class="flex-1 sm:flex-none sm:px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 4v16m8-8H4"></path>
-                                    </svg>
-                                    Submit Assignment
-                                </button>
-                            </div>
-                        </form>
-
-                        <!-- Popular Subjects Quick Links -->
-                        <div class="mt-8 pt-6 border-t border-gray-100">
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-sm font-semibold text-gray-700">Popular Subjects:</h3>
-                                <a href="{{ route('services.programming.index') }}"
-                                    class="text-sm text-blue-600 hover:text-blue-700 font-medium">
-                                    View All →
-                                </a>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <a href="{{ route('services.programming.index') }}?subject=python"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Python
-                                </a>
-                                <a href="{{ route('services.programming.index') }}?subject=java"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Java
-                                </a>
-                                <a href="{{ route('services.programming.index') }}?subject=cpp"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    C++
-                                </a>
-                                <a href="{{ route('services.assignment.index') }}?subject=calculus"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Calculus
-                                </a>
-                                <a href="{{ route('services.assignment.index') }}?subject=chemistry"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Chemistry
-                                </a>
-                                <a href="{{ route('services.assignment.index') }}?subject=physics"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Physics
-                                </a>
-                                <a href="{{ route('services.assignment.index') }}?subject=essay"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Essay Writing
-                                </a>
-                                <a href="{{ route('services.programming.index') }}?subject=javascript"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    JavaScript
-                                </a>
-                                <a href="{{ route('services.programming.index') }}?subject=data-science"
-                                    class="group px-4 py-2 bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-700 transition-all">
-                                    Data Science
-                                </a>
+                                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-2">
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 hover:from-purple-700 hover:via-blue-700 hover:to-pink-700 transition-all duration-300">
+                                        Find Expert Help Now
+                                    </span>
+                                </h2>
+                                <p class="text-gray-600 text-base max-w-2xl">
+                                    Connect with top-rated tutors in seconds. Search by subject, topic, or assignment type.
+                                </p>
                             </div>
                         </div>
 
-                        <!-- Trust Message -->
-                        <div class="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500">
-                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>100% Secure & Confidential • Free Quote • No Obligation</span>
+                        <!-- Search Form with Enhanced Glassmorphism -->
+                        <div class="p-6 sm:p-8">
+                            <form action="{{ route('assignments.create') }}" method="GET" class="space-y-4">
+                                <!-- Main Search Input with Gradient Border -->
+                                <div class="group">
+                                    <label for="subject-search" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"></span>
+                                        What do you need help with?
+                                    </label>
+                                    <div class="relative">
+                                        <!-- Gradient Border Effect -->
+                                        <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+
+                                        <div class="relative flex items-center">
+                                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                                <div class="p-1.5 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-lg">
+                                                    <svg class="h-4 w-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <input type="text" id="subject-search" name="subject"
+                                                class="block w-full pl-14 pr-4 py-3.5 text-base font-medium border-2 border-gray-200 rounded-2xl
+                                                       focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500
+                                                       hover:border-purple-300 transition-all duration-300
+                                                       bg-white/90 backdrop-blur-sm placeholder-gray-400"
+                                                placeholder="Type a subject... e.g., Python, Calculus, Essay Writing"
+                                                autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Filter Options Grid with Glassmorphism Cards -->
+                                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                    <!-- Assignment Type -->
+                                    <div class="group">
+                                        <label for="assignment-type" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                            Type
+                                        </label>
+                                        <div class="relative">
+                                            <select id="assignment-type" name="type"
+                                                class="block w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl
+                                                       focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500
+                                                       hover:border-blue-300 transition-all duration-300
+                                                       bg-white/90 backdrop-blur-sm text-gray-900 font-medium
+                                                       appearance-none cursor-pointer">
+                                                <option value="">All Types</option>
+                                                <option value="homework">Homework Help</option>
+                                                <option value="essay">Essay Writing</option>
+                                                <option value="programming">Programming</option>
+                                                <option value="research">Research Paper</option>
+                                                <option value="lab">Lab Report</option>
+                                                <option value="math">Math Problems</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Academic Level -->
+                                    <div class="group">
+                                        <label for="academic-level" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                            Level
+                                        </label>
+                                        <div class="relative">
+                                            <select id="academic-level" name="level"
+                                                class="block w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl
+                                                       focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500
+                                                       hover:border-indigo-300 transition-all duration-300
+                                                       bg-white/90 backdrop-blur-sm text-gray-900 font-medium
+                                                       appearance-none cursor-pointer">
+                                                <option value="">All Levels</option>
+                                                <option value="high-school">High School</option>
+                                                <option value="undergraduate">Undergraduate</option>
+                                                <option value="graduate">Graduate</option>
+                                                <option value="phd">Ph.D.</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Deadline -->
+                                    <div class="group">
+                                        <label for="deadline" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                            Deadline
+                                        </label>
+                                        <div class="relative">
+                                            <select id="deadline" name="deadline"
+                                                class="block w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl
+                                                       focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500
+                                                       hover:border-purple-300 transition-all duration-300
+                                                       bg-white/90 backdrop-blur-sm text-gray-900 font-medium
+                                                       appearance-none cursor-pointer">
+                                                <option value="">Any Time</option>
+                                                <option value="24h">Within 24 hours</option>
+                                                <option value="48h">Within 48 hours</option>
+                                                <option value="week">Within 1 week</option>
+                                                <option value="flexible">Flexible</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Budget -->
+                                    <div class="group">
+                                        <label for="price-range" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                            Budget
+                                        </label>
+                                        <div class="relative">
+                                            <select id="price-range" name="budget"
+                                                class="block w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl
+                                                       focus:ring-4 focus:ring-pink-500/20 focus:border-pink-500
+                                                       hover:border-pink-300 transition-all duration-300
+                                                       bg-white/90 backdrop-blur-sm text-gray-900 font-medium
+                                                       appearance-none cursor-pointer">
+                                                <option value="">Any Budget</option>
+                                                <option value="0-50">Under $50</option>
+                                                <option value="50-100">$50 - $100</option>
+                                                <option value="100-200">$100 - $200</option>
+                                                <option value="200+">$200+</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons with Enhanced Gradients -->
+                                <div class="flex flex-col sm:flex-row gap-3 pt-3">
+                                    <button type="submit"
+                                        class="group relative flex-1 sm:flex-none sm:px-10 py-3.5 overflow-hidden rounded-xl
+                                               font-black text-base transition-all duration-300
+                                               hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">
+                                        <!-- Animated Gradient Background -->
+                                        <div class="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 transition-all duration-300"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+                                        <!-- Glow Effect -->
+                                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl opacity-50 blur-lg group-hover:opacity-75 transition-all duration-300"></div>
+
+                                        <span class="relative flex items-center gap-2 text-white">
+                                            <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
+                                            Find My Expert
+                                        </span>
+                                    </button>
+
+                                    <button type="button" onclick="window.location.href='{{ route('assignments.create') }}'"
+                                        class="group relative flex-1 sm:flex-none sm:px-8 py-3.5 overflow-hidden rounded-xl
+                                               font-black text-base transition-all duration-300
+                                               hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2
+                                               border-2 border-gray-200 bg-white hover:border-purple-300">
+                                        <span class="relative flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                                            <svg class="w-5 h-5 text-purple-600 group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                    d="M12 4v16m8-8H4"></path>
+                                            </svg>
+                                            <span class="text-gray-800">Submit Assignment</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Popular Subjects with Gradient Pills -->
+                            <div class="mt-6 pt-5 border-t-2 border-gray-100">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-xs font-black text-gray-700 uppercase tracking-wider flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
+                                        Popular Subjects
+                                    </h3>
+                                    <a href="{{ route('services.programming.index') }}"
+                                        class="group text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 flex items-center gap-1">
+                                        View All
+                                        <svg class="w-3.5 h-3.5 text-purple-600 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="{{ route('services.programming.index') }}?subject=python"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-purple-50 to-blue-50 hover:from-purple-100 hover:to-blue-100
+                                               border-2 border-purple-200/50 hover:border-purple-400 rounded-lg
+                                               text-xs font-bold text-purple-700 hover:text-purple-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Python
+                                    </a>
+                                    <a href="{{ route('services.programming.index') }}?subject=java"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100
+                                               border-2 border-blue-200/50 hover:border-blue-400 rounded-lg
+                                               text-xs font-bold text-blue-700 hover:text-blue-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Java
+                                    </a>
+                                    <a href="{{ route('services.programming.index') }}?subject=cpp"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100
+                                               border-2 border-indigo-200/50 hover:border-indigo-400 rounded-lg
+                                               text-xs font-bold text-indigo-700 hover:text-indigo-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        C++
+                                    </a>
+                                    <a href="{{ route('services.assignment.index') }}?subject=calculus"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-pink-50 to-rose-50 hover:from-pink-100 hover:to-rose-100
+                                               border-2 border-pink-200/50 hover:border-pink-400 rounded-lg
+                                               text-xs font-bold text-pink-700 hover:text-pink-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Calculus
+                                    </a>
+                                    <a href="{{ route('services.assignment.index') }}?subject=chemistry"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100
+                                               border-2 border-green-200/50 hover:border-green-400 rounded-lg
+                                               text-xs font-bold text-green-700 hover:text-green-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Chemistry
+                                    </a>
+                                    <a href="{{ route('services.assignment.index') }}?subject=physics"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 hover:from-cyan-100 hover:to-blue-100
+                                               border-2 border-cyan-200/50 hover:border-cyan-400 rounded-lg
+                                               text-xs font-bold text-cyan-700 hover:text-cyan-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Physics
+                                    </a>
+                                    <a href="{{ route('services.assignment.index') }}?subject=essay"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100
+                                               border-2 border-orange-200/50 hover:border-orange-400 rounded-lg
+                                               text-xs font-bold text-orange-700 hover:text-orange-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Essay Writing
+                                    </a>
+                                    <a href="{{ route('services.programming.index') }}?subject=javascript"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-yellow-50 to-amber-50 hover:from-yellow-100 hover:to-amber-100
+                                               border-2 border-yellow-200/50 hover:border-yellow-400 rounded-lg
+                                               text-xs font-bold text-yellow-700 hover:text-yellow-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        JavaScript
+                                    </a>
+                                    <a href="{{ route('services.programming.index') }}?subject=data-science"
+                                        class="group relative px-3.5 py-1.5 bg-gradient-to-r from-violet-50 to-purple-50 hover:from-violet-100 hover:to-purple-100
+                                               border-2 border-violet-200/50 hover:border-violet-400 rounded-lg
+                                               text-xs font-bold text-violet-700 hover:text-violet-900
+                                               transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                        Data Science
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Trust Badge with Gradient -->
+                            <div class="mt-5 p-3 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 border-2 border-green-200/50 rounded-xl">
+                                <div class="flex items-center justify-center gap-2 text-xs">
+                                    <div class="flex items-center gap-1.5">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-green-400 rounded-full blur-sm opacity-50"></div>
+                                            <svg class="relative w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-bold text-gray-700">100% Secure & Confidential</span>
+                                    </div>
+                                    <span class="text-gray-400">•</span>
+                                    <span class="font-semibold text-gray-600">Free Quote</span>
+                                    <span class="text-gray-400">•</span>
+                                    <span class="font-semibold text-gray-600">No Obligation</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Trust Building Timeline - Assignment Journey -->
+    <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-block mb-4">
+                    <span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 rounded-full text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        Simple 4-Step Process
+                    </span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+                    Your Journey to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Academic Success</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    From submission to completion, we've streamlined the entire process to get you the help you need, fast.
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="max-w-6xl mx-auto">
+                <!-- Desktop Timeline (Hidden on Mobile) -->
+                <div class="hidden lg:block relative">
+                    <!-- Connecting Line -->
+                    <div class="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200"></div>
+                    <div class="absolute top-32 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" style="width: 0%; animation: progressLine 3s ease-out forwards;">
+                    </div>
+
+                    <!-- Timeline Steps -->
+                    <div class="grid grid-cols-4 gap-8">
+                        <!-- Step 1: Submit -->
+                        <div class="group relative">
+                            <!-- Checkpoint Circle -->
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
+                                    <div class="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Card -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP 1</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Submit Details</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Fill out a quick form with your assignment requirements, deadline, and budget.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        2 minutes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Match -->
+                        <div class="group relative">
+                            <!-- Checkpoint Circle -->
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
+                                    <div class="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Card -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 2</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Get Matched</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Our AI instantly matches you with the perfect expert based on subject and availability.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Under 5 minutes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Work -->
+                        <div class="group relative">
+                            <!-- Checkpoint Circle -->
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
+                                    <div class="relative w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Card -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-indigo-100 hover:border-indigo-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP 3</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Expert Works</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Your matched tutor works on your assignment with regular progress updates.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Live updates
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Receive -->
+                        <div class="group relative">
+                            <!-- Checkpoint Circle -->
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
+                                    <div class="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Card -->
+                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP 4</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Get Results</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Receive your completed assignment with unlimited revisions until you're satisfied.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        100% Satisfaction
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Timeline (Visible on Mobile) -->
+                <div class="lg:hidden space-y-8">
+                    <!-- Step 1 -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-blue-300 to-purple-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-blue-100">
+                                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP 1</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Submit Details</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Fill out a quick form with your assignment requirements, deadline, and budget.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    2 minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-purple-300 to-indigo-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-purple-100">
+                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 2</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Get Matched</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Our AI instantly matches you with the perfect expert based on subject and availability.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Under 5 minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-indigo-300 to-green-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-indigo-100">
+                                <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP 3</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Expert Works</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Your matched tutor works on your assignment with regular progress updates.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Live updates
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-green-100">
+                                <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP 4</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Get Results</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Receive your completed assignment with unlimited revisions until you're satisfied.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    100% Satisfaction
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Trust Indicators -->
+            <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-3">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-black text-gray-900 mb-1">Verified Experts</h4>
+                    <p class="text-sm text-gray-600">All tutors are vetted & qualified</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-3">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-black text-gray-900 mb-1">100% Confidential</h4>
+                    <p class="text-sm text-gray-600">Your data is secure & private</p>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-3">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-black text-gray-900 mb-1">Money-Back Guarantee</h4>
+                    <p class="text-sm text-gray-600">Not satisfied? Get a full refund</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes progressLine {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+    </style>
 
     <!-- Professional Corporate CSS Styles -->
     <style>
