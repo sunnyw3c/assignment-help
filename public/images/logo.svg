@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
+  <defs>
+    <!-- Gradient for the icon -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E63946"/>
+      <stop offset="100%" style="stop-color:#9D0208"/>
+    </linearGradient>
+    <!-- Gradient for main text -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C41E1E"/>
+      <stop offset="100%" style="stop-color:#E63946"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Creative Book/Document Icon -->
+  <g transform="translate(5, 5)" filter="url(#shadow)">
+    <!-- Open book base -->
+    <path d="M0,45 L22,40 L22,5 L0,10 Z" fill="url(#iconGradient)" opacity="0.9"/>
+    <path d="M22,40 L44,45 L44,10 L22,5 Z" fill="url(#iconGradient)"/>
+
+    <!-- Book spine -->
+    <path d="M20,5 L24,5 L24,40 L20,40 Z" fill="#9D0208"/>
+
+    <!-- Page lines on left -->
+    <line x1="4" y1="15" x2="18" y2="12" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+    <line x1="4" y1="22" x2="18" y2="19" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+    <line x1="4" y1="29" x2="18" y2="26" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Page lines on right -->
+    <line x1="26" y1="12" x2="40" y2="15" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+    <line x1="26" y1="19" x2="40" y2="22" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+    <line x1="26" y1="26" x2="40" y2="29" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Graduation cap on top -->
+    <polygon points="22,0 8,8 22,12 36,8" fill="#1D3557"/>
+    <line x1="22" y1="12" x2="22" y2="5" stroke="#1D3557" stroke-width="2"/>
+    <circle cx="22" cy="2" r="2" fill="#F4A261"/>
+
+    <!-- Tassel -->
+    <path d="M36,8 Q40,12 38,18" stroke="#F4A261" stroke-width="1.5" fill="none"/>
+    <circle cx="38" cy="18" r="2" fill="#F4A261"/>
+  </g>
+
+  <!-- ASSIGNMENT HELP text -->
+  <text x="60" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="800" fill="url(#textGradient)" letter-spacing="1">
+    ASSIGNMENT HELP
+  </text>
+
+  <!-- USA badge -->
+  <g transform="translate(60, 40)">
+    <rect x="0" y="0" width="36" height="14" rx="2" fill="#1D3557"/>
+    <text x="18" y="11" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">
+      USA
+    </text>
+  </g>
+
+  <!-- Decorative underline -->
+  <line x1="100" y1="52" x2="240" y2="52" stroke="url(#iconGradient)" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -2,9 +2,8 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <!-- Logo -->
         <a href="{{ url('/') }}" class="flex items-center space-x-2">
-            <div class="text-2xl">💻</div>
-            <span
-                class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Assignment Help USA</span>
+            <img src="{{ asset('images/logo.svg') }}" alt="Assignment Help Shop" height="50">
+
         </a>
 
         <!-- Desktop Navigation -->
