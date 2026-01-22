@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'TrendingTutor - Professional Help for Assignments, Programming & Tutoring')
+@section('title', 'Assignment Help USA - Professional Assignment Help Online for USA Students')
 @section('description',
-    'Professional help for assignments, programming (Python, Java, C++), essays, and tutoring. Trusted by 50,000+ students
-    across the USA. High school, college & graduate level support. 24/7 availability, 100% original work.')
+    'Professional assignment help online for USA students. Expert assignment helpers provide quality assignment help service for college, high school & graduate students. 24/7 assignment help with 100% original work and money-back guarantee.')
 @section('keywords',
-    'assignment help, online tutoring, programming help, homework help, essay writing, math tutoring, coding help, python
-    java c++ help, high school tutoring, college tutoring, graduate tutoring services USA')
+    'assignment help, assignment help online, assignment helper, assignment help service, assignment help USA, online assignment help, college assignment help, homework help, essay writing help, assignment assistance USA, academic help USA')
 
 @section('content')
     <!-- Structured Data for SEO -->
@@ -14,8 +12,8 @@
     {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
-        "name": "TrendingTutor",
-        "description": "Professional help for assignments, programming (Python, Java, C++), and online tutoring for high school, college, and graduate students across the USA. Get help with homework, essays, coding projects, and 50+ subjects.",
+        "name": "Assignment Help USA",
+        "description": "Professional assignment help online for USA students. Get expert assignment help service from qualified assignment helpers for college, high school, and graduate level assignments. 24/7 assignment assistance with essays, research papers, programming, and 50+ subjects.",
         "url": "{{ url('/') }}",
         "areaServed": "United States",
         "contactPoint": {
@@ -335,7 +333,7 @@
                     </svg>
                     <span class="text-blue-900 font-semibold text-sm">Comprehensive Academic Solutions</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Services Designed for Your Success</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Services for Your Academic Success</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Professional support across every academic discipline with verified experts ready to help you excel
                 </p>
@@ -388,12 +386,12 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Essay & Research Writing</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Assignment Writing Help</h3>
                                 <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing help across 50+ academic subjects with plagiarism-free guarantee</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing assistance across 50+ subjects with 100% plagiarism-free guarantee and on-time delivery</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
                                 <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
                                 <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research Papers</span>
@@ -470,12 +468,12 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Programming & Coding Help</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Programming Assignment Help</h3>
                                 <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+ programming languages with debugging and optimization</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+ languages including debugging, optimization, and code documentation</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
                                 <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
                                 <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
@@ -557,12 +555,12 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Tutoring & Study Help</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Homework & Assignment Help</h3>
                                 <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">One-on-one tutoring and comprehensive study resources for all academic disciplines</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Comprehensive support for homework, projects, and study materials across all academic levels</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
                                 <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Math Tutoring</span>
                                 <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Science Help</span>
@@ -584,7 +582,7 @@
             <div class="text-center mt-20">
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
                     <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Excel in Your Studies?</h3>
-                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students who trust TrendingTutor for their academic needs</p>
+                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students across USA who trust Assignment Help USA for their academic needs</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
                         <a href="{{ route('assignments.create') }}"
                             class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -631,7 +629,7 @@
                     </svg>
                     <span class="text-green-900 font-semibold text-sm">Trusted by 50,000+ Students Nationwide</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Students Choose TrendingTutor</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Students Choose Assignment Help USA</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     We're committed to your academic success with proven results, verified experts, and 24/7 support
                 </p>
@@ -1801,10 +1799,10 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why College Students Trust TrendingTutor
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why College Students Trust Assignment Help USA
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Join thousands of students who have improved their grades with our expert help
+                    Join thousands of USA students who have improved their grades with our expert assistance
                 </p>
             </div>
 
@@ -1813,8 +1811,8 @@
                 <div
                     class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">🎓</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Expert Tutors</h3>
-                    <p class="text-gray-600 leading-relaxed">Verified tutors from top universities with proven track
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Expert Writers</h3>
+                    <p class="text-gray-600 leading-relaxed">Verified experts from top universities with proven track
                         records in helping students succeed.</p>
                 </div>
 
@@ -1880,7 +1878,7 @@
                         <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
                     </div>
                     <p class="text-gray-700 mb-6 leading-relaxed italic">
-                        "I was struggling with my Python assignment and had only 2 days left. TrendingTutor connected me
+                        "I was struggling with my Python assignment and had only 2 days left. Assignment Help USA connected me
                         with an amazing expert who not only completed it but also explained everything. Got an A+!"
                     </p>
                     <div class="flex items-center">
@@ -1945,7 +1943,7 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Boost Your Grades?</h2>
             <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Join 50,000+ college students who trust TrendingTutor for their assignments and programming projects.
+                Join 50,000+ college students across USA who trust Assignment Help USA for their academic success.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="{{ route('assignments.create') }}"
@@ -1963,20 +1961,1131 @@
         </div>
     </section>
 
+    <!-- Academic Levels We Cover Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                    </svg>
+                    <span class="text-purple-900 font-semibold text-sm">All Academic Levels Covered</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expert Help at Every Academic Level</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    From high school to PhD programs, we provide tailored assistance for students at every stage of their academic journey
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- High School -->
+                <div class="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎒</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">High School</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        Support for grades 9-12 with homework, essays, projects, and test preparation
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Homework assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Essay writing help</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Science projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>SAT/ACT prep</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- College/Undergraduate -->
+                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">College</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        Undergraduate support for all majors with comprehensive academic assistance
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Research papers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Case studies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Lab reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Programming projects</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Masters/Graduate -->
+                <div class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-emerald-100 hover:border-emerald-300">
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎓</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Masters</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        Advanced graduate-level support for thesis, capstone, and research projects
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Thesis writing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Capstone projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Literature reviews</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Data analysis</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PhD/Doctoral -->
+                <div class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-300">
+                    <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">👨‍🎓</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">PhD</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        Doctoral-level expertise for dissertations and advanced research work
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Dissertation chapters</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Research proposals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Statistical analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Academic publishing</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Subjects Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                    </svg>
+                    <span class="text-blue-900 font-semibold text-sm">50+ Subjects Available</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Most Popular Subjects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Get expert help across a wide range of academic subjects from our qualified professionals
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+                <!-- Math -->
+                <a href="{{ route('services.assignment.index') }}?subject=math" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔢</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Mathematics</h3>
+                    <p class="text-sm text-gray-500">Calculus, Algebra, Statistics</p>
+                </a>
+
+                <!-- Science -->
+                <a href="{{ route('services.assignment.index') }}?subject=science" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔬</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Science</h3>
+                    <p class="text-sm text-gray-500">Physics, Chemistry, Biology</p>
+                </a>
+
+                <!-- English -->
+                <a href="{{ route('services.assignment.index') }}?subject=english" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📖</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">English</h3>
+                    <p class="text-sm text-gray-500">Literature, Writing, Grammar</p>
+                </a>
+
+                <!-- Business -->
+                <a href="{{ route('services.assignment.index') }}?subject=business" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-yellow-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💼</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Business</h3>
+                    <p class="text-sm text-gray-500">Management, Finance, Marketing</p>
+                </a>
+
+                <!-- Computer Science -->
+                <a href="{{ route('services.programming.index') }}" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-indigo-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💻</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Computer Science</h3>
+                    <p class="text-sm text-gray-500">Programming, Algorithms</p>
+                </a>
+
+                <!-- History -->
+                <a href="{{ route('services.assignment.index') }}?subject=history" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-red-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏛️</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">History</h3>
+                    <p class="text-sm text-gray-500">World, American, European</p>
+                </a>
+
+                <!-- Psychology -->
+                <a href="{{ route('services.assignment.index') }}?subject=psychology" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-pink-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Psychology</h3>
+                    <p class="text-sm text-gray-500">Clinical, Social, Cognitive</p>
+                </a>
+
+                <!-- Economics -->
+                <a href="{{ route('services.assignment.index') }}?subject=economics" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Economics</h3>
+                    <p class="text-sm text-gray-500">Micro, Macro, Econometrics</p>
+                </a>
+
+                <!-- Engineering -->
+                <a href="{{ route('services.assignment.index') }}?subject=engineering" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-orange-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Engineering</h3>
+                    <p class="text-sm text-gray-500">Mechanical, Civil, Electrical</p>
+                </a>
+
+                <!-- Nursing -->
+                <a href="{{ route('services.assignment.index') }}?subject=nursing" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-rose-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Nursing</h3>
+                    <p class="text-sm text-gray-500">Healthcare, Patient Care</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="{{ route('services.assignment.index') }}" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    View All Subjects
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-white font-semibold text-sm">Simple 4-Step Process</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">How It Works</h2>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    Getting expert help for your assignments is easy. Just follow these simple steps
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            1
+                        </div>
+                        <div class="text-6xl text-center mb-6 mt-4">📝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Submit Your Assignment</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Fill out our simple form with your assignment details, deadline, and requirements
+                        </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            2
+                        </div>
+                        <div class="text-6xl text-center mb-6 mt-4">🎯</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Get Matched with Expert</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            We instantly connect you with a qualified expert in your subject area
+                        </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            3
+                        </div>
+                        <div class="text-6xl text-center mb-6 mt-4">⚡</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Expert Works on It</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Your expert completes the assignment following all your instructions and guidelines
+                        </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            4
+                        </div>
+                        <div class="text-6xl text-center mb-6 mt-4">✅</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Receive & Review</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Get your completed assignment on time with free revisions until you're satisfied
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="{{ route('assignments.create') }}" class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    Get Started Now
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits & Guarantees Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-emerald-900 font-semibold text-sm">Your Success is Guaranteed</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Quality Guarantees</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We stand behind our work with comprehensive guarantees to ensure your complete satisfaction
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Plagiarism Free -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">100% Original Work</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Every assignment is written from scratch and checked through advanced plagiarism detection software. We provide detailed reports upon request.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Custom-written content</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Turnitin reports available</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">✓</span>
+                            <span>Proper citations included</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Money Back Guarantee -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Money-Back Guarantee</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        If we can't meet your requirements or you're not satisfied with the quality, we offer a full refund. No questions asked.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Full refund policy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Transparent process</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 mr-2">✓</span>
+                            <span>Customer-first approach</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Unlimited Revisions -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Unlimited Revisions</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We'll revise your assignment as many times as needed until you're completely satisfied with the result.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Free revisions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Quick turnaround</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">✓</span>
+                            <span>Quality assurance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- On-Time Delivery -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">On-Time Delivery</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We respect your deadlines. 98% of our assignments are delivered on time or earlier.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Deadline guarantee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Express delivery available</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 mr-2">✓</span>
+                            <span>Early submission bonus</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 24/7 Support -->
+                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Our customer support team is available round the clock to assist you with any questions or concerns.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-cyan-600 mr-2">✓</span>
+                            <span>Live chat support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-600 mr-2">✓</span>
+                            <span>Email assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-600 mr-2">✓</span>
+                            <span>Quick response time</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Confidentiality -->
+                <div class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-8 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">100% Confidential</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Your privacy is our top priority. We never share your personal information or assignment details.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-2">✓</span>
+                            <span>Encrypted communications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-2">✓</span>
+                            <span>Secure payment methods</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 mr-2">✓</span>
+                            <span>Data protection compliant</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Information Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-green-900 font-semibold text-sm">Affordable & Transparent Pricing</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Student-Friendly Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Transparent pricing with no hidden fees. Get quality help that fits your budget
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <!-- Assignment Help Pricing -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900">Assignment Writing</h3>
+                        <span class="text-5xl">📝</span>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-blue-600">$15</span>
+                            <span class="text-gray-500">/page</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Starting price for standard assignments</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Essays, research papers, reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Proper formatting & citations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Plagiarism report included</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Unlimited free revisions</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('assignments.create') }}" class="block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        Order Now
+                    </a>
+                </div>
+
+                <!-- Programming Help Pricing -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900">Programming Help</h3>
+                        <span class="text-5xl">💻</span>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-emerald-600">$25</span>
+                            <span class="text-gray-500">/task</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Starting price for coding projects</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">25+ programming languages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Well-commented code</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Debugging & optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-600">Video explanation available</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('assignments.create') }}" class="block text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        Get Help Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pricing Factors -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-5xl mx-auto border border-purple-100">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Affects the Price?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📅</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Deadline</h4>
+                        <p class="text-sm text-gray-600">Longer deadlines cost less. Rush orders available with express pricing.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📏</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Complexity</h4>
+                        <p class="text-sm text-gray-600">Advanced topics and specialized requirements may affect pricing.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📄</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Length</h4>
+                        <p class="text-sm text-gray-600">Longer assignments are priced per page or project scope.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-700 font-semibold mb-3">🎁 Special Offers:</p>
+                    <div class="flex flex-wrap gap-3 justify-center text-sm">
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">15% off for new customers</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">20% off for returning clients</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">Bulk order discounts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Areas Detailed Grid Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-indigo-900 font-semibold text-sm">Comprehensive Subject Coverage</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">All Subject Areas We Cover</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    From STEM to humanities, our experts cover every major academic discipline
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- STEM Subjects -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">STEM Fields</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Mathematics & Statistics</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Physics & Chemistry</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Biology & Life Sciences</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Environmental Science</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Astronomy & Geology</li>
+                    </ul>
+                </div>
+
+                <!-- Business & Economics -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Business & Economics</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Business Management</li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Accounting & Finance</li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Marketing & Sales</li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Economics & Trade</li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Entrepreneurship</li>
+                    </ul>
+                </div>
+
+                <!-- Humanities -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Humanities</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> English & Literature</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> History & Philosophy</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Languages & Linguistics</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Art & Music Theory</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Cultural Studies</li>
+                    </ul>
+                </div>
+
+                <!-- Social Sciences -->
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Social Sciences</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Psychology & Sociology</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Political Science</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Anthropology</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Education & Pedagogy</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Social Work</li>
+                    </ul>
+                </div>
+
+                <!-- Engineering -->
+                <div class="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Engineering</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Mechanical Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Civil Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Electrical Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Chemical Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Aerospace Engineering</li>
+                    </ul>
+                </div>
+
+                <!-- Computer Science & IT -->
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Computer Science</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Programming & Coding</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Data Science & AI</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Web Development</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Cybersecurity</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Database Management</li>
+                    </ul>
+                </div>
+
+                <!-- Health Sciences -->
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 border border-pink-100 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🏥</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Health Sciences</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nursing & Healthcare</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Medicine & Pharmacy</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Public Health</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nutrition & Dietetics</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Physical Therapy</li>
+                    </ul>
+                </div>
+
+                <!-- Law & Legal Studies -->
+                <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Law & Legal Studies</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-gray-600 mr-2">•</span> Constitutional Law</li>
+                        <li class="flex items-center"><span class="text-gray-600 mr-2">•</span> Criminal Justice</li>
+                        <li class="flex items-center"><span class="text-gray-600 mr-2">•</span> Business Law</li>
+                        <li class="flex items-center"><span class="text-gray-600 mr-2">•</span> International Law</li>
+                        <li class="flex items-center"><span class="text-gray-600 mr-2">•</span> Legal Research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographic Coverage - USA Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-red-900 font-semibold text-sm">Serving Students Across USA</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Available Nationwide in the USA</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We proudly serve students from coast to coast with 24/7 online support regardless of your location
+                </p>
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <!-- Major Cities -->
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Cities We Serve</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🗽</div>
+                            <div class="font-semibold text-gray-900 text-sm">New York</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🌴</div>
+                            <div class="font-semibold text-gray-900 text-sm">Los Angeles</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🏙️</div>
+                            <div class="font-semibold text-gray-900 text-sm">Chicago</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🤠</div>
+                            <div class="font-semibold text-gray-900 text-sm">Houston</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🔔</div>
+                            <div class="font-semibold text-gray-900 text-sm">Philadelphia</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🌵</div>
+                            <div class="font-semibold text-gray-900 text-sm">Phoenix</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🌁</div>
+                            <div class="font-semibold text-gray-900 text-sm">San Francisco</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🏖️</div>
+                            <div class="font-semibold text-gray-900 text-sm">Miami</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🏛️</div>
+                            <div class="font-semibold text-gray-900 text-sm">Washington DC</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🎭</div>
+                            <div class="font-semibold text-gray-900 text-sm">Boston</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">☕</div>
+                            <div class="font-semibold text-gray-900 text-sm">Seattle</div>
+                        </div>
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <div class="text-2xl mb-2">🎸</div>
+                            <div class="font-semibold text-gray-900 text-sm">Austin</div>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-500 mt-6 text-sm">+ Hundreds more cities across all 50 states</p>
+                </div>
+
+                <!-- State Coverage -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 East Coast</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                            <div>New York</div>
+                            <div>Pennsylvania</div>
+                            <div>Massachusetts</div>
+                            <div>Virginia</div>
+                            <div>Florida</div>
+                            <div>Maryland</div>
+                            <div>New Jersey</div>
+                            <div>Georgia</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 Midwest</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                            <div>Illinois</div>
+                            <div>Ohio</div>
+                            <div>Michigan</div>
+                            <div>Wisconsin</div>
+                            <div>Minnesota</div>
+                            <div>Missouri</div>
+                            <div>Indiana</div>
+                            <div>Iowa</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 West Coast</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                            <div>California</div>
+                            <div>Washington</div>
+                            <div>Oregon</div>
+                            <div>Arizona</div>
+                            <div>Nevada</div>
+                            <div>Colorado</div>
+                            <div>Utah</div>
+                            <div>Texas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
+                    <h4 class="text-2xl font-bold mb-3">🇺🇸 All 50 States Covered</h4>
+                    <p class="text-lg mb-4">No matter where you are in the United States, our expert help is just a click away</p>
+                    <div class="flex flex-wrap gap-3 justify-center text-sm">
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Online Platform</span>
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">24/7 Available</span>
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">All Time Zones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Writing Types Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-yellow-900 font-semibold text-sm">All Writing Types</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Types of Academic Work We Handle</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    From simple essays to complex dissertations, we cover all types of academic writing
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Essays -->
+                <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-4xl">✍️</div>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Popular</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Essays & Papers</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span> Argumentative essays</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span> Persuasive essays</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span> Descriptive essays</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span> Narrative essays</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span> Compare & contrast</li>
+                    </ul>
+                </div>
+
+                <!-- Research Papers -->
+                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-4xl">📄</div>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Advanced</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Research Papers</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Literature reviews</li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Analytical papers</li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Experimental reports</li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Annotated bibliographies</li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Research proposals</li>
+                    </ul>
+                </div>
+
+                <!-- Thesis & Dissertation -->
+                <div class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-4xl">🎓</div>
+                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Graduate</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Thesis & Dissertation</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Master's thesis</li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> PhD dissertation</li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Dissertation chapters</li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Methodology design</li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Data analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Case Studies -->
+                <div class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Case Studies</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Business case studies</li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Medical case studies</li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Psychology case studies</li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Legal case analysis</li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Social work cases</li>
+                    </ul>
+                </div>
+
+                <!-- Lab Reports -->
+                <div class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lab Reports</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Chemistry labs</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Physics experiments</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Biology practicals</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Engineering labs</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Scientific documentation</li>
+                    </ul>
+                </div>
+
+                <!-- Other Academic Work -->
+                <div class="group bg-gradient-to-br from-rose-50 to-red-50 rounded-xl p-6 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
+                    <div class="text-4xl mb-4">📋</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Other Academic Work</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-rose-600 mr-2">•</span> Book/article reviews</li>
+                        <li class="flex items-start"><span class="text-rose-600 mr-2">•</span> Reflective writings</li>
+                        <li class="flex items-start"><span class="text-rose-600 mr-2">•</span> Discussion posts</li>
+                        <li class="flex items-start"><span class="text-rose-600 mr-2">•</span> Presentations/slides</li>
+                        <li class="flex items-start"><span class="text-rose-600 mr-2">•</span> Admission essays</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Can't find your assignment type? <a href="{{ route('assignments.create') }}" class="text-blue-600 hover:text-blue-700 font-semibold">Contact us</a> - we handle custom requests too!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Safety Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-white font-semibold text-sm">Your Security is Our Priority</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Trust & Safety Measures</h2>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    We implement industry-leading security measures to protect your privacy and ensure safe transactions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
+                <!-- SSL Encryption -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">SSL Encryption</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        256-bit SSL encryption protects all your data during transmission and storage
+                    </p>
+                </div>
+
+                <!-- Secure Payments -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold mb-3">Secure Payments</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        PCI-DSS compliant payment processing through trusted gateways like Stripe and PayPal
+                    </p>
+                </div>
+
+                <!-- Privacy Protection -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        We never share your personal information with third parties. GDPR compliant.
+                    </p>
+                </div>
+
+                <!-- Data Security -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-xl font-bold mb-3">Data Security</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Regular backups and secure data centers ensure your information is always protected
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h3 class="text-2xl font-bold mb-8 text-center">Trusted & Verified</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">✅</div>
+                        </div>
+                        <p class="text-sm font-semibold">SSL Certified</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">🏆</div>
+                        </div>
+                        <p class="text-sm font-semibold">BBB Accredited</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">⭐</div>
+                        </div>
+                        <p class="text-sm font-semibold">4.9/5 Trustpilot</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">🔐</div>
+                        </div>
+                        <p class="text-sm font-semibold">GDPR Compliant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600">Everything you need to know about TrendingTutor</p>
+                <p class="text-xl text-gray-600">Everything you need to know about Assignment Help USA</p>
             </div>
 
             <div class="space-y-6">
                 <!-- FAQ 1 -->
                 <div class="bg-white rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Is TrendingTutor legit and safe to use?</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Is Assignment Help USA legit and safe to use?</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Yes! TrendingTutor is a trusted platform used by over 50,000 college students across the USA. We use
+                        Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA. We use
                         secure payment processing, encrypted communications, and guarantee 100% confidentiality.
                     </p>
                 </div>

@@ -4,7 +4,7 @@
         <a href="{{ url('/') }}" class="flex items-center space-x-2">
             <div class="text-2xl">💻</div>
             <span
-                class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Trending Tutor</span>
+                class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Assignment Help USA</span>
         </a>
 
         <!-- Desktop Navigation -->
