@@ -5,11 +5,11 @@
             <!-- Company Info -->
             <div class="lg:col-span-2">
                 <div class="flex items-center mb-6">
-                    <img src="{{ asset('images/logo-footer.svg') }}" alt="Assignment Help USA" height="50" class="h-12">
+                    <img src="{{ asset('images/logo-footer.svg') }}" alt="Assignment Help USA" height="50"
+                        class="h-12">
                 </div>
                 <p class="text-gray-300 mb-6 text-lg leading-relaxed max-w-md">
-                    Get expert programming help 24/7. From Python to Java, our skilled developers are ready to assist
-                    with your coding challenges.
+                    Your trusted partner for academic success. Get expert assignment help from qualified tutors across all subjects, available 24/7 with guaranteed quality and on-time delivery.
                 </p>
                 <div class="flex space-x-4">
                     <a href="#"
@@ -31,28 +31,28 @@
                 </div>
             </div>
 
-            <!-- Programming Languages -->
+            <!-- Popular Subjects -->
             <div>
-                <h4 class="text-xl font-bold mb-6 text-orange-400">Programming Languages</h4>
+                <h4 class="text-xl font-bold mb-6 text-orange-400">Popular Subjects</h4>
                 <ul class="space-y-3 text-gray-300">
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🐍</span>Python Help</a></li>
+                                class="mr-2">📐</span>Mathematics</a></li>
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">☕</span>Java Help</a></li>
+                                class="mr-2">🔬</span>Science</a></li>
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🟨</span>JavaScript Help</a></li>
+                                class="mr-2">📝</span>English & Writing</a></li>
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">⚡</span>C++ Help</a></li>
+                                class="mr-2">💼</span>Business Studies</a></li>
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🟦</span>C# Help</a></li>
+                                class="mr-2">💻</span>Computer Science</a></li>
                     <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🟣</span>PHP Help</a></li>
+                                class="mr-2">📊</span>Economics</a></li>
                 </ul>
             </div>
 
@@ -60,24 +60,24 @@
             <div>
                 <h4 class="text-xl font-bold mb-6 text-orange-400">Our Services</h4>
                 <ul class="space-y-3 text-gray-300">
-                    <li><a href="{{ route('services.programming.show', 'debugging') }}"
-                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🔧</span>Code Debugging</a></li>
-                    <li><a href="{{ route('services.programming.show', 'web-development') }}"
-                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">💻</span>Web Development</a></li>
-                    <li><a href="{{ route('services.programming.show', 'mobile-app') }}"
-                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">📱</span>Mobile App Development</a></li>
                     <li><a href="{{ route('services.assignment.show', 'homework-help') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🎯</span>Homework Help</a></li>
+                                class="mr-2">📝</span>Homework Help</a></li>
                     <li><a href="{{ route('services.assignment.index') }}"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">📚</span>Assignment Help</a></li>
-                    <li><a href="{{ route('services.programming.show', 'testing-qa') }}"
+                                class="mr-2">📚</span>Assignment Writing</a></li>
+                    <li><a href="#"
                             class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
-                                class="mr-2">🧪</span>Testing & QA</a></li>
+                                class="mr-2">🎓</span>Essay Writing</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">📖</span>Research Papers</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">✍️</span>Thesis & Dissertation</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-400 transition-colors duration-200 flex items-center"><span
+                                class="mr-2">🔍</span>Proofreading & Editing</a></li>
                 </ul>
             </div>
         </div>
@@ -88,7 +88,7 @@
             <div>
                 <h4 class="text-lg font-bold mb-4 text-white">Contact Information</h4>
                 <div class="space-y-3 text-gray-300">
-                    <p class="flex items-center"><span class="mr-3">📧</span>support@codehelp.com</p>
+                    <p class="flex items-center"><span class="mr-3">📧</span>support@assignmenthelpusa.com</p>
                     <p class="flex items-center"><span class="mr-3">📱</span>+1 (555) 123-4567</p>
                     <p class="flex items-center"><span class="mr-3">💬</span>Live Chat Available 24/7</p>
                     <p class="flex items-center"><span class="mr-3">⏰</span>Average Response: 15 minutes</p>
@@ -108,7 +108,8 @@
                             class="hover:text-orange-400 transition-colors duration-200">FAQ</a></li>
                     <li><a href="{{ route('about') }}"
                             class="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
-                    <li><a href="{{ url('/blog') }}" class="hover:text-orange-400 transition-colors duration-200">Blog</a></li>
+                    <li><a href="{{ url('/blog') }}"
+                            class="hover:text-orange-400 transition-colors duration-200">Blog</a></li>
                 </ul>
             </div>
 
@@ -132,7 +133,7 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                    &copy; {{ date('Y') }} Assignment Help USA. All rights reserved. | Professional Programming Help Service
+                    &copy; {{ date('Y') }} Assignment Help USA. All rights reserved. | Professional Academic Help Service
                 </p>
                 <div class="flex space-x-6 text-sm text-gray-400">
                     <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
