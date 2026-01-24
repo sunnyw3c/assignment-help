@@ -194,13 +194,7 @@ new class extends Component {
                         +
                     </button>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">{{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }} ≈
-                    {{ number_format($pages * 275) }} words | Click + or - to adjust pages</p>
-                @if ($this->volumeDiscount > 0)
-                    <p class="text-xs text-green-600 font-semibold mt-1">Volume discount: +{{ number_format($this->volumeDiscount * 100, 0) }}% extra off!</p>
-                @else
-                    <p class="text-xs text-blue-600 mt-1">Add more pages to unlock volume discounts!</p>
-                @endif
+                <p class="text-xs text-gray-500 mt-2">{{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }} ≈ {{ number_format($pages * 275) }} words</p>
             </div>
 
             <!-- Academic Level -->

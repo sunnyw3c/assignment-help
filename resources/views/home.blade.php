@@ -693,7 +693,6 @@
                 </div>
             </div>
 
-            <!-- Enhanced Trust Statistics -->
             <div class="mt-20">
                 <div class="bg-gradient-to-br from-gray-900 to-slate-800 rounded-3xl p-12 shadow-2xl">
                     <div class="text-center mb-10">
@@ -740,12 +739,9 @@
         </div>
     </section>
 
-    <!-- Search Panel Component - Modern Glassmorphism Design -->
     <section class="relative py-12 overflow-hidden">
-        <!-- Animated Background Gradient -->
         <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-100/50 via-transparent to-purple-100/50"></div>
-            <!-- Floating Gradient Orbs -->
             <div
                 class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-full blur-3xl animate-pulse">
             </div>
@@ -755,22 +751,16 @@
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-5xl mx-auto">
-                <!-- Glassmorphism Card with Enhanced Design -->
                 <div class="relative group">
-                    <!-- Glow Effect -->
                     <div
                         class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500">
                     </div>
 
-                    <!-- Main Card -->
                     <div
                         class="relative backdrop-blur-xl bg-white/80 rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
-                        <!-- Decorative Top Border -->
                         <div class="h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500"></div>
 
-                        <!-- Search Header with Gradient -->
                         <div class="relative px-6 sm:px-8 py-5 overflow-hidden">
-                            <!-- Subtle Background Pattern -->
                             <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-pink-500/5">
                             </div>
                             <div class="absolute inset-0 opacity-10"
@@ -796,10 +786,8 @@
                             </div>
                         </div>
 
-                        <!-- Search Form with Enhanced Glassmorphism -->
                         <div class="p-6 sm:p-8">
                             <form action="{{ route('assignments.create') }}" method="GET" class="space-y-4">
-                                <!-- Main Search Input with Gradient Border -->
                                 <div class="group">
                                     <label for="subject-search"
                                         class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
@@ -808,7 +796,6 @@
                                         What do you need help with?
                                     </label>
                                     <div class="relative">
-                                        <!-- Gradient Border Effect -->
                                         <div
                                             class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300">
                                         </div>
@@ -837,9 +824,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Filter Options Grid with Glassmorphism Cards -->
                                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                                    <!-- Assignment Type -->
                                     <div class="group">
                                         <label for="assignment-type"
                                             class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
@@ -871,7 +856,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Academic Level -->
                                     <div class="group">
                                         <label for="academic-level"
                                             class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
@@ -901,7 +885,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Deadline -->
                                     <div class="group">
                                         <label for="deadline"
                                             class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
@@ -931,7 +914,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Budget -->
                                     <div class="group">
                                         <label for="price-range"
                                             class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
@@ -962,13 +944,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Action Buttons with Enhanced Gradients -->
                                 <div class="flex flex-col sm:flex-row gap-3 pt-3">
                                     <button type="submit"
                                         class="group relative flex-1 sm:flex-none sm:px-10 py-3.5 overflow-hidden rounded-xl
                                                font-black text-base transition-all duration-300
                                                hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">
-                                        <!-- Animated Gradient Background -->
                                         <div
                                             class="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 transition-all duration-300">
                                         </div>
@@ -976,7 +956,6 @@
                                             class="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                         </div>
 
-                                        <!-- Glow Effect -->
                                         <div
                                             class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl opacity-50 blur-lg group-hover:opacity-75 transition-all duration-300">
                                         </div>
@@ -1011,7 +990,6 @@
                                 </div>
                             </form>
 
-                            <!-- Popular Subjects with Gradient Pills -->
                             <div class="mt-6 pt-5 border-t-2 border-gray-100">
                                 <div class="flex items-center justify-between mb-3">
                                     <h3
@@ -1097,7 +1075,6 @@
                                 </div>
                             </div>
 
-                            <!-- Trust Badge with Gradient -->
                             <div
                                 class="mt-5 p-3 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 border-2 border-green-200/50 rounded-xl">
                                 <div class="flex items-center justify-center gap-2 text-xs">
@@ -1127,9 +1104,7 @@
         </div>
     </section>
 
-    <!-- Trust Building Timeline - Assignment Journey -->
     <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-        <!-- Decorative Background Elements -->
         <div class="absolute inset-0 opacity-30">
             <div
                 class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl">
@@ -1140,7 +1115,6 @@
         </div>
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
             <div class="text-center mb-16 max-w-3xl mx-auto">
                 <div class="inline-block mb-4">
                     <span
@@ -1158,11 +1132,8 @@
                 </p>
             </div>
 
-            <!-- Timeline Container -->
             <div class="max-w-6xl mx-auto">
-                <!-- Desktop Timeline (Hidden on Mobile) -->
                 <div class="hidden lg:block relative">
-                    <!-- Connecting Line -->
                     <div
                         class="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
                     </div>
@@ -1170,11 +1141,8 @@
                         style="width: 0%; animation: progressLine 3s ease-out forwards;">
                     </div>
 
-                    <!-- Timeline Steps -->
                     <div class="grid grid-cols-4 gap-8">
-                        <!-- Step 1: Submit -->
                         <div class="group relative">
-                            <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <div
@@ -1192,7 +1160,6 @@
                                 </div>
                             </div>
 
-                            <!-- Content Card -->
                             <div
                                 class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
@@ -1217,9 +1184,7 @@
                             </div>
                         </div>
 
-                        <!-- Step 2: Match -->
                         <div class="group relative">
-                            <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <div
@@ -1237,7 +1202,6 @@
                                 </div>
                             </div>
 
-                            <!-- Content Card -->
                             <div
                                 class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
@@ -1262,9 +1226,7 @@
                             </div>
                         </div>
 
-                        <!-- Step 3: Work -->
                         <div class="group relative">
-                            <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <div
@@ -1282,7 +1244,6 @@
                                 </div>
                             </div>
 
-                            <!-- Content Card -->
                             <div
                                 class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-indigo-100 hover:border-indigo-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
@@ -1307,9 +1268,7 @@
                             </div>
                         </div>
 
-                        <!-- Step 4: Receive -->
                         <div class="group relative">
-                            <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <div
@@ -1326,7 +1285,6 @@
                                 </div>
                             </div>
 
-                            <!-- Content Card -->
                             <div
                                 class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
@@ -1353,9 +1311,7 @@
                     </div>
                 </div>
 
-                <!-- Mobile Timeline (Visible on Mobile) -->
                 <div class="lg:hidden space-y-8">
-                    <!-- Step 1 -->
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
@@ -1392,7 +1348,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 2 -->
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
@@ -1429,7 +1384,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 3 -->
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
@@ -1466,7 +1420,6 @@
                         </div>
                     </div>
 
-                    <!-- Step 4 -->
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
@@ -1503,191 +1456,9 @@
                 </div>
             </div>
 
-            <!-- Bottom Trust Indicators -->
-            {{-- <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div
-                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
-                    <div
-                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-3">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h4 class="font-black text-gray-900 mb-1">Verified Experts</h4>
-                    <p class="text-sm text-gray-600">All tutors are vetted & qualified</p>
-                </div>
 
-                <div
-                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
-                    <div
-                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-3">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h4 class="font-black text-gray-900 mb-1">100% Confidential</h4>
-                    <p class="text-sm text-gray-600">Your data is secure & private</p>
-                </div>
-
-                <div
-                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300">
-                    <div
-                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-3">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h4 class="font-black text-gray-900 mb-1">Money-Back Guarantee</h4>
-                    <p class="text-sm text-gray-600">Not satisfied? Get a full refund</p>
-                </div>
-            </div> --}}
         </div>
     </section>
-
-    <style>
-        @keyframes progressLine {
-            from {
-                width: 0%;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-    </style>
-
-    <!-- Professional Corporate CSS Styles -->
-    <style>
-        /* Corporate Grid Pattern - Subtle and Professional */
-        .bg-grid-pattern-corporate {
-            background-image:
-                linear-gradient(rgba(100, 116, 139, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(100, 116, 139, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        /* Search Input Focus Glow */
-        #hero-subject-search:focus {
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Floating Animations - Subtle Movement */
-        @keyframes float-slow {
-
-            0%,
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            33% {
-                transform: translate(10px, -15px) rotate(2deg);
-            }
-
-            66% {
-                transform: translate(-8px, -25px) rotate(-2deg);
-            }
-        }
-
-        @keyframes float-slower {
-
-            0%,
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            33% {
-                transform: translate(-12px, -20px) rotate(-3deg);
-            }
-
-            66% {
-                transform: translate(8px, -10px) rotate(3deg);
-            }
-        }
-
-        @keyframes float-slow-delayed {
-
-            0%,
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            33% {
-                transform: translate(15px, -10px) rotate(3deg);
-            }
-
-            66% {
-                transform: translate(-10px, -20px) rotate(-3deg);
-            }
-        }
-
-        @keyframes float-slower-delayed {
-
-            0%,
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            33% {
-                transform: translate(-15px, -12px) rotate(-2deg);
-            }
-
-            66% {
-                transform: translate(12px, -22px) rotate(2deg);
-            }
-        }
-
-        .animate-float-slow {
-            animation: float-slow 25s ease-in-out infinite;
-        }
-
-        .animate-float-slower {
-            animation: float-slower 30s ease-in-out infinite;
-        }
-
-        .animate-float-slow-delayed {
-            animation: float-slow-delayed 28s ease-in-out infinite 2s;
-        }
-
-        .animate-float-slower-delayed {
-            animation: float-slower-delayed 32s ease-in-out infinite 4s;
-        }
-
-        /* Smooth Transitions */
-        * {
-            transition-property: background-color, border-color, color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Responsive Typography - Professional Scale */
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 2.5rem;
-                line-height: 1.1;
-            }
-        }
-
-        @media (min-width: 640px) and (max-width: 1024px) {
-            h1 {
-                font-size: 3.5rem;
-                line-height: 1.1;
-            }
-        }
-
-        /* Subtle Hover Effects */
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-2px);
-        }
-    </style>
 
     <!-- Services Categories Section -->
     <section class="py-20 bg-white">
