@@ -2,9 +2,13 @@
 
 @section('title', 'Assignment Help USA - Professional Assignment Help Online for USA Students')
 @section('description',
-    'Professional assignment help online for USA students. Expert assignment helpers provide quality assignment help service for college, high school & graduate students. 24/7 assignment help with 100% original work and money-back guarantee.')
+    'Professional assignment help online for USA students. Expert assignment helpers provide quality
+    assignment help service for college, high school & graduate students. 24/7 assignment help with 100% original work and
+    money-back guarantee.')
 @section('keywords',
-    'assignment help, assignment help online, assignment helper, assignment help service, assignment help USA, online assignment help, college assignment help, homework help, essay writing help, assignment assistance USA, academic help USA')
+    'assignment help, assignment help online, assignment helper, assignment help service, assignment
+    help USA, online assignment help, college assignment help, homework help, essay writing help, assignment assistance USA,
+    academic help USA')
 
 @section('content')
     <!-- Structured Data for SEO -->
@@ -194,7 +198,8 @@
                     <!-- Subheadline -->
                     <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl mx-auto px-4"
                         itemprop="description">
-                        Get personalized support from verified tutors in Python, Java, C++, essay writing, math, science, and 50+ subjects for high school, college, and graduate students. Available 24/7.
+                        Get personalized support from verified tutors in Python, Java, C++, essay writing, math, science,
+                        and 50+ subjects for high school, college, and graduate students. Available 24/7.
                     </p>
                 </div>
 
@@ -329,11 +334,13 @@
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        <path
+                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                     </svg>
                     <span class="text-blue-900 font-semibold text-sm">Comprehensive Academic Solutions</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Services for Your Academic Success</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Services for Your Academic
+                    Success</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Professional support across every academic discipline with verified experts ready to help you excel
                 </p>
@@ -386,22 +393,32 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Assignment Writing Help</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Assignment Help</h3>
                                 <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing assistance across 50+ subjects with 100% plagiarism-free guarantee and on-time delivery</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing assistance across
+                                50+ subjects with 100% plagiarism-free guarantee and on-time delivery</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research Papers</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Thesis</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Dissertations</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research
+                                    Papers</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Thesis</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Dissertations</span>
                             </div>
-                            <a href="{{ route('services.assignment.index') }}" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group">
+                            <a href="{{ route('services.assignment.index') }}"
+                                class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group">
                                 Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
                                 </svg>
                             </a>
                         </div>
@@ -468,22 +485,32 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Programming Assignment Help</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Programming Help</h3>
                                 <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+ languages including debugging, optimization, and code documentation</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+
+                                languages including debugging, optimization, and code documentation</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">C++</span>
-                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">JavaScript</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">C++</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">JavaScript</span>
                             </div>
-                            <a href="{{ route('services.programming.index') }}" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold text-sm group">
+                            <a href="{{ route('services.programming.index') }}"
+                                class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold text-sm group">
                                 Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
                                 </svg>
                             </a>
                         </div>
@@ -555,22 +582,33 @@
                         </svg>
                         <div class="mt-8 text-center">
                             <div class="flex items-center justify-center gap-2 mb-3">
-                                <h3 class="text-gray-900 font-bold text-xl">Homework & Assignment Help</h3>
+                                <h3 class="text-gray-900 font-bold text-xl">Homework Help</h3>
                                 <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <p class="text-gray-600 text-base leading-relaxed mb-5">Comprehensive support for homework, projects, and study materials across all academic levels</p>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Comprehensive support for homework,
+                                projects, and study materials across all academic levels</p>
                             <div class="flex flex-wrap gap-2 justify-center mb-4">
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Math Tutoring</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Science Help</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Homework</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Test Prep</span>
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Math
+                                    Tutoring</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Science
+                                    Help</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Homework</span>
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Test
+                                    Prep</span>
                             </div>
-                            <a href="{{ route('assignments.create') }}" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold text-sm group">
+                            <a href="{{ route('assignments.create') }}"
+                                class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold text-sm group">
                                 Learn More
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
                                 </svg>
                             </a>
                         </div>
@@ -580,15 +618,18 @@
 
             <!-- Bottom CTA with Trust Signals -->
             <div class="text-center mt-20">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
                     <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Excel in Your Studies?</h3>
-                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students across USA who trust Assignment Help USA for their academic needs</p>
+                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students across
+                        USA who trust Assignment Help USA for their academic needs</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
                         <a href="{{ route('assignments.create') }}"
                             class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             Get Started Now
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
                         </a>
                         <span class="text-gray-500 text-sm">No credit card required</span>
@@ -596,19 +637,25 @@
                     <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Free Consultation</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>24/7 Support</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Money-Back Guarantee</span>
                         </div>
@@ -623,9 +670,12 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header with Trust Badge -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-green-900 font-semibold text-sm">Trusted by 50,000+ Students Nationwide</span>
                 </div>
@@ -739,27 +789,35 @@
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">15M+</div>
+                            <div
+                                class="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">
+                                15M+</div>
                             <div class="text-gray-300 text-sm font-medium">Successful Projects</div>
                             <div class="text-gray-500 text-xs mt-1">Since 2015</div>
                         </div>
                         <div class="group">
                             <div class="flex items-center justify-center gap-1 mb-2">
-                                <span class="text-4xl md:text-5xl font-bold text-yellow-400 group-hover:scale-110 transition-transform">4.9</span>
+                                <span
+                                    class="text-4xl md:text-5xl font-bold text-yellow-400 group-hover:scale-110 transition-transform">4.9</span>
                                 <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
                             </div>
                             <div class="text-gray-300 text-sm font-medium">Average Rating</div>
                             <div class="text-gray-500 text-xs mt-1">15,000+ Reviews</div>
                         </div>
                         <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition-transform">98%</div>
+                            <div
+                                class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2 group-hover:scale-110 transition-transform">
+                                98%</div>
                             <div class="text-gray-300 text-sm font-medium">On-Time Delivery</div>
                             <div class="text-gray-500 text-xs mt-1">Guaranteed</div>
                         </div>
                         <div class="group">
-                            <div class="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
+                            <div
+                                class="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">
+                                24/7</div>
                             <div class="text-gray-300 text-sm font-medium">Support Available</div>
                             <div class="text-gray-500 text-xs mt-1">365 Days/Year</div>
                         </div>
@@ -775,8 +833,11 @@
         <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-100/50 via-transparent to-purple-100/50"></div>
             <!-- Floating Gradient Orbs -->
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-300/30 to-indigo-300/30 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            <div
+                class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-300/30 to-indigo-300/30 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 1s;"></div>
         </div>
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -784,27 +845,35 @@
                 <!-- Glassmorphism Card with Enhanced Design -->
                 <div class="relative group">
                     <!-- Glow Effect -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500"></div>
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-all duration-500">
+                    </div>
 
                     <!-- Main Card -->
-                    <div class="relative backdrop-blur-xl bg-white/80 rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
+                    <div
+                        class="relative backdrop-blur-xl bg-white/80 rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
                         <!-- Decorative Top Border -->
                         <div class="h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500"></div>
 
                         <!-- Search Header with Gradient -->
                         <div class="relative px-6 sm:px-8 py-5 overflow-hidden">
                             <!-- Subtle Background Pattern -->
-                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-pink-500/5"></div>
-                            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.3) 1px, transparent 0); background-size: 32px 32px;"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-pink-500/5">
+                            </div>
+                            <div class="absolute inset-0 opacity-10"
+                                style="background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.3) 1px, transparent 0); background-size: 32px 32px;">
+                            </div>
 
                             <div class="relative">
                                 <div class="inline-block mb-2">
-                                    <span class="px-3 py-1 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 border border-purple-200/50 rounded-full text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600">
+                                    <span
+                                        class="px-3 py-1 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 border border-purple-200/50 rounded-full text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600">
                                         AI-Powered Matching
                                     </span>
                                 </div>
                                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-2">
-                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 hover:from-purple-700 hover:via-blue-700 hover:to-pink-700 transition-all duration-300">
+                                    <span
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 hover:from-purple-700 hover:via-blue-700 hover:to-pink-700 transition-all duration-300">
                                         Find Expert Help Now
                                     </span>
                                 </h2>
@@ -819,19 +888,27 @@
                             <form action="{{ route('assignments.create') }}" method="GET" class="space-y-4">
                                 <!-- Main Search Input with Gradient Border -->
                                 <div class="group">
-                                    <label for="subject-search" class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"></span>
+                                    <label for="subject-search"
+                                        class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
+                                        <span
+                                            class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"></span>
                                         What do you need help with?
                                     </label>
                                     <div class="relative">
                                         <!-- Gradient Border Effect -->
-                                        <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                                        <div
+                                            class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300">
+                                        </div>
 
                                         <div class="relative flex items-center">
-                                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                <div class="p-1.5 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-lg">
-                                                    <svg class="h-4 w-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            <div
+                                                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                                <div
+                                                    class="p-1.5 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-lg">
+                                                    <svg class="h-4 w-4 text-purple-600" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2.5"
                                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                                     </svg>
                                                 </div>
@@ -851,7 +928,8 @@
                                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                                     <!-- Assignment Type -->
                                     <div class="group">
-                                        <label for="assignment-type" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                        <label for="assignment-type"
+                                            class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
                                             Type
                                         </label>
                                         <div class="relative">
@@ -869,9 +947,12 @@
                                                 <option value="lab">Lab Report</option>
                                                 <option value="math">Math Problems</option>
                                             </select>
-                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                                <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            <div
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M19 9l-7 7-7-7"></path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -879,7 +960,8 @@
 
                                     <!-- Academic Level -->
                                     <div class="group">
-                                        <label for="academic-level" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                        <label for="academic-level"
+                                            class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
                                             Level
                                         </label>
                                         <div class="relative">
@@ -895,9 +977,12 @@
                                                 <option value="graduate">Graduate</option>
                                                 <option value="phd">Ph.D.</option>
                                             </select>
-                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                                <svg class="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            <div
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M19 9l-7 7-7-7"></path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -905,7 +990,8 @@
 
                                     <!-- Deadline -->
                                     <div class="group">
-                                        <label for="deadline" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                        <label for="deadline"
+                                            class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
                                             Deadline
                                         </label>
                                         <div class="relative">
@@ -921,9 +1007,12 @@
                                                 <option value="week">Within 1 week</option>
                                                 <option value="flexible">Flexible</option>
                                             </select>
-                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                                <svg class="h-5 w-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            <div
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-purple-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -931,7 +1020,8 @@
 
                                     <!-- Budget -->
                                     <div class="group">
-                                        <label for="price-range" class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
+                                        <label for="price-range"
+                                            class="block text-xs font-bold text-gray-600 mb-1.5 uppercase tracking-wider">
                                             Budget
                                         </label>
                                         <div class="relative">
@@ -947,9 +1037,12 @@
                                                 <option value="100-200">$100 - $200</option>
                                                 <option value="200+">$200+</option>
                                             </select>
-                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                                <svg class="h-5 w-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            <div
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="h-5 w-5 text-pink-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -963,30 +1056,41 @@
                                                font-black text-base transition-all duration-300
                                                hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">
                                         <!-- Animated Gradient Background -->
-                                        <div class="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 transition-all duration-300"></div>
-                                        <div class="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 transition-all duration-300">
+                                        </div>
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                        </div>
 
                                         <!-- Glow Effect -->
-                                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl opacity-50 blur-lg group-hover:opacity-75 transition-all duration-300"></div>
+                                        <div
+                                            class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl opacity-50 blur-lg group-hover:opacity-75 transition-all duration-300">
+                                        </div>
 
                                         <span class="relative flex items-center gap-2 text-white">
-                                            <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                                                </path>
                                             </svg>
                                             Find My Expert
                                         </span>
                                     </button>
 
-                                    <button type="button" onclick="window.location.href='{{ route('assignments.create') }}'"
+                                    <button type="button"
+                                        onclick="window.location.href='{{ route('assignments.create') }}'"
                                         class="group relative flex-1 sm:flex-none sm:px-8 py-3.5 overflow-hidden rounded-xl
                                                font-black text-base transition-all duration-300
                                                hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2
                                                border-2 border-gray-200 bg-white hover:border-purple-300">
-                                        <span class="relative flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                                            <svg class="w-5 h-5 text-purple-600 group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                    d="M12 4v16m8-8H4"></path>
+                                        <span
+                                            class="relative flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                                            <svg class="w-5 h-5 text-purple-600 group-hover:rotate-90 transition-transform duration-300"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2.5" d="M12 4v16m8-8H4"></path>
                                             </svg>
                                             <span class="text-gray-800">Submit Assignment</span>
                                         </span>
@@ -997,15 +1101,19 @@
                             <!-- Popular Subjects with Gradient Pills -->
                             <div class="mt-6 pt-5 border-t-2 border-gray-100">
                                 <div class="flex items-center justify-between mb-3">
-                                    <h3 class="text-xs font-black text-gray-700 uppercase tracking-wider flex items-center gap-2">
-                                        <span class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
+                                    <h3
+                                        class="text-xs font-black text-gray-700 uppercase tracking-wider flex items-center gap-2">
+                                        <span
+                                            class="w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></span>
                                         Popular Subjects
                                     </h3>
                                     <a href="{{ route('services.programming.index') }}"
                                         class="group text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 flex items-center gap-1">
                                         View All
-                                        <svg class="w-3.5 h-3.5 text-purple-600 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                                        <svg class="w-3.5 h-3.5 text-purple-600 group-hover:translate-x-1 transition-transform duration-300"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </a>
                                 </div>
@@ -1077,12 +1185,15 @@
                             </div>
 
                             <!-- Trust Badge with Gradient -->
-                            <div class="mt-5 p-3 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 border-2 border-green-200/50 rounded-xl">
+                            <div
+                                class="mt-5 p-3 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 border-2 border-green-200/50 rounded-xl">
                                 <div class="flex items-center justify-center gap-2 text-xs">
                                     <div class="flex items-center gap-1.5">
                                         <div class="relative">
-                                            <div class="absolute inset-0 bg-green-400 rounded-full blur-sm opacity-50"></div>
-                                            <svg class="relative w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <div class="absolute inset-0 bg-green-400 rounded-full blur-sm opacity-50">
+                                            </div>
+                                            <svg class="relative w-4 h-4 text-green-600" fill="currentColor"
+                                                viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                     clip-rule="evenodd" />
@@ -1107,20 +1218,27 @@
     <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         <!-- Decorative Background Elements -->
         <div class="absolute inset-0 opacity-30">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full blur-3xl"></div>
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full blur-3xl">
+            </div>
         </div>
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16 max-w-3xl mx-auto">
                 <div class="inline-block mb-4">
-                    <span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 rounded-full text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    <span
+                        class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 rounded-full text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                         Simple 4-Step Process
                     </span>
                 </div>
                 <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
-                    Your Journey to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Academic Success</span>
+                    Your Journey to <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Academic
+                        Success</span>
                 </h2>
                 <p class="text-lg text-gray-600">
                     From submission to completion, we've streamlined the entire process to get you the help you need, fast.
@@ -1132,8 +1250,11 @@
                 <!-- Desktop Timeline (Hidden on Mobile) -->
                 <div class="hidden lg:block relative">
                     <!-- Connecting Line -->
-                    <div class="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200"></div>
-                    <div class="absolute top-32 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" style="width: 0%; animation: progressLine 3s ease-out forwards;">
+                    <div
+                        class="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
+                    </div>
+                    <div class="absolute top-32 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse"
+                        style="width: 0%; animation: progressLine 3s ease-out forwards;">
                     </div>
 
                     <!-- Timeline Steps -->
@@ -1143,19 +1264,28 @@
                             <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-                                    <div class="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                            </path>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content Card -->
-                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 group-hover:-translate-y-2">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
-                                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP 1</span>
+                                    <span
+                                        class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP
+                                        1</span>
                                     <h3 class="text-xl font-black text-gray-900 mb-2">Submit Details</h3>
                                 </div>
                                 <p class="text-gray-600 text-sm text-center mb-4">
@@ -1164,7 +1294,9 @@
                                 <div class="flex justify-center">
                                     <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                clip-rule="evenodd"></path>
                                         </svg>
                                         2 minutes
                                     </div>
@@ -1177,19 +1309,28 @@
                             <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-                                    <div class="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                            </path>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content Card -->
-                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group-hover:-translate-y-2">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
-                                    <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 2</span>
+                                    <span
+                                        class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP
+                                        2</span>
                                     <h3 class="text-xl font-black text-gray-900 mb-2">Get Matched</h3>
                                 </div>
                                 <p class="text-gray-600 text-sm text-center mb-4">
@@ -1198,7 +1339,9 @@
                                 <div class="flex justify-center">
                                     <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                clip-rule="evenodd"></path>
                                         </svg>
                                         Under 5 minutes
                                     </div>
@@ -1211,19 +1354,28 @@
                             <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-                                    <div class="relative w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                            </path>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content Card -->
-                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-indigo-100 hover:border-indigo-300 group-hover:-translate-y-2">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-indigo-100 hover:border-indigo-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
-                                    <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP 3</span>
+                                    <span
+                                        class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP
+                                        3</span>
                                     <h3 class="text-xl font-black text-gray-900 mb-2">Expert Works</h3>
                                 </div>
                                 <p class="text-gray-600 text-sm text-center mb-4">
@@ -1232,7 +1384,9 @@
                                 <div class="flex justify-center">
                                     <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
                                         </svg>
                                         Live updates
                                     </div>
@@ -1245,19 +1399,27 @@
                             <!-- Checkpoint Circle -->
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-                                    <div class="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Content Card -->
-                            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group-hover:-translate-y-2">
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group-hover:-translate-y-2">
                                 <div class="text-center mb-3">
-                                    <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP 4</span>
+                                    <span
+                                        class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP
+                                        4</span>
                                     <h3 class="text-xl font-black text-gray-900 mb-2">Get Results</h3>
                                 </div>
                                 <p class="text-gray-600 text-sm text-center mb-4">
@@ -1266,7 +1428,9 @@
                                 <div class="flex justify-center">
                                     <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
                                         </svg>
                                         100% Satisfaction
                                     </div>
@@ -1282,9 +1446,13 @@
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
-                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
                                     </svg>
                                 </div>
                             </div>
@@ -1292,14 +1460,18 @@
                         </div>
                         <div class="flex-1 pb-8">
                             <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-blue-100">
-                                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP 1</span>
+                                <span
+                                    class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP
+                                    1</span>
                                 <h3 class="text-lg font-black text-gray-900 mb-2">Submit Details</h3>
                                 <p class="text-gray-600 text-sm mb-3">
                                     Fill out a quick form with your assignment requirements, deadline, and budget.
                                 </p>
                                 <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                     2 minutes
                                 </div>
@@ -1311,9 +1483,13 @@
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
-                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                        </path>
                                     </svg>
                                 </div>
                             </div>
@@ -1321,14 +1497,18 @@
                         </div>
                         <div class="flex-1 pb-8">
                             <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-purple-100">
-                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 2</span>
+                                <span
+                                    class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP
+                                    2</span>
                                 <h3 class="text-lg font-black text-gray-900 mb-2">Get Matched</h3>
                                 <p class="text-gray-600 text-sm mb-3">
                                     Our AI instantly matches you with the perfect expert based on subject and availability.
                                 </p>
                                 <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                     Under 5 minutes
                                 </div>
@@ -1340,9 +1520,13 @@
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
-                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                        </path>
                                     </svg>
                                 </div>
                             </div>
@@ -1350,14 +1534,18 @@
                         </div>
                         <div class="flex-1 pb-8">
                             <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-indigo-100">
-                                <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP 3</span>
+                                <span
+                                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP
+                                    3</span>
                                 <h3 class="text-lg font-black text-gray-900 mb-2">Expert Works</h3>
                                 <p class="text-gray-600 text-sm mb-3">
                                     Your matched tutor works on your assignment with regular progress updates.
                                 </p>
                                 <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                     Live updates
                                 </div>
@@ -1369,23 +1557,30 @@
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
                             <div class="relative">
-                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                             </div>
                         </div>
                         <div class="flex-1">
                             <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-green-100">
-                                <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP 4</span>
+                                <span
+                                    class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP
+                                    4</span>
                                 <h3 class="text-lg font-black text-gray-900 mb-2">Get Results</h3>
                                 <p class="text-gray-600 text-sm mb-3">
                                     Receive your completed assignment with unlimited revisions until you're satisfied.
                                 </p>
                                 <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                     100% Satisfaction
                                 </div>
@@ -1397,30 +1592,42 @@
 
             <!-- Bottom Trust Indicators -->
             <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-3">
+                <div
+                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-3">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </div>
                     <h4 class="font-black text-gray-900 mb-1">Verified Experts</h4>
                     <p class="text-sm text-gray-600">All tutors are vetted & qualified</p>
                 </div>
 
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-3">
+                <div
+                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-3">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </div>
                     <h4 class="font-black text-gray-900 mb-1">100% Confidential</h4>
                     <p class="text-sm text-gray-600">Your data is secure & private</p>
                 </div>
 
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-3">
+                <div
+                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-3">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </div>
                     <h4 class="font-black text-gray-900 mb-1">Money-Back Guarantee</h4>
@@ -1432,8 +1639,13 @@
 
     <style>
         @keyframes progressLine {
-            from { width: 0%; }
-            to { width: 100%; }
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
         }
     </style>
 
@@ -1568,9 +1780,11 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert Online Tutoring</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert
+                    Online Tutoring</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Whether you're a student or professional needing help with assignments or programming projects, our expert tutors are here to help you
+                    Whether you're a student or professional needing help with assignments or programming projects, our
+                    expert tutors are here to help you
                     succeed.
                 </p>
             </div>
@@ -1711,95 +1925,12 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 lg:py-28 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-        <!-- Decorative Background Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-white border border-indigo-200 px-4 py-2 rounded-full mb-6 shadow-sm">
-                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-indigo-900 font-semibold text-sm">Simple & Fast Process</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How It Works in 4 Easy Steps</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    From submission to completion - our streamlined process ensures you get the help you need quickly and efficiently
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Step 1 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-blue-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                        1
-                    </div>
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📝</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Submit Assignment Details</h3>
-                    <p class="text-gray-600 mb-4">Share your requirements, deadline, and upload any files. Our form takes just 2 minutes to complete.</p>
-                    <div class="text-sm text-blue-600 font-medium">Takes 2 minutes →</div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-purple-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-purple-500 to-pink-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                        2
-                    </div>
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Matched with Verified Expert</h3>
-                    <p class="text-gray-600 mb-4">We connect you instantly with a qualified tutor who specializes in your subject area.</p>
-                    <div class="text-sm text-purple-600 font-medium">Under 5 minutes →</div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-emerald-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-emerald-500 to-teal-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                        3
-                    </div>
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">✍️</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Delivers Quality Work</h3>
-                    <p class="text-gray-600 mb-4">Your tutor completes the assignment following all instructions with detailed explanations.</p>
-                    <div class="text-sm text-emerald-600 font-medium">On-time delivery →</div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border-2 border-gray-100 hover:border-orange-300">
-                    <div class="absolute -top-4 -left-4 bg-gradient-to-br from-orange-500 to-red-600 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                        4
-                    </div>
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🎓</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Review & Excel</h3>
-                    <p class="text-gray-600 mb-4">Receive your completed work with explanations. Free unlimited revisions until you're satisfied.</p>
-                    <div class="text-sm text-orange-600 font-medium">100% satisfaction →</div>
-                </div>
-            </div>
-
-            <div class="text-center mt-16">
-                <div class="inline-block bg-white rounded-2xl p-8 shadow-xl max-w-2xl">
-                    <p class="text-gray-600 mb-6 text-lg">Ready to get expert help? Start your journey to better grades today!</p>
-                    <a href="{{ route('assignments.create') }}"
-                        class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold px-10 py-5 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        Start Now - Get Free Consultation
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                    <p class="text-gray-500 text-sm mt-4">✓ No payment required to get started</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Why Choose Us Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why College Students Trust Assignment Help USA
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Students Trust Assignment Help
+                    USA
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Join thousands of USA students who have improved their grades with our expert assistance
@@ -1878,7 +2009,8 @@
                         <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
                     </div>
                     <p class="text-gray-700 mb-6 leading-relaxed italic">
-                        "I was struggling with my Python assignment and had only 2 days left. Assignment Help USA connected me
+                        "I was struggling with my Python assignment and had only 2 days left. Assignment Help USA connected
+                        me
                         with an amazing expert who not only completed it but also explained everything. Got an A+!"
                     </p>
                     <div class="flex items-center">
@@ -1965,21 +2097,25 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        <path
+                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                     </svg>
                     <span class="text-purple-900 font-semibold text-sm">All Academic Levels Covered</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expert Help at Every Academic Level</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    From high school to PhD programs, we provide tailored assistance for students at every stage of their academic journey
+                    From high school to PhD programs, we provide tailored assistance for students at every stage of their
+                    academic journey
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- High School -->
-                <div class="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
+                <div
+                    class="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎒</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">High School</h3>
                     <p class="text-gray-600 leading-relaxed text-center mb-4">
@@ -2006,7 +2142,8 @@
                 </div>
 
                 <!-- College/Undergraduate -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
+                <div
+                    class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">📚</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">College</h3>
                     <p class="text-gray-600 leading-relaxed text-center mb-4">
@@ -2033,7 +2170,8 @@
                 </div>
 
                 <!-- Masters/Graduate -->
-                <div class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-emerald-100 hover:border-emerald-300">
+                <div
+                    class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-emerald-100 hover:border-emerald-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎓</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Masters</h3>
                     <p class="text-gray-600 leading-relaxed text-center mb-4">
@@ -2060,7 +2198,8 @@
                 </div>
 
                 <!-- PhD/Doctoral -->
-                <div class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-300">
+                <div
+                    class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">👨‍🎓</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">PhD</h3>
                     <p class="text-gray-600 leading-relaxed text-center mb-4">
@@ -2095,7 +2234,8 @@
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                        <path
+                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                     </svg>
                     <span class="text-blue-900 font-semibold text-sm">50+ Subjects Available</span>
                 </div>
@@ -2107,70 +2247,80 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
                 <!-- Math -->
-                <a href="{{ route('services.assignment.index') }}?subject=math" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=math"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔢</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Mathematics</h3>
                     <p class="text-sm text-gray-500">Calculus, Algebra, Statistics</p>
                 </a>
 
                 <!-- Science -->
-                <a href="{{ route('services.assignment.index') }}?subject=science" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=science"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔬</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Science</h3>
                     <p class="text-sm text-gray-500">Physics, Chemistry, Biology</p>
                 </a>
 
                 <!-- English -->
-                <a href="{{ route('services.assignment.index') }}?subject=english" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=english"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📖</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">English</h3>
                     <p class="text-sm text-gray-500">Literature, Writing, Grammar</p>
                 </a>
 
                 <!-- Business -->
-                <a href="{{ route('services.assignment.index') }}?subject=business" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-yellow-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=business"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-yellow-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💼</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Business</h3>
                     <p class="text-sm text-gray-500">Management, Finance, Marketing</p>
                 </a>
 
                 <!-- Computer Science -->
-                <a href="{{ route('services.programming.index') }}" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-indigo-300 text-center">
+                <a href="{{ route('services.programming.index') }}"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-indigo-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💻</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Computer Science</h3>
                     <p class="text-sm text-gray-500">Programming, Algorithms</p>
                 </a>
 
                 <!-- History -->
-                <a href="{{ route('services.assignment.index') }}?subject=history" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-red-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=history"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-red-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏛️</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">History</h3>
                     <p class="text-sm text-gray-500">World, American, European</p>
                 </a>
 
                 <!-- Psychology -->
-                <a href="{{ route('services.assignment.index') }}?subject=psychology" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-pink-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=psychology"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-pink-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Psychology</h3>
                     <p class="text-sm text-gray-500">Clinical, Social, Cognitive</p>
                 </a>
 
                 <!-- Economics -->
-                <a href="{{ route('services.assignment.index') }}?subject=economics" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=economics"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Economics</h3>
                     <p class="text-sm text-gray-500">Micro, Macro, Econometrics</p>
                 </a>
 
                 <!-- Engineering -->
-                <a href="{{ route('services.assignment.index') }}?subject=engineering" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-orange-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=engineering"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-orange-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Engineering</h3>
                     <p class="text-sm text-gray-500">Mechanical, Civil, Electrical</p>
                 </a>
 
                 <!-- Nursing -->
-                <a href="{{ route('services.assignment.index') }}?subject=nursing" class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-rose-300 text-center">
+                <a href="{{ route('services.assignment.index') }}?subject=nursing"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-rose-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Nursing</h3>
                     <p class="text-sm text-gray-500">Healthcare, Patient Care</p>
@@ -2178,10 +2328,12 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="{{ route('services.assignment.index') }}" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a href="{{ route('services.assignment.index') }}"
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     View All Subjects
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
             </div>
@@ -2189,7 +2341,8 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
+    <section id="how-it-works"
+        class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
         <!-- Decorative Background Elements -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
@@ -2198,9 +2351,12 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-white font-semibold text-sm">Simple 4-Step Process</span>
                 </div>
@@ -2213,8 +2369,10 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Step 1 -->
                 <div class="relative">
-                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             1
                         </div>
                         <div class="text-6xl text-center mb-6 mt-4">📝</div>
@@ -2231,8 +2389,10 @@
 
                 <!-- Step 2 -->
                 <div class="relative">
-                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             2
                         </div>
                         <div class="text-6xl text-center mb-6 mt-4">🎯</div>
@@ -2249,8 +2409,10 @@
 
                 <!-- Step 3 -->
                 <div class="relative">
-                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             3
                         </div>
                         <div class="text-6xl text-center mb-6 mt-4">⚡</div>
@@ -2267,8 +2429,10 @@
 
                 <!-- Step 4 -->
                 <div class="relative">
-                    <div class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             4
                         </div>
                         <div class="text-6xl text-center mb-6 mt-4">✅</div>
@@ -2281,10 +2445,12 @@
             </div>
 
             <div class="text-center mt-16">
-                <a href="{{ route('assignments.create') }}" class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                <a href="{{ route('assignments.create') }}"
+                    class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     Get Started Now
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
             </div>
@@ -2295,9 +2461,12 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-emerald-900 font-semibold text-sm">Your Success is Guaranteed</span>
                 </div>
@@ -2309,15 +2478,19 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Plagiarism Free -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">100% Original Work</h3>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        Every assignment is written from scratch and checked through advanced plagiarism detection software. We provide detailed reports upon request.
+                        Every assignment is written from scratch and checked through advanced plagiarism detection software.
+                        We provide detailed reports upon request.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start">
@@ -2336,15 +2509,20 @@
                 </div>
 
                 <!-- Money Back Guarantee -->
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Money-Back Guarantee</h3>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        If we can't meet your requirements or you're not satisfied with the quality, we offer a full refund. No questions asked.
+                        If we can't meet your requirements or you're not satisfied with the quality, we offer a full refund.
+                        No questions asked.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start">
@@ -2363,15 +2541,20 @@
                 </div>
 
                 <!-- Unlimited Revisions -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Unlimited Revisions</h3>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        We'll revise your assignment as many times as needed until you're completely satisfied with the result.
+                        We'll revise your assignment as many times as needed until you're completely satisfied with the
+                        result.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start">
@@ -2390,10 +2573,13 @@
                 </div>
 
                 <!-- On-Time Delivery -->
-                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">On-Time Delivery</h3>
@@ -2417,10 +2603,14 @@
                 </div>
 
                 <!-- 24/7 Support -->
-                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
@@ -2444,10 +2634,14 @@
                 </div>
 
                 <!-- Confidentiality -->
-                <div class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-8 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <div
+                    class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-8 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">100% Confidential</h3>
@@ -2477,10 +2671,14 @@
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                        <path
+                            d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-green-900 font-semibold text-sm">Affordable & Transparent Pricing</span>
                 </div>
@@ -2492,7 +2690,8 @@
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
                 <!-- Assignment Help Pricing -->
-                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-2xl font-bold text-gray-900">Assignment Writing</h3>
                         <span class="text-5xl">📝</span>
@@ -2506,37 +2705,51 @@
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Essays, research papers, reports</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Proper formatting & citations</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Plagiarism report included</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Unlimited free revisions</span>
                         </li>
                     </ul>
-                    <a href="{{ route('assignments.create') }}" class="block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                    <a href="{{ route('assignments.create') }}"
+                        class="block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                         Order Now
                     </a>
                 </div>
 
                 <!-- Programming Help Pricing -->
-                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-2xl font-bold text-gray-900">Programming Help</h3>
                         <span class="text-5xl">💻</span>
@@ -2550,49 +2763,65 @@
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">25+ programming languages</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Well-commented code</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Debugging & optimization</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span class="text-gray-600">Video explanation available</span>
                         </li>
                     </ul>
-                    <a href="{{ route('assignments.create') }}" class="block text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                    <a href="{{ route('assignments.create') }}"
+                        class="block text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                         Get Help Now
                     </a>
                 </div>
             </div>
 
             <!-- Pricing Factors -->
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-5xl mx-auto border border-purple-100">
+            <div
+                class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-5xl mx-auto border border-purple-100">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Affects the Price?</h3>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="text-center">
                         <div class="text-4xl mb-3">📅</div>
                         <h4 class="font-bold text-gray-900 mb-2">Deadline</h4>
-                        <p class="text-sm text-gray-600">Longer deadlines cost less. Rush orders available with express pricing.</p>
+                        <p class="text-sm text-gray-600">Longer deadlines cost less. Rush orders available with express
+                            pricing.</p>
                     </div>
                     <div class="text-center">
                         <div class="text-4xl mb-3">📏</div>
                         <h4 class="font-bold text-gray-900 mb-2">Complexity</h4>
-                        <p class="text-sm text-gray-600">Advanced topics and specialized requirements may affect pricing.</p>
+                        <p class="text-sm text-gray-600">Advanced topics and specialized requirements may affect pricing.
+                        </p>
                     </div>
                     <div class="text-center">
                         <div class="text-4xl mb-3">📄</div>
@@ -2603,9 +2832,12 @@
                 <div class="mt-8 text-center">
                     <p class="text-gray-700 font-semibold mb-3">🎁 Special Offers:</p>
                     <div class="flex flex-wrap gap-3 justify-center text-sm">
-                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">15% off for new customers</span>
-                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">20% off for returning clients</span>
-                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">Bulk order discounts</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">15% off for new
+                            customers</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">20% off for returning
+                            clients</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">Bulk order
+                            discounts</span>
                     </div>
                 </div>
             </div>
@@ -2616,9 +2848,12 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-indigo-900 font-semibold text-sm">Comprehensive Subject Coverage</span>
                 </div>
@@ -2630,98 +2865,126 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 <!-- STEM Subjects -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🔬</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">STEM Fields</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Mathematics & Statistics</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Mathematics & Statistics
+                        </li>
                         <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Physics & Chemistry</li>
-                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Biology & Life Sciences</li>
-                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Environmental Science</li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Biology & Life Sciences
+                        </li>
+                        <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Environmental Science
+                        </li>
                         <li class="flex items-center"><span class="text-blue-600 mr-2">•</span> Astronomy & Geology</li>
                     </ul>
                 </div>
 
                 <!-- Business & Economics -->
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">💼</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Business & Economics</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Business Management</li>
-                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Accounting & Finance</li>
-                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Marketing & Sales</li>
-                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Economics & Trade</li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Business Management
+                        </li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Accounting & Finance
+                        </li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Marketing & Sales
+                        </li>
+                        <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Economics & Trade
+                        </li>
                         <li class="flex items-center"><span class="text-emerald-600 mr-2">•</span> Entrepreneurship</li>
                     </ul>
                 </div>
 
                 <!-- Humanities -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">📚</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Humanities</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> English & Literature</li>
-                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> History & Philosophy</li>
-                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Languages & Linguistics</li>
-                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Art & Music Theory</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> English & Literature
+                        </li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> History & Philosophy
+                        </li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Languages &
+                            Linguistics</li>
+                        <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Art & Music Theory
+                        </li>
                         <li class="flex items-center"><span class="text-purple-600 mr-2">•</span> Cultural Studies</li>
                     </ul>
                 </div>
 
                 <!-- Social Sciences -->
-                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🧠</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Social Sciences</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Psychology & Sociology</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Psychology & Sociology
+                        </li>
                         <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Political Science</li>
                         <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Anthropology</li>
-                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Education & Pedagogy</li>
+                        <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Education & Pedagogy
+                        </li>
                         <li class="flex items-center"><span class="text-amber-600 mr-2">•</span> Social Work</li>
                     </ul>
                 </div>
 
                 <!-- Engineering -->
-                <div class="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">⚙️</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Engineering</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Mechanical Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Mechanical Engineering
+                        </li>
                         <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Civil Engineering</li>
-                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Electrical Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Electrical Engineering
+                        </li>
                         <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Chemical Engineering</li>
-                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Aerospace Engineering</li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2">•</span> Aerospace Engineering
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Computer Science & IT -->
-                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">💻</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Computer Science</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Programming & Coding</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Programming & Coding
+                        </li>
                         <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Data Science & AI</li>
                         <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Web Development</li>
                         <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Cybersecurity</li>
-                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Database Management</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">•</span> Database Management
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Health Sciences -->
-                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 border border-pink-100 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 border border-pink-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🏥</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Health Sciences</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nursing & Healthcare</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nursing & Healthcare
+                        </li>
                         <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Medicine & Pharmacy</li>
                         <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Public Health</li>
-                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nutrition & Dietetics</li>
+                        <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Nutrition & Dietetics
+                        </li>
                         <li class="flex items-center"><span class="text-pink-600 mr-2">•</span> Physical Therapy</li>
                     </ul>
                 </div>
 
                 <!-- Law & Legal Studies -->
-                <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">⚖️</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Law & Legal Studies</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
@@ -2742,7 +3005,9 @@
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-red-900 font-semibold text-sm">Serving Students Across USA</span>
                 </div>
@@ -2856,7 +3121,8 @@
 
                 <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
                     <h4 class="text-2xl font-bold mb-3">🇺🇸 All 50 States Covered</h4>
-                    <p class="text-lg mb-4">No matter where you are in the United States, our expert help is just a click away</p>
+                    <p class="text-lg mb-4">No matter where you are in the United States, our expert help is just a click
+                        away</p>
                     <div class="flex flex-wrap gap-3 justify-center text-sm">
                         <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Online Platform</span>
                         <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">24/7 Available</span>
@@ -2871,10 +3137,13 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                        <path fill-rule="evenodd"
+                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-yellow-900 font-semibold text-sm">All Writing Types</span>
                 </div>
@@ -2886,10 +3155,12 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 <!-- Essays -->
-                <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-4xl">✍️</div>
-                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Popular</span>
+                        <span
+                            class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Popular</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Essays & Papers</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
@@ -2902,52 +3173,65 @@
                 </div>
 
                 <!-- Research Papers -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-4xl">📄</div>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Advanced</span>
+                        <span
+                            class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Advanced</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Research Papers</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Literature reviews</li>
                         <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Analytical papers</li>
-                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Experimental reports</li>
-                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Annotated bibliographies</li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Experimental reports
+                        </li>
+                        <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Annotated
+                            bibliographies</li>
                         <li class="flex items-start"><span class="text-purple-600 mr-2">•</span> Research proposals</li>
                     </ul>
                 </div>
 
                 <!-- Thesis & Dissertation -->
-                <div class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="text-4xl">🎓</div>
-                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Graduate</span>
+                        <span
+                            class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Graduate</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Thesis & Dissertation</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Master's thesis</li>
                         <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> PhD dissertation</li>
-                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Dissertation chapters</li>
-                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Methodology design</li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Dissertation chapters
+                        </li>
+                        <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Methodology design
+                        </li>
                         <li class="flex items-start"><span class="text-emerald-600 mr-2">•</span> Data analysis</li>
                     </ul>
                 </div>
 
                 <!-- Case Studies -->
-                <div class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">📊</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Case Studies</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Business case studies</li>
-                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Medical case studies</li>
-                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Psychology case studies</li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Business case studies
+                        </li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Medical case studies
+                        </li>
+                        <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Psychology case studies
+                        </li>
                         <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Legal case analysis</li>
                         <li class="flex items-start"><span class="text-amber-600 mr-2">•</span> Social work cases</li>
                     </ul>
                 </div>
 
                 <!-- Lab Reports -->
-                <div class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">🔬</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Lab Reports</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
@@ -2955,12 +3239,14 @@
                         <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Physics experiments</li>
                         <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Biology practicals</li>
                         <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Engineering labs</li>
-                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Scientific documentation</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">•</span> Scientific documentation
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Other Academic Work -->
-                <div class="group bg-gradient-to-br from-rose-50 to-red-50 rounded-xl p-6 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
+                <div
+                    class="group bg-gradient-to-br from-rose-50 to-red-50 rounded-xl p-6 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">📋</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Other Academic Work</h3>
                     <ul class="space-y-2 text-sm text-gray-600">
@@ -2974,7 +3260,10 @@
             </div>
 
             <div class="text-center mt-12">
-                <p class="text-gray-600 mb-6">Can't find your assignment type? <a href="{{ route('assignments.create') }}" class="text-blue-600 hover:text-blue-700 font-semibold">Contact us</a> - we handle custom requests too!</p>
+                <p class="text-gray-600 mb-6">Can't find your assignment type? <a
+                        href="{{ route('assignments.create') }}"
+                        class="text-blue-600 hover:text-blue-700 font-semibold">Contact us</a> - we handle custom requests
+                    too!</p>
             </div>
         </div>
     </section>
@@ -2989,9 +3278,12 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd"
+                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
                     </svg>
                     <span class="text-white font-semibold text-sm">Your Security is Our Priority</span>
                 </div>
@@ -3003,7 +3295,8 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
                 <!-- SSL Encryption -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🔒</div>
                     <h3 class="text-xl font-bold mb-3">SSL Encryption</h3>
                     <p class="text-white/80 text-sm leading-relaxed">
@@ -3012,7 +3305,8 @@
                 </div>
 
                 <!-- Secure Payments -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">💳</div>
                     <h3 class="text-xl font-bold mb-3">Secure Payments</h3>
                     <p class="text-white/80 text-sm leading-relaxed">
@@ -3021,7 +3315,8 @@
                 </div>
 
                 <!-- Privacy Protection -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🛡️</div>
                     <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
                     <p class="text-white/80 text-sm leading-relaxed">
@@ -3030,7 +3325,8 @@
                 </div>
 
                 <!-- Data Security -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🗄️</div>
                     <h3 class="text-xl font-bold mb-3">Data Security</h3>
                     <p class="text-white/80 text-sm leading-relaxed">
@@ -3085,7 +3381,8 @@
                 <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Is Assignment Help USA legit and safe to use?</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA. We use
+                        Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA.
+                        We use
                         secure payment processing, encrypted communications, and guarantee 100% confidentiality.
                     </p>
                 </div>
