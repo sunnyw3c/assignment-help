@@ -11,7 +11,6 @@
     academic help USA')
 
 @section('content')
-    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -35,15 +34,11 @@
     }
     </script>
 
-    <!-- Hero Section - Professional Corporate Design -->
     <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden" itemscope
         itemtype="https://schema.org/Service">
-        <!-- Subtle Overlay Pattern -->
         <div class="absolute inset-0 bg-slate-900/50 bg-grid-pattern-corporate"></div>
 
-        <!-- Decorative Floating Elements - Educational Illustrations -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-15">
-            <!-- Top Left - Open Book Illustration -->
             <div class="absolute top-20 left-10 hidden lg:block animate-float-slow">
                 <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M60 30 L60 90 M60 30 Q45 35 30 35 L30 90 Q45 85 60 90 M60 30 Q75 35 90 35 L90 90 Q75 85 60 90"
@@ -61,7 +56,6 @@
                 </svg>
             </div>
 
-            <!-- Top Right - Code Terminal Window -->
             <div class="absolute top-32 right-16 hidden lg:block animate-float-slower">
                 <svg class="w-40 h-40" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="20" y="30" width="100" height="80" rx="4" fill="#1E293B" opacity="0.7" />
@@ -83,7 +77,6 @@
                 </svg>
             </div>
 
-            <!-- Bottom Left - Notepad with Pencil -->
             <div class="absolute bottom-32 left-20 hidden lg:block animate-float-slow-delayed">
                 <svg class="w-36 h-36" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="30" y="25" width="70" height="90" rx="3" fill="#F59E0B" opacity="0.7" />
@@ -104,7 +97,6 @@
                 </svg>
             </div>
 
-            <!-- Bottom Right - Graduation Cap with Diploma -->
             <div class="absolute bottom-24 right-24 hidden lg:block animate-float-slower-delayed">
                 <svg class="w-36 h-36" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M65 40 L30 55 L30 70 L65 85 L100 70 L100 55 Z" fill="#8B5CF6" opacity="0.7" />
@@ -116,7 +108,6 @@
                 </svg>
             </div>
 
-            <!-- Middle Right - Calculator -->
             <div class="absolute top-1/2 right-8 hidden xl:block animate-float-slow">
                 <svg class="w-28 h-28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="20" y="10" width="60" height="80" rx="4" fill="#475569" opacity="0.7" />
@@ -135,7 +126,6 @@
                 </svg>
             </div>
 
-            <!-- Middle Left - Light Bulb with Rays -->
             <div class="absolute top-1/2 left-8 hidden xl:block animate-float-slower">
                 <svg class="w-28 h-28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="45" r="15" fill="#FCD34D" opacity="0.7" />
@@ -155,11 +145,9 @@
             </div>
         </div>
 
-        <!-- Main Content Container - Centered Single Column -->
         <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
             <div class="max-w-5xl mx-auto text-center">
 
-                <!-- Trust Badge Row - Professional -->
                 <div class="flex items-center justify-center gap-4 flex-wrap mb-12">
                     <div
                         class="flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-slate-700 hover:border-slate-600 transition-all">
@@ -185,7 +173,6 @@
                     </div>
                 </div>
 
-                <!-- Main Headline - SEO-Friendly & Inclusive -->
                 <div class="space-y-6 mb-12">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight px-4"
                         itemprop="name">
@@ -195,7 +182,6 @@
                         </span>
                     </h1>
 
-                    <!-- Subheadline -->
                     <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl mx-auto px-4"
                         itemprop="description">
                         Get personalized support from verified tutors in Python, Java, C++, essay writing, math, science,
@@ -203,11 +189,9 @@
                     </p>
                 </div>
 
-                <!-- Subject Search Box - Wyzant Style -->
                 <div class="max-w-3xl mx-auto mb-12 px-4">
                     <form action="{{ route('assignments.create') }}" method="GET" class="relative">
                         <div class="relative group">
-                            <!-- Search Icon -->
                             <div class="absolute inset-y-0 left-0 pl-4 sm:pl-6 flex items-center pointer-events-none">
                                 <svg class="h-5 w-5 sm:h-6 sm:w-6 text-slate-400 group-focus-within:text-blue-500 transition-colors"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,12 +200,10 @@
                                 </svg>
                             </div>
 
-                            <!-- Search Input -->
                             <input type="text" name="subject" id="hero-subject-search"
                                 class="block w-full pl-12 sm:pl-16 pr-4 sm:pr-32 py-4 sm:py-5 text-base sm:text-lg text-gray-900 bg-white border-2 border-slate-600 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder-slate-400 shadow-2xl"
                                 placeholder="What do you need help with?" autocomplete="off" />
 
-                            <!-- Search Button - Desktop -->
                             <div class="hidden sm:flex absolute inset-y-0 right-0 items-center pr-3">
                                 <button type="submit"
                                     class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -230,7 +212,6 @@
                             </div>
                         </div>
 
-                        <!-- Search Button - Mobile (Below Input) -->
                         <div class="sm:hidden mt-3">
                             <button type="submit"
                                 class="w-full px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
@@ -242,7 +223,6 @@
                             </button>
                         </div>
 
-                        <!-- Popular Subjects - Quick Links -->
                         <div class="mt-6">
                             <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
                                 <span
@@ -276,38 +256,6 @@
                     </form>
                 </div>
 
-                <!-- Secondary CTA - Corporate Style -->
-                {{-- <div class="flex items-center justify-center gap-4 mb-12 px-4">
-                    <a href="#how-it-works"
-                        class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-slate-800/60 hover:bg-slate-700 text-white font-medium text-base rounded-lg border border-slate-600 hover:border-slate-500 transition-all duration-300">
-                        How It Works
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </a>
-                </div> --}}
-
-                <!-- Trust Statistics - Corporate Grid -->
-                {{-- <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 py-10 mb-8 border-y border-slate-700/50 px-4">
-                    <div class="text-center">
-                        <div class="text-white font-bold text-3xl lg:text-4xl mb-2">15M+</div>
-                        <div class="text-slate-400 text-xs lg:text-sm font-medium">Projects Completed</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-white font-bold text-3xl lg:text-4xl mb-2">2,500+</div>
-                        <div class="text-slate-400 text-xs lg:text-sm font-medium">Expert Tutors</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-white font-bold text-3xl lg:text-4xl mb-2">98%</div>
-                        <div class="text-slate-400 text-xs lg:text-sm font-medium">Success Rate</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-white font-bold text-3xl lg:text-4xl mb-2">24/7</div>
-                        <div class="text-slate-400 text-xs lg:text-sm font-medium">Support Available</div>
-                    </div>
-                </div> --}}
-
-                <!-- Professional Guarantee Badge -->
                 <div
                     class="inline-flex items-center gap-3 bg-emerald-500/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-emerald-500/30 hover:border-emerald-500/50 transition-all">
                     <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -322,15 +270,12 @@
             </div>
         </div>
 
-        <!-- Bottom Separator -->
         <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent">
         </div>
     </section>
 
-    <!-- Our Services - Visual Elements Section -->
     <section class="relative py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50 to-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header with Trust Badge -->
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
                     <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -346,25 +291,20 @@
                 </p>
             </div>
 
-            <!-- Visual Elements - Books, Code & Study Materials with Custom Illustrations -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
-                <!-- Books/Reading Illustration -->
                 <div
                     class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>
                     <div class="relative">
-                        <!-- Book Stack Illustration -->
                         <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
                             viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Book 1 (Bottom) -->
                             <rect x="40" y="130" width="120" height="20" rx="2" fill="#3B82F6"
                                 opacity="0.9" />
                             <rect x="40" y="130" width="120" height="4" rx="1" fill="#2563EB" />
                             <path d="M40 132 L160 132 L160 130 L40 130 Z" fill="#60A5FA" opacity="0.6" />
 
-                            <!-- Book 2 (Middle) -->
                             <rect x="45" y="105" width="110" height="25" rx="2" fill="#10B981"
                                 opacity="0.9" />
                             <rect x="45" y="105" width="110" height="5" rx="1" fill="#059669" />
@@ -372,7 +312,6 @@
                             <rect x="75" y="112" width="50" height="12" rx="1" fill="#064E3B"
                                 opacity="0.4" />
 
-                            <!-- Book 3 (Top) -->
                             <rect x="50" y="80" width="100" height="25" rx="2" fill="#8B5CF6"
                                 opacity="0.9" />
                             <rect x="50" y="80" width="100" height="5" rx="1" fill="#7C3AED" />
@@ -382,10 +321,8 @@
                             <line x1="70" y1="93" x2="120" y2="93" stroke="#F3F4F6"
                                 stroke-width="2" opacity="0.5" />
 
-                            <!-- Bookmark -->
                             <path d="M120 80 L120 55 L128 62 L136 55 L136 80" fill="#F59E0B" opacity="0.95" />
 
-                            <!-- Reading Icon -->
                             <circle cx="100" cy="50" r="18" fill="#1E293B" opacity="0.15" />
                             <path d="M95 45 L95 55 M105 45 L105 55" stroke="#3B82F6" stroke-width="2.5"
                                 stroke-linecap="round" />
@@ -425,27 +362,22 @@
                     </div>
                 </div>
 
-                <!-- Code/Programming Illustration -->
                 <div
                     class="group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-10 border-2 border-emerald-100 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>
                     <div class="relative">
-                        <!-- Code Editor Illustration -->
                         <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
                             viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Monitor/Screen -->
                             <rect x="30" y="50" width="140" height="100" rx="4" fill="#1E293B"
                                 stroke="#10B981" stroke-width="2" />
 
-                            <!-- Screen Header Bar -->
                             <rect x="30" y="50" width="140" height="15" rx="4" fill="#059669" />
                             <circle cx="42" cy="57.5" r="3" fill="#EF4444" />
                             <circle cx="52" cy="57.5" r="3" fill="#F59E0B" />
                             <circle cx="62" cy="57.5" r="3" fill="#10B981" />
 
-                            <!-- Code Lines -->
                             <line x1="40" y1="75" x2="70" y2="75" stroke="#8B5CF6"
                                 stroke-width="2" stroke-linecap="round" />
                             <line x1="75" y1="75" x2="120" y2="75" stroke="#60A5FA"
@@ -467,19 +399,16 @@
                             <line x1="100" y1="115" x2="130" y2="115" stroke="#60A5FA"
                                 stroke-width="2" stroke-linecap="round" />
 
-                            <!-- Code Brackets -->
                             <path d="M45 70 L40 75 L45 80" stroke="#34D399" stroke-width="2" fill="none"
                                 stroke-linecap="round" />
                             <path d="M155 95 L160 100 L155 105" stroke="#34D399" stroke-width="2" fill="none"
                                 stroke-linecap="round" />
 
-                            <!-- Cursor Blink -->
                             <rect x="135" y="113" width="2" height="6" fill="#10B981">
                                 <animate attributeName="opacity" values="1;0;1" dur="1.5s"
                                     repeatCount="indefinite" />
                             </rect>
 
-                            <!-- Monitor Stand -->
                             <rect x="85" y="150" width="30" height="8" rx="2" fill="#475569" />
                             <rect x="70" y="158" width="60" height="4" rx="2" fill="#334155" />
                         </svg>
@@ -517,22 +446,18 @@
                     </div>
                 </div>
 
-                <!-- Study Materials/Learning Illustration -->
                 <div
                     class="group relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-100 hover:border-amber-300 transition-all duration-300 hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>
                     <div class="relative">
-                        <!-- Notebook & Pen Illustration -->
                         <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
                             viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Notebook -->
                             <rect x="50" y="60" width="100" height="120" rx="3" fill="#F59E0B"
                                 opacity="0.95" />
                             <rect x="50" y="60" width="100" height="15" rx="3" fill="#D97706" />
 
-                            <!-- Spiral Binding -->
                             <circle cx="60" cy="67.5" r="2.5" fill="#78350F" />
                             <circle cx="75" cy="67.5" r="2.5" fill="#78350F" />
                             <circle cx="90" cy="67.5" r="2.5" fill="#78350F" />
@@ -540,10 +465,8 @@
                             <circle cx="120" cy="67.5" r="2.5" fill="#78350F" />
                             <circle cx="135" cy="67.5" r="2.5" fill="#78350F" />
 
-                            <!-- Notebook Pages -->
                             <rect x="55" y="80" width="90" height="95" rx="2" fill="#FEF3C7" />
 
-                            <!-- Lines on Page -->
                             <line x1="65" y1="95" x2="135" y2="95" stroke="#D97706"
                                 stroke-width="1" opacity="0.4" />
                             <line x1="65" y1="105" x2="135" y2="105" stroke="#D97706"
@@ -561,20 +484,17 @@
                             <line x1="65" y1="165" x2="110" y2="165" stroke="#D97706"
                                 stroke-width="1" opacity="0.4" />
 
-                            <!-- Handwriting simulation -->
                             <path d="M70 95 Q75 93 80 95 Q85 97 90 95" stroke="#1E40AF" stroke-width="1.5" fill="none"
                                 stroke-linecap="round" />
                             <path d="M70 105 Q80 103 90 105 Q100 107 110 105" stroke="#1E40AF" stroke-width="1.5"
                                 fill="none" stroke-linecap="round" />
 
-                            <!-- Pen -->
                             <rect x="120" y="130" width="50" height="8" rx="4" fill="#1E293B"
                                 transform="rotate(-45 145 134)" />
                             <rect x="155" y="145" width="15" height="6" rx="3" fill="#3B82F6"
                                 transform="rotate(-45 162.5 148)" />
                             <polygon points="168,152 171,155 168,158" fill="#1E293B" opacity="0.8" />
 
-                            <!-- Graduation Cap Icon -->
                             <circle cx="100" cy="50" r="15" fill="#1E293B" opacity="0.15" />
                             <path d="M100 40 L90 45 L90 50 L100 55 L110 50 L110 45 Z" fill="#FCD34D" />
                             <rect x="98" y="38" width="4" height="8" fill="#78350F" />
@@ -616,7 +536,6 @@
                 </div>
             </div>
 
-            <!-- Bottom CTA with Trust Signals -->
             <div class="text-center mt-20">
                 <div
                     class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
@@ -665,10 +584,8 @@
         </div>
     </section>
 
-    <!-- Why Choose Us - Key Value Points Section -->
     <section class="relative py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header with Trust Badge -->
             <div class="text-center mb-16">
                 <div
                     class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
@@ -685,9 +602,7 @@
                 </p>
             </div>
 
-            <!-- Key Value Points Grid -->
             <div class="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
-                <!-- Verified Experts -->
                 <div
                     class="group relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
                     <div
@@ -718,7 +633,6 @@
                     </div>
                 </div>
 
-                <!-- On-Time Delivery -->
                 <div
                     class="group relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
                     <div
@@ -748,7 +662,6 @@
                     </div>
                 </div>
 
-                <!-- 100% Confidential -->
                 <div
                     class="group relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl border-2 border-gray-100 hover:border-amber-300 transition-all duration-300">
                     <div
