@@ -2020,9 +2020,9 @@
                 </div>
 
                 <!-- Calculator -->
-                <div class="relative">
+                {{-- <div class="relative">
                     <livewire:budget-calculator />
-                </div>
+                </div> --}}
             </div>
 
             <!-- Bottom Stats Section -->
@@ -2233,11 +2233,11 @@
     </section>
 
     <!-- Assignment Search Filter Section -->
-    <section class="py-20 bg-white">
+    {{-- <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <livewire:assignment-search-filter />
         </div>
-    </section>
+    </section> --}}
 
     <!-- How It Works Section -->
     <section id="how-it-works"
