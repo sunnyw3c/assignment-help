@@ -32,26 +32,26 @@ Route::get('/programming-languages/{slug}', [LanguageController::class, 'show'])
 Route::get('/services', [AllServicesController::class, 'index'])->name('services.index');
 
 // Programming Services (SEO-friendly hierarchical URLs)
-Route::get('/services/programming', [ServiceController::class, 'index'])->name('services.programming.index');
-Route::get('/services/programming/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
+Route::get('/programming', [ServiceController::class, 'index'])->name('services.programming.index');
+Route::get('/programming/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
 
 // Assignment Help Services (SEO-friendly hierarchical URLs)
-Route::get('/services/assignment', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
-Route::get('/services/assignment/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
-Route::post('/services/assignment/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
+Route::get('/assignment', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
+Route::get('/assignment/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
+Route::post('/assignment/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
 
 
 // Individual Assignment Service Routes
-Route::get('/services/essay-writing', [EssayWritingController::class, 'index'])->name('services.essay-writing.index');
-Route::get('/services/essay-writing/{slug}', [EssayWritingController::class, 'show'])->name('services.essay-writing.show');
-Route::get('/services/research-paper', [ResearchPaperController::class, 'index'])->name('services.research-paper.index');
-Route::get('/services/case-study', [CaseStudyController::class, 'index'])->name('services.case-study.index');
-Route::get('/services/homework-help', [HomeworkHelpController::class, 'index'])->name('services.homework-help.index');
-Route::get('/services/lab-report', [LabReportController::class, 'index'])->name('services.lab-report.index');
-Route::get('/services/literature-review', [LiteratureReviewController::class, 'index'])->name('services.literature-review.index');
-Route::get('/services/presentation-design', [PresentationDesignController::class, 'index'])->name('services.presentation-design.index');
-Route::get('/services/proofreading-editing', [ProofreadingEditingController::class, 'index'])->name('services.proofreading-editing.index');
-Route::get('/services/thesis-dissertation', [ThesisDissertationController::class, 'index'])->name('services.thesis-dissertation.index');
+Route::get('/essay-writing', [EssayWritingController::class, 'index'])->name('services.essay-writing.index');
+Route::get('/essay-writing/{slug}', [EssayWritingController::class, 'show'])->name('services.essay-writing.show');
+Route::get('/research-paper', [ResearchPaperController::class, 'index'])->name('services.research-paper.index');
+Route::get('/case-study', [CaseStudyController::class, 'index'])->name('services.case-study.index');
+Route::get('/homework-help', [HomeworkHelpController::class, 'index'])->name('services.homework-help.index');
+Route::get('/lab-report', [LabReportController::class, 'index'])->name('services.lab-report.index');
+Route::get('/literature-review', [LiteratureReviewController::class, 'index'])->name('services.literature-review.index');
+Route::get('/presentation-design', [PresentationDesignController::class, 'index'])->name('services.presentation-design.index');
+Route::get('/proofreading-editing', [ProofreadingEditingController::class, 'index'])->name('services.proofreading-editing.index');
+Route::get('/thesis-dissertation', [ThesisDissertationController::class, 'index'])->name('services.thesis-dissertation.index');
 
 
 Route::get('/how-it-works', [HowItWorksController::class, 'index'])->name('how-it-works');

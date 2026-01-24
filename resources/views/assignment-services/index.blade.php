@@ -218,6 +218,24 @@
         </div>
     </header>
 
+    <!-- Budget Calculator Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Calculate Your Assignment Cost</h2>
+                <p class="text-xl text-blue-200">Get an instant price estimate tailored to your needs</p>
+            </div>
+            <livewire:budget-calculator />
+        </div>
+    </section>
+
+    <!-- Assignment Search Filter Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <livewire:assignment-search-filter />
+        </div>
+    </section>
+
     <!-- Assignment Services Showcase -->
     <section id="services" class="py-24 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 relative overflow-hidden" role="main" aria-labelledby="services-heading">
         <!-- Background Elements -->

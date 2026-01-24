@@ -1591,7 +1591,7 @@
             </div>
 
             <!-- Bottom Trust Indicators -->
-            <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {{-- <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div
                     class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -1633,7 +1633,7 @@
                     <h4 class="font-black text-gray-900 mb-1">Money-Back Guarantee</h4>
                     <p class="text-sm text-gray-600">Not satisfied? Get a full refund</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -2228,6 +2228,190 @@
         </div>
     </section>
 
+    <!-- Budget Calculator Section -->
+    <section class="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Gradient Orbs -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 2s;"></div>
+
+            <!-- Floating Icons -->
+            <div class="absolute top-20 left-10 opacity-10 animate-float-slow">
+                <div class="text-6xl">💰</div>
+            </div>
+            <div class="absolute top-40 right-20 opacity-10 animate-float-delayed">
+                <div class="text-6xl">📊</div>
+            </div>
+            <div class="absolute bottom-40 left-20 opacity-10 animate-float">
+                <div class="text-6xl">✨</div>
+            </div>
+            <div class="absolute bottom-20 right-40 opacity-10 animate-float-slow" style="animation-delay: 1.5s;">
+                <div class="text-6xl">🎯</div>
+            </div>
+
+            <!-- Grid Pattern -->
+            <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center mb-16">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full mb-6 animate-fade-in-up">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-white font-bold text-sm">Live Pricing Calculator</span>
+                </div>
+
+                <!-- Main Title -->
+                <h2
+                    class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
+                    Get Your <span
+                        class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Instant
+                        Quote</span>
+                </h2>
+
+                <!-- Subtitle -->
+                <p
+                    class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-400">
+                    Calculate your assignment cost in real-time with our transparent pricing calculator
+                </p>
+
+                <!-- Trust Indicators -->
+                <div
+                    class="flex flex-wrap items-center justify-center gap-6 md:gap-8 animate-fade-in-up animation-delay-600">
+                    <div class="flex items-center gap-2 text-white/90">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-semibold text-sm md:text-base">No Hidden Fees</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-white/90">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-semibold text-sm md:text-base">100% Transparent</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-white/90">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="font-semibold text-sm md:text-base">Instant Results</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator Component with Decorative Frame -->
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Decorative Corner Elements -->
+                <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-cyan-400/50 rounded-tl-3xl">
+                </div>
+                <div class="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-purple-400/50 rounded-tr-3xl">
+                </div>
+                <div class="absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-blue-400/50 rounded-bl-3xl">
+                </div>
+                <div
+                    class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-indigo-400/50 rounded-br-3xl">
+                </div>
+
+                <!-- Glow Effect -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-xl">
+                </div>
+
+                <!-- Calculator -->
+                <div class="relative">
+                    <livewire:budget-calculator />
+                </div>
+            </div>
+
+            <!-- Bottom Stats Section -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <!-- Stat 1 -->
+                <div
+                    class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
+                    <div class="text-3xl font-bold text-white mb-1">
+                        < 30 Sec</div>
+                            <div class="text-sm text-blue-200">Instant Quote</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div
+                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💯</div>
+                        <div class="text-3xl font-bold text-white mb-1">100%</div>
+                        <div class="text-sm text-blue-200">Price Match</div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div
+                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎓</div>
+                        <div class="text-3xl font-bold text-white mb-1">50+</div>
+                        <div class="text-sm text-blue-200">Subjects</div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div
+                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💰</div>
+                        <div class="text-3xl font-bold text-white mb-1">20%</div>
+                        <div class="text-sm text-blue-200">Early Bird Discount</div>
+                    </div>
+                </div>
+
+                <!-- Additional CTA -->
+                <div class="mt-12 text-center">
+                    <p class="text-white/80 mb-4">Need help choosing? Our experts are here 24/7</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="{{ route('assignments.create') }}"
+                            class="group inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            <span>Start Your Order</span>
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>Talk to Expert</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Wave Decoration -->
+            <div class="absolute bottom-0 left-0 right-0">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                    <path
+                        d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                        fill="rgb(249, 250, 251)" />
+                </svg>
+            </div>
+    </section>
+
     <!-- Popular Subjects Section -->
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
@@ -2325,6 +2509,30 @@
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Nursing</h3>
                     <p class="text-sm text-gray-500">Healthcare, Patient Care</p>
                 </a>
+
+                <!-- Law -->
+                <a href="{{ route('services.assignment.index') }}?subject=law"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-gray-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚖️</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Law</h3>
+                    <p class="text-sm text-gray-500">Legal Studies, Criminal Justice</p>
+                </a>
+
+                <!-- Sociology -->
+                <a href="{{ route('services.assignment.index') }}?subject=sociology"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-violet-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">👥</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Sociology</h3>
+                    <p class="text-sm text-gray-500">Social Behavior, Culture, Society</p>
+                </a>
+
+                <!-- Accounting -->
+                <a href="{{ route('services.assignment.index') }}?subject=accounting"
+                    class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-amber-300 text-center">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💰</div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Accounting</h3>
+                    <p class="text-sm text-gray-500">Financial, Tax, Auditing</p>
+                </a>
             </div>
 
             <div class="text-center mt-12">
@@ -2337,6 +2545,13 @@
                     </svg>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Assignment Search Filter Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <livewire:assignment-search-filter />
         </div>
     </section>
 
