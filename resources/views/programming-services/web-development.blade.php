@@ -8,7 +8,7 @@
 @section('content')
     <div class="min-h-screen">
         <!-- Hero Section with Code Background -->
-        <section class="relative hero-bg py-24 overflow-hidden min-h-screen flex items-center">
+        <section class="relative hero-bg py-20 lg:py-28 overflow-hidden min-h-[600px] lg:min-h-[85vh] flex items-center">
             <!-- Enhanced Background Pattern -->
             <div class="absolute inset-0 opacity-5 md:opacity-10">
                 <div class="absolute inset-0"
@@ -25,78 +25,44 @@
             </div>
 
             <!-- Enhanced Floating Code Snippets -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <!-- Floating React Component -->
-                <div class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
+            <div class="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
+                <!-- Floating React Component - Top Right -->
+                <div class="absolute top-24 right-[5%] bg-gray-900/90 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-40 border border-gray-700/50 backdrop-blur-sm code-snippet transform rotate-6" style="animation-delay: 0s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">components/App.jsx</span>
                     </div>
                     <div class="text-blue-400">import</div>
-                    <div>&lt;<span class="text-yellow-400">Header</span> /&gt;</div>
-                    <div>&lt;<span class="text-yellow-400">Main</span> /&gt;</div>
-                    <div class="text-purple-400">export default</div>
+                    <div>&lt;<span class="text-yellow-400">Hero</span> /&gt;</div>
                 </div>
 
-                <!-- Floating Modern CSS -->
-                <div class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                <!-- Floating Modern CSS - Bottom Right -->
+                <div class="absolute bottom-32 right-[8%] bg-gray-900/90 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-40 border border-gray-700/50 backdrop-blur-sm code-snippet transform -rotate-3" style="animation-delay: 2s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">styles.css</span>
                     </div>
                     <div><span class="text-yellow-400">.hero</span> {</div>
                     <div class="ml-2 text-orange-400">display: grid;</div>
-                    <div class="ml-2 text-orange-400">min-height: 100vh;</div>
-                    <div class="ml-2 text-purple-400">backdrop-filter: blur(10px);</div>
                     <div>}</div>
                 </div>
 
-                <!-- Floating API Call -->
-                <div class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                <!-- Floating API Call - Top Middle-Right -->
+                <div class="absolute top-32 right-[35%] bg-gray-900/90 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-30 border border-gray-700/50 backdrop-blur-sm code-snippet transform -rotate-6" style="animation-delay: 1s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">api.js</span>
                     </div>
-                    <div class="text-purple-400">const</div>
-                    <div><span class="text-blue-400">fetchData</span> = <span class="text-green-400">async</span> () =&gt; {</div>
-                    <div class="ml-2 text-green-400">const response = await fetch('/api');</div>
-                    <div class="ml-2">return response.json();</div>
-                    <div>}</div>
+                    <div><span class="text-blue-400">fetch</span>('/api/data')</div>
                 </div>
 
-                <!-- Floating Laravel Route -->
-                <div class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">routes/web.php</span>
-                    </div>
-                    <div>&lt;?php</div>
-                    <div><span class="text-blue-400">Route</span>::<span class="text-green-400">get</span>('/api', function() {</div>
-                    <div class="ml-2">return <span class="text-orange-400">response</span>()-&gt;<span class="text-yellow-400">json</span>($data);</div>
-                    <div>});</div>
-                </div>
-
-                <!-- Floating Database Query -->
-                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet" style="animation-delay: 1s;">
+                <!-- Floating Database Query - Bottom Middle-Right -->
+                <div class="absolute bottom-24 right-[40%] bg-gray-900/90 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-30 border border-gray-700/50 backdrop-blur-sm code-snippet transform rotate-3" style="animation-delay: 3s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">models/User.php</span>
                     </div>
                     <div><span class="text-purple-400">User</span>::<span class="text-yellow-400">where</span>('active', <span class="text-green-400">true</span>)</div>
-                    <div class="ml-2">-&gt;<span class="text-yellow-400">with</span>('projects')</div>
-                    <div class="ml-2">-&gt;<span class="text-yellow-400">get</span>();</div>
-                </div>
-
-                <!-- Floating Docker Config -->
-                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet" style="animation-delay: 2s;">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">Dockerfile</span>
-                    </div>
-                    <div><span class="text-blue-400">FROM</span> node:18-alpine</div>
-                    <div><span class="text-blue-400">WORKDIR</span> /app</div>
-                    <div><span class="text-blue-400">COPY</span> . .</div>
-                    <div><span class="text-blue-400">RUN</span> npm install</div>
                 </div>
             </div>
 
@@ -109,7 +75,7 @@
                             🚀 Web Development Expert Help
                         </div>
 
-                        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Professional<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Web
                                 Development</span><br>

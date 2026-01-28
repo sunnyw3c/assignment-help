@@ -7,98 +7,61 @@
 @section('content')
     <div class="min-h-screen">
         <!-- Hero Section with Code Background -->
-        <section class="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-violet-50 to-blue-50">
+        <section class="relative overflow-hidden min-h-[600px] lg:min-h-[85vh] flex items-center bg-gradient-to-br from-purple-50 via-violet-50 to-blue-50 py-20 lg:py-28">
             <!-- Mobile App Background Image -->
-            <div class="absolute inset-0 opacity-50">
+            {{-- <div class="absolute inset-0 opacity-50">
                 <img src="{{ asset('images/mobile-app-hero-bg.svg') }}" alt="Mobile App Background" class="w-full h-full object-cover">
-            </div>
+            </div> --}}
 
             <!-- Overlay Gradient -->
             <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
 
             <!-- Enhanced Floating Code Snippets -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <!-- Floating React Native -->
-                <div
-                    class="absolute top-16 left-8 bg-gradient-to-r from-gray-900 to-gray-800 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet animate-glow">
+            <div class="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
+                <!-- Floating React Native - Top Right -->
+                <div class="absolute top-24 right-[5%] bg-gray-900/90 text-cyan-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-40 border border-gray-700/50 backdrop-blur-sm code-snippet transform rotate-6" style="animation-delay: 0s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">App.jsx</span>
                     </div>
                     <div class="text-green-400">// React Native Component</div>
                     <div>const <span class="text-yellow-400">MobileApp</span> = () => {</div>
-                    <div class="ml-2 text-orange-400">return &lt;AppNavigator /&gt;;</div>
+                    <div class="ml-2 text-orange-400">return &lt;View /&gt;;</div>
                     <div>};</div>
                 </div>
 
-                <!-- Floating Flutter -->
-                <div
-                    class="absolute top-28 right-12 bg-gradient-to-r from-gray-900 to-gray-800 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                <!-- Floating Flutter - Bottom Right -->
+                <div class="absolute bottom-32 right-[8%] bg-gray-900/90 text-blue-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-40 border border-gray-700/50 backdrop-blur-sm code-snippet transform -rotate-3" style="animation-delay: 2s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">MyApp.dart</span>
                     </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">MyApp</span> extends StatelessWidget {</div>
-                    <div class="ml-2 text-green-400">Widget build(context) {</div>
-                    <div class="ml-4">return MaterialApp();</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
+                    <div><span class="text-yellow-400">MaterialApp</span>(</div>
+                    <div class="ml-2">home: <span class="text-green-400">Scaffold</span>(</div>
+                    <div class="ml-4">body: <span class="text-green-400">Center</span>(),</div>
+                    <div class="ml-2">),</div>
                 </div>
 
-                <!-- Floating Swift -->
-                <div
-                    class="absolute bottom-24 left-1/4 bg-gradient-to-r from-gray-900 to-gray-800 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-bounce opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                <!-- Floating Swift - Top Middle-Right -->
+                <div class="absolute top-32 right-[35%] bg-gray-900/90 text-orange-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-30 border border-gray-700/50 backdrop-blur-sm code-snippet transform -rotate-6" style="animation-delay: 1s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">ViewController.swift</span>
+                        <span class="text-gray-400 text-xs">View.swift</span>
                     </div>
-                    <div class="text-purple-400">class</div>
-                    <div><span class="text-yellow-400">ViewController</span>: UIViewController {</div>
-                    <div class="ml-2 text-green-400">override func viewDidLoad() {</div>
-                    <div class="ml-4">super.viewDidLoad()</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
+                    <div class="text-purple-400">struct</div>
+                    <div><span class="text-yellow-400">ContentView</span>: View {</div>
+                    <div class="ml-2">var body: some View</div>
                 </div>
 
-                <!-- Floating Kotlin -->
-                <div
-                    class="absolute top-72 right-8 bg-gradient-to-r from-gray-900 to-gray-800 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-pulse opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet">
+                <!-- Floating Kotlin - Bottom Middle-Right -->
+                <div class="absolute bottom-24 right-[40%] bg-gray-900/90 text-purple-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-30 border border-gray-700/50 backdrop-blur-sm code-snippet transform rotate-3" style="animation-delay: 3s;">
                     <div class="flex items-center mb-2">
                         <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
                         <span class="text-gray-400 text-xs">MainActivity.kt</span>
                     </div>
                     <div class="text-blue-400">class</div>
                     <div><span class="text-yellow-400">MainActivity</span> : AppCompatActivity() {</div>
-                    <div class="ml-2 text-green-400">override fun onCreate() {</div>
-                    <div class="ml-4">setContentView(R.layout.main)</div>
-                    <div class="ml-2">}</div>
-                    <div>}</div>
-                </div>
-
-                <!-- Floating Firebase Config -->
-                <div class="absolute bottom-16 right-1/3 bg-gradient-to-r from-gray-900 to-gray-800 text-yellow-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
-                    style="animation-delay: 1s;">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">firebase.js</span>
-                    </div>
-                    <div><span class="text-purple-400">import</span> { initializeApp } from 'firebase/app';</div>
-                    <div><span class="text-purple-400">const</span> app = initializeApp(config);</div>
-                </div>
-
-                <!-- Floating API Integration -->
-                <div class="absolute top-96 left-16 bg-gradient-to-r from-gray-900 to-gray-800 text-green-400 p-4 rounded-xl shadow-2xl font-mono text-xs animate-float-delayed opacity-60 md:opacity-90 max-w-xs border border-gray-700 backdrop-blur-sm code-snippet"
-                    style="animation-delay: 2s;">
-                    <div class="flex items-center mb-2">
-                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        <span class="text-gray-400 text-xs">api.js</span>
-                    </div>
-                    <div><span class="text-purple-400">const</span> <span class="text-blue-400">fetchData</span> = <span
-                            class="text-yellow-400">async</span> () =&gt; {</div>
-                    <div class="ml-2">const response = await fetch('/api');</div>
-                    <div class="ml-2">return response.json();</div>
-                    <div>}</div>
+                    <div class="ml-2 text-green-400">fun onCreate()</div>
                 </div>
             </div>
 
@@ -111,7 +74,7 @@
                             📱 Mobile App Development Expert Help
                         </div>
 
-                        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Professional<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Mobile
                                 App</span><br>
