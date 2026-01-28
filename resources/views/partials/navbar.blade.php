@@ -2,9 +2,7 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <!-- Logo -->
         <a href="{{ url('/') }}" class="flex items-center space-x-2">
-            <div class="text-2xl">💻</div>
-            <span
-                class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Trending Tutor</span>
+            <img src="{{ asset('images/logo.svg') }}" alt="Assignment Help USA" class="h-10 w-auto">
         </a>
 
         <!-- Desktop Navigation -->
@@ -364,8 +362,8 @@
             {{-- <li><a href="{{ route('languages.index') }}"
                     class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🔧
                     Languages</a></li> --}}
-            <li><a href="{{ url('/how-it-works') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 text-gray-700">❓ How It Works</a></li>
+            {{-- <li><a href="{{ url('/how-it-works') }}"
+                    class="hover:text-purple-600 transition-colors duration-200 text-gray-700">❓ How It Works</a></li> --}}
             <li><a href="{{ route('experts') }}"
                     class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('experts') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">👨‍🏫
                     Experts</a></li>
@@ -375,9 +373,9 @@
             <li><a href="{{ url('/blog') }}"
                     class="hover:text-purple-600 transition-colors duration-200 {{ request()->is('blog*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">📝
                     Blog</a></li>
-            <li><a href="{{ route('assignments.create') }}"
+            {{-- <li><a href="{{ route('assignments.create') }}"
                     class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('assignments.create') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">💻
-                    Get Help</a></li>
+                    Get Help</a></li> --}}
         </ul>
 
         <!-- Desktop Auth Buttons -->

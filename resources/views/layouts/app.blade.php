@@ -60,6 +60,9 @@
         <!-- Scripts with defer for non-blocking and better TBT -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Livewire Styles -->
+        @livewireStyles
+
         <!-- Optimize font loading to not block main thread -->
         <script>
             // Use requestIdleCallback for non-critical font loading
@@ -100,5 +103,8 @@
             <!-- Footer -->
             @include('partials.footer')
         </div>
+
+        <!-- Livewire Scripts -->
+        @livewireScripts
     </body>
 </html>

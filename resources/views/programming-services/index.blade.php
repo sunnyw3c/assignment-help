@@ -214,8 +214,15 @@
         </div>
     </header>
 
+    <!-- Assignment Search Filter Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <livewire:assignment-search-filter />
+        </div>
+    </section>
+
     <!-- Featured Programming Services: PHP & Java -->
-    <section class="py-20 bg-white relative overflow-hidden">
+    <section class="py-20 bg-gray-50 relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16">

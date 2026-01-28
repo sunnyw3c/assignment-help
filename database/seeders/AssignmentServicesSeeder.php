@@ -6,7 +6,7 @@ use App\Models\Service;
 use App\Models\ServiceDetail;
 use Illuminate\Database\Seeder;
 
-class ServicesSeeder extends Seeder
+class AssignmentServicesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -1276,6 +1276,157 @@ class ServicesSeeder extends Seeder
                         'Expert math tutors',
                         'Follow-up support',
                         'Money-back if incorrect',
+                    ],
+                ],
+            ],
+
+            // 11. LAW ASSIGNMENT HELP
+            [
+                'service' => [
+                    'name' => 'Law Assignment Help',
+                    'slug' => 'law-assignment',
+                    'icon' => '⚖️',
+                    'short_description' => 'Professional law assignment help from qualified legal experts. Case briefs, legal research, IRAC analysis, and all areas of law.',
+                    'long_description' => 'Expert assistance with law assignments from qualified legal professionals including practicing attorneys and law professors. We provide comprehensive support for case briefs, legal memorandums, IRAC analysis, legal research using Westlaw and LexisNexis, contract analysis, and all areas of law with perfect Bluebook citations.',
+                    'base_price_per_page' => 32.00,
+                    'turnaround_min_hours' => 24,
+                    'turnaround_max_hours' => 168,
+                    'rating' => 4.9,
+                    'orders_completed' => 4500,
+                    'features' => ['Qualified legal experts', 'Case brief writing', 'Legal research', 'IRAC analysis', 'Bluebook citations', 'All areas of law'],
+                    'academic_levels' => ['Undergraduate Law', 'Law School (JD)', 'Graduate Law (LLM/SJD)'],
+                    'subjects' => ['Constitutional Law', 'Criminal Law', 'Contracts', 'Torts', 'Property Law', 'Civil Procedure', 'Corporate Law', 'Administrative Law'],
+                    'is_active' => true,
+                    'display_order' => 11,
+                    'meta_title' => 'Law Assignment Help | Legal Writing Service from $32/page',
+                    'meta_description' => 'Professional law assignment help from qualified legal experts. Case briefs, legal research, IRAC analysis. Starting at $32/page.',
+                ],
+                'details' => [
+                    'hero_title' => 'Professional Law Assignment Help Service',
+                    'hero_subtitle' => 'Expert legal assistance from qualified professionals',
+                    'hero_description' => 'Get comprehensive law assignment help from qualified legal professionals including practicing attorneys and law professors. Expert case briefs, legal research, and IRAC analysis.',
+                    'what_we_offer' => [
+                        'Case Brief Writing - Facts, issues, holdings, reasoning',
+                        'Legal Memorandums - IRAC framework analysis',
+                        'Legal Research - Westlaw and LexisNexis',
+                        'IRAC Analysis - Issue, Rule, Application, Conclusion',
+                        'Contract Analysis - Formation, breach, remedies',
+                        'Constitutional Law - Rights and judicial review',
+                        'Criminal Law - Elements and defenses',
+                        'Bluebook Citations - Perfect legal citation format',
+                    ],
+                    'pricing_tiers' => [
+                        [
+                            'name' => 'Undergraduate Law',
+                            'price' => '$32',
+                            'timeframe' => 'per page',
+                            'features' => [
+                                '96+ hours delivery',
+                                'Legal expert',
+                                'Case law research',
+                                'Bluebook citations',
+                                'Free revisions',
+                            ],
+                        ],
+                        [
+                            'name' => 'Law School (JD)',
+                            'price' => '$40',
+                            'timeframe' => 'per page',
+                            'features' => [
+                                '72+ hours delivery',
+                                'Licensed attorney',
+                                'Comprehensive research',
+                                'IRAC framework',
+                                'Multiple revisions',
+                                'Shepardizing included',
+                            ],
+                        ],
+                        [
+                            'name' => 'Graduate Law (LLM/SJD)',
+                            'price' => '$52',
+                            'timeframe' => 'per page',
+                            'features' => [
+                                '48+ hours delivery',
+                                'Senior legal expert',
+                                'Advanced research',
+                                'Multi-jurisdictional analysis',
+                                'Unlimited revisions',
+                                'Legislative history',
+                            ],
+                        ],
+                    ],
+                    'process_steps' => [
+                        ['title' => 'Submit Assignment', 'description' => 'Share your law assignment details, case materials, required analysis frameworks, and deadline.'],
+                        ['title' => 'Expert Assignment', 'description' => 'We match you with a qualified legal expert who specializes in your area of law.'],
+                        ['title' => 'Legal Research & Writing', 'description' => 'Expert conducts legal research and writes with proper IRAC analysis and Bluebook citations.'],
+                        ['title' => 'Quality Review & Delivery', 'description' => 'Review for legal accuracy, citation format, and deliver with revision support.'],
+                    ],
+                    'sample_topics' => [
+                        'Constitutional Law: First Amendment Free Speech Analysis',
+                        'Criminal Procedure: Fourth Amendment Search and Seizure',
+                        'Contracts: Breach of Contract and Remedies',
+                        'Torts: Negligence and Causation Analysis',
+                        'Property Law: Adverse Possession Case Study',
+                        'Civil Procedure: Personal Jurisdiction Analysis',
+                    ],
+                    'testimonials' => [
+                        [
+                            'name' => 'Jessica M.',
+                            'level' => '2L Student',
+                            'university' => 'Harvard Law School',
+                            'rating' => 5,
+                            'review' => 'Outstanding constitutional law analysis! The expert cited relevant Supreme Court precedent and applied the scrutiny framework perfectly. Bluebook citations were flawless.',
+                        ],
+                        [
+                            'name' => 'Robert K.',
+                            'level' => '1L Student',
+                            'university' => 'Georgetown Law',
+                            'rating' => 5,
+                            'review' => 'Excellent contracts memo with thorough legal research. The IRAC analysis was exactly what my professor expected. Highly recommend!',
+                        ],
+                        [
+                            'name' => 'Amanda L.',
+                            'level' => '3L Student',
+                            'university' => 'NYU School of Law',
+                            'rating' => 5,
+                            'review' => 'Perfect criminal procedure analysis on Fourth Amendment issues. Expert understanding of case law and precedent. Got the highest grade!',
+                        ],
+                    ],
+                    'faqs' => [
+                        [
+                            'question' => 'What qualifications do your law experts have?',
+                            'answer' => 'Our legal experts hold JD, LLB, LLM, or SJD degrees from accredited law schools. Many are licensed attorneys with bar admission and experience in law firms, or law professors with deep academic knowledge.',
+                        ],
+                        [
+                            'question' => 'Do you help with case briefs for law school?',
+                            'answer' => 'Yes! We provide comprehensive case brief assistance including facts, procedural history, issues, rules, holdings, reasoning, and critical commentary on doctrinal significance.',
+                        ],
+                        [
+                            'question' => 'Can you conduct legal research using Westlaw or LexisNexis?',
+                            'answer' => 'Absolutely. Our researchers have access to Westlaw, LexisNexis, Bloomberg Law, and other legal databases. We conduct thorough research with proper shepardizing/KeyCiting.',
+                        ],
+                        [
+                            'question' => 'Do you follow Bluebook citation format?',
+                            'answer' => 'Yes! All legal citations follow The Bluebook: A Uniform System of Citation or ALWD Guide to Legal Citation as specified. We ensure perfect citation format for all legal authorities.',
+                        ],
+                    ],
+                    'citation_styles' => ['Bluebook', 'ALWD'],
+                    'deliverables' => [
+                        'Complete law assignment',
+                        'Legal research with case law',
+                        'IRAC framework analysis',
+                        'Perfect Bluebook citations',
+                        'Case briefs or memorandums',
+                        'Professional legal writing',
+                        'Free revisions included',
+                    ],
+                    'guarantees' => [
+                        'Qualified legal experts',
+                        'Comprehensive legal research',
+                        'Perfect citations',
+                        'IRAC analysis',
+                        'On-time delivery',
+                        'Revision support',
                     ],
                 ],
             ],
