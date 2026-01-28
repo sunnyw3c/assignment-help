@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'How It Works - Step-by-Step Process | Trending Tutor')
+@section('title', 'How It Works | Get Academic Help in 4 Easy Steps - AssignmentHelpUSA')
 @section('description',
-    'Learn how our expert programming help service works. Simple 4-step process from submitting
-    requirements to receiving your completed project with documentation and support.')
+    'Understand our simple 4-step process for getting expert academic help. From submitting your
+    project to receiving a high-quality solution, we make it easy and efficient.')
 @section('keywords',
-    'how it works, programming help process, coding assistance steps, project submission, expert
-    assignment, development process, delivery timeline')
+    'how it works, Academic help process, coding assignment help, submit project, expert
+    programmers, code help steps, online Academic help')
 
 @section('content')
     <!-- Structured Data for How It Works -->
@@ -91,7 +91,7 @@
                 <!-- Main Title -->
                 <h1
                     class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-fade-in-up animation-delay-200">
-                    How Our Programming <br>
+                    How Our Academic <br>
                     <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                         Help Works
                     </span>
@@ -99,7 +99,7 @@
 
                 <!-- Subtitle -->
                 <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed animate-fade-in-up animation-delay-400">
-                    Get expert programming assistance in just 4 simple steps. <br>
+                    Get expert Academic assistance in just 4 simple steps. <br>
                     From submission to delivery, we make it seamless and stress-free.
                 </p>
 
@@ -192,7 +192,7 @@
                     <span class="relative inline-block animate-fade-in-up animation-delay-800">
                         <span
                             class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                            Programming Success
+                            Academic Success
                         </span>
                     </span>
                 </h2>
@@ -200,7 +200,7 @@
                 <!-- Enhanced Description with Icons -->
                 <div class="max-w-4xl mx-auto animate-fade-in-up animation-delay-1000">
                     <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                        Our streamlined process ensures you get high-quality programming help quickly and efficiently.
+                        Our streamlined process ensures you get high-quality Academic help quickly and efficiently.
                     </p>
 
                     <!-- Feature Highlights -->
@@ -1000,7 +1000,7 @@
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Say About Us</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Real feedback from real students who achieved academic success with our programming help
+                    Real feedback from real students who achieved academic success with our assignment help USA
                 </p>
             </div>
 
@@ -1177,7 +1177,7 @@
                     Seamless Process?
                 </h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">
-                    Join thousands of satisfied students who trust our expert programming help.
+                    Join thousands of satisfied students who trust our expert assignment help USA.
                     Start your project today and experience the difference.
                 </p>
 
@@ -1201,6 +1201,54 @@
             </div>
         </div>
     </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Here are some of the most common questions we get about our process.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto" x-data="{ open: null }">
+                @foreach($faqs as $index => $faq)
+                    <div class="border-b border-gray-200">
+                        <button @click="open = open === {{ $index }} ? null : {{ $index }} " class="w-full flex justify-between items-center py-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-800">{{ $faq['question'] }}</h3>
+                            <svg :class="{'transform rotate-180': open === {{ $index }} }" class="w-6 h-6 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open === {{ $index }} " x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" class="pb-6">
+                            <p class="text-gray-600 leading-relaxed">{{ $faq['answer'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            @foreach($faqs as $faq)
+            {
+                "@type": "Question",
+                "name": "{{ $faq['question'] }}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "{{ $faq['answer'] }}"
+                }
+            }@if(!$loop->last),@endif
+            @endforeach
+        ]
+    }
+    </script>
+
 
     <!-- Custom Animations and JavaScript -->
     <style>
