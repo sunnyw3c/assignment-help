@@ -10,7 +10,7 @@
 
 @section('content')
     <!-- Structured Data for How It Works -->
-    <script type="application/ld+json">
+    {{-- <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
@@ -43,7 +43,7 @@
             @endforeach
         ]
     }
-    </script>
+    </script> --}}
 
     <!-- Hero Section with Animated Background -->
     <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
