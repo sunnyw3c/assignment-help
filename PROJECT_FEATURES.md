@@ -5,7 +5,7 @@ A comprehensive list of all implemented features in the Assignment Help Online L
 ## 🎯 Core Assignment Features
 
 ### Assignment Request System
-- **Assignment Submission Form** (`/assignments/create`)
+- **Assignment Submission Form** (`/order`)
   - Subject field (required, max 255 chars)
   - Assignment title/topic (required, max 255 chars)
   - Deadline selection (datetime picker, required)

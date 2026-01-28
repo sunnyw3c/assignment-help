@@ -166,6 +166,25 @@ class HowItWorksController extends Controller
             ]
         ];
 
-        return view('how-it-works', compact('steps', 'features', 'stats', 'reviews'));
+        $faqs = [
+            [
+                'question' => 'How long does it take to get a quote?',
+                'answer' => 'You will typically receive a detailed quote within 15-30 minutes of submitting your project requirements. Our team reviews the scope and complexity to provide an accurate and transparent price.'
+            ],
+            [
+                'question' => 'Can I communicate with my assigned expert?',
+                'answer' => 'Yes! Once an expert is assigned, you can communicate with them directly to discuss project details, ask questions, and receive progress updates. Clear communication is key to a successful project.'
+            ],
+            [
+                'question' => 'What if I am not satisfied with the final delivery?',
+                'answer' => 'Your satisfaction is our priority. We offer free revisions until the project meets all your requirements. If you are still not satisfied, we have a money-back guarantee.'
+            ],
+            [
+                'question' => 'Is the service confidential?',
+                'answer' => 'Absolutely. We prioritize your privacy and use secure platforms for all communications and file transfers. Your personal information and project details are never shared with third parties.'
+            ]
+        ];
+
+        return view('how-it-works', compact('steps', 'features', 'stats', 'reviews', 'faqs'));
     }
 }

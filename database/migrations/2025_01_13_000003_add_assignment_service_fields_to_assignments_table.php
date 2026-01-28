@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('assignments', function (Blueprint $table) {
-            $table->foreignId('assignment_service_id')->nullable()->after('budget')->constrained('assignment_services')->onDelete('set null');
+            $table->foreignId('assignment_service_id')->nullable()->after('budget')->constrained('services')->onDelete('set null');
             $table->string('academic_level')->nullable()->after('assignment_service_id');
             $table->string('citation_style')->nullable()->after('academic_level');
             $table->integer('word_count')->nullable()->after('citation_style');

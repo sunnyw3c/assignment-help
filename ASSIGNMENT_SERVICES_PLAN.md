@@ -16,7 +16,7 @@ Add comprehensive assignment help services to the existing Laravel application t
   - Detail pages: `/services/{slug}` - individual service pages with pricing/process
   - Dedicated Blade views for each major service
 - **Assignment System**:
-  - Students can submit assignment requests via `/assignments/create`
+  - Students can submit assignment requests via `/order`
   - Stores: subject, title, deadline, pages, file_path, description, budget
   - No current link between services and assignment submissions
 - **Database**:
@@ -420,7 +420,7 @@ Add dropdown menu for services:
             <a href="{{ route('services.index', ['category' => 'assignment-help']) }}">Assignment Help</a>
         </div>
     </div>
-    <a href="{{ route('assignments.create') }}">Get Help</a>
+    <a href="{{ route('order') }}">Get Help</a>
 </nav>
 ```
 
@@ -440,7 +440,7 @@ Current routes are already set up correctly:
 ```php
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
-Route::get('/assignments/create', [AssignmentController::class, 'create'])->name('assignments.create');
+Route::get('/order', [AssignmentController::class, 'create'])->name('order');
 Route::post('/assignments/store', [AssignmentController::class, 'store'])->name('assignments.store');
 ```
 

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('assignment_service_details', function (Blueprint $table) {
+        Schema::create('service_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('assignment_service_id')->constrained()->onDelete('cascade');
+            $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
             $table->string('hero_title')->nullable();
             $table->string('hero_subtitle')->nullable();
             $table->text('hero_description')->nullable();
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->json('guarantees')->nullable();
             $table->timestamps();
 
-            $table->index('assignment_service_id');
+            $table->index('service_id');
         });
     }
 
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assignment_service_details');
+        Schema::dropIfExists('service_details');
     }
 };

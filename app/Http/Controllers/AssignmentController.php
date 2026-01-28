@@ -37,7 +37,7 @@ class AssignmentController extends Controller
             'description' => $request->description,
             'budget' => $request->budget,
         ]);
-         return redirect()->route('assignments.create')->with('success', 'Assignment request submitted successfully!');
+        return redirect()->route('order')->with('success', 'Assignment request submitted successfully!');
         // For now, just return back with a success message
         return back()->with('success', 'Assignment request submitted!');
     }

@@ -60,7 +60,7 @@ Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/experts', [ExpertController::class, 'index'])->name('experts');
-Route::get('/assignments/create', [AssignmentController::class, 'create'])->name('assignments.create');
+Route::get('/order', [AssignmentController::class, 'create'])->name('assignments.create');
 Route::post('/assignments/store', [AssignmentController::class, 'store'])->name('assignments.store');
 Route::get('/dashboard', function () {
     return view('dashboard');
