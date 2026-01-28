@@ -11,29 +11,7 @@
     academic help USA')
 
 @section('content')
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Assignment Help USA",
-        "description": "Professional assignment help online for USA students. Get expert assignment help service from qualified assignment helpers for college, high school, and graduate level assignments. 24/7 assignment assistance with essays, research papers, programming, and 50+ subjects.",
-        "url": "{{ url('/') }}",
-        "areaServed": "United States",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-888-TUTORING",
-            "contactType": "customer service",
-            "availableLanguage": "English",
-            "areaServed": "US"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "15000"
-        }
-    }
-    </script>
-
+   
     <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden" itemscope
         itemtype="https://schema.org/Service">
         <div class="absolute inset-0 bg-slate-900/50 bg-grid-pattern-corporate"></div>
