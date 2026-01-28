@@ -145,7 +145,7 @@
             </div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-15 sm:py-10 lg:py-15">
             <div class="max-w-5xl mx-auto text-center">
 
                 <div class="flex items-center justify-center gap-4 flex-wrap mb-12">
@@ -176,16 +176,15 @@
                 <div class="space-y-6 mb-12">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight px-4"
                         itemprop="name">
-                        Professional Help for
+                        Assignment Help USA 
                         <span class="block mt-3 text-blue-400 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                            Assignments, Programming & Tutoring
+                            Get Better Grades Today
                         </span>
                     </h1>
 
                     <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl mx-auto px-4"
                         itemprop="description">
-                        Get personalized support from verified tutors in Python, Java, C++, essay writing, math, science,
-                        and 50+ subjects for high school, college, and graduate students. Available 24/7.
+                        Struggling with tight deadlines, complex topics, or intense academic pressure? Assignment Help USA provides reliable, plagiarism-free, and affordable assistance tailored to the American curriculum. Whether you are an undergraduate, postgraduate, or PhD scholar, our subject-matter experts are ready to help you succeed. Get the expert support you need to boost your GPA and submit every project on time.
                     </p>
                 </div>
 
@@ -584,7 +583,7 @@
         </div>
     </section>
 
-    <section class="relative py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    {{-- <section class="relative py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div
@@ -737,9 +736,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="relative py-12 overflow-hidden">
+    {{-- <section class="relative py-12 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-100/50 via-transparent to-purple-100/50"></div>
             <div
@@ -1102,7 +1101,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         <div class="absolute inset-0 opacity-30">
@@ -1460,7 +1459,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white">
+    {{-- <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert
@@ -1606,7 +1605,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -2014,9 +2013,9 @@
                 </div>
 
 
-                {{-- <div class="relative">
+                <div class="relative">
                     <livewire:budget-calculator />
-                </div> --}}
+                </div>
             </div>
 
 
@@ -2556,7 +2555,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    {{-- <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <div
@@ -2730,7 +2729,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -3153,7 +3152,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
+    {{-- <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
 
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -3250,7 +3249,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
