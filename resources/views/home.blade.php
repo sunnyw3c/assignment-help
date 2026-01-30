@@ -1437,7 +1437,12 @@
         </div>
     </section>
 
+<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-white">
+=======
+    <!-- Services Categories Section -->
+    <section class="py-20 bg-white">
+>>>>>>> Stashed changes
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert
@@ -1450,7 +1455,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
+                <!-- Assignment Services Card -->
                 <div
                     class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
                     <div class="absolute top-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
@@ -1516,7 +1521,7 @@
                     </div>
                 </div>
 
-
+                <!-- Programming Services Card -->
                 <div
                     class="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
                     <div class="absolute top-6 right-6 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
@@ -1585,6 +1590,7 @@
         </div>
     </section> --}}
 
+    <!-- Why Choose Us Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -1597,7 +1603,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
+                <!-- Feature 1 -->
                 <div
                     class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">🎓</div>
@@ -1606,7 +1612,7 @@
                         records in helping students succeed.</p>
                 </div>
 
-
+                <!-- Feature 2 -->
                 <div
                     class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">⚡</div>
@@ -1615,7 +1621,7 @@
                         options for urgent assignments.</p>
                 </div>
 
-
+                <!-- Feature 3 -->
                 <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">🛡️</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Original</h3>
@@ -1623,7 +1629,7 @@
                         guaranteed with detailed reports.</p>
                 </div>
 
-
+                <!-- Feature 4 -->
                 <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">💰</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">Student-Friendly Pricing</h3>
@@ -1631,7 +1637,7 @@
                         discounts for returning students.</p>
                 </div>
 
-
+                <!-- Feature 5 -->
                 <div
                     class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">🔄</div>
@@ -1640,7 +1646,7 @@
                         the work. Your success is our priority.</p>
                 </div>
 
-
+                <!-- Feature 6 -->
                 <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
                     <div class="text-5xl mb-4">🔒</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Confidential</h3>
@@ -1651,6 +1657,7 @@
         </div>
     </section>
 
+    <!-- Student Testimonials Section -->
     <section class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -1661,7 +1668,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
+                <!-- Testimonial 1 -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
@@ -1683,7 +1690,7 @@
                     </div>
                 </div>
 
-
+                <!-- Testimonial 2 -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
@@ -1704,7 +1711,7 @@
                     </div>
                 </div>
 
-
+                <!-- Testimonial 3 -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
@@ -1728,6 +1735,7 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Boost Your Grades?</h2>
@@ -1750,6 +1758,7 @@
         </div>
     </section>
 
+    <!-- Academic Levels We Cover Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -1769,7 +1778,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-
+                <!-- High School -->
                 <div
                     class="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎒</div>
@@ -1797,7 +1806,7 @@
                     </ul>
                 </div>
 
-
+                <!-- College/Undergraduate -->
                 <div
                     class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">📚</div>
@@ -1825,7 +1834,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Masters/Graduate -->
                 <div
                     class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-emerald-100 hover:border-emerald-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">🎓</div>
@@ -1853,7 +1862,7 @@
                     </ul>
                 </div>
 
-
+                <!-- PhD/Doctoral -->
                 <div
                     class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-300">
                     <div class="text-6xl mb-6 text-center group-hover:scale-110 transition-transform">👨‍🎓</div>
@@ -1884,17 +1893,18 @@
         </div>
     </section>
 
+    <!-- Budget Calculator Section -->
     <section class="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-
+        <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
-
+            <!-- Gradient Orbs -->
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
                 style="animation-delay: 1s;"></div>
             <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
                 style="animation-delay: 2s;"></div>
 
-
+            <!-- Floating Icons -->
             <div class="absolute top-20 left-10 opacity-10 animate-float-slow">
                 <div class="text-6xl">💰</div>
             </div>
@@ -1908,16 +1918,16 @@
                 <div class="text-6xl">🎯</div>
             </div>
 
-
+            <!-- Grid Pattern -->
             <div
                 class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30">
             </div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-
+            <!-- Header Section -->
             <div class="text-center mb-16">
-
+                <!-- Badge -->
                 <div
                     class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full mb-6 animate-fade-in-up">
                     <span class="relative flex h-3 w-3">
@@ -1928,7 +1938,7 @@
                     <span class="text-white font-bold text-sm">Live Pricing Calculator</span>
                 </div>
 
-
+                <!-- Main Title -->
                 <h2
                     class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
                     Get Your <span
@@ -1936,13 +1946,13 @@
                         Quote</span>
                 </h2>
 
-
+                <!-- Subtitle -->
                 <p
                     class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-400">
                     Calculate your assignment cost in real-time with our transparent pricing calculator
                 </p>
 
-
+                <!-- Trust Indicators -->
                 <div
                     class="flex flex-wrap items-center justify-center gap-6 md:gap-8 animate-fade-in-up animation-delay-600">
                     <div class="flex items-center gap-2 text-white/90">
@@ -1972,9 +1982,9 @@
                 </div>
             </div>
 
-
+            <!-- Calculator Component with Decorative Frame -->
             <div class="relative max-w-6xl mx-auto">
-
+                <!-- Decorative Corner Elements -->
                 <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-cyan-400/50 rounded-tl-3xl">
                 </div>
                 <div class="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-purple-400/50 rounded-tr-3xl">
@@ -1985,20 +1995,24 @@
                     class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-indigo-400/50 rounded-br-3xl">
                 </div>
 
-
+                <!-- Glow Effect -->
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-xl">
                 </div>
 
+<<<<<<< Updated upstream
 
+=======
+                <!-- Calculator -->
+>>>>>>> Stashed changes
                 <div class="relative">
                     <livewire:budget-calculator />
                 </div>
             </div>
 
-
+            <!-- Bottom Stats Section -->
             <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-
+                <!-- Stat 1 -->
                 <div
                     class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
                     <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
@@ -2007,7 +2021,7 @@
                             <div class="text-sm text-blue-200">Instant Quote</div>
                     </div>
 
-
+                    <!-- Stat 2 -->
                     <div
                         class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
                         <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💯</div>
@@ -2015,7 +2029,7 @@
                         <div class="text-sm text-blue-200">Price Match</div>
                     </div>
 
-
+                    <!-- Stat 3 -->
                     <div
                         class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
                         <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎓</div>
@@ -2023,7 +2037,7 @@
                         <div class="text-sm text-blue-200">Subjects</div>
                     </div>
 
-
+                    <!-- Stat 4 -->
                     <div
                         class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
                         <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💰</div>
@@ -2032,7 +2046,7 @@
                     </div>
                 </div>
 
-
+                <!-- Additional CTA -->
                 <div class="mt-12 text-center">
                     <p class="text-white/80 mb-4">Need help choosing? Our experts are here 24/7</p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -2057,7 +2071,7 @@
                 </div>
             </div>
 
-
+            <!-- Bottom Wave Decoration -->
             <div class="absolute bottom-0 left-0 right-0">
                 <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
                     <path
@@ -2067,6 +2081,7 @@
             </div>
     </section>
 
+    <!-- Popular Subjects Section -->
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -2084,7 +2099,7 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
-
+                <!-- Math -->
                 <a href="{{ route('services.assignment.index') }}?subject=math"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔢</div>
@@ -2092,7 +2107,7 @@
                     <p class="text-sm text-gray-500">Calculus, Algebra, Statistics</p>
                 </a>
 
-
+                <!-- Science -->
                 <a href="{{ route('services.assignment.index') }}?subject=science"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🔬</div>
@@ -2100,7 +2115,7 @@
                     <p class="text-sm text-gray-500">Physics, Chemistry, Biology</p>
                 </a>
 
-
+                <!-- English -->
                 <a href="{{ route('services.assignment.index') }}?subject=english"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📖</div>
@@ -2108,7 +2123,7 @@
                     <p class="text-sm text-gray-500">Literature, Writing, Grammar</p>
                 </a>
 
-
+                <!-- Business -->
                 <a href="{{ route('services.assignment.index') }}?subject=business"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-yellow-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💼</div>
@@ -2116,7 +2131,7 @@
                     <p class="text-sm text-gray-500">Management, Finance, Marketing</p>
                 </a>
 
-
+                <!-- Computer Science -->
                 <a href="{{ route('services.programming.index') }}"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-indigo-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💻</div>
@@ -2124,7 +2139,7 @@
                     <p class="text-sm text-gray-500">Programming, Algorithms</p>
                 </a>
 
-
+                <!-- History -->
                 <a href="{{ route('services.assignment.index') }}?subject=history"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-red-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏛️</div>
@@ -2132,7 +2147,7 @@
                     <p class="text-sm text-gray-500">World, American, European</p>
                 </a>
 
-
+                <!-- Psychology -->
                 <a href="{{ route('services.assignment.index') }}?subject=psychology"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-pink-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
@@ -2140,7 +2155,7 @@
                     <p class="text-sm text-gray-500">Clinical, Social, Cognitive</p>
                 </a>
 
-
+                <!-- Economics -->
                 <a href="{{ route('services.assignment.index') }}?subject=economics"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📊</div>
@@ -2148,7 +2163,7 @@
                     <p class="text-sm text-gray-500">Micro, Macro, Econometrics</p>
                 </a>
 
-
+                <!-- Engineering -->
                 <a href="{{ route('services.assignment.index') }}?subject=engineering"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-orange-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
@@ -2156,7 +2171,7 @@
                     <p class="text-sm text-gray-500">Mechanical, Civil, Electrical</p>
                 </a>
 
-
+                <!-- Nursing -->
                 <a href="{{ route('services.assignment.index') }}?subject=nursing"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-rose-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
@@ -2164,7 +2179,7 @@
                     <p class="text-sm text-gray-500">Healthcare, Patient Care</p>
                 </a>
 
-
+                <!-- Law -->
                 <a href="{{ route('services.assignment.index') }}?subject=law"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-gray-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚖️</div>
@@ -2172,7 +2187,7 @@
                     <p class="text-sm text-gray-500">Legal Studies, Criminal Justice</p>
                 </a>
 
-
+                <!-- Sociology -->
                 <a href="{{ route('services.assignment.index') }}?subject=sociology"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-violet-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">👥</div>
@@ -2180,7 +2195,7 @@
                     <p class="text-sm text-gray-500">Social Behavior, Culture, Society</p>
                 </a>
 
-
+                <!-- Accounting -->
                 <a href="{{ route('services.assignment.index') }}?subject=accounting"
                     class="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-amber-300 text-center">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">💰</div>
@@ -2202,15 +2217,17 @@
         </div>
     </section>
 
+    <!-- Assignment Search Filter Section -->
     {{-- <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <livewire:assignment-search-filter />
         </div>
     </section> --}}
 
+    <!-- How It Works Section -->
     <section id="how-it-works"
         class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
-
+        <!-- Decorative Background Elements -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -2234,7 +2251,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-
+                <!-- Step 1 -->
                 <div class="relative">
                     <div
                         class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
@@ -2248,13 +2265,13 @@
                             Fill out our simple form with your assignment details, deadline, and requirements
                         </p>
                     </div>
-
+                    <!-- Connector Arrow (hidden on mobile) -->
                     <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
                         →
                     </div>
                 </div>
 
-
+                <!-- Step 2 -->
                 <div class="relative">
                     <div
                         class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
@@ -2268,13 +2285,13 @@
                             We instantly connect you with a qualified expert in your subject area
                         </p>
                     </div>
-
+                    <!-- Connector Arrow (hidden on mobile) -->
                     <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
                         →
                     </div>
                 </div>
 
-
+                <!-- Step 3 -->
                 <div class="relative">
                     <div
                         class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
@@ -2288,13 +2305,13 @@
                             Your expert completes the assignment following all your instructions and guidelines
                         </p>
                     </div>
-
+                    <!-- Connector Arrow (hidden on mobile) -->
                     <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
                         →
                     </div>
                 </div>
 
-
+                <!-- Step 4 -->
                 <div class="relative">
                     <div
                         class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
@@ -2324,6 +2341,7 @@
         </div>
     </section>
 
+    <!-- Benefits & Guarantees Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -2343,7 +2361,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
+                <!-- Plagiarism Free -->
                 <div
                     class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2374,7 +2392,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Money Back Guarantee -->
                 <div
                     class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2406,7 +2424,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Unlimited Revisions -->
                 <div
                     class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2438,7 +2456,7 @@
                     </ul>
                 </div>
 
-
+                <!-- On-Time Delivery -->
                 <div
                     class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2468,7 +2486,7 @@
                     </ul>
                 </div>
 
-
+                <!-- 24/7 Support -->
                 <div
                     class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2499,7 +2517,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Confidentiality -->
                 <div
                     class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-8 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
                     <div
@@ -2533,7 +2551,12 @@
         </div>
     </section>
 
+<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+=======
+    <!-- Pricing Information Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+>>>>>>> Stashed changes
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <div
@@ -2554,7 +2577,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-
+                <!-- Assignment Help Pricing -->
                 <div
                     class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
                     <div class="flex items-center justify-between mb-6">
@@ -2612,7 +2635,7 @@
                     </a>
                 </div>
 
-
+                <!-- Programming Help Pricing -->
                 <div
                     class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
                     <div class="flex items-center justify-between mb-6">
@@ -2671,7 +2694,7 @@
                 </div>
             </div>
 
-
+            <!-- Pricing Factors -->
             <div
                 class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-5xl mx-auto border border-purple-100">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Affects the Price?</h3>
@@ -2709,6 +2732,7 @@
         </div>
     </section> --}}
 
+    <!-- Subject Areas Detailed Grid Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -2728,7 +2752,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-
+                <!-- STEM Subjects -->
                 <div
                     class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🔬</div>
@@ -2745,7 +2769,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Business & Economics -->
                 <div
                     class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">💼</div>
@@ -2763,7 +2787,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Humanities -->
                 <div
                     class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">📚</div>
@@ -2781,7 +2805,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Social Sciences -->
                 <div
                     class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🧠</div>
@@ -2797,7 +2821,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Engineering -->
                 <div
                     class="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-6 border border-red-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">⚙️</div>
@@ -2814,7 +2838,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Computer Science & IT -->
                 <div
                     class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">💻</div>
@@ -2830,7 +2854,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Health Sciences -->
                 <div
                     class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 border border-pink-100 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">🏥</div>
@@ -2846,7 +2870,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Law & Legal Studies -->
                 <div
                     class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
                     <div class="text-4xl mb-4">⚖️</div>
@@ -2863,6 +2887,7 @@
         </div>
     </section>
 
+    <!-- Geographic Coverage - USA Section -->
     <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -2881,7 +2906,7 @@
             </div>
 
             <div class="max-w-7xl mx-auto">
-
+                <!-- Major Cities -->
                 <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8">
                     <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Cities We Serve</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -2937,7 +2962,7 @@
                     <p class="text-center text-gray-500 mt-6 text-sm">+ Hundreds more cities across all 50 states</p>
                 </div>
 
-
+                <!-- State Coverage -->
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
                         <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 East Coast</h4>
@@ -2996,6 +3021,7 @@
         </div>
     </section>
 
+    <!-- Academic Writing Types Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -3016,7 +3042,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-
+                <!-- Essays -->
                 <div
                     class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
@@ -3034,7 +3060,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Research Papers -->
                 <div
                     class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
@@ -3054,7 +3080,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Thesis & Dissertation -->
                 <div
                     class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
@@ -3074,7 +3100,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Case Studies -->
                 <div
                     class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border-2 border-amber-100 hover:border-amber-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">📊</div>
@@ -3091,7 +3117,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Lab Reports -->
                 <div
                     class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">🔬</div>
@@ -3106,7 +3132,7 @@
                     </ul>
                 </div>
 
-
+                <!-- Other Academic Work -->
                 <div
                     class="group bg-gradient-to-br from-rose-50 to-red-50 rounded-xl p-6 border-2 border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all duration-300">
                     <div class="text-4xl mb-4">📋</div>
@@ -3130,8 +3156,14 @@
         </div>
     </section>
 
+<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
 
+=======
+    <!-- Trust & Safety Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+>>>>>>> Stashed changes
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
@@ -3155,7 +3187,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
-
+                <!-- SSL Encryption -->
                 <div
                     class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🔒</div>
@@ -3165,7 +3197,7 @@
                     </p>
                 </div>
 
-
+                <!-- Secure Payments -->
                 <div
                     class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">💳</div>
@@ -3175,7 +3207,7 @@
                     </p>
                 </div>
 
-
+                <!-- Privacy Protection -->
                 <div
                     class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🛡️</div>
@@ -3185,7 +3217,7 @@
                     </p>
                 </div>
 
-
+                <!-- Data Security -->
                 <div
                     class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
                     <div class="text-5xl mb-4">🗄️</div>
@@ -3196,7 +3228,7 @@
                 </div>
             </div>
 
-
+            <!-- Trust Badges -->
             <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h3 class="text-2xl font-bold mb-8 text-center">Trusted & Verified</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -3229,6 +3261,7 @@
         </div>
     </section> --}}
 
+    <!-- FAQ Section -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16">
@@ -3237,7 +3270,7 @@
             </div>
 
             <div class="space-y-6">
-
+                <!-- FAQ 1 -->
                 <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Is Assignment Help USA legit and safe to use?</h3>
                     <p class="text-gray-600 leading-relaxed">
@@ -3247,7 +3280,7 @@
                     </p>
                 </div>
 
-
+                <!-- FAQ 2 -->
                 <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">How much does it cost?</h3>
                     <p class="text-gray-600 leading-relaxed">
@@ -3257,7 +3290,7 @@
                     </p>
                 </div>
 
-
+                <!-- FAQ 3 -->
                 <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">How fast can you complete my assignment?</h3>
                     <p class="text-gray-600 leading-relaxed">
@@ -3266,7 +3299,7 @@
                     </p>
                 </div>
 
-
+                <!-- FAQ 4 -->
                 <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">What if I'm not satisfied with the work?</h3>
                     <p class="text-gray-600 leading-relaxed">
