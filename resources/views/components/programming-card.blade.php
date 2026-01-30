@@ -18,7 +18,7 @@
                 </li>
             @endforeach
         </ul>
-        <a href="{{ route('assignments.create') }}"
+        <a href="{{ route('order') }}"
            class="mt-6 w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 block text-center">
             Get {{ $language }} Help
         </a>

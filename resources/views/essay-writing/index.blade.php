@@ -550,7 +550,7 @@
                         </div>
 
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 1]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 1]) }}"
                                 class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
                                 Order Your Essay Now - Get 15% Off

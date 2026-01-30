@@ -77,7 +77,7 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up animation-delay-600">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25">
                         <span class="mr-3 text-2xl">🚀</span>
                         Get Started Today
@@ -397,7 +397,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                         <span class="mr-4 text-3xl">🚀</span>
                         Get Help Now

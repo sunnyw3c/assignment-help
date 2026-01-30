@@ -215,7 +215,7 @@
                                                     d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
-                                        <a href="{{ route('assignments.create') }}"
+                                        <a href="{{ route('order') }}"
                                             class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
                                             Get Help Now →
                                         </a>
@@ -347,7 +347,7 @@
                                                     d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
-                                        <a href="{{ route('assignments.create') }}"
+                                        <a href="{{ route('order') }}"
                                             class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
                                             Order Now →
                                         </a>
@@ -373,8 +373,8 @@
             <li><a href="{{ url('/blog') }}"
                     class="hover:text-purple-600 transition-colors duration-200 {{ request()->is('blog*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">📝
                     Blog</a></li>
-            {{-- <li><a href="{{ route('assignments.create') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('assignments.create') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">💻
+            {{-- <li><a href="{{ route('order') }}"
+                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('order') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">💻
                     Get Help</a></li> --}}
         </ul>
 
@@ -384,7 +384,7 @@
                 class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
                 Login
             </a>
-            <a href="{{ route('assignments.create') }}"
+            <a href="{{ route('order') }}"
                 class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Get Help Now
             </a>
@@ -469,8 +469,8 @@
             <a href="{{ url('/blog') }}"
                 class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->is('blog*') ? 'text-purple-600 font-semibold' : '' }}">📝
                 Blog</a>
-            <a href="{{ route('assignments.create') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('assignments.create') ? 'text-purple-600 font-semibold' : '' }}">💻
+            <a href="{{ route('order') }}"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('order') ? 'text-purple-600 font-semibold' : '' }}">💻
                 Get Help</a>
 
             <div class="pt-4 border-t border-gray-200 space-y-3">
@@ -478,7 +478,7 @@
                     class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
                     Login
                 </a>
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="block text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200">
                     Get Help Now
                 </a>

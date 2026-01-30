@@ -192,17 +192,17 @@
 
                                 <!-- CTA Button -->
                                 @if($plan['color'] == 'blue')
-                                    <a href="{{ route('assignments.create') }}"
+                                    <a href="{{ route('order') }}"
                                        class="block w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                         Get Started
                                     </a>
                                 @elseif($plan['color'] == 'purple')
-                                    <a href="{{ route('assignments.create') }}"
+                                    <a href="{{ route('order') }}"
                                        class="block w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                         Get Started
                                     </a>
                                 @else
-                                    <a href="{{ route('assignments.create') }}"
+                                    <a href="{{ route('order') }}"
                                        class="block w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                         Get Started
                                     </a>
@@ -244,7 +244,7 @@
                     <p class="text-gray-600 mb-6">
                         Have a unique project or specific requirements? Contact us for a personalized quote tailored to your needs.
                     </p>
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                        class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                         <span class="mr-3 text-2xl">📝</span>
                         Request Custom Quote
@@ -277,7 +277,7 @@
                         <p class="text-gray-600 mb-8">
                             Fill out your assignment details and get an instant price estimate
                         </p>
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                            class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                             <span class="mr-3 text-2xl">🚀</span>
                             Calculate My Price
@@ -359,7 +359,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                         <span class="mr-4 text-3xl">🚀</span>
                         Start Your Order

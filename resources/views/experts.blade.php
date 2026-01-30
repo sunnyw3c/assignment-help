@@ -90,7 +90,7 @@
             <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
                 Our qualified experts are ready to help you with any academic challenge
             </p>
-            <a href="{{ route('assignments.create') }}" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <a href="{{ route('order') }}" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
                 Request Help Now
             </a>
         </div>
@@ -295,7 +295,7 @@
                             <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                             ${expert.availability}
                         </span>
-                        <a href="{{ route('assignments.create') }}" class="text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors">
+                        <a href="{{ route('order') }}" class="text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors">
                             Request Help →
                         </a>
                     </div>

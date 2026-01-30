@@ -372,7 +372,7 @@
                             Accuracy is paramount in mathematics, and we take pride in delivering solutions that are not only correct but also elegantly presented and thoroughly explained. Every problem undergoes careful verification through multiple checking methods to ensure accuracy. We understand that math assignments often come with tight deadlines, which is why we offer flexible turnaround times from urgent same-day assistance to more extended timelines for complex projects. Our affordable pricing structure makes professional math help accessible to students at all levels, with rates tailored to problem complexity and academic level. With unlimited clarifications, detailed explanations for every step, and round-the-clock customer support, we're committed to helping you master mathematics and achieve academic success. Get started today and experience the difference that expert mathematical guidance can make in your understanding and performance.
                         </p>
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 4]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 4]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">🧮</span>
                                 Get Math Help Now

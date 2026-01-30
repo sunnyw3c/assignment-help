@@ -167,7 +167,7 @@
                 </div>
 
                 <div class="max-w-3xl mx-auto mb-12 px-4">
-                    <form action="{{ route('assignments.create') }}" method="GET" class="relative">
+                    <form action="{{ route('order') }}" method="GET" class="relative">
                         <div class="relative group">
                             <div class="absolute inset-y-0 left-0 pl-4 sm:pl-6 flex items-center pointer-events-none">
                                 <svg class="h-5 w-5 sm:h-6 sm:w-6 text-slate-400 group-focus-within:text-blue-500 transition-colors"
@@ -499,7 +499,7 @@
                                 <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Test
                                     Prep</span>
                             </div>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold text-sm group">
                                 Learn More
                                 <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
@@ -520,7 +520,7 @@
                     <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students across
                         USA who trust Assignment Help USA for their academic needs</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             Get Started Now
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -764,7 +764,7 @@
                         </div>
 
                         <div class="p-6 sm:p-8">
-                            <form action="{{ route('assignments.create') }}" method="GET" class="space-y-4">
+                            <form action="{{ route('order') }}" method="GET" class="space-y-4">
                                 <div class="group">
                                     <label for="subject-search"
                                         class="block text-sm font-bold text-gray-700 mb-2 flex items-center gap-2">
@@ -949,7 +949,7 @@
                                     </button>
 
                                     <button type="button"
-                                        onclick="window.location.href='{{ route('assignments.create') }}'"
+                                        onclick="window.location.href='{{ route('order') }}'"
                                         class="group relative flex-1 sm:flex-none sm:px-8 py-3.5 overflow-hidden rounded-xl
                                                font-black text-base transition-all duration-300
                                                hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2
@@ -1743,7 +1743,7 @@
                 Join 50,000+ college students across USA who trust Assignment Help USA for their academic success.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-10 py-5 rounded-xl text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 inline-block">
                     Get Started - Free Quote
                 </a>
@@ -2050,7 +2050,7 @@
                 <div class="mt-12 text-center">
                     <p class="text-white/80 mb-4">Need help choosing? Our experts are here 24/7</p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="group inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
                             <span>Start Your Order</span>
                             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
@@ -2329,7 +2329,7 @@
             </div>
 
             <div class="text-center mt-16">
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     Get Started Now
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2629,7 +2629,7 @@
                             <span class="text-gray-600">Unlimited free revisions</span>
                         </li>
                     </ul>
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                         Order Now
                     </a>
@@ -2687,7 +2687,7 @@
                             <span class="text-gray-600">Video explanation available</span>
                         </li>
                     </ul>
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="block text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                         Get Help Now
                     </a>
@@ -3149,7 +3149,7 @@
 
             <div class="text-center mt-12">
                 <p class="text-gray-600 mb-6">Can't find your assignment type? <a
-                        href="{{ route('assignments.create') }}"
+                        href="{{ route('order') }}"
                         class="text-blue-600 hover:text-blue-700 font-semibold">Contact us</a> - we handle custom requests
                     too!</p>
             </div>

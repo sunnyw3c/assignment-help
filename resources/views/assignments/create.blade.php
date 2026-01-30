@@ -26,7 +26,112 @@
                 <p class="text-purple-100 mt-2">Fill out the form below to get started</p>
             </div>
 
-            <form action="{{ route('assignments.store') }}" method="POST" enctype="multipart/form-data" class="p-8 space-y-8" x-data="{ assignmentType: '{{ request('assignment_service') ? 'assignment' : 'programming' }}' }">
+            <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data" class="p-8 space-y-8"
+                  x-data="{
+                      assignmentType: '{{ request('assignment_service') ? 'assignment' : 'programming' }}',
+                      serviceId: '{{ request('assignment_service') ?? '' }}',
+                      academicLevel: '',
+                      pages: 1,
+                      wordCount: 0,
+                      deadline: '',
+                      difficulty: 'Beginner',
+                      assignmentTypeValue: '',
+
+                      // Service prices (base price per page)
+                      servicePrices: {!! json_encode(\App\Models\Service::active()->pluck('base_price_per_page', 'id')) !!},
+
+                      // Academic level multipliers
+                      academicMultipliers: {
+                          'high-school': 1.0,
+                          'college': 1.2,
+                          'university': 1.4,
+                          'masters': 1.8,
+                          'phd': 2.2
+                      },
+
+                      // Difficulty multipliers for programming
+                      difficultyMultipliers: {
+                          'Beginner': 1.0,
+                          'Intermediate': 1.4,
+                          'Advanced': 1.8
+                      },
+
+                      // Programming assignment type multipliers
+                      programmingTypeMultipliers: {
+                          'New Project': 1.0,
+                          'Code Debugging': 0.8,
+                          'Code Review': 0.7,
+                          'Algorithm Help': 1.3,
+                          'Tutoring': 1.1,
+                          'Homework': 0.9
+                      },
+
+                      // Calculate deadline urgency multiplier
+                      getUrgencyMultiplier() {
+                          if (!this.deadline) return 1.0;
+                          const deadlineDate = new Date(this.deadline);
+                          const now = new Date();
+                          const hoursUntilDeadline = (deadlineDate - now) / (1000 * 60 * 60);
+
+                          if (hoursUntilDeadline < 0) return 1.5; // Past deadline
+                          if (hoursUntilDeadline <= 6) return 2.0; // 6 hours or less
+                          if (hoursUntilDeadline <= 12) return 1.8; // 12 hours or less
+                          if (hoursUntilDeadline <= 24) return 1.5; // 24 hours or less
+                          if (hoursUntilDeadline <= 48) return 1.3; // 48 hours or less
+                          if (hoursUntilDeadline <= 72) return 1.15; // 3 days or less
+                          if (hoursUntilDeadline <= 168) return 1.0; // 7 days or less
+                          return 0.9; // More than 7 days
+                      },
+
+                      // Calculate total price
+                      get totalPrice() {
+                          let basePrice = 0;
+
+                          if (this.assignmentType === 'assignment') {
+                              // Academic assignment pricing
+                              if (!this.serviceId || !this.servicePrices[this.serviceId]) return 0;
+
+                              const pricePerPage = parseFloat(this.servicePrices[this.serviceId]);
+                              const pageCount = parseInt(this.pages) || 1;
+                              const academicMultiplier = this.academicMultipliers[this.academicLevel] || 1.0;
+
+                              basePrice = pricePerPage * pageCount * academicMultiplier;
+                          } else {
+                              // Programming assignment pricing
+                              const baseProgrammingPrice = 25; // Base price per unit
+                              const pageCount = parseInt(this.pages) || 1;
+                              const difficultyMultiplier = this.difficultyMultipliers[this.difficulty] || 1.0;
+                              const typeMultiplier = this.programmingTypeMultipliers[this.assignmentTypeValue] || 1.0;
+
+                              basePrice = baseProgrammingPrice * pageCount * difficultyMultiplier * typeMultiplier;
+                          }
+
+                          // Apply urgency multiplier
+                          const urgencyMultiplier = this.getUrgencyMultiplier();
+                          const finalPrice = basePrice * urgencyMultiplier;
+
+                          return finalPrice;
+                      },
+
+                      // Get formatted price
+                      get formattedPrice() {
+                          const price = this.totalPrice;
+                          if (price === 0) return '$0.00';
+                          return '$' + price.toFixed(2);
+                      },
+
+                      // Get urgency label
+                      get urgencyLabel() {
+                          const multiplier = this.getUrgencyMultiplier();
+                          if (multiplier >= 2.0) return 'Rush (6 hours)';
+                          if (multiplier >= 1.8) return 'Very Urgent (12 hours)';
+                          if (multiplier >= 1.5) return 'Urgent (24 hours)';
+                          if (multiplier >= 1.3) return 'Short Notice (48 hours)';
+                          if (multiplier >= 1.15) return 'Quick (3 days)';
+                          if (multiplier >= 1.0) return 'Standard (1 week)';
+                          return 'Extended (7+ days)';
+                      }
+                  }">
                 @csrf
 
                 <!-- Service Type Selection -->
@@ -55,7 +160,7 @@
                 <!-- Assignment Service Selection (shown when assignment type is selected) -->
                 <div x-show="assignmentType === 'assignment'" x-transition>
                     <label class="block text-sm font-semibold text-gray-700 mb-3">Assignment Service *</label>
-                    <select name="service_id" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
+                    <select name="service_id" x-model="serviceId" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
                             :required="assignmentType === 'assignment'">
                         <option value="">Select Service Type</option>
                         @php
@@ -73,7 +178,7 @@
                 <!-- Academic Level (shown for assignment services) -->
                 <div x-show="assignmentType === 'assignment'" x-transition>
                     <label class="block text-sm font-semibold text-gray-700 mb-3">Academic Level *</label>
-                    <select name="academic_level" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
+                    <select name="academic_level" x-model="academicLevel" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200"
                             :required="assignmentType === 'assignment'">
                         <option value="">Select Academic Level</option>
                         <option value="high-school">🎓 High School</option>
@@ -110,7 +215,7 @@
 
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-3">Assignment Type *</label>
-                            <select name="assignment_type" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200"
+                            <select name="assignment_type" x-model="assignmentTypeValue" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200"
                                     :required="assignmentType === 'programming'">
                             <option value="">Select Assignment Type</option>
                             <option value="New Project" {{ old('assignment_type') == 'New Project' ? 'selected' : '' }}>💻 New Project/Program</option>
@@ -145,7 +250,7 @@
 
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-3">Word Count (Optional)</label>
-                            <input type="number" name="word_count" value="{{ old('word_count') }}" min="0"
+                            <input type="number" name="word_count" x-model="wordCount" value="{{ old('word_count') }}" min="0"
                                    placeholder="e.g., 1500"
                                    class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200">
                             @error('word_count') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
@@ -165,7 +270,7 @@
 
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-3">Difficulty Level</label>
-                        <select name="difficulty" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
+                        <select name="difficulty" x-model="difficulty" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
                             <option value="Beginner" {{ old('difficulty') == 'Beginner' ? 'selected' : '' }}>🟢 Beginner</option>
                             <option value="Intermediate" {{ old('difficulty') == 'Intermediate' ? 'selected' : '' }}>🟡 Intermediate</option>
                             <option value="Advanced" {{ old('difficulty') == 'Advanced' ? 'selected' : '' }}>🔴 Advanced</option>
@@ -178,19 +283,39 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-3">Deadline *</label>
-                        <input type="datetime-local" name="deadline" value="{{ old('deadline') }}" required
+                        <input type="datetime-local" name="deadline" x-model="deadline" value="{{ old('deadline') }}" required
                                class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
                         @error('deadline') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
                     </div>
 
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-3">Estimated Lines of Code</label>
-                        <select name="pages" class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
-                            <option value="1" {{ old('pages') == '1' ? 'selected' : '' }}>Under 50 lines</option>
-                            <option value="2" {{ old('pages') == '2' ? 'selected' : '' }}>50-200 lines</option>
-                            <option value="3" {{ old('pages') == '3' ? 'selected' : '' }}>200-500 lines</option>
-                            <option value="5" {{ old('pages') == '5' ? 'selected' : '' }}>500-1000 lines</option>
-                            <option value="10" {{ old('pages') == '10' ? 'selected' : '' }}>1000+ lines</option>
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">
+                            <span x-show="assignmentType === 'programming'">Estimated Lines of Code</span>
+                            <span x-show="assignmentType === 'assignment'">Number of Pages</span>
+                        </label>
+
+                        <!-- Programming: Lines of Code -->
+                        <select name="pages" x-model="pages" x-show="assignmentType === 'programming'"
+                                class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
+                            <option value="1">Under 50 lines</option>
+                            <option value="2">50-200 lines</option>
+                            <option value="3">200-500 lines</option>
+                            <option value="5">500-1000 lines</option>
+                            <option value="10">1000+ lines</option>
+                        </select>
+
+                        <!-- Assignment: Number of Pages -->
+                        <select name="pages" x-model="pages" x-show="assignmentType === 'assignment'"
+                                class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200">
+                            <option value="1">1 page</option>
+                            <option value="2">2 pages</option>
+                            <option value="3">3 pages</option>
+                            <option value="4">4 pages</option>
+                            <option value="5">5 pages</option>
+                            <option value="7">7 pages</option>
+                            <option value="10">10 pages</option>
+                            <option value="15">15 pages</option>
+                            <option value="20">20+ pages</option>
                         </select>
                         @error('pages') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
                     </div>
@@ -229,6 +354,66 @@
                               placeholder="Any additional instructions or specific requirements from your instructor..."
                               class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-blue-500 focus:outline-none transition-colors duration-200 text-sm">{{ old('specific_requirements') }}</textarea>
                     @error('specific_requirements') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
+                </div>
+
+                <!-- Dynamic Price Display -->
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-2 border-green-300 shadow-lg" x-show="totalPrice > 0" x-transition>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">Estimated Price</h3>
+                            <p class="text-sm text-gray-600">
+                                <span x-text="urgencyLabel"></span>
+                                <span x-show="assignmentType === 'assignment' && academicLevel">
+                                    • <span x-text="academicLevel.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')"></span>
+                                </span>
+                                <span x-show="assignmentType === 'programming' && difficulty">
+                                    • <span x-text="difficulty"></span> Level
+                                </span>
+                            </p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-bold text-green-600" x-text="formattedPrice"></div>
+                            <p class="text-xs text-gray-500 mt-1">Final price may vary</p>
+                        </div>
+                    </div>
+
+                    <!-- Price Breakdown -->
+                    <div class="mt-4 pt-4 border-t border-green-200">
+                        <div class="text-xs text-gray-600 space-y-1">
+                            <div class="flex justify-between" x-show="assignmentType === 'assignment' && serviceId">
+                                <span>Base price per page:</span>
+                                <span x-text="'$' + (servicePrices[serviceId] || 0).toFixed(2)"></span>
+                            </div>
+                            <div class="flex justify-between" x-show="assignmentType === 'programming'">
+                                <span>Base programming rate:</span>
+                                <span>$25.00 per unit</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span x-text="assignmentType === 'assignment' ? 'Pages:' : 'Complexity units:'"></span>
+                                <span x-text="pages"></span>
+                            </div>
+                            <div class="flex justify-between" x-show="assignmentType === 'assignment' && academicLevel">
+                                <span>Academic level multiplier:</span>
+                                <span x-text="'×' + (academicMultipliers[academicLevel] || 1.0).toFixed(1)"></span>
+                            </div>
+                            <div class="flex justify-between" x-show="assignmentType === 'programming' && difficulty">
+                                <span>Difficulty multiplier:</span>
+                                <span x-text="'×' + (difficultyMultipliers[difficulty] || 1.0).toFixed(1)"></span>
+                            </div>
+                            <div class="flex justify-between" x-show="deadline">
+                                <span>Urgency multiplier:</span>
+                                <span x-text="'×' + getUrgencyMultiplier().toFixed(2)"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Badge -->
+                    <div class="mt-4 flex items-center justify-center text-xs text-gray-600">
+                        <svg class="w-4 h-4 text-green-600 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Price calculated based on your requirements</span>
+                    </div>
                 </div>
 
                 <!-- Budget Section -->

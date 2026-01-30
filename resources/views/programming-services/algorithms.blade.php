@@ -223,7 +223,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="group relative bg-white text-purple-700 px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 text-center overflow-hidden">
                                 <span class="relative z-10 flex items-center justify-center gap-2">
                                     Get Help Now
@@ -740,7 +740,7 @@
                                     <span class="text-gray-700">Code explanation</span>
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 text-center overflow-hidden">
                                 <span class="relative z-10">Get Started</span>
                                 <div class="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
@@ -782,7 +782,7 @@
                                     <span class="text-gray-700">Test cases included</span>
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 text-center overflow-hidden shadow-lg">
                                 <span class="relative z-10 flex items-center justify-center gap-2">
                                     Get Started
@@ -825,7 +825,7 @@
                                     <span class="text-gray-700">Performance optimization</span>
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="group/btn relative block w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center overflow-hidden">
                                 <span class="relative z-10">Get Started</span>
                                 <div class="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
@@ -2002,7 +2002,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="group relative bg-white text-purple-700 px-10 py-5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/50 overflow-hidden">
                             <span class="relative z-10 flex items-center justify-center gap-2">
                                 Start Solving Today

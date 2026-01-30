@@ -133,7 +133,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl text-center">
                                 Get Help Now
                             </a>
@@ -541,7 +541,7 @@
                                     Documentation included
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -579,7 +579,7 @@
                                     Visualization reports
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -612,7 +612,7 @@
                                     API integration
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -1086,7 +1086,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your ML Model?</h2>
                 <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully
                     completed their machine learning projects with our expert help.</p>
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                     Start Your ML Project Today
                 </a>

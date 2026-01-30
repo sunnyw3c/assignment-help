@@ -133,7 +133,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="{{ route('assignments.create', ['assignment_service' => $service->id]) }}"
+                        <a href="{{ route('order', ['assignment_service' => $service->id]) }}"
                             class="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                             <span class="mr-2">📝</span>
                             Order Now
@@ -342,7 +342,7 @@
                             @endforeach
                         </ul>
 
-                        <a href="{{ route('assignments.create', ['assignment_service' => $service->id]) }}"
+                        <a href="{{ route('order', ['assignment_service' => $service->id]) }}"
                             class="w-full block text-center {{ $key === 1 ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900' }} py-4 rounded-2xl font-bold text-lg transition-all duration-300">
                             Get Started
                         </a>
@@ -462,7 +462,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="{{ route('assignments.create', ['assignment_service' => $service->id]) }}"
+                <a href="{{ route('order', ['assignment_service' => $service->id]) }}"
                     class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     <span class="mr-4 text-3xl">📝</span>
                     Order Now

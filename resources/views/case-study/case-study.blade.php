@@ -633,7 +633,7 @@
                             Join thousands of business students who've achieved top grades with our professional case study analysis service. MBA-qualified analysts, comprehensive frameworks, strategic insights, financial expertise, and actionable recommendations. Your business education success starts here.
                         </p>
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 6]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 6]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
                                 Order Your Case Study Analysis Today

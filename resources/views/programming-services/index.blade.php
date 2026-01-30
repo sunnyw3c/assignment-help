@@ -73,7 +73,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                             <span class="mr-2">🚀</span>
                             Get Help Now
@@ -315,7 +315,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </a>
-                                <a href="{{ route('assignments.create') }}"
+                                <a href="{{ route('order') }}"
                                     class="group/btn bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center">
                                     <span class="mr-2">🚀</span>
                                     Get Help
@@ -406,7 +406,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </a>
-                                <a href="{{ route('assignments.create') }}"
+                                <a href="{{ route('order') }}"
                                     class="group/btn bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center">
                                     <span class="mr-2">🚀</span>
                                     Get Help
@@ -529,7 +529,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </a>
-                                <a href="{{ route('assignments.create') }}" class="group/btn flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                <a href="{{ route('order') }}" class="group/btn flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
                                     <span class="mr-2">🚀</span>
                                     Get Help
                                     <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -655,7 +655,7 @@
                         Many modern applications use PHP for the web frontend and Java for backend microservices. We can help you build full-stack solutions combining both technologies.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl inline-flex items-center justify-center">
                             <span class="mr-2">💬</span>
                             Discuss Your Project
@@ -957,7 +957,7 @@
             <!-- Bottom Call-to-Action -->
             <div class="text-center mt-16">
                 <div class="inline-flex flex-col sm:flex-row items-center gap-4">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
                         <span class="mr-3">🚀</span>
                         Start Your Project Journey
@@ -1038,7 +1038,7 @@
                     Join thousands of students and professionals who trust our expert development services.
                     Get high-quality solutions delivered on time, every time.
                 </p>
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                    class="group inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     <span class="mr-4 text-3xl">🚀</span>
                     Start Your Project Now

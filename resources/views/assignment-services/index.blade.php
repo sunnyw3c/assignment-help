@@ -77,7 +77,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                             <span class="mr-2">📝</span>
                             Order Assignment Help
@@ -334,7 +334,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </a>
-                                <a href="{{ route('assignments.create', ['assignment_service' => $service->id]) }}" class="group/btn flex-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="group/btn flex-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
                                     <span class="mr-2">📝</span>
                                     Order Now
                                     <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -469,7 +469,7 @@
                     Join thousands of students who trust our expert assignment help services.
                     Get high-quality, plagiarism-free assignments delivered on time, every time.
                 </p>
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                    class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     <span class="mr-4 text-3xl">📝</span>
                     Order Assignment Help Now

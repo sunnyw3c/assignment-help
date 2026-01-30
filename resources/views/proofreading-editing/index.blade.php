@@ -677,7 +677,7 @@
                             Join thousands of students who've improved their grades with our professional editing service. Expert editors, comprehensive quality checks, fast turnaround, and satisfaction guaranteed. Your academic success starts with polished writing.
                         </p>
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 9]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 9]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
                                 Get Your Document Edited Today

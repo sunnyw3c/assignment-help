@@ -645,7 +645,7 @@
                             Join thousands of graduate students who've built strong theoretical foundations with our professional literature review service. Expert researchers, comprehensive synthesis, critical analysis, gap identification, and scholarly writing. Your research success starts with a solid literature review.
                         </p>
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 7]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 7]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
                                 Order Your Literature Review Today

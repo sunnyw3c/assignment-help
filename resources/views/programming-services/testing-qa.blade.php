@@ -119,7 +119,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl text-center">
                                 Get Testing Help Now
                             </a>
@@ -319,7 +319,7 @@
                                     Test documentation
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -357,7 +357,7 @@
                                     CI/CD integration
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -390,7 +390,7 @@
                                     QA strategy consulting
                                 </li>
                             </ul>
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="block w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 text-center">
                                 Get Started
                             </a>
@@ -552,7 +552,7 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Test Your Code?</h2>
                 <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Join thousands of developers who have improved their software quality with our expert testing services.</p>
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                     Get Testing Help Today
                 </a>

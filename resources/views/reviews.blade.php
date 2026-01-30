@@ -80,7 +80,7 @@
             <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Experience the same quality service that thousands of students trust for their academic success
             </p>
-            <a href="{{ route('assignments.create') }}" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <a href="{{ route('order') }}" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
                 Get Started Today
             </a>
         </div>

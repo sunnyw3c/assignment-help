@@ -35,7 +35,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         <span class="mr-2">🚀</span>
                         Get Help Now
@@ -135,7 +135,7 @@
                                     class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm">
                                     Learn More
                                 </a>
-                                <a href="{{ route('assignments.create') }}"
+                                <a href="{{ route('order') }}"
                                     class="flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-center text-sm">
                                     Get Help
                                 </a>
@@ -208,7 +208,7 @@
                                     class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold transition-all duration-300 text-center text-sm">
                                     Learn More
                                 </a>
-                                <a href="{{ route('assignments.create') }}"
+                                <a href="{{ route('order') }}"
                                     class="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-center text-sm">
                                     Order Now
                                 </a>
@@ -282,7 +282,7 @@
                 needs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                     class="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-50 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
                     <span class="mr-2">🚀</span>
                     Get Help Now

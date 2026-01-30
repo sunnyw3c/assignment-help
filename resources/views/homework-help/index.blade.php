@@ -839,7 +839,7 @@
                             Don't stress about homework deadlines. Join 10,000+ students who get expert help with math, science, English, and 50+ other subjects. Step-by-step solutions, affordable prices, fast delivery. Get 20% off your first order.
                         </p>
                         <div class="text-center">
-                            <a href="{{ route('assignments.create', ['assignment_service' => $service->id ?? 3]) }}"
+                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 3]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
                                 Get Homework Help - 20% Off First Order

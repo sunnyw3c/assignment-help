@@ -302,7 +302,7 @@
                     </div>
                 </div>
 
-                <a href="{{ route('assignments.create') }}"
+                <a href="{{ route('order') }}"
                    class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     <span class="mr-3 text-2xl">🚀</span>
                     Get Started Now
@@ -330,7 +330,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
                         <span class="mr-4 text-3xl">🚀</span>
                         Start Your Order

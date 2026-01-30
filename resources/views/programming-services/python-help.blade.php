@@ -120,7 +120,7 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="{{ route('assignments.create') }}"
+                            <a href="{{ route('order') }}"
                                 class="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl text-center">
                                 Get Help Now
                             </a>
@@ -478,7 +478,7 @@
                                 <span class="text-gray-600">Well-documented code</span>
                             </li>
                         </ul>
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="block w-full text-center bg-gradient-to-r from-blue-600 to-green-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-200">
                             Get Started
                         </a>
@@ -521,7 +521,7 @@
                                 <span>Professional architecture</span>
                             </li>
                         </ul>
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="block w-full text-center bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200">
                             Get Started
                         </a>
@@ -566,7 +566,7 @@
                                 <span class="text-gray-600">Comprehensive documentation</span>
                             </li>
                         </ul>
-                        <a href="{{ route('assignments.create') }}"
+                        <a href="{{ route('order') }}"
                             class="block w-full text-center bg-gradient-to-r from-blue-600 to-green-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-200">
                             Get Started
                         </a>
@@ -575,7 +575,7 @@
 
                 <div class="mt-12 text-center">
                     <p class="text-gray-600 mb-4">Need a custom solution? Contact us for a personalized quote.</p>
-                    <a href="{{ route('assignments.create') }}" class="text-blue-600 font-semibold hover:text-blue-700">
+                    <a href="{{ route('order') }}" class="text-blue-600 font-semibold hover:text-blue-700">
                         Request Custom Quote →
                     </a>
                 </div>
@@ -804,7 +804,7 @@
                     Join 1500+ students who have successfully completed their Python programming projects with our expert help.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('assignments.create') }}"
+                    <a href="{{ route('order') }}"
                         class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl">
                         Start Your Project Now
                     </a>
