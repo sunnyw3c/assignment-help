@@ -1437,12 +1437,7 @@
         </div>
     </section>
 
-<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-white">
-=======
-    <!-- Services Categories Section -->
-    <section class="py-20 bg-white">
->>>>>>> Stashed changes
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert
@@ -1591,7 +1586,7 @@
     </section> --}}
 
     <!-- Why Choose Us Section -->
-    <section class="py-20 bg-white">
+    {{-- <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Students Trust Assignment Help
@@ -1655,10 +1650,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Student Testimonials Section -->
-    <section class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+    {{-- <section class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Students Are Saying</h2>
@@ -1733,7 +1728,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
@@ -2000,11 +1995,6 @@
                     class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-xl">
                 </div>
 
-<<<<<<< Updated upstream
-
-=======
-                <!-- Calculator -->
->>>>>>> Stashed changes
                 <div class="relative">
                     <livewire:budget-calculator />
                 </div>
@@ -2551,12 +2541,7 @@
         </div>
     </section>
 
-<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-=======
-    <!-- Pricing Information Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
->>>>>>> Stashed changes
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <div
@@ -3156,14 +3141,8 @@
         </div>
     </section>
 
-<<<<<<< Updated upstream
     {{-- <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
 
-=======
-    <!-- Trust & Safety Section -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
-        <!-- Decorative Elements -->
->>>>>>> Stashed changes
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>

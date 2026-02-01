@@ -40,7 +40,7 @@
             <div>
                 <h4 class="text-lg font-semibold mb-6 text-gray-200 tracking-wider">Get In Touch</h4>
                 <div class="space-y-4 text-sm">
-                    <p class="flex items-center"><svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> support@trending-tutor.com</p>
+                    <p class="flex items-center"><svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> support@assignmenthelpusa.com</p>
                     <p class="flex items-center"><svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> +1 (555) 123-4567</p>
                 </div>
                 <div class="flex space-x-4 mt-8">
@@ -55,7 +55,7 @@
         <div class="border-t border-gray-800 mt-12 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-sm">
                 <p class="text-gray-500 mb-4 md:mb-0">
-                    &copy; {{ date('Y') }} Trending Tutor. All Rights Reserved.
+                    &copy; {{ date('Y') }} Assignment Help USA. All Rights Reserved.
                 </p>
                 <div class="flex space-x-6 text-gray-500">
                     <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
