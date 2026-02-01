@@ -8,8 +8,7 @@
     <!-- Structured Data for Service -->
     
 
-    @if($details && $details->faqs)
-    <!-- FAQ Structured Data -->
+    {{-- @if($details && $details->faqs)
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -29,7 +28,7 @@
     }
     </script>
     @endif
-
+ --}}
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-20 pb-16" role="banner">
         <!-- Background Elements -->
