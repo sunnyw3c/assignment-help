@@ -15,21 +15,7 @@
     <meta property="twitter:title" content="Argumentative Essay Writing Service | Expert Academic Writers">
     <meta property="twitter:description" content="Get expert help with argumentative essays. Strong arguments, solid evidence, perfect structure.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Argumentative Essay Writing Service",
-        "description": "Professional argumentative essay writing service with expert writers providing custom, well-researched argumentative essays with strong thesis statements and compelling evidence.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Argumentative Essay Writing",
-        "areaServed": "Worldwide"
-    }
-    </script>
+ 
 @endpush
 
 @section('custom-content')

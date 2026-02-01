@@ -15,55 +15,6 @@
     <meta property="twitter:title" content="Professional Proofreading & Editing Service | Academic Experts">
     <meta property="twitter:description" content="Expert proofreading and editing for academic papers. Grammar, style, citations, and formatting checked by professionals.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Proofreading & Editing Service",
-        "description": "Professional proofreading and editing service with expert editors providing comprehensive grammar correction, style improvement, citation checking, formatting review, and clarity enhancement for academic papers, essays, theses, dissertations, and manuscripts across all disciplines.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Proofreading and Editing",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Editing Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Proofreading"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Copy Editing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Substantive Editing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Citation Formatting"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
 @endpush
 
 @section('custom-content')

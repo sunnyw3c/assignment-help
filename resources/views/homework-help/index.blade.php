@@ -15,48 +15,7 @@
     <meta property="twitter:title" content="Professional Homework Help Service | Expert Tutors">
     <meta property="twitter:description" content="Expert homework help across all subjects. Step-by-step solutions with clear explanations. Fast delivery, affordable prices.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Homework Help Service",
-        "description": "Professional homework help service with qualified tutors providing step-by-step solutions across all subjects including math, science, English, history, and more.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Homework Assistance",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Homework Help Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Math Homework Help"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Science Homework Help"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "English Homework Help"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+
 @endpush
 
 @section('custom-content')

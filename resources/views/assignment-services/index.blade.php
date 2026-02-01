@@ -6,7 +6,7 @@
 
 @section('content')
     <!-- Structured Data for Assignment Services -->
-    <script type="application/ld+json">
+    {{-- <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ItemList",
@@ -44,7 +44,7 @@
             @endforeach
         ]
     }
-    </script>
+    </script> --}}
 
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" role="banner">

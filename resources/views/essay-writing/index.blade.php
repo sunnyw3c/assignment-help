@@ -15,48 +15,7 @@
     <meta property="twitter:title" content="Professional Essay Writing Service | Expert Academic Writers">
     <meta property="twitter:description" content="Get expert essay writing help from professional writers. 100% original, plagiarism-free essays with 24/7 support.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Essay Writing Service",
-        "description": "Professional essay writing service with expert academic writers providing custom, plagiarism-free essays across all academic levels and disciplines.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Essay Writing",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Essay Writing Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Argumentative Essay Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Research Essay Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Persuasive Essay Writing"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+    
 @endpush
 
 @section('custom-content')

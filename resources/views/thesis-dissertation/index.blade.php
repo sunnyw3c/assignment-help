@@ -15,55 +15,7 @@
     <meta property="twitter:title" content="Professional Thesis & Dissertation Writing Service | PhD Experts">
     <meta property="twitter:description" content="Expert thesis and dissertation help from PhD scholars. Original research with rigorous methodology and analysis.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Thesis & Dissertation Writing Service",
-        "description": "Professional thesis and dissertation writing service with PhD scholars providing comprehensive research assistance including full dissertations, individual chapters, proposals, literature reviews, methodology, and data analysis across all academic disciplines.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Thesis and Dissertation Writing",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Thesis & Dissertation Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "PhD Dissertation Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Master's Thesis Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Dissertation Proposal Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Dissertation Editing & Proofreading"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+  
 @endpush
 
 @section('custom-content')

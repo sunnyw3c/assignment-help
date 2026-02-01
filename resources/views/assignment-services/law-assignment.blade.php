@@ -15,55 +15,7 @@
     <meta property="twitter:title" content="Professional Law Assignment Help | Expert Legal Writers">
     <meta property="twitter:description" content="Expert law assignment help for case briefs, legal research, and all law school assignments.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Law Assignment Help Service",
-        "description": "Professional law assignment help service with qualified legal experts providing comprehensive assistance with case briefs, legal research, IRAC analysis, memorandums, contracts, constitutional law, criminal law, tort law, property law, and all areas of legal studies for law students at undergraduate, graduate, and law school levels.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Law Assignment Assistance",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Law Assignment Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Legal Case Brief Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Legal Research & Analysis"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "IRAC Method Analysis"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Legal Memorandum Writing"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+    
 @endpush
 
 @section('custom-content')

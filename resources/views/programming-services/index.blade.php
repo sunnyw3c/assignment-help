@@ -5,41 +5,6 @@
 @section('keywords', 'programming services, web development, mobile app development, machine learning, API development, code review, debugging, algorithm help')
 
 @section('content')
-    <!-- Structured Data for Programming Services -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Programming Services We Offer",
-        "description": "Professional programming and development services for students and professionals",
-        "numberOfItems": {{ count($services) }},
-        "itemListElement": [
-            @foreach($services as $index => $service)
-            {
-                "@type": "ListItem",
-                "position": {{ $index + 1 }},
-                "item": {
-                    "@type": "Service",
-                    "name": "{{ $service['name'] }}",
-                    "description": "{{ $service['description'] }}",
-                    "provider": {
-                        "@type": "Organization",
-                        "name": "Trending Tutor"
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "priceSpecification": {
-                            "@type": "PriceSpecification",
-                            "price": "{{ str_replace('$', '', $service['price_from']) }}",
-                            "priceCurrency": "USD"
-                        }
-                    }
-                }
-            }@if(!$loop->last),@endif
-            @endforeach
-        ]
-    }
-    </script>
 
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50" role="banner">

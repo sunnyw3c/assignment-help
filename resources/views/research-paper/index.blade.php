@@ -21,50 +21,7 @@
         <meta property="twitter:description"
             content="Expert research paper help from PhD-qualified researchers. Original research with proper methodology and citations.">
 
-        <!-- Schema.org markup for Google -->
-        <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Research Paper Writing Service",
-        "description": "Professional research paper writing service with PhD-qualified researchers providing original, well-researched academic papers across all disciplines and academic levels.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Research Paper Writing",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Research Paper Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Research Paper Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Literature Review Writing"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Thesis Writing"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
-    @endpush
-
+   
 @section('custom-content')
     <!-- Comprehensive Research Paper Content Section -->
     <section class="py-20 bg-white" itemscope itemtype="https://schema.org/Service">

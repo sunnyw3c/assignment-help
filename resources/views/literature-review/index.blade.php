@@ -15,55 +15,7 @@
     <meta property="twitter:title" content="Professional Literature Review Writing Service | Academic Experts">
     <meta property="twitter:description" content="Expert literature review writing with synthesis, critical analysis, and research gap identification for all disciplines.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Literature Review Writing Service",
-        "description": "Professional literature review writing service with academic researchers providing comprehensive literature synthesis, critical analysis, gap identification, and systematic reviews for research papers, theses, and dissertations across all academic disciplines.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Academic Literature Review Writing",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Literature Review Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Research Paper Literature Review"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Thesis Literature Review"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Systematic Literature Review"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Annotated Bibliography"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+ 
 @endpush
 
 @section('custom-content')

@@ -6,37 +6,7 @@
 
 @section('content')
     <!-- Structured Data for Service -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "{{ $service->name }}",
-        "description": "{{ $service->short_description }}",
-        "provider": {
-            "@type": "Organization",
-            "name": "AssignmentHelp"
-        },
-        "areaServed": "Global",
-        "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "{{ route('services.assignment.show', $service->slug) }}"
-        },
-        "offers": {
-            "@type": "Offer",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "{{ $service->base_price_per_page }}",
-                "priceCurrency": "USD",
-                "priceType": "https://schema.org/Minimum"
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "{{ $service->rating }}",
-            "ratingCount": "{{ $service->orders_completed }}"
-        }
-    }
-    </script>
+    
 
     @if($details && $details->faqs)
     <!-- FAQ Structured Data -->

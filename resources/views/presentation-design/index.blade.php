@@ -15,55 +15,7 @@
     <meta property="twitter:title" content="Professional Presentation Design Service | PowerPoint Experts">
     <meta property="twitter:description" content="Expert presentation design for academic and business needs. Visual design, engaging content, and professional layouts.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Presentation Design Service",
-        "description": "Professional presentation design service with expert designers creating visually stunning PowerPoint, Google Slides, and Keynote presentations with engaging content, professional layouts, custom graphics, charts, animations, and speaker notes for academic and business presentations.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Presentation and Slide Design",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Presentation Design Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "PowerPoint Design"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Google Slides Design"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Academic Presentation"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Business Pitch Deck"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+
 @endpush
 
 @section('custom-content')

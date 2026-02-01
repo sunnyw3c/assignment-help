@@ -15,55 +15,7 @@
     <meta property="twitter:title" content="Professional Case Study Analysis Service | Business Experts">
     <meta property="twitter:description" content="Expert case study analysis for business and management courses. SWOT analysis, strategic recommendations, and more.">
 
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Case Study Analysis Service",
-        "description": "Professional case study analysis service with business experts providing comprehensive strategic analysis including SWOT, PESTEL, Porter's Five Forces, financial analysis, and strategic recommendations for business, management, and MBA courses across all industries.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Assignment Help Online"
-        },
-        "serviceType": "Business Case Study Analysis",
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Case Study Analysis Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Business Case Study Analysis"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "SWOT Analysis"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Strategic Recommendations"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Financial Analysis"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
+   
 @endpush
 
 @section('custom-content')
