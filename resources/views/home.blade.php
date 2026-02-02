@@ -12,9 +12,15 @@
 
 @section('content')
    
-    <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden" itemscope
+    <section class="relative bg-gradient-to-br from-slate-900 via-blue-900/30 to-slate-900 overflow-hidden" itemscope
         itemtype="https://schema.org/Service">
+        <!-- Animated gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-purple-600/10 to-emerald-600/10 animate-gradient-shift"></div>
         <div class="absolute inset-0 bg-slate-900/50 bg-grid-pattern-corporate"></div>
+
+        <!-- Radial gradient spotlights -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slower"></div>
 
         <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-15">
             <div class="absolute top-20 left-10 hidden lg:block animate-float-slow">
@@ -126,72 +132,87 @@
         <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-15 sm:py-10 lg:py-15">
             <div class="max-w-5xl mx-auto text-center">
 
-                <div class="flex items-center justify-center gap-4 flex-wrap mb-12">
+                <!-- Enhanced trust badges with animations -->
+                <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap mb-12 animate-fade-in-up">
                     <div
-                        class="flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-slate-700 hover:border-slate-600 transition-all">
-                        <span class="text-amber-400 text-xs">⭐⭐⭐⭐⭐</span>
-                        <span class="text-slate-200 font-semibold text-sm">4.9/5 Rating</span>
+                        class="flex items-center gap-2 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-xl border border-amber-500/30 hover:border-amber-500/60 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 group">
+                        <span class="text-amber-400 text-sm sm:text-base group-hover:scale-110 transition-transform">⭐⭐⭐⭐⭐</span>
+                        <span class="text-white font-bold text-sm sm:text-base">4.9/5 Rating</span>
                     </div>
                     <div
-                        class="flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-slate-700 hover:border-slate-600 transition-all">
-                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                        class="flex items-center gap-2 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-xl border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20 group">
+                        <svg class="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                         </svg>
-                        <span class="text-slate-200 font-semibold text-sm">50,000+ Students Served</span>
+                        <span class="text-white font-bold text-sm sm:text-base">50,000+ Students</span>
                     </div>
                     <div
-                        class="flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm px-5 py-2.5 rounded-lg border border-slate-700 hover:border-slate-600 transition-all">
-                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        class="flex items-center gap-2 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-xl border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 group">
+                        <svg class="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span class="text-slate-200 font-semibold text-sm">BBB Accredited</span>
+                        <span class="text-white font-bold text-sm sm:text-base">BBB Accredited</span>
                     </div>
                 </div>
 
-                <div class="space-y-6 mb-12">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight px-4"
+                <div class="space-y-8 mb-12 animate-fade-in-up animation-delay-200">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight px-4"
                         itemprop="name">
-                        Assignment Help USA 
-                        <span class="block mt-3 text-blue-400 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
-                            Get Better Grades Today
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer">
+                            Assignment Help USA
+                        </span>
+                        <span class="block mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+                            <span class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-gradient-x">
+                                Get Better Grades Today
+                            </span>
                         </span>
                     </h1>
 
-                    <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl mx-auto px-4"
+                    <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto px-4"
                         itemprop="description">
-                        Struggling with tight deadlines, complex topics, or intense academic pressure? Assignment Help USA provides reliable, plagiarism-free, and affordable assistance tailored to the American curriculum. Whether you are an undergraduate, postgraduate, or PhD scholar, our subject-matter experts are ready to help you succeed. Get the expert support you need to boost your GPA and submit every project on time.
+                        <span class="font-medium text-blue-300">Struggling with tight deadlines, complex topics, or intense academic pressure?</span>
+                        Assignment Help USA provides reliable, <span class="font-semibold text-emerald-400">plagiarism-free</span>, and affordable assistance tailored to the American curriculum. Whether you are an undergraduate, postgraduate, or PhD scholar, our subject-matter experts are ready to help you succeed.
                     </p>
                 </div>
 
-                <div class="max-w-3xl mx-auto mb-12 px-4">
+                <div class="max-w-3xl mx-auto mb-12 px-4 animate-fade-in-up animation-delay-400">
                     <form action="{{ route('order') }}" method="GET" class="relative">
+                        <!-- Glassmorphism search container -->
                         <div class="relative group">
-                            <div class="absolute inset-y-0 left-0 pl-4 sm:pl-6 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 sm:h-6 sm:w-6 text-slate-400 group-focus-within:text-blue-500 transition-colors"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                            </div>
+                            <!-- Glow effect on focus -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur-lg opacity-0 group-focus-within:opacity-30 transition duration-500"></div>
 
-                            <input type="text" name="subject" id="hero-subject-search"
-                                class="block w-full pl-12 sm:pl-16 pr-4 sm:pr-32 py-4 sm:py-5 text-base sm:text-lg text-gray-900 bg-white border-2 border-slate-600 rounded-xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder-slate-400 shadow-2xl"
-                                placeholder="What do you need help with?" autocomplete="off" />
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 sm:pl-6 flex items-center pointer-events-none z-10">
+                                    <svg class="h-5 w-5 sm:h-6 sm:w-6 text-slate-400 group-focus-within:text-blue-500 transition-colors duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
 
-                            <div class="hidden sm:flex absolute inset-y-0 right-0 items-center pr-3">
-                                <button type="submit"
-                                    class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                                    Search
-                                </button>
+                                <input type="text" name="subject" id="hero-subject-search"
+                                    class="relative block w-full pl-12 sm:pl-16 pr-4 sm:pr-32 py-5 sm:py-6 text-base sm:text-lg text-gray-900 font-medium bg-white/95 backdrop-blur-xl border-2 border-slate-300 rounded-xl sm:rounded-2xl focus:ring-4 focus:ring-blue-500/30 focus:border-blue-500 transition-all placeholder-slate-500 shadow-2xl hover:shadow-blue-500/10"
+                                    placeholder="What do you need help with?" autocomplete="off" />
+
+                                <div class="hidden sm:flex absolute inset-y-0 right-0 items-center pr-2">
+                                    <button type="submit"
+                                        class="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
+                                        <span>Search</span>
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="sm:hidden mt-3">
+                        <div class="sm:hidden mt-4">
                             <button type="submit"
-                                class="w-full px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                class="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -200,48 +221,92 @@
                             </button>
                         </div>
 
-                        <div class="mt-6">
+                        <!-- Popular subjects with glassmorphism -->
+                        <div class="mt-8">
                             <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
                                 <span
-                                    class="text-slate-300 text-xs sm:text-sm font-medium w-full sm:w-auto text-center sm:text-left mb-2 sm:mb-0">Popular:</span>
+                                    class="text-slate-200 text-xs sm:text-sm font-semibold w-full sm:w-auto text-center sm:text-left mb-3 sm:mb-0 flex items-center justify-center sm:justify-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    Popular Subjects:
+                                </span>
                                 <a href="{{ route('services.programming.index') }}?subject=python"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-blue-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
                                     Python
                                 </a>
                                 <a href="{{ route('services.programming.index') }}?subject=java"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-emerald-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20">
                                     Java
                                 </a>
                                 <a href="{{ route('services.assignment.index') }}?subject=calculus"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-purple-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
                                     Calculus
                                 </a>
                                 <a href="{{ route('services.assignment.index') }}?subject=essay"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-cyan-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20">
                                     Essay Writing
                                 </a>
                                 <a href="{{ route('services.programming.index') }}?subject=cpp"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-orange-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
                                     C++
                                 </a>
                                 <a href="{{ route('services.assignment.index') }}?subject=statistics"
-                                    class="px-3 sm:px-4 py-1.5 sm:py-2 bg-slate-800/60 hover:bg-slate-700 border border-slate-600 hover:border-slate-500 text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105">
+                                    class="px-4 sm:px-5 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 hover:border-pink-400/50 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
                                     Statistics
                                 </a>
                             </div>
                         </div>
                     </form>
+
+                    <!-- Quick Stats Section with Glassmorphism -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto px-4 animate-fade-in-up animation-delay-500">
+                        <div class="relative group">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
+                                <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">98%</div>
+                                <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">On-Time Delivery</div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-emerald-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20">
+                                <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">100%</div>
+                                <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Plagiarism-Free</div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+                                <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">24/7</div>
+                                <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Expert Support</div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20">
+                                <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">A+</div>
+                                <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Average Grade</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div
-                    class="inline-flex items-center gap-3 bg-emerald-500/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-emerald-500/30 hover:border-emerald-500/50 transition-all">
-                    <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="text-slate-200 font-medium text-sm">Money-Back Guarantee • Free Revisions •
-                        Plagiarism-Free</span>
+                <!-- Enhanced guarantee badge with glassmorphism -->
+                <div class="animate-fade-in-up animation-delay-600">
+                    <div class="relative inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/20 via-blue-500/20 to-emerald-500/20 backdrop-blur-md px-6 sm:px-8 py-4 rounded-xl border border-white/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 group shadow-lg hover:shadow-emerald-500/30">
+                        <!-- Animated background glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                        <svg class="relative w-6 h-6 text-emerald-400 flex-shrink-0 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="relative text-white font-bold text-sm sm:text-base flex items-center gap-2 flex-wrap justify-center">
+                            <span class="inline-flex items-center">Money-Back Guarantee</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="inline-flex items-center">Free Revisions</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="inline-flex items-center">Plagiarism-Free</span>
+                        </span>
+                    </div>
                 </div>
 
             </div>
