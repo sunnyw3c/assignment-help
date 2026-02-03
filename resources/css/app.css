@@ -4,9 +4,19 @@
 
 /* Programming Website Custom Styles */
 
-/* Smooth Scrolling */
+/* Smooth Scrolling - Enhanced with custom easing */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Custom Smooth Scroll with momentum */
+.smooth-scroll-wrapper {
+    overflow: hidden;
+}
+
+.smooth-scroll-content {
+    will-change: transform;
 }
 
 /* Code Background Animation */
@@ -167,6 +177,427 @@ html {
     .auto-dark {
         background-color: #1f2937;
         color: #f9fafb;
+    }
+}
+
+/* ============================================
+   IMMERSIVE DESIGN ENHANCEMENTS
+   Inspired by modern interactive experiences
+   ============================================ */
+
+/* Sophisticated Page Transitions */
+@keyframes page-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.page-transition {
+    animation: page-fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Smooth Cubic Bezier Easing (inspired by immersive-g.com) */
+.ease-custom {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ease-smooth {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-bounce-in {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Enhanced Interactive Cards with 3D Transform */
+.card-3d-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card-3d-hover:hover {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow:
+        0 20px 40px -15px rgba(139, 92, 246, 0.2),
+        0 10px 20px -10px rgba(59, 130, 246, 0.15);
+}
+
+/* Magnetic Button Effect */
+.btn-magnetic {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic:hover {
+    transform: scale(1.05);
+}
+
+.btn-magnetic::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.btn-magnetic:hover::after {
+    opacity: 1;
+}
+
+/* Text Reveal Animation */
+@keyframes text-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.text-reveal {
+    animation: text-reveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+.text-reveal-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.text-reveal-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.text-reveal-delay-3 {
+    animation-delay: 0.3s;
+}
+
+/* Parallax Effect Elements */
+.parallax-slow {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+/* Smooth Image Loading */
+@keyframes image-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+.image-reveal {
+    animation: image-fade-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Interactive Navigation */
+.nav-link-modern {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+}
+
+.nav-link-modern::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link-modern:hover::before {
+    transform: translateX(0);
+}
+
+/* Staggered Fade In for Lists */
+@keyframes stagger-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.stagger-item {
+    animation: stagger-fade-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Smooth Opacity Transitions */
+.fade-transition {
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Glass Morphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+    .glass-card {
+        background: rgba(30, 30, 30, 0.7);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-card:hover {
+        background: rgba(30, 30, 30, 0.85);
+        border-color: rgba(139, 92, 246, 0.4);
+    }
+}
+
+/* Cursor Following Gradient */
+.gradient-follow {
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-follow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(139, 92, 246, 0.1),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.gradient-follow:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced Form Inputs */
+.input-modern {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid rgba(139, 92, 246, 0.1);
+}
+
+.input-modern:focus {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow:
+        0 0 0 4px rgba(139, 92, 246, 0.1),
+        0 10px 30px -10px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    transform-origin: left;
+    transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 9999;
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.ripple-effect:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+/* Micro-interactions for Buttons */
+.btn-press {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-press:active {
+    transform: scale(0.95);
+}
+
+/* ============================================
+   RESPONSIVE & TOUCH OPTIMIZATIONS
+   ============================================ */
+
+/* Touch-friendly interactions */
+.touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Reduce motion for mobile devices */
+@media (max-width: 768px) {
+    /* Simpler animations for mobile */
+    .card-3d-hover:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Disable parallax on mobile for performance */
+    [data-parallax] {
+        transform: none !important;
+    }
+
+    /* Reduce animation complexity */
+    .animate-float,
+    .animate-float-slow,
+    .animate-float-slower {
+        animation-duration: 10s;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card-3d-hover:hover {
+        transform: translateY(-6px) rotateX(1deg);
+    }
+}
+
+/* Better touch targets */
+@media (hover: none) and (pointer: coarse) {
+    /* Mobile touch devices */
+    .btn-magnetic,
+    .card-3d-hover,
+    .ripple-effect {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Disable magnetic effect on touch devices */
+    .btn-magnetic {
+        pointer-events: auto;
+    }
+
+    .btn-magnetic:hover {
+        transform: scale(1.02);
+    }
+
+    /* Simplified card hover for touch */
+    .card-3d-hover:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    .safe-area-inset-bottom {
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .safe-area-inset-top {
+        padding-top: max(1rem, env(safe-area-inset-top));
+    }
+}
+
+/* Responsive text reveal timing */
+@media (max-width: 640px) {
+    .text-reveal,
+    .text-reveal-delay-1,
+    .text-reveal-delay-2,
+    .text-reveal-delay-3 {
+        animation-duration: 0.6s;
+    }
+}
+
+/* Improved scrollbar styling */
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #8b5cf6, #3b82f6);
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #7c3aed, #2563eb);
+    }
+}
+
+/* Orientation changes */
+@media (orientation: landscape) and (max-height: 500px) {
+    /* Reduce vertical spacing in landscape mobile */
+    .py-12 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .gradient-text {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 

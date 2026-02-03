@@ -63,6 +63,11 @@ Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/experts', [ExpertController::class, 'index'])->name('experts');
 Route::get('/order', [OrderController::class, 'create'])->name('order');
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+
+// File Upload Test Route
+Route::get('/test-file-upload', function () {
+    return view('file-upload-test');
+})->name('test.file-upload');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

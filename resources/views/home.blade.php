@@ -200,7 +200,7 @@
 
                                 <div class="hidden sm:flex absolute inset-y-0 right-0 items-center pr-2">
                                     <button type="submit"
-                                        class="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
+                                        class="btn-magnetic ripple-effect px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-400 ease-custom hover:scale-105 active:scale-95 flex items-center gap-2">
                                         <span>Search</span>
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -212,7 +212,7 @@
 
                         <div class="sm:hidden mt-4">
                             <button type="submit"
-                                class="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95">
+                                class="btn-press ripple-effect w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-blue-500/50 transition-all duration-400 ease-custom flex items-center justify-center gap-2">
                                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -259,28 +259,28 @@
                         </div>
                     </form>
 
-                    <!-- Quick Stats Section with Glassmorphism -->
+                    <!-- Quick Stats Section with Glassmorphism and 3D Effects -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto px-4 animate-fade-in-up animation-delay-500">
                         <div class="relative group">
-                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
+                            <div class="card-3d-hover gradient-follow bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-blue-400/40 transition-all duration-400 ease-custom hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
                                 <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">98%</div>
                                 <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">On-Time Delivery</div>
                             </div>
                         </div>
                         <div class="relative group">
-                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-emerald-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20">
+                            <div class="card-3d-hover gradient-follow bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-emerald-400/40 transition-all duration-400 ease-custom hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20">
                                 <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">100%</div>
                                 <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Plagiarism-Free</div>
                             </div>
                         </div>
                         <div class="relative group">
-                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+                            <div class="card-3d-hover gradient-follow bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-purple-400/40 transition-all duration-400 ease-custom hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
                                 <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">24/7</div>
                                 <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Expert Support</div>
                             </div>
                         </div>
                         <div class="relative group">
-                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20">
+                            <div class="card-3d-hover gradient-follow bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center hover:bg-white/15 hover:border-amber-400/40 transition-all duration-400 ease-custom hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20">
                                 <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">A+</div>
                                 <div class="text-xs sm:text-sm text-slate-200 font-semibold mt-1">Average Grade</div>
                             </div>
@@ -335,7 +335,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
                 <div
-                    class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl">
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-2 border-blue-100 hover:border-blue-300 transition-all duration-400 ease-custom hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>
@@ -405,7 +405,7 @@
                 </div>
 
                 <div
-                    class="group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-10 border-2 border-emerald-100 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl">
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-10 border-2 border-emerald-100 hover:border-emerald-300 transition-all duration-400 ease-custom hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>
@@ -489,7 +489,7 @@
                 </div>
 
                 <div
-                    class="group relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-100 hover:border-amber-300 transition-all duration-300 hover:shadow-xl">
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-100 hover:border-amber-300 transition-all duration-400 ease-custom hover:shadow-xl">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     </div>

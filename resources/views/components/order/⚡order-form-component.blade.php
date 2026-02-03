@@ -16,7 +16,7 @@ new class extends Component {
     public $difficulty = 'Beginner';
     public $deadline = '7-days';
     public $pages = 1;
-    public $file;
+    public $files = [];
     public $description = '';
     public $assignmentTypeValue = '';
 
@@ -79,6 +79,20 @@ new class extends Component {
         }
     }
 
+    public function removeFile($index)
+    {
+        array_splice($this->files, $index, 1);
+    }
+
+    public function updatedFiles()
+    {
+        // This method is called when files are uploaded
+        // Add validation here if needed
+        $this->validate([
+            'files.*' => 'nullable|file|max:10240', // 10MB max per file
+        ]);
+    }
+
     public function submit()
     {
         $this->validate([
@@ -87,15 +101,9 @@ new class extends Component {
             'academicLevel' => 'required_if:assignmentType,assignment',
             'deadline' => 'required',
             'pages' => 'required|integer|min:1|max:100',
-            'file' => 'nullable|file|max:10240', // 10MB max
+            'files.*' => 'nullable|file|max:10240', // 10MB max per file
             'description' => 'nullable|string',
         ]);
-
-        // Handle file upload
-        $filePath = null;
-        if ($this->file) {
-            $filePath = $this->file->store('assignments', 'public');
-        }
 
         // Create order/assignment
         $assignment = \App\Models\Assignment::create([
@@ -106,13 +114,27 @@ new class extends Component {
             'title' => $this->title,
             'deadline' => $this->deadline,
             'pages' => $this->pages,
-            'file_path' => $filePath,
             'description' => $this->description,
             'academic_level' => $this->academicLevel,
             'difficulty' => $this->difficulty,
             'assignment_type' => $this->assignmentTypeValue,
             'budget' => $this->discountedPrice,
         ]);
+
+        // Store files in separate table
+        if ($this->files) {
+            foreach ($this->files as $file) {
+                $filePath = $file->store('assignments', 'public');
+
+                \App\Models\AssignmentFile::create([
+                    'assignment_id' => $assignment->id,
+                    'original_name' => $file->getClientOriginalName(),
+                    'file_path' => $filePath,
+                    'file_type' => $file->getMimeType(),
+                    'file_size' => $file->getSize(),
+                ]);
+            }
+        }
 
         session()->flash('success', 'Order submitted successfully! We will contact you shortly.');
 
@@ -358,31 +380,124 @@ new class extends Component {
                             </div>
                         </div>
 
-                        <!-- File Upload with Livewire -->
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">Upload Files (Optional)</label>
-                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-purple-400 transition-colors">
-                                <input type="file" wire:model="file" class="hidden" id="file-upload">
-                                <label for="file-upload" class="cursor-pointer">
-                                    <div class="text-4xl mb-4">📁</div>
-                                    <span class="text-lg font-medium text-purple-600 hover:text-purple-700">Choose files</span>
-                                    <p class="text-gray-500 mt-2">PDF, DOC, ZIP, etc. (Max 10MB)</p>
-                                </label>
+                        <!-- Enhanced Multiple File Upload with Immersive Design -->
+                        <div x-data="{
+                            dragging: false,
+                            handleDrop(e) {
+                                this.dragging = false;
+                                // Handle file drop
+                            }
+                        }">
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">
+                                📎 Upload Files (Optional)
+                                <span class="text-xs font-normal text-gray-500 ml-2">- Multiple files supported</span>
+                            </label>
 
-                                @if ($file)
-                                    <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-                                        <p class="text-sm text-green-700">
-                                            ✓ File selected: <strong>{{ $file->getClientOriginalName() }}</strong>
+                            <!-- Drag & Drop Area -->
+                            <div
+                                @dragover.prevent="dragging = true"
+                                @dragleave.prevent="dragging = false"
+                                @drop.prevent="handleDrop($event)"
+                                :class="dragging ? 'border-purple-500 bg-purple-50 scale-[1.02]' : 'border-gray-300'"
+                                class="file-upload-area card-3d-hover gradient-follow border-2 border-dashed rounded-xl p-6 sm:p-8 text-center hover:border-purple-400 transition-all duration-400 ease-custom touch-manipulation">
+
+                                <input
+                                    type="file"
+                                    wire:model="files"
+                                    multiple
+                                    class="hidden"
+                                    id="files-upload"
+                                    accept=".pdf,.doc,.docx,.zip,.rar,.txt,.jpg,.jpeg,.png">
+
+                                <label for="files-upload" class="cursor-pointer block">
+                                    <div class="text-4xl sm:text-5xl mb-3 sm:mb-4 animate-bounce-slow">📁</div>
+                                    <div class="space-y-2">
+                                        <p class="text-base sm:text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors">
+                                            Click to browse or drag files here
+                                        </p>
+                                        <p class="text-xs sm:text-sm text-gray-500">
+                                            PDF, DOC, DOCX, ZIP, Images • Max 10MB per file
                                         </p>
                                     </div>
-                                @endif
+                                </label>
 
-                                <div wire:loading wire:target="file" class="mt-4">
-                                    <p class="text-sm text-blue-600">Uploading file...</p>
+                                <!-- Loading State -->
+                                <div wire:loading wire:target="files" class="mt-4">
+                                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg animate-pulse">
+                                        <svg class="animate-spin h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        <span class="text-sm text-blue-600 font-medium">Uploading files...</span>
+                                    </div>
                                 </div>
 
-                                @error('file') <span class="text-red-500 text-sm block mt-2">{{ $message }}</span> @enderror
+                                @error('files.*')
+                                    <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                                        <span class="text-red-600 text-sm font-semibold">❌ {{ $message }}</span>
+                                    </div>
+                                @enderror
+
+                                @error('files')
+                                    <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                                        <span class="text-red-600 text-sm font-semibold">❌ {{ $message }}</span>
+                                    </div>
+                                @enderror
+
+                                @if (session()->has('error'))
+                                    <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                                        <span class="text-red-600 text-sm font-semibold">❌ {{ session('error') }}</span>
+                                    </div>
+                                @endif
                             </div>
+
+                            <!-- Uploaded Files List with Immersive Design -->
+                            @if (!empty($files))
+                                <div class="mt-4 space-y-2">
+                                    <p class="text-sm font-semibold text-gray-700">
+                                        📋 Uploaded Files ({{ count($files) }})
+                                    </p>
+
+                                    @foreach ($files as $index => $file)
+                                        <div class="glass-card p-3 sm:p-4 rounded-lg flex items-center gap-3 sm:gap-4 group hover-lift animate-fade-in">
+                                            <!-- File Icon -->
+                                            <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg sm:text-xl">
+                                                @php
+                                                    $ext = strtolower(pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION));
+                                                    $icon = match($ext) {
+                                                        'pdf' => '📄',
+                                                        'doc', 'docx' => '📝',
+                                                        'zip', 'rar' => '📦',
+                                                        'jpg', 'jpeg', 'png' => '🖼️',
+                                                        default => '📎'
+                                                    };
+                                                @endphp
+                                                {{ $icon }}
+                                            </div>
+
+                                            <!-- File Info -->
+                                            <div class="flex-1 min-w-0">
+                                                <p class="text-sm sm:text-base font-semibold text-gray-800 truncate">
+                                                    {{ $file->getClientOriginalName() }}
+                                                </p>
+                                                <p class="text-xs sm:text-sm text-gray-500">
+                                                    {{ number_format($file->getSize() / 1024, 1) }} KB
+                                                </p>
+                                            </div>
+
+                                            <!-- Remove Button -->
+                                            <button
+                                                type="button"
+                                                wire:click="removeFile({{ $index }})"
+                                                class="btn-press ripple-effect flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-110 touch-manipulation">
+                                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
 
                         <!-- Description -->

@@ -1,4 +1,5 @@
 import './bootstrap';
+import './immersive';
 
 import Alpine from 'alpinejs';
 
