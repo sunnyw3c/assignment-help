@@ -2150,7 +2150,7 @@
     <!-- FAQ Section -->
     <section class="py-24 bg-gray-50 relative overflow-hidden">
         <div class="absolute inset-0 bg-white/50"></div>
-        <script type="application/ld+json">
+        <!-- <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -2184,7 +2184,7 @@
             }
           }]
         }
-        </script>
+        </script> -->
         <div class="container mx-auto px-6 max-w-4xl relative z-10">
             <div class="text-center mb-16">
                 <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">Common Questions</span>
