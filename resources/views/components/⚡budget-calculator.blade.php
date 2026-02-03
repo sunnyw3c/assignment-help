@@ -154,219 +154,169 @@ new class extends Component {
 };
 ?>
 
-<div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border-2 border-blue-100">
-    <div class="text-center mb-8">
-        <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full mb-4">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                    d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
-                    clip-rule="evenodd" />
-            </svg>
-            <span class="font-bold">Instant Price Calculator</span>
-        </div>
-        <h3 class="text-3xl font-bold text-gray-900 mb-2">Calculate Your Assignment Cost</h3>
-        <p class="text-gray-600">Adjust the options below to see real-time pricing</p>
-    </div>
+<div class="relative group">
+    <!-- Decorative Glow -->
+    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl opacity-25 group-hover:opacity-50 blur-xl transition-all duration-500"></div>
 
-    <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <!-- Left Column -->
-        <div class="space-y-6">
-            <!-- Number of Pages -->
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-3">Number of Pages</label>
-                <div class="flex items-center gap-4">
-                    <button type="button" wire:click="decrementPages"
-                        class="w-12 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 rounded-lg font-bold text-xl transition-colors active:scale-95">
-                        -
-                    </button>
-                    <div class="flex-1 relative">
-                        <div class="w-full px-4 py-3 text-center border-2 border-gray-300 rounded-lg bg-white">
-                            <div class="text-3xl font-bold text-gray-900">{{ $pages }}</div>
-                            {{-- <div class="text-sm text-gray-600 mt-1">
-                                {{ $pages === 1 ? 'page' : 'pages' }} ≈ {{ number_format($pages * 275) }} words
-                            </div> --}}
+    <!-- Main Container -->
+    <div class="relative bg-white/90 backdrop-blur-xl rounded-3xl p-6 md:p-10 shadow-2xl border border-white/50">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-4">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+                </span>
+                <span class="text-blue-700 font-bold text-xs uppercase tracking-wider">Live Estimate</span>
+            </div>
+            <h3 class="text-3xl font-black text-gray-900 mb-2">Calculate Your Price</h3>
+            <p class="text-gray-600">Get an instant quote with our transparent pricing tool.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Left Column: Inputs -->
+            <div class="space-y-8">
+                <!-- Page Counter -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Paper Length</label>
+                    <div class="flex items-center gap-4 bg-white p-2 rounded-2xl border-2 border-gray-100 shadow-sm">
+                        <button type="button" wire:click="decrementPages"
+                            class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-50 text-gray-600 hover:bg-red-50 hover:text-red-600 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20 12H4"/></svg>
+                        </button>
+                        
+                        <div class="flex-1 text-center">
+                            <div class="text-2xl font-black text-gray-900 leading-none">{{ $pages }}</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">{{ $pages === 1 ? 'Page' : 'Pages' }}</div>
+                        </div>
+
+                        <button type="button" wire:click="incrementPages"
+                            class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-50 text-gray-600 hover:bg-green-50 hover:text-green-600 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                    </div>
+                    <div class="text-center mt-2 text-xs font-medium text-gray-400">
+                        ≈ {{ number_format($pages * 275) }} words
+                    </div>
+                </div>
+
+                <!-- Academic Level -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Academic Level</label>
+                    <div class="relative">
+                        <select wire:model.live="academicLevel"
+                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 transition-all cursor-pointer hover:border-purple-300">
+                            <option value="high-school">High School</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="masters">Master's Degree</option>
+                            <option value="phd">PhD / Doctoral</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                         </div>
                     </div>
-                    <button type="button" wire:click="incrementPages"
-                        class="w-12 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 rounded-lg font-bold text-xl transition-colors active:scale-95">
-                        +
-                    </button>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">{{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }} ≈ {{ number_format($pages * 275) }} words</p>
+
+                <!-- Deadline -->
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Deadline</label>
+                    <div class="relative">
+                        <select wire:model.live="deadline"
+                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all cursor-pointer hover:border-blue-300">
+                            <option value="3-hours">3 Hours (Urgent)</option>
+                            <option value="6-hours">6 Hours</option>
+                            <option value="12-hours">12 Hours</option>
+                            <option value="24-hours">24 Hours</option>
+                            <option value="2-days">2 Days</option>
+                            <option value="3-days">3 Days</option>
+                            <option value="5-days">5 Days</option>
+                            <option value="7-days">7 Days</option>
+                            <option value="14-days">14 Days</option>
+                            <option value="30-days">30 Days</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Academic Level -->
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-3">Academic Level</label>
-                <select wire:model.live="academicLevel"
-                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 font-semibold">
-                    <option value="high-school">High School - ${{ $levelPrices['high-school'] }}/page</option>
-                    <option value="undergraduate">Undergraduate - ${{ $levelPrices['undergraduate'] }}/page</option>
-                    <option value="masters">Master's - ${{ $levelPrices['masters'] }}/page</option>
-                    <option value="phd">PhD/Doctoral - ${{ $levelPrices['phd'] }}/page</option>
-                </select>
+            <!-- Right Column: Summary & CTA -->
+            <div class="flex flex-col justify-between bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 relative overflow-hidden">
+                <!-- Background Decoration -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-bl-full pointer-events-none"></div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-400 mb-4 uppercase tracking-wide">Estimated Total</label>
+                    
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <span class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-tight"
+                              wire:loading.class="opacity-50" wire:target="pages,academicLevel,deadline,subject">
+                            ${{ number_format($this->discountedPrice, 2) }}
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="text-lg font-bold text-gray-400 line-through decoration-2 decoration-red-400/50">${{ number_format($this->totalPrice, 2) }}</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-green-100 text-green-700 text-xs font-black uppercase tracking-wide">
+                            Save {{ number_format($this->discountAmount, 2) }}
+                        </span>
+                    </div>
+
+                    <!-- Breakdown -->
+                    <div class="space-y-3 mb-8">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500 font-medium">Price per page</span>
+                            <span class="font-bold text-gray-700">${{ number_format($this->pricePerPage, 2) }}</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500 font-medium">Seasonal Discount</span>
+                            <span class="font-bold text-green-600">-{{ number_format($this->discount * 100, 0) }}%</span>
+                        </div>
+                        @if ($this->volumeDiscount > 0)
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500 font-medium">Volume Discount</span>
+                            <span class="font-bold text-green-600">-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-auto space-y-3">
+                    <a href="{{ route('services.assignment.index') }}" 
+                       class="group relative block w-full py-4 px-6 rounded-xl overflow-hidden font-black text-center text-white transition-all hover:scale-[1.02] shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transition-transform group-hover:scale-105"></div>
+                        <span class="relative flex items-center justify-center gap-2">
+                            Proceed to Order
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </span>
+                    </a>
+                    
+                    <div class="text-center">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                            No Payment Required Yet
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Right Column -->
-        <div class="space-y-6">
-            <!-- Deadline -->
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-3">Deadline</label>
-                <select wire:model.live="deadline"
-                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 font-semibold">
-                    <option value="3-hours">3 Hours (Urgent) +150%</option>
-                    <option value="6-hours">6 Hours +100%</option>
-                    <option value="12-hours">12 Hours +80%</option>
-                    <option value="24-hours">24 Hours +50%</option>
-                    <option value="2-days">2 Days +30%</option>
-                    <option value="3-days">3 Days +20%</option>
-                    <option value="5-days">5 Days +10%</option>
-                    <option value="7-days">7 Days (Standard)</option>
-                    <option value="14-days">14 Days -10%</option>
-                    <option value="30-days">30 Days -20%</option>
-                </select>
+        <!-- Features Footer -->
+        <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap justify-center gap-6 md:gap-12 text-sm text-gray-500 font-medium">
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Plagiarism-Free</span>
             </div>
-
-            <!-- Subject -->
-            <div>
-                <label class="block text-sm font-bold text-gray-700 mb-3">Subject Type</label>
-                <select wire:model.live="subject"
-                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 font-semibold">
-                    <option value="general">General/Essays</option>
-                    <option value="business">Business (+10%)</option>
-                    <option value="nursing">Nursing (+15%)</option>
-                    <option value="engineering">Engineering (+20%)</option>
-                    <option value="law">Law (+20%)</option>
-                    <option value="programming">Programming (+30%)</option>
-                </select>
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span>Confidential</span>
             </div>
-        </div>
-    </div>
-
-    <!-- Price Display -->
-    <div class="bg-white rounded-xl p-6 border-2 border-blue-200 mb-6">
-        <div class="flex items-center justify-between mb-4">
-            <div>
-                <span class="text-lg font-semibold text-gray-700">Estimated Total:</span>
-                <span class="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-red-500 text-white">
-                    {{ number_format($this->totalDiscount * 100, 0) }}% OFF
-                </span>
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span>Fast Delivery</span>
             </div>
-            <div class="text-right">
-                <div class="text-lg text-gray-400 line-through" wire:loading.class="opacity-50"
-                    wire:target="pages,academicLevel,deadline,subject">
-                    ${{ number_format($this->totalPrice, 2) }}
-                </div>
-                <div class="text-4xl font-bold text-green-600" wire:loading.class="opacity-50"
-                    wire:target="pages,academicLevel,deadline,subject">
-                    ${{ number_format($this->discountedPrice, 2) }}
-                </div>
-                <div class="text-sm text-gray-500">
-                    ${{ number_format($this->pricePerPage, 2) }} per page
-                </div>
-            </div>
-        </div>
-
-        <!-- Price Breakdown -->
-        <div class="border-t-2 border-gray-100 pt-4 space-y-2 text-sm">
-            <div class="flex justify-between text-gray-600">
-                <span>Base price ({{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }}):</span>
-                <span class="font-semibold">${{ number_format($this->basePrice * $pages, 2) }}</span>
-            </div>
-            @if ($this->urgencyMultiplier !== 1.0)
-                <div class="flex justify-between text-gray-600">
-                    <span>Deadline adjustment:</span>
-                    <span
-                        class="font-semibold {{ $this->urgencyMultiplier > 1.0 ? 'text-orange-600' : 'text-green-600' }}">
-                        {{ $this->urgencyMultiplier > 1.0 ? '+' : '' }}{{ number_format(($this->urgencyMultiplier - 1.0) * 100, 0) }}%
-                    </span>
-                </div>
-            @endif
-            @if ($this->subjectMultiplier !== 1.0)
-                <div class="flex justify-between text-gray-600">
-                    <span>Subject complexity:</span>
-                    <span class="font-semibold text-orange-600">
-                        +{{ number_format(($this->subjectMultiplier - 1.0) * 100, 0) }}%
-                    </span>
-                </div>
-            @endif
-            <div class="flex justify-between text-green-600 font-semibold border-t border-gray-200 pt-2 mt-2">
-                <span>Base Discount (40% OFF):</span>
-                <span>-{{ number_format($this->discount * 100, 0) }}%</span>
-            </div>
-            @if ($this->volumeDiscount > 0)
-                <div class="flex justify-between text-green-600 font-semibold">
-                    <span>Volume Discount ({{ $pages }}+ pages):</span>
-                    <span>-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
-                </div>
-            @endif
-            <div class="flex justify-between text-green-700 font-bold bg-green-50 -mx-2 px-2 py-1 rounded">
-                <span>Total Savings:</span>
-                <span>-${{ number_format($this->discountAmount, 2) }} ({{ number_format($this->totalDiscount * 100, 0) }}% OFF)</span>
-            </div>
-        </div>
-
-        @if ($this->savings > 0)
-            <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-                <div class="flex items-center gap-2 text-green-700">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="font-bold">You save ${{ number_format($this->savings, 2) }} with early
-                        planning!</span>
-                </div>
-            </div>
-        @endif
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="grid md:grid-cols-2 gap-4">
-        <a href="{{ route('services.assignment.index') }}"
-            class="px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl font-bold text-center transition-all transform hover:scale-105 shadow-lg">
-            Get Started Now
-        </a>
-        <button wire:click="$refresh"
-            class="px-6 py-4 bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 rounded-xl font-bold transition-all">
-            Recalculate
-        </button>
-    </div>
-
-    <!-- Features -->
-    <div class="mt-6 pt-6 border-t-2 border-blue-100">
-        <div class="grid grid-cols-3 gap-4 text-center text-sm">
-            <div>
-                <div class="text-blue-600 font-bold">✓</div>
-                <div class="text-gray-600">Plagiarism Free</div>
-            </div>
-            <div>
-                <div class="text-blue-600 font-bold">✓</div>
-                <div class="text-gray-600">On-Time Delivery</div>
-            </div>
-            <div>
-                <div class="text-blue-600 font-bold">✓</div>
-                <div class="text-gray-600">24/7 Support</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Loading Indicator -->
-    <div wire:loading wire:target="pages,academicLevel,deadline,subject"
-        class="absolute inset-0 bg-white/50 rounded-2xl flex items-center justify-center">
-        <div class="text-center">
-            <svg class="animate-spin h-12 w-12 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
-                    stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                </path>
-            </svg>
-            <span class="text-blue-600 font-semibold">Calculating...</span>
         </div>
     </div>
 </div>

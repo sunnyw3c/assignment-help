@@ -84,202 +84,315 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50 relative overflow-hidden" id="services">
-        <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30"></div>
-        
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
-            <div class="mx-auto max-w-2xl text-center mb-16">
-                <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">Trusted Academic Solutions</span>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprehensive Academic Help Services</h2>
-                <p class="mt-4 text-lg leading-8 text-gray-600">We provide expert assistance across all major academic disciplines. Choose the service that matches your needs.</p>
+    <section class="relative py-20 lg:py-28 bg-gradient-to-b from-white via-gray-50 to-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                    </svg>
+                    <span class="text-blue-900 font-semibold text-sm">Comprehensive Academic Solutions</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Services for Your Academic
+                    Success</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Professional support across every academic discipline with verified experts ready to help you excel
+                </p>
             </div>
 
-            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                
-                <!-- Service Card 1: Assignment Help -->
-                <article class="flex flex-col bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-shadow duration-300 p-8 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 rounded-full bg-blue-50 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
-                    
-                    <div class="flex items-center gap-x-4 mb-6 relative">
-                        <div class="h-12 w-12 flex items-center justify-center rounded-lg bg-blue-600">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold leading-6 text-gray-900">Assignment Help</h3>
-                             <div class="mt-1 flex items-center text-xs text-green-600 font-medium">
-                                <svg class="mr-1 h-3 w-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+                <div
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-2 border-blue-100 hover:border-blue-300 transition-all duration-400 ease-custom hover:shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative">
+                        <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
+                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="130" width="120" height="20" rx="2" fill="#3B82F6"
+                                opacity="0.9" />
+                            <rect x="40" y="130" width="120" height="4" rx="1" fill="#2563EB" />
+                            <path d="M40 132 L160 132 L160 130 L40 130 Z" fill="#60A5FA" opacity="0.6" />
+
+                            <rect x="45" y="105" width="110" height="25" rx="2" fill="#10B981"
+                                opacity="0.9" />
+                            <rect x="45" y="105" width="110" height="5" rx="1" fill="#059669" />
+                            <path d="M45 108 L155 108 L155 105 L45 105 Z" fill="#34D399" opacity="0.6" />
+                            <rect x="75" y="112" width="50" height="12" rx="1" fill="#064E3B"
+                                opacity="0.4" />
+
+                            <rect x="50" y="80" width="100" height="25" rx="2" fill="#8B5CF6"
+                                opacity="0.9" />
+                            <rect x="50" y="80" width="100" height="5" rx="1" fill="#7C3AED" />
+                            <path d="M50 83 L150 83 L150 80 L50 80 Z" fill="#A78BFA" opacity="0.6" />
+                            <line x1="70" y1="88" x2="130" y2="88" stroke="#F3F4F6"
+                                stroke-width="2" opacity="0.5" />
+                            <line x1="70" y1="93" x2="120" y2="93" stroke="#F3F4F6"
+                                stroke-width="2" opacity="0.5" />
+
+                            <path d="M120 80 L120 55 L128 62 L136 55 L136 80" fill="#F59E0B" opacity="0.95" />
+
+                            <circle cx="100" cy="50" r="18" fill="#1E293B" opacity="0.15" />
+                            <path d="M95 45 L95 55 M105 45 L105 55" stroke="#3B82F6" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <path d="M88 50 Q100 42 112 50" stroke="#3B82F6" stroke-width="2.5" fill="none" />
+                        </svg>
+                        <div class="mt-8 text-center">
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <h3 class="text-gray-900 font-bold text-xl">Assignment Help</h3>
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                Verified Experts
                             </div>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Professional writing assistance across
+                                50+ subjects with 100% plagiarism-free guarantee and on-time delivery</p>
+                            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Essays</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Research
+                                    Papers</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Thesis</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Dissertations</span>
+                            </div>
+                            <a href="{{ route('services.assignment.index') }}"
+                                class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group">
+                                Learn More
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    
-                    <p class="flex-auto text-sm leading-6 text-gray-600 mb-6">
-                        Get high-quality, plagiarism-free assignments tailored to your specific requirements. We cover essays, research papers, case studies, and more.
-                    </p>
-                    
-                    <ul role="list" class="mb-8 space-y-2 text-sm text-gray-600">
-                        <li class="flex gap-x-2">
-                            <span class="text-blue-600 font-bold">•</span> Essays & Reports
-                        </li>
-                        <li class="flex gap-x-2">
-                            <span class="text-blue-600 font-bold">•</span> Thesis & Dissertations
-                        </li>
-                        <li class="flex gap-x-2">
-                            <span class="text-blue-600 font-bold">•</span> Case Studies
-                        </li>
-                    </ul>
+                </div>
 
-                    <a href="{{ route('services.assignment.index') }}" class="mt-auto block w-full rounded-md bg-white px-3 py-2 text-center text-sm font-semibold text-blue-600 shadow-sm ring-1 ring-inset ring-blue-200 hover:ring-blue-300 hover:bg-blue-50 transition-all">
-                        Explore Custom Writing <span aria-hidden="true">&rarr;</span>
-                    </a>
-                </article>
+                <div
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-10 border-2 border-emerald-100 hover:border-emerald-300 transition-all duration-400 ease-custom hover:shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative">
+                        <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
+                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="30" y="50" width="140" height="100" rx="4" fill="#1E293B"
+                                stroke="#10B981" stroke-width="2" />
 
-                <!-- Service Card 2: Programming Help -->
-                <article class="flex flex-col bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-shadow duration-300 p-8 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 rounded-full bg-emerald-50 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
-                    
-                    <div class="flex items-center gap-x-4 mb-6 relative">
-                        <div class="h-12 w-12 flex items-center justify-center rounded-lg bg-emerald-600">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold leading-6 text-gray-900">Programming Help</h3>
-                            <div class="mt-1 flex items-center text-xs text-green-600 font-medium">
-                                <svg class="mr-1 h-3 w-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            <rect x="30" y="50" width="140" height="15" rx="4" fill="#059669" />
+                            <circle cx="42" cy="57.5" r="3" fill="#EF4444" />
+                            <circle cx="52" cy="57.5" r="3" fill="#F59E0B" />
+                            <circle cx="62" cy="57.5" r="3" fill="#10B981" />
+
+                            <line x1="40" y1="75" x2="70" y2="75" stroke="#8B5CF6"
+                                stroke-width="2" stroke-linecap="round" />
+                            <line x1="75" y1="75" x2="120" y2="75" stroke="#60A5FA"
+                                stroke-width="2" stroke-linecap="round" />
+
+                            <line x1="50" y1="85" x2="90" y2="85" stroke="#10B981"
+                                stroke-width="2" stroke-linecap="round" />
+                            <line x1="95" y1="85" x2="140" y2="85" stroke="#F59E0B"
+                                stroke-width="2" stroke-linecap="round" />
+
+                            <line x1="50" y1="95" x2="110" y2="95" stroke="#EC4899"
+                                stroke-width="2" stroke-linecap="round" />
+
+                            <line x1="40" y1="105" x2="80" y2="105" stroke="#8B5CF6"
+                                stroke-width="2" stroke-linecap="round" />
+
+                            <line x1="50" y1="115" x2="95" y2="115" stroke="#10B981"
+                                stroke-width="2" stroke-linecap="round" />
+                            <line x1="100" y1="115" x2="130" y2="115" stroke="#60A5FA"
+                                stroke-width="2" stroke-linecap="round" />
+
+                            <path d="M45 70 L40 75 L45 80" stroke="#34D399" stroke-width="2" fill="none"
+                                stroke-linecap="round" />
+                            <path d="M155 95 L160 100 L155 105" stroke="#34D399" stroke-width="2" fill="none"
+                                stroke-linecap="round" />
+
+                            <rect x="135" y="113" width="2" height="6" fill="#10B981">
+                                <animate attributeName="opacity" values="1;0;1" dur="1.5s"
+                                    repeatCount="indefinite" />
+                            </rect>
+
+                            <rect x="85" y="150" width="30" height="8" rx="2" fill="#475569" />
+                            <rect x="70" y="158" width="60" height="4" rx="2" fill="#334155" />
+                        </svg>
+                        <div class="mt-8 text-center">
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <h3 class="text-gray-900 font-bold text-xl">Programming Help</h3>
+                                <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                Code Validated
                             </div>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Expert coding assistance in 25+
+                                languages including debugging, optimization, and code documentation</p>
+                            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">Java</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">C++</span>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">JavaScript</span>
+                            </div>
+                            <a href="{{ route('services.programming.index') }}"
+                                class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold text-sm group">
+                                Learn More
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    
-                    <p class="flex-auto text-sm leading-6 text-gray-600 mb-6">
-                        Stuck on a coding bug or complex algorithm? Our developers provide clean, commented, and efficient code solutions in any language.
-                    </p>
-                    
-                    <ul role="list" class="mb-8 space-y-2 text-sm text-gray-600">
-                        <li class="flex gap-x-2">
-                             <span class="text-emerald-600 font-bold">•</span> Python, Java, C++
-                        </li>
-                        <li class="flex gap-x-2">
-                             <span class="text-emerald-600 font-bold">•</span> Web Development
-                        </li>
-                        <li class="flex gap-x-2">
-                             <span class="text-emerald-600 font-bold">•</span> Data Science
-                        </li>
-                    </ul>
+                </div>
 
-                    <a href="{{ route('services.programming.index') }}" class="mt-auto block w-full rounded-md bg-white px-3 py-2 text-center text-sm font-semibold text-emerald-600 shadow-sm ring-1 ring-inset ring-emerald-200 hover:ring-emerald-300 hover:bg-emerald-50 transition-all">
-                        View Coding Services <span aria-hidden="true">&rarr;</span>
-                    </a>
-                </article>
+                <div
+                    class="card-3d-hover gradient-follow group relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border-2 border-amber-100 hover:border-amber-300 transition-all duration-400 ease-custom hover:shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative">
+                        <svg class="w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300"
+                            viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="60" width="100" height="120" rx="3" fill="#F59E0B"
+                                opacity="0.95" />
+                            <rect x="50" y="60" width="100" height="15" rx="3" fill="#D97706" />
 
-                <!-- Service Card 3: Homework Help -->
-                <article class="flex flex-col bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-shadow duration-300 p-8 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 rounded-full bg-amber-50 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
-                    
-                    <div class="flex items-center gap-x-4 mb-6 relative">
-                        <div class="h-12 w-12 flex items-center justify-center rounded-lg bg-amber-500">
-                             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold leading-6 text-gray-900">Homework Help</h3>
-                            <div class="mt-1 flex items-center text-xs text-green-600 font-medium">
-                                <svg class="mr-1 h-3 w-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                            <circle cx="60" cy="67.5" r="2.5" fill="#78350F" />
+                            <circle cx="75" cy="67.5" r="2.5" fill="#78350F" />
+                            <circle cx="90" cy="67.5" r="2.5" fill="#78350F" />
+                            <circle cx="105" cy="67.5" r="2.5" fill="#78350F" />
+                            <circle cx="120" cy="67.5" r="2.5" fill="#78350F" />
+                            <circle cx="135" cy="67.5" r="2.5" fill="#78350F" />
+
+                            <rect x="55" y="80" width="90" height="95" rx="2" fill="#FEF3C7" />
+
+                            <line x1="65" y1="95" x2="135" y2="95" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="105" x2="135" y2="105" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="115" x2="135" y2="115" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="125" x2="120" y2="125" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="135" x2="130" y2="135" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="145" x2="125" y2="145" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="155" x2="135" y2="155" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+                            <line x1="65" y1="165" x2="110" y2="165" stroke="#D97706"
+                                stroke-width="1" opacity="0.4" />
+
+                            <path d="M70 95 Q75 93 80 95 Q85 97 90 95" stroke="#1E40AF" stroke-width="1.5" fill="none"
+                                stroke-linecap="round" />
+                            <path d="M70 105 Q80 103 90 105 Q100 107 110 105" stroke="#1E40AF" stroke-width="1.5"
+                                fill="none" stroke-linecap="round" />
+
+                            <rect x="120" y="130" width="50" height="8" rx="4" fill="#1E293B"
+                                transform="rotate(-45 145 134)" />
+                            <rect x="155" y="145" width="15" height="6" rx="3" fill="#3B82F6"
+                                transform="rotate(-45 162.5 148)" />
+                            <polygon points="168,152 171,155 168,158" fill="#1E293B" opacity="0.8" />
+
+                            <circle cx="100" cy="50" r="15" fill="#1E293B" opacity="0.15" />
+                            <path d="M100 40 L90 45 L90 50 L100 55 L110 50 L110 45 Z" fill="#FCD34D" />
+                            <rect x="98" y="38" width="4" height="8" fill="#78350F" />
+                            <circle cx="100" cy="36" r="2" fill="#78350F" />
+                        </svg>
+                        <div class="mt-8 text-center">
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <h3 class="text-gray-900 font-bold text-xl">Homework Help</h3>
+                                <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                Step-by-Step Solutions
                             </div>
+                            <p class="text-gray-600 text-base leading-relaxed mb-5">Comprehensive support for homework,
+                                projects, and study materials across all academic levels</p>
+                            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Math
+                                    Tutoring</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Science
+                                    Help</span>
+                                <span
+                                    class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Homework</span>
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">Test
+                                    Prep</span>
+                            </div>
+                            <a href="{{ route('order') }}"
+                                class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold text-sm group">
+                                Learn More
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    
-                    <p class="flex-auto text-sm leading-6 text-gray-600 mb-6">
-                        Complete support for your daily homework, problem sets, and textbook questions. We explain the "how" and "why" behind every answer.
-                    </p>
-                    
-                    <ul role="list" class="mb-8 space-y-2 text-sm text-gray-600">
-                        <li class="flex gap-x-2">
-                             <span class="text-amber-500 font-bold">•</span> Math & Calculus
-                        </li>
-                        <li class="flex gap-x-2">
-                             <span class="text-amber-500 font-bold">•</span> Physics & Chemistry
-                        </li>
-                        <li class="flex gap-x-2">
-                             <span class="text-amber-500 font-bold">•</span> Statistics
-                        </li>
-                    </ul>
-
-                    <a href="{{ route('order') }}" class="mt-auto block w-full rounded-md bg-white px-3 py-2 text-center text-sm font-semibold text-amber-600 shadow-sm ring-1 ring-inset ring-amber-200 hover:ring-amber-300 hover:bg-amber-50 transition-all">
-                        Get Homework Answers <span aria-hidden="true">&rarr;</span>
-                    </a>
-                </article>
+                </div>
             </div>
 
-            <!-- SEO Trust Banner -->
-            <div class="mt-16 rounded-2xl bg-gray-900 py-10 sm:py-16">
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2 lg:items-center">
-                        <div class="max-w-xl lg:max-w-lg">
-                            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trust Us With Your Grades</h2>
-                            <p class="mt-4 text-lg leading-8 text-gray-300">
-                                Assignment Help USA is a legally registered academic assistance provider. We adhere to strict privacy policies and academic integrity standards.
-                            </p>
-                            <div class="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                                <div class="flex items-start gap-3">
-                                    <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold text-white">Genuine Experts</h3>
-                                        <p class="mt-1 text-sm text-gray-400">Masters & PhD degree holders only.</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold text-white">Bank-Grade Security</h3>
-                                        <p class="mt-1 text-sm text-gray-400">256-bit SSL encrypted payments.</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="text-center mt-20">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-10 max-w-4xl mx-auto border border-blue-100">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Excel in Your Studies?</h3>
+                    <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Join thousands of successful students across
+                        USA who trust Assignment Help USA for their academic needs</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                        <a href="{{ route('order') }}"
+                            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            Get Started Now
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <span class="text-gray-500 text-sm">No credit card required</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Free Consultation</span>
                         </div>
-                        <div class="flex flex-col items-start justify-end lg:order-last">
-                            <div class="rounded-xl bg-white/5 p-2 ring-1 ring-inset ring-white/10 lg:rounded-2xl lg:p-4 mb-4 w-full">
-                                <div class="flex items-center gap-4">
-                                     <div class="flex-1 bg-white/10 h-2 rounded-full overflow-hidden">
-                                         <div class="bg-green-500 h-full w-[98%]"></div>
-                                     </div>
-                                     <span class="text-white font-bold">98% Success</span>
-                                </div>
-                                <p class="text-xs text-gray-400 mt-2">Based on 50,000+ completed orders</p>
-                            </div>
-                            <a href="{{ route('order') }}" class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 w-full text-center">Start Your Order Now</a>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Money-Back Guarantee</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
 
     {{-- <section class="relative py-20 lg:py-28 bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -801,11 +914,654 @@
         </div>
     </section> --}}
 
+    <section class="relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+        <div class="absolute inset-0 opacity-30">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-block mb-4">
+                    <span
+                        class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 rounded-full text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        Simple 4-Step Process
+                    </span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+                    Your Journey to <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Academic
+                        Success</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    From submission to completion, we've streamlined the entire process to get you the help you need, fast.
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="hidden lg:block relative">
+                    <div
+                        class="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200">
+                    </div>
+                    <div class="absolute top-32 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse"
+                        style="width: 0%; animation: progressLine 3s ease-out forwards;">
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-8">
+                        <div class="group relative">
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span
+                                        class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP
+                                        1</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Submit Details</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Fill out a quick form with your assignment requirements, deadline, and budget.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        2 minutes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span
+                                        class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP
+                                        2</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Get Matched</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Our AI instantly matches you with the perfect expert based on subject and availability.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Under 5 minutes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-indigo-100 hover:border-indigo-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span
+                                        class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP
+                                        3</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Expert Works</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Your matched tutor works on your assignment with regular progress updates.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Live updates
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group relative">
+                            <div class="flex justify-center mb-6">
+                                <div class="relative">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-all duration-500">
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-xl border-4 border-white">
+                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group-hover:-translate-y-2">
+                                <div class="text-center mb-3">
+                                    <span
+                                        class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP
+                                        4</span>
+                                    <h3 class="text-xl font-black text-gray-900 mb-2">Get Results</h3>
+                                </div>
+                                <p class="text-gray-600 text-sm text-center mb-4">
+                                    Receive your completed assignment with unlimited revisions until you're satisfied.
+                                </p>
+                                <div class="flex justify-center">
+                                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        100% Satisfaction
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:hidden space-y-8">
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-blue-300 to-purple-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-blue-100">
+                                <span
+                                    class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-2">STEP
+                                    1</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Submit Details</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Fill out a quick form with your assignment requirements, deadline, and budget.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    2 minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-purple-300 to-indigo-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-purple-100">
+                                <span
+                                    class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP
+                                    2</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Get Matched</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Our AI instantly matches you with the perfect expert based on subject and availability.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-purple-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Under 5 minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-1 flex-1 bg-gradient-to-b from-indigo-300 to-green-300 mt-2"></div>
+                        </div>
+                        <div class="flex-1 pb-8">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-indigo-100">
+                                <span
+                                    class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-2">STEP
+                                    3</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Expert Works</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Your matched tutor works on your assignment with regular progress updates.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-indigo-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Live updates
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="relative">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-white rounded-xl p-5 shadow-lg border-2 border-green-100">
+                                <span
+                                    class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">STEP
+                                    4</span>
+                                <h3 class="text-lg font-black text-gray-900 mb-2">Get Results</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Receive your completed assignment with unlimited revisions until you're satisfied.
+                                </p>
+                                <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    100% Satisfaction
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
+    </section>
 
+    {{-- <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Academic Help & Coding Services - Expert
+                    Online Tutoring</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Whether you're a student or professional needing help with assignments or programming projects, our
+                    expert tutors are here to help you
+                    succeed.
+                </p>
+            </div>
 
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Assignment Services Card -->
+                <div
+                    class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
+                    <div class="absolute top-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        Most Popular
+                    </div>
 
+                    <div
+                        class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        📚
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Assignment Help Services</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Get expert assistance with essays, research papers, homework, and all types of academic assignments
+                        across all subjects.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Essay & Research Paper Writing</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Homework & Problem Sets</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Lab Reports & Case Studies</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">All Academic Subjects</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-6 border-t border-blue-200">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Starting from</p>
+                            <p class="text-3xl font-bold text-gray-900">$15<span
+                                    class="text-lg text-gray-500">/page</span></p>
+                        </div>
+                        <a href="{{ route('services.assignment.index') }}"
+                            class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            Explore Services →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Programming Services Card -->
+                <div
+                    class="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300">
+                    <div class="absolute top-6 right-6 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        High Demand
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        💻
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Programming Help Services</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Expert help with coding assignments, debugging, and projects in Python, Java, C++, JavaScript, and
+                        25+ programming languages.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Python, Java, C++, JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Web & Mobile App Development</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Data Science & Machine Learning</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-700 font-medium">Algorithms & Data Structures</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-6 border-t border-purple-200">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Starting from</p>
+                            <p class="text-3xl font-bold text-gray-900">$25<span
+                                    class="text-lg text-gray-500">/task</span></p>
+                        </div>
+                        <a href="{{ route('services.programming.index') }}"
+                            class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            Explore Services →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+    <!-- Why Choose Us Section -->
+    {{-- <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Students Trust Assignment Help
+                    USA
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join thousands of USA students who have improved their grades with our expert assistance
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Expert Writers</h3>
+                    <p class="text-gray-600 leading-relaxed">Verified experts from top universities with proven track
+                        records in helping students succeed.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Fast Turnaround</h3>
+                    <p class="text-gray-600 leading-relaxed">Get help even with tight deadlines. We offer express delivery
+                        options for urgent assignments.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Original</h3>
+                    <p class="text-gray-600 leading-relaxed">All work is custom-written from scratch. Plagiarism-free
+                        guaranteed with detailed reports.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Student-Friendly Pricing</h3>
+                    <p class="text-gray-600 leading-relaxed">Affordable rates designed for college budgets. Special
+                        discounts for returning students.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🔄</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Free Revisions</h3>
+                    <p class="text-gray-600 leading-relaxed">Unlimited revisions until you're completely satisfied with
+                        the work. Your success is our priority.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Confidential</h3>
+                    <p class="text-gray-600 leading-relaxed">Your privacy is protected. Secure payment processing and
+                        encrypted communications.</p>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+    <!-- Student Testimonials Section -->
+    {{-- <section class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Students Are Saying</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Real reviews from real college students across the USA
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "I was struggling with my Python assignment and had only 2 days left. Assignment Help USA connected
+                        me
+                        with an amazing expert who not only completed it but also explained everything. Got an A+!"
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            MJ
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-900">Michael Johnson</p>
+                            <p class="text-sm text-gray-500">Computer Science • UCLA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "Best decision ever! My essay writing tutor helped me improve my paper so much. The feedback was
+                        detailed and I learned a lot. Will definitely use again for my next assignment."
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            SC
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-900">Sarah Chen</p>
+                            <p class="text-sm text-gray-500">English Major • NYU</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "Had a Java project due and was totally stuck. The programmer they assigned understood exactly what
+                        I needed and delivered perfect code with comments. Worth every penny!"
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            DP
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-900">David Park</p>
+                            <p class="text-sm text-gray-500">Software Engineering • MIT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
 
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
@@ -1285,151 +2041,125 @@
     </section>
 
     <!-- Assignment Search Filter Section -->
-
+    {{-- <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <livewire:assignment-search-filter />
+        </div>
+    </section> --}}
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-24 bg-[#0F172A] relative overflow-hidden">
-        <!-- Modern Abstract Background -->
-        <div class="absolute inset-0">
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse">
-            </div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] animate-pulse"
-                style="animation-delay: 2s"></div>
+    <section id="how-it-works"
+        class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-20">
+            <div class="text-center mb-16">
                 <div
-                    class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full mb-6 hover:bg-white/10 transition-colors cursor-default">
-                    <span class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                    </span>
-                    <span class="text-indigo-200 font-medium text-sm tracking-wide uppercase">Simple Workflow</span>
+                    class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-white font-semibold text-sm">Simple 4-Step Process</span>
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-                    Your Path to <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Success</span>
-                </h2>
-                <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                    We've streamlined academic assistance into a simple, collaborative journey.
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">How It Works</h2>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    Getting expert help for your assignments is easy. Just follow these simple steps
                 </p>
             </div>
 
-            <!-- Staggered Card Layout -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative max-w-7xl mx-auto">
-                
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Step 1 -->
-                <div class="group relative">
+                <div class="relative">
                     <div
-                        class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500">
-                    </div>
-                    <div
-                        class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                        <!-- Watermark Number -->
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
                         <div
-                            class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">
-                            01</div>
-
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                            <span class="text-3xl">📝</span>
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            1
                         </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Submit Brief</h3>
-                        <p class="text-slate-400 leading-relaxed relative z-10">
-                            Fill out our smart order form. Upload requirements and set your deadline in under 2 minutes.
+                        <div class="text-6xl text-center mb-6 mt-4">📝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Submit Your Assignment</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Fill out our simple form with your assignment details, deadline, and requirements
                         </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
                     </div>
                 </div>
 
-                <!-- Step 2 (Staggered Down) -->
-                <div class="group relative lg:mt-24">
+                <!-- Step 2 -->
+                <div class="relative">
                     <div
-                        class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500">
-                    </div>
-                    <div
-                        class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                        <!-- Watermark Number -->
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
                         <div
-                            class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">
-                            02</div>
-
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                            <span class="text-3xl">🎯</span>
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            2
                         </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Expert Match</h3>
-                        <p class="text-slate-400 leading-relaxed relative z-10">
-                            Our AI matches you with a subject matter expert who specializes in your specific topic.
+                        <div class="text-6xl text-center mb-6 mt-4">🎯</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Get Matched with Expert</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            We instantly connect you with a qualified expert in your subject area
                         </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="group relative">
+                <div class="relative">
                     <div
-                        class="absolute inset-0 bg-gradient-to-r from-pink-600 to-rose-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500">
-                    </div>
-                    <div
-                        class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                        <!-- Watermark Number -->
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
                         <div
-                            class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">
-                            03</div>
-
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-pink-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                            <span class="text-3xl">⚡</span>
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            3
                         </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Process</h3>
-                        <p class="text-slate-400 leading-relaxed relative z-10">
-                            Track progress in real-time. Chat directly with your expert and request drafts along the way.
+                        <div class="text-6xl text-center mb-6 mt-4">⚡</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Expert Works on It</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Your expert completes the assignment following all your instructions and guidelines
                         </p>
+                    </div>
+                    <!-- Connector Arrow (hidden on mobile) -->
+                    <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white text-4xl">
+                        →
                     </div>
                 </div>
 
-                <!-- Step 4 (Staggered Down) -->
-                <div class="group relative lg:mt-24">
+                <!-- Step 4 -->
+                <div class="relative">
                     <div
-                        class="absolute inset-0 bg-gradient-to-r from-rose-600 to-orange-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500">
-                    </div>
-                    <div
-                        class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                        <!-- Watermark Number -->
+                        class="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
                         <div
-                            class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">
-                            04</div>
-
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-rose-500 to-orange-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-rose-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                            <span class="text-3xl">✅</span>
+                            class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                            4
                         </div>
-
-                        <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Quality Check</h3>
-                        <p class="text-slate-400 leading-relaxed relative z-10">
-                            Receive your polished work on time, complete with a plagiarism report and free revisions.
+                        <div class="text-6xl text-center mb-6 mt-4">✅</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Receive & Review</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Get your completed assignment on time with free revisions until you're satisfied
                         </p>
                     </div>
                 </div>
-
             </div>
 
-            <!-- CTA Button -->
-            <div class="text-center mt-24">
-                <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
-                    <span class="relative z-10">Start Your Journey</span>
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
+            <div class="text-center mt-16">
+                <a href="{{ route('order') }}"
+                    class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    Get Started Now
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
-                <p class="mt-6 text-slate-500 text-sm">No credit card required for quote</p>
             </div>
         </div>
     </section>
@@ -1644,82 +2374,181 @@
         </div>
     </section>
 
-    <!-- Student Testimonials Section -->
-    <section class="py-24 bg-gray-50 relative overflow-hidden" id="testimonials">
-        <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30"></div>
-        <div class="container mx-auto px-6 relative z-10">
+    {{-- <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4">Student Success Stories</span>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Students Say</h2>
-                <p class="mt-4 text-lg leading-8 text-gray-600">Join thousands of students who achieved better grades with our help</p>
+                <div
+                    class="inline-flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-green-900 font-semibold text-sm">Affordable & Transparent Pricing</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Student-Friendly Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Transparent pricing with no hidden fees. Get quality help that fits your budget
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Review 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <!-- Assignment Help Pricing -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900">Assignment Writing</h3>
+                        <span class="text-5xl">📝</span>
                     </div>
-                    <blockquote class="text-gray-700 mb-6 leading-relaxed">
-                        "I was struggling with my Nursing capstone project and running out of time. The expert not only delivered it on time but the quality was outstanding. I got an A! Highly recommended."
-                    </blockquote>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">SM</div>
-                        <div>
-                            <div class="font-bold text-gray-900">Sarah M.</div>
-                            <div class="text-sm text-gray-500">Nursing Student, NY</div>
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-blue-600">$15</span>
+                            <span class="text-gray-500">/page</span>
                         </div>
+                        <p class="text-sm text-gray-500 mt-2">Starting price for standard assignments</p>
                     </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Essays, research papers, reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Proper formatting & citations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Plagiarism report included</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Unlimited free revisions</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('order') }}"
+                        class="block text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        Order Now
+                    </a>
                 </div>
 
-                <!-- Review 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <!-- Programming Help Pricing -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900">Programming Help</h3>
+                        <span class="text-5xl">💻</span>
                     </div>
-                    <blockquote class="text-gray-700 mb-6 leading-relaxed">
-                        "The most transparent and reliable service I've used. No hidden fees, and the writer communicated with me throughout the process. The code was clean and well-commented too."
-                    </blockquote>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-xl">JL</div>
-                        <div>
-                            <div class="font-bold text-gray-900">James L.</div>
-                            <div class="text-sm text-gray-500">CS Student, CA</div>
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-emerald-600">$25</span>
+                            <span class="text-gray-500">/task</span>
                         </div>
+                        <p class="text-sm text-gray-500 mt-2">Starting price for coding projects</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">25+ programming languages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Well-commented code</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Debugging & optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Video explanation available</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('order') }}"
+                        class="block text-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        Get Help Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pricing Factors -->
+            <div
+                class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-5xl mx-auto border border-purple-100">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What Affects the Price?</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📅</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Deadline</h4>
+                        <p class="text-sm text-gray-600">Longer deadlines cost less. Rush orders available with express
+                            pricing.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📏</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Complexity</h4>
+                        <p class="text-sm text-gray-600">Advanced topics and specialized requirements may affect pricing.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">📄</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Length</h4>
+                        <p class="text-sm text-gray-600">Longer assignments are priced per page or project scope.</p>
                     </div>
                 </div>
-
-                <!-- Review 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    </div>
-                    <blockquote class="text-gray-700 mb-6 leading-relaxed">
-                        "I was skeptical at first, but they respected my confidentiality and delivered a plagiarism-free business plan. It helped me secure a B+ in my module. Will definitely use again."
-                    </blockquote>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold text-xl">MR</div>
-                        <div>
-                            <div class="font-bold text-gray-900">Michael R.</div>
-                            <div class="text-sm text-gray-500">Business Major, TX</div>
-                        </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-700 font-semibold mb-3">🎁 Special Offers:</p>
+                    <div class="flex flex-wrap gap-3 justify-center text-sm">
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">15% off for new
+                            customers</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">20% off for returning
+                            clients</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-purple-700 font-medium">Bulk order
+                            discounts</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Subject Areas Detailed Grid Section -->
     <section class="py-20 bg-white">
@@ -2145,65 +2974,126 @@
         </div>
     </section>
 
+    {{-- <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
 
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-white font-semibold text-sm">Your Security is Our Priority</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Trust & Safety Measures</h2>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    We implement industry-leading security measures to protect your privacy and ensure safe transactions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
+                <!-- SSL Encryption -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">SSL Encryption</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        256-bit SSL encryption protects all your data during transmission and storage
+                    </p>
+                </div>
+
+                <!-- Secure Payments -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold mb-3">Secure Payments</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        PCI-DSS compliant payment processing through trusted gateways like Stripe and PayPal
+                    </p>
+                </div>
+
+                <!-- Privacy Protection -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        We never share your personal information with third parties. GDPR compliant.
+                    </p>
+                </div>
+
+                <!-- Data Security -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-xl font-bold mb-3">Data Security</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Regular backups and secure data centers ensure your information is always protected
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h3 class="text-2xl font-bold mb-8 text-center">Trusted & Verified</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">✅</div>
+                        </div>
+                        <p class="text-sm font-semibold">SSL Certified</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">🏆</div>
+                        </div>
+                        <p class="text-sm font-semibold">BBB Accredited</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">⭐</div>
+                        </div>
+                        <p class="text-sm font-semibold">4.9/5 Trustpilot</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white/20 rounded-lg p-4 mb-3">
+                            <div class="text-3xl">🔐</div>
+                        </div>
+                        <p class="text-sm font-semibold">GDPR Compliant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50 relative overflow-hidden">
-        <div class="absolute inset-0 bg-white/50"></div>
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "Is Assignment Help USA legit and safe to use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA. We use secure payment processing, encrypted communications, and guarantee 100% confidentiality."
-            }
-          }, {
-            "@type": "Question",
-            "name": "How much does it cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Prices start from $15 per page for assignment help and $25 per task for programming help. The final cost depends on complexity, deadline, and length. We offer student-friendly pricing and discounts for returning customers."
-            }
-          }, {
-            "@type": "Question",
-            "name": "How fast can you complete my assignment?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We offer flexible deadlines from 24 hours to several weeks. For urgent assignments, we have express delivery options available. Most assignments are completed within 3-5 days."
-            }
-          }, {
-            "@type": "Question",
-            "name": "What if I'm not satisfied with the work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We offer unlimited free revisions until you're completely satisfied. If we can't meet your requirements, we provide a full refund under our money-back guarantee policy."
-            }
-          }]
-        }
-        </script>
-        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16">
-                <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">Common Questions</span>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                 <p class="text-xl text-gray-600">Everything you need to know about Assignment Help USA</p>
             </div>
 
-            <div class="grid gap-6">
+            <div class="space-y-6">
                 <!-- FAQ 1 -->
-                <div class="bg-white rounded-xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-all border border-gray-100">
+                <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Is Assignment Help USA legit and safe to use?</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA.
-                        We use secure payment processing, encrypted communications, and guarantee 100% confidentiality.
+                        We use
+                        secure payment processing, encrypted communications, and guarantee 100% confidentiality.
                     </p>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="bg-white rounded-xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-all border border-gray-100">
+                <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">How much does it cost?</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Prices start from $15 per page for assignment help and $25 per task for programming help. The final
@@ -2213,7 +3103,7 @@
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="bg-white rounded-xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-all border border-gray-100">
+                <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">How fast can you complete my assignment?</h3>
                     <p class="text-gray-600 leading-relaxed">
                         We offer flexible deadlines from 24 hours to several weeks. For urgent assignments, we have express
@@ -2222,7 +3112,7 @@
                 </div>
 
                 <!-- FAQ 4 -->
-                <div class="bg-white rounded-xl p-8 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-all border border-gray-100">
+                <div class="bg-white rounded-xl p-6 shadow-md">
                     <h3 class="text-xl font-bold text-gray-900 mb-3">What if I'm not satisfied with the work?</h3>
                     <p class="text-gray-600 leading-relaxed">
                         We offer unlimited free revisions until you're completely satisfied. If we can't meet your
