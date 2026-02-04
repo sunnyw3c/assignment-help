@@ -1747,41 +1747,7 @@
     <!-- FAQ Section -->
     <section class="py-24 bg-gray-50 relative overflow-hidden">
         <div class="absolute inset-0 bg-white/50"></div>
-        <!-- <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "Is Assignment Help USA legit and safe to use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Assignment Help USA is a trusted platform used by over 50,000 college students across the USA. We use secure payment processing, encrypted communications, and guarantee 100% confidentiality."
-            }
-          }, {
-            "@type": "Question",
-            "name": "How much does it cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Prices start from $15 per page for assignment help and $25 per task for programming help. The final cost depends on complexity, deadline, and length. We offer student-friendly pricing and discounts for returning customers."
-            }
-          }, {
-            "@type": "Question",
-            "name": "How fast can you complete my assignment?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We offer flexible deadlines from 24 hours to several weeks. For urgent assignments, we have express delivery options available. Most assignments are completed within 3-5 days."
-            }
-          }, {
-            "@type": "Question",
-            "name": "What if I'm not satisfied with the work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We offer unlimited free revisions until you're completely satisfied. If we can't meet your requirements, we provide a full refund under our money-back guarantee policy."
-            }
-          }]
-        }
-        </script> -->
+
         <div class="container mx-auto px-6 max-w-4xl relative z-10">
             <div class="text-center mb-16">
                 <span
