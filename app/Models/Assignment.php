@@ -11,6 +11,7 @@ class Assignment extends Model
 {
     protected $fillable = [
         'user_id',
+        'email',
         'service_type',
         'service_id',
         'subject',

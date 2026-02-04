@@ -504,169 +504,178 @@
     </section>
 
     <!-- Budget Calculator Section -->
-    <section class="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <!-- Gradient Orbs -->
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-                style="animation-delay: 1s;"></div>
-            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"
-                style="animation-delay: 2s;"></div>
+    <section class="relative py-24 lg:py-40 bg-[#0F172A] overflow-hidden">
+        <!-- Modern Abstract Background -->
+        <div class="absolute inset-0">
+            <!-- Dynamic Gradient Orbs -->
+            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[150px] animate-pulse" style="animation-delay: 4s"></div>
 
-            <!-- Floating Icons -->
-            <div class="absolute top-20 left-10 opacity-10 animate-float-slow">
-                <div class="text-6xl">💰</div>
-            </div>
-            <div class="absolute top-40 right-20 opacity-10 animate-float-delayed">
-                <div class="text-6xl">📊</div>
-            </div>
-            <div class="absolute bottom-40 left-20 opacity-10 animate-float">
-                <div class="text-6xl">✨</div>
-            </div>
-            <div class="absolute bottom-20 right-40 opacity-10 animate-float-slow" style="animation-delay: 1.5s;">
-                <div class="text-6xl">🎯</div>
-            </div>
-
-            <!-- Grid Pattern -->
-            <div
-                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30">
+            <!-- Stylized Mesh Pattern -->
+            <div class="absolute inset-0 opacity-[0.15] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAzMCAwIEwgMzAgNjAgTSAwIDMwIEwgNjAgMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"></div>
+            
+            <!-- Circuit Lines Accent -->
+            <div class="absolute inset-0 opacity-20">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M 0 20 L 20 20 L 25 25 L 100 25" stroke="rgba(59, 130, 246, 0.2)" stroke-width="0.1" fill="none" />
+                    <path d="M 100 80 L 80 80 L 75 75 L 0 75" stroke="rgba(139, 92, 246, 0.2)" stroke-width="0.1" fill="none" />
+                </svg>
             </div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
             <!-- Header Section -->
-            <div class="text-center mb-16">
-                <!-- Badge -->
-                <div
-                    class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full mb-6 animate-fade-in-up">
-                    <span class="relative flex h-3 w-3">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                    </span>
-                    <span class="text-white font-bold text-sm">Live Pricing Calculator</span>
+            <div class="text-center mb-24">
+                <!-- Architectural Step Indicator -->
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <div class="h-px w-12 bg-gradient-to-r from-transparent to-blue-500"></div>
+                    <div class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full hover:bg-white/10 transition-colors cursor-default">
+                        <span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+                        <span class="text-blue-200 font-bold text-xs uppercase tracking-widest">Pricing Engine v2.0</span>
+                    </div>
+                    <div class="h-px w-12 bg-gradient-to-l from-transparent to-blue-500"></div>
                 </div>
 
                 <!-- Main Title -->
-                <h2
-                    class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
-                    Get Your <span
-                        class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Instant
-                        Quote</span>
+                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
+                    Smart Pricing, <br class="hidden md:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Zero Surprises</span>
                 </h2>
 
                 <!-- Subtitle -->
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 animate-fade-in-up animation-delay-400">
-                    Calculate your assignment cost in real-time with our transparent pricing calculator
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Get a scientifically calculated quote based on academic complexity, 
+                    urgency, and expert level. Transparent. Fast. Precise.
                 </p>
 
-                <!-- Trust Indicators -->
-                <div
-                    class="flex flex-wrap items-center justify-center gap-6 md:gap-8 animate-fade-in-up animation-delay-600">
-                    <div class="flex items-center gap-2 text-white/90">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span class="font-semibold text-sm md:text-base">No Hidden Fees</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-white/90">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span class="font-semibold text-sm md:text-base">100% Transparent</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-white/90">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span class="font-semibold text-sm md:text-base">Instant Results</span>
-                    </div>
+                <!-- Vertical Flow Line -->
+                <div class="mt-12 flex justify-center">
+                    <div class="w-px h-16 bg-gradient-to-b from-blue-500/50 to-transparent"></div>
                 </div>
             </div>
 
-            <!-- Calculator Component with Decorative Frame -->
-            <div class="relative max-w-6xl mx-auto">
-                <!-- Decorative Corner Elements -->
-                <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-cyan-400/50 rounded-tl-3xl">
-                </div>
-                <div class="absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-purple-400/50 rounded-tr-3xl">
-                </div>
-                <div class="absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-blue-400/50 rounded-bl-3xl">
-                </div>
-                <div
-                    class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-indigo-400/50 rounded-br-3xl">
+            <!-- Calculator Component with Premium Frame -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Floating Decorative Accents -->
+                <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse" style="animation-delay: 1.5s"></div>
+
+                <!-- Live Status Indicator -->
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+                    <div class="bg-slate-900 border border-white/10 rounded-full px-4 py-1 flex items-center gap-2 shadow-2xl">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-[10px] font-bold text-white uppercase tracking-tighter">Live Pricing Engine Active</span>
+                    </div>
                 </div>
 
-                <!-- Glow Effect -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-xl">
-                </div>
-
-                <div class="relative">
-                    <livewire:budget-calculator />
+                <div class="relative h-full bg-slate-800/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] overflow-hidden">
+                    <!-- Subtle Glass Highlight -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.02] to-transparent pointer-events-none"></div>
+                    
+                    <div class="relative z-10">
+                        <livewire:budget-calculator />
+                    </div>
                 </div>
             </div>
 
             <!-- Bottom Stats Section -->
             <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
                 <!-- Stat 1 -->
-                <div
-                    class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
-                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
-                    <div class="text-3xl font-bold text-white mb-1">
-                        <div class="text-sm text-blue-200">Instant Quote</div>
-                    </div>
-
-                    <!-- Stat 2 -->
-                    <div
-                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
-                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💯</div>
-                        <div class="text-3xl font-bold text-white mb-1">100%</div>
-                        <div class="text-sm text-blue-200">Price Match</div>
-                    </div>
-
-                    <!-- Stat 3 -->
-                    <div
-                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
-                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎓</div>
-                        <div class="text-3xl font-bold text-white mb-1">50+</div>
-                        <div class="text-sm text-blue-200">Subjects</div>
-                    </div>
-
-                    <!-- Stat 4 -->
-                    <div
-                        class="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
-                        <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">💰</div>
-                        <div class="text-3xl font-bold text-white mb-1">20%</div>
-                        <div class="text-sm text-blue-200">Early Bird Discount</div>
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
+                        <!-- Watermark Number -->
+                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
+                        
+                        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Instant</h3>
+                        <p class="text-blue-200 text-sm">Quote Results</p>
                     </div>
                 </div>
 
-                <!-- Additional CTA -->
-                <div class="mt-12 text-center">
-                    <p class="text-white/80 mb-4">Need help choosing? Our experts are here 24/7</p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <!-- Stat 2 -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
+                        <!-- Watermark Number -->
+                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
+                        
+                        <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl">💯</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">100%</h3>
+                        <p class="text-indigo-200 text-sm">Price Match</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
+                        <!-- Watermark Number -->
+                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
+                        
+                        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl">🎓</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">50+</h3>
+                        <p class="text-purple-200 text-sm">Expert Subjects</p>
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
+                        <!-- Watermark Number -->
+                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
+                        
+                        <div class="w-14 h-14 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="text-3xl">💰</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-1">20%</h3>
+                        <p class="text-pink-200 text-sm">Early Bird Discount</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- CTA Section and Satisfaction -->
+                <div class="mt-24 text-center">
+                    <div class="inline-flex flex-wrap items-center justify-center gap-6 mb-12">
+                        <div class="flex items-center gap-2 text-slate-400 text-sm">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <span>Enterprise-grade Security</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400 text-sm">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <span>100% Privacy Protected</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <a href="{{ route('order') }}"
-                            class="group inline-flex items-center gap-2 bg-white hover:bg-blue-50 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
-                            <span>Start Your Order</span>
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_50px_-10px_rgba(255,255,255,0.4)]">
+                            <span class="relative z-10">Start Your Order</span>
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                             </svg>
                         </a>
                         <a href="#"
-                            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            class="inline-flex items-center gap-3 px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                            <svg class="w-5 h-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                             </svg>
                             <span>Talk to Expert</span>
                         </a>
@@ -674,14 +683,8 @@
                 </div>
             </div>
 
-            <!-- Bottom Wave Decoration -->
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-                    <path
-                        d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-                        fill="rgb(249, 250, 251)" />
-                </svg>
-            </div>
+            <!-- Bottom Curve Decoration -->
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none"></div>
     </section>
 
     <!-- Popular Subjects Section -->

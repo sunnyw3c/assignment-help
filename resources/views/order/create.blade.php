@@ -36,45 +36,59 @@
             @livewire('order.⚡order-form-component')
         </div>
 
-        <!-- Trust Indicators with 3D Cards - Responsive -->
-        <div class="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 text-center">
-            <div class="card-3d-hover glass-card gradient-follow p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl stagger-item touch-manipulation">
-                <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-1 sm:mb-2">98%</div>
-                <div class="text-xs sm:text-sm text-gray-700 font-semibold">Success Rate</div>
-            </div>
-            <div class="card-3d-hover glass-card gradient-follow p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl stagger-item touch-manipulation">
-                <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-1 sm:mb-2">24/7</div>
-                <div class="text-xs sm:text-sm text-gray-700 font-semibold">Support</div>
-            </div>
-            <div class="card-3d-hover glass-card gradient-follow p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl stagger-item touch-manipulation">
-                <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-1 sm:mb-2">500+</div>
-                <div class="text-xs sm:text-sm text-gray-700 font-semibold">Experts</div>
-            </div>
-            <div class="card-3d-hover glass-card gradient-follow p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl stagger-item touch-manipulation">
-                <div class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-1 sm:mb-2">15min</div>
-                <div class="text-xs sm:text-sm text-gray-700 font-semibold">Avg Response</div>
-            </div>
-        </div>
 
-        {{-- Features Section - Responsive --}}
-        <div class="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            <x-immersive-card variant="glass" class="text-center stagger-item touch-manipulation p-6 sm:p-8">
-                <div class="text-4xl sm:text-5xl mb-3 sm:mb-4">🎓</div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Expert Writers</h3>
-                <p class="text-sm sm:text-base text-gray-600">PhD-qualified professionals in every subject</p>
-            </x-immersive-card>
+        {{-- Enhanced Protection Cards Grid --}}
+        <div class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Feature 1: Expert Writers -->
+            <div class="card-3d-hover glass-card rounded-[2.5rem] p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item">
+                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
+                    <img src="{{ asset('images/ui/premium_academic_bg.png') }}" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-0 right-0 p-5">
+                    <span class="bg-emerald-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-emerald-400 shadow-lg shadow-emerald-200/50">Verified Expert</span>
+                </div>
+                <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500">✍️</div>
+                <h3 class="text-xl font-black text-slate-800 mb-3">Premium Authors</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Access a global network of PhD-qualified subject matter experts vetted for academic excellence.</p>
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                    <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Top 2% Accuracy Guaranteed
+                </div>
+            </div>
 
-            <x-immersive-card variant="glass" class="text-center stagger-item touch-manipulation p-6 sm:p-8">
-                <div class="text-4xl sm:text-5xl mb-3 sm:mb-4">⚡</div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Fast Delivery</h3>
-                <p class="text-sm sm:text-base text-gray-600">Quick turnaround without compromising quality</p>
-            </x-immersive-card>
+            <!-- Feature 2: Fast Delivery -->
+            <div class="card-3d-hover glass-card rounded-[2.5rem] p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item">
+                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
+                    <img src="{{ asset('images/ui/premium_academic_bg.png') }}" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-0 right-0 p-5">
+                    <span class="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-blue-500 shadow-lg shadow-blue-200/50">Express Service</span>
+                </div>
+                <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">⚡</div>
+                <h3 class="text-xl font-black text-slate-800 mb-3">Ultra-Fast Turnaround</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Meeting tight deadlines is our specialty. Receive high-quality solutions in as little as 3 hours.</p>
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                    <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    100% On-Time Delivery
+                </div>
+            </div>
 
-            <x-immersive-card variant="glass" class="text-center stagger-item touch-manipulation p-6 sm:p-8 sm:col-span-2 lg:col-span-1">
-                <div class="text-4xl sm:text-5xl mb-3 sm:mb-4">🔒</div>
-                <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">100% Secure</h3>
-                <p class="text-sm sm:text-base text-gray-600">Your privacy and data are completely protected</p>
-            </x-immersive-card>
+            <!-- Feature 3: Security -->
+            <div class="card-3d-hover glass-card rounded-[2.5rem] p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item sm:col-span-2 lg:col-span-1">
+                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
+                    <img src="{{ asset('images/ui/secure_pattern_bg.png') }}" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-0 right-0 p-5">
+                    <span class="bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-indigo-500 shadow-lg shadow-indigo-200/50">256-Bit SSL</span>
+                </div>
+                <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">🔒</div>
+                <h3 class="text-xl font-black text-slate-800 mb-3">Confidential & Secure</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Your data is fully encrypted. We maintain 100% privacy with zero-data-sharing policies.</p>
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                    <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    Bank-Level Data Privacy
+                </div>
+            </div>
         </div>
     </div>
 
