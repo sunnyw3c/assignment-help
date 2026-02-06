@@ -24,6 +24,7 @@ new class extends Component {
     
     // Writing specific
     public $referenceStyle = 'APA 7th Edition';
+    public $customReferenceStyle = '';
     
     // Technical specific
     public $softwareLanguage = '';
@@ -172,7 +173,7 @@ new class extends Component {
             'assignment_type' => $this->assignmentType === 'technical' ? $this->softwareLanguage : $this->assignmentTypeValue,
             'budget' => $this->discountedPrice,
             'specific_requirements' => json_encode([
-                'reference_style' => $this->referenceStyle,
+                'reference_style' => $this->referenceStyle === 'Other' ? $this->customReferenceStyle : $this->referenceStyle,
                 'software_language' => $this->softwareLanguage,
                 'course_code' => $this->courseCode,
                 'duration' => $this->duration,
@@ -376,16 +377,28 @@ new class extends Component {
                                         <option value="phd">🎓 PhD/Doctoral</option>
                                     </select>
                                 </div>
-                                <div class="sm:col-span-2">
-                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Reference Style *</label>
-                                    <div class="grid grid-cols-4 gap-1.5 sm:gap-3">
+                                <div class="col-span-full">
+                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">Reference Style *</label>
+                                    <div class="flex flex-wrap gap-2">
                                         @foreach(['APA 7th', 'MLA 9th', 'Harvard', 'Chicago', 'Oxford', 'Turabian', 'OSCOLA', 'Other'] as $style)
                                             <button type="button" wire:click="$set('referenceStyle', '{{ $style }}')"
-                                                class="px-2 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border-2 text-[10px] sm:text-sm font-semibold transition-all {{ $referenceStyle === $style ? 'border-purple-500 bg-purple-50 text-purple-700' : 'border-slate-100 bg-slate-50 text-slate-500 hover:border-slate-200' }}">
+                                                class="px-4 py-2 rounded-full border-2 text-[10px] sm:text-xs font-bold transition-all duration-300 {{ $referenceStyle === $style ? 'border-purple-600 bg-purple-600 text-white shadow-lg shadow-purple-200' : 'border-slate-100 bg-white text-slate-500 hover:border-purple-200 hover:text-purple-600' }}">
                                                 {{ $style }}
                                             </button>
                                         @endforeach
                                     </div>
+
+                                    @if($referenceStyle === 'Other')
+                                        <div class="mt-4 animate-fade-in-up">
+                                            <div class="relative group">
+                                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-purple-500">
+                                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                                                </div>
+                                                <input type="text" wire:model="customReferenceStyle" placeholder="Specify your reference style (e.g. Vancouver, IEEE, Bluebook...)"
+                                                    class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 pl-11 focus:border-purple-500 focus:bg-white focus:outline-none transition-all text-sm">
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         @endif
@@ -606,6 +619,13 @@ new class extends Component {
                             @endif
                         </div>
 
+                        <!-- Description -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Requirements</label>
+                            <textarea wire:model="description" rows="6" placeholder="Describe your requirements in detail..."
+                                      class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors"></textarea>
+                        </div>
+
                         <!-- Enhanced Multiple File Upload with Immersive Design -->
                         <div x-data="{
                             dragging: false,
@@ -736,13 +756,6 @@ new class extends Component {
                             @endif
                         </div>
 
-                        <!-- Description -->
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">Requirements</label>
-                            <textarea wire:model="description" rows="6" placeholder="Describe your requirements in detail..."
-                                      class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors"></textarea>
-                        </div>
-
                         <!-- Submit Button -->
                         <div class="flex justify-center pt-4 sm:pt-6">
                             <button type="submit"
@@ -765,101 +778,176 @@ new class extends Component {
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN - PRICE CALCULATOR (Sidebar) -->
+            <!-- RIGHT COLUMN - SECURE ORDER SUMMARY (Sidebar) -->
             <div class="md:col-span-1 order-1 md:order-2">
-                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 p-4 sm:p-6 md:p-8 sticky top-4 sm:top-8">
-                    <div class="text-center mb-4 sm:mb-6">
-                        <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
-                            </svg>
-                            <span class="font-bold text-sm sm:text-base">Price Estimate</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Your Total Cost</h3>
-                    </div>
-
-                    <!-- Price Display -->
-                    <div class="bg-white rounded-xl p-4 sm:p-6 border-2 border-blue-200 mb-4 sm:mb-6">
-                        <div class="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
-                            <span class="text-sm sm:text-lg font-semibold text-gray-700">Estimated Total:</span>
-                            <span class="inline-flex items-center px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold bg-red-500 text-white">
-                                {{ number_format($this->totalDiscount * 100, 0) }}% OFF
-                            </span>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-base sm:text-lg text-gray-400 line-through">${{ number_format($this->totalPrice, 2) }}</div>
-                            <div class="text-3xl sm:text-4xl font-bold text-green-600">${{ number_format($this->discountedPrice, 2) }}</div>
-                            @if($assignmentType !== 'online_class')
-                                <div class="text-xs sm:text-sm text-gray-500">${{ number_format($this->pricePerPage, 2) }} per page</div>
-                            @else
-                                <div class="text-xs sm:text-sm text-gray-500">${{ number_format($this->discountedPrice / $duration, 2) }} per {{ rtrim($durationUnit, 's') }}</div>
-                            @endif
+                <div class="sticky top-4 sm:top-8 space-y-6">
+                    <!-- Main Summary Card -->
+                    <div class="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden">
+                        <!-- Header with Security Focus -->
+                        <div class="bg-slate-900 p-8 text-white text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center">
+                            <!-- Premium Background Image -->
+                            <div class="absolute inset-0 z-0">
+                                <img src="{{ asset('images/ui/premium_academic_bg.png') }}" alt="" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+                                <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-900"></div>
+                            </div>
+                            
+                            <div class="relative z-10 flex flex-col items-center gap-3">
+                                <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-xl">
+                                    <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-black tracking-tight">Secure Order Summary</h3>
+                                    <div class="flex items-center justify-center gap-1.5 text-[10px] text-emerald-400 font-bold uppercase tracking-widest mt-1">
+                                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                                        256-Bit SSL Encrypted
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Price Breakdown -->
-                        <div class="border-t-2 border-gray-100 pt-3 sm:pt-4 mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm">
-                            <div class="flex justify-between text-gray-600">
-                                @if($assignmentType === 'online_class')
-                                    <span>Duration ({{ $duration }} {{ $durationUnit }}):</span>
-                                    <span class="font-semibold">${{ number_format($this->basePrice * $duration, 2) }}</span>
-                                @else
-                                    <span>Base ({{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }}):</span>
-                                    <span class="font-semibold">${{ number_format($this->basePrice * $pages, 2) }}</span>
+                        <div class="p-6 sm:p-8 space-y-6">
+                            <!-- Premium Price Card -->
+                            <div class="relative group">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                                <div class="relative bg-slate-50 border border-slate-100 rounded-2xl p-6">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Grand Total</span>
+                                        <span class="px-2 py-1 bg-red-500 text-white text-[10px] font-black rounded-lg shadow-lg shadow-red-200 animate-bounce-slow">
+                                            {{ number_format($this->totalDiscount * 100, 0) }}% OFF
+                                        </span>
+                                    </div>
+                                    <div class="flex items-baseline gap-2">
+                                        <span class="text-4xl font-black text-slate-900">${{ number_format($this->discountedPrice, 2) }}</span>
+                                        <span class="text-sm text-slate-400 line-through font-bold">${{ number_format($this->totalPrice, 2) }}</span>
+                                    </div>
+                                    <div class="mt-2 flex items-center gap-2">
+                                        <div class="h-1 flex-1 bg-slate-200 rounded-full overflow-hidden">
+                                            <div class="h-full bg-emerald-500 w-full"></div>
+                                        </div>
+                                        <span class="text-[10px] font-black text-emerald-600 uppercase tracking-tighter">Savings Applied: ${{ number_format($this->discountAmount, 2) }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Receipt -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-slate-500 flex items-center gap-2">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                        @if($assignmentType === 'online_class')
+                                            Duration ({{ $duration }} {{ $durationUnit }})
+                                        @else
+                                            Project Size ({{ $pages }} {{ $pages === 1 ? 'Page' : 'Pages' }})
+                                        @endif
+                                    </span>
+                                    <span class="font-bold text-slate-700">${{ number_format($this->basePrice * ($assignmentType === 'online_class' ? $duration : $pages), 2) }}</span>
+                                </div>
+
+                                @if ($assignmentType !== 'online_class' && $this->urgencyMultiplier !== 1.0)
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-500 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            Deadline Priority Adjustment
+                                        </span>
+                                        <span class="font-bold {{ $this->urgencyMultiplier > 1.0 ? 'text-orange-500' : 'text-emerald-500' }}">
+                                            {{ $this->urgencyMultiplier > 1.0 ? '+' : '' }}{{ number_format(($this->urgencyMultiplier - 1.0) * 100, 0) }}%
+                                        </span>
+                                    </div>
                                 @endif
-                            </div>
-                            @if ($assignmentType !== 'online_class' && $this->urgencyMultiplier !== 1.0)
-                                <div class="flex justify-between text-gray-600">
-                                    <span>Deadline adj.:</span>
-                                    <span class="font-semibold {{ $this->urgencyMultiplier > 1.0 ? 'text-orange-600' : 'text-green-600' }}">
-                                        {{ $this->urgencyMultiplier > 1.0 ? '+' : '' }}{{ number_format(($this->urgencyMultiplier - 1.0) * 100, 0) }}%
-                                    </span>
+
+                                @if ($this->subjectMultiplier !== 1.0)
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-500 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                            Expert Specialty Loading
+                                        </span>
+                                        <span class="font-bold text-orange-500">+{{ number_format(($this->subjectMultiplier - 1.0) * 100, 0) }}%</span>
+                                    </div>
+                                @endif
+
+                                <div class="pt-3 border-t border-slate-100 space-y-2">
+                                    <div class="flex justify-between text-sm text-emerald-600 font-bold">
+                                        <span>Exclusive Welcome Offer</span>
+                                        <span>-40%</span>
+                                    </div>
+                                    @if ($assignmentType !== 'online_class' && $this->volumeDiscount > 0)
+                                        <div class="flex justify-between text-sm text-emerald-600 font-bold">
+                                            <span>Bulk Order Discount ({{ $pages }}+ pages)</span>
+                                            <span>-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
-                            @if ($this->subjectMultiplier !== 1.0)
-                                <div class="flex justify-between text-gray-600">
-                                    <span>Subject complexity:</span>
-                                    <span class="font-semibold text-orange-600">
-                                        +{{ number_format(($this->subjectMultiplier - 1.0) * 100, 0) }}%
-                                    </span>
-                                </div>
-                            @endif
-                            <div class="flex justify-between text-green-600 font-semibold border-t border-gray-200 pt-2 mt-2">
-                                <span>Flat Discount:</span>
-                                <span>-40%</span>
-                            </div>
-                            @if ($assignmentType !== 'online_class' && $this->volumeDiscount > 0)
-                                <div class="flex justify-between text-green-600 font-semibold">
-                                    <span>Volume ({{ $pages }}+ pages):</span>
-                                    <span>-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
-                                </div>
-                            @endif
-                            <div class="flex justify-between text-green-700 font-bold bg-green-50 -mx-2 px-2 py-1 rounded">
-                                <span>Total Savings:</span>
-                                <span>-${{ number_format($this->discountAmount, 2) }}</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Features -->
-                    <div class="pt-4 sm:pt-6 border-t-2 border-blue-100">
-                        <div class="grid grid-cols-2 md:grid-cols-1 gap-2 sm:gap-3 text-xs sm:text-sm">
-                            <div class="flex items-center gap-2">
-                                <div class="text-blue-600 font-bold">✓</div>
-                                <div class="text-gray-600">Plagiarism Free</div>
+                    <!-- Trust Seals Section -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center gap-2 text-center group hover:border-blue-200 transition-colors">
+                            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <div class="text-blue-600 font-bold">✓</div>
-                                <div class="text-gray-600">On-Time Delivery</div>
+                            <div>
+                                <div class="text-[10px] font-black text-slate-900 uppercase tracking-tighter">SSL Secure</div>
+                                <div class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Encrypted Checkout</div>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <div class="text-blue-600 font-bold">✓</div>
-                                <div class="text-gray-600">24/7 Support</div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center gap-2 text-center group hover:border-emerald-200 transition-colors">
+                            <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <div class="text-blue-600 font-bold">✓</div>
-                                <div class="text-gray-600">Free Revisions</div>
+                            <div>
+                                <div class="text-[10px] font-black text-slate-900 uppercase tracking-tighter">Verified</div>
+                                <div class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Academic Experts</div>
                             </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center gap-2 text-center group hover:border-orange-200 transition-colors">
+                            <div class="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 transition-colors group-hover:bg-orange-600 group-hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-black text-slate-900 uppercase tracking-tighter">Guaranteed</div>
+                                <div class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Full Money Back</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col items-center gap-2 text-center group hover:border-purple-200 transition-colors">
+                            <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 transition-colors group-hover:bg-purple-600 group-hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-black text-slate-900 uppercase tracking-tighter">Fast Delivery</div>
+                                <div class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Always On Time</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Proof Card -->
+                    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-6 text-white relative overflow-hidden group shadow-lg shadow-indigo-200">
+                        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                        <div class="relative z-10 flex items-center gap-4">
+                            <div class="flex -space-x-3">
+                                <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-900">JS</div>
+                                <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300 flex items-center justify-center text-[10px] font-bold text-slate-900">MA</div>
+                                <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400 flex items-center justify-center text-[10px] font-bold text-slate-900">RK</div>
+                            </div>
+                            <div>
+                                <div class="text-xl font-black">50,000+</div>
+                                <div class="text-[10px] font-bold text-indigo-100 uppercase tracking-widest">Happy Students in USA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trusted Payment Methods -->
+                    <div class="pt-4 px-2">
+                        <div class="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">We Accept Secure Payments</div>
+                        <div class="flex flex-wrap justify-center items-center gap-4 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                            <!-- Placeholder-like icons using text/svg since I don't have external assets -->
+                            <div class="flex items-center gap-1 font-black text-slate-600 text-[10px]">VISA</div>
+                            <div class="flex items-center gap-1 font-black text-slate-600 text-[10px]">MASTERCARD</div>
+                            <div class="flex items-center gap-1 font-black text-slate-600 text-[10px]">AMEX</div>
+                            <div class="flex items-center gap-1 font-black text-slate-600 text-[10px]">PAYPAL</div>
                         </div>
                     </div>
                 </div>
