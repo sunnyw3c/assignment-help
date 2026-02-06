@@ -279,7 +279,7 @@ new class extends Component {
         <!-- Main Layout Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <!-- LEFT COLUMN - ORDER FORM -->
-            <div class="md:col-span-2 order-2 md:order-1">
+            <div class="md:col-span-2 order-1 md:order-1">
                 <div class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
                     <div class="bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-4 sm:p-6 text-white">
                         <h2 class="text-lg sm:text-2xl font-bold">Assignment Details</h2>
@@ -779,7 +779,7 @@ new class extends Component {
             </div>
 
             <!-- RIGHT COLUMN - SECURE ORDER SUMMARY (Sidebar) -->
-            <div class="md:col-span-1 order-1 md:order-2">
+            <div class="md:col-span-1 order-2 md:order-2">
                 <div class="sticky top-4 sm:top-8 space-y-6">
                     <!-- Main Summary Card -->
                     <div class="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden">
