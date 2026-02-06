@@ -276,27 +276,27 @@ new class extends Component {
 <div>
     <form wire:submit.prevent="submit">
         <!-- Main Layout Grid -->
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <!-- LEFT COLUMN - ORDER FORM -->
-            <div class="md:col-span-2">
-                <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
-                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
-                        <h2 class="text-2xl font-bold">Assignment Details</h2>
-                        <p class="text-purple-100 mt-2">Fill out the form below to get started</p>
+            <div class="md:col-span-2 order-2 md:order-1">
+                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-4 sm:p-6 text-white">
+                        <h2 class="text-lg sm:text-2xl font-bold">Assignment Details</h2>
+                        <p class="text-purple-100 mt-1 sm:mt-2 text-sm sm:text-base">Fill out the form below to get started</p>
                     </div>
 
-                    <div class="p-6 md:p-10 space-y-10">
+                    <div class="p-4 sm:p-6 md:p-10 space-y-6 sm:space-y-10">
                         <!-- Premium Category Switcher -->
                         <div class="relative">
-                            <label class="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider">Select Service Category</label>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                                <button type="button" wire:click="$set('assignmentType', 'writing')" 
-                                    class="relative group px-6 py-4 rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'writing' ? 'border-purple-600 bg-purple-50/50 shadow-lg shadow-purple-200/50' : 'border-slate-100 hover:border-purple-200 bg-white' }}">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl {{ $assignmentType === 'writing' ? 'bg-purple-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-purple-100 group-hover:text-purple-600' }}">✍️</div>
-                                        <div>
-                                            <div class="font-bold text-sm {{ $assignmentType === 'writing' ? 'text-purple-900' : 'text-slate-600' }}">Writing</div>
-                                            <div class="text-[10px] text-slate-400 font-medium">Essays, Research</div>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-3 sm:mb-4 uppercase tracking-wider">Select Service Category</label>
+                            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                                <button type="button" wire:click="$set('assignmentType', 'writing')"
+                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'writing' ? 'border-purple-600 bg-purple-50/50 shadow-lg shadow-purple-200/50' : 'border-slate-100 hover:border-purple-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'writing' ? 'bg-purple-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-purple-100 group-hover:text-purple-600' }}">✍️</div>
+                                        <div class="text-center sm:text-left">
+                                            <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'writing' ? 'text-purple-900' : 'text-slate-600' }}">Writing</div>
+                                            <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Essays, Research</div>
                                         </div>
                                     </div>
                                     @if($assignmentType === 'writing')
@@ -306,13 +306,13 @@ new class extends Component {
                                     @endif
                                 </button>
 
-                                <button type="button" wire:click="$set('assignmentType', 'technical')" 
-                                    class="relative group px-6 py-4 rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'technical' ? 'border-indigo-600 bg-indigo-50/50 shadow-lg shadow-indigo-200/50' : 'border-slate-100 hover:border-indigo-200 bg-white' }}">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl {{ $assignmentType === 'technical' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600' }}">⚙️</div>
-                                        <div>
-                                            <div class="font-bold text-sm {{ $assignmentType === 'technical' ? 'text-indigo-900' : 'text-slate-600' }}">Technical</div>
-                                            <div class="text-[10px] text-slate-400 font-medium">Coding, Math</div>
+                                <button type="button" wire:click="$set('assignmentType', 'technical')"
+                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'technical' ? 'border-indigo-600 bg-indigo-50/50 shadow-lg shadow-indigo-200/50' : 'border-slate-100 hover:border-indigo-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'technical' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600' }}">⚙️</div>
+                                        <div class="text-center sm:text-left">
+                                            <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'technical' ? 'text-indigo-900' : 'text-slate-600' }}">Technical</div>
+                                            <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Coding, Math</div>
                                         </div>
                                     </div>
                                     @if($assignmentType === 'technical')
@@ -322,13 +322,13 @@ new class extends Component {
                                     @endif
                                 </button>
 
-                                <button type="button" wire:click="$set('assignmentType', 'online_class')" 
-                                    class="relative group px-6 py-4 rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'online_class' ? 'border-emerald-600 bg-emerald-50/50 shadow-lg shadow-emerald-200/50' : 'border-slate-100 hover:border-emerald-200 bg-white' }}">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl {{ $assignmentType === 'online_class' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-600' }}">🎓</div>
-                                        <div>
-                                            <div class="font-bold text-sm {{ $assignmentType === 'online_class' ? 'text-emerald-900' : 'text-slate-600' }}">Online Class</div>
-                                            <div class="text-[10px] text-slate-400 font-medium">Portal, Exams</div>
+                                <button type="button" wire:click="$set('assignmentType', 'online_class')"
+                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'online_class' ? 'border-emerald-600 bg-emerald-50/50 shadow-lg shadow-emerald-200/50' : 'border-slate-100 hover:border-emerald-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'online_class' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-600' }}">🎓</div>
+                                        <div class="text-center sm:text-left">
+                                            <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'online_class' ? 'text-emerald-900' : 'text-slate-600' }}">Online Class</div>
+                                            <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Portal, Exams</div>
                                         </div>
                                     </div>
                                     @if($assignmentType === 'online_class')
@@ -355,10 +355,10 @@ new class extends Component {
 
                         <!-- Writing Category Fields -->
                         @if($assignmentType === 'writing')
-                            <div class="grid md:grid-cols-2 gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Subject Area *</label>
-                                    <select wire:model.live="subject" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Subject Area *</label>
+                                    <select wire:model.live="subject" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
                                         <option value="general">📚 General / Essays</option>
                                         <option value="law">⚖️ Law / Legal Studies</option>
                                         <option value="nursing">🏥 Nursing / Healthcare</option>
@@ -368,20 +368,20 @@ new class extends Component {
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Academic Level *</label>
-                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Academic Level *</label>
+                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
                                         <option value="high-school">🎓 High School</option>
                                         <option value="undergraduate">🎓 Undergraduate</option>
                                         <option value="masters">🎓 Master's</option>
                                         <option value="phd">🎓 PhD/Doctoral</option>
                                     </select>
                                 </div>
-                                <div class="md:col-span-2">
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Reference Style *</label>
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Reference Style *</label>
+                                    <div class="grid grid-cols-4 gap-1.5 sm:gap-3">
                                         @foreach(['APA 7th', 'MLA 9th', 'Harvard', 'Chicago', 'Oxford', 'Turabian', 'OSCOLA', 'Other'] as $style)
                                             <button type="button" wire:click="$set('referenceStyle', '{{ $style }}')"
-                                                class="px-4 py-3 rounded-xl border-2 text-sm font-semibold transition-all {{ $referenceStyle === $style ? 'border-purple-500 bg-purple-50 text-purple-700' : 'border-slate-100 bg-slate-50 text-slate-500 hover:border-slate-200' }}">
+                                                class="px-2 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border-2 text-[10px] sm:text-sm font-semibold transition-all {{ $referenceStyle === $style ? 'border-purple-500 bg-purple-50 text-purple-700' : 'border-slate-100 bg-slate-50 text-slate-500 hover:border-slate-200' }}">
                                                 {{ $style }}
                                             </button>
                                         @endforeach
@@ -392,7 +392,7 @@ new class extends Component {
 
                         <!-- Technical Category Fields -->
                         @if($assignmentType === 'technical')
-                            <div class="grid md:grid-cols-2 gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
                                 <div>
                                     <label class="block text-sm font-bold text-slate-700 mb-2">Technical Subject *</label>
                                     <select wire:model.live="subject" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
@@ -429,7 +429,7 @@ new class extends Component {
 
                         <!-- Online Class Category Fields -->
                         @if($assignmentType === 'online_class')
-                            <div class="grid md:grid-cols-2 gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
                                 <div>
                                     <label class="block text-sm font-bold text-slate-700 mb-2">Course Name / Code *</label>
                                     <input type="text" wire:model="courseCode" placeholder="e.g. CS101 - Intro to Programming"
@@ -471,16 +471,16 @@ new class extends Component {
                         <!-- Title, Difficulty, Deadline, Pages -->
                         <div class="space-y-6 pt-4 border-t border-slate-100">
                             @if($assignmentType !== 'online_class')
-                                <div class="grid md:grid-cols-3 gap-6">
-                                    <div class="md:col-span-2">
-                                        <label class="block text-sm font-bold text-slate-700 mb-2">Project / Essay Title *</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                                    <div class="sm:col-span-2">
+                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Project / Essay Title *</label>
                                         <input type="text" wire:model="title" required placeholder="Enter the topic or title"
-                                            class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
+                                            class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
                                         @error('title') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                     </div>
                                     <div>
-                                        <label class="block text-sm font-bold text-slate-700 mb-2">Deadline *</label>
-                                        <select wire:model.live="deadline" required class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Deadline *</label>
+                                        <select wire:model.live="deadline" required class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                             <option value="">Select Deadline</option>
                                             <option value="3-hours">3 Hours (Very Urgent)</option>
                                             <option value="6-hours">6 Hours</option>
@@ -496,108 +496,108 @@ new class extends Component {
                                 </div>
 
                                 <!-- Page Counter Section -->
-                                <div class="space-y-4">
-                                    <div class="flex items-center justify-between">
-                                        <label class="block text-sm font-bold text-slate-700 uppercase tracking-wider">Number of Pages *</label>
+                                <div class="space-y-3 sm:space-y-4">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider">Number of Pages *</label>
                                         <div class="flex items-center gap-2">
-                                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full border border-purple-200 shadow-sm animate-pulse-slow">
+                                            <span class="px-2 sm:px-3 py-1 bg-purple-100 text-purple-700 text-[10px] sm:text-xs font-bold rounded-full border border-purple-200 shadow-sm animate-pulse-slow">
                                                 ~{{ number_format($pages * $this->wordsPerPage) }} Words
                                             </span>
-                                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200 shadow-sm">
+                                            <span class="px-2 sm:px-3 py-1 bg-indigo-100 text-indigo-700 text-[10px] sm:text-xs font-bold rounded-full border border-indigo-200 shadow-sm">
                                                 {{ ucfirst($spacing) }} Spaced
                                             </span>
                                         </div>
                                     </div>
 
-                                    <div class="bg-white border-2 border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500 group relative overflow-hidden">
+                                    <div class="bg-white border-2 border-slate-100 rounded-2xl sm:rounded-[2rem] p-4 sm:p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500 group relative overflow-hidden">
                                         <!-- Animated Background Glow -->
                                         <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-100/50 rounded-full blur-3xl group-hover:bg-purple-200/50 transition-colors duration-500"></div>
-                                        
-                                        <div class="relative flex flex-col md:flex-row items-center justify-between gap-8">
-                                            <!-- Stats Column -->
-                                            <div class="flex flex-col gap-3 order-2 md:order-1 text-center md:text-left">
-                                                <div class="flex items-center gap-2 justify-center md:justify-start">
-                                                    <span class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-xl shadow-lg shadow-purple-200">✍️</span>
-                                                    <div>
-                                                        <div class="text-xs font-black text-slate-400 uppercase tracking-widest">Total Volume</div>
-                                                        <div class="text-xl font-black text-slate-900">~{{ number_format($pages * $this->wordsPerPage) }} <span class="text-purple-600">Words</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center gap-2 justify-center md:justify-start">
-                                                    <span class="w-10 h-10 rounded-xl bg-indigo-500 text-white flex items-center justify-center text-xl shadow-lg shadow-indigo-100">📄</span>
-                                                    <div>
-                                                        <div class="text-xs font-black text-slate-400 uppercase tracking-widest">Spacing Type</div>
-                                                        <div class="text-lg font-bold text-slate-700">{{ ucfirst($spacing) }} Spaced</div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
+                                        <div class="relative flex flex-col items-center gap-4 sm:gap-8 md:flex-row md:justify-between">
                                             <!-- Main Interactive Counter -->
-                                            <div x-data="{ 
+                                            <div x-data="{
                                                 count: @entangle('pages').live,
                                                 increment() { if(this.count < 100) this.count++ },
                                                 decrement() { if(this.count > 1) this.count-- }
-                                            }" class="flex items-center gap-6 order-1 md:order-2 bg-slate-50/80 p-4 rounded-[1.5rem] border border-slate-100 shadow-inner">
-                                                <button type="button" @click="decrement()" 
-                                                    class="w-16 h-16 bg-white hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
-                                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"></path></svg>
+                                            }" class="flex items-center gap-3 sm:gap-6 bg-slate-50/80 p-3 sm:p-4 rounded-xl sm:rounded-[1.5rem] border border-slate-100 shadow-inner w-full md:w-auto justify-center">
+                                                <button type="button" @click="decrement()"
+                                                    class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
+                                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"></path></svg>
                                                 </button>
-                                                
-                                                <div class="flex flex-col items-center min-w-[100px]">
-                                                    <input type="number" x-model.number="count" min="1" max="100" 
-                                                        class="w-full text-center text-6xl font-black text-slate-900 bg-transparent border-none focus:ring-0 p-0">
+
+                                                <div class="flex flex-col items-center min-w-[70px] sm:min-w-[100px]">
+                                                    <input type="number" x-model.number="count" min="1" max="100"
+                                                        class="w-full text-center text-4xl sm:text-6xl font-black text-slate-900 bg-transparent border-none focus:ring-0 p-0">
                                                     <div class="text-[10px] font-bold text-purple-600 uppercase tracking-widest">Pages</div>
                                                 </div>
 
-                                                <button type="button" @click="increment()" 
-                                                    class="w-16 h-16 bg-white hover:bg-emerald-50 text-slate-400 hover:text-emerald-500 rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
-                                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                                                <button type="button" @click="increment()"
+                                                    class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-emerald-50 text-slate-400 hover:text-emerald-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
+                                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
                                                 </button>
+                                            </div>
+
+                                            <!-- Stats Column -->
+                                            <div class="flex flex-row md:flex-col gap-3 w-full md:w-auto justify-center">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-600 text-white flex items-center justify-center text-base sm:text-xl shadow-lg shadow-purple-200">✍️</span>
+                                                    <div>
+                                                        <div class="text-[10px] sm:text-xs font-black text-slate-400 uppercase tracking-widest">Volume</div>
+                                                        <div class="text-sm sm:text-xl font-black text-slate-900">~{{ number_format($pages * $this->wordsPerPage) }} <span class="text-purple-600">Words</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-indigo-500 text-white flex items-center justify-center text-base sm:text-xl shadow-lg shadow-indigo-100">📄</span>
+                                                    <div>
+                                                        <div class="text-[10px] sm:text-xs font-black text-slate-400 uppercase tracking-widest">Spacing</div>
+                                                        <div class="text-sm sm:text-lg font-bold text-slate-700">{{ ucfirst($spacing) }}</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- Spacing Toggle Bar -->
-                                    <div class="grid grid-cols-2 gap-4">
-                                        <button type="button" wire:click="$set('spacing', 'double')" 
-                                            class="flex items-center justify-between p-4 rounded-2xl border-2 transition-all {{ $spacing === 'double' ? 'border-indigo-600 bg-indigo-50 shadow-md' : 'border-slate-100 bg-white hover:border-indigo-200' }}">
-                                            <div class="flex items-center gap-3">
-                                                <div class="w-8 h-8 rounded-lg flex items-center justify-center {{ $spacing === 'double' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400' }}">
-                                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                    <div class="grid grid-cols-2 gap-2 sm:gap-4">
+                                        <button type="button" wire:click="$set('spacing', 'double')"
+                                            class="flex items-center justify-between p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all {{ $spacing === 'double' ? 'border-indigo-600 bg-indigo-50 shadow-md' : 'border-slate-100 bg-white hover:border-indigo-200' }}">
+                                            <div class="flex items-center gap-2 sm:gap-3">
+                                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex-shrink-0 flex items-center justify-center {{ $spacing === 'double' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400' }}">
+                                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                                                 </div>
                                                 <div class="text-left">
-                                                    <div class="text-xs font-bold {{ $spacing === 'double' ? 'text-indigo-900' : 'text-slate-600' }}">Double Spaced</div>
-                                                    <div class="text-[10px] text-slate-400">275 Words / page</div>
+                                                    <div class="text-[10px] sm:text-xs font-bold {{ $spacing === 'double' ? 'text-indigo-900' : 'text-slate-600' }}">Double Spaced</div>
+                                                    <div class="text-[9px] sm:text-[10px] text-slate-400">275 Words/page</div>
                                                 </div>
                                             </div>
-                                            @if($spacing === 'double') <svg class="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
+                                            @if($spacing === 'double') <svg class="w-4 h-4 text-indigo-600 hidden sm:block flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
                                         </button>
 
-                                        <button type="button" wire:click="$set('spacing', 'single')" 
-                                            class="flex items-center justify-between p-4 rounded-2xl border-2 transition-all {{ $spacing === 'single' ? 'border-orange-600 bg-orange-50 shadow-md' : 'border-slate-100 bg-white hover:border-orange-200' }}">
-                                            <div class="flex items-center gap-3">
-                                                <div class="w-8 h-8 rounded-lg flex items-center justify-center {{ $spacing === 'single' ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-400' }}">
-                                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                                        <button type="button" wire:click="$set('spacing', 'single')"
+                                            class="flex items-center justify-between p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all {{ $spacing === 'single' ? 'border-orange-600 bg-orange-50 shadow-md' : 'border-slate-100 bg-white hover:border-orange-200' }}">
+                                            <div class="flex items-center gap-2 sm:gap-3">
+                                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex-shrink-0 flex items-center justify-center {{ $spacing === 'single' ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-400' }}">
+                                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
                                                 </div>
                                                 <div class="text-left">
-                                                    <div class="text-xs font-bold {{ $spacing === 'single' ? 'text-orange-900' : 'text-slate-600' }}">Single Spaced</div>
-                                                    <div class="text-[10px] text-slate-400">550 Words / page</div>
+                                                    <div class="text-[10px] sm:text-xs font-bold {{ $spacing === 'single' ? 'text-orange-900' : 'text-slate-600' }}">Single Spaced</div>
+                                                    <div class="text-[9px] sm:text-[10px] text-slate-400">550 Words/page</div>
                                                 </div>
                                             </div>
-                                            @if($spacing === 'single') <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
+                                            @if($spacing === 'single') <svg class="w-4 h-4 text-orange-600 hidden sm:block flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
                                         </button>
                                     </div>
-                                    
+
                                     <!-- Informational Bar -->
-                                    <div class="bg-indigo-50/30 rounded-2xl border border-indigo-100/50 p-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 bg-white shadow-sm rounded-xl flex items-center justify-center text-xl">📐</div>
+                                    <div class="bg-indigo-50/30 rounded-xl sm:rounded-2xl border border-indigo-100/50 p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                                        <div class="flex items-center gap-2 sm:gap-3">
+                                            <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white shadow-sm rounded-lg sm:rounded-xl flex-shrink-0 flex items-center justify-center text-base sm:text-xl">📐</div>
                                             <div>
-                                                <div class="text-sm font-bold text-indigo-900">Academic Standard Formatting</div>
-                                                <div class="text-[10px] text-indigo-600 font-medium">Times New Roman • 12pt • 1" Margins</div>
+                                                <div class="text-xs sm:text-sm font-bold text-indigo-900">Academic Standard Formatting</div>
+                                                <div class="text-[9px] sm:text-[10px] text-indigo-600 font-medium">Times New Roman - 12pt - 1" Margins</div>
                                             </div>
                                         </div>
-                                        <div class="text-right">
+                                        <div class="text-left sm:text-right pl-10 sm:pl-0">
                                             <div class="text-xs font-bold text-indigo-900">{{ $this->wordsPerPage }} Words</div>
                                             <div class="text-[10px] text-indigo-600 font-medium">Per Page Average</div>
                                         </div>
@@ -744,10 +744,10 @@ new class extends Component {
                         </div>
 
                         <!-- Submit Button -->
-                        <div class="flex justify-center pt-6">
+                        <div class="flex justify-center pt-4 sm:pt-6">
                             <button type="submit"
                                     wire:loading.attr="disabled"
-                                    class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-12 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                    class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 sm:px-12 py-3.5 sm:py-4 rounded-xl sm:rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
                                 <span wire:loading.remove wire:target="submit">
                                     {{ $assignmentType === 'programming' ? '🚀 Get Programming Help' : '📝 Submit Assignment' }}
                                 </span>
@@ -758,61 +758,59 @@ new class extends Component {
                         </div>
 
                         <!-- Help Text -->
-                        <div class="text-center text-gray-500 text-sm">
-                            <p>Average response time: <strong class="text-purple-600">15 minutes</strong> • Available 24/7</p>
+                        <div class="text-center text-gray-500 text-xs sm:text-sm">
+                            <p>Average response time: <strong class="text-purple-600">15 minutes</strong> - Available 24/7</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- RIGHT COLUMN - PRICE CALCULATOR (Sidebar) -->
-            <div class="md:col-span-1">
-                <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 md:p-8 sticky top-8">
-                    <div class="text-center mb-6">
-                        <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full mb-4">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <div class="md:col-span-1 order-1 md:order-2">
+                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 p-4 sm:p-6 md:p-8 sticky top-4 sm:top-8">
+                    <div class="text-center mb-4 sm:mb-6">
+                        <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
                             </svg>
-                            <span class="font-bold">Price Estimate</span>
+                            <span class="font-bold text-sm sm:text-base">Price Estimate</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Total Cost</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Your Total Cost</h3>
                     </div>
 
                     <!-- Price Display -->
-                    <div class="bg-white rounded-xl p-6 border-2 border-blue-200 mb-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <div>
-                                <span class="text-lg font-semibold text-gray-700">Estimated Total:</span>
-                                <span class="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-red-500 text-white">
-                                    {{ number_format($this->totalDiscount * 100, 0) }}% OFF
-                                </span>
-                            </div>
+                    <div class="bg-white rounded-xl p-4 sm:p-6 border-2 border-blue-200 mb-4 sm:mb-6">
+                        <div class="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
+                            <span class="text-sm sm:text-lg font-semibold text-gray-700">Estimated Total:</span>
+                            <span class="inline-flex items-center px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold bg-red-500 text-white">
+                                {{ number_format($this->totalDiscount * 100, 0) }}% OFF
+                            </span>
                         </div>
                         <div class="text-right">
-                            <div class="text-lg text-gray-400 line-through">${{ number_format($this->totalPrice, 2) }}</div>
-                            <div class="text-4xl font-bold text-green-600">${{ number_format($this->discountedPrice, 2) }}</div>
+                            <div class="text-base sm:text-lg text-gray-400 line-through">${{ number_format($this->totalPrice, 2) }}</div>
+                            <div class="text-3xl sm:text-4xl font-bold text-green-600">${{ number_format($this->discountedPrice, 2) }}</div>
                             @if($assignmentType !== 'online_class')
-                                <div class="text-sm text-gray-500">${{ number_format($this->pricePerPage, 2) }} per page</div>
+                                <div class="text-xs sm:text-sm text-gray-500">${{ number_format($this->pricePerPage, 2) }} per page</div>
                             @else
-                                <div class="text-sm text-gray-500">${{ number_format($this->discountedPrice / $duration, 2) }} per {{ rtrim($durationUnit, 's') }}</div>
+                                <div class="text-xs sm:text-sm text-gray-500">${{ number_format($this->discountedPrice / $duration, 2) }} per {{ rtrim($durationUnit, 's') }}</div>
                             @endif
                         </div>
 
                         <!-- Price Breakdown -->
-                        <div class="border-t-2 border-gray-100 pt-4 mt-4 space-y-2 text-sm">
+                        <div class="border-t-2 border-gray-100 pt-3 sm:pt-4 mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm">
                             <div class="flex justify-between text-gray-600">
                                 @if($assignmentType === 'online_class')
                                     <span>Duration ({{ $duration }} {{ $durationUnit }}):</span>
                                     <span class="font-semibold">${{ number_format($this->basePrice * $duration, 2) }}</span>
                                 @else
-                                    <span>Base price ({{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }}):</span>
+                                    <span>Base ({{ $pages }} {{ $pages === 1 ? 'page' : 'pages' }}):</span>
                                     <span class="font-semibold">${{ number_format($this->basePrice * $pages, 2) }}</span>
                                 @endif
                             </div>
                             @if ($assignmentType !== 'online_class' && $this->urgencyMultiplier !== 1.0)
                                 <div class="flex justify-between text-gray-600">
-                                    <span>Deadline adjustment:</span>
+                                    <span>Deadline adj.:</span>
                                     <span class="font-semibold {{ $this->urgencyMultiplier > 1.0 ? 'text-orange-600' : 'text-green-600' }}">
                                         {{ $this->urgencyMultiplier > 1.0 ? '+' : '' }}{{ number_format(($this->urgencyMultiplier - 1.0) * 100, 0) }}%
                                     </span>
@@ -832,7 +830,7 @@ new class extends Component {
                             </div>
                             @if ($assignmentType !== 'online_class' && $this->volumeDiscount > 0)
                                 <div class="flex justify-between text-green-600 font-semibold">
-                                    <span>Volume Discount ({{ $pages }}+ pages):</span>
+                                    <span>Volume ({{ $pages }}+ pages):</span>
                                     <span>-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
                                 </div>
                             @endif
@@ -844,8 +842,8 @@ new class extends Component {
                     </div>
 
                     <!-- Features -->
-                    <div class="pt-6 border-t-2 border-blue-100">
-                        <div class="space-y-3 text-sm">
+                    <div class="pt-4 sm:pt-6 border-t-2 border-blue-100">
+                        <div class="grid grid-cols-2 md:grid-cols-1 gap-2 sm:gap-3 text-xs sm:text-sm">
                             <div class="flex items-center gap-2">
                                 <div class="text-blue-600 font-bold">✓</div>
                                 <div class="text-gray-600">Plagiarism Free</div>
