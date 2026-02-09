@@ -11,22 +11,28 @@ class Assignment extends Model
 {
     protected $fillable = [
         'user_id',
-        'email',
+        'order_number',
         'service_type',
         'service_id',
         'subject',
         'title',
         'deadline',
         'pages',
-        'file_path', // Keep for backward compatibility, but use files relationship
+        'word_count',
         'description',
-        'budget',
         'academic_level',
         'difficulty',
         'assignment_type',
-        'citation_style',
-        'word_count',
+        'budget',
+        'original_price',
+        'discount_code',
+        'payment_status',
+        'amount_paid',
+        'amount_due',
+        'tutor_id',
+        'tutor_deadline',
         'specific_requirements',
+        'status',
     ];
 
     /**
@@ -52,6 +58,14 @@ class Assignment extends Model
     public function assignmentFiles(): HasMany
     {
         return $this->hasMany(AssignmentFile::class);
+    }
+
+    /**
+     * Get all messages for this assignment.
+     */
+    public function messages(): HasMany
+    {
+        return $this->hasMany(Message::class);
     }
 
     /**

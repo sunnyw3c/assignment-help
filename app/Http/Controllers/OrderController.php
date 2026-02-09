@@ -41,4 +41,13 @@ class OrderController extends Controller
 
         return redirect()->route('order')->with('success', 'Assignment request submitted successfully!');
     }
+    public function success(Assignment $assignment)
+    {
+        // Ensure user can only see their own success page
+        if ($assignment->user_id !== auth()->id()) {
+            abort(403);
+        }
+
+        return view('order-success', compact('assignment'));
+    }
 }

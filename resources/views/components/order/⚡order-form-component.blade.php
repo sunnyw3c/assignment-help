@@ -157,21 +157,70 @@ new class extends Component {
 
         $this->validate($rules);
 
+        // Auto-registration / Login Logic
+        $user = auth()->user();
+        $isNewUser = false;
+
+        if (!$user) {
+            $user = \App\Models\User::where('email', $this->email)->first();
+
+            if (!$user) {
+                // Create random password
+                $password = \Illuminate\Support\Str::random(12);
+                
+                $user = \App\Models\User::create([
+                    'name' => explode('@', $this->email)[0], // Use part before @ as name
+                    'email' => $this->email,
+                    'password' => \Illuminate\Support\Facades\Hash::make($password),
+                ]);
+
+                $isNewUser = true;
+                auth()->login($user);
+                // In a real app, you'd send an email with the password here
+                // session()->flash('temp_password', $password); 
+            }
+        }
+
+        // Parse deadline into a proper DateTime
+        $deadlineStr = $this->deadline;
+        $deadlineDateTime = now();
+        
+        if (str_contains($deadlineStr, 'hours')) {
+            $hours = (int) $deadlineStr;
+            $deadlineDateTime = now()->addHours($hours);
+        } elseif (str_contains($deadlineStr, 'days')) {
+            $days = (int) $deadlineStr;
+            $deadlineDateTime = now()->addDays($days);
+        }
+
+        // Legacy Business Service logic
+        $legacyService = new \App\Services\LegacyBusinessService();
+        $orderNumber = $legacyService->generateOrderNumber($user->id);
+        $originalPrice = $legacyService->calculatePrice('USD', (int) $this->pages, $this->deadline);
+
+        // Calculate word count based on legacy logic: 250 words per page
+        $wordCount = (int) $this->pages * 250;
+
         // Create order/assignment
         $assignment = \App\Models\Assignment::create([
-            'user_id' => auth()->id(),
-            'email' => $this->email,
+            'user_id' => $user->id,
+            'order_number' => $orderNumber,
             'service_type' => $this->assignmentType,
             'service_id' => $this->serviceId ?: null,
             'subject' => $this->assignmentType === 'online_class' ? $this->courseCode : $this->subject,
             'title' => $this->assignmentType === 'online_class' ? $this->onlineServiceType : $this->title,
-            'deadline' => $this->deadline,
+            'deadline' => $deadlineDateTime,
             'pages' => $this->assignmentType === 'online_class' ? $this->duration : $this->pages,
+            'word_count' => $wordCount,
             'description' => $this->description,
             'academic_level' => $this->academicLevel,
             'difficulty' => $this->difficulty,
-            'assignment_type' => $this->assignmentType === 'technical' ? $this->softwareLanguage : $this->assignmentTypeValue,
-            'budget' => $this->discountedPrice,
+            'assignment_type' => $this->assignmentType === 'technical' ? $this->softwareLanguage : $this->assignmentType,
+            'original_price' => $originalPrice,
+            'budget' => $this->discountedPrice, // This is what the student agreed to pay
+            'amount_due' => $this->discountedPrice, // Initially everything is due
+            'payment_status' => 'unpaid',
+            'status' => 'New',
             'specific_requirements' => json_encode([
                 'reference_style' => $this->referenceStyle === 'Other' ? $this->customReferenceStyle : $this->referenceStyle,
                 'software_language' => $this->softwareLanguage,
@@ -198,9 +247,12 @@ new class extends Component {
             }
         }
 
-        session()->flash('success', 'Order submitted successfully! We will contact you shortly.');
+        session()->flash('success', 'Order submitted successfully!');
+        if ($isNewUser) {
+            session()->flash('info', 'An account has been created for you. You are now logged in.');
+        }
 
-        return redirect()->route('order.create');
+        return redirect()->route('dashboard', $orderNumber);
     }
 
     #[Computed]
@@ -348,7 +400,7 @@ new class extends Component {
                                 <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-purple-600 transition-colors">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
-                                <input type="email" wire:model.live="email" required placeholder="Enter your email address for order updates"
+                                <input type="email" wire:model.blur="email" required placeholder="Enter your email address for order updates"
                                     class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 pl-12 focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
                                 @error('email') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                             </div>
