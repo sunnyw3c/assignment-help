@@ -1,8 +1,8 @@
 @extends('assignment-services.show')
 
-@section('title', 'Professional Essay Writing Service | Expert Writers | 24/7 Support')
-@section('meta_description', 'Get expert essay writing help from professional writers. 100% original, plagiarism-free essays with 24/7 support. All types: argumentative, persuasive, analytical, research & more. Fast delivery guaranteed.')
-@section('meta_keywords', 'essay writing service, professional essay writers, custom essay help, academic writing, essay help online, write my essay, essay writing assistance, college essay writing, argumentative essay, research essay')
+@section('title', 'Professional Essay Writing Service USA | Expert Writers | 24/7 Support')
+@section('meta_description', 'Get expert essay writing help from professional writers in USA. 100% original, plagiarism-free essays with 24/7 support. All types: argumentative, persuasive, analytical, research & more. Fast delivery guaranteed for US students.')
+@section('meta_keywords', 'essay writing service, essay writing service USA, professional essay writers, custom essay help, academic writing, essay help online, write my essay, essay writing assistance, college essay writing, argumentative essay, research essay, cheap essay writing service, best essay writing service, essay writer online, graduate essay writing')
 
 @push('head')
     <!-- Open Graph / Facebook -->
@@ -1064,6 +1064,392 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- USA-Specific Targeting Section -->
+                    <div class="bg-gradient-to-br from-red-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border-2 border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            🇺🇸 Essay Writing Service for USA Students
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                As a <strong>leading essay writing service in the United States</strong>, we understand the unique requirements of American universities and colleges. Our writers are familiar with <strong>Common Application essays</strong>, state university standards, Ivy League expectations, and community college guidelines across all 50 states including California, Texas, New York, Florida, Illinois, Pennsylvania, Ohio, Georgia, North Carolina, and Michigan.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                        <span class="text-2xl mr-3">🎓</span>
+                                        US University Standards
+                                    </h3>
+                                    <ul class="text-gray-700 space-y-2 text-sm">
+                                        <li>• Expert knowledge of US citation styles (APA 7th, MLA 9th, Chicago 17th)</li>
+                                        <li>• Familiarity with American academic writing conventions</li>
+                                        <li>• Understanding of US grading rubrics and expectations</li>
+                                        <li>• Experience with Common App, Coalition App, and university-specific prompts</li>
+                                        <li>• Knowledge of US undergraduate and graduate program requirements</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                        <span class="text-2xl mr-3">💰</span>
+                                        Affordable for US Students
+                                    </h3>
+                                    <ul class="text-gray-700 space-y-2 text-sm">
+                                        <li>• Competitive pricing starting at $10/page for US students</li>
+                                        <li>• Secure payment via major US credit cards and PayPal</li>
+                                        <li>• Special discounts for first-time US customers (15% off)</li>
+                                        <li>• Student-friendly payment plans for large projects</li>
+                                        <li>• All times displayed in US time zones (EST/PST/CST/MST)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
+                                <p class="text-gray-700">
+                                    <strong>Popular among students at:</strong> Harvard, Stanford, MIT, Yale, Princeton, Columbia, University of California system, NYU, University of Michigan, University of Texas, Penn State, Florida State, Ohio State, Arizona State, and hundreds of other US colleges and universities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discipline-Specific Essay Help -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Essay Writing Help by Subject & Discipline
+                        </h2>
+                        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+                            Specialized essay writers with advanced degrees in every academic field
+                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Humanities & Social Sciences -->
+                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">📚</span>
+                                    Humanities & Social Sciences
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>English Literature Essays</strong> - literary analysis, critical essays</li>
+                                    <li>• <strong>History Essays</strong> - historiography, comparative history</li>
+                                    <li>• <strong>Philosophy Essays</strong> - ethical arguments, logic essays</li>
+                                    <li>• <strong>Sociology Essays</strong> - social theory, research essays</li>
+                                    <li>• <strong>Psychology Essays</strong> - behavioral analysis, case studies</li>
+                                    <li>• <strong>Political Science Essays</strong> - policy analysis, comparative politics</li>
+                                    <li>• <strong>Anthropology Essays</strong> - cultural analysis, ethnographic essays</li>
+                                </ul>
+                            </div>
+
+                            <!-- Business & Economics -->
+                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">💼</span>
+                                    Business & Economics
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>Business Management Essays</strong> - strategy, leadership</li>
+                                    <li>• <strong>Marketing Essays</strong> - consumer behavior, branding</li>
+                                    <li>• <strong>Finance Essays</strong> - investment analysis, financial markets</li>
+                                    <li>• <strong>Economics Essays</strong> - macro/microeconomics, econometrics</li>
+                                    <li>• <strong>Accounting Essays</strong> - financial accounting, auditing</li>
+                                    <li>• <strong>MBA Essays</strong> - executive leadership, strategic management</li>
+                                    <li>• <strong>Entrepreneurship Essays</strong> - startup strategy, innovation</li>
+                                </ul>
+                            </div>
+
+                            <!-- STEM & Healthcare -->
+                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">🔬</span>
+                                    STEM & Healthcare
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>Nursing Essays</strong> - care plans, evidence-based practice</li>
+                                    <li>• <strong>Biology Essays</strong> - ecology, genetics, evolution</li>
+                                    <li>• <strong>Chemistry Essays</strong> - organic chemistry, lab analysis</li>
+                                    <li>• <strong>Physics Essays</strong> - quantum mechanics, theoretical physics</li>
+                                    <li>• <strong>Engineering Essays</strong> - technical analysis, design proposals</li>
+                                    <li>• <strong>Computer Science Essays</strong> - algorithms, AI ethics</li>
+                                    <li>• <strong>Environmental Science Essays</strong> - climate change, sustainability</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 text-center bg-gray-50 rounded-lg p-6">
+                            <p class="text-gray-700 mb-4">
+                                <strong>Can't find your subject?</strong> We cover 75+ academic disciplines. Contact us to discuss your specific field.
+                            </p>
+                            <a href="{{ route('order') }}" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                                Get Help with Your Subject →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- How to Write Essays (Featured Snippet Optimization) -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 mb-8 border border-yellow-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            How to Write Different Types of Essays - Quick Guide
+                        </h2>
+
+                        <div class="space-y-6">
+                            <!-- How to Write Argumentative Essay -->
+                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write an Argumentative Essay</h3>
+                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">5 Essential Steps:</h4>
+                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                                <li itemprop="text"><strong>Choose a debatable topic</strong> - Select a controversial issue with two clear sides</li>
+                                                <li itemprop="text"><strong>Research both perspectives</strong> - Gather credible evidence supporting all viewpoints</li>
+                                                <li itemprop="text"><strong>Develop your thesis</strong> - Take a clear position backed by strong arguments</li>
+                                                <li itemprop="text"><strong>Present counterarguments</strong> - Acknowledge opposing views and refute them</li>
+                                                <li itemprop="text"><strong>Write a compelling conclusion</strong> - Reinforce your position with final thoughts</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Key Elements:</h4>
+                                            <ul class="text-gray-700 space-y-2">
+                                                <li>• Clear thesis statement in introduction</li>
+                                                <li>• Topic sentences for each body paragraph</li>
+                                                <li>• Evidence from credible sources (studies, statistics, expert opinions)</li>
+                                                <li>• Logical transitions between ideas</li>
+                                                <li>• Refutation of counterarguments</li>
+                                                <li>• Strong concluding statement</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+                                        <p class="text-sm text-gray-700">
+                                            <strong>Need help?</strong> Our expert writers can craft a perfect argumentative essay following these steps. <a href="{{ route('services.essay-writing.show', 'argumentative') }}" class="text-blue-600 hover:underline">Get argumentative essay help →</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- How to Write Research Essay -->
+                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write a Research Essay</h3>
+                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Research Essay Process:</h4>
+                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                                <li itemprop="text"><strong>Select a research topic</strong> - Choose something specific and researchable</li>
+                                                <li itemprop="text"><strong>Conduct scholarly research</strong> - Use academic databases (JSTOR, Google Scholar)</li>
+                                                <li itemprop="text"><strong>Create an annotated bibliography</strong> - Summarize and evaluate each source</li>
+                                                <li itemprop="text"><strong>Develop a thesis</strong> - Make a claim based on your research findings</li>
+                                                <li itemprop="text"><strong>Outline your essay</strong> - Organize research into logical sections</li>
+                                                <li itemprop="text"><strong>Write and cite properly</strong> - Use APA, MLA, or Chicago style</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Citation Requirements:</h4>
+                                            <ul class="text-gray-700 space-y-2">
+                                                <li>• Minimum 5-10 scholarly sources (peer-reviewed journals, academic books)</li>
+                                                <li>• Proper in-text citations for all borrowed ideas</li>
+                                                <li>• Complete reference list/bibliography</li>
+                                                <li>• No Wikipedia or unreliable sources</li>
+                                                <li>• Recent sources (within 5-10 years preferred)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 bg-green-50 rounded-lg p-4 border-l-4 border-green-600">
+                                        <p class="text-sm text-gray-700">
+                                            <strong>Research essay taking too long?</strong> Our PhD writers handle complex research and proper citations. <a href="{{ route('services.research-paper.index') }}" class="text-green-600 hover:underline">Get research paper help →</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- College Application Essay Tips -->
+                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write a College Application Essay</h3>
+                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Application Essay Strategy:</h4>
+                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                                <li itemprop="text"><strong>Read the prompt carefully</strong> - Understand what admissions wants to know</li>
+                                                <li itemprop="text"><strong>Brainstorm personal stories</strong> - Find meaningful experiences that shaped you</li>
+                                                <li itemprop="text"><strong>Show, don't tell</strong> - Use specific examples and vivid details</li>
+                                                <li itemprop="text"><strong>Be authentic</strong> - Write in your genuine voice, not how you think they want</li>
+                                                <li itemprop="text"><strong>Focus on growth</strong> - Show how experiences changed or developed you</li>
+                                                <li itemprop="text"><strong>Edit ruthlessly</strong> - Every word must serve a purpose</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Common Mistakes to Avoid:</h4>
+                                            <ul class="text-gray-700 space-y-2">
+                                                <li>• ❌ Writing what you think they want to hear</li>
+                                                <li>• ❌ Choosing overly common topics (sports injury, mission trip)</li>
+                                                <li>• ❌ Listing accomplishments instead of showing character</li>
+                                                <li>• ❌ Using clichés and generic statements</li>
+                                                <li>• ❌ Forgetting to proofread for grammar errors</li>
+                                                <li>• ✅ Instead: Be specific, authentic, and reflective</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Level Specific Content -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Essay Writing Help by Academic Level
+                        </h2>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- High School Essays -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">🎓</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">High School Essays</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• 5-paragraph essay structure</li>
+                                    <li>• MLA format (most common)</li>
+                                    <li>• Literary analysis essays</li>
+                                    <li>• Personal narrative essays</li>
+                                    <li>• Persuasive essays</li>
+                                    <li>• Compare/contrast essays</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $10/page</span>
+                                </div>
+                            </div>
+
+                            <!-- Undergraduate Essays -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">📚</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">College Essays</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• Research essays with citations</li>
+                                    <li>• APA, MLA, Chicago styles</li>
+                                    <li>• Critical analysis essays</li>
+                                    <li>• Argumentative essays</li>
+                                    <li>• Reflective essays</li>
+                                    <li>• Application essays</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $15/page</span>
+                                </div>
+                            </div>
+
+                            <!-- Graduate Essays -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">🎯</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Graduate Essays</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• Advanced research essays</li>
+                                    <li>• Literature reviews</li>
+                                    <li>• Theoretical analysis</li>
+                                    <li>• Methodology essays</li>
+                                    <li>• Comprehensive exams</li>
+                                    <li>• Admission essays (MBA, MA)</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $25/page</span>
+                                </div>
+                            </div>
+
+                            <!-- PhD Essays -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">🏆</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">PhD Level Essays</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• Scholarly research essays</li>
+                                    <li>• Conference paper essays</li>
+                                    <li>• Grant proposal essays</li>
+                                    <li>• Publication-quality essays</li>
+                                    <li>• Comprehensive literature reviews</li>
+                                    <li>• Dissertation chapters</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $35/page</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Services - Internal Linking -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Related Academic Writing Services
+                        </h2>
+                        <p class="text-center text-gray-600 mb-8">
+                            Beyond essays, we offer comprehensive academic assistance across all writing types
+                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <a href="{{ route('services.research-paper.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">📊</div>
+                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Research Paper Writing</h3>
+                                <p class="text-gray-700 text-sm mb-3">PhD-qualified researchers for comprehensive research papers with methodology, data analysis, and scholarly citations. Perfect for longer academic projects.</p>
+                                <span class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+
+                            <a href="{{ route('services.thesis-dissertation.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">🎓</div>
+                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Thesis & Dissertation Help</h3>
+                                <p class="text-gray-700 text-sm mb-3">Expert assistance for Master's thesis and PhD dissertations including proposal writing, literature reviews, methodology, and defense preparation.</p>
+                                <span class="text-purple-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+
+                            <a href="{{ route('services.proofreading-editing.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">✏️</div>
+                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Proofreading & Editing</h3>
+                                <p class="text-gray-700 text-sm mb-3">Professional editing for your completed essays with grammar correction, style improvement, citation checking, and formatting in all academic styles.</p>
+                                <span class="text-green-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+
+                            <a href="{{ route('services.homework-help.index') }}" class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">📝</div>
+                                <h3 class="text-xl font-bold text-orange-600 group-hover:text-orange-700 mb-2">Homework Help</h3>
+                                <p class="text-gray-700 text-sm mb-3">Quick homework assistance across all subjects with step-by-step solutions. Perfect for daily assignments and short essay questions from 3 hours.</p>
+                                <span class="text-orange-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+
+                            <a href="{{ route('services.literature-review.index') }}" class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">📚</div>
+                                <h3 class="text-xl font-bold text-indigo-600 group-hover:text-indigo-700 mb-2">Literature Review Writing</h3>
+                                <p class="text-gray-700 text-sm mb-3">Systematic literature reviews with critical analysis, synthesis of sources, gap identification for research papers, theses, and dissertations.</p>
+                                <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+
+                            <a href="{{ route('services.case-study.index') }}" class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">💼</div>
+                                <h3 class="text-xl font-bold text-teal-600 group-hover:text-teal-700 mb-2">Case Study Analysis</h3>
+                                <p class="text-gray-700 text-sm mb-3">Business case study analysis with SWOT, strategic frameworks, financial analysis, and recommendations for MBA and management courses.</p>
+                                <span class="text-teal-600 font-semibold text-sm inline-flex items-center">
+                                    Learn More →
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="mt-8 text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-100">
+                            <p class="text-gray-700 font-semibold mb-3">
+                                Not sure which service you need?
+                            </p>
+                            <a href="{{ route('services.index') }}" class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                                View All Services
+                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

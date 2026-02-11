@@ -1,8 +1,8 @@
 @extends('assignment-services.show')
 
-@section('title', 'Case Study Analysis Service | Business Case Study Help | SWOT Analysis')
-@section('meta_description', 'Professional case study analysis service for business, management, and MBA courses. Expert SWOT analysis, strategic recommendations, financial analysis, and implementation plans. All industries covered.')
-@section('meta_keywords', 'case study analysis, business case study help, MBA case study writing, case study analysis service, SWOT analysis, strategic analysis, business case study writing, management case study help, case study recommendations')
+@section('title', 'Case Study Analysis Service USA | Business Case Study Help | SWOT Analysis')
+@section('meta_description', 'Professional case study analysis service for business, management, and MBA courses in USA. Expert SWOT analysis, strategic recommendations, financial analysis, and implementation plans. All industries covered.')
+@section('meta_keywords', 'case study analysis, case study analysis service USA, business case study help, MBA case study writing, case study analysis service, SWOT analysis, strategic analysis, business case study writing, management case study help, case study recommendations, buy case study, case study writer')
 
 @push('head')
     <!-- Open Graph / Facebook -->
@@ -572,6 +572,97 @@
                                     <p class="text-sm text-gray-600">Based on 3,200+ case study reviews</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- USA MBA Programs Section -->
+                    <div class="bg-gradient-to-br from-red-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border-2 border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            🇺🇸 Case Study Analysis for USA MBA & Business Programs
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
+                            Specialized in <strong>Harvard Business School case method</strong>, Wharton MBA cases, Stanford GSB analysis, and case studies from top US business schools. Our analysts understand US business frameworks, corporate governance standards, and American management practices.
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg p-6">
+                                <h3 class="font-bold text-gray-900 mb-2">🎓 US Business Schools</h3>
+                                <p class="text-sm text-gray-700">Expert with Harvard, Wharton, Stanford, Kellogg, MIT Sloan, Columbia, Chicago Booth case studies</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-6">
+                                <h3 class="font-bold text-gray-900 mb-2">📊 US Business Context</h3>
+                                <p class="text-sm text-gray-700">Understanding of US markets, regulations, corporate culture, and competitive dynamics</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-6">
+                                <h3 class="font-bold text-gray-900 mb-2">💰 From $30/page</h3>
+                                <p class="text-sm text-gray-700">Competitive pricing for US MBA students with 15% first-order discount</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How to Analyze Case Study -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 mb-8 border border-yellow-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">How to Analyze a Business Case Study</h2>
+                        <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/HowTo">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4" itemprop="name">8-Step Case Study Analysis Framework</h3>
+                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                <li itemprop="text"><strong>Read thoroughly</strong> - Understand company situation, industry, and stakeholders</li>
+                                <li itemprop="text"><strong>Identify key problems</strong> - Distinguish symptoms from root causes</li>
+                                <li itemprop="text"><strong>Conduct SWOT analysis</strong> - Internal strengths/weaknesses, external opportunities/threats</li>
+                                <li itemprop="text"><strong>Apply strategic frameworks</strong> - Porter's Five Forces, PESTEL, Value Chain, BCG Matrix</li>
+                                <li itemprop="text"><strong>Analyze financials</strong> - Review ratios, profitability, cash flow, break-even</li>
+                                <li itemprop="text"><strong>Generate alternatives</strong> - Develop 2-3 strategic options with pros/cons</li>
+                                <li itemprop="text"><strong>Make recommendations</strong> - Choose best option with clear justification</li>
+                                <li itemprop="text"><strong>Create implementation plan</strong> - Specific actions, timeline, responsibilities, metrics</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Industry-Specific Case Studies -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Case Study Analysis by Industry</h2>
+                        <div class="grid md:grid-cols-4 gap-4">
+                            <div class="bg-blue-50 rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">🏭</div>
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">Manufacturing</h4>
+                                <p class="text-xs text-gray-600">Operations, supply chain, lean</p>
+                            </div>
+                            <div class="bg-green-50 rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">💻</div>
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">Technology</h4>
+                                <p class="text-xs text-gray-600">Innovation, disruption, platforms</p>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">🏥</div>
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">Healthcare</h4>
+                                <p class="text-xs text-gray-600">Policy, quality, patient care</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">🏪</div>
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">Retail</h4>
+                                <p class="text-xs text-gray-600">Consumer behavior, e-commerce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Services -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Related Business Services</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <a href="{{ route('services.essay-writing.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">✍️</div>
+                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Business Essays</h3>
+                                <p class="text-gray-700 text-sm">MBA essays, strategic management papers, organizational behavior analysis</p>
+                            </a>
+                            <a href="{{ route('services.research-paper.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">📊</div>
+                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Business Research</h3>
+                                <p class="text-gray-700 text-sm">Market research, industry analysis, business strategy research papers</p>
+                            </a>
+                            <a href="{{ route('services.presentation-design.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">📽️</div>
+                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Business Presentations</h3>
+                                <p class="text-gray-700 text-sm">Case study presentations, pitch decks, executive summaries</p>
+                            </a>
                         </div>
                     </div>
 

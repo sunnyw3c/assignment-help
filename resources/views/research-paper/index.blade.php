@@ -1,12 +1,12 @@
 @extends('assignment-services.show')
 
-@section('title', 'Research Paper Writing Service | PhD Writers | Original Research Help')
-@section('meta_description', 'Professional research paper writing service with PhD-qualified researchers. Original,
+@section('title', 'Research Paper Writing Service USA | PhD Writers | Original Research Help')
+@section('meta_description', 'Professional research paper writing service with PhD-qualified researchers in USA. Original,
     plagiarism-free research papers with proper citations. All academic levels: undergraduate, graduate, PhD. 24/7
-    support.')
-@section('meta_keywords', 'research paper writing service, research paper help, write my research paper, professional
+    support for US students.')
+@section('meta_keywords', 'research paper writing service, research paper writing service USA, research paper help, write my research paper, professional
     research writers, academic research assistance, custom research papers, research methodology help, literature review
-    writing, thesis writing, dissertation help')
+    writing, thesis writing, dissertation help, buy research paper, research paper writer, college research paper help')
 
     @push('head')
         <!-- Open Graph / Facebook -->
@@ -964,6 +964,298 @@
                                     <p class="text-sm text-gray-600">Based on 500+ research paper reviews</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- USA-Specific Targeting Section for Research Papers -->
+                    <div class="bg-gradient-to-br from-red-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border-2 border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            🇺🇸 Research Paper Writing Service for USA Students
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                As a <strong>premier research paper writing service in the United States</strong>, we understand the rigorous research standards of American universities and graduate programs. Our PhD researchers are experienced with <strong>APA 7th edition</strong> (used by most US social science, psychology, education, and nursing programs), quantitative and qualitative methodologies required by US research institutions, and IRB (Institutional Review Board) compliance for studies involving human subjects.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                        <span class="text-2xl mr-3">🎓</span>
+                                        US Academic Research Standards
+                                    </h3>
+                                    <ul class="text-gray-700 space-y-2 text-sm">
+                                        <li>• Expertise in US research methodologies (quantitative, qualitative, mixed-methods)</li>
+                                        <li>• Statistical analysis using SPSS, R, SAS, STATA (commonly required in US programs)</li>
+                                        <li>• Access to US academic databases (JSTOR, PubMed, ERIC, PsycINFO)</li>
+                                        <li>• Understanding of IRB requirements and ethical research practices</li>
+                                        <li>• Familiarity with US journal publication standards</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                        <span class="text-2xl mr-3">💰</span>
+                                        Transparent US Pricing
+                                    </h3>
+                                    <ul class="text-gray-700 space-y-2 text-sm">
+                                        <li>• Research paper pricing from $20/page for undergrad to $45/page for PhD</li>
+                                        <li>• All major US payment methods accepted (Visa, Mastercard, PayPal)</li>
+                                        <li>• 15% discount for first-time US customers</li>
+                                        <li>• Free data analysis consultation for quantitative research papers</li>
+                                        <li>• Customer support in US time zones (EST/PST/CST/MST)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
+                                <p class="text-gray-700">
+                                    <strong>Trusted by graduate students at:</strong> Harvard Graduate School, Stanford PhD programs, MIT research departments, UC Berkeley, Columbia University, University of Chicago, Johns Hopkins, Northwestern, Duke, Cornell, and 200+ other US research universities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Paper Help by Discipline -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Research Paper Writing by Academic Field
+                        </h2>
+                        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+                            PhD researchers with published work in every major academic discipline
+                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Social Sciences & Humanities -->
+                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">📚</span>
+                                    Social Sciences & Humanities
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>Psychology Research Papers</strong> - experimental, clinical, cognitive</li>
+                                    <li>• <strong>Sociology Research</strong> - survey research, ethnography, social theory</li>
+                                    <li>• <strong>Education Research</strong> - action research, pedagogy studies</li>
+                                    <li>• <strong>History Research Papers</strong> - archival research, historiography</li>
+                                    <li>• <strong>Political Science Research</strong> - comparative politics, policy analysis</li>
+                                    <li>• <strong>Anthropology Research</strong> - ethnographic research, cultural studies</li>
+                                    <li>• <strong>Communication Research</strong> - media studies, rhetoric analysis</li>
+                                </ul>
+                            </div>
+
+                            <!-- Business & Economics -->
+                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">💼</span>
+                                    Business & Economics
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>MBA Research Papers</strong> - strategic management, organizational behavior</li>
+                                    <li>• <strong>Economics Research</strong> - econometric analysis, economic modeling</li>
+                                    <li>• <strong>Finance Research Papers</strong> - portfolio analysis, market research</li>
+                                    <li>• <strong>Marketing Research</strong> - consumer behavior, brand studies</li>
+                                    <li>• <strong>Accounting Research</strong> - financial reporting, audit studies</li>
+                                    <li>• <strong>International Business</strong> - cross-cultural research, global markets</li>
+                                    <li>• <strong>Supply Chain Research</strong> - operations, logistics optimization</li>
+                                </ul>
+                            </div>
+
+                            <!-- STEM & Health Sciences -->
+                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">🔬</span>
+                                    STEM & Health Sciences
+                                </h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• <strong>Nursing Research Papers</strong> - evidence-based practice, clinical research</li>
+                                    <li>• <strong>Public Health Research</strong> - epidemiology, health policy</li>
+                                    <li>• <strong>Biology Research</strong> - molecular biology, genetics, ecology</li>
+                                    <li>• <strong>Chemistry Research</strong> - organic synthesis, analytical chemistry</li>
+                                    <li>• <strong>Physics Research Papers</strong> - theoretical, experimental physics</li>
+                                    <li>• <strong>Engineering Research</strong> - materials science, systems analysis</li>
+                                    <li>• <strong>Computer Science Research</strong> - machine learning, algorithms</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 text-center bg-gray-50 rounded-lg p-6">
+                            <p class="text-gray-700 mb-4">
+                                <strong>Need a specialized researcher?</strong> We have PhD experts in 100+ research fields including interdisciplinary studies.
+                            </p>
+                            <a href="{{ route('order') }}" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                                Get Expert Research Help →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- How to Write Research Paper (Featured Snippet Optimization) -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 mb-8 border border-yellow-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            How to Write a Research Paper - Complete Guide
+                        </h2>
+
+                        <div class="space-y-6">
+                            <!-- How to Write Research Paper -->
+                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write a Research Paper in 10 Steps</h3>
+                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Research Paper Process:</h4>
+                                            <ol class="list-decimal list-inside text-gray-700 space-y-2 text-sm">
+                                                <li itemprop="text"><strong>Choose research topic</strong> - Select a specific, researchable question</li>
+                                                <li itemprop="text"><strong>Conduct literature review</strong> - Search academic databases for relevant studies</li>
+                                                <li itemprop="text"><strong>Develop research question</strong> - Formulate clear, testable hypothesis</li>
+                                                <li itemprop="text"><strong>Design methodology</strong> - Choose quantitative, qualitative, or mixed methods</li>
+                                                <li itemprop="text"><strong>Collect data</strong> - Use surveys, experiments, interviews, or archival research</li>
+                                                <li itemprop="text"><strong>Analyze results</strong> - Statistical analysis (SPSS, R) or qualitative coding</li>
+                                                <li itemprop="text"><strong>Interpret findings</strong> - Discuss implications and connect to literature</li>
+                                                <li itemprop="text"><strong>Write manuscript</strong> - Follow IMRAD structure (Intro, Methods, Results, Discussion)</li>
+                                                <li itemprop="text"><strong>Cite sources properly</strong> - Use APA, MLA, Chicago, or journal-specific style</li>
+                                                <li itemprop="text"><strong>Revise and edit</strong> - Proofread for clarity, coherence, and academic tone</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Key Research Paper Sections:</h4>
+                                            <ul class="text-gray-700 space-y-2 text-sm">
+                                                <li><strong>Abstract</strong> - 150-250 word summary of entire paper</li>
+                                                <li><strong>Introduction</strong> - Background, research gap, research question, thesis</li>
+                                                <li><strong>Literature Review</strong> - Synthesis of relevant previous research</li>
+                                                <li><strong>Methodology</strong> - Research design, participants, procedures, analysis</li>
+                                                <li><strong>Results</strong> - Findings presented objectively with tables/figures</li>
+                                                <li><strong>Discussion</strong> - Interpretation, implications, limitations</li>
+                                                <li><strong>Conclusion</strong> - Summary and future research directions</li>
+                                                <li><strong>References</strong> - Complete bibliography in proper format</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+                                        <p class="text-sm text-gray-700">
+                                            <strong>Overwhelmed by the research process?</strong> Our PhD researchers handle every step from literature review to data analysis. <a href="{{ route('order') }}" class="text-blue-600 hover:underline">Get professional research help →</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- How to Choose Research Topic -->
+                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Choose a Good Research Paper Topic</h3>
+                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Topic Selection Criteria:</h4>
+                                            <ul class="text-gray-700 space-y-2 text-sm">
+                                                <li itemprop="text">• <strong>Specific and narrow</strong> - "Impact of social media on teen anxiety" not "social media effects"</li>
+                                                <li itemprop="text">• <strong>Researchable</strong> - Can you find academic sources and collect data?</li>
+                                                <li itemprop="text">• <strong>Original contribution</strong> - Addresses a gap in existing research</li>
+                                                <li itemprop="text">• <strong>Feasible</strong> - Can you complete it within time/resource constraints?</li>
+                                                <li itemprop="text">• <strong>Interesting</strong> - Choose something you're genuinely curious about</li>
+                                                <li itemprop="text">• <strong>Significant</strong> - Has practical or theoretical importance</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Common Topic Mistakes:</h4>
+                                            <ul class="text-gray-700 space-y-2 text-sm">
+                                                <li>• ❌ Too broad: "Climate change" - covers too much</li>
+                                                <li>• ❌ Too narrow: Limited to one obscure case</li>
+                                                <li>• ❌ No academic sources available</li>
+                                                <li>• ❌ Purely opinion-based with no data</li>
+                                                <li>• ❌ Already extensively researched (no gap)</li>
+                                                <li>• ✅ Instead: Specific, researchable, and novel</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Level Specific Content -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Research Paper Help by Academic Level
+                        </h2>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Undergraduate Research Papers -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">📚</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Undergraduate Research Papers</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• 10-20 page research papers</li>
+                                    <li>• 5-15 scholarly sources required</li>
+                                    <li>• APA, MLA, Chicago citations</li>
+                                    <li>• Basic statistical analysis</li>
+                                    <li>• Introduction to research methods</li>
+                                    <li>• Annotated bibliographies</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $20/page</span>
+                                </div>
+                            </div>
+
+                            <!-- Graduate Research Papers -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">🎯</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Graduate Research Papers</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• 20-40 page comprehensive research</li>
+                                    <li>• 20-50 peer-reviewed sources</li>
+                                    <li>• Advanced methodology (SPSS, R)</li>
+                                    <li>• Extensive literature reviews</li>
+                                    <li>• Original empirical research</li>
+                                    <li>• Publication-quality writing</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $30/page</span>
+                                </div>
+                            </div>
+
+                            <!-- PhD Research Papers -->
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl mb-3 text-center">🏆</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">PhD Research Papers</h3>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li>• 40-100+ page research projects</li>
+                                    <li>• 50-150 scholarly sources</li>
+                                    <li>• Complex statistical modeling</li>
+                                    <li>• Dissertation-level research</li>
+                                    <li>• Journal submission ready</li>
+                                    <li>• Defense presentation support</li>
+                                </ul>
+                                <div class="mt-4 text-center">
+                                    <span class="text-lg font-bold text-blue-600">From $45/page</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Services - Internal Linking -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                            Related Research & Writing Services
+                        </h2>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <a href="{{ route('services.thesis-dissertation.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">🎓</div>
+                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Thesis & Dissertation</h3>
+                                <p class="text-gray-700 text-sm mb-3">Complete thesis and dissertation help for Master's and PhD students including proposals, methodology, data analysis, and defense preparation.</p>
+                                <span class="text-purple-600 font-semibold text-sm">Learn More →</span>
+                            </a>
+
+                            <a href="{{ route('services.literature-review.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">📚</div>
+                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Literature Review</h3>
+                                <p class="text-gray-700 text-sm mb-3">Comprehensive literature reviews with synthesis, critical analysis, and gap identification for research papers and dissertations.</p>
+                                <span class="text-blue-600 font-semibold text-sm">Learn More →</span>
+                            </a>
+
+                            <a href="{{ route('services.essay-writing.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100 hover:shadow-lg transition-all duration-300 group">
+                                <div class="text-4xl mb-3">✍️</div>
+                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Essay Writing</h3>
+                                <p class="text-gray-700 text-sm mb-3">Professional essay writing for shorter academic assignments including research essays, analytical essays, and argumentative essays.</p>
+                                <span class="text-green-600 font-semibold text-sm">Learn More →</span>
+                            </a>
                         </div>
                     </div>
 

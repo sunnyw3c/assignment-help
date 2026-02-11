@@ -1,8 +1,8 @@
 @extends('assignment-services.show')
 
-@section('title', 'Homework Help Service | Expert Tutors | All Subjects | 24/7 Support')
-@section('meta_description', 'Professional homework help with qualified tutors across all subjects. Math, science, English, history & more. Step-by-step solutions, plagiarism-free work. Fast delivery from 3 hours. Affordable prices starting at $8/page.')
-@section('meta_keywords', 'homework help, homework help online, do my homework, homework assistance, homework tutoring, math homework help, science homework help, online homework help, college homework help, homework solver, assignment help')
+@section('title', 'Homework Help Service USA | Expert Tutors | All Subjects | 24/7 Support')
+@section('meta_description', 'Professional homework help with qualified tutors across all subjects in USA. Math, science, English, history & more. Step-by-step solutions, plagiarism-free work. Fast delivery from 3 hours. Affordable prices starting at $8/page for US students.')
+@section('meta_keywords', 'homework help, homework help online USA, do my homework, homework assistance, homework tutoring, math homework help, science homework help, online homework help, college homework help, homework solver, assignment help, cheap homework help, homework answers')
 
 @push('head')
     <!-- Open Graph / Facebook -->
@@ -785,6 +785,105 @@
                             <p class="text-center text-gray-700 mt-6">
                                 <strong>Helping students in 50+ countries, 24/7.</strong> We accept international payments and match you with tutors in your time zone.
                             </p>
+                        </div>
+                    </div>
+
+                    <!-- USA K-12 and College Homework Help -->
+                    <div class="bg-gradient-to-br from-red-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border-2 border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🇺🇸 Homework Help for USA Students (K-12 & College)</h2>
+                        <p class="text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+                            <strong>Trusted by US students</strong> from elementary school through college. We understand Common Core standards, state curriculum requirements, AP coursework, SAT/ACT prep, and college-level assignments across all subjects.
+                        </p>
+                        <div class="grid md:grid-cols-4 gap-4">
+                            <div class="bg-white rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">🏫</div>
+                                <h4 class="font-bold text-sm mb-1">K-12 Homework</h4>
+                                <p class="text-xs text-gray-600">Elementary, middle & high school - $8/page</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">🎓</div>
+                                <h4 class="font-bold text-sm mb-1">College Homework</h4>
+                                <p class="text-xs text-gray-600">Undergraduate assignments - $12/page</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">⚡</div>
+                                <h4 class="font-bold text-sm mb-1">Urgent Homework</h4>
+                                <p class="text-xs text-gray-600">Due tonight? 3-6 hour delivery</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 text-center">
+                                <div class="text-3xl mb-2">📱</div>
+                                <h4 class="font-bold text-sm mb-1">24/7 US Support</h4>
+                                <p class="text-xs text-gray-600">Live chat in US time zones</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject-Specific Homework Help -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Homework Help by Subject</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h3 class="text-lg font-bold text-gray-900 mb-3">📐 Math & Science</h3>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Algebra, Geometry, Calculus</li>
+                                    <li>• Physics, Chemistry, Biology</li>
+                                    <li>• Statistics, Pre-Calculus</li>
+                                    <li>• Trigonometry, Linear Algebra</li>
+                                </ul>
+                            </div>
+                            <div class="bg-green-50 rounded-lg p-6">
+                                <h3 class="text-lg font-bold text-gray-900 mb-3">📚 English & Humanities</h3>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Reading Comprehension</li>
+                                    <li>• Essay Writing, Grammar</li>
+                                    <li>• History, Geography</li>
+                                    <li>• Literature Analysis</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <h3 class="text-lg font-bold text-gray-900 mb-3">💻 Other Subjects</h3>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Computer Science, Coding</li>
+                                    <li>• Business, Economics</li>
+                                    <li>• Foreign Languages</li>
+                                    <li>• Psychology, Sociology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How to Get Homework Help -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 mb-8" itemscope itemtype="https://schema.org/HowTo">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center" itemprop="name">How to Get Homework Help Online</h2>
+                        <div class="bg-white rounded-lg p-6">
+                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                <li itemprop="text"><strong>Submit your homework</strong> - Upload instructions, files, or take a photo</li>
+                                <li itemprop="text"><strong>Get instant quote</strong> - See price and delivery time immediately</li>
+                                <li itemprop="text"><strong>Expert solves it</strong> - Qualified tutor provides step-by-step solutions</li>
+                                <li itemprop="text"><strong>Receive & review</strong> - Download homework with explanations, request changes if needed</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Related Services -->
+                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Related Academic Services</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <a href="{{ route('services.essay-writing.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">✍️</div>
+                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Essay Writing</h3>
+                                <p class="text-gray-700 text-sm">For longer writing assignments beyond daily homework</p>
+                            </a>
+                            <a href="{{ route('services.lab-report.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">🔬</div>
+                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Lab Reports</h3>
+                                <p class="text-gray-700 text-sm">Science lab report writing with data analysis</p>
+                            </a>
+                            <a href="{{ route('services.proofreading-editing.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
+                                <div class="text-4xl mb-3">✏️</div>
+                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Editing & Proofreading</h3>
+                                <p class="text-gray-700 text-sm">Check and improve homework you've written</p>
+                            </a>
                         </div>
                     </div>
 
