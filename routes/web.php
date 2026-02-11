@@ -62,20 +62,30 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/experts', [ExpertController::class, 'index'])->name('experts');
 Route::get('/order', [OrderController::class, 'create'])->name('order');
+Route::get('/order/success/{assignment}', [OrderController::class, 'success'])->name('order.success')->middleware(['auth']);
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
 // File Upload Test Route
 Route::get('/test-file-upload', function () {
     return view('file-upload-test');
 })->name('test.file-upload');
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard/{id?}', function ($id = null) {
+    return view('dashboard', [
+        'highlight_id' => $id,
+        'header' => 'Student Dashboard'
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::middleware(['auth'])->prefix('api')->group(function () {
+    Route::get('/assignments', [\App\Http\Controllers\Api\AssignmentApiController::class, 'index']);
+    Route::get('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'index']);
+    Route::post('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'store']);
 });
 
 require __DIR__ . '/auth.php';
