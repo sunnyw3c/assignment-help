@@ -69,12 +69,18 @@ Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 Route::get('/test-file-upload', function () {
     return view('file-upload-test');
 })->name('test.file-upload');
-Route::get('/dashboard/{id?}', function ($id = null) {
+Route::get('/dashboard', function () {
     return view('dashboard', [
-        'highlight_id' => $id,
         'header' => 'Student Dashboard'
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard/{id}', function ($id) {
+    return view('assignment-details', [
+        'order_number' => $id,
+        'header' => 'Assignment Details'
+    ]);
+})->middleware(['auth', 'verified'])->name('dashboard.details');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -84,6 +90,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->prefix('api')->group(function () {
     Route::get('/assignments', [\App\Http\Controllers\Api\AssignmentApiController::class, 'index']);
+    Route::post('/assignments/{assignment}/upload-file', [\App\Http\Controllers\Api\AssignmentApiController::class, 'uploadFile']);
     Route::get('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'index']);
     Route::post('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'store']);
 });

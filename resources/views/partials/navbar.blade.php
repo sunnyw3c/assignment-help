@@ -379,11 +379,25 @@
         </ul>
 
         <!-- Desktop Auth Buttons -->
-        <div class="hidden md:flex space-x-3">
-            <a href="{{ route('login') }}"
-                class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
-                Login
-            </a>
+        <div class="hidden md:flex space-x-3 items-center">
+            @guest
+                <a href="{{ route('login') }}"
+                    class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
+                    Login
+                </a>
+            @else
+                <a href="{{ route('dashboard') }}"
+                    class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
+                    Dashboard
+                </a>
+                <form method="POST" action="{{ route('logout') }}" class="inline">
+                    @csrf
+                    <button type="submit"
+                        class="text-sm text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 hover:border-red-300 transition-all duration-200">
+                        Logout
+                    </button>
+                </form>
+            @endguest
             <a href="{{ route('order') }}"
                 class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Get Help Now
@@ -474,10 +488,24 @@
                 Get Help</a>
 
             <div class="pt-4 border-t border-gray-200 space-y-3">
-                <a href="{{ route('login') }}"
-                    class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
-                    Login
-                </a>
+                @guest
+                    <a href="{{ route('login') }}"
+                        class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
+                        Login
+                    </a>
+                @else
+                    <a href="{{ route('dashboard') }}"
+                        class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
+                        Dashboard
+                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                            class="w-full text-center text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 transition-all duration-200">
+                            Logout
+                        </button>
+                    </form>
+                @endguest
                 <a href="{{ route('order') }}"
                     class="block text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200">
                     Get Help Now
