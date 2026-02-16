@@ -23,21 +23,34 @@ class AssignmentController extends Controller
             'description' => 'nullable|string',
             'budget' => 'nullable|numeric',
         ]);
-        $filePath = null;
-        if ($request->hasFile('file')) {
-            $filePath = $request->file('file')->store('assignments', 'public');
-        }
+        $orderNumber = date('ymd') . rand(1000, 9999);
 
-        Assignment::create([
+        $assignment = Assignment::create([
+            'order_number' => $orderNumber,
             'subject' => $request->subject,
             'title' => $request->title,
             'deadline' => $request->deadline,
             'pages' => $request->pages,
-            'file_path' => $filePath,
             'description' => $request->description,
             'budget' => $request->budget,
+            'user_id' => auth()->id(),
         ]);
-        return redirect()->route('order')->with('success', 'Assignment request submitted successfully!');
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filePath = $file->store('assignments', 'public');
+            
+            \App\Models\File::create([
+                'fileable_id' => $assignment->id,
+                'fileable_type' => get_class($assignment),
+                'original_name' => $file->getClientOriginalName(),
+                'file_path' => $filePath,
+                'file_type' => $file->getMimeType(),
+                'file_size' => $file->getSize(),
+            ]);
+        }
+
+        return redirect()->route('dashboard.details', ['id' => $orderNumber])->with('success', 'Assignment request submitted successfully!');
         // For now, just return back with a success message
         return back()->with('success', 'Assignment request submitted!');
     }

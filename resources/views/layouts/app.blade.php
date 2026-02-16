@@ -58,6 +58,7 @@
         </style>
 
         <!-- Scripts with defer for non-blocking and better TBT -->
+        @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Livewire Styles -->
@@ -106,5 +107,6 @@
 
         <!-- Livewire Scripts -->
         @livewireScripts
+        @stack('scripts')
     </body>
 </html>

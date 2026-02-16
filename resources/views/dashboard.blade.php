@@ -16,9 +16,7 @@
             this.loading = true;
             this.apiError = null;
             try {
-                const url = this.highlight_id 
-                    ? `/api/assignments?order_number=${this.highlight_id}` 
-                    : '/api/assignments';
+                const url = '/api/assignments';
                 
                 const response = await window.axios.get(url);
                 
@@ -89,7 +87,7 @@
             const searchTerm = (this.filter || '').toLowerCase();
             return arr.filter(a => ((a.status || '')).toLowerCase() === searchTerm);
         },
-        highlight_id: '{{ $highlight_id ?? "" }}',
+
         /* Debug: Highlight ID is {{ $highlight_id ?? "not set" }} */
         getStatusColor(status) {
             if (!status) return 'bg-slate-50 text-slate-700 border-slate-100';
@@ -114,6 +112,9 @@
                     <p class="text-indigo-100 text-lg font-medium max-w-lg">Track your assignments, upload files, and manage your academic success from one place.</p>
                 </div>
                 <div class="relative z-10 flex gap-4">
+                    <a href="{{ route('profile.edit') }}" class="px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-2xl hover:bg-white/20 transition-all active:scale-95 text-center">
+                        Manage Profile
+                    </a>
                     <a href="{{ route('order') }}" class="px-8 py-4 bg-white text-indigo-600 font-bold rounded-2xl hover:bg-slate-50 transition-all shadow-xl shadow-indigo-900/20 active:scale-95 text-center">
                         + New Assignment
                     </a>
@@ -147,7 +148,7 @@
             <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden min-h-[500px]">
                 <!-- Table Header/Filters -->
                 <div class="p-6 sm:p-8 border-b border-slate-50 flex flex-col sm:flex-row justify-between items-center gap-6">
-                    <h3 class="text-xl font-black text-slate-900 tracking-tight" x-text="highlight_id ? 'Order Details: #' + highlight_id : 'Your Assignments'">Your Assignments</h3>
+                    <h3 class="text-xl font-black text-slate-900 tracking-tight">Your Assignments</h3>
                     
                     <div class="flex bg-slate-100 p-1 rounded-xl overflow-x-auto max-w-full">
                         <template x-for="t in ['all', 'new', 'assigned', 'in progress', 'completed']">
@@ -156,9 +157,6 @@
                                 class="px-4 py-2 rounded-lg text-sm font-bold capitalize transition-all whitespace-nowrap"
                                 x-text="t">
                             </button>
-                        </template>
-                        <template x-if="highlight_id">
-                            <a href="{{ route('dashboard') }}" class="px-4 py-2 text-slate-500 hover:text-slate-700 text-sm font-bold capitalize whitespace-nowrap">View All</a>
                         </template>
                     </div>
                 </div>
@@ -176,8 +174,10 @@
                         </template>
                     </div>
 
-                    <!-- Data List -->
-                    <table x-show="!loading" class="w-full text-left">
+                <!-- Data List (Full Table) -->
+                <!-- Data List (Full Table) -->
+                <div x-show="!loading && filteredAssignments.length > 0" class="overflow-x-auto">
+                    <table class="w-full text-left">
                         <thead class="bg-slate-50/50">
                             <tr>
                                 <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Order Details</th>
@@ -189,8 +189,7 @@
                         </thead>
                         <tbody class="divide-y divide-slate-50">
                             <template x-for="assignment in filteredAssignments" :key="assignment.id">
-                                <tr class="hover:bg-slate-50/50 transition-colors group"
-                                    :class="assignment.order_number === highlight_id ? 'bg-indigo-50/50 border-l-4 border-indigo-600' : ''">
+                                <tr class="hover:bg-slate-50/50 transition-colors group">
                                     <td class="px-8 py-6">
                                         <div class="flex items-center gap-4">
                                             <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-xl text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
@@ -198,7 +197,7 @@
                                             </div>
                                             <div>
                                                 <div class="flex items-center gap-2 mb-0.5">
-                                                    <p class="font-bold text-slate-900" x-text="assignment.title"></p>
+                                                    <a :href="'/dashboard/' + assignment.order_number" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors" x-text="assignment.title"></a>
                                                     <span class="px-2 py-0.5 bg-slate-100 text-[10px] font-black text-slate-500 rounded-md uppercase tracking-tighter" x-text="'#' + assignment.order_number"></span>
                                                 </div>
                                                 <p class="text-xs font-bold text-slate-400 uppercase tracking-tight" x-text="assignment.subject"></p>
@@ -223,7 +222,6 @@
                                     <td class="px-8 py-6">
                                         <div class="flex flex-col gap-1.5">
                                             <span :class="getStatusColor(assignment.status)" class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border inline-flex items-center" x-text="assignment.status"></span>
-                                            <!-- Payment Status Badge -->
                                             <span class="inline-flex items-center px-3 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest border w-fit"
                                                 :class="{
                                                     'bg-emerald-50 text-emerald-600 border-emerald-200': assignment.payment_status === 'paid',
@@ -239,15 +237,18 @@
                                             <button @click="openMessaging(assignment)" class="p-2 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
                                             </button>
-                                            <button class="p-2 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">
+                                            <a :href="'/dashboard/' + assignment.order_number" class="p-2 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">
                                                 Manage
-                                            </button>
+                                            </a>
                                         </div>
                                     </td>
                                 </tr>
                             </template>
                         </tbody>
                     </table>
+                </div>
+
+
 
                     <!-- Empty State -->
                     <div x-show="!loading && filteredAssignments.length === 0" class="p-20 text-center">

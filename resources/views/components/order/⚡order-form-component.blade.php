@@ -232,13 +232,14 @@ new class extends Component {
             ]),
         ]);
 
-        // Store files in separate table
+        // Store files using the new polymorphic system
         if ($this->files) {
             foreach ($this->files as $file) {
                 $filePath = $file->store('assignments', 'public');
 
-                \App\Models\AssignmentFile::create([
-                    'assignment_id' => $assignment->id,
+                \App\Models\File::create([
+                    'fileable_id' => $assignment->id,
+                    'fileable_type' => get_class($assignment),
                     'original_name' => $file->getClientOriginalName(),
                     'file_path' => $filePath,
                     'file_type' => $file->getMimeType(),
@@ -252,7 +253,7 @@ new class extends Component {
             session()->flash('info', 'An account has been created for you. You are now logged in.');
         }
 
-        return redirect()->route('dashboard', $orderNumber);
+        return redirect()->route('dashboard.details', ['id' => $orderNumber]);
     }
 
     #[Computed]
