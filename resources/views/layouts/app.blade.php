@@ -5,17 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title', config('app.name', 'Laravel'))</title>
-        <meta name="description" content="@yield('description', 'Professional programming help and coding assistance available 24/7. Expert developers provide instant support for Python, Java, JavaScript, C++, and more.')">
-        <meta name="keywords" content="@yield('keywords', 'programming help, coding assistance, python help, java help, javascript help, c++ help, coding tutoring, programming assignment help')">
+        <title>@yield('title', 'Assignment Help USA | Expert Academic Support')</title>
+        <meta name="description" content="@yield('description', 'Expert academic support and assignment help available 24/7. Get professional assistance for essays, research papers, and homework from USA-based experts.')">
         <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">
 
         <!-- Canonical URL -->
         <link rel="canonical" href="@yield('canonical', url()->current())" />
 
         <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="@yield('title', config('app.name', 'Laravel'))">
-        <meta property="og:description" content="@yield('description', 'Professional programming help and coding assistance available 24/7.')">
+        <meta property="og:title" content="@yield('title', 'Assignment Help USA | Expert Academic Support')">
+        <meta property="og:description" content="@yield('description', 'Expert academic support and assignment help available 24/7.')">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:image" content="@yield('og_image', asset('images/og-default.jpg'))">
@@ -26,8 +25,8 @@
 
         <!-- Twitter Card Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="@yield('title', config('app.name', 'Laravel'))">
-        <meta name="twitter:description" content="@yield('description', 'Professional programming help and coding assistance available 24/7.')">
+        <meta name="twitter:title" content="@yield('title', 'Assignment Help USA | Expert Academic Support')">
+        <meta name="twitter:description" content="@yield('description', 'Expert academic support and assignment help available 24/7.')">
         <meta name="twitter:image" content="@yield('twitter_image', asset('images/og-default.jpg'))">
 
         <!-- Additional SEO Meta Tags -->

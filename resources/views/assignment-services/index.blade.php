@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Assignment Help Services - Expert Academic Writing Assistance | AssignmentHelp')
-@section('description', 'Professional assignment help services including essay writing, research papers, homework help, thesis assistance, and more. Get expert academic writing help with guaranteed quality and on-time delivery.')
-@section('keywords', 'assignment help, essay writing, research paper, homework help, thesis writing, academic writing, dissertation help, proofreading services')
+@section('title', 'Academic Assignment Help | Expert Writing Services')
+@section('description', 'Professional academic assignment help for USA students. Expert researchers provide quality writing services for essays, reports, and more. Success starts here!')
 
 @section('content')
     <!-- Structured Data for Assignment Services -->

@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Frequently Asked Questions - Assignment Help & Tutoring FAQ | Trending Tutor')
-@section('description',
-    'Find answers to common questions about our assignment help and tutoring services. Learn about pricing, delivery, quality, privacy, and more.')
-@section('keywords',
-    'FAQ, frequently asked questions, assignment help questions, tutoring FAQ, student questions, help center, support')
+@section('title', 'Frequently Asked Questions - Assignment Help USA | Student FAQ')
+@section('description', 'Common questions about Assignment Help USA: Academic assistance, pricing, delivery, and quality guarantee. Get all the answers you need for your success here!')
+
 
 @section('content')
     <!-- Structured Data for FAQ -->
@@ -326,7 +324,7 @@
                     Ready to Get Expert Help?
                 </h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">
-                    Join thousands of students who trust Trending Tutor for their assignment needs.
+                    Join thousands of students who trust Assignment Help USA for their assignment needs.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">

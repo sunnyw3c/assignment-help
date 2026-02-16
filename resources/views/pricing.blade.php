@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Pricing Plans - Affordable Assignment Help & Tutoring | Trending Tutor')
-@section('description',
-    'View our transparent pricing plans for assignment help and tutoring services. Choose from Basic, Standard, or Premium packages. No hidden fees, money-back guarantee.')
-@section('keywords',
-    'pricing, assignment help pricing, tutoring costs, affordable help, student pricing, academic assistance rates, transparent pricing')
+@section('title', 'Pricing Plans - Assignment Help USA | Affordable Academic Aid')
+@section('description', 'Affordable assignment help pricing at Assignment Help USA. View our transparent plans for essays, research, and homework. No hidden fees. Success starts here!')
+
 
 @section('content')
     <!-- Structured Data for Pricing -->
@@ -16,7 +14,7 @@
         "description": "Professional assignment help and tutoring services",
         "provider": {
             "@type": "Organization",
-            "name": "Trending Tutor"
+            "name": "Assignment Help USA"
         },
         "offers": [
             @foreach($pricingPlans as $index => $plan)

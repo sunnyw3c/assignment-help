@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Student Reviews & Testimonials - Assignment Help Online</title>
+    <title>Student Reviews & Testimonials | Assignment Help USA</title>
+    <meta name="description" content="Read real reviews from students about Assignment Help USA. Join thousands of satisfied users who trust our reliable, plagiarism-free academic support services.">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased bg-gray-50">

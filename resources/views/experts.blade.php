@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Expert Tutors & Writers - Assignment Help Online</title>
+    <title>Our Expert Team - Assignment Help USA | Qualified Academic Support</title>
+    <meta name="description" content="Meet the experts at Assignment Help USA. Qualified professionals with advanced degrees providing reliable academic assistance. Your success is our mission!">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased bg-gray-50">

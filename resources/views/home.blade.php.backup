@@ -1452,18 +1452,17 @@
                     </div>
                 </div>
 
-            
-                <!-- Online Course Help -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+                <!-- Urgent Help -->
+                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-rose-600 to-pink-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
                     <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors">
-                        <div class="w-16 h-16 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        <div class="w-16 h-16 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Online Course Help</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">Full-term academic management for your online courses. We assist with weekly discussions, periodic quizzes, midterm exams, and complex final projects to ensure you maintain a consistent GPA throughout the semester.</p>
+                        <h3 class="text-2xl font-black text-slate-900 mb-4">Urgent Deadlines</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8">Clock ticking? Our express delivery team specializes in high-qualityTurnaround under tight constraints. Whether it's 12 or 24 hours, we prioritize your project without compromising on academic depth.</p>
                         <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-cyan-600 font-black text-[10px] uppercase tracking-widest">Full-Term Management</span>
-                            <div class="w-8 h-8 rounded-full bg-cyan-50 text-cyan-600 flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                            <span class="text-rose-600 font-black text-[10px] uppercase tracking-widest">Express delivery elite</span>
+                            <div class="w-8 h-8 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </div>
                         </div>
