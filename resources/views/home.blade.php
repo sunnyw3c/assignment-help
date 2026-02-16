@@ -1681,81 +1681,81 @@
 
 
     <!-- Premium FAQ Section -->
-    <section class="py-32 bg-[#0F172A] relative overflow-hidden" id="faq">
+    <section class="py-32 bg-slate-50 relative overflow-hidden" id="faq">
         <!-- Background Accents -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none">
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute inset-0 opacity-40 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-[120px]"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-24">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
-                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Clarifying Success</span>
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 mb-8">
+                    <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Clarifying Success</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
                     Frequently Asked <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Questions.</span>
+                    <span class="text-blue-600">Questions.</span>
                 </h2>
-                <p class="text-xl text-slate-400 font-medium">Everything you need to know about navigating your academic journey with Assignment Help USA.</p>
+                <p class="text-xl text-slate-500 font-medium">Everything you need to know about navigating your academic journey with Assignment Help USA.</p>
             </div>
 
             <div class="max-w-4xl mx-auto space-y-4">
                 <!-- FAQ Item 1 -->
-                <div x-data="{ open: false }" class="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-white/20">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Is Assignment Help USA legit and safe to use?</span>
-                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-transform duration-500" :class="open ? 'rotate-180' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Is Assignment Help USA legit and safe to use?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-400 leading-relaxed">
+                        <p class="text-slate-600 leading-relaxed font-medium">
                             Yes! Assignment Help USA is a vetted platform trusted by over 50,000 students nationwide. We employ military-grade 256-bit SSL encryption for all data transfers and use industry-standard secure payment processors. Our service is fully compliant with privacy laws, ensuring 100% anonymity for every user.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div x-data="{ open: false }" class="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-white/20">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">How much does it cost?</span>
-                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-transform duration-500" :class="open ? 'rotate-180' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">How much does it cost?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-400 leading-relaxed">
+                        <p class="text-slate-600 leading-relaxed font-medium">
                             Our pricing is dynamic and designed to be student-friendly. Writing services start at $15 per page, while complex programming or technical tasks begin at $25. Factors influencing the final quote include academic level, complexity, and deadline urgency. We also offer standard discounts for large orders and first-time users.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div x-data="{ open: false }" class="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-white/20">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">How fast can you complete my assignment?</span>
-                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-transform duration-500" :class="open ? 'rotate-180' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">How fast can you complete my assignment?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-400 leading-relaxed">
+                        <p class="text-slate-600 leading-relaxed font-medium">
                             We pride ourselves on meeting tight constraints. Our express delivery team can handle turnarounds as short as 6-12 hours for urgent tasks. Standard assignments are typically delivered within 3-5 days. Regardless of the timeline, 98% of our orders are delivered before the deadline to allow time for student review.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div x-data="{ open: false }" class="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-white/20">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">What if I'm not satisfied with the work?</span>
-                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white transition-transform duration-500" :class="open ? 'rotate-180' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">What if I'm not satisfied with the work?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-400 leading-relaxed">
+                        <p class="text-slate-600 leading-relaxed font-medium">
                             Total satisfaction is guaranteed. We offer an unlimited free revision policy—we will work with you until the paper perfectly aligns with your initial instructions. In the rare event that we fail to meet your institutional requirements, we provide a transparent, full refund under our money-back guarantee.
                         </p>
                     </div>
@@ -1764,8 +1764,8 @@
 
             <!-- FAQ Footer -->
             <div class="mt-20 text-center">
-                <p class="text-slate-500 font-medium mb-6">Didn't find your answer?</p>
-                <a href="{{ route('order') }}" class="inline-flex items-center gap-2 text-white font-bold hover:text-blue-400 transition-colors group">
+                <p class="text-slate-500 font-bold mb-6">Didn't find your answer?</p>
+                <a href="{{ route('order') }}" class="inline-flex items-center gap-2 text-blue-600 font-black hover:text-blue-700 transition-colors group">
                     Chat with an expert 
                     <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
