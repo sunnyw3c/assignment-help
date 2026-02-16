@@ -1,0 +1,25 @@
+{
+  "_alpine-BDrIrP2t.js": {
+    "file": "assets/js/alpine-BDrIrP2t.js",
+    "name": "alpine"
+  },
+  "_axios-Cfc3znND.js": {
+    "file": "assets/js/axios-Cfc3znND.js",
+    "name": "axios"
+  },
+  "resources/css/app.css": {
+    "file": "assets/css/app-BiBhaBzu.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/js/app-B5JRehFI.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-Cfc3znND.js",
+      "_alpine-BDrIrP2t.js"
+    ]
+  }
+}
