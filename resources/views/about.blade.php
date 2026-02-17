@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Expert Assignment Help & Tutoring Service | Trending Tutor')
-@section('description',
-    'Learn about Trending Tutor - Your trusted partner for assignment help and academic tutoring. We connect students with expert tutors who provide personalized assistance across various subjects.')
-@section('keywords',
-    'about us, assignment help, tutoring service, expert tutors, academic assistance, student support, educational services')
+@section('title', 'About Us - Assignment Help USA | Expert Academic Support')
+@section('description', 'About Assignment Help USA: Your trusted partner for academic success. We provide reliable, plagiarism-free assignment help and expert support. Success starts here!')
+
 
 @section('content')
     <!-- Structured Data for Organization -->
@@ -12,8 +10,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Trending Tutor",
-        "description": "Professional assignment help and tutoring service connecting students with expert tutors",
+        "name": "Assignment Help USA",
+        "description": "Professional assignment help and academic support service connecting students with expert tutors",
         "url": "{{ url('/') }}",
         "logo": "{{ asset('images/logo.png') }}",
         "foundingDate": "2020",
@@ -59,7 +57,7 @@
                 <!-- Badge -->
                 <div class="inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-bold mb-8 animate-fade-in-up">
                     <span class="mr-3 text-xl animate-bounce">👋</span>
-                    WELCOME TO CODEHELP
+                    WELCOME TO ASSIGNMENT HELP USA
                 </div>
 
                 <!-- Main Title -->
@@ -126,7 +124,7 @@
                 <div class="prose prose-lg max-w-none">
                     <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 mb-8">
                         <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                            Trending Tutor was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
+                            Assignment Help USA was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
                         </p>
                         <p class="text-lg text-gray-600 leading-relaxed mb-6">
                             We recognized that students often face challenges with complex assignments, tight deadlines, and limited access to personalized support. Our platform bridges this gap by connecting students with experienced tutors who understand their unique needs.

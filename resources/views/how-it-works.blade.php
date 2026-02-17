@@ -1,12 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'How It Works | Get Academic Help in 4 Easy Steps - AssignmentHelpUSA')
-@section('description',
-    'Understand our simple 4-step process for getting expert academic help. From submitting your
-    project to receiving a high-quality solution, we make it easy and efficient.')
-@section('keywords',
-    'how it works, Academic help process, coding assignment help, submit project, expert
-    programmers, code help steps, online Academic help')
+@section('title', 'How It Works | Get Academic Help in 4 Easy Steps - Assignment Help USA')
+@section('description', 'Get academic assistance in 4 simple steps at Assignment Help USA. From submitting requirements to expert delivery, our process is fast and seamless. Learn more!')
+
 
 @section('content')
     <!-- Structured Data for How It Works -->
