@@ -5,42 +5,6 @@
 
 
 @section('content')
-    <!-- Structured Data for How It Works -->
-    {{-- <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to Get Programming Help",
-        "description": "Step-by-step guide to getting expert programming assistance",
-        "totalTime": "PT1H",
-        "supply": [
-            {
-                "@type": "HowToSupply",
-                "name": "Project Requirements"
-            },
-            {
-                "@type": "HowToSupply",
-                "name": "Programming Language Details"
-            }
-        ],
-        "step": [
-            @foreach($steps as $index => $step)
-            {
-                "@type": "HowToStep",
-                "position": {{ $step['step'] }},
-                "name": "{{ $step['title'] }}",
-                "text": "{{ $step['description'] }}",
-                "estimatedCost": {
-                    "@type": "MonetaryAmount",
-                    "currency": "USD",
-                    "value": "25"
-                }
-            }@if(!$loop->last),@endif
-            @endforeach
-        ]
-    }
-    </script> --}}
-
     <!-- Hero Section with Animated Background -->
     <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <!-- Animated Background Elements -->
@@ -138,9 +102,6 @@
             <!-- Enhanced Section Header -->
             <div class="text-center mb-20 relative">
                 <!-- Background Decorative Elements -->
-                {{-- <div class="absolute inset-0 flex items-center justify-center opacity-5">
-                    <div class="text-9xl font-black text-gray-900 select-none">01234</div>
-                </div> --}}
 
                 <!-- Floating Icons -->
                 <div class="absolute top-0 left-1/4 opacity-20 animate-float-slow">
@@ -516,13 +477,7 @@
                                 x-transition:leave="transition ease-in duration-200"
                                 x-transition:leave-start="opacity-100 transform scale-100 translate-y-0"
                                 x-transition:leave-end="opacity-0 transform scale-95 -translate-y-4"
-                                @if ($index == 0) class="mt-6 bg-gradient-to-br from-blue-50 via-white to-blue-50/50 rounded-3xl p-8 border-2 border-blue-500/20 shadow-xl backdrop-blur-sm">
-                                 @elseif($index == 1)
-                                     class="mt-6 bg-gradient-to-br from-purple-50 via-white to-purple-50/50 rounded-3xl p-8 border-2 border-purple-500/20 shadow-xl backdrop-blur-sm">
-                                 @elseif($index == 2)
-                                     class="mt-6 bg-gradient-to-br from-rose-50 via-white to-rose-50/50 rounded-3xl p-8 border-2 border-rose-500/20 shadow-xl backdrop-blur-sm">
-                                 @else
-                                     class="mt-6 bg-gradient-to-br from-emerald-50 via-white to-emerald-50/50 rounded-3xl p-8 border-2 border-emerald-500/20 shadow-xl backdrop-blur-sm"> @endif
+                                class="mt-6 bg-gradient-to-br {{ $index == 0 ? 'from-blue-50 via-white to-blue-50/50 border-blue-500/20' : ($index == 1 ? 'from-purple-50 via-white to-purple-50/50 border-purple-500/20' : ($index == 2 ? 'from-rose-50 via-white to-rose-50/50 border-rose-500/20' : 'from-emerald-50 via-white to-emerald-50/50 border-emerald-500/20')) }} rounded-3xl p-8 border-2 shadow-xl backdrop-blur-sm">
                                 <div class="flex items-center mb-6">
                                 @if ($index == 0)
                                     <div
@@ -803,15 +758,26 @@
                                     </div>
                                 @endif
 
+                                @php
+                                    $featureBorderClass = $feature['color'] == 'blue'
+                                        ? 'border-blue-400/50 shadow-2xl shadow-blue-500/25'
+                                        : ($feature['color'] == 'green'
+                                            ? 'border-green-400/50 shadow-2xl shadow-green-500/25'
+                                            : ($feature['color'] == 'purple'
+                                                ? 'border-purple-400/50 shadow-2xl shadow-purple-500/25'
+                                                : 'border-orange-400/50 shadow-2xl shadow-orange-500/25'));
+                                    $featureTitleClass = $feature['color'] == 'blue'
+                                        ? 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text'
+                                        : ($feature['color'] == 'green'
+                                            ? 'bg-gradient-to-r from-green-400 to-green-300 bg-clip-text'
+                                            : ($feature['color'] == 'purple'
+                                                ? 'bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text'
+                                                : 'bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text'));
+                                @endphp
+
                                 <!-- Main Card -->
                                 <div class="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 border border-white/10 h-full flex flex-col"
-                                    @if ($feature['color'] == 'blue') :class="hovered ? 'border-blue-400/50 shadow-2xl shadow-blue-500/25' : ''"
-                                 @elseif($feature['color'] == 'green')
-                                     :class="hovered ? 'border-green-400/50 shadow-2xl shadow-green-500/25' : ''"
-                                 @elseif($feature['color'] == 'purple')
-                                     :class="hovered ? 'border-purple-400/50 shadow-2xl shadow-purple-500/25' : ''"
-                                 @else
-                                     :class="hovered ? 'border-orange-400/50 shadow-2xl shadow-orange-500/25' : ''" @endif>
+                                    :class="hovered ? '{{ $featureBorderClass }}' : ''">
 
                                     <!-- Floating Particles -->
                                     <div class="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
@@ -879,13 +845,7 @@
                                     <!-- Enhanced Content -->
                                     <div class="flex-grow flex flex-col">
                                         <h3 class="text-2xl font-black mb-4 text-white leading-tight group-hover:text-transparent"
-                                            @if ($feature['color'] == 'blue') :class="hovered ? 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text' : ''"
-                                        @elseif($feature['color'] == 'green')
-                                            :class="hovered ? 'bg-gradient-to-r from-green-400 to-green-300 bg-clip-text' : ''"
-                                        @elseif($feature['color'] == 'purple')
-                                            :class="hovered ? 'bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text' : ''"
-                                        @else
-                                            :class="hovered ? 'bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text' : ''" @endif>
+                                            :class="hovered ? '{{ $featureTitleClass }}' : ''">
                                             {{ $feature['title'] }}
                                         </h3>
 

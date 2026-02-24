@@ -556,13 +556,32 @@
             <!-- Header Section -->
             <div class="text-center mb-24">
                 <!-- Architectural Step Indicator -->
-                <div class="flex items-center justify-center gap-4 mb-8">
-                    <div class="h-px w-12 bg-gradient-to-r from-transparent to-blue-500"></div>
-                    <div class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full hover:bg-white/10 transition-colors cursor-default">
-                        <span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-                        <span class="text-blue-200 font-bold text-xs uppercase tracking-widest">Pricing Engine v2.0</span>
+                <div class="mb-10">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full mb-5 shadow-[0_10px_30px_-16px_rgba(59,130,246,0.8)]">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-300"></span>
+                        </span>
+                        <span class="text-blue-100 font-extrabold text-xs uppercase tracking-[0.2em]">Pricing Engine v2.0</span>
                     </div>
-                    <div class="h-px w-12 bg-gradient-to-l from-transparent to-blue-500"></div>
+
+                    <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
+                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-500/20 text-blue-200 text-xs font-black mb-2">1</div>
+                            <p class="text-white text-sm font-bold">Input Details</p>
+                            <p class="text-slate-300 text-xs">Share deadline, pages, and level.</p>
+                        </div>
+                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
+                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-200 text-xs font-black mb-2">2</div>
+                            <p class="text-white text-sm font-bold">Smart Analysis</p>
+                            <p class="text-slate-300 text-xs">Our model evaluates complexity instantly.</p>
+                        </div>
+                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
+                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-purple-500/20 text-purple-200 text-xs font-black mb-2">3</div>
+                            <p class="text-white text-sm font-bold">Clear Quote</p>
+                            <p class="text-slate-300 text-xs">Get a transparent price with no hidden fees.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Main Title -->
@@ -709,13 +728,117 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Professional Bridge Section -->
+                <div class="mt-16 max-w-5xl mx-auto">
+                    <div class="rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-xl px-6 py-8 md:px-10 md:py-9">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+                            <div>
+                                <p class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-cyan-300 mb-2">Pricing Integrity</p>
+                                <h3 class="text-white text-2xl font-black leading-tight">Professional and transparent by design</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-sm font-semibold text-white">Structured Estimation</p>
+                                <p class="text-sm text-slate-300">Pricing is calculated from deadline, complexity, and academic level.</p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-sm font-semibold text-white">No Hidden Charges</p>
+                                <p class="text-sm text-slate-300">You see the real cost upfront with clear revision and support coverage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Bottom Curve Decoration -->
-            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none"></div>
+            <!-- Bottom Dark Separator -->
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none"></div>
     </section>
+
+    <!-- Professional Insights Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 md:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span class="text-slate-700 font-extrabold text-xs uppercase tracking-[0.18em]">Assignment Help USA</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                            Assignment Help USA For Serious Academic Results
+                        </h2>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-7">
+                            Clear pricing, expert support, and reliable delivery for essays, research papers, and urgent assignments.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">US-ready quality:</span> Academic formatting and citation alignment.</p>
+                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">Transparent process:</span> Scope and timeline defined before payment.</p>
+                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">Always available:</span> 24/7 support from order to final delivery.</p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ route('order') }}" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-slate-900 text-white font-black hover:bg-slate-800 transition-colors">
+                                Start Order
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                            <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-slate-300 text-slate-700 font-black hover:bg-slate-50 transition-colors">
+                                See Process
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.35)]">
+                            <img src="{{ asset('images/student-hero.png') }}" alt="USA student receiving assignment help support" class="w-full h-[360px] object-cover object-center">
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 border border-slate-200 shadow-sm">
+                                <span class="text-[11px] font-extrabold text-slate-800 uppercase tracking-[0.12em]">USA Student Focus</span>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-red-500/10 pointer-events-none"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-slate-900/85 to-transparent">
+                                <p class="text-white text-base font-bold">Trusted by students across the USA for quality-focused assignment support.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mt-4">
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <p class="text-slate-900 text-xl font-black">24/7</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide">Support</p>
+                            </div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <p class="text-slate-900 text-xl font-black">50+</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide">Subjects</p>
+                            </div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <p class="text-slate-900 text-xl font-black">98%</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide">On-Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                    <p class="text-slate-900 text-sm font-black mb-1">Plagiarism-Safe Drafts</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Original, quality-checked content prepared for academic submission.</p>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                    <p class="text-slate-900 text-sm font-black mb-1">Deadline Precision</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Urgent and standard windows with clear turnaround commitments.</p>
+                </div>
+                <div class="rounded-2xl bg-white border border-slate-200 p-5">
+                    <p class="text-slate-900 text-sm font-black mb-1">Secure Communication</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Private updates and consistent support at every stage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-24 bg-[#0F172A] relative overflow-hidden">
+    <section id="how-it-works" class="py-24 bg-gradient-to-br from-slate-800 via-indigo-950 to-slate-900 relative overflow-hidden">
         <!-- Modern Abstract Background -->
         <div class="absolute inset-0">
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse">

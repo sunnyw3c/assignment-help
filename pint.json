@@ -1,0 +1,8 @@
+{
+    "preset": "laravel",
+    "exclude": [
+        "public/blog",
+        "vendor",
+        "node_modules"
+    ]
+}
