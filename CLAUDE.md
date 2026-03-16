@@ -4,76 +4,72 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Laravel 12 application for an assignment help/tutoring service. Students can submit assignment requests with details like subject, title, deadline, page count, file uploads, description, and budget. The application uses Laravel Breeze for authentication.
+Laravel 12 assignment help / tutoring service. Students submit assignment orders; the public side is a marketing site with many SEO landing pages for specific service types.
 
 ## Development Commands
 
 ### Environment Setup
-- Copy environment file: `cp .env.example .env`
-- Generate application key: `php artisan key:generate`
-- Create SQLite database: `touch database/database.sqlite`
-- Run migrations: `php artisan migrate`
+```bash
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+```
 
-### Development Server
-- Start all services (server + queue + frontend): `composer dev`
-- Individual services:
-  - Laravel server: `php artisan serve`
-  - Queue worker: `php artisan queue:listen --tries=1`
-  - Frontend development: `npm run dev`
-  - Frontend build: `npm run build`
+### Running the App
+- **All services (recommended):** `composer dev` — runs server, queue worker, and Vite concurrently
+- **Individual:** `php artisan serve` | `npm run dev` | `php artisan queue:listen --tries=1`
 
 ### Testing
-- Run all tests: `composer test` or `php artisan test`
-- Run tests with configuration cleared: The composer test script automatically clears config before running tests
-- Tests use in-memory SQLite database for isolation
+```bash
+composer test                        # clears config, then runs all tests
+php artisan test --filter=TestName   # run a single test
+php artisan test tests/Feature/ProfileTest.php  # run a specific file
+```
 
 ### Code Quality
-- Format code: `vendor/bin/pint` (Laravel Pint for PHP code formatting)
-- The project uses Pest for testing framework
+```bash
+vendor/bin/pint   # format PHP (Laravel Pint)
+```
 
-## Architecture Overview
+## Architecture
 
-### Database Structure
-- **Users table**: Standard Laravel user authentication (via Laravel Breeze)
-- **Assignments table**: Core entity storing assignment requests with fields:
-  - subject, title, deadline, pages, file_path, description, budget
-  - Uses nullable file uploads stored in `storage/app/public/assignments/`
+### Two Distinct Sides
 
-### Application Structure
-- **Models**: `Assignment` model with fillable attributes for mass assignment
-- **Controllers**:
-  - `AssignmentController`: Handles assignment creation and storage
-  - `HomeController`: Landing page
-  - Auth controllers from Laravel Breeze
-- **Routes**: Simple web routes with authenticated sections for profile management
-- **Views**: Blade templates with auth views, assignment forms, and dashboard
+**1. Public marketing site** — Static/near-static pages with SEO content. Each service type has its own controller that returns hard-coded data arrays (no DB reads). Routes are at `/essay-writing`, `/research-paper`, `/homework-help`, etc.
 
-### File Storage
-- Assignment files uploaded to `storage/app/public/assignments/`
-- Supports PDF, DOC, DOCX, and ZIP file formats
-- File storage uses Laravel's public disk configuration
+**2. Order flow** — `GET/POST /order` via `OrderController`. Creates an `Assignment` record with polymorphic `File` attachments. Success page at `/order/success/{assignment}` requires auth.
 
-### Frontend Stack
-- **CSS Framework**: Tailwind CSS with forms plugin
-- **JavaScript**: Alpine.js for interactivity
-- **Build Tool**: Vite with Laravel plugin
-- **Bundling**: Uses Vite for asset compilation and hot reload
+### Service Data: Two Patterns
 
-### Authentication
-- Uses Laravel Breeze for complete authentication scaffolding
-- Includes registration, login, password reset, email verification
-- Profile management with update/delete functionality
+- **Programming services** (`/programming`, `/programming/{slug}`): `ServiceController` — data is hard-coded in the controller as PHP arrays, never stored in the database.
+- **Assignment services** (`/assignment`, `/assignment/{slug}`): `AssignmentServiceController` — reads from the `services` and `service_details` DB tables. Two slug overrides use custom views (`math-problem-solving`, `law-assignment`).
 
-## Key Configuration
-- **Database**: SQLite by default (see .env.example)
-- **Queue**: Database driver for background jobs
-- **Session**: Database storage
-- **Cache**: Database storage
-- **File Storage**: Local disk with public disk for uploads
-- **Mail**: Log driver for development (check logs for emails)
+### Key Models & Relationships
+```
+User         → hasMany Assignments
+Assignment   → belongsTo User, Service
+             → hasMany AssignmentFiles (legacy), Messages
+             → morphMany Files (current polymorphic system)
+Service      → hasOne ServiceDetail, hasMany Assignments
+File         → morphTo fileable (polymorphic — works with any model)
+```
 
-## Development Notes
-- The application uses PHP 8.2+ and Laravel 12
-- PSR-4 autoloading for App\, Database\Factories\, Database\Seeders\
-- Tests located in tests/ directory with Feature and Unit test suites
-- Uses concurrently package to run multiple development processes simultaneously
+The `File` model is the preferred file attachment system. `AssignmentFile` is a legacy model kept for backward compatibility.
+
+### Database
+SQLite by default. Queue, session, and cache all use the database driver.
+
+### Frontend
+Tailwind CSS + Alpine.js + Vite. Livewire 4 is installed; `resources/views/livewire/` contains a `budget-calculator` component (Blade-only, no PHP Livewire class — rendered as a standard Blade partial in this codebase).
+
+### Authenticated API Routes
+Under `web.php` with `auth` middleware, prefixed `/api`:
+- `GET /api/assignments` — list user's assignments
+- `POST /api/assignments/{assignment}/upload-file` — polymorphic file upload
+- `GET|POST /api/assignments/{assignment}/messages` — messaging
+
+### Layouts & Partials
+- `resources/views/layouts/app.blade.php` — authenticated layout
+- `resources/views/layouts/guest.blade.php` — public layout
+- `resources/views/partials/navbar.blade.php` + `footer.blade.php` — shared across public pages
