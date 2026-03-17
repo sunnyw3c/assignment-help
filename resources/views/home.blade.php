@@ -711,9 +711,91 @@
                 </div>
             </div>
 
-            <!-- Bottom Curve Decoration -->
-            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none"></div>
+
     </section>
+
+    <!-- Content Bridge Section -->
+    <section class="py-20 bg-white border-y border-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Heading -->
+                <div class="text-center mb-14">
+                    <span class="inline-block text-xs font-semibold text-violet-600 uppercase tracking-widest mb-3">Why Students Choose Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Professional Assignment Help for Every Subject & Deadline</h2>
+                    <p class="text-slate-500 text-lg max-w-3xl mx-auto leading-relaxed">Whether you're juggling multiple deadlines or stuck on a single tough question, our expert writers provide reliable academic support across every level and discipline.</p>
+                </div>
+
+                <!-- 3-column content grid -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+                    <div class="border border-slate-200 rounded-2xl p-7">
+                        <div class="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-3">All Academic Levels Covered</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            From high school book reports to undergraduate research papers and postgraduate dissertations, our writers are matched to your specific academic level. A high school student and a PhD candidate have very different expectations — our expert pool reflects that. Every assignment is handled by a writer who holds at least one degree level above what the assignment requires, ensuring the depth, tone, and referencing style are exactly right.
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-2xl p-7">
+                        <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-3">Original Work, Every Time</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Plagiarism is a serious academic offence, and we take it seriously too. Every assignment we deliver is written from scratch to your exact brief, then scanned with professional plagiarism detection tools before it reaches you. We include a full plagiarism report with every order at no extra cost. Proper citations in APA, MLA, Harvard, Chicago, or any other style your institution requires are included as standard — not an optional add-on.
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 rounded-2xl p-7">
+                        <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-3">Tight Deadlines We Actually Meet</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Deadlines don't move, and we don't miss them. Our platform is built to handle urgent requests — same-day turnarounds, 6-hour sprints, and 3-hour emergency submissions are all supported. When you place an urgent order, your assignment is prioritised immediately and assigned to a writer available in your timezone. You receive real-time progress updates so you always know exactly where your work stands, right up to delivery.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Wide content block -->
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">What Subjects Do We Cover?</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                            Our assignment help service covers every major academic discipline taught at US universities and colleges. This includes English literature, history, and philosophy; business management, marketing, finance, and economics; biology, chemistry, physics, and environmental science; computer science, software engineering, and data analysis; nursing, healthcare management, and medical sciences; law, criminology, and political science; engineering, mathematics, and statistics. If your professor assigned it, we can help with it.
+                        </p>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Specialist subjects like advanced mathematics, machine learning assignments, legal case briefs, and clinical nursing care plans are handled by writers with verified qualifications in those specific fields — not generalists. When you submit your order, our system automatically routes it to the most qualified available expert, so you never have to search for the right person yourself.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-4">How Our Assignment Help Works for Students</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                            Students who use our service are not looking for shortcuts — they're looking for support. Many are international students writing in their second language, working students managing full-time jobs alongside their studies, or students dealing with personal situations that have put them behind. Our service exists to give every student access to the same quality of academic guidance, regardless of their background or circumstances.
+                        </p>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Every completed assignment comes with a reference list, a clear structure you can learn from, and the option to ask your writer follow-up questions. We don't just hand you a document and close the ticket — we make sure you understand what was written and why, so you can use it as a study tool as well as a submission.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
     <section id="how-it-works" class="py-24 bg-[#0F172A] relative overflow-hidden">
         <!-- Modern Abstract Background -->

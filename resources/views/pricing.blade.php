@@ -340,41 +340,57 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
-        <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 animate-gradient-shift"></div>
-        </div>
+    <!-- Bottom Content Section -->
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
 
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-                    Ready to Get Started?
-                </h2>
-                <p class="text-xl text-white/90 mb-12 leading-relaxed">
-                    Choose your plan and experience quality assignment help today. <br>
-                    100% satisfaction guaranteed or your money back.
-                </p>
+                <!-- Section heading -->
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Understanding Our Pricing Structure</h2>
+                    <p class="text-slate-500 text-lg max-w-2xl mx-auto">Everything you need to know about how we calculate fair, transparent prices for every type of assignment.</p>
+                </div>
 
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <!-- Content grid -->
+                <div class="grid md:grid-cols-2 gap-10 mb-14">
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">How We Determine Your Price</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Our pricing is based on four key factors: academic level, number of pages, deadline urgency, and subject complexity. High School assignments start at $15 per page, while PhD-level work reflects the advanced expertise required at $45 per page. Rush deadlines carry a multiplier to ensure we can reliably source the right expert on short notice — a 3-hour turnaround requires significantly more coordination than a two-week window.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Subject multipliers apply to specialized fields such as programming, engineering, and law, where expert availability is more limited. Volume discounts are applied automatically — the more pages you order, the lower your effective per-page cost, with savings of up to 45% for large orders.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">What's Always Included in Your Price</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Every order — regardless of price tier — includes a full plagiarism report, unlimited revisions within the scope of the original brief, and direct communication with your assigned writer. There are no hidden platform fees, no charges for revisions, and no upsells after checkout. The price you see in our calculator is the price you pay.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            We also include a money-back guarantee on all orders. If we are unable to deliver work that meets the agreed requirements, you are entitled to a full refund — no questions asked. This applies across all service types, from standard essay writing to complex programming assignments and research dissertations.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Bottom CTA strip -->
+                <div class="border border-slate-200 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-900 mb-1">Ready to place your order?</h4>
+                        <p class="text-slate-500 text-sm">No payment required until you approve your quote.</p>
+                    </div>
                     <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                        <span class="mr-4 text-3xl">🚀</span>
+                        class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white px-8 py-3.5 rounded-xl font-semibold text-sm transition-colors whitespace-nowrap">
                         Start Your Order
-                        <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                 </div>
 
-                <div class="mt-8 flex items-center justify-center text-white/80 text-sm">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                    </svg>
-                    No commitment required. Cancel anytime.
-                </div>
             </div>
         </div>
     </section>
