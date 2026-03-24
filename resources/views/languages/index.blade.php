@@ -8,7 +8,7 @@
     <!-- Structured Data for Programming Languages -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Programming Languages We Support",
         "description": "Comprehensive list of programming languages with expert help available",

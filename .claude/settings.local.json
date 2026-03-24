@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Read(//d/LOCALHOST/assignment-help-online-admin/app/Http/Middleware//**)",
+      "Read(//d/LOCALHOST/assignment-help-online-admin/app/Http/Middleware/**)"
     ]
   }
 }

@@ -8,7 +8,7 @@
     <!-- Structured Data for Organization -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@@context": "https://schema.org",
         "@type": "Organization",
         "name": "Assignment Help USA",
         "description": "Professional assignment help and academic support service connecting students with expert tutors",

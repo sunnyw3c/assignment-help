@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         // Seed assignment services
         $this->call([
             AssignmentServicesSeeder::class,
+            RoleSeeder::class,
         ]);
     }
 }

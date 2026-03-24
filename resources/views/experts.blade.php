@@ -143,12 +143,12 @@
         let filteredExperts = [];
         let currentFilter = 'all';
 
-        // Fetch experts from JSON file
+        // Fetch experts from API
         async function fetchExperts() {
             try {
-                const response = await fetch('/data/experts.json');
+                const response = await fetch('/api/writers');
                 const data = await response.json();
-                allExperts = data.experts;
+                allExperts = data.writers;
                 filteredExperts = allExperts;
 
                 createFilterButtons();
@@ -235,17 +235,21 @@
         // Create expert card HTML
         function createExpertCard(expert) {
             const stars = generateStars(expert.rating);
-            const subjectsHTML = expert.subjects.slice(0, 3).map(subject =>
+            const subjects = expert.expertise || [];
+            const subjectsHTML = subjects.slice(0, 3).map(subject =>
                 `<span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">${subject}</span>`
             ).join('');
-            const moreSubjects = expert.subjects.length > 3 ? `<span class="text-xs text-gray-600">+${expert.subjects.length - 3} more</span>` : '';
+            const moreSubjects = subjects.length > 3 ? `<span class="text-xs text-gray-600">+${subjects.length - 3} more</span>` : '';
 
             return `
                 <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <!-- Expert Header -->
                     <div class="flex items-start mb-4">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
-                            ${expert.name.split(' ').map(n => n[0]).join('')}
+                        <div class="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden">
+                            ${expert.photo
+                                ? `<img src="${expert.photo}" alt="${expert.name}" class="w-full h-full object-cover">`
+                                : `<div class="w-full h-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl">${expert.name.split(' ').map(n => n[0]).join('')}</div>`
+                            }
                         </div>
                         <div class="ml-4 flex-1">
                             <h3 class="text-lg font-bold text-gray-900">${expert.name}</h3>

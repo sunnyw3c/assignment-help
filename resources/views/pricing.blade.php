@@ -8,7 +8,7 @@
     <!-- Structured Data for Pricing -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@@context": "https://schema.org",
         "@type": "Service",
         "name": "Assignment Help Service",
         "description": "Professional assignment help and tutoring services",
