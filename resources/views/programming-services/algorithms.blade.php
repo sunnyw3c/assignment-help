@@ -1662,7 +1662,7 @@
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">YOUR SUCCESS IS GUARANTEED</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                        Why <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">10,000+ Students</span> Trust Us
+                        Why <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">5,000+ Students</span> Trust Us
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're committed to your academic success with industry-leading guarantees</p>
                 </div>
@@ -1891,7 +1891,7 @@
                     <!-- Badge -->
                     <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-bold mb-6 border border-white/30 animate-pulse-glow">
                         <span class="text-2xl">🎯</span>
-                        JOIN 10,000+ SUCCESSFUL STUDENTS
+                        JOIN 5,000+ SUCCESSFUL STUDENTS
                     </div>
 
                     <!-- Heading -->

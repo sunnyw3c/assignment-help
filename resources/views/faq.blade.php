@@ -286,7 +286,7 @@
                         </div>
                         <h3 class="text-2xl font-black text-gray-900 mb-3">Email Support</h3>
                         <p class="text-gray-600 mb-4">Send us an email anytime</p>
-                        <a href="mailto:support@codehelp.com" class="text-sm text-purple-600 font-semibold hover:text-purple-700">support@codehelp.com</a>
+                        <a href="mailto:support@assignmenthelpusa.com" class="text-sm text-purple-600 font-semibold hover:text-purple-700">support@assignmenthelpusa.com</a>
                     </div>
 
                     <!-- Phone Support -->

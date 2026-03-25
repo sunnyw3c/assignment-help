@@ -709,7 +709,7 @@
                 <div
                     class="inline-flex items-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-2xl animate-pulse">
                     <span class="mr-3 text-lg">🚀</span>
-                    TRUSTED BY 50,000+ DEVELOPERS & STUDENTS
+                    TRUSTED BY 5,000+ DEVELOPERS & STUDENTS
                 </div>
                 <h2 id="transform-development-heading" class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-8 leading-tight">
                     Turn Your Development <br>

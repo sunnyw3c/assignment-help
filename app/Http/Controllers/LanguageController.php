@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class LanguageController extends Controller
 {
-    public function index()
+    private function languages(): array
     {
-        $languages = [
+        return [
             [
                 'name' => 'Python',
                 'slug' => 'python',
@@ -104,9 +104,21 @@ class LanguageController extends Controller
         return view('languages.index', compact('languages'));
     }
 
+    public function index()
+    {
+        $languages = $this->languages();
+        return view('languages.index', compact('languages'));
+    }
+
     public function show($slug)
     {
-        // Individual language page (for future expansion)
-        return view('languages.show', compact('slug'));
+        $languages = $this->languages();
+        $language  = collect($languages)->firstWhere('slug', $slug);
+
+        if (! $language) {
+            abort(404);
+        }
+
+        return view('languages.show', compact('language', 'languages'));
     }
 }

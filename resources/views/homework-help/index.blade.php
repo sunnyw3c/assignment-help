@@ -103,7 +103,7 @@
                             <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Our Performance Stats</h3>
                             <div class="grid md:grid-cols-4 gap-4 text-center">
                                 <div>
-                                    <div class="text-3xl font-bold text-blue-600 mb-2">10,000+</div>
+                                    <div class="text-3xl font-bold text-blue-600 mb-2">5,000+</div>
                                     <p class="text-sm text-gray-700">Homework Assignments Completed</p>
                                 </div>
                                 <div>
@@ -760,7 +760,7 @@
                                     <div class="text-4xl font-black text-gray-900 mr-4">4.8/5.0</div>
                                     <div class="text-left">
                                         <div class="flex text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
-                                        <p class="text-sm text-gray-600">Based on 10,000+ verified student reviews</p>
+                                        <p class="text-sm text-gray-600">Based on 5,000+ verified student reviews</p>
                                     </div>
                                 </div>
                             </div>
@@ -894,13 +894,13 @@
                             Get Your Homework Done Tonight
                         </h3>
                         <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
-                            Don't stress about homework deadlines. Join 10,000+ students who get expert help with math, science, English, and 50+ other subjects. Step-by-step solutions, affordable prices, fast delivery. Get 20% off your first order.
+                            Don't stress about homework deadlines. Join 5,000+ students who get expert help with math, science, English, and 50+ other subjects. Step-by-step solutions, affordable prices, fast delivery. Get up to 40% off your order.
                         </p>
                         <div class="text-center">
                             <a href="{{ route('order', ['assignment_service' => $service->id ?? 3]) }}"
                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 <span class="mr-2">📝</span>
-                                Get Homework Help - 20% Off First Order
+                                Get Homework Help - Up to 40% Off
                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>

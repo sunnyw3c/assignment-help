@@ -280,7 +280,7 @@
 
                             <p
                                 class="text-lg leading-relaxed text-slate-400 group-hover:text-indigo-100 transition-colors duration-500 mb-10 max-w-xl">
-                                Assignment Help USA is a legally registered academic assistance provider. We adhere to
+                                Assignment Help USA is a trusted academic assistance provider. We adhere to
                                 strict privacy policies and <span class="text-white font-semibold">academic integrity
                                     standards</span>.
                             </p>
@@ -303,7 +303,7 @@
                                             Genuine Experts</h3>
                                         <p
                                             class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors">
-                                            PhD Holders Only</p>
+                                            Verified & Vetted Experts</p>
                                     </div>
                                 </div>
 
@@ -406,7 +406,7 @@
                                         </a>
                                         <p
                                             class="text-center text-[10px] text-slate-500 mt-4 font-bold uppercase tracking-[0.3em]">
-                                            Based on 50,000+ Completed Orders</p>
+                                            Based on 5,000+ Completed Orders</p>
                                     </div>
                                 </div>
                             </div>
@@ -477,8 +477,8 @@
                 class="max-w-5xl mx-auto bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[4rem] p-12 md:p-20 text-center shadow-2xl">
                 <div
                     class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
-                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Limited Time Offer: 30%
-                        Off Your First Order</span>
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Special Offer: Up to 40%
+                        Off Every Order</span>
                 </div>
                 <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-tight">
                     Ready to Transform <br>
@@ -487,7 +487,7 @@
                         Academic Future?</span>
                 </h2>
                 <p class="text-xl text-slate-400 font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-                    Join over 50,000 students across the USA who have already unlocked their potential with our expert
+                    Join over 5,000 students across the USA who have already unlocked their potential with our expert
                     academic support.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
@@ -747,17 +747,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="mt-20 text-center">
-                <a href="{{ route('order') }}"
-                    class="inline-flex items-center gap-4 text-blue-600 font-black text-xs uppercase tracking-[0.3em] group/link">
-                    Select Your Level & Get Started
-                    <svg class="w-5 h-5 group-hover/link:translate-x-2 transition-transform" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
@@ -2493,7 +2482,7 @@
                         x-transition:enter-start="opacity-0 -translate-y-4"
                         x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
                         <p class="text-slate-600 leading-relaxed font-medium">
-                            Yes! Assignment Help USA is a vetted platform trusted by over 50,000 students nationwide. We
+                            Yes! Assignment Help USA is a vetted platform trusted by over 5,000 students nationwide. We
                             employ military-grade 256-bit SSL encryption for all data transfers and use industry-standard
                             secure payment processors. Our service is fully compliant with privacy laws, ensuring 100%
                             anonymity for every user.

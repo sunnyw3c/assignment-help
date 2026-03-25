@@ -59,7 +59,7 @@
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             @foreach ([
-                ['number' => '10,000+', 'label' => 'Assignments Completed'],
+                ['number' => '5,000+', 'label' => 'Assignments Completed'],
                 ['number' => '98%', 'label' => 'Satisfaction Rate'],
                 ['number' => '500+', 'label' => 'Expert Tutors'],
                 ['number' => '24/7', 'label' => 'Support Available'],

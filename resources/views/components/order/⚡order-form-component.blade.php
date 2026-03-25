@@ -986,7 +986,7 @@ new class extends Component {
                                 <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400 flex items-center justify-center text-[10px] font-bold text-slate-900">RK</div>
                             </div>
                             <div>
-                                <div class="text-xl font-black">50,000+</div>
+                                <div class="text-xl font-black">5,000+</div>
                                 <div class="text-[10px] font-bold text-indigo-100 uppercase tracking-widest">Happy Students in USA</div>
                             </div>
                         </div>

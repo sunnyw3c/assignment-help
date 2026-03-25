@@ -29,7 +29,7 @@
                     <div class="text-gray-600 mt-2">Satisfaction Rate</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-blue-600">10,000+</div>
+                    <div class="text-4xl font-bold text-blue-600">5,000+</div>
                     <div class="text-gray-600 mt-2">Happy Students</div>
                 </div>
                 <div>

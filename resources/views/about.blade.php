@@ -126,12 +126,33 @@
                         <p class="text-xl text-gray-700 leading-relaxed mb-6">
                             Assignment Help USA was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
                         </p>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                            We recognized that students often face challenges with complex assignments, tight deadlines, and limited access to personalized support. Our platform bridges this gap by connecting students with experienced tutors who understand their unique needs.
-                        </p>
                         <p class="text-lg text-gray-600 leading-relaxed">
-                            What started as a small tutoring service has grown into a comprehensive academic support platform serving thousands of students worldwide. Our success is built on trust, quality, and a genuine commitment to student success.
+                            We recognized that students often face challenges with complex assignments, tight deadlines, and limited access to personalized support. Our platform bridges this gap by connecting students with experienced tutors who understand their unique needs — delivering original, on-time work across essays, programming, research, and more.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Trust Signals -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex flex-col items-center text-center bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <span class="text-3xl mb-3">🔒</span>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">SSL Encrypted</h4>
+                        <p class="text-xs text-gray-500">All data transfers are secured end-to-end</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <span class="text-3xl mb-3">📄</span>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">Plagiarism-Free</h4>
+                        <p class="text-xs text-gray-500">Every order is written from scratch</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <span class="text-3xl mb-3">💳</span>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">Secure Payments</h4>
+                        <p class="text-xs text-gray-500">Protected by industry-standard processors</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <span class="text-3xl mb-3">🕐</span>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1">24/7 Support</h4>
+                        <p class="text-xs text-gray-500">Real help available any time of day</p>
                     </div>
                 </div>
             </div>
@@ -196,54 +217,54 @@
 
             <!-- Values Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Quality Excellence -->
+                <!-- On-Time Delivery -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-blue-100 h-full">
                         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
-                            <span class="text-3xl">⭐</span>
+                            <span class="text-3xl">⏱️</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Quality Excellence</h3>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">On-Time, Every Time</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            We maintain the highest standards in every assignment, ensuring accuracy, thoroughness, and academic integrity.
+                            Deadlines are non-negotiable. Every order is tracked and delivered before your submission deadline — no exceptions.
                         </p>
                     </div>
                 </div>
 
-                <!-- Student-Centric -->
+                <!-- Privacy First -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-green-100 h-full">
                         <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
-                            <span class="text-3xl">🎓</span>
+                            <span class="text-3xl">🛡️</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Student-Centric</h3>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Your Privacy First</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Your success is our priority. We tailor our approach to meet your unique learning needs and academic goals.
+                            Your name, email, and order details are never shared with third parties. Every interaction is SSL-encrypted and fully confidential.
                         </p>
                     </div>
                 </div>
 
-                <!-- Integrity & Trust -->
+                <!-- Original Work -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-purple-100 h-full">
                         <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
-                            <span class="text-3xl">🔒</span>
+                            <span class="text-3xl">📝</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Integrity & Trust</h3>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">100% Original Work</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            We uphold ethical practices, maintain confidentiality, and build lasting relationships based on trust.
+                            Every assignment is written from scratch by a subject-matter expert. Plagiarism-free guarantee included on every single order.
                         </p>
                     </div>
                 </div>
 
-                <!-- Innovation -->
+                <!-- Transparent Pricing -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-orange-100 h-full">
                         <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
-                            <span class="text-3xl">💡</span>
+                            <span class="text-3xl">💰</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Innovation</h3>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Transparent Pricing</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            We continuously improve our platform and methods to provide you with the best learning experience.
+                            No hidden fees. The price shown in our calculator is exactly what you pay. Discounts apply automatically — no promo codes needed.
                         </p>
                     </div>
                 </div>
@@ -353,7 +374,7 @@
                     <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                         <span class="text-3xl">🎓</span>
                     </div>
-                    <div class="text-5xl font-black mb-2">2500+</div>
+                    <div class="text-5xl font-black mb-2">5,000+</div>
                     <div class="text-gray-300 font-medium">Happy Students</div>
                 </div>
 
@@ -387,7 +408,7 @@
             <div class="text-center max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
                     Ready to Experience the <br>
-                    Trending Tutor Difference?
+                    Assignment Help USA Difference?
                 </h2>
                 <p class="text-xl text-white/90 mb-12 leading-relaxed">
                     Join thousands of students who have achieved academic success with our expert guidance.

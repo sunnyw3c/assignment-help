@@ -290,8 +290,8 @@
                             <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
                                 <h4 class="font-bold text-blue-900 mb-2">💰 Special Discounts</h4>
                                 <ul class="text-sm text-gray-700 space-y-1">
-                                    <li>• 15% off first order</li>
-                                    <li>• 10% off orders over 10 pages</li>
+                                    <li>• Up to 40% off every order</li>
+                                    <li>• Extra volume discount on orders over 10 pages</li>
                                     <li>• 5% loyalty discount for returning customers</li>
                                     <li>• Seasonal promotions</li>
                                     <li>• Referral bonuses</li>
