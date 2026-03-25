@@ -61,6 +61,7 @@ Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/experts', [ExpertController::class, 'index'])->name('experts');
+Route::get('/privacy-policy', fn() => view('privacy-policy'))->name('privacy-policy');
 Route::get('/order', [OrderController::class, 'create'])->name('order');
 Route::get('/order/success/{assignment}', [OrderController::class, 'success'])->name('order.success')->middleware(['auth']);
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');

@@ -18,7 +18,7 @@ class PricingController extends Controller
                     'Standard delivery (3-5 days)',
                     'Basic formatting',
                     'Email support',
-                    '1 revision included',
+                    'Unlimited revisions',
                     'Plagiarism report',
                     'Quality guarantee',
                 ],
@@ -29,12 +29,12 @@ class PricingController extends Controller
                 'name' => 'Standard',
                 'price' => '35',
                 'period' => 'per page',
-                'description' => 'Most popular choice for students',
+                'description' => 'Best value for most students',
                 'features' => [
                     'Fast delivery (1-3 days)',
                     'Advanced formatting',
                     'Priority support',
-                    '2 revisions included',
+                    'Unlimited revisions',
                     'Plagiarism report',
                     'Quality guarantee',
                     'Expert tutor assigned',
@@ -73,7 +73,7 @@ class PricingController extends Controller
             ],
             [
                 'question' => 'Do you offer discounts?',
-                'answer' => 'Yes! We offer discounts for first-time users, bulk orders, and returning customers. Contact our support team for current promotional offers.',
+                'answer' => 'Yes! We automatically apply up to 40% off on every order, plus volume discounts for larger orders. No promo codes needed — discounts are calculated in real time in the price calculator.',
             ],
             [
                 'question' => 'What payment methods do you accept?',
@@ -85,7 +85,7 @@ class PricingController extends Controller
             ],
             [
                 'question' => 'How do revisions work?',
-                'answer' => 'Revisions are included in your package. Basic plan includes 1 revision, Standard includes 2, and Premium includes unlimited revisions within the revision period.',
+                'answer' => 'All plans include unlimited free revisions. Simply send your feedback and your assigned expert will revise the work until it fully meets your original requirements.',
             ],
         ];
 

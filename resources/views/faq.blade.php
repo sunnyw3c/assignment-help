@@ -276,7 +276,7 @@
                         </div>
                         <h3 class="text-2xl font-black text-gray-900 mb-3">Live Chat</h3>
                         <p class="text-gray-600 mb-4">Chat with our support team in real-time</p>
-                        <div class="text-sm text-blue-600 font-semibold">Average response: 2 min</div>
+                        <div class="text-sm text-blue-600 font-semibold">Typically under 15 minutes</div>
                     </div>
 
                     <!-- Email Support -->

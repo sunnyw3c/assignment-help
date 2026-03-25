@@ -20,6 +20,12 @@
             <p class="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto text-reveal text-reveal-delay-1 px-4">
                 Submit your assignment and get expert help in minutes
             </p>
+
+            <!-- Expected Response Time -->
+            <div class="mt-6 inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl px-6 py-3 shadow-sm text-sm text-gray-600">
+                <span class="text-xl">⏱️</span>
+                <span>An expert is typically matched within <strong class="text-blue-600">15–30 minutes</strong> of submitting your order</span>
+            </div>
         </div>
 
         @if(session('success'))
@@ -88,8 +94,20 @@
                     <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     Bank-Level Data Privacy
                 </div>
+                <a href="{{ url('/privacy-policy') }}" class="mt-3 inline-block text-[10px] sm:text-xs text-indigo-500 hover:text-indigo-700 font-semibold underline underline-offset-2 transition-colors">
+                    Read our Privacy Policy →
+                </a>
             </div>
         </div>
+
+        <!-- Legal Disclaimer -->
+        <p class="text-center text-xs text-gray-400 mt-8 max-w-2xl mx-auto leading-relaxed">
+            By placing an order you agree to our
+            <a href="{{ url('/terms-of-service') }}" class="text-blue-500 hover:underline">Terms of Service</a>
+            and
+            <a href="{{ url('/privacy-policy') }}" class="text-blue-500 hover:underline">Privacy Policy</a>.
+            All work is intended for reference and learning purposes only.
+        </p>
     </div>
 
     {{-- Floating Action Button for Help --}}

@@ -25,7 +25,7 @@ class HowItWorksController extends Controller
             [
                 'step' => 2,
                 'title' => 'Expert Assignment & Quote',
-                'description' => 'We match you with the best developer for your project and provide a detailed quote.',
+                'description' => 'Within 15–30 minutes, we match you with the best expert for your project and provide a detailed, transparent quote.',
                 'icon' => '👨‍💻',
                 'details' => [
                     'Automatic matching with qualified experts',

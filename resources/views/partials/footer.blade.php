@@ -58,7 +58,7 @@
                     &copy; {{ date('Y') }} Assignment Help USA. All Rights Reserved.
                 </p>
                 <div class="flex space-x-6 text-gray-500">
-                    <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="{{ route('privacy-policy') }}" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
                 </div>
             </div>

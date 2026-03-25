@@ -1223,6 +1223,16 @@
                     </div>
                 @endforeach
             </div>
+
+            <div class="text-center mt-10">
+                <p class="text-gray-500 mb-4">Still have questions? We've got answers.</p>
+                <a href="{{ route('faq') }}" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg">
+                    View All FAQs
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 

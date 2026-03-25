@@ -15,8 +15,8 @@ class FaqController extends Controller
                 'color' => 'blue',
                 'questions' => [
                     [
-                        'question' => 'How does Trending Tutor work?',
-                        'answer' => 'Trending Tutor connects you with expert tutors who can help with your assignments. Simply submit your assignment details, get matched with a qualified tutor, receive your completed work, and request revisions if needed. It\'s that simple!',
+                        'question' => 'How does Assignment Help USA work?',
+                        'answer' => 'Assignment Help USA connects you with expert tutors who can help with your assignments. Simply submit your assignment details, get matched with a qualified tutor within 15–30 minutes, receive your completed work, and request revisions if needed. It\'s that simple!',
                     ],
                     [
                         'question' => 'How do I place an order?',
@@ -27,7 +27,7 @@ class FaqController extends Controller
                         'answer' => 'Delivery time depends on your chosen plan and deadline. We offer Standard (3-5 days), Fast (1-3 days), and Express (24-48 hours) delivery options. Rush orders can be accommodated for urgent needs.',
                     ],
                     [
-                        'question' => 'Is Trending Tutor available 24/7?',
+                        'question' => 'Is Assignment Help USA available 24/7?',
                         'answer' => 'Yes! Our support team and tutors are available round the clock, 7 days a week. You can submit assignments, get quotes, and receive help at any time that\'s convenient for you.',
                     ],
                 ],
@@ -51,7 +51,7 @@ class FaqController extends Controller
                     ],
                     [
                         'question' => 'Do you offer discounts or promotions?',
-                        'answer' => 'Yes! We offer discounts for first-time users, bulk orders, and loyal customers. We also run seasonal promotions and special offers. Contact our support team to learn about current discounts.',
+                        'answer' => 'Yes! We automatically apply up to 40% off on every order, plus volume discounts for larger orders. No promo codes needed — discounts are calculated in real time in our price calculator.',
                     ],
                     [
                         'question' => 'Can I get a refund?',
@@ -69,12 +69,12 @@ class FaqController extends Controller
                         'answer' => 'All our tutors are qualified experts with advanced degrees in their fields. Every assignment goes through quality checks, plagiarism detection, and proofreading before delivery. We guarantee high-quality, original work.',
                     ],
                     [
-                        'question' => 'Is the work plagiarism-free?',
-                        'answer' => 'Absolutely! Every assignment is written from scratch by our expert tutors. We use advanced plagiarism detection software to ensure 100% originality. A plagiarism report is included with your delivery.',
+                        'question' => 'Is the work plagiarism-free? What is your plagiarism policy?',
+                        'answer' => 'Yes, every assignment is written from scratch by your assigned expert — we never resell, reuse, or recycle work between clients. We run each completed order through plagiarism detection software before delivery and include the report at no extra charge. If plagiarism is ever found in delivered work, we will rewrite it in full at no cost, or issue a refund.',
                     ],
                     [
-                        'question' => 'What if I need revisions?',
-                        'answer' => 'Revisions are included in all our plans! Basic plan includes 1 revision, Standard includes 2 revisions, and Premium includes unlimited revisions. Simply let us know what needs to be changed within the revision period.',
+                        'question' => 'What if I need revisions? How does the revision policy work?',
+                        'answer' => 'All plans include unlimited free revisions. If the delivered work does not match your original instructions, simply send your feedback and your assigned expert will revise it at no additional charge. Revisions are processed within 24 hours. There is no limit on the number of revision requests, as long as they are within the original scope of the brief.',
                     ],
                     [
                         'question' => 'Can I communicate with my tutor?',
@@ -143,7 +143,7 @@ class FaqController extends Controller
                 'questions' => [
                     [
                         'question' => 'How can I contact support?',
-                        'answer' => 'You can reach our support team via email (support@codehelp.com), live chat on our website, or phone. We typically respond within 15 minutes and are available 24/7 to assist you.',
+                        'answer' => 'You can reach our support team via email (support@assignmenthelpusa.com) or live chat on our website. We typically respond within 15 minutes and are available 24/7 to assist you.',
                     ],
                     [
                         'question' => 'What if I have questions during the process?',

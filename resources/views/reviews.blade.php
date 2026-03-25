@@ -72,6 +72,25 @@
         </div>
     </div>
 
+    <!-- Submit a Review CTA -->
+    <div class="bg-gray-50 border-t border-gray-200 py-14">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-4xl mb-4">✍️</div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Used our service? Share your experience</h2>
+            <p class="text-gray-600 mb-6">
+                Your honest feedback helps other students make informed decisions — and helps us improve.
+            </p>
+            <a href="mailto:support@assignmenthelpusa.com?subject=My%20Review%20for%20Assignment%20Help%20USA&body=Name%3A%0ACourse%3A%0AService%20Used%3A%0ARating%20(1-5)%3A%0AReview%3A"
+               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-300 shadow-md">
+                Submit Your Review
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <p class="text-xs text-gray-400 mt-3">Sends a pre-filled email to our support team</p>
+        </div>
+    </div>
+
     <!-- CTA Section -->
     <div class="bg-gradient-to-r from-blue-600 to-indigo-700 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

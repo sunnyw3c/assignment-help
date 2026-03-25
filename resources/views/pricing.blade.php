@@ -141,7 +141,7 @@
                         @if($plan['recommended'])
                             <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10">
                                 <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                                    ⭐ MOST POPULAR
+                                    ⭐ BEST VALUE
                                 </div>
                             </div>
                         @endif
@@ -235,54 +235,22 @@
                 @endforeach
             </div>
 
-            <!-- Additional Info -->
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">Need a Custom Quote?</h3>
-                    <p class="text-gray-600 mb-6">
-                        Have a unique project or specific requirements? Contact us for a personalized quote tailored to your needs.
-                    </p>
-                    <a href="{{ route('order') }}"
-                       class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        <span class="mr-3 text-2xl">📝</span>
-                        Request Custom Quote
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Price Calculator Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="mr-3 text-xl">🧮</span>
-                    INSTANT CALCULATOR
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                    Get Your
-                    <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Instant Quote</span>
-                </h2>
-                <p class="text-xl text-gray-600 mb-12">
-                    Use our pricing calculator to get an instant quote for your assignment
-                </p>
-
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border border-blue-100">
-                    <div class="flex flex-col items-center">
-                        <div class="text-6xl mb-6">🧮</div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Interactive Price Calculator</h3>
-                        <p class="text-gray-600 mb-8">
-                            Fill out your assignment details and get an instant price estimate
-                        </p>
-                        <a href="{{ route('order') }}"
-                           class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                            <span class="mr-3 text-2xl">🚀</span>
-                            Calculate My Price
-                            <svg class="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
+            <!-- Money-Back Guarantee -->
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-green-50 border border-green-200 rounded-3xl p-8">
+                    <div class="flex items-start gap-5">
+                        <div class="text-4xl flex-shrink-0">💰</div>
+                        <div>
+                            <h3 class="text-xl font-black text-gray-900 mb-2">Money-Back Guarantee</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                If we cannot deliver work that meets your agreed requirements, you are entitled to a full refund — no questions asked. This applies across all plans and all service types.
+                            </p>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li class="flex items-center gap-2"><span class="text-green-600 font-bold">✓</span> Full refund if requirements are not met</li>
+                                <li class="flex items-center gap-2"><span class="text-green-600 font-bold">✓</span> Unlimited free revisions before a refund is needed</li>
+                                <li class="flex items-center gap-2"><span class="text-green-600 font-bold">✓</span> No payment until you approve your quote</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

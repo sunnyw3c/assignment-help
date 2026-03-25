@@ -117,31 +117,31 @@
                             @endforeach
                         </div>
 
-                        <!-- Live Activity Feed -->
+                        <!-- Service Stats -->
                         <div class="space-y-3">
-                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
                                 <div class="flex items-center space-x-3">
                                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                                         <span class="text-green-600 text-xs">✓</span>
                                     </div>
                                     <div>
-                                        <div class="text-sm font-medium text-gray-900">{{ $services[0]['name'] ?? 'Project' }} Completed</div>
-                                        <div class="text-xs text-gray-500">2 minutes ago</div>
+                                        <div class="text-sm font-medium text-gray-900">5,000+ Projects Completed</div>
+                                        <div class="text-xs text-gray-500">Across all languages & frameworks</div>
                                     </div>
                                 </div>
-                                <div class="text-green-600 font-semibold text-sm">{{ $services[0]['price_from'] ?? '$45' }}</div>
+                                <div class="text-green-600 font-semibold text-sm">98% Satisfied</div>
                             </div>
-                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                                 <div class="flex items-center space-x-3">
                                     <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <span class="text-blue-600 text-xs">●</span>
+                                        <span class="text-blue-600 text-xs">⚡</span>
                                     </div>
                                     <div>
-                                        <div class="text-sm font-medium text-gray-900">{{ $services[1]['name'] ?? 'Project' }}</div>
-                                        <div class="text-xs text-gray-500">In progress</div>
+                                        <div class="text-sm font-medium text-gray-900">Expert matched in 15–30 min</div>
+                                        <div class="text-xs text-gray-500">After order submission</div>
                                     </div>
                                 </div>
-                                <div class="text-blue-600 font-semibold text-sm">{{ $services[1]['price_from'] ?? '$60' }}</div>
+                                <div class="text-blue-600 font-semibold text-sm">24/7 Support</div>
                             </div>
                         </div>
                     </div>
@@ -150,8 +150,8 @@
                     <div class="absolute -top-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl p-4 shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300">
                         <div class="text-center">
                             <div class="text-2xl mb-1">🏆</div>
-                            <div class="text-xs font-bold">Top Rated</div>
-                            <div class="text-xs opacity-90">2024</div>
+                            <div class="text-xs font-bold">5★ Rated</div>
+                            <div class="text-xs opacity-90">By Students</div>
                         </div>
                     </div>
 
