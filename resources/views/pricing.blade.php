@@ -328,7 +328,7 @@
                             Our pricing is based on four key factors: academic level, number of pages, deadline urgency, and subject complexity. High School assignments start at $15 per page, while PhD-level work reflects the advanced expertise required at $45 per page. Rush deadlines carry a multiplier to ensure we can reliably source the right expert on short notice — a 3-hour turnaround requires significantly more coordination than a two-week window.
                         </p>
                         <p class="text-slate-600 leading-relaxed">
-                            Subject multipliers apply to specialized fields such as programming, engineering, and law, where expert availability is more limited. Volume discounts are applied automatically — the more pages you order, the lower your effective per-page cost, with savings of up to 45% for large orders.
+                            Subject multipliers apply to specialized fields such as programming, engineering, and law, where expert availability is more limited. Volume discounts are applied automatically — the more pages you order, the lower your effective per-page cost, with savings of up to 40% for large orders.
                         </p>
                     </div>
 

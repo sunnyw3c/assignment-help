@@ -1,2 +1,10 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /api/
+Disallow: /order/success/
+Disallow: /test-file-upload
+
+Sitemap: https://assignmenthelpusa.com/sitemap.xml

@@ -80,7 +80,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Turnaround</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            Urgent homework due tonight? We offer delivery from 3 hours to 24 hours for most assignments. Standard homework is completed within 2-3 days. We've completed over 5,000 urgent homework assignments with 99% on-time delivery rate.
+                                            Urgent homework due tonight? We offer delivery from 3 hours to 24 hours for most assignments. Standard homework is completed within 2-3 days. We've completed over 5,000 urgent homework assignments with on-time delivery guaranteed.
                                         </p>
                                     </div>
                                 </div>
@@ -107,8 +107,8 @@
                                     <p class="text-sm text-gray-700">Homework Assignments Completed</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">99%</div>
-                                    <p class="text-sm text-gray-700">On-Time Delivery</p>
+                                    <div class="text-3xl font-bold text-green-600 mb-2">98%</div>
+                                    <p class="text-sm text-gray-700">Satisfaction Rate</p>
                                 </div>
                                 <div>
                                     <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>

@@ -91,10 +91,10 @@ class HowItWorksController extends Controller
         ];
 
         $stats = [
-            ['number' => '2500+', 'label' => 'Projects Completed', 'icon' => '🎯'],
+            ['number' => '5,000+', 'label' => 'Projects Completed', 'icon' => '🎯'],
             ['number' => '98.5%', 'label' => 'Client Satisfaction', 'icon' => '⭐'],
             ['number' => '24/7', 'label' => 'Expert Support', 'icon' => '🚀'],
-            ['number' => '150+', 'label' => 'Programming Languages', 'icon' => '💻']
+            ['number' => '20+', 'label' => 'Programming Languages', 'icon' => '💻']
         ];
 
         $reviews = [

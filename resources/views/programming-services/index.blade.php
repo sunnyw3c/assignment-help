@@ -62,8 +62,8 @@
                             <div class="text-sm text-gray-500">Services</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-2xl font-bold text-green-600 mb-1">99%</div>
-                            <div class="text-sm text-gray-500">Success Rate</div>
+                            <div class="text-2xl font-bold text-green-600 mb-1">98%</div>
+                            <div class="text-sm text-gray-500">Satisfaction Rate</div>
                         </div>
                         <div class="text-center">
                             <div class="text-2xl font-bold text-blue-600 mb-1">24/7</div>
@@ -728,7 +728,7 @@
                 <!-- Quick Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-gray-100">
-                        <div class="text-2xl font-bold text-green-600 mb-1">99%</div>
+                        <div class="text-2xl font-bold text-green-600 mb-1">98%</div>
                         <div class="text-sm text-gray-600">Client Satisfaction</div>
                     </div>
                     <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-gray-100">
@@ -840,7 +840,7 @@
                             <h3 class="text-xl font-bold text-gray-900">Our Quality Guarantee</h3>
                         </div>
                         <p class="text-gray-700 mb-4">
-                            <strong>99% of our clients are satisfied</strong> with the quality and professionalism of delivered projects.
+                            <strong>98% of our clients are satisfied</strong> with the quality and professionalism of delivered projects.
                             If you're not completely satisfied, we'll work with you through unlimited revisions - or provide a full refund.
                         </p>
                         <div class="flex flex-wrap gap-3">

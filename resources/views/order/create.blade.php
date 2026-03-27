@@ -115,7 +115,7 @@
         position="bottom-right"
         icon="💬"
         text="Need Help?"
-        onclick="alert('Chat support coming soon!')"
+        href="mailto:support@assignmenthelpusa.com"
     />
 </div>
 @endsection

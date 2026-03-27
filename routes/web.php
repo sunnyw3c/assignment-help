@@ -23,11 +23,14 @@ use App\Http\Controllers\LiteratureReviewController;
 use App\Http\Controllers\PresentationDesignController;
 use App\Http\Controllers\ProofreadingEditingController;
 use App\Http\Controllers\ThesisDissertationController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/programming-assignment-help', [LanguageController::class, 'index'])->name('languages.index');
-Route::get('/programming-assignment-help/{slug}', [LanguageController::class, 'show'])->name('languages.show');
+// Route::get('/programming-assignment-help', [LanguageController::class, 'index'])->name('languages.index');
+// Route::get('/programming-assignment-help/{slug}', [LanguageController::class, 'show'])->name('languages.show');
 
 // All Services (Programming + Assignment)
 Route::get('/services', [AllServicesController::class, 'index'])->name('services.index');
@@ -62,14 +65,11 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');
 Route::get('/experts', [ExpertController::class, 'index'])->name('experts');
 Route::get('/privacy-policy', fn() => view('privacy-policy'))->name('privacy-policy');
+Route::get('/terms-of-service', fn() => view('terms-of-service'))->name('terms-of-service');
 Route::get('/order', [OrderController::class, 'create'])->name('order');
 Route::get('/order/success/{assignment}', [OrderController::class, 'success'])->name('order.success')->middleware(['auth']);
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
-// File Upload Test Route
-Route::get('/test-file-upload', function () {
-    return view('file-upload-test');
-})->name('test.file-upload');
 Route::get('/dashboard', function () {
     return view('dashboard', [
         'header' => 'Student Dashboard'
@@ -95,5 +95,10 @@ Route::middleware(['auth'])->prefix('api')->group(function () {
     Route::get('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'index']);
     Route::post('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'store']);
 });
+
+// Language-specific pages — must stay last to avoid catching other routes
+Route::get('/{slug}', [ServiceController::class, 'show'])
+    ->where('slug', 'php-programming-help|java-programming-help|python-programming-help')
+    ->name('services.language.show');
 
 require __DIR__ . '/auth.php';

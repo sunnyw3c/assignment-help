@@ -133,7 +133,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Free Plagiarism Report</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            Every essay comes with a free plagiarism report from Turnitin or Copyscape showing 0% similarity. You can verify the originality yourself before submitting. We write everything from scratch - no pre-written templates or AI-generated content.
+                                            Every essay is written from scratch and is plagiarism-free. An originality report is available on request. We never use pre-written templates or AI-generated content — your essay is created specifically for your brief.
                                         </p>
                                     </div>
                                 </div>
@@ -539,7 +539,7 @@
 
                             <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">2. Originality and Plagiarism Checks</h3>
                             <p>
-                                A trustworthy essay service must guarantee 100% original, plagiarism-free content. Look for services that use professional plagiarism detection software like Turnitin or Copyscape and provide free plagiarism reports. All essays should be written from scratch with proper citations and references.
+                                A trustworthy essay service must guarantee 100% original, plagiarism-free content. All essays should be written from scratch with proper citations and references, and an originality report should be available on request.
                             </p>
 
                             <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">3. Customer Reviews and Reputation</h3>

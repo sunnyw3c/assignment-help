@@ -107,8 +107,8 @@
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Zero Plagiarism Guarantee</h3>
                                         <p class="text-gray-700 leading-relaxed">
                                             Every research paper is written from scratch - no pre-written papers, no AI
-                                            content, no copy-paste. Includes free Turnitin plagiarism report showing 0%
-                                            similarity. All sources properly cited in APA, MLA, Chicago, or Harvard style.
+                                            content, no copy-paste. Plagiarism-free guarantee with originality report
+                                            available on request. All sources properly cited in APA, MLA, Chicago, or Harvard style.
                                         </p>
                                     </div>
                                 </div>
@@ -334,7 +334,7 @@
                                 <h4 class="font-bold text-green-900 mb-2">✓ What's Included</h4>
                                 <ul class="text-sm text-gray-700 space-y-1">
                                     <li>• Original research from credible sources</li>
-                                    <li>• Free plagiarism report (Turnitin)</li>
+                                    <li>• Originality report available on request</li>
                                     <li>• Free title page, abstract, references</li>
                                     <li>• Unlimited revisions (21 days)</li>
                                     <li>• Direct researcher communication</li>
@@ -455,8 +455,8 @@
                                     <p class="text-gray-700 leading-relaxed" itemprop="text">Every research paper is
                                         written completely from scratch by PhD-qualified researchers. We never use
                                         pre-written papers, AI-generated content, or copy from existing sources. All papers
-                                        are scanned through Turnitin plagiarism detection software before delivery, and you
-                                        receive a free plagiarism report showing 0% similarity. Every source is properly
+                                        are written from scratch and checked for originality before delivery. An originality
+                                        report is available on request. Every source is properly
                                         cited in your required format (APA, MLA, Chicago, Harvard). If any plagiarism is
                                         detected, we provide a full refund.</p>
                                 </div>
@@ -818,7 +818,7 @@
                                     "Needed help with data analysis for my economics research paper. The writer used SPSS
                                     for regression analysis and explained every statistical test clearly. All calculations
                                     were accurate, properly formatted in APA, and the methodology section was flawless.
-                                    Turnitin showed 0% plagiarism."
+                                    The originality report came back clean — no plagiarism at all."
                                 </p>
                                 <div class="flex items-center justify-between" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
@@ -833,7 +833,7 @@
                                         </div>
                                     </div>
                                     <div class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">
-                                        0% Plagiarism</div>
+                                        Plagiarism-Free</div>
                                 </div>
                             </div>
 

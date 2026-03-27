@@ -268,7 +268,7 @@
                     Can't find the answer you're looking for? Our support team is here to help!
                 </p>
 
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <!-- Live Chat -->
                     <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg border-2 border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -287,16 +287,6 @@
                         <h3 class="text-2xl font-black text-gray-900 mb-3">Email Support</h3>
                         <p class="text-gray-600 mb-4">Send us an email anytime</p>
                         <a href="mailto:support@assignmenthelpusa.com" class="text-sm text-purple-600 font-semibold hover:text-purple-700">support@assignmenthelpusa.com</a>
-                    </div>
-
-                    <!-- Phone Support -->
-                    <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg border-2 border-green-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <span class="text-3xl">📱</span>
-                        </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-3">Phone Support</h3>
-                        <p class="text-gray-600 mb-4">Call us for immediate assistance</p>
-                        <a href="tel:+15551234567" class="text-sm text-green-600 font-semibold hover:text-green-700">+1 (555) 123-4567</a>
                     </div>
                 </div>
 

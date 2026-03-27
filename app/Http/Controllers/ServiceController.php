@@ -161,7 +161,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'PHP Programming',
-                'slug' => 'php-help',
+                'slug' => 'php-programming-help',
                 'icon' => '🐘',
                 'description' => 'Professional PHP development services for web applications, APIs, and backend systems.',
                 'features' => ['Laravel & Symfony', 'Custom PHP Solutions', 'API Development', 'Database Integration'],
@@ -172,7 +172,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Java Programming',
-                'slug' => 'java-help',
+                'slug' => 'java-programming-help',
                 'icon' => '☕',
                 'description' => 'Expert Java programming help for applications, Spring Boot projects, and enterprise solutions.',
                 'features' => ['Spring Boot & Maven', 'OOP & Design Patterns', 'Android Development', 'Enterprise Applications'],
@@ -183,7 +183,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Python Programming',
-                'slug' => 'python-help',
+                'slug' => 'python-programming-help',
                 'icon' => '🐍',
                 'description' => 'Professional Python programming help for Django, Flask, data science, machine learning, and automation.',
                 'features' => ['Django & Flask', 'Data Science & ML', 'Web Scraping', 'Automation Scripts'],
@@ -222,9 +222,9 @@ class ServiceController extends Controller
             'desktop-app' => 'programming-services.desktop-app',
             'cloud-computing' => 'programming-services.cloud-computing',
             'testing-qa' => 'programming-services.testing-qa',
-            'php-help' => 'programming-services.php-help',
-            'java-help' => 'programming-services.java-help',
-            'python-help' => 'programming-services.python-help',
+            'php-programming-help' => 'programming-services.php-help',
+            'java-programming-help' => 'programming-services.java-help',
+            'python-programming-help' => 'programming-services.python-help',
         ];
 
         // Check if we have a specific view for this service
@@ -385,7 +385,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'PHP Programming',
-                'slug' => 'php-help',
+                'slug' => 'php-programming-help',
                 'icon' => '🐘',
                 'description' => 'Professional PHP development services for web applications, APIs, and backend systems.',
                 'features' => ['Laravel & Symfony', 'Custom PHP Solutions', 'API Development', 'Database Integration'],
@@ -396,7 +396,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Java Programming',
-                'slug' => 'java-help',
+                'slug' => 'java-programming-help',
                 'icon' => '☕',
                 'description' => 'Expert Java programming help for applications, Spring Boot projects, and enterprise solutions.',
                 'features' => ['Spring Boot & Maven', 'OOP & Design Patterns', 'Android Development', 'Enterprise Applications'],
@@ -407,7 +407,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Python Programming',
-                'slug' => 'python-help',
+                'slug' => 'python-programming-help',
                 'icon' => '🐍',
                 'description' => 'Professional Python programming help for Django, Flask, data science, machine learning, and automation.',
                 'features' => ['Django & Flask', 'Data Science & ML', 'Web Scraping', 'Automation Scripts'],
@@ -672,7 +672,7 @@ class ServiceController extends Controller
                     ]
                 ]
             ],
-            'php-help' => [
+            'php-programming-help' => [
                 'hero' => [
                     'title' => 'Expert PHP Programming Services',
                     'subtitle' => 'Build powerful PHP applications with modern frameworks',
@@ -797,7 +797,7 @@ class ServiceController extends Controller
                     ]
                 ]
             ],
-            'java-help' => [
+            'java-programming-help' => [
                 'hero' => [
                     'title' => 'Expert Java Programming Services',
                     'subtitle' => 'Build powerful Java applications with modern frameworks',

@@ -25,7 +25,7 @@
         <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div>
-                    <div class="text-4xl font-bold text-purple-600">50+</div>
+                    <div class="text-4xl font-bold text-purple-600">18+</div>
                     <div class="text-gray-600 mt-2">Expert Tutors</div>
                 </div>
                 <div>
@@ -33,7 +33,7 @@
                     <div class="text-gray-600 mt-2">Years Average Experience</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-purple-600">7,500+</div>
+                    <div class="text-4xl font-bold text-purple-600">6,500+</div>
                     <div class="text-gray-600 mt-2">Projects Completed</div>
                 </div>
                 <div>
