@@ -107,16 +107,16 @@
                                     <p class="text-sm text-gray-700">Completed Dissertations</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">95%</div>
-                                    <p class="text-sm text-gray-700">First-Time Defense Pass Rate</p>
+                                    <div class="text-3xl font-bold text-green-600 mb-2">✓</div>
+                                    <p class="text-sm text-gray-700">Comprehensive Defense Preparation</p>
                                 </div>
                                 <div>
                                     <div class="text-3xl font-bold text-purple-600 mb-2">85+</div>
                                     <p class="text-sm text-gray-700">PhD Dissertation Consultants</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
-                                    <p class="text-sm text-gray-700">Methodological Rigor</p>
+                                    <div class="text-3xl font-bold text-orange-600 mb-2">✓</div>
+                                    <p class="text-sm text-gray-700">Methodologically Sound</p>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +284,7 @@
                                     <li>• PhD-qualified dissertation consultant</li>
                                     <li>• Original research and analysis</li>
                                     <li>• Free plagiarism report (Turnitin)</li>
-                                    <li>• Unlimited revisions (30 days)</li>
+                                    <li>• Unlimited revisions within original scope (30 days)</li>
                                     <li>• Direct scholar communication</li>
                                     <li>• Complete formatting & citations</li>
                                     <li>• Defense preparation notes</li>
@@ -776,6 +776,131 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our thesis and dissertation support services are provided as academic guidance and reference materials to help you develop your research skills. All work delivered is intended to be used as a learning aid. Please ensure your use of our services complies with your institution's academic integrity policies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Chapter-by-Chapter Guidance -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Chapter Guide</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Goes Into Each Dissertation Chapter</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">A well-structured dissertation follows a clear chapter logic. Here's exactly what our doctoral writers include in each section.</p>
+            </div>
+            <div class="space-y-4">
+                @php
+                $chapters = [
+                    ['num' => '01', 'title' => 'Introduction', 'color' => 'blue', 'points' => ['Background and context of the research problem', 'Clear statement of the research gap your study addresses', 'Research aims, objectives, and questions or hypotheses', 'Scope and limitations of the study', 'Overview of the dissertation structure']],
+                    ['num' => '02', 'title' => 'Literature Review', 'color' => 'indigo', 'points' => ['Synthesis (not summary) of existing scholarship', 'Identification of contradictions, gaps, and debates in the field', 'Theoretical framework underpinning your study', 'Justification for how your research addresses identified gaps', 'Organised thematically or chronologically — not source by source']],
+                    ['num' => '03', 'title' => 'Methodology', 'color' => 'purple', 'points' => ['Research philosophy (positivist, interpretivist, pragmatist)', 'Research design justification (qualitative, quantitative, mixed methods)', 'Sampling strategy and participant recruitment', 'Data collection methods and instruments', 'Data analysis approach and tools (SPSS, NVivo, R, etc.)', 'Ethical considerations and approval']],
+                    ['num' => '04', 'title' => 'Results / Findings', 'color' => 'green', 'points' => ['Objective presentation of data without interpretation', 'Tables, figures, and statistical outputs clearly labelled', 'For qualitative: themes and categories with supporting quotes', 'For quantitative: descriptive statistics, regression outputs, significance values', 'Structured to directly address each research question']],
+                    ['num' => '05', 'title' => 'Discussion', 'color' => 'orange', 'points' => ['Interpretation of findings in relation to the literature', 'Explanation of unexpected or contradictory results', 'Theoretical and practical implications', 'Limitations of the current study', 'Directions for future research']],
+                    ['num' => '06', 'title' => 'Conclusion', 'color' => 'red', 'points' => ['Direct answer to the research question(s)', 'Summary of key contributions to knowledge', 'Practical recommendations based on findings', 'Honest acknowledgement of limitations', 'Final reflective statement']],
+                ];
+                @endphp
+                @foreach($chapters as $ch)
+                <div class="flex gap-6 p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:border-{{ $ch['color'] }}-200 hover:bg-{{ $ch['color'] }}-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 text-{{ $ch['color'] }}-200 font-black text-4xl leading-none w-12">{{ $ch['num'] }}</div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Chapter {{ $ch['num'] }}: {{ $ch['title'] }}</h3>
+                        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1.5">
+                            @foreach($ch['points'] as $point)
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-4 h-4 text-{{ $ch['color'] }}-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                {{ $point }}
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Dissertation Mistakes -->
+    <section class="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Critical Errors</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Dissertation Mistakes That Lead to Resubmission</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">These are the most common reasons dissertation committees request major revisions.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Research Question That Cannot Be Answered', 'desc' => 'Questions that are too broad, too philosophical, or unanswerable with available data lead to entire dissertations being rejected. A good research question is specific, original, answerable with your chosen methodology, and significant to the field.'],
+                    ['title' => 'Methodology Not Aligned With Research Question', 'desc' => 'Using a quantitative survey to explore lived experiences, or a qualitative interview approach to test statistical hypotheses — misalignment between your question and methodology is a fundamental flaw that no amount of good writing can fix.'],
+                    ['title' => 'Literature Review That Summarises Instead of Synthesises', 'desc' => 'A literature review that goes source by source ("Smith (2019) says X. Jones (2020) says Y.") shows low-level reading. Examiners want to see you compare, contrast, and build a theoretical argument — not a bibliography with commentary.'],
+                    ['title' => 'Inadequate Sample Size or Sampling Justification', 'desc' => 'Choosing 10 interview participants with no justification, or running a survey on 15 people and claiming statistical significance — sampling decisions must be justified with reference to appropriate standards for your methodology and field.'],
+                    ['title' => 'Results and Discussion Chapters Not Clearly Separated', 'desc' => 'Results present data. Discussion interprets it. Mixing interpretation into your results chapter, or producing a discussion that just repeats the results, are both examined as structural failures that suggest poor understanding of research conventions.'],
+                    ['title' => 'Ignoring the Marking Criteria and Supervisor Feedback', 'desc' => 'Every dissertation is assessed against specific criteria. Students who don\'t map their work to these criteria, or who ignore supervisor comments, regularly score below their ability. Our writers always structure work to address every assessment criterion explicitly.'],
+                ];
+                @endphp
+                @foreach($mistakes as $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Thesis & Dissertation Help — Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    ['q' => 'Can you write just one chapter of my dissertation?', 'a' => 'Yes — we work on individual chapters as well as complete dissertations. Many students come to us for help with specific chapters: literature review, methodology, or discussion. You can order a single chapter, multiple chapters, or the full dissertation. Each chapter is written to integrate seamlessly with the rest of your work.'],
+                    ['q' => 'How long does it take to write a full dissertation?', 'a' => 'A full Master\'s dissertation (15,000–20,000 words) typically takes 2–4 weeks depending on subject complexity and data requirements. A PhD thesis chapter (8,000–12,000 words) takes 1–2 weeks. Rush timelines are available for editing, proofreading, and shorter work. Contact us with your exact requirements for a timeline estimate.'],
+                    ['q' => 'Do your writers have experience with my subject area?', 'a' => 'Yes. We match every order to a writer with a postgraduate qualification in your specific field. For a nursing dissertation, you\'ll work with a writer who holds an MSc or PhD in nursing or health sciences. For a finance thesis, your writer will have advanced qualifications in finance or economics.'],
+                    ['q' => 'Can you help with statistical analysis for my dissertation?', 'a' => 'Yes. Our statisticians work with SPSS, R, Stata, SAS, NVivo, AMOS, and other analysis tools. We can run descriptive statistics, regression analysis, factor analysis, thematic analysis, content analysis, and more. We also provide written interpretation of results suitable for your Results and Discussion chapters.'],
+                    ['q' => 'Will my dissertation pass Turnitin?', 'a' => 'Every dissertation is written from scratch and checked through plagiarism detection software before delivery. We never reuse work or source content from essay mills. The plagiarism report is included with your order. Original research and properly cited sources are the foundation of everything we produce.'],
+                    ['q' => 'Can you help me prepare for my dissertation defence?', 'a' => 'Yes. Our defence preparation service includes: a summary of your dissertation\'s key arguments and findings, anticipated examiner questions with model answers, guidance on presenting your methodology under scrutiny, and a mock viva session if required. Students who prepare with us report significantly more confidence in their actual defence.'],
+                    ['q' => 'What referencing style do you use?', 'a' => 'We work in all academic referencing styles including APA 7th Edition, MLA, Chicago/Turabian, Harvard, Vancouver, OSCOLA, and IEEE. Specify your required style in the order form and our writers handle all in-text citations, footnotes, and the full reference list.'],
+                ];
+                @endphp
+                @foreach($faqs as $i => $faq)
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        :class="open === {{ $i }} ? 'bg-indigo-50' : 'bg-white'">
+                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 transition-transform duration-200"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-indigo-50">
+                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

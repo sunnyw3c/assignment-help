@@ -71,7 +71,7 @@
 
                     <!-- Subtitle -->
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                        From essays to dissertations, homework to research papers. Get professional academic writing services with guaranteed quality, plagiarism-free content, and timely delivery.
+                        Stuck on a deadline? Our online assignment help connects you with real academic experts who get it done right — plagiarism-free, properly cited, and delivered before you need it.
                     </p>
 
                     <!-- CTA Buttons -->
@@ -218,13 +218,15 @@
     </header>
 
     <!-- Budget Calculator Section -->
-    <section class="py-20 bg-white border-t border-slate-100">
+    <section class="py-20" style="background: #0f0f1e;">
         <div class="container mx-auto px-4">
             <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Calculate Your Assignment Cost</h2>
-                <p class="text-slate-500 text-lg">Get an instant price estimate tailored to your needs</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-3" style="color: #ffffff;">Calculate Your Assignment Cost</h2>
+                <p class="text-lg" style="color: #6b7a99;">Get an instant price estimate — no signup required</p>
             </div>
-            <livewire:budget-calculator />
+            <div class="max-w-sm mx-auto">
+                <livewire:budget-calculator />
+            </div>
         </div>
     </section>
 
@@ -254,8 +256,7 @@
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Writing & Assignment Help</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Choose from our comprehensive range of assignment help services. Our expert academic writers deliver
-                    high-quality, plagiarism-free content with proper citations and formatting.
+                    Not every assignment is the same — and neither is our assignment help service. Browse below and find the right academic assistance for your subject, your level, and your deadline.
                 </p>
             </div>
 
@@ -359,9 +360,9 @@
                 </div>
 
                 <h2 id="why-choose-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Professional Academic Writing
+                    What Makes Our Assignment Help
                     <br>
-                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Services & Support</span>
+                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Worth Choosing</span>
                 </h2>
             </div>
 
@@ -369,37 +370,37 @@
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
                     <div class="text-5xl mb-6">🎓</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Writers</h3>
-                    <p class="text-gray-600 leading-relaxed">Our team of certified academic writers holds advanced degrees in their fields and brings years of experience in academic writing across all subjects and levels.</p>
+                    <p class="text-gray-600 leading-relaxed">Every writer on our team holds at least a Master's degree in their subject area. They've been through the academic grind themselves — they know what professors look for and how to deliver it.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100">
                     <div class="text-5xl mb-6">✅</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Plagiarism-Free</h3>
-                    <p class="text-gray-600 leading-relaxed">Every assignment is written from scratch and thoroughly checked with advanced plagiarism detection tools. We guarantee 100% original content with proper citations.</p>
+                    <p class="text-gray-600 leading-relaxed">We start from scratch every time. Your assignment goes through plagiarism detection before it reaches you, so you're getting work that's 100% original and properly cited — no exceptions.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-green-100">
                     <div class="text-5xl mb-6">⏰</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">On-Time Delivery</h3>
-                    <p class="text-gray-600 leading-relaxed">We understand the importance of deadlines. Our efficient workflow ensures your assignment is delivered before your deadline, every time.</p>
+                    <p class="text-gray-600 leading-relaxed">Deadlines are non-negotiable — we get that. Our writers work to your timeline so you're never left refreshing your inbox and hoping the work shows up in time.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
                     <div class="text-5xl mb-6">🔄</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Free Revisions</h3>
-                    <p class="text-gray-600 leading-relaxed">Your satisfaction is our priority. We offer unlimited free revisions to ensure your assignment meets all your requirements and expectations.</p>
+                    <p class="text-gray-600 leading-relaxed">Not quite what you had in mind? We'll fix it. Unlimited free revisions means you don't pay a cent more until the work is exactly right.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-cyan-100">
                     <div class="text-5xl mb-6">🔒</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Confidential & Secure</h3>
-                    <p class="text-gray-600 leading-relaxed">Your privacy matters to us. All personal information and assignment details are kept strictly confidential with secure encrypted transactions.</p>
+                    <p class="text-gray-600 leading-relaxed">Your order details, your identity, your payment — all of it stays private. We use encrypted transactions and never share your information with anyone, period.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-indigo-100">
                     <div class="text-5xl mb-6">💰</div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Affordable Pricing</h3>
-                    <p class="text-gray-600 leading-relaxed">Quality academic help doesn't have to break the bank. We offer competitive pricing with flexible payment options and regular discounts for students.</p>
+                    <p class="text-gray-600 leading-relaxed">We price for students, not corporations. Our rates are competitive, we offer flexible payment options, and we run regular discounts so quality assignment help stays actually affordable.</p>
                 </div>
             </div>
         </div>
@@ -415,9 +416,9 @@
                 </div>
 
                 <h2 id="process-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Simple 4-Step
+                    Getting Assignment Help Is
                     <br>
-                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Assignment Process</span>
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Easier Than You Think</span>
                 </h2>
             </div>
 
@@ -427,7 +428,7 @@
                         <span class="text-3xl text-white font-bold">1</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Submit Your Assignment</h3>
-                    <p class="text-gray-600 leading-relaxed">Provide assignment details, requirements, deadline, and any additional materials through our secure order form.</p>
+                    <p class="text-gray-600 leading-relaxed">Fill out our quick order form with your subject, requirements, deadline, and any notes from your professor. It takes under five minutes.</p>
                 </div>
 
                 <div class="text-center">
@@ -435,7 +436,7 @@
                         <span class="text-3xl text-white font-bold">2</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Match</h3>
-                    <p class="text-gray-600 leading-relaxed">We assign your assignment to a qualified expert writer who specializes in your subject and academic level.</p>
+                    <p class="text-gray-600 leading-relaxed">We pair you with an assignment helper who genuinely knows your subject — someone with the right academic background for your field and level, not just whoever's available.</p>
                 </div>
 
                 <div class="text-center">
@@ -443,7 +444,7 @@
                         <span class="text-3xl text-white font-bold">3</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Writing & Review</h3>
-                    <p class="text-gray-600 leading-relaxed">Your assignment is written from scratch, properly cited, and thoroughly reviewed for quality and plagiarism.</p>
+                    <p class="text-gray-600 leading-relaxed">Your writer researches, writes, and cites everything correctly. Before it reaches you, it passes through our quality check and plagiarism scan — so what you get is solid.</p>
                 </div>
 
                 <div class="text-center">
@@ -451,7 +452,7 @@
                         <span class="text-3xl text-white font-bold">4</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Delivery & Support</h3>
-                    <p class="text-gray-600 leading-relaxed">Receive your completed assignment before the deadline with unlimited revisions and 24/7 customer support.</p>
+                    <p class="text-gray-600 leading-relaxed">Your finished assignment lands in your inbox before the deadline. Need adjustments? Our team is available 24/7 and unlimited free revisions are always included.</p>
                 </div>
             </div>
         </div>
@@ -465,8 +466,7 @@
                     Ready to Ace Your Assignments?
                 </h2>
                 <p class="text-xl text-blue-100 mb-12 leading-relaxed">
-                    Join thousands of students who trust our expert assignment help services.
-                    Get high-quality, plagiarism-free assignments delivered on time, every time.
+                    Thousands of students have used our assignment help online and hit their deadlines with confidence. You're next — let's get yours sorted.
                 </p>
                 <a href="{{ route('order') }}"
                    class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
@@ -491,7 +491,7 @@
                         COMPREHENSIVE ACADEMIC SUPPORT
                     </div>
                     <h2 id="comprehensive-info-heading" class="text-4xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">
-                        Everything You Need to Know About Our
+                        Straight Answers About Our
                         <br>
                         <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Assignment Help Services</span>
                     </h2>
@@ -508,10 +508,10 @@
                                 Our Academic Expertise
                             </h3>
                             <p class="text-gray-700 leading-relaxed mb-6">
-                                Our team of professional academic writers holds advanced degrees (Masters and PhDs) from top universities worldwide. With years of experience in academic writing, research, and teaching, our experts understand the intricacies of various writing styles, citation formats, and academic standards across all disciplines.
+                                As a trusted assignment help provider, we work only with real academics — most hold Master's or PhD degrees from recognized universities, with hands-on experience in research, teaching, and academic writing. They understand citation formats, academic standards, and what it actually takes to produce work that holds up.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                From high school essays to doctoral dissertations, from humanities to STEM subjects, our diverse team of specialists covers every academic field including Business, Engineering, Medicine, Law, Social Sciences, and more, ensuring you receive expert assistance tailored to your specific subject and academic level.
+                                Whatever your level — high school, undergrad, grad, or doctoral — and whatever your subject, we have someone who genuinely knows the field. Business, Engineering, Medicine, Law, Social Sciences, STEM: our team covers it all, and we match you based on fit, not just availability.
                             </p>
                         </div>
 
@@ -523,10 +523,10 @@
                                 Quality Assurance Process
                             </h3>
                             <p class="text-gray-700 leading-relaxed mb-6">
-                                Every assignment undergoes our rigorous multi-stage quality assurance process. Our writers conduct thorough research using credible academic sources, follow proper citation guidelines (APA, MLA, Chicago, Harvard, etc.), and ensure all content meets your specific requirements and academic standards.
+                                Before anything leaves our hands, it goes through a thorough review. Writers pull from credible, peer-reviewed sources and follow your required citation format — APA, MLA, Chicago, Harvard, whatever your institution uses. No shortcuts.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                Before delivery, each assignment is reviewed by our quality assurance team, checked through advanced plagiarism detection software, and edited for grammar, structure, and coherence. We guarantee 100% original, properly formatted, and academically sound work that helps you achieve your academic goals.
+                                Then our QA team checks it: grammar, structure, flow, and plagiarism detection. What you receive is properly formatted, academically sound work — not just something that looks good on the surface, but a piece that can genuinely hold up.
                             </p>
                         </div>
                     </div>
@@ -541,10 +541,10 @@
                                 Subject Coverage
                             </h3>
                             <p class="text-gray-700 leading-relaxed mb-6">
-                                Our comprehensive assignment help services cover all academic subjects and disciplines. Whether you need help with English essays, psychology research papers, mathematics problem sets, computer science assignments, business case studies, or nursing care plans, we have subject matter experts ready to assist.
+                                Struggling with an English essay? Behind on a psychology research paper? Need help with a math problem set or a computer science assignment? We have subject matter experts across every major discipline — ready to take it on without you having to explain the basics.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                We handle all types of assignments including essays, research papers, term papers, dissertations, theses, case studies, lab reports, literature reviews, annotated bibliographies, presentations, homework help, and more. Our flexible services adapt to any assignment type or format your professor requires.
+                                Essays, research papers, term papers, dissertations, theses, case studies, lab reports, literature reviews, annotated bibliographies, presentations, homework — if your professor assigned it, we can help. We work to your format, your word count, and your rubric.
                             </p>
                         </div>
 
@@ -556,10 +556,10 @@
                                 Student Success Support
                             </h3>
                             <p class="text-gray-700 leading-relaxed mb-6">
-                                Beyond just completing your assignment, we're committed to your academic success. Each delivered assignment comes with detailed explanations, reference materials, and learning resources to help you understand the content and improve your own writing skills.
+                                We don't just hand over a finished file and disappear. Each assignment comes with references you can actually use and learn from. If anything's unclear or doesn't match what you expected, you ask — we respond.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                Our 24/7 customer support team is always available to answer questions, provide updates, request revisions, or address any concerns. We offer unlimited free revisions to ensure complete satisfaction and provide guidance to help you present your assignment with confidence.
+                                Our support team is available around the clock — for updates, revision requests, or just peace of mind that your order is on track. Unlimited free revisions are always included, so we keep going until the work is exactly what you need.
                             </p>
                         </div>
                     </div>
@@ -569,7 +569,7 @@
                 <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
                     <div class="text-center mb-12">
                         <h3 class="text-3xl font-bold mb-4">Trusted by Students Worldwide</h3>
-                        <p class="text-gray-300 text-lg">Our assignment help services have helped thousands of students achieve academic excellence</p>
+                        <p class="text-gray-300 text-lg">Real students, real deadlines, real results — the numbers speak for themselves.</p>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div>

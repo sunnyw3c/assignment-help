@@ -56,7 +56,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">MBA-Qualified Business Analysts</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            Your case study will be analyzed by business professionals with MBA degrees or equivalent qualifications who possess deep understanding of strategic management, competitive analysis, and business decision-making. Many of our analysts have consulting experience with firms like McKinsey, BCG, Deloitte, or industry experience as business executives, bringing practical insights to academic analysis.
+                                            Your case study will be analyzed by business professionals with MBA degrees or equivalent qualifications who possess deep understanding of strategic management, competitive analysis, and business decision-making. Many of our analysts have industry and consulting backgrounds, with experience in strategy, business development, and executive roles, bringing practical insights to academic analysis.
                                         </p>
                                     </div>
                                 </div>
@@ -687,6 +687,123 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Case Study Mistakes -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Case Study Mistakes That Cost Business Students Marks</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our MBA analysts see these errors in nearly every student case study they review.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Describing the Company Instead of Analysing It', 'desc' => 'A case study is not a company profile. Students lose marks by spending too much of their word count summarising what the company does. The analysis — what went wrong, why, and what should change — is where the marks are.'],
+                    ['title' => 'Applying Frameworks Mechanically', 'desc' => 'Listing SWOT points or PESTEL factors without connecting them to a strategic argument is not analysis. Each framework element should feed into a recommendation or conclusion. Tools are a means, not the end.'],
+                    ['title' => 'Weak or Vague Recommendations', 'desc' => '"The company should improve its marketing" is not a recommendation — it\'s a wish. A strong recommendation is specific, actionable, and justified: "The company should reallocate 20% of its digital ad budget from awareness campaigns to retargeting, based on the low conversion rates identified in Section 3."'],
+                    ['title' => 'No Evidence or External Data', 'desc' => 'Case study analysis needs to be grounded in evidence — industry benchmarks, financial ratios, competitor data, and academic theory. Unsupported assertions ("this strategy clearly failed") undermine the credibility of your entire analysis.'],
+                    ['title' => 'Ignoring the Implementation Plan', 'desc' => 'Most case study rubrics require a realistic implementation plan. Students who jump from problem to recommendation without addressing timeline, resources, risks, or KPIs miss marks available in this section.'],
+                    ['title' => 'Surface-Level Financial Analysis', 'desc' => 'If financial data is provided, it needs more than a summary. Calculate key ratios (liquidity, profitability, leverage), compare them to industry averages, and explain what they signal about the company\'s health and strategic position.'],
+                ];
+                @endphp
+                @foreach($mistakes as $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Case Study Analysts -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Analysts</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">MBA Analysts Behind Your Case Study</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our case study experts combine academic credentials with real-world business experience.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                @php
+                $analysts = [
+                    ['name' => 'David Kingsford', 'degree' => 'MBA, Strategy — Harvard Business School', 'speciality' => 'Corporate Strategy, Competitive Analysis, Tech Industry Case Studies', 'orders' => '620+', 'rating' => '4.97', 'avatar' => 'DK', 'color' => 'purple'],
+                    ['name' => 'Dr. Fatima Al-Hassan', 'degree' => 'PhD, Finance — London Business School', 'speciality' => 'Financial Analysis, Investment Case Studies, Emerging Markets', 'orders' => '480+', 'rating' => '4.96', 'avatar' => 'FA', 'color' => 'pink'],
+                    ['name' => 'Robert Chen', 'degree' => 'MBA, Operations — INSEAD', 'speciality' => 'Supply Chain, Operations Management, Retail & Manufacturing Cases', 'orders' => '540+', 'rating' => '4.95', 'avatar' => 'RC', 'color' => 'indigo'],
+                ];
+                @endphp
+                @foreach($analysts as $a)
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center font-black text-white text-lg bg-{{ $a['color'] }}-500">
+                            {{ $a['avatar'] }}
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">{{ $a['name'] }}</h3>
+                            <div class="flex items-center gap-1 text-sm text-yellow-500">
+                                ★★★★★ <span class="text-gray-500 ml-1">{{ $a['rating'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-purple-700 font-semibold mb-2">{{ $a['degree'] }}</p>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed"><strong>Specialises in:</strong> {{ $a['speciality'] }}</p>
+                    <div class="flex items-center justify-between text-sm pt-3 border-t border-gray-100">
+                        <span class="text-gray-500">{{ $a['orders'] }} cases completed</span>
+                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Available</span>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Case Study Help — Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    ['q' => 'What business frameworks do you use in case studies?', 'a' => 'Our analysts apply the frameworks most appropriate to your specific case and rubric — including SWOT, PESTEL, Porter\'s Five Forces, Value Chain Analysis, BCG Matrix, McKinsey 7S, Balanced Scorecard, and financial ratio analysis. We always justify our framework selection rather than applying templates mechanically.'],
+                    ['q' => 'Can you write a case study for any industry?', 'a' => 'Yes. Our analyst team covers technology, retail, healthcare, finance, manufacturing, hospitality, energy, automotive, telecommunications, and entrepreneurship. Each case is assigned to an analyst with specific industry experience relevant to the company being studied.'],
+                    ['q' => 'Do you include financial analysis in case studies?', 'a' => 'Yes — where financial data is provided or publicly available, our analysts conduct ratio analysis (liquidity, profitability, efficiency, leverage), compare results to industry benchmarks, and integrate findings into the overall strategic assessment. If you need DCF or NPV modelling, specify this in your order.'],
+                    ['q' => 'How long does a case study take to complete?', 'a' => 'A standard 2,000–3,000 word case study typically takes 24–48 hours. Complex analyses requiring financial modelling, extensive research, or multiple frameworks may need 48–72 hours. Urgent turnarounds (12–24 hours) are available at a rush rate.'],
+                    ['q' => 'Can you help with Harvard Business School case studies?', 'a' => 'Yes. Our analysts are familiar with HBS case formats and expectations, including the requirement for rigorous analysis, structured recommendations, and proper use of exhibits. Many of our analysts hold HBS or equivalent top-school qualifications.'],
+                    ['q' => 'What if my professor has a specific format required?', 'a' => 'Include your professor\'s marking rubric, case study brief, and any format requirements in your order. Our analysts follow your instructions precisely — including section headings, word limits per section, exhibit formatting, and referencing style.'],
+                ];
+                @endphp
+                @foreach($faqs as $i => $faq)
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        :class="open === {{ $i }} ? 'bg-purple-50' : 'bg-white'">
+                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-purple-600 flex-shrink-0 transition-transform duration-200"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-purple-50">
+                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

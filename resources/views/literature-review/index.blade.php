@@ -610,5 +610,166 @@
                 </div>
             </div>
         </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our literature review assistance is provided as a research guide and reference to support your learning. All work delivered is intended to be used as a model and learning aid. Please ensure your use of our services complies with your institution's academic integrity policies.
+            </p>
+        </div>
+    </section>
+
+    <!-- How Our Literature Review Process Works -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-teal-100 text-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Process</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Write Your Literature Review</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">A rigorous 6-step process that ensures comprehensive coverage, critical analysis, and academic integrity.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @php
+                $steps = [
+                    ['num' => '1', 'title' => 'Understand Your Research Focus', 'desc' => 'We begin by studying your research question, discipline, and any existing work you\'ve done. This ensures the review is shaped around your specific study — not a generic overview of the topic.', 'color' => 'teal'],
+                    ['num' => '2', 'title' => 'Database Search & Source Identification', 'desc' => 'Our researchers search across JSTOR, PubMed, Scopus, Web of Science, Google Scholar, and discipline-specific databases. We identify peer-reviewed articles, books, theses, and grey literature relevant to your topic.', 'color' => 'cyan'],
+                    ['num' => '3', 'title' => 'Quality Assessment & Inclusion Criteria', 'desc' => 'Not every source makes the cut. We apply inclusion/exclusion criteria based on relevance, recency, methodology quality, and citation impact. For systematic reviews, we follow PRISMA screening protocols.', 'color' => 'blue'],
+                    ['num' => '4', 'title' => 'Thematic Synthesis & Organisation', 'desc' => 'Sources are grouped by theme, not listed individually. We identify convergences, contradictions, and evolving debates — building a structured argument across the literature rather than a series of summaries.', 'color' => 'indigo'],
+                    ['num' => '5', 'title' => 'Critical Analysis & Gap Identification', 'desc' => 'We evaluate methodological strengths and weaknesses in existing studies, note where the evidence is inconclusive, and explicitly identify the gap your research addresses. This is what separates a good review from an average one.', 'color' => 'violet'],
+                    ['num' => '6', 'title' => 'Writing, Citation & Delivery', 'desc' => 'The review is written in your required academic style, fully cited in your referencing format (APA, MLA, Harvard, etc.), and checked for plagiarism before delivery. Revisions are included.', 'color' => 'purple'],
+                ];
+                @endphp
+                @foreach($steps as $s)
+                <div class="relative p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:border-{{ $s['color'] }}-200 hover:bg-{{ $s['color'] }}-50 transition-colors duration-200">
+                    <div class="w-10 h-10 rounded-full bg-{{ $s['color'] }}-100 text-{{ $s['color'] }}-700 font-black flex items-center justify-center text-lg mb-4">{{ $s['num'] }}</div>
+                    <h3 class="font-bold text-gray-900 mb-2">{{ $s['title'] }}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">{{ $s['desc'] }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-teal-100 text-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Transparent Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Literature Review Pricing</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Pricing is based on academic level and deadline. All prices include unlimited revisions and a plagiarism report.</p>
+            </div>
+            <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-200">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-teal-600 text-white">
+                            <th class="text-left px-6 py-4 font-bold">Academic Level</th>
+                            <th class="text-center px-6 py-4 font-bold">7+ Days</th>
+                            <th class="text-center px-6 py-4 font-bold">3–7 Days</th>
+                            <th class="text-center px-6 py-4 font-bold">24–72 Hours</th>
+                            <th class="text-center px-6 py-4 font-bold">Under 24 Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 bg-white">
+                        @php
+                        $pricing = [
+                            ['level' => 'Undergraduate', 'standard' => '$18/page', 'priority' => '$24/page', 'rush' => '$32/page', 'urgent' => '$45/page'],
+                            ['level' => "Master's", 'standard' => '$28/page', 'priority' => '$36/page', 'rush' => '$48/page', 'urgent' => '$65/page'],
+                            ['level' => 'PhD / Doctoral', 'standard' => '$42/page', 'priority' => '$54/page', 'rush' => '$70/page', 'urgent' => '$95/page'],
+                        ];
+                        @endphp
+                        @foreach($pricing as $i => $p)
+                        <tr class="{{ $i % 2 === 0 ? 'bg-white' : 'bg-gray-50' }}">
+                            <td class="px-6 py-4 font-semibold text-gray-900">{{ $p['level'] }}</td>
+                            <td class="px-6 py-4 text-center text-teal-700 font-semibold">{{ $p['standard'] }}</td>
+                            <td class="px-6 py-4 text-center text-blue-700 font-semibold">{{ $p['priority'] }}</td>
+                            <td class="px-6 py-4 text-center text-orange-700 font-semibold">{{ $p['rush'] }}</td>
+                            <td class="px-6 py-4 text-center text-red-700 font-semibold">{{ $p['urgent'] }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mt-6 text-center text-sm text-gray-500">
+                <div>✓ Plagiarism report included</div>
+                <div>✓ Unlimited free revisions</div>
+                <div>✓ All referencing styles</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Mistakes in Literature Reviews -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Literature Review Mistakes That Weaken Your Research</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">These are the errors that consistently result in supervisor rejections and low marks.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Summarising Instead of Synthesising', 'desc' => 'Going through sources one by one ("Author A says X, Author B says Y") is not a literature review — it\'s an annotated bibliography. A review synthesises: what do the sources collectively say? Where do they agree, disagree, or contradict each other?'],
+                    ['title' => 'Using Non-Academic Sources', 'desc' => 'Blog posts, news articles, and textbooks alone don\'t constitute a scholarly literature review. You need peer-reviewed journal articles as your primary sources. We search Scopus, Web of Science, PubMed, and JSTOR to build a properly sourced review.'],
+                    ['title' => 'Failing to Identify the Research Gap', 'desc' => 'The purpose of a literature review is partly to justify your study — by showing what\'s missing from existing research. A review that doesn\'t explicitly identify gaps leaves the examiner wondering why your research is necessary.'],
+                    ['title' => 'Including Outdated Sources', 'desc' => 'In fast-moving fields (technology, medicine, psychology), sources older than 10 years may be considered outdated. A strong review prioritises recent scholarship while acknowledging foundational older works with appropriate context.'],
+                    ['title' => 'No Critical Evaluation of Sources', 'desc' => 'Treating all sources as equally credible signals shallow reading. A good literature review evaluates methodology, sample size, study design, and limitations of the sources it cites — particularly when findings conflict.'],
+                    ['title' => 'Poor Structural Organisation', 'desc' => 'A literature review structured as a chronological list of studies is harder to follow than one organised thematically around key concepts, debates, or frameworks. Our researchers always organise by theme unless your guidelines specify otherwise.'],
+                ];
+                @endphp
+                @foreach($mistakes as $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-slate-100">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-200 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Literature Review Help — Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    ['q' => 'How many sources should a literature review include?', 'a' => 'It depends on your word count and academic level. A 2,000-word undergraduate literature review typically references 15–25 sources. A Master\'s review of 5,000 words typically covers 40–70 sources. A PhD systematic review can involve screening hundreds of sources and including 80–150+ in the final synthesis. We match source volume to your level and requirements.'],
+                    ['q' => 'Can you write a standalone literature review (not part of a dissertation)?', 'a' => 'Yes. Many students and researchers need a standalone literature review — for a journal submission, a research proposal, a seminar paper, or a module assignment. We write standalone reviews to the same standard as dissertation chapters, with full synthesis, critical evaluation, and proper citation.'],
+                    ['q' => 'How do you find relevant sources?', 'a' => 'Our researchers search peer-reviewed databases including JSTOR, PubMed, Scopus, Web of Science, PsycINFO, CINAHL, Google Scholar, and discipline-specific repositories. We use Boolean search strategies, citation chaining, and grey literature searches to ensure comprehensive coverage.'],
+                    ['q' => 'Can you write a systematic literature review following PRISMA?', 'a' => 'Yes. Our researchers are trained in PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) protocol. We develop inclusion/exclusion criteria, conduct database searches, screen abstracts and full texts, extract data, and synthesise findings — producing a systematic review that meets publication standards.'],
+                    ['q' => 'How long does a literature review take?', 'a' => 'A 2,000–3,000 word review at undergraduate level takes 3–5 days. A comprehensive Master\'s review (5,000–8,000 words) takes 7–14 days. A systematic review requires 2–4 weeks. Rush delivery is available for shorter reviews. Contact us with your exact word count and deadline for a precise estimate.'],
+                    ['q' => 'What if I need the review to match my existing dissertation chapters?', 'a' => 'Share your existing chapters, draft outline, and research question and we\'ll ensure the literature review is fully integrated — using consistent terminology, citing sources that align with your methodology chapter, and supporting the argument direction of your research.'],
+                    ['q' => 'Will it pass Turnitin?', 'a' => 'Yes. Every literature review is written from scratch, based on original synthesis of the sources — not copied or paraphrased from other reviews. We scan every piece through plagiarism detection software before delivery and include the report. Our originality rate across literature reviews is consistently above 97%.'],
+                ];
+                @endphp
+                @foreach($faqs as $i => $faq)
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        :class="open === {{ $i }} ? 'bg-teal-50' : 'bg-white'">
+                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-teal-600 flex-shrink-0 transition-transform duration-200"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-teal-50">
+                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 @endsection

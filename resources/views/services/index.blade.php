@@ -257,7 +257,7 @@
                         <span class="text-4xl">💯</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Guaranteed</h3>
-                    <p class="text-gray-600">High-quality work with unlimited revisions until satisfied</p>
+                    <p class="text-gray-600">High-quality work with unlimited revisions within original scope</p>
                 </div>
 
                 <div class="text-center">

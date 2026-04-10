@@ -809,18 +809,27 @@ new class extends Component {
                             @endif
                         </div>
 
-                        <!-- Submit Button -->
-                        <div class="flex justify-center pt-4 sm:pt-6">
-                            <button type="submit"
-                                    wire:loading.attr="disabled"
-                                    class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 sm:px-12 py-3.5 sm:py-4 rounded-xl sm:rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
-                                <span wire:loading.remove wire:target="submit">
-                                    {{ $assignmentType === 'programming' ? '🚀 Get Programming Help' : '📝 Submit Assignment' }}
+                        <!-- Consent Checkbox & Submit -->
+                        <div x-data="{ accepted: false }" class="pt-4 sm:pt-6">
+                            <label class="flex items-start gap-3 cursor-pointer mb-5 p-4 bg-amber-50 rounded-xl border border-amber-200">
+                                <input type="checkbox" x-model="accepted" class="mt-0.5 w-4 h-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500 flex-shrink-0">
+                                <span class="text-xs text-gray-700 leading-relaxed">
+                                    I confirm I am 18 years of age or older. I understand that all work delivered is intended as a <strong>reference and learning aid only</strong> and is not to be submitted as my own work in violation of my institution's academic integrity policies. I agree to the <a href="{{ url('/terms-of-service') }}" class="text-blue-600 hover:underline font-semibold">Terms of Service</a> and take full responsibility for how I use the delivered work.
                                 </span>
-                                <span wire:loading wire:target="submit">
-                                    Submitting...
-                                </span>
-                            </button>
+                            </label>
+                            <div class="flex justify-center">
+                                <button type="submit"
+                                        wire:loading.attr="disabled"
+                                        :disabled="!accepted"
+                                        class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 sm:px-12 py-3.5 sm:py-4 rounded-xl sm:rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <span wire:loading.remove wire:target="submit">
+                                        {{ $assignmentType === 'programming' ? '🚀 Get Programming Help' : '📝 Submit Assignment' }}
+                                    </span>
+                                    <span wire:loading wire:target="submit">
+                                        Submitting...
+                                    </span>
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Help Text -->

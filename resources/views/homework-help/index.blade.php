@@ -910,5 +910,132 @@
                 </div>
             </div>
         </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our homework help is provided as a study tool and learning reference — similar to working with a tutor. Step-by-step solutions are intended to help you understand how to approach problems, not to be submitted as your own work. Please use our assistance responsibly and in accordance with your institution's academic integrity policies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Typical Turnaround Times -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Delivery Times</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Fast Can We Complete Your Homework?</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Turnaround depends on subject difficulty and length. Here's what students typically receive.</p>
+            </div>
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <th class="text-left px-6 py-4 font-bold text-gray-700">Subject / Task Type</th>
+                            <th class="text-center px-6 py-4 font-bold text-gray-700">Short (1–5 questions)</th>
+                            <th class="text-center px-6 py-4 font-bold text-gray-700">Medium (6–15 questions)</th>
+                            <th class="text-center px-6 py-4 font-bold text-gray-700">Long / Complex</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        @php
+                        $times = [
+                            ['subject' => 'Mathematics / Statistics', 'short' => '1–3 hrs', 'medium' => '3–6 hrs', 'long' => '6–12 hrs'],
+                            ['subject' => 'Programming / Coding', 'short' => '2–4 hrs', 'medium' => '4–8 hrs', 'long' => '12–24 hrs'],
+                            ['subject' => 'Science (Physics, Chemistry, Biology)', 'short' => '1–3 hrs', 'medium' => '3–8 hrs', 'long' => '8–16 hrs'],
+                            ['subject' => 'English / Writing Assignments', 'short' => '2–4 hrs', 'medium' => '4–8 hrs', 'long' => '8–24 hrs'],
+                            ['subject' => 'History / Social Sciences', 'short' => '2–4 hrs', 'medium' => '4–8 hrs', 'long' => '8–24 hrs'],
+                            ['subject' => 'Economics / Business', 'short' => '2–6 hrs', 'medium' => '6–12 hrs', 'long' => '12–24 hrs'],
+                            ['subject' => 'Nursing / Healthcare', 'short' => '3–6 hrs', 'medium' => '6–12 hrs', 'long' => '12–48 hrs'],
+                        ];
+                        @endphp
+                        @foreach($times as $i => $t)
+                        <tr class="{{ $i % 2 === 0 ? 'bg-white' : 'bg-gray-50' }} hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium text-gray-900">{{ $t['subject'] }}</td>
+                            <td class="px-6 py-4 text-center text-green-700 font-semibold">{{ $t['short'] }}</td>
+                            <td class="px-6 py-4 text-center text-blue-700 font-semibold">{{ $t['medium'] }}</td>
+                            <td class="px-6 py-4 text-center text-orange-700 font-semibold">{{ $t['long'] }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-4">All times are estimates. Minimum deadline is 1 hour for simple problems.</p>
+        </div>
+    </section>
+
+    <!-- Common Mistakes Students Make With Homework -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-yellow-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Study Smarter</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">5 Homework Mistakes That Keep Students Stuck</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our tutors see these patterns constantly. Recognising them is the first step to breaking them.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Starting Without Reading the Full Question', 'desc' => 'Students begin solving before understanding what\'s actually being asked. Re-read the question twice, underline key terms, and identify exactly what output is expected before you start any working.'],
+                    ['title' => 'Skipping the Working-Out Steps', 'desc' => 'For maths and science, showing your working is often worth more marks than the final answer. A correct answer with no method shown can score zero. Our tutors always show full step-by-step solutions.'],
+                    ['title' => 'Leaving It Until the Night Before', 'desc' => 'Complex subjects like statistics, calculus, or chemistry need time for concepts to settle. Last-minute homework produces surface-level answers. Earlier submission also gives you time to ask questions about the solution.'],
+                    ['title' => 'Not Checking Units and Formatting', 'desc' => 'In sciences, forgetting to include units (kg, m/s, mol/L) costs marks even when the calculation is correct. In writing tasks, ignoring word limits or formatting requirements is an easy way to lose marks unnecessarily.'],
+                    ['title' => 'Copying Without Understanding', 'desc' => 'Using a solved example to copy answers — without understanding the method — means the next similar question will go wrong too. Our step-by-step solutions are written to help you learn the process, not just get the answer.'],
+                ];
+                @endphp
+                @foreach($mistakes as $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-orange-100 bg-white hover:border-orange-300 hover:bg-orange-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Homework Help — Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    ['q' => 'Can you help with homework due in a few hours?', 'a' => 'Yes. Our fastest turnaround is 1 hour for simple problems. As long as the task is achievable in the time available, submit your order immediately and we\'ll match you to an available expert right away. For complex problems, 3–6 hours gives us enough time for quality step-by-step work.'],
+                    ['q' => 'Do you solve problems step by step?', 'a' => 'Always. Every solution includes clear working so you can follow the logic. For maths and science problems, you\'ll see each step written out. For written assignments, you\'ll get an explanation of the approach and reasoning used.'],
+                    ['q' => 'Can you help with online homework platforms like MyMathLab or Pearson?', 'a' => 'Yes. Our tutors work across all major homework platforms including MyMathLab, WebAssign, Blackboard, Canvas, and others. Share the login details or screenshot the questions and we handle the rest.'],
+                    ['q' => 'Which subjects do you cover?', 'a' => 'We cover 50+ subjects including all maths levels (from algebra to advanced calculus), all sciences (physics, chemistry, biology), programming (Python, Java, C++, SQL, and more), economics, accounting, history, English, nursing, and psychology. If you\'re unsure, ask us and we\'ll confirm.'],
+                    ['q' => 'Is the homework completed by real experts?', 'a' => 'Yes — every tutor on our platform holds at least a bachelor\'s degree in their subject area. Many hold master\'s or doctoral qualifications. We don\'t use AI to generate homework solutions — every answer is worked through by a human expert.'],
+                    ['q' => 'What if the answer is wrong?', 'a' => 'If we made an error, we fix it at no charge. Submit a correction request with details of what was wrong and we\'ll review and rework it. Our accuracy rate across all subjects is consistently above 96%.'],
+                ];
+                @endphp
+                @foreach($faqs as $i => $faq)
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        :class="open === {{ $i }} ? 'bg-orange-50' : 'bg-white'">
+                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-orange-500 flex-shrink-0 transition-transform duration-200"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-orange-50">
+                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 @endsection

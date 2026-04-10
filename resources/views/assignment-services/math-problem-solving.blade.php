@@ -184,7 +184,7 @@
                                     </div>
                                 </div>
                                 <p class="text-sm text-gray-700 font-semibold mb-2">Statistics - Jennifer K.</p>
-                                <p class="text-xs text-gray-600">"Hypothesis testing made simple. Aced my final exam with 95%!"</p>
+                                <p class="text-xs text-gray-600">"Hypothesis testing made simple. Finally understood the material and felt confident in my exam!"</p>
                             </div>
 
                             <!-- Success Story 3 -->
@@ -213,8 +213,7 @@
                         </div>
 
                         <div class="mt-8 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 text-center">
-                            <p class="text-gray-900 font-bold text-lg mb-2">Average Grade Improvement: C to A-</p>
-                            <p class="text-gray-600 text-sm">Based on 800+ student feedback surveys in math courses</p>
+                            <p class="text-gray-900 font-bold text-lg mb-2">Students report stronger understanding and improved confidence after working with our math experts.</p>
                         </div>
                     </div>
 
@@ -232,7 +231,7 @@
                                     <span class="text-2xl">🇺🇸</span>
                                 </div>
                                 <p class="text-gray-700 leading-relaxed mb-4 italic">
-                                    "Calculus integration problems were destroying my GPA. The expert showed every step clearly with u-substitution and integration by parts. Finally understand it! Got 92% on my exam."
+                                    "Calculus integration problems were destroying my GPA. The expert showed every step clearly with u-substitution and integration by parts. Finally understand it!"
                                 </p>
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center">
@@ -242,7 +241,7 @@
                                             <p class="text-sm text-gray-600">Penn State, USA</p>
                                         </div>
                                     </div>
-                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">92%</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">⭐ Verified</div>
                                 </div>
                             </div>
 

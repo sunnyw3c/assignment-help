@@ -397,7 +397,7 @@
                                     <li>• Infographic design</li>
                                     <li>• Video integration</li>
                                     <li>• Complete speaker script</li>
-                                    <li>• Unlimited revisions</li>
+                                    <li>• Unlimited revisions within original scope</li>
                                 </ul>
                             </div>
                         </div>
@@ -627,6 +627,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our presentation design assistance is provided as a design guide and learning reference. All work delivered is intended to help you understand effective presentation principles. Please ensure your use of our services complies with your institution's academic integrity policies.
+            </p>
         </div>
     </section>
 @endsection

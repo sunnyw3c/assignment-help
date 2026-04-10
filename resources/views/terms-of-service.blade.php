@@ -125,19 +125,174 @@
 
             <!-- Section 7 -->
             <section>
-                <h2 class="text-xl font-black text-gray-900 mb-4">7. Governing Law</h2>
-                <p>
-                    These Terms are governed by and construed in accordance with the laws of the United States. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of the United States.
-                </p>
+                <h2 class="text-xl font-black text-gray-900 mb-4">7. Prohibited Uses</h2>
+                <p class="mb-4">You agree not to use our services for any of the following purposes:</p>
+                <ul class="space-y-3 list-none">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 font-bold mt-0.5">✕</span>
+                        <span>Submitting work delivered by us to an educational institution as your own original work in violation of that institution's academic integrity or honour code policies.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 font-bold mt-0.5">✕</span>
+                        <span>Reselling, redistributing, publishing, or commercially exploiting work delivered to you under these Terms.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 font-bold mt-0.5">✕</span>
+                        <span>Using our services for any fraudulent, deceptive, or unlawful purpose.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 font-bold mt-0.5">✕</span>
+                        <span>Sharing your account credentials or allowing third parties to use your account.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 font-bold mt-0.5">✕</span>
+                        <span>Attempting to reverse-engineer, scrape, or otherwise misuse our platform, content, or proprietary materials.</span>
+                    </li>
+                </ul>
+                <p class="mt-4">Violation of these prohibited uses may result in immediate termination of your account and forfeiture of any refund rights.</p>
             </section>
 
             <hr class="border-gray-100">
 
             <!-- Section 8 -->
             <section>
-                <h2 class="text-xl font-black text-gray-900 mb-4">8. Changes to These Terms</h2>
+                <h2 class="text-xl font-black text-gray-900 mb-4">8. Indemnification</h2>
                 <p>
-                    We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of our service after changes are posted constitutes your acceptance of the updated Terms.
+                    You agree to indemnify, defend, and hold harmless Assignment Help USA, its officers, employees, contractors, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) your use of our services in violation of these Terms; (b) your violation of any applicable law or regulation; (c) your infringement of any third-party right; or (d) any academic or institutional penalties arising from your misuse of work delivered by us. This indemnification obligation will survive termination of these Terms.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 9 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">9. Disclaimer of Warranties</h2>
+                <p class="mb-4 uppercase text-sm font-semibold text-gray-500 tracking-wide">Read carefully</p>
+                <p class="mb-4">
+                    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ASSIGNMENT HELP USA PROVIDES ITS SERVICES ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT.
+                </p>
+                <p class="mb-4">
+                    We do not warrant that: (a) our services will meet your specific academic requirements; (b) use of our work will result in any particular grade, academic outcome, or pass/fail result; (c) work delivered will be accepted, approved, or graded favourably by any instructor, institution, or examination body; or (d) our services are error-free, uninterrupted, or free from inaccuracies.
+                </p>
+                <p>
+                    No advice or information, whether oral or written, obtained from Assignment Help USA shall create any warranty not expressly stated in these Terms. Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusions may not fully apply to you.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 10 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">10. Geographic Use &amp; Legal Compliance</h2>
+                <p class="mb-4">
+                    Our services are provided solely as educational reference and tutoring materials. Certain U.S. states and international jurisdictions have enacted laws that may restrict or regulate the provision or use of academic writing assistance services. Examples include, but are not limited to, statutes in states such as New York, Virginia, Massachusetts, and others that prohibit the sale of term papers or essays with knowledge that they will be submitted for academic credit.
+                </p>
+                <p class="mb-4">
+                    <strong>By using our services, you expressly represent and warrant that:</strong>
+                </p>
+                <ul class="space-y-3 list-none mb-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span>Your use of our services is lawful in the jurisdiction in which you reside and access our platform.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span>You will use all work delivered solely as a reference, study guide, or learning aid and will not submit it as your own original academic work.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span>You have independently verified that your intended use complies with all applicable local, state, federal, and institutional rules and policies.</span>
+                    </li>
+                </ul>
+                <p>
+                    Assignment Help USA makes no representation that its services are appropriate, lawful, or available in all locations. If you access our services from a jurisdiction where such use is restricted or prohibited, you do so at your own risk and are solely responsible for compliance with applicable law. We reserve the right to decline or cancel orders from jurisdictions where we determine compliance cannot be ensured.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 11 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">11. Dispute Resolution &amp; Binding Arbitration</h2>
+                <p class="mb-4 font-semibold text-gray-800">Please read this section carefully. It affects your legal rights.</p>
+
+                <p class="mb-4">
+                    <strong>Informal Resolution First.</strong> Before initiating formal proceedings, you agree to contact us at <a href="mailto:support@assignmenthelpusa.com" class="text-blue-600 hover:underline">support@assignmenthelpusa.com</a> and give us 30 days to resolve the dispute informally. Most issues can be resolved this way.
+                </p>
+
+                <p class="mb-4">
+                    <strong>Binding Arbitration.</strong> If informal resolution fails, any dispute, claim, or controversy arising out of or relating to these Terms or your use of our services — including questions about the validity or enforceability of these Terms — shall be resolved exclusively by final and binding arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules, rather than in court. The arbitration shall be conducted in the State of Delaware. The arbitrator's decision shall be final and binding and may be entered as a judgment in any court of competent jurisdiction.
+                </p>
+
+                <p class="mb-4">
+                    <strong>Class Action Waiver.</strong> YOU AND ASSIGNMENT HELP USA AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, OR REPRESENTATIVE ACTION OR PROCEEDING. The arbitrator may not consolidate more than one person's claims and may not preside over any form of class or representative proceeding.
+                </p>
+
+                <p class="mb-4">
+                    <strong>Jury Trial Waiver.</strong> TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOU WAIVE ANY RIGHT TO A JURY TRIAL IN ANY ACTION ARISING FROM OR RELATED TO THESE TERMS OR OUR SERVICES.
+                </p>
+
+                <p>
+                    <strong>Exceptions.</strong> Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent actual or threatened infringement, misappropriation, or violation of intellectual property rights. You also retain the right to bring individual claims in small claims court for disputes within that court's jurisdictional limits.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 12 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">12. Force Majeure</h2>
+                <p>
+                    Assignment Help USA shall not be liable for any delay or failure to perform its obligations under these Terms where such delay or failure results from circumstances beyond our reasonable control, including but not limited to acts of God, natural disasters, pandemic or epidemic, government actions, network or infrastructure outages, cyberattacks, or other technical failures not attributable to our negligence. In such circumstances, we will notify you promptly and use commercially reasonable efforts to complete your order as soon as practicable. If delivery is delayed by more than 72 hours beyond the agreed deadline due to force majeure, you may request a full refund.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 13 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">13. General Provisions</h2>
+                <ul class="space-y-4 list-none">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Severability:</strong> If any provision of these Terms is found invalid, illegal, or unenforceable by a court or arbitrator of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Entire Agreement:</strong> These Terms, together with our <a href="{{ route('privacy-policy') }}" class="text-blue-600 hover:underline">Privacy Policy</a>, constitute the entire agreement between you and Assignment Help USA regarding your use of our services and supersede all prior or contemporaneous agreements, representations, or understandings, whether written or oral.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>No Waiver:</strong> Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision in future instances.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Assignment:</strong> You may not assign or transfer your rights or obligations under these Terms without our prior written consent. We may assign our rights freely.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Notices:</strong> We may provide notices to you via the email address associated with your account or by posting prominently on our website. You may contact us at <a href="mailto:support@assignmenthelpusa.com" class="text-blue-600 hover:underline">support@assignmenthelpusa.com</a>.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 14 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">14. Governing Law</h2>
+                <p>
+                    These Terms are governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law principles. Subject to the arbitration agreement in Section 11, any disputes not subject to arbitration shall be subject to the exclusive jurisdiction of the state and federal courts located in the State of Delaware, and you consent to personal jurisdiction in those courts.
+                </p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 15 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">15. Changes to These Terms</h2>
+                <p>
+                    We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we will make reasonable efforts to notify users via email or a prominent notice on our website at least 14 days before the change takes effect. Continued use of our service after changes are posted constitutes your acceptance of the updated Terms.
                 </p>
             </section>
 

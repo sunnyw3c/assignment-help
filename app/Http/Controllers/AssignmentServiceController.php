@@ -34,7 +34,7 @@ class AssignmentServiceController extends Controller
 
         // Check for custom view, otherwise use generic
         $customViews = [
-            'math-problem-solving' => 'assignment-services.math-problem-solving',
+            'math-assignment-help' => 'assignment-services.math-problem-solving',
             'law-assignment' => 'assignment-services.law-assignment',
         ];
 

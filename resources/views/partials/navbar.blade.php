@@ -281,7 +281,7 @@
                                             <div class="text-xs text-gray-500">Graduate-level research work</div>
                                         </a>
 
-                                        <a href="{{ route('services.assignment.show', 'math-problem-solving') }}"
+                                        <a href="{{ route('services.mathematics-assignment.index') }}"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -468,8 +468,8 @@
                 </div>
             </div>
 
-            <a href="{{ route('languages.index') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : '' }}">🔧
+            <a href="{{ route('services.programming.index') }}"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('services.programming.*') ? 'text-purple-600 font-semibold' : '' }}">🔧
                 Languages</a>
             <a href="{{ url('/how-it-works') }}"
                 class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2">❓ How It

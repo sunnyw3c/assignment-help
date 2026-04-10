@@ -848,7 +848,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('services.programming.show', 'java-help') }}"
+                    <a href="{{ route('services.programming.show', 'java') }}"
                         class="block w-full bg-white text-orange-600 text-center py-3 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 shadow-lg hover:shadow-xl">
                         Explore Java Services →
                     </a>

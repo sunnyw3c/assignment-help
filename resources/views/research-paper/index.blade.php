@@ -76,9 +76,9 @@
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">PhD-Qualified Researchers</h3>
                                         <p class="text-gray-700 leading-relaxed">
                                             Your research paper will be written by a researcher with a PhD or Master's
-                                            degree in your specific field. We verify all academic credentials and writing
-                                            samples before hiring. Many of our writers have published in peer-reviewed
-                                            journals and teach at universities.
+                                            degree in your specific field. We verify academic credentials and writing
+                                            samples before hiring. Our writers hold postgraduate qualifications and have
+                                            strong academic research backgrounds across diverse disciplines.
                                         </p>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                                         <p class="text-gray-700 leading-relaxed">
                                             If your research paper doesn't meet the agreed requirements, methodology
                                             standards, or is delivered late, you get a full refund. We also offer free
-                                            unlimited revisions for 21 days after delivery.
+                                            unlimited revisions within original scope for 21 days after delivery.
                                         </p>
                                     </div>
                                 </div>
@@ -336,7 +336,7 @@
                                     <li>• Original research from credible sources</li>
                                     <li>• Originality report available on request</li>
                                     <li>• Free title page, abstract, references</li>
-                                    <li>• Unlimited revisions (21 days)</li>
+                                    <li>• Unlimited revisions within original scope (21 days)</li>
                                     <li>• Direct researcher communication</li>
                                     <li>• Proper APA/MLA/Chicago formatting</li>
                                 </ul>
@@ -1283,6 +1283,83 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Research Paper Mistakes -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Research Paper Mistakes That Undermine Your Grade</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">These are the errors our researchers fix most often when students send us draft papers to improve.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Research Question That Is Too Broad', 'desc' => '"The effect of social media on society" cannot be answered in 3,000 words. A focused question like "How does Instagram use affect body image in female university students aged 18–24?" is researchable, specific, and defensible.'],
+                    ['title' => 'Ignoring Peer-Reviewed Sources', 'desc' => 'Wikipedia, news articles, and random websites don\'t count as academic sources. Your research paper needs peer-reviewed journal articles, published books, and credible institutional reports. We use databases like JSTOR, PubMed, Scopus, and Web of Science.'],
+                    ['title' => 'Poor Literature Review Structure', 'desc' => 'A literature review is not a list of summaries. It should synthesise existing research, identify gaps, contradictions, and trends — and show how your paper fits into the existing body of knowledge.'],
+                    ['title' => 'Methodology Not Justified', 'desc' => 'Choosing a qualitative approach? Explain why it suits your research question better than quantitative. Every methodological choice needs a rationale. Markers want to see that you understand the implications of your approach.'],
+                    ['title' => 'Results and Discussion Merged or Confused', 'desc' => 'Results present what you found. Discussion explains what it means. Students who mix these two sections end up with papers that are hard to follow and don\'t demonstrate analytical thinking.'],
+                    ['title' => 'Weak or Absent Conclusion', 'desc' => 'Your conclusion should directly answer the research question, acknowledge limitations, and suggest directions for future research. A conclusion that just repeats the introduction signals you didn\'t actually synthesise your findings.'],
+                ];
+                @endphp
+                @foreach($mistakes as $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Researchers -->
+    <section class="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Researchers</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">PhD Researchers Who Write Your Paper</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">All research paper writers hold doctoral qualifications and active publishing records in their disciplines.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                @php
+                $researchers = [
+                    ['name' => 'Dr. Marcus Webb', 'degree' => 'PhD, Economics — University of Oxford', 'speciality' => 'Quantitative Research, Econometrics, Business & Finance Papers', 'orders' => '780+', 'rating' => '4.98', 'avatar' => 'MW', 'color' => 'green'],
+                    ['name' => 'Dr. Aisha Nwosu', 'degree' => 'PhD, Public Health — Johns Hopkins University', 'speciality' => 'Medical Research, Nursing Papers, Systematic Reviews, Health Sciences', 'orders' => '940+', 'rating' => '4.97', 'avatar' => 'AN', 'color' => 'emerald'],
+                    ['name' => 'Dr. Thomas Brennan', 'degree' => 'PhD, Sociology — University of Manchester', 'speciality' => 'Qualitative Research, Social Sciences, Psychology, Education Studies', 'orders' => '1,100+', 'rating' => '4.96', 'avatar' => 'TB', 'color' => 'teal'],
+                ];
+                @endphp
+                @foreach($researchers as $r)
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center font-black text-white text-lg bg-{{ $r['color'] }}-500">
+                            {{ $r['avatar'] }}
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">{{ $r['name'] }}</h3>
+                            <div class="flex items-center gap-1 text-sm text-yellow-500">
+                                ★★★★★ <span class="text-gray-500 ml-1">{{ $r['rating'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-700 font-semibold mb-2">{{ $r['degree'] }}</p>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed"><strong>Specialises in:</strong> {{ $r['speciality'] }}</p>
+                    <div class="flex items-center justify-between text-sm pt-3 border-t border-gray-100">
+                        <span class="text-gray-500">{{ $r['orders'] }} papers completed</span>
+                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Available</span>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -1442,7 +1442,7 @@
                         class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-purple-600 transition-colors">
                         Unlimited Revisions</h3>
                     <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
-                        We revise until perfection. Your feedback is our roadmap to an A grade, with zero additional costs.
+                        We revise within the original order scope at no extra cost. Your feedback drives every revision.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
                         <div

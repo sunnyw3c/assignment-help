@@ -29,15 +29,15 @@
                     <div class="text-gray-600 mt-2">Expert Tutors</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-purple-600">15+</div>
+                    <div class="text-4xl font-bold text-purple-600">10+</div>
                     <div class="text-gray-600 mt-2">Years Average Experience</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-purple-600">6,500+</div>
+                    <div class="text-4xl font-bold text-purple-600">7,000+</div>
                     <div class="text-gray-600 mt-2">Projects Completed</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-purple-600">4.9/5</div>
+                    <div class="text-4xl font-bold text-purple-600">4.8/5</div>
                     <div class="text-gray-600 mt-2">Average Expert Rating</div>
                 </div>
             </div>

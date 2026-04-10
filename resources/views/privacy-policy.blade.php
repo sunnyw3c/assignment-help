@@ -158,9 +158,40 @@
 
             <hr class="border-gray-100">
 
+            <hr class="border-gray-100">
+
             <!-- Section 8 -->
             <section>
-                <h2 class="text-xl font-black text-gray-900 mb-4">8. Changes to This Policy</h2>
+                <h2 class="text-xl font-black text-gray-900 mb-4">8. California Privacy Rights (CCPA)</h2>
+                <p class="mb-4">
+                    If you are a California resident, the California Consumer Privacy Act (CCPA) gives you specific rights regarding your personal information:
+                </p>
+                <ul class="space-y-3 list-none mb-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Right to Know:</strong> You may request details about the categories and specific pieces of personal information we have collected about you.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Right to Delete:</strong> You may request deletion of your personal information, subject to certain exceptions.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Right to Opt-Out:</strong> We do not sell your personal information. You have the right to opt out of any future sale of your data.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 font-bold mt-0.5">→</span>
+                        <span><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA rights.</span>
+                    </li>
+                </ul>
+                <p>To exercise these rights, contact us at <a href="mailto:support@assignmenthelpusa.com" class="text-blue-600 hover:underline">support@assignmenthelpusa.com</a>.</p>
+            </section>
+
+            <hr class="border-gray-100">
+
+            <!-- Section 9 -->
+            <section>
+                <h2 class="text-xl font-black text-gray-900 mb-4">9. Changes to This Policy</h2>
                 <p>
                     We may update this policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of our service after changes are posted constitutes acceptance of the updated policy.
                 </p>

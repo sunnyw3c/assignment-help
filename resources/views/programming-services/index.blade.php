@@ -273,7 +273,7 @@
                                 <div class="text-4xl font-bold text-white">$30<span class="text-xl text-indigo-200">/project</span></div>
                             </div>
                             <div class="flex gap-3">
-                                <a href="{{ route('services.programming.show', 'php-help') }}"
+                                <a href="{{ route('services.programming.show', 'php') }}"
                                     class="group/link bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center border border-white/20">
                                     View Details
                                     <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -364,7 +364,7 @@
                                 <div class="text-4xl font-bold text-white">$35<span class="text-xl text-orange-200">/project</span></div>
                             </div>
                             <div class="flex gap-3">
-                                <a href="{{ route('services.programming.show', 'java-help') }}"
+                                <a href="{{ route('services.programming.show', 'java') }}"
                                     class="group/link bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center border border-white/20">
                                     View Details
                                     <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -558,7 +558,7 @@
                                 </div>
                             </div>
 
-                            <a href="{{ route('services.programming.show', 'php-help') }}"
+                            <a href="{{ route('services.programming.show', 'php') }}"
                                 class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 Explore PHP Services →
                             </a>
@@ -605,7 +605,7 @@
                                 </div>
                             </div>
 
-                            <a href="{{ route('services.programming.show', 'java-help') }}"
+                            <a href="{{ route('services.programming.show', 'java') }}"
                                 class="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-center py-3 rounded-xl font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 Explore Java Services →
                             </a>
@@ -841,7 +841,7 @@
                         </div>
                         <p class="text-gray-700 mb-4">
                             <strong>98% of our clients are satisfied</strong> with the quality and professionalism of delivered projects.
-                            If you're not completely satisfied, we'll work with you through unlimited revisions - or provide a full refund.
+                            If you're not completely satisfied, we'll work with you through unlimited revisions within original scope — subject to our refund policy.
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <span

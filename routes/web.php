@@ -23,6 +23,8 @@ use App\Http\Controllers\LiteratureReviewController;
 use App\Http\Controllers\PresentationDesignController;
 use App\Http\Controllers\ProofreadingEditingController;
 use App\Http\Controllers\ThesisDissertationController;
+use App\Http\Controllers\MathematicsAssignmentController;
+use App\Http\Controllers\LawAssignmentController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,10 +41,10 @@ Route::get('/services', [AllServicesController::class, 'index'])->name('services
 Route::get('/programming-help', [ServiceController::class, 'index'])->name('services.programming.index');
 Route::get('/programming-help/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
 
-// Assignment Help Services (SEO-friendly hierarchical URLs)
 Route::get('/assignment-help', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
 Route::get('/assignment-help/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
 Route::post('/assignment-help/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
+Route::get('/math-assignment-help', [AssignmentServiceController::class, 'show'])->defaults('slug', 'math-assignment-help')->name('services.math-assignment');
 
 
 // Individual Assignment Service Routes
@@ -56,6 +58,8 @@ Route::get('/literature-review-help', [LiteratureReviewController::class, 'index
 Route::get('/presentation-design-help', [PresentationDesignController::class, 'index'])->name('services.presentation-design.index');
 Route::get('/proofreading-editing-help', [ProofreadingEditingController::class, 'index'])->name('services.proofreading-editing.index');
 Route::get('/thesis-dissertation-help', [ThesisDissertationController::class, 'index'])->name('services.thesis-dissertation.index');
+Route::get('/mathematics-assignment-help', [MathematicsAssignmentController::class, 'index'])->name('services.mathematics-assignment.index');
+Route::get('/law-assignment-help', [LawAssignmentController::class, 'index'])->name('services.law-assignment.index');
 
 
 Route::get('/how-it-works', [HowItWorksController::class, 'index'])->name('how-it-works');

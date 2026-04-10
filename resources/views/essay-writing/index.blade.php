@@ -109,7 +109,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Money-Back Guarantee</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            If your essay doesn't meet the agreed requirements or is delivered late, you get a full refund. No questions asked. We also offer partial refunds if you're not completely satisfied with the quality - your money is protected.
+                                            If your essay doesn't meet the agreed requirements or is delivered late, you may be eligible for a full or partial refund. Refund requests are subject to our refund policy — contact us and we'll make it right.
                                         </p>
                                     </div>
                                 </div>
@@ -145,7 +145,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Unlimited Free Revisions</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            Request as many revisions as you need within 14 days of delivery at no extra cost. If something doesn't match your instructions, we'll fix it immediately. Your satisfaction is guaranteed.
+                                            Request as many revisions as you need within 21 days of delivery at no extra cost, provided the request is within the original order scope. If something doesn't match your instructions, we'll fix it.
                                         </p>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@
                                     <li>• Original essay written from scratch</li>
                                     <li>• Free plagiarism report</li>
                                     <li>• Free title page & bibliography</li>
-                                    <li>• Unlimited revisions (14 days)</li>
+                                    <li>• Unlimited revisions within original scope (14 days)</li>
                                     <li>• Direct writer communication</li>
                                 </ul>
                             </div>
@@ -498,7 +498,7 @@
                             <div class="bg-white rounded-lg p-6 shadow-sm">
                                 <div class="text-4xl mb-3">🔄</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Unlimited Revisions</h3>
-                                <p class="text-gray-700">Free revisions until you're completely satisfied with your essay - your success is our priority.</p>
+                                <p class="text-gray-700">Free revisions within the original order scope until you're completely satisfied with your essay.</p>
                             </div>
 
                             <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -563,7 +563,7 @@
                             </p>
 
                             <p class="mt-6 font-semibold">
-                                Our essay writing service meets all these criteria with qualified PhD writers, guaranteed originality, transparent pricing, unlimited revisions, and round-the-clock customer support. We've helped thousands of students achieve academic success with high-quality, custom-written essays across all subjects and academic levels.
+                                Our essay writing service meets all these criteria with qualified PhD writers, guaranteed originality, transparent pricing, unlimited revisions within original scope, and round-the-clock customer support. We've helped thousands of students achieve academic success with high-quality, custom-written essays across all subjects and academic levels.
                             </p>
                         </div>
                     </div>
@@ -1451,6 +1451,134 @@
                     </div>
 
                 </div>
+            </div>
+        </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our essay writing assistance is provided as academic writing guidance and reference material to help you develop your writing skills. All work delivered is intended to be used as a learning aid. Please ensure your use of our services complies with your institution's academic integrity policies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Common Essay Writing Mistakes Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">7 Common Essay Writing Mistakes That Cost Students Grades</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our expert writers see the same errors repeatedly. Avoid these and your essay stands out immediately.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $mistakes = [
+                    ['title' => 'Weak or Missing Thesis Statement', 'desc' => 'Your thesis should make a specific, arguable claim — not just state a topic. "Social media affects teens" is a topic. "Social media increases anxiety in teenagers by reducing face-to-face interaction" is a thesis.'],
+                    ['title' => 'No Paragraph Structure (PEEL/TEEL)', 'desc' => 'Each body paragraph needs a Point, Evidence, Explanation, and Link back to the thesis. Paragraphs without this structure read as unorganised and lose marks on both content and coherence criteria.'],
+                    ['title' => 'Relying on Quotes Instead of Analysis', 'desc' => 'Quotations support your argument — they don\'t replace it. Students who over-quote and under-analyse consistently score lower. The analysis around the quote is where your marks come from.'],
+                    ['title' => 'Ignoring the Marking Rubric', 'desc' => 'Most students don\'t read the rubric carefully. Every rubric tells you exactly what the marker rewards. Our writers always read it before writing a single word.'],
+                    ['title' => 'Poor Introduction and Conclusion', 'desc' => 'An introduction should hook, provide context, and state the thesis — in that order. A conclusion should synthesise (not just summarise) and leave the reader with something to think about.'],
+                    ['title' => 'Inconsistent Citation Formatting', 'desc' => 'Mixing APA and MLA in the same essay, inconsistent in-text citation formats, or a reference list that doesn\'t match the citations in the body — all avoidable errors that signal carelessness.'],
+                    ['title' => 'Writing in First Person When Not Instructed', 'desc' => 'Academic essays default to third person unless explicitly told otherwise. "I think" and "In my opinion" weaken your argument — replace with "The evidence suggests" or "This indicates."'],
+                ];
+                @endphp
+                @foreach($mistakes as $i => $m)
+                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Essay Writers -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Writers</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet the Experts Behind Your Essay</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Every writer on our team holds at least a Master's degree and has passed a rigorous vetting process covering writing quality, subject knowledge, and deadline reliability.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                @php
+                $writers = [
+                    ['name' => 'Dr. Sarah Mitchell', 'degree' => 'PhD, English Literature — University of Edinburgh', 'speciality' => 'Argumentative & Analytical Essays, Literary Analysis, Humanities', 'orders' => '1,240+', 'rating' => '4.97', 'avatar' => 'SM', 'color' => 'blue'],
+                    ['name' => 'James Okafor', 'degree' => 'MA, Political Science — London School of Economics', 'speciality' => 'Persuasive Essays, Political Theory, Sociology, Social Sciences', 'orders' => '890+', 'rating' => '4.95', 'avatar' => 'JO', 'color' => 'indigo'],
+                    ['name' => 'Dr. Priya Sharma', 'degree' => 'PhD, Psychology — University of Melbourne', 'speciality' => 'Reflective Essays, Psychology, Nursing, Healthcare Writing', 'orders' => '1,050+', 'rating' => '4.96', 'avatar' => 'PS', 'color' => 'purple'],
+                ];
+                @endphp
+                @foreach($writers as $w)
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center font-black text-white text-lg bg-{{ $w['color'] }}-500">
+                            {{ $w['avatar'] }}
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">{{ $w['name'] }}</h3>
+                            <div class="flex items-center gap-1 text-sm text-yellow-500">
+                                ★★★★★ <span class="text-gray-500 ml-1">{{ $w['rating'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-indigo-600 font-semibold mb-2">{{ $w['degree'] }}</p>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed"><strong>Specialises in:</strong> {{ $w['speciality'] }}</p>
+                    <div class="flex items-center justify-between text-sm pt-3 border-t border-gray-100">
+                        <span class="text-gray-500">{{ $w['orders'] }} orders completed</span>
+                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Available</span>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions About Our Essay Writing Service</h2>
+                <p class="text-gray-500 text-lg">Everything students ask before placing their first order.</p>
+            </div>
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    ['q' => 'Can you write my essay overnight?', 'a' => 'Yes. We handle urgent essays with deadlines as short as 3 hours. Rush orders are matched to available expert writers immediately after submission. For same-day delivery, place your order as early as possible so the writer has maximum time to research and write.'],
+                    ['q' => 'Will my essay be plagiarism-free?', 'a' => 'Every essay is written from scratch specifically for your requirements. Before delivery, it is scanned through plagiarism detection software and the report is included with your order. We guarantee 100% original content — no recycled work, no AI-generated text passed off as original.'],
+                    ['q' => 'What referencing style do you use?', 'a' => 'Our writers work fluently in APA, MLA, Chicago, Harvard, OSCOLA, Vancouver, and any other style your institution requires. Just specify it in your order instructions and we handle all in-text citations, footnotes, and the reference list.'],
+                    ['q' => 'What if the essay doesn\'t match my requirements?', 'a' => 'We offer unlimited free revisions within the original scope of your requirements. If something doesn\'t match your brief, submit a revision request with specific notes and we\'ll fix it — typically within 24 hours, often faster.'],
+                    ['q' => 'Do you write essays for all academic levels?', 'a' => 'Yes — from high school papers to postgraduate essays. Each order is matched to a writer with relevant qualifications for your academic level. PhD-level essays go to our doctoral writers; undergraduate essays are handled by writers with at least a bachelor\'s or master\'s degree in your subject.'],
+                    ['q' => 'How do I send my essay requirements?', 'a' => 'Use our order form to describe your essay topic, word count, academic level, deadline, referencing style, and any specific instructions from your lecturer. You can also upload reading lists, marking rubrics, or lecture slides — the more detail you provide, the better the result.'],
+                    ['q' => 'Is it safe to use an essay writing service?', 'a' => 'Your personal information and order details are encrypted and never shared with third parties. We don\'t store card details and payments are processed securely. Your writer doesn\'t know your identity and you don\'t need to reveal it.'],
+                    ['q' => 'How much does an essay cost?', 'a' => 'Pricing depends on academic level, word count, and deadline. A standard undergraduate essay starts from $15 per page with a 7-day deadline. Urgent or postgraduate orders are priced higher. Use our price calculator on this page to get an instant estimate for your specific requirements.'],
+                ];
+                @endphp
+                @foreach($faqs as $i => $faq)
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        :class="open === {{ $i }} ? 'bg-blue-50' : 'bg-white'">
+                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 transition-transform duration-200"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-blue-50">
+                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

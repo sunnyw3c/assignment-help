@@ -157,8 +157,8 @@
                                     <p class="text-sm text-gray-700">Science Specialists</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
-                                    <p class="text-sm text-gray-700">Scientific Accuracy</p>
+                                    <div class="text-3xl font-bold text-orange-600 mb-2">✓</div>
+                                    <p class="text-sm text-gray-700">Rigorous Scientific Writing</p>
                                 </div>
                             </div>
                         </div>
@@ -807,6 +807,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our lab report assistance is provided as a scientific writing guide and reference to support your learning. All work should be reviewed, understood, and used in accordance with your institution's academic integrity policies.
+            </p>
         </div>
     </section>
 @endsection

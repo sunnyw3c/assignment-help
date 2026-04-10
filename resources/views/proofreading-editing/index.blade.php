@@ -641,5 +641,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- Academic Integrity Notice -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
+            <p class="text-sm text-amber-800 leading-relaxed">
+                <strong>Academic Use Notice:</strong> Our proofreading and editing service is designed to help you improve your own written work through expert feedback and corrections. We encourage you to review all edits, understand the changes made, and ensure your final submission reflects your own understanding. Use of our service should comply with your institution's academic policies.
+            </p>
+        </div>
     </section>
 @endsection

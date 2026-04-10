@@ -56,7 +56,7 @@
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 mb-2">Qualified Legal Professionals</h3>
                                         <p class="text-gray-700 leading-relaxed">
-                                            Your law assignment will be handled by legal experts with JD, LLB, or LLM degrees from accredited law schools. Many of our professionals are licensed attorneys with bar admission, litigation experience, or law firm backgrounds in areas like corporate law, criminal defense, civil rights, or appellate practice. Some are law professors and teaching assistants with deep academic knowledge of legal theory, doctrine, and pedagogy who understand exactly what law professors expect in assignments.
+                                            Your law assignment will be handled by legal professionals with JD, LLB, or LLM degrees from accredited law schools. Our team includes postgraduate law graduates and legal researchers with backgrounds in areas like corporate law, criminal law, civil rights, and public law. Some are law graduates and teaching assistants with deep academic knowledge of legal theory, doctrine, and pedagogy who understand exactly what law professors expect in assignments.
                                         </p>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
                                     <p class="text-sm text-gray-700">Student Satisfaction Rate</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-purple-600 mb-2">200+</div>
+                                    <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
                                     <p class="text-sm text-gray-700">Legal Experts</p>
                                 </div>
                                 <div>

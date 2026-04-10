@@ -136,244 +136,168 @@ new class extends Component {
 };
 ?>
 
-<div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+{{-- Light card matching the screenshot design --}}
+<div style="background: linear-gradient(145deg, #ffffff 0%, #f0f2ff 100%); border-radius: 1.75rem; padding: 2rem 2rem 1.5rem; position: relative;">
 
-    <div class="px-6 pt-6 pb-0 md:px-8 md:pt-8">
-        <div class="flex items-center justify-between mb-6 pb-5 border-b border-slate-100">
+    {{-- ─── Live Estimate Badge ─── --}}
+    <div class="flex justify-center mb-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest" style="background: #eff0ff; color: #4f46e5; border: 1px solid #c7d2fe;">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background: #4f46e5;"></span>
+            Live Estimate
+        </div>
+    </div>
+
+    {{-- ─── Heading ─── --}}
+    <div class="text-center mb-6">
+        <h3 class="font-black mb-1" style="color: #0f172a; font-size: 1.6rem;">Calculate Your Price</h3>
+        <p class="text-sm" style="color: #94a3b8;">Get an instant quote with our transparent pricing tool.</p>
+    </div>
+
+    {{-- ─── Two Column Layout ─── --}}
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+        {{-- LEFT: Inputs --}}
+        <div class="space-y-5">
+
+            {{-- Paper Length --}}
             <div>
-                <h3 class="text-slate-900 font-semibold text-base leading-none">Instant Price Calculator</h3>
-                <p class="text-slate-400 text-sm mt-1">Adjust options below to see your price</p>
-            </div>
-            <div class="flex items-center gap-1.5 text-xs text-emerald-600 font-medium">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                Live updates
-            </div>
-        </div>
-    </div>
-
-    <div class="p-6 md:p-8 pt-4 md:pt-4">
-
-        {{-- ─── Subject Type Chips ─── --}}
-        <div class="mb-7">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Subject Type</p>
-            <div class="flex flex-wrap gap-2">
-                @php
-                    $subjects = [
-                        'general'     => ['icon' => '📝', 'label' => 'General'],
-                        'programming' => ['icon' => '💻', 'label' => 'Programming'],
-                        'business'    => ['icon' => '📊', 'label' => 'Business'],
-                        'nursing'     => ['icon' => '🏥', 'label' => 'Nursing'],
-                        'engineering' => ['icon' => '⚙️', 'label' => 'Engineering'],
-                        'law'         => ['icon' => '⚖️', 'label' => 'Law'],
-                    ];
-                @endphp
-                @foreach($subjects as $key => $info)
-                    <button
-                        wire:click="$set('subject', '{{ $key }}')"
-                        type="button"
-                        class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-medium border transition-all duration-150
-                            {{ $subject === $key
-                                ? 'bg-violet-600 border-violet-600 text-white'
-                                : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50' }}">
-                        <span>{{ $info['icon'] }}</span>
-                        <span>{{ $info['label'] }}</span>
+                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Paper Length</p>
+                <div class="flex items-center rounded-xl overflow-hidden" style="background: #f1f3ff; border: 1px solid #e0e4ff;">
+                    <button wire:click="decrementPages" type="button"
+                        class="flex items-center justify-center hover:opacity-60 transition-opacity"
+                        style="width: 52px; height: 64px; color: #64748b; font-size: 1.4rem; font-weight: 300;">
+                        −
                     </button>
-                @endforeach
+                    <div class="flex-1 text-center py-2" wire:loading.class="opacity-40" wire:target="pages">
+                        <div class="font-black" style="color: #0f172a; font-size: 1.8rem; line-height: 1.1;">{{ $pages }}</div>
+                        <div class="text-xs font-semibold uppercase tracking-widest mt-0.5" style="color: #94a3b8;">{{ $pages === 1 ? 'Page' : 'Pages' }}</div>
+                    </div>
+                    <button wire:click="incrementPages" type="button"
+                        class="flex items-center justify-center hover:opacity-80 transition-opacity"
+                        style="width: 52px; height: 64px; color: #64748b; font-size: 1.4rem; font-weight: 300;">
+                        +
+                    </button>
+                </div>
+                <p class="text-xs mt-1.5 text-right" style="color: #94a3b8;">≈ {{ number_format($pages * 275) }} words</p>
+            </div>
+
+            {{-- Academic Level --}}
+            <div>
+                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Academic Level</p>
+                <div class="relative">
+                    <select wire:model.live="academicLevel"
+                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 appearance-none focus:outline-none cursor-pointer"
+                        style="background: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
+                        <option value="high-school">High School</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="masters">Master's</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" style="color: #94a3b8;">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Deadline --}}
+            <div>
+                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Deadline</p>
+                <div class="relative">
+                    <select wire:model.live="deadline"
+                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 appearance-none focus:outline-none cursor-pointer"
+                        style="background: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
+                        <option value="3-hours">3 Hours</option>
+                        <option value="6-hours">6 Hours</option>
+                        <option value="12-hours">12 Hours</option>
+                        <option value="24-hours">24 Hours</option>
+                        <option value="2-days">2 Days</option>
+                        <option value="3-days">3 Days</option>
+                        <option value="5-days">5 Days</option>
+                        <option value="7-days">7 Days</option>
+                        <option value="14-days">14 Days</option>
+                        <option value="30-days">30 Days</option>
+                    </select>
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" style="color: #94a3b8;">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-7">
+        {{-- RIGHT: Price Panel --}}
+        <div class="flex flex-col rounded-2xl p-5" style="background: #ffffff; box-shadow: 0 4px 24px rgba(79,70,229,0.1);">
 
-            {{-- ─── Left column ─── --}}
-            <div class="space-y-6">
+            {{-- Estimated Total label --}}
+            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Estimated Total</p>
 
-                {{-- Academic Level - visual cards 2x2 --}}
-                <div>
-                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Academic Level</p>
-                    <div class="grid grid-cols-2 gap-2">
-                        @php
-                            $levels = [
-                                'high-school'   => ['icon' => '🏫', 'label' => 'High School'],
-                                'undergraduate' => ['icon' => '🎓', 'label' => 'Undergrad'],
-                                'masters'       => ['icon' => '📚', 'label' => "Master's"],
-                                'phd'           => ['icon' => '🔬', 'label' => 'PhD'],
-                            ];
-                        @endphp
-                        @foreach($levels as $lKey => $lInfo)
-                            <button
-                                wire:click="$set('academicLevel', '{{ $lKey }}')"
-                                type="button"
-                                class="relative p-3 rounded-xl border text-left transition-all duration-150
-                                    {{ $academicLevel === $lKey
-                                        ? 'border-violet-500 bg-violet-50 ring-1 ring-violet-500/20'
-                                        : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50' }}">
-                                @if($academicLevel === $lKey)
-                                    <div class="absolute top-2 right-2 w-4 h-4 bg-violet-600 rounded-full flex items-center justify-center">
-                                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                    </div>
-                                @endif
-                                <span class="text-xl block mb-1">{{ $lInfo['icon'] }}</span>
-                                <p class="font-semibold text-slate-800 text-xs leading-tight">{{ $lInfo['label'] }}</p>
-                                <p class="text-violet-600 font-semibold text-sm mt-0.5">${{ $levelPrices[$lKey] }}<span class="font-normal text-slate-400 text-xs">/pg</span></p>
-                            </button>
-                        @endforeach
-                    </div>
+            {{-- Big Price --}}
+            <div wire:loading.class="opacity-40" wire:target="pages,academicLevel,deadline">
+                <div class="font-black leading-none mb-1" style="color: #4f46e5; font-size: 3rem;">
+                    ${{ number_format($this->discountedPrice, 2) }}
+                </div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="line-through text-sm font-medium" style="color: #94a3b8;">${{ number_format($this->totalPrice, 2) }}</span>
+                    <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background: #dcfce7; color: #16a34a;">
+                        SAVE {{ number_format($this->discountAmount, 2) }}
+                    </span>
                 </div>
 
-                {{-- Pages counter --}}
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Number of Pages</p>
-                        <span class="text-xs text-slate-400">≈ {{ number_format($pages * 275) }} words</span>
+                {{-- Breakdown --}}
+                <div class="space-y-2 pt-3 mb-5 flex-1" style="border-top: 1px solid #f1f5f9;">
+                    <div class="flex items-center justify-between text-sm">
+                        <span style="color: #64748b;">Price per page</span>
+                        <span class="font-semibold" style="color: #0f172a;">${{ number_format($this->pricePerPage, 2) }}</span>
                     </div>
-                    <div class="flex items-center gap-3 bg-slate-50 rounded-xl p-2 border border-slate-200">
-                        <button
-                            wire:click="decrementPages"
-                            type="button"
-                            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-500 hover:bg-slate-100 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
-                            </svg>
-                        </button>
-                        <div class="flex-1 text-center">
-                            <span class="text-3xl font-bold text-slate-900 tabular-nums">{{ $pages }}</span>
-                            <span class="text-slate-400 ml-1.5 text-sm">{{ $pages === 1 ? 'page' : 'pages' }}</span>
-                        </div>
-                        <button
-                            wire:click="incrementPages"
-                            type="button"
-                            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-500 hover:bg-slate-100 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                            </svg>
-                        </button>
+                    <div class="flex items-center justify-between text-sm">
+                        <span style="color: #64748b;">Seasonal Discount</span>
+                        <span class="font-semibold" style="color: #16a34a;">-{{ number_format($this->discount * 100, 0) }}%</span>
                     </div>
+                    @if($this->volumeDiscount > 0)
+                    <div class="flex items-center justify-between text-sm">
+                        <span style="color: #64748b;">Volume Discount</span>
+                        <span class="font-semibold" style="color: #16a34a;">-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
+                    </div>
+                    @endif
                 </div>
-
-                {{-- Deadline grid --}}
-                <div>
-                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Deadline</p>
-                    <div class="grid grid-cols-2 gap-2">
-                        @php
-                            $deadlines = [
-                                '3-hours'  => ['label' => '3 Hours',  'hot' => true],
-                                '6-hours'  => ['label' => '6 Hours',  'hot' => true],
-                                '12-hours' => ['label' => '12 Hours', 'hot' => true],
-                                '24-hours' => ['label' => '24 Hours', 'hot' => true],
-                                '2-days'   => ['label' => '2 Days',   'hot' => false],
-                                '3-days'   => ['label' => '3 Days',   'hot' => false],
-                                '5-days'   => ['label' => '5 Days',   'hot' => false],
-                                '7-days'   => ['label' => '7 Days',   'hot' => false],
-                                '14-days'  => ['label' => '14 Days',  'hot' => false],
-                                '30-days'  => ['label' => '30 Days',  'hot' => false],
-                            ];
-                        @endphp
-                        @foreach($deadlines as $dKey => $dInfo)
-                            <button
-                                wire:click="$set('deadline', '{{ $dKey }}')"
-                                type="button"
-                                class="relative py-2 px-3 rounded-lg text-sm font-medium border transition-all duration-150 text-center
-                                    {{ $deadline === $dKey
-                                        ? 'border-violet-500 bg-violet-50 text-violet-700 ring-1 ring-violet-500/20'
-                                        : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50' }}">
-                                {{ $dInfo['label'] }}
-                                @if($dInfo['hot'])
-                                    <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
-                                @endif
-                            </button>
-                        @endforeach
-                    </div>
-                    <p class="text-xs text-slate-400 mt-2 flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 bg-red-400 rounded-full inline-block"></span>
-                        Rush fee applies for deadlines under 24 hours
-                    </p>
-                </div>
-
             </div>
 
-            {{-- ─── Right column: price panel ─── --}}
-            <div class="flex flex-col gap-4">
-
-                {{-- Price card --}}
-                <div class="flex-1 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col">
-
-                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">Estimated Total</p>
-
-                    {{-- Big price --}}
-                    <div class="flex items-start gap-0.5 mb-1" wire:loading.class="opacity-40" wire:target="pages,academicLevel,deadline,subject">
-                        <span class="text-slate-400 text-xl font-medium mt-1.5">$</span>
-                        <span class="text-5xl font-bold text-slate-900 leading-none tracking-tight tabular-nums">{{ number_format($this->discountedPrice, 0) }}</span>
-                        @php $cents = substr(number_format($this->discountedPrice, 2), -2); @endphp
-                        <span class="text-slate-400 text-xl font-medium mt-1.5">.{{ $cents }}</span>
-                    </div>
-
-                    {{-- Crossed out + savings badge --}}
-                    <div class="flex items-center gap-2 mb-5">
-                        <span class="text-slate-400 line-through text-sm">${{ number_format($this->totalPrice, 2) }}</span>
-                        <span class="bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-2 py-0.5 rounded-md">
-                            Save {{ $this->totalDiscountPercent }}%
-                        </span>
-                    </div>
-
-                    {{-- Breakdown rows --}}
-                    <div class="space-y-2.5 border-t border-slate-200 pt-4 mb-5 flex-1">
-                        <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Price per page</span>
-                            <span class="text-slate-800 font-medium">${{ number_format($this->pricePerPage, 2) }}</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Pages</span>
-                            <span class="text-slate-800 font-medium">{{ $pages }} page{{ $pages > 1 ? 's' : '' }}</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span class="text-slate-500">Seasonal discount</span>
-                            <span class="text-emerald-600 font-medium">-{{ number_format($this->discount * 100, 0) }}%</span>
-                        </div>
-                        @if($this->volumeDiscount > 0)
-                            <div class="flex justify-between text-sm">
-                                <span class="text-slate-500">Volume discount</span>
-                                <span class="text-emerald-600 font-medium">-{{ number_format($this->volumeDiscount * 100, 0) }}%</span>
-                            </div>
-                        @endif
-                        <div class="flex justify-between text-sm border-t border-slate-200 pt-2.5 mt-1">
-                            <span class="text-slate-500">You save</span>
-                            <span class="text-emerald-600 font-semibold">${{ number_format($this->discountAmount, 2) }}</span>
-                        </div>
-                    </div>
-
-                    {{-- CTA --}}
-                    <a href="{{ route('services.assignment.index') }}"
-                        class="group flex items-center justify-center gap-2 w-full py-3 bg-violet-600 hover:bg-violet-700 rounded-xl text-white font-semibold text-sm transition-colors">
-                        Proceed to Order
-                        <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                    <p class="text-center text-slate-400 text-xs mt-2">No payment required yet</p>
-                </div>
-
-                {{-- Guarantee badges --}}
-                <div class="grid grid-cols-3 gap-2">
-                    <div class="bg-white rounded-xl p-3 text-center border border-slate-200">
-                        <span class="text-xl block mb-1">🛡️</span>
-                        <p class="text-xs font-medium text-slate-600 leading-tight">Plagiarism Free</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-3 text-center border border-slate-200">
-                        <span class="text-xl block mb-1">🔐</span>
-                        <p class="text-xs font-medium text-slate-600 leading-tight">100% Private</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-3 text-center border border-slate-200">
-                        <span class="text-xl block mb-1">↩️</span>
-                        <p class="text-xs font-medium text-slate-600 leading-tight">Free Revisions</p>
-                    </div>
-                </div>
-
-            </div>
+            {{-- CTA --}}
+            <a href="{{ route('order') }}"
+                class="group flex items-center justify-center gap-2 w-full font-bold text-white transition-all duration-300 hover:opacity-90 mt-auto"
+                style="background: linear-gradient(135deg, #4f46e5, #ec4899); border-radius: 0.875rem; padding: 0.875rem 1.25rem; font-size: 0.95rem; box-shadow: 0 6px 20px rgba(79,70,229,0.35);">
+                Proceed to Order
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <p class="text-center mt-2 text-xs font-semibold uppercase tracking-wider" style="color: #94a3b8;">No Payment Required Yet</p>
         </div>
     </div>
+
+    {{-- ─── Trust Badges ─── --}}
+    <div class="flex items-center justify-center gap-8">
+        <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #16a34a;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-sm font-medium" style="color: #64748b;">Plagiarism-Free</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #0ea5e9;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            <span class="text-sm font-medium" style="color: #64748b;">Confidential</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #8b5cf6;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span class="text-sm font-medium" style="color: #64748b;">Fast Delivery</span>
+        </div>
+    </div>
+
 </div>

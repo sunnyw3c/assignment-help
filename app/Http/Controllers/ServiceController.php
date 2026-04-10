@@ -222,9 +222,9 @@ class ServiceController extends Controller
             'desktop-app' => 'programming-services.desktop-app',
             'cloud-computing' => 'programming-services.cloud-computing',
             'testing-qa' => 'programming-services.testing-qa',
-            'php-programming-help' => 'programming-services.php-help',
-            'java-programming-help' => 'programming-services.java-help',
-            'python-programming-help' => 'programming-services.python-help',
+            'php' => 'programming-services.php-help',
+            'java' => 'programming-services.java-help',
+            'python' => 'programming-services.python-help',
         ];
 
         // Check if we have a specific view for this service

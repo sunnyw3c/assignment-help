@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
 use Illuminate\Http\Response;
 
 class SitemapController extends Controller
 {
     public function index(): Response
     {
-        $assignmentSlugs = Service::active()->ordered()->pluck('slug')->toArray();
-        $xml = view('sitemap', ['urls' => $this->buildUrls($assignmentSlugs)])->render();
+        $xml = view('sitemap', ['urls' => $this->buildUrls()])->render();
 
         return response($xml, 200)->header('Content-Type', 'application/xml');
     }
 
-    private function buildUrls(array $assignmentSlugs): array
+    private function buildUrls(): array
     {
         $today = now()->toDateString();
         $urls = [];
@@ -29,8 +27,9 @@ class SitemapController extends Controller
             '/research-paper-help',
             '/homework-help',
             '/thesis-dissertation-help',
+            '/mathematics-assignment-help',
+            '/law-assignment-help',
             '/programming-help',
-            '/assignment-help',
             '/case-study-help',
             '/lab-report-help',
             '/literature-review-help',
@@ -45,14 +44,9 @@ class SitemapController extends Controller
             'web-development', 'mobile-app', 'algorithms', 'database',
             'machine-learning', 'debugging', 'api-development', 'devops',
             'game-development', 'cybersecurity', 'desktop-app',
-            'cloud-computing', 'testing-qa', 'php-help', 'java-help', 'python-help',
+            'cloud-computing', 'testing-qa', 'php', 'java', 'python',
         ] as $slug) {
             $urls[] = ['loc' => url("/programming-help/{$slug}"), 'lastmod' => $today, 'changefreq' => 'monthly', 'priority' => '0.9'];
-        }
-
-        // Priority 0.9 — assignment-help sub-pages (dynamic from services DB table)
-        foreach ($assignmentSlugs as $slug) {
-            $urls[] = ['loc' => url("/assignment-help/{$slug}"), 'lastmod' => $today, 'changefreq' => 'monthly', 'priority' => '0.9'];
         }
 
         // Priority 0.9 — essay-writing sub-page with custom view
