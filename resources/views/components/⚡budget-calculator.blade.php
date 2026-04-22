@@ -206,7 +206,8 @@ new class extends Component {
                     <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Academic Level</label>
                     <div class="relative">
                         <select wire:model.live="academicLevel"
-                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 transition-all cursor-pointer hover:border-purple-300">
+                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-500/10 transition-all cursor-pointer hover:border-purple-300"
+                            style="background-image: none !important; appearance: none; -webkit-appearance: none; -moz-appearance: none;">
                             <option value="high-school">High School</option>
                             <option value="undergraduate">Undergraduate</option>
                             <option value="masters">Master's Degree</option>
@@ -223,7 +224,8 @@ new class extends Component {
                     <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Deadline</label>
                     <div class="relative">
                         <select wire:model.live="deadline"
-                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all cursor-pointer hover:border-blue-300">
+                            class="w-full appearance-none bg-white/50 border-2 border-gray-200 rounded-xl px-4 py-3.5 pr-10 font-bold text-gray-700 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all cursor-pointer hover:border-blue-300"
+                            style="background-image: none !important; appearance: none; -webkit-appearance: none; -moz-appearance: none;">
                             <option value="3-hours">3 Hours (Urgent)</option>
                             <option value="6-hours">6 Hours</option>
                             <option value="12-hours">12 Hours</option>

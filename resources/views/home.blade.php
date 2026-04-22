@@ -821,22 +821,8 @@
                 <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"
                     style="animation-delay: 1.5s"></div>
 
-                <!-- Live Status Indicator -->
-                <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
-                    <div
-                        class="bg-slate-900 border border-white/10 rounded-full px-4 py-1 flex items-center gap-2 shadow-2xl">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span class="text-[10px] font-bold text-white uppercase tracking-tighter">Live Pricing Engine
-                            Active</span>
-                    </div>
-                </div>
 
-                <div
-                    class="relative h-full bg-slate-800/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] overflow-hidden">
+                <div class="relative h-full bg-slate-800/40">
                     <!-- Subtle Glass Highlight -->
                     <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.02] to-transparent pointer-events-none">
                     </div>

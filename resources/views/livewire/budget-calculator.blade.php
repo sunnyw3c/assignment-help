@@ -186,19 +186,13 @@ new class extends Component {
                 <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Academic Level</p>
                 <div class="relative">
                     <select wire:model.live="academicLevel"
-                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 appearance-none focus:outline-none cursor-pointer"
-                        style="background: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
+                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 focus:outline-none cursor-pointer"
+                        style="background-color: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
                         <option value="high-school">High School</option>
                         <option value="undergraduate">Undergraduate</option>
                         <option value="masters">Master's</option>
                         <option value="phd">PhD</option>
                     </select>
-                    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" style="color: #94a3b8;">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </div>
-                </div>
             </div>
 
             {{-- Deadline --}}
@@ -206,8 +200,8 @@ new class extends Component {
                 <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color: #94a3b8;">Deadline</p>
                 <div class="relative">
                     <select wire:model.live="deadline"
-                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 appearance-none focus:outline-none cursor-pointer"
-                        style="background: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
+                        class="w-full text-sm font-medium rounded-xl px-4 py-3.5 focus:outline-none cursor-pointer"
+                        style="background-color: #f1f3ff; border: 1px solid #e0e4ff; color: #0f172a;">
                         <option value="3-hours">3 Hours</option>
                         <option value="6-hours">6 Hours</option>
                         <option value="12-hours">12 Hours</option>
@@ -219,12 +213,6 @@ new class extends Component {
                         <option value="14-days">14 Days</option>
                         <option value="30-days">30 Days</option>
                     </select>
-                    <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" style="color: #94a3b8;">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </div>
-                </div>
             </div>
         </div>
 
