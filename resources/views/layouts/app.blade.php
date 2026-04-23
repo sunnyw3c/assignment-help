@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('title', 'Assignment Help USA | Expert Academic Support')</title>
+        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
         <meta name="description" content="@yield('description', 'Expert academic support and assignment help available 24/7. Get professional assistance for essays, research papers, and homework from USA-based experts.')">
         <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">
 
