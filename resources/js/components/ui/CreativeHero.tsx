@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
     Phone,
     ShieldCheck,
@@ -46,6 +46,20 @@ const FloatingCard = ({ delay, className, children }: { delay: number; className
 
 export default function CreativeHero() {
     const { scrollY } = useScroll();
+    const [textIndex, setTextIndex] = useState(0);
+
+    const rotatingTexts = [
+        "Expert Academic Support You Can Trust",
+        "Top-Tier Assignment Writing Service",
+        "Your Path to Academic Excellence",
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTextIndex((prev) => (prev + 1) % rotatingTexts.length);
+        }, 4000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fafafa] py-28 sm:py-36">
@@ -99,9 +113,20 @@ export default function CreativeHero() {
                                     />
                                 </svg>
                             </span>
-                            <span className="text-slate-900 text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl text-balance">
-                                Expert Academic Support You Can Trust
-                            </span>
+                            <div className="h-[90px] sm:h-[120px] lg:h-[140px] flex items-center justify-center w-full max-w-4xl">
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={textIndex}
+                                        initial={{ opacity: 0, y: 15, filter: "blur(4px)" }}
+                                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                        exit={{ opacity: 0, y: -15, filter: "blur(4px)" }}
+                                        transition={{ duration: 0.4 }}
+                                        className="text-slate-900 text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-balance text-center block w-full"
+                                    >
+                                        {rotatingTexts[textIndex]}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </div>
                         </motion.h1>
                     </div>
 
@@ -112,7 +137,7 @@ export default function CreativeHero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="text-base sm:text-lg lg:text-xl text-slate-500 max-w-4xl mb-12 sm:mb-16 leading-relaxed font-medium px-6"
                     >
-                        Struggling with tight deadlines, complex topics, or academic pressure? **Assignment Help USA** provides reliable, plagiarism-free, and affordable online academic assistance to students across the USA. Whether you’re an undergraduate, postgraduate, or PhD scholar, our subject-matter experts are here to help you succeed.
+                        Struggling with tight deadlines, complex topics, or academic pressure? <strong>Assignment Help USA</strong> provides reliable, plagiarism-free, and affordable online academic assistance to students across the USA. Whether you’re an undergraduate, postgraduate, or PhD scholar, our subject-matter experts are here to help you succeed.
                     </motion.p>
 
                     {/* Buttons */}

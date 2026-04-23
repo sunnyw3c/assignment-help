@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Assignment Help Online USA | Academic Writing Service')
-@section('description', 'Top-rated academic writing service in the USA. Get expert help with assignments, essays, research papers & homework. Fast delivery, plagiarism-free, 24/7 support.')
+@section('description', 'Struggling with deadlines? Assignment Help USA offers reliable, plagiarism-free academic assistance. Expert USA-based support for students.')
 
 
 @section('content')
