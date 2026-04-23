@@ -1,20 +1,29 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php wp_head(); ?>
+</head>
+<body <?php body_class('bg-gray-100'); ?>>
+<div class="min-h-screen flex flex-col">
 <nav class="bg-white shadow sticky top-0 z-50 border-b-2 border-purple-100">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <!-- Logo -->
-        <a href="{{ url('/') }}" class="flex items-center space-x-2">
-            <img src="{{ asset('images/logo.svg') }}" alt="Assignment Help USA" class="h-10 w-auto">
+        <a href="http://assignmenthelpusa.test" class="flex items-center space-x-2">
+            <img src="http://assignmenthelpusa.test/images/logo.svg" alt="Assignment Help USA" class="h-10 w-auto">
         </a>
 
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex gap-8 text-sm font-medium items-center">
-            <li><a href="{{ url('/') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->is('/') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🏠
+            <li><a href="http://assignmenthelpusa.test"
+                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">🏠
                     Home</a></li>
 
             <!-- Services Mega Menu -->
             <li class="relative group">
                 <button id="services-menu-trigger"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }} flex items-center">
+                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?> flex items-center">
                     ⚡ Services
                     <svg id="services-menu-arrow" class="w-4 h-4 ml-1 transition-transform duration-200" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +111,7 @@
                                     </div>
 
                                     <div class="grid grid-cols-3 gap-4 mb-6">
-                                        <a href="{{ route('services.programming.show', 'web-development') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/web-development"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -114,7 +123,7 @@
                                                 frameworks</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'mobile-app') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/mobile-app"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -126,7 +135,7 @@
                                             </div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'algorithms') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/algorithms"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -138,7 +147,7 @@
                                             </div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'database') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/database"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -149,7 +158,7 @@
                                             <div class="text-xs text-gray-500">SQL, NoSQL & database optimization</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'machine-learning') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/machine-learning"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -160,7 +169,7 @@
                                             <div class="text-xs text-gray-500">AI models & ML algorithms</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'debugging') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/debugging"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -171,7 +180,7 @@
                                             <div class="text-xs text-gray-500">Bug fixes & code optimization</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'api-development') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/api-development"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -182,7 +191,7 @@
                                             <div class="text-xs text-gray-500">RESTful & GraphQL APIs</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'devops') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/devops"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -193,7 +202,7 @@
                                             <div class="text-xs text-gray-500">CI/CD & cloud deployment</div>
                                         </a>
 
-                                        <a href="{{ route('services.programming.show', 'cybersecurity') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help/cybersecurity"
                                             class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -206,7 +215,7 @@
                                     </div>
 
                                     <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                                        <a href="{{ route('services.programming.index') }}"
+                                        <a href="http://assignmenthelpusa.test/programming-help"
                                             class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold text-sm group/more">
                                             View All Programming Services
                                             <svg class="w-4 h-4 ml-1 group-hover/more:translate-x-1 transition-transform"
@@ -215,7 +224,7 @@
                                                     d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
-                                        <a href="{{ route('order') }}"
+                                        <a href="http://assignmenthelpusa.test/order"
                                             class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
                                             Get Help Now →
                                         </a>
@@ -237,7 +246,7 @@
                                     </div>
 
                                     <div class="grid grid-cols-3 gap-4 mb-6">
-                                        <a href="{{ route('services.essay-writing.index') }}"
+                                        <a href="http://assignmenthelpusa.test/essay-writing-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -248,7 +257,7 @@
                                             <div class="text-xs text-gray-500">All types of academic essays</div>
                                         </a>
 
-                                        <a href="{{ route('services.research-paper.index') }}"
+                                        <a href="http://assignmenthelpusa.test/research-paper-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -259,7 +268,7 @@
                                             <div class="text-xs text-gray-500">Academic research & analysis</div>
                                         </a>
 
-                                        <a href="{{ route('services.homework-help.index') }}"
+                                        <a href="http://assignmenthelpusa.test/homework-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -270,7 +279,7 @@
                                             <div class="text-xs text-gray-500">Help with daily homework tasks</div>
                                         </a>
 
-                                        <a href="{{ route('services.thesis-dissertation.index') }}"
+                                        <a href="http://assignmenthelpusa.test/thesis-dissertation-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -281,7 +290,7 @@
                                             <div class="text-xs text-gray-500">Graduate-level research work</div>
                                         </a>
 
-                                        <a href="{{ route('services.mathematics-assignment.index') }}"
+                                        <a href="http://assignmenthelpusa.test/mathematics-assignment-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -292,7 +301,7 @@
                                             <div class="text-xs text-gray-500">Step-by-step math solutions</div>
                                         </a>
 
-                                        <a href="{{ route('services.proofreading-editing.index') }}"
+                                        <a href="http://assignmenthelpusa.test/proofreading-editing-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -303,7 +312,7 @@
                                             <div class="text-xs text-gray-500">Edit & polish your work</div>
                                         </a>
 
-                                        <a href="{{ route('services.lab-report.index') }}"
+                                        <a href="http://assignmenthelpusa.test/lab-report-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -314,7 +323,7 @@
                                             <div class="text-xs text-gray-500">Science lab documentation</div>
                                         </a>
 
-                                        <a href="{{ route('services.case-study.index') }}"
+                                        <a href="http://assignmenthelpusa.test/case-study-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -325,7 +334,7 @@
                                             <div class="text-xs text-gray-500">Business & academic analysis</div>
                                         </a>
 
-                                        <a href="{{ route('services.literature-review.index') }}"
+                                        <a href="http://assignmenthelpusa.test/literature-review-help"
                                             class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
                                             <div class="flex items-center mb-2">
                                                 <span
@@ -338,17 +347,9 @@
                                     </div>
 
                                     <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                                        {{-- <a href="{{ route('services.assignment.index') }}"
-                                            class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group/more">
-                                            View All Assignment Services
-                                            <svg class="w-4 h-4 ml-1 group-hover/more:translate-x-1 transition-transform"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7"></path>
-                                            </svg>
-                                        </a> --}}
+                                        
                                         <div></div> <!-- Spacer -->
-                                        <a href="{{ route('order') }}"
+                                        <a href="http://assignmenthelpusa.test/order"
                                             class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
                                             Order Now →
                                         </a>
@@ -360,46 +361,41 @@
                 </div>
             </li>
 
-            {{-- <li><a href="{{ route('languages.index') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('languages.*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">🔧
-                    Languages</a></li> --}}
-            {{-- <li><a href="{{ url('/how-it-works') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 text-gray-700">❓ How It Works</a></li> --}}
-            <li><a href="{{ route('experts') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('experts') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">👨‍🏫
+            
+            
+            <li><a href="http://assignmenthelpusa.test/experts"
+                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">👨‍🏫
                     Experts</a></li>
-            <li><a href="{{ route('reviews') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('reviews') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">⭐
+            <li><a href="http://assignmenthelpusa.test/reviews"
+                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">⭐
                     Reviews</a></li>
-            <li><a href="{{ url('/blog') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->is('blog*') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">📝
+            <li><a href="http://assignmenthelpusa.test/blog"
+                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">📝
                     Blog</a></li>
-            {{-- <li><a href="{{ route('order') }}"
-                    class="hover:text-purple-600 transition-colors duration-200 {{ request()->routeIs('order') ? 'text-purple-600 font-semibold' : 'text-gray-700' }}">💻
-                    Get Help</a></li> --}}
+            
         </ul>
 
         <!-- Desktop Auth Buttons -->
         <div class="hidden md:flex space-x-3 items-center">
-            @guest
-                <a href="{{ route('login') }}"
+            <?php if (!is_user_logged_in()): ?>
+                <a href="http://assignmenthelpusa.test/login"
                     class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
                     Login
                 </a>
-            @else
-                <a href="{{ route('dashboard') }}"
+            <?php else: ?>
+                <a href="http://assignmenthelpusa.test/dashboard"
                     class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
                     Dashboard
                 </a>
-                <form method="POST" action="{{ route('logout') }}" class="inline">
-                    @csrf
+                <form method="POST" action="http://assignmenthelpusa.test/logout" class="inline">
+                    
                     <button type="submit"
                         class="text-sm text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 hover:border-red-300 transition-all duration-200">
                         Logout
                     </button>
                 </form>
-            @endguest
-            <a href="{{ route('order') }}"
+            <?php endif; ?>
+            <a href="http://assignmenthelpusa.test/order"
                 class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Get Help Now
             </a>
@@ -419,14 +415,14 @@
     <!-- Mobile Navigation Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 max-h-screen overflow-y-auto">
         <div class="px-4 py-4 space-y-2">
-            <a href="{{ url('/') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->is('/') ? 'text-purple-600 font-semibold' : '' }}">🏠
+            <a href="http://assignmenthelpusa.test"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">🏠
                 Home</a>
 
             <!-- Mobile Services Accordion -->
             <div class="border-b border-gray-100">
                 <button id="mobile-services-toggle"
-                    class="w-full flex items-center justify-between text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('services.*') ? 'text-purple-600 font-semibold' : '' }}">
+                    class="w-full flex items-center justify-between text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">
                     <span>⚡ Services</span>
                     <svg id="mobile-services-icon" class="w-4 h-4 transition-transform duration-200" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -439,13 +435,13 @@
                     <div class="bg-purple-50 rounded-lg p-3">
                         <div class="font-semibold text-purple-900 mb-2 text-sm">💻 Programming</div>
                         <div class="space-y-2">
-                            <a href="{{ route('services.programming.show', 'web-development') }}"
+                            <a href="http://assignmenthelpusa.test/programming-help/web-development"
                                 class="block text-sm text-gray-700 hover:text-purple-600">🌐 Web Development</a>
-                            <a href="{{ route('services.programming.show', 'mobile-app') }}"
+                            <a href="http://assignmenthelpusa.test/programming-help/mobile-app"
                                 class="block text-sm text-gray-700 hover:text-purple-600">📱 Mobile Apps</a>
-                            <a href="{{ route('services.programming.show', 'algorithms') }}"
+                            <a href="http://assignmenthelpusa.test/programming-help/algorithms"
                                 class="block text-sm text-gray-700 hover:text-purple-600">🔢 Algorithms</a>
-                            <a href="{{ route('services.programming.index') }}"
+                            <a href="http://assignmenthelpusa.test/programming-help"
                                 class="block text-sm text-purple-600 font-semibold mt-2">View All →</a>
                         </div>
                     </div>
@@ -453,61 +449,60 @@
                     <div class="bg-blue-50 rounded-lg p-3">
                         <div class="font-semibold text-blue-900 mb-2 text-sm">📝 Assignments</div>
                         <div class="space-y-2">
-                            <a href="{{ route('services.essay-writing.index') }}"
+                            <a href="http://assignmenthelpusa.test/essay-writing-help"
                                 class="block text-sm text-gray-700 hover:text-blue-600">✍️ Essay Writing</a>
-                            <a href="{{ route('services.assignment.show', 'research-paper') }}"
+                            <a href="http://assignmenthelpusa.test/assignment-help/research-paper"
                                 class="block text-sm text-gray-700 hover:text-blue-600">📄 Research Paper</a>
-                            <a href="{{ route('services.assignment.show', 'homework-help') }}"
+                            <a href="http://assignmenthelpusa.test/assignment-help/homework-help"
                                 class="block text-sm text-gray-700 hover:text-blue-600">📚 Homework Help</a>
-                            {{-- <a href="{{ route('services.assignment.index') }}"
-                                                class="block text-sm text-blue-600 font-semibold mt-2">View All →</a> --}}
+                            
                         </div>
                     </div>
-                    <a href="{{ route('services.index') }}"
+                    <a href="http://assignmenthelpusa.test/services"
                         class="block text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">View
                         All Services</a>
                 </div>
             </div>
 
-            <a href="{{ route('services.programming.index') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('services.programming.*') ? 'text-purple-600 font-semibold' : '' }}">🔧
+            <a href="http://assignmenthelpusa.test/programming-help"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">🔧
                 Languages</a>
-            <a href="{{ url('/how-it-works') }}"
+            <a href="http://assignmenthelpusa.test/how-it-works"
                 class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2">❓ How It
                 Works</a>
-            <a href="{{ route('experts') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('experts') ? 'text-purple-600 font-semibold' : '' }}">👨‍🏫
+            <a href="http://assignmenthelpusa.test/experts"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">👨‍🏫
                 Experts</a>
-            <a href="{{ route('reviews') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('reviews') ? 'text-purple-600 font-semibold' : '' }}">⭐
+            <a href="http://assignmenthelpusa.test/reviews"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">⭐
                 Reviews</a>
-            <a href="{{ url('/blog') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->is('blog*') ? 'text-purple-600 font-semibold' : '' }}">📝
+            <a href="http://assignmenthelpusa.test/blog"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">📝
                 Blog</a>
-            <a href="{{ route('order') }}"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 {{ request()->routeIs('order') ? 'text-purple-600 font-semibold' : '' }}">💻
+            <a href="http://assignmenthelpusa.test/order"
+                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">💻
                 Get Help</a>
 
             <div class="pt-4 border-t border-gray-200 space-y-3">
-                @guest
-                    <a href="{{ route('login') }}"
+                <?php if (!is_user_logged_in()): ?>
+                    <a href="http://assignmenthelpusa.test/login"
                         class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
                         Login
                     </a>
-                @else
-                    <a href="{{ route('dashboard') }}"
+                <?php else: ?>
+                    <a href="http://assignmenthelpusa.test/dashboard"
                         class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
                         Dashboard
                     </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
+                    <form method="POST" action="http://assignmenthelpusa.test/logout">
+                        
                         <button type="submit"
                             class="w-full text-center text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 transition-all duration-200">
                             Logout
                         </button>
                     </form>
-                @endguest
-                <a href="{{ route('order') }}"
+                <?php endif; ?>
+                <a href="http://assignmenthelpusa.test/order"
                     class="block text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200">
                     Get Help Now
                 </a>

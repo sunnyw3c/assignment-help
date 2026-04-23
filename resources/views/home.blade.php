@@ -91,14 +91,14 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('services.assignment.index') }}"
+                    {{-- <a href="{{ route('services.assignment.index') }}"
                         class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-blue-600 font-black rounded-2xl border-2 border-blue-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest">
                         Explore Custom Writing
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                 d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                    </a>
+                    </a> --}}
                 </article>
 
                 <!-- Service Card 2: Programming Help -->
@@ -499,10 +499,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                     </a>
-                    <a href="{{ route('services.assignment.index') }}"
+                    {{-- <a href="{{ route('services.assignment.index') }}"
                         class="inline-flex items-center justify-center gap-3 px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-white font-bold text-xl hover:bg-white/10 transition-all duration-300">
                         View Services
-                    </a>
+                    </a> --}}
                 </div>
                 <div
                     class="mt-12 flex flex-wrap justify-center gap-8 text-slate-500 text-sm font-bold uppercase tracking-widest">

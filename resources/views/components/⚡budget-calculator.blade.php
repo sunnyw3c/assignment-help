@@ -287,7 +287,7 @@ new class extends Component {
 
                 <!-- CTA -->
                 <div class="mt-auto space-y-3">
-                    <a href="{{ route('services.assignment.index') }}" 
+                    <a href="{{ route('order') }}" 
                        class="group relative block w-full py-4 px-6 rounded-xl overflow-hidden font-black text-center text-white transition-all hover:scale-[1.02] shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transition-transform group-hover:scale-105"></div>
                         <span class="relative flex items-center justify-center gap-2">
