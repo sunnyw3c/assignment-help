@@ -1235,8 +1235,7 @@
     </section>
 
     <!-- Benefits & Guarantees Section: Institutional Protection -->
-    <section class="py-32 bg-white relative overflow-hidden">
-        <!-- Background decorative elements with motion -->
+    <!-- <section class="py-32 bg-white relative overflow-hidden">
         <div
             class="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100/30 rounded-full blur-[120px] -mr-24 -mt-24 pointer-events-none animate-[blob_7s_infinite_alternate]">
         </div>
@@ -1272,10 +1271,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- 1: Original Work -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_100px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1283,7 +1280,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1335,10 +1331,8 @@
                     </div>
                 </div>
 
-                <!-- 2: Money Back -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-[0_40px_100px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1346,7 +1340,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-emerald-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1398,10 +1391,8 @@
                     </div>
                 </div>
 
-                <!-- 3: Revisions -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-[0_40px_100px_-20px_rgba(139,92,246,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1409,7 +1400,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-purple-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1460,10 +1450,8 @@
                     </div>
                 </div>
 
-                <!-- 4: Delivery -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-[0_40px_100px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1471,7 +1459,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-amber-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1522,10 +1509,8 @@
                     </div>
                 </div>
 
-                <!-- 5: Support -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-cyan-100 hover:shadow-[0_40px_100px_-20px_rgba(6,182,212,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1533,7 +1518,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-cyan-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1584,10 +1568,8 @@
                     </div>
                 </div>
 
-                <!-- 6: Confidentiality -->
                 <div
                     class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-rose-100 hover:shadow-[0_40px_100px_-20px_rgba(244,63,94,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
-                    <!-- Shine Effect -->
                     <div
                         class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div
@@ -1595,7 +1577,6 @@
                         </div>
                     </div>
 
-                    <!-- Decorative Expanding Circle -->
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-rose-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                     </div>
@@ -1648,7 +1629,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Student Testimonials: Verified Success Stories -->
     <section class="py-32 bg-slate-50 relative overflow-hidden" id="testimonials">
@@ -2363,7 +2344,7 @@
                 </div>
 
                 <!-- State Coverage -->
-                <div class="grid md:grid-cols-3 gap-6">
+                <!-- <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
                         <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 East Coast</h4>
                         <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
@@ -2405,9 +2386,9 @@
                             <div>Texas</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
+                <!-- <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
                     <h4 class="text-2xl font-bold mb-3">🇺🇸 All 50 States Covered</h4>
                     <p class="text-lg mb-4">No matter where you are in the United States, our expert help is just a click
                         away</p>
@@ -2416,7 +2397,7 @@
                         <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">24/7 Available</span>
                         <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">All Time Zones</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
