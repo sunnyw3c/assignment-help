@@ -112,11 +112,14 @@
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
                         </a>
+                        @hasSection('hide-pricing')
+                        @else
                         <a href="#pricing"
                             class="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
                             <span class="mr-2">💰</span>
                             View Pricing
                         </a>
+                        @endif
                     </div>
 
                     <!-- Trust Indicators -->
@@ -133,10 +136,13 @@
                             <div class="text-2xl font-bold text-purple-600 mb-1">{{ $service->turnaround }}</div>
                             <div class="text-sm text-gray-500">Delivery</div>
                         </div>
+                        @hasSection('hide-pricing')
+                        @else
                         <div class="text-center">
                             <div class="text-2xl font-bold text-orange-600 mb-1">{{ $service->formatted_price }}</div>
                             <div class="text-sm text-gray-500">Starting</div>
                         </div>
+                        @endif
                     </div>
                 </div>
 
@@ -229,6 +235,8 @@
     @yield('custom-content')
 
     <!-- Pricing Section -->
+    @hasSection('hide-pricing')
+    @else
     <section id="pricing" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -321,6 +329,7 @@
             @endif
         </div>
     </section>
+    @endif
 
     <!-- Process Section -->
     @if($details && $details->process_steps && count($details->process_steps) > 0)
@@ -347,7 +356,8 @@
     @endif
 
     <!-- Testimonials Section -->
-    @if($details && $details->testimonials && count($details->testimonials) > 0)
+    @hasSection('hide-testimonials')
+    @elseif($details && $details->testimonials && count($details->testimonials) > 0)
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -387,6 +397,8 @@
 
     <!-- FAQ Section -->
     @if($details && $details->faqs && count($details->faqs) > 0)
+    @hasSection('hide-faq')
+    @else
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -420,6 +432,7 @@
             </div>
         </div>
     </section>
+    @endif
     @endif
 
     <!-- Final CTA Section -->
