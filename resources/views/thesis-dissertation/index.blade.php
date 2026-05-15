@@ -1,9 +1,11 @@
 @extends('assignment-services.show')
 
 @section('title', 'Thesis & Dissertation Writing Service | PhD Experts | Original Research')
-@section('meta_description', 'Expert thesis and dissertation writing help from PhD scholars. Complete chapters or full
+@section('meta_description',
+    'Expert thesis and dissertation writing help from PhD scholars. Complete chapters or full
     dissertations with original research, methodology, data analysis, and defense preparation. All academic disciplines.')
-@section('meta_keywords', 'dissertation writing service, thesis help, PhD dissertation assistance, masters thesis
+@section('meta_keywords',
+    'dissertation writing service, thesis help, PhD dissertation assistance, masters thesis
     writing, dissertation chapters, literature review writing, methodology help, data analysis, dissertation editing, thesis
     proposal writing')
 
@@ -20,10 +22,6 @@
         <meta property="twitter:description"
             content="Expert thesis and dissertation help from PhD scholars. Original research with rigorous methodology and analysis.">
     @endpush
-
-@section('hide-faq')@endsection
-@section('hide-pricing')@endsection
-@section('hide-testimonials')@endsection
 
 @section('custom-content')
     <!-- Comprehensive Thesis & Dissertation Content Section -->
@@ -882,21 +880,7 @@
                         ],
                     ];
                 @endphp
-                @foreach ($mistakes as $m)
-                    <div
-                        class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
-                        <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
-                            <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
-                        </div>
-                    </div>
-                @endforeach
+
             </div>
         </div>
     </section>
