@@ -5,42 +5,6 @@
 
 
 @section('content')
-    <!-- Structured Data for How It Works -->
-    {{-- <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to Get Programming Help",
-        "description": "Step-by-step guide to getting expert programming assistance",
-        "totalTime": "PT1H",
-        "supply": [
-            {
-                "@type": "HowToSupply",
-                "name": "Project Requirements"
-            },
-            {
-                "@type": "HowToSupply",
-                "name": "Programming Language Details"
-            }
-        ],
-        "step": [
-            @foreach($steps as $index => $step)
-            {
-                "@type": "HowToStep",
-                "position": {{ $step['step'] }},
-                "name": "{{ $step['title'] }}",
-                "text": "{{ $step['description'] }}",
-                "estimatedCost": {
-                    "@type": "MonetaryAmount",
-                    "currency": "USD",
-                    "value": "25"
-                }
-            }@if(!$loop->last),@endif
-            @endforeach
-        ]
-    }
-    </script> --}}
-
     <!-- Hero Section with Animated Background -->
     <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <!-- Animated Background Elements -->
@@ -112,7 +76,7 @@
                         </svg>
                     </a>
                     <a href="#process"
-                        class="inline-flex items-center justify-center border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 backdrop-blur-sm">
+                        class="inline-flex items-center justify-center border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 backdrop-blur-sm dark:hover:bg-slate-800/50">
                         <span class="mr-3 text-2xl">👀</span>
                         See How It Works
                     </a>
@@ -123,13 +87,13 @@
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse dark:bg-slate-900"></div>
             </div>
         </div>
     </header>
 
     <!-- Interactive Process Steps -->
-    <section id="process" class="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="process" class="py-24 bg-gray-50 relative overflow-hidden dark:bg-slate-950">
         <!-- Background Elements -->
         <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
@@ -138,9 +102,6 @@
             <!-- Enhanced Section Header -->
             <div class="text-center mb-20 relative">
                 <!-- Background Decorative Elements -->
-                {{-- <div class="absolute inset-0 flex items-center justify-center opacity-5">
-                    <div class="text-9xl font-black text-gray-900 select-none">01234</div>
-                </div> --}}
 
                 <!-- Floating Icons -->
                 <div class="absolute top-0 left-1/4 opacity-20 animate-float-slow">
@@ -180,7 +141,7 @@
                 </div>
 
                 <!-- Enhanced Title with Staggered Animation -->
-                <h2 class="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight relative">
+                <h2 class="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight relative dark:text-white">
                     <span class="inline-block animate-fade-in-up animation-delay-200">Your</span>
                     <span class="inline-block animate-fade-in-up animation-delay-400">Journey</span>
                     <span class="inline-block animate-fade-in-up animation-delay-600">to</span>
@@ -195,31 +156,31 @@
 
                 <!-- Enhanced Description with Icons -->
                 <div class="max-w-4xl mx-auto animate-fade-in-up animation-delay-1000">
-                    <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed dark:text-slate-400">
                         Our streamlined process ensures you get high-quality Academic help quickly and efficiently.
                     </p>
 
                     <!-- Feature Highlights -->
                     <div class="flex flex-wrap justify-center gap-6 mt-8">
                         <div
-                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group dark:bg-slate-900 dark:border-slate-800/80">
                             <span class="text-2xl mr-3 group-hover:scale-110 transition-transform">🚀</span>
-                            <span class="text-gray-700 font-semibold">Fast Delivery</span>
+                            <span class="text-gray-700 font-semibold dark:text-slate-300">Fast Delivery</span>
                         </div>
                         <div
-                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group dark:bg-slate-900 dark:border-slate-800/80">
                             <span class="text-2xl mr-3 group-hover:scale-110 transition-transform">👥</span>
-                            <span class="text-gray-700 font-semibold">Expert Team</span>
+                            <span class="text-gray-700 font-semibold dark:text-slate-300">Expert Team</span>
                         </div>
                         <div
-                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group dark:bg-slate-900 dark:border-slate-800/80">
                             <span class="text-2xl mr-3 group-hover:scale-110 transition-transform">🎯</span>
-                            <span class="text-gray-700 font-semibold">100% Quality</span>
+                            <span class="text-gray-700 font-semibold dark:text-slate-300">100% Quality</span>
                         </div>
                         <div
-                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                            class="flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group dark:bg-slate-900 dark:border-slate-800/80">
                             <span class="text-2xl mr-3 group-hover:scale-110 transition-transform">🔒</span>
-                            <span class="text-gray-700 font-semibold">Secure & Private</span>
+                            <span class="text-gray-700 font-semibold dark:text-slate-300">Secure & Private</span>
                         </div>
                     </div>
                 </div>
@@ -233,7 +194,7 @@
                             <div class="w-3 h-3 bg-pink-500 rounded-full animate-pulse animation-delay-400"></div>
                             <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse animation-delay-600"></div>
                         </div>
-                        <span class="text-gray-500 text-sm font-medium">4 Simple Steps</span>
+                        <span class="text-gray-500 text-sm font-medium dark:text-slate-500">4 Simple Steps</span>
                     </div>
                 </div>
             </div>
@@ -265,7 +226,7 @@
                             style="animation-delay: {{ $index * 0.2 }}s;" x-data="{ expanded: false }">
                             <!-- Step Card with Enhanced Design -->
                             <div
-                                class="relative bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-6 border border-gray-100 overflow-hidden">
+                                class="relative bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-6 border border-gray-100 overflow-hidden dark:bg-slate-900 dark:border-slate-800/80">
                                 <!-- Background Pattern -->
                                 <div class="absolute top-0 right-0 w-32 h-32 opacity-5">
                                     @if ($index == 0)
@@ -369,68 +330,68 @@
                                     </div>
 
                                     <!-- Title with Better Typography -->
-                                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center leading-tight">
+                                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center leading-tight dark:text-white">
                                         {{ $step['title'] }}
                                     </h3>
 
                                     <!-- Description with Better Formatting -->
-                                    <p class="text-gray-600 text-center mb-6 leading-relaxed text-base">
+                                    <p class="text-gray-600 text-center mb-6 leading-relaxed text-base dark:text-slate-400">
                                         {{ $step['description'] }}
                                     </p>
 
                                     <!-- Enhanced Time Estimate -->
                                     @if ($index == 0)
                                         <div
-                                            class="bg-gradient-to-r from-blue-50 to-white rounded-2xl p-4 mb-6 border border-blue-500/10">
+                                            class="bg-gradient-to-r from-blue-50 to-white rounded-2xl p-4 mb-6 border border-blue-500/10 dark:to-slate-900">
                                             <div class="flex items-center justify-center text-blue-500">
                                                 <div
                                                     class="w-8 h-8 bg-blue-500/10 rounded-full flex items-center justify-center mr-3">
                                                     <span class="text-lg">⏰</span>
                                                 </div>
                                                 <div>
-                                                    <div class="text-sm text-gray-500 font-medium">Estimated Time</div>
+                                                    <div class="text-sm text-gray-500 font-medium dark:text-slate-500">Estimated Time</div>
                                                     <div class="font-bold text-lg">{{ $step['estimated_time'] }}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     @elseif($index == 1)
                                         <div
-                                            class="bg-gradient-to-r from-purple-50 to-white rounded-2xl p-4 mb-6 border border-purple-500/10">
+                                            class="bg-gradient-to-r from-purple-50 to-white rounded-2xl p-4 mb-6 border border-purple-500/10 dark:to-slate-900">
                                             <div class="flex items-center justify-center text-purple-500">
                                                 <div
                                                     class="w-8 h-8 bg-purple-500/10 rounded-full flex items-center justify-center mr-3">
                                                     <span class="text-lg">⏰</span>
                                                 </div>
                                                 <div>
-                                                    <div class="text-sm text-gray-500 font-medium">Estimated Time</div>
+                                                    <div class="text-sm text-gray-500 font-medium dark:text-slate-500">Estimated Time</div>
                                                     <div class="font-bold text-lg">{{ $step['estimated_time'] }}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     @elseif($index == 2)
                                         <div
-                                            class="bg-gradient-to-r from-rose-50 to-white rounded-2xl p-4 mb-6 border border-rose-500/10">
+                                            class="bg-gradient-to-r from-rose-50 to-white rounded-2xl p-4 mb-6 border border-rose-500/10 dark:to-slate-900">
                                             <div class="flex items-center justify-center text-rose-500">
                                                 <div
                                                     class="w-8 h-8 bg-rose-500/10 rounded-full flex items-center justify-center mr-3">
                                                     <span class="text-lg">⏰</span>
                                                 </div>
                                                 <div>
-                                                    <div class="text-sm text-gray-500 font-medium">Estimated Time</div>
+                                                    <div class="text-sm text-gray-500 font-medium dark:text-slate-500">Estimated Time</div>
                                                     <div class="font-bold text-lg">{{ $step['estimated_time'] }}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     @else
                                         <div
-                                            class="bg-gradient-to-r from-emerald-50 to-white rounded-2xl p-4 mb-6 border border-emerald-500/10">
+                                            class="bg-gradient-to-r from-emerald-50 to-white rounded-2xl p-4 mb-6 border border-emerald-500/10 dark:to-slate-900">
                                             <div class="flex items-center justify-center text-emerald-500">
                                                 <div
                                                     class="w-8 h-8 bg-emerald-500/10 rounded-full flex items-center justify-center mr-3">
                                                     <span class="text-lg">⏰</span>
                                                 </div>
                                                 <div>
-                                                    <div class="text-sm text-gray-500 font-medium">Estimated Time</div>
+                                                    <div class="text-sm text-gray-500 font-medium dark:text-slate-500">Estimated Time</div>
                                                     <div class="font-bold text-lg">{{ $step['estimated_time'] }}</div>
                                                 </div>
                                             </div>
@@ -516,13 +477,7 @@
                                 x-transition:leave="transition ease-in duration-200"
                                 x-transition:leave-start="opacity-100 transform scale-100 translate-y-0"
                                 x-transition:leave-end="opacity-0 transform scale-95 -translate-y-4"
-                                @if ($index == 0) class="mt-6 bg-gradient-to-br from-blue-50 via-white to-blue-50/50 rounded-3xl p-8 border-2 border-blue-500/20 shadow-xl backdrop-blur-sm">
-                                 @elseif($index == 1)
-                                     class="mt-6 bg-gradient-to-br from-purple-50 via-white to-purple-50/50 rounded-3xl p-8 border-2 border-purple-500/20 shadow-xl backdrop-blur-sm">
-                                 @elseif($index == 2)
-                                     class="mt-6 bg-gradient-to-br from-rose-50 via-white to-rose-50/50 rounded-3xl p-8 border-2 border-rose-500/20 shadow-xl backdrop-blur-sm">
-                                 @else
-                                     class="mt-6 bg-gradient-to-br from-emerald-50 via-white to-emerald-50/50 rounded-3xl p-8 border-2 border-emerald-500/20 shadow-xl backdrop-blur-sm"> @endif
+                                class="mt-6 bg-gradient-to-br {{ $index == 0 ? 'from-blue-50 via-white to-blue-50/50 border-blue-500/20' : ($index == 1 ? 'from-purple-50 via-white to-purple-50/50 border-purple-500/20' : ($index == 2 ? 'from-rose-50 via-white to-rose-50/50 border-rose-500/20' : 'from-emerald-50 via-white to-emerald-50/50 border-emerald-500/20')) }} rounded-3xl p-8 border-2 shadow-xl backdrop-blur-sm">
                                 <div class="flex items-center mb-6">
                                 @if ($index == 0)
                                     <div
@@ -545,7 +500,7 @@
                                         <span class="text-white text-lg">✨</span>
                                     </div>
                                 @endif
-                                <h4 class="text-xl font-black text-gray-900">What's Included:</h4>
+                                <h4 class="text-xl font-black text-gray-900 dark:text-white">What's Included:</h4>
                             </div>
 
                             <div class="grid gap-4">
@@ -572,7 +527,7 @@
                                                 <span class="text-white text-xs">✓</span>
                                             </div>
                                         @endif
-                                        <span class="text-gray-700 leading-relaxed font-medium">{{ $detail }}</span>
+                                        <span class="text-gray-700 leading-relaxed font-medium dark:text-slate-300">{{ $detail }}</span>
                                     </div>
                                 @endforeach
                             </div>
@@ -581,7 +536,7 @@
                             @if ($index == 0)
                                 <div class="mt-6 pt-6 border-t border-blue-500/20">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-500 font-medium">Step Progress</span>
+                                        <span class="text-gray-500 font-medium dark:text-slate-500">Step Progress</span>
                                         <span class="text-blue-500 font-bold">{{ $index + 1 }}/4</span>
                                     </div>
                                     <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
@@ -592,7 +547,7 @@
                             @elseif($index == 1)
                                 <div class="mt-6 pt-6 border-t border-purple-500/20">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-500 font-medium">Step Progress</span>
+                                        <span class="text-gray-500 font-medium dark:text-slate-500">Step Progress</span>
                                         <span class="text-purple-500 font-bold">{{ $index + 1 }}/4</span>
                                     </div>
                                     <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
@@ -603,7 +558,7 @@
                             @elseif($index == 2)
                                 <div class="mt-6 pt-6 border-t border-rose-500/20">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-500 font-medium">Step Progress</span>
+                                        <span class="text-gray-500 font-medium dark:text-slate-500">Step Progress</span>
                                         <span class="text-rose-500 font-bold">{{ $index + 1 }}/4</span>
                                     </div>
                                     <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
@@ -614,7 +569,7 @@
                             @else
                                 <div class="mt-6 pt-6 border-t border-emerald-500/20">
                                     <div class="flex justify-between items-center text-sm">
-                                        <span class="text-gray-500 font-medium">Step Progress</span>
+                                        <span class="text-gray-500 font-medium dark:text-slate-500">Step Progress</span>
                                         <span class="text-emerald-500 font-bold">{{ $index + 1 }}/4</span>
                                     </div>
                                     <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
@@ -631,12 +586,12 @@
             <!-- Enhanced Bottom Section -->
             <div class="mt-20 text-center">
                 <div
-                    class="inline-flex items-center bg-gradient-to-r from-gray-100 to-gray-50 rounded-full px-8 py-4 shadow-lg border border-gray-200">
+                    class="inline-flex items-center bg-gradient-to-r from-gray-100 to-gray-50 rounded-full px-8 py-4 shadow-lg border border-gray-200 dark:border-slate-800/80">
                     <div class="flex items-center space-x-4">
-                        <span class="text-gray-600 font-semibold">Complete Process Time:</span>
-                        <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm">
+                        <span class="text-gray-600 font-semibold dark:text-slate-400">Complete Process Time:</span>
+                        <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm dark:bg-slate-900">
                             <span class="text-2xl mr-2">⚡</span>
-                            <span class="font-black text-xl text-gray-900">1-3 Hours</span>
+                            <span class="font-black text-xl text-gray-900 dark:text-white">1-3 Hours</span>
                         </div>
                     </div>
                 </div>
@@ -803,15 +758,26 @@
                                     </div>
                                 @endif
 
+                                @php
+                                    $featureBorderClass = $feature['color'] == 'blue'
+                                        ? 'border-blue-400/50 shadow-2xl shadow-blue-500/25'
+                                        : ($feature['color'] == 'green'
+                                            ? 'border-green-400/50 shadow-2xl shadow-green-500/25'
+                                            : ($feature['color'] == 'purple'
+                                                ? 'border-purple-400/50 shadow-2xl shadow-purple-500/25'
+                                                : 'border-orange-400/50 shadow-2xl shadow-orange-500/25'));
+                                    $featureTitleClass = $feature['color'] == 'blue'
+                                        ? 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text'
+                                        : ($feature['color'] == 'green'
+                                            ? 'bg-gradient-to-r from-green-400 to-green-300 bg-clip-text'
+                                            : ($feature['color'] == 'purple'
+                                                ? 'bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text'
+                                                : 'bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text'));
+                                @endphp
+
                                 <!-- Main Card -->
                                 <div class="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 border border-white/10 h-full flex flex-col"
-                                    @if ($feature['color'] == 'blue') :class="hovered ? 'border-blue-400/50 shadow-2xl shadow-blue-500/25' : ''"
-                                 @elseif($feature['color'] == 'green')
-                                     :class="hovered ? 'border-green-400/50 shadow-2xl shadow-green-500/25' : ''"
-                                 @elseif($feature['color'] == 'purple')
-                                     :class="hovered ? 'border-purple-400/50 shadow-2xl shadow-purple-500/25' : ''"
-                                 @else
-                                     :class="hovered ? 'border-orange-400/50 shadow-2xl shadow-orange-500/25' : ''" @endif>
+                                    :class="hovered ? '{{ $featureBorderClass }}' : ''">
 
                                     <!-- Floating Particles -->
                                     <div class="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
@@ -879,13 +845,7 @@
                                     <!-- Enhanced Content -->
                                     <div class="flex-grow flex flex-col">
                                         <h3 class="text-2xl font-black mb-4 text-white leading-tight group-hover:text-transparent"
-                                            @if ($feature['color'] == 'blue') :class="hovered ? 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text' : ''"
-                                        @elseif($feature['color'] == 'green')
-                                            :class="hovered ? 'bg-gradient-to-r from-green-400 to-green-300 bg-clip-text' : ''"
-                                        @elseif($feature['color'] == 'purple')
-                                            :class="hovered ? 'bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text' : ''"
-                                        @else
-                                            :class="hovered ? 'bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text' : ''" @endif>
+                                            :class="hovered ? '{{ $featureTitleClass }}' : ''">
                                             {{ $feature['title'] }}
                                         </h3>
 
@@ -952,11 +912,11 @@
     </section>
 
     <!-- Stats Counter Section -->
-    <section class="py-20 bg-white relative overflow-hidden">
+    <section class="py-20 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Trusted by Students Worldwide</h3>
-                <p class="text-xl text-gray-600">Our track record speaks for itself</p>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4 dark:text-white">Trusted by Students Worldwide</h3>
+                <p class="text-xl text-gray-600 dark:text-slate-400">Our track record speaks for itself</p>
             </div>
 
             <!-- Animated Counter -->
@@ -967,8 +927,8 @@
                             class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <span class="text-2xl">{{ $stat['icon'] }}</span>
                         </div>
-                        <div x-text="counters[{{ $index }}]" class="text-4xl font-black text-gray-900 mb-2"></div>
-                        <div class="text-gray-600 font-medium">{{ $stat['label'] }}</div>
+                        <div x-text="counters[{{ $index }}]" class="text-4xl font-black text-gray-900 mb-2 dark:text-white"></div>
+                        <div class="text-gray-600 font-medium dark:text-slate-400">{{ $stat['label'] }}</div>
                     </div>
                 @endforeach
             </div>
@@ -976,7 +936,7 @@
     </section>
 
     <!-- Student Reviews Section -->
-    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950">
         <!-- Background Decorations -->
         <div class="absolute inset-0">
             <div class="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -991,11 +951,11 @@
                     <span class="mr-3 text-xl">💬</span>
                     STUDENT TESTIMONIALS
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight dark:text-white">
                     What Our Students
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Say About Us</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed dark:text-slate-400">
                     Real feedback from real students who achieved academic success with our assignment help USA
                 </p>
             </div>
@@ -1009,7 +969,7 @@
                          style="animation-delay: {{ $index * 0.2 }}s">
 
                         <!-- Review Card -->
-                        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col relative overflow-hidden">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col relative overflow-hidden dark:bg-slate-900 dark:border-slate-800/80">
 
                             <!-- Background Pattern -->
                             <div class="absolute top-0 right-0 w-32 h-32 opacity-5">
@@ -1040,7 +1000,7 @@
 
                             <!-- Review Content -->
                             <div class="flex-grow">
-                                <blockquote class="text-gray-700 leading-relaxed mb-6 text-lg">
+                                <blockquote class="text-gray-700 leading-relaxed mb-6 text-lg dark:text-slate-300">
                                     <span class="text-4xl text-blue-500 opacity-30 leading-none">"</span>
                                     <span x-show="!expanded">{{ Str::limit($review['review'], 120) }}</span>
                                     <span x-show="expanded" x-transition>{{ $review['review'] }}</span>
@@ -1061,29 +1021,29 @@
                             </div>
 
                             <!-- Student Info -->
-                            <div class="border-t border-gray-100 pt-6 mt-auto">
+                            <div class="border-t border-gray-100 pt-6 mt-auto dark:border-slate-800/80">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center space-x-4">
                                         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl shadow-lg">
                                             {{ $review['avatar'] }}
                                         </div>
                                         <div>
-                                            <div class="font-bold text-gray-900">{{ $review['name'] }}</div>
-                                            <div class="text-sm text-gray-600">{{ $review['role'] }}</div>
+                                            <div class="font-bold text-gray-900 dark:text-white">{{ $review['name'] }}</div>
+                                            <div class="text-sm text-gray-600 dark:text-slate-400">{{ $review['role'] }}</div>
                                             <div class="text-xs text-blue-600 font-medium">{{ $review['university'] }}</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Project Details -->
-                                <div class="mt-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-4">
+                                <div class="mt-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-4 dark:to-slate-950">
                                     <div class="grid grid-cols-2 gap-4 text-sm">
                                         <div>
-                                            <div class="text-gray-500 font-medium">Project</div>
-                                            <div class="text-gray-900 font-semibold">{{ $review['project'] }}</div>
+                                            <div class="text-gray-500 font-medium dark:text-slate-500">Project</div>
+                                            <div class="text-gray-900 font-semibold dark:text-white">{{ $review['project'] }}</div>
                                         </div>
                                         <div>
-                                            <div class="text-gray-500 font-medium">Completed in</div>
+                                            <div class="text-gray-500 font-medium dark:text-slate-500">Completed in</div>
                                             <div class="text-green-600 font-semibold">{{ $review['completion_time'] }}</div>
                                         </div>
                                     </div>
@@ -1098,11 +1058,11 @@
             </div>
 
             <!-- Overall Rating Summary -->
-            <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+            <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                 <div class="grid md:grid-cols-3 gap-8 items-center">
                     <!-- Overall Rating -->
                     <div class="text-center">
-                        <div class="text-6xl font-black text-gray-900 mb-2">4.9</div>
+                        <div class="text-6xl font-black text-gray-900 mb-2 dark:text-white">4.9</div>
                         <div class="flex justify-center space-x-1 mb-2">
                             @for ($i = 1; $i <= 5; $i++)
                                 <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -1110,7 +1070,7 @@
                                 </svg>
                             @endfor
                         </div>
-                        <div class="text-gray-600 font-medium">Overall Rating</div>
+                        <div class="text-gray-600 font-medium dark:text-slate-400">Overall Rating</div>
                     </div>
 
                     <!-- Divider -->
@@ -1121,11 +1081,11 @@
                         <div class="grid grid-cols-2 gap-6">
                             <div>
                                 <div class="text-3xl font-black text-blue-600">1,250+</div>
-                                <div class="text-gray-600 font-medium">Happy Students</div>
+                                <div class="text-gray-600 font-medium dark:text-slate-400">Happy Students</div>
                             </div>
                             <div>
                                 <div class="text-3xl font-black text-green-600">98.5%</div>
-                                <div class="text-gray-600 font-medium">Satisfaction Rate</div>
+                                <div class="text-gray-600 font-medium dark:text-slate-400">Satisfaction Rate</div>
                             </div>
                         </div>
                     </div>
@@ -1135,7 +1095,7 @@
             <!-- Show More Reviews Button -->
             <div class="text-center mt-16">
                 <div class="inline-flex flex-col items-center">
-                    <p class="text-gray-600 mb-6 text-lg">
+                    <p class="text-gray-600 mb-6 text-lg dark:text-slate-400">
                         Read more authentic reviews from students like you
                     </p>
                     <a href="#"
@@ -1146,7 +1106,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
-                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                    <div class="mt-4 flex items-center text-sm text-gray-500 dark:text-slate-500">
                         <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                         </svg>
@@ -1179,7 +1139,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
                     <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl dark:bg-slate-900 dark:hover:bg-slate-800/50">
                         <span class="mr-4 text-3xl">🚀</span>
                         Start Your Project Now
                         <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"
@@ -1189,7 +1149,7 @@
                         </svg>
                     </a>
                     <a href="{{ route('services.index') }}"
-                        class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300">
+                        class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 dark:hover:bg-slate-800/50">
                         <span class="mr-4 text-3xl">⚡</span>
                         View All Services
                     </a>
@@ -1199,26 +1159,26 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-white">
+    <section id="faq" class="py-24 bg-white dark:bg-slate-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 dark:text-white">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto dark:text-slate-400">
                     Here are some of the most common questions we get about our process.
                 </p>
             </div>
 
             <div class="max-w-4xl mx-auto" x-data="{ open: null }">
                 @foreach($faqs as $index => $faq)
-                    <div class="border-b border-gray-200">
+                    <div class="border-b border-gray-200 dark:border-slate-800/80">
                         <button @click="open = open === {{ $index }} ? null : {{ $index }} " class="w-full flex justify-between items-center py-6 text-left">
-                            <h3 class="text-xl font-semibold text-gray-800">{{ $faq['question'] }}</h3>
-                            <svg :class="{'transform rotate-180': open === {{ $index }} }" class="w-6 h-6 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-slate-200">{{ $faq['question'] }}</h3>
+                            <svg :class="{'transform rotate-180': open === {{ $index }} }" class="w-6 h-6 text-gray-500 transition-transform duration-300 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
                         <div x-show="open === {{ $index }} " x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4" class="pb-6">
-                            <p class="text-gray-600 leading-relaxed">{{ $faq['answer'] }}</p>
+                            <p class="text-gray-600 leading-relaxed dark:text-slate-400">{{ $faq['answer'] }}</p>
                         </div>
                     </div>
                 @endforeach
