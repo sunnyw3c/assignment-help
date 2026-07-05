@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Expert Team - Assignment Help USA | Qualified Academic Support</title>
-    <meta name="description" content="Meet the experts at Assignment Help USA. Qualified professionals with advanced degrees providing reliable academic assistance. Your success is our mission!">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="antialiased bg-gray-50">
-    @include('partials.navbar')
+@extends('layouts.app')
+
+@section('title', 'Our Expert Team - Assignment Help USA | Qualified Academic Support')
+@section('description', 'Meet the experts at Assignment Help USA. Qualified professionals with advanced degrees providing reliable academic assistance. Your success is our mission!')
+
+@section('content')
 
     <!-- Hero Section -->
     <div class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-16">
@@ -22,23 +17,23 @@
 
     <!-- Stats Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12 dark:bg-slate-900">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div>
                     <div class="text-4xl font-bold text-purple-600">50+</div>
-                    <div class="text-gray-600 mt-2">Expert Tutors</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Expert Tutors</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-purple-600">15+</div>
-                    <div class="text-gray-600 mt-2">Years Average Experience</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Years Average Experience</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-purple-600">7,500+</div>
-                    <div class="text-gray-600 mt-2">Projects Completed</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Projects Completed</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-purple-600">4.9/5</div>
-                    <div class="text-gray-600 mt-2">Average Expert Rating</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Average Expert Rating</div>
                 </div>
             </div>
         </div>
@@ -46,10 +41,10 @@
 
     <!-- Filter Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="bg-white rounded-lg shadow-md p-6 dark:bg-slate-900">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
-                    <h2 class="text-lg font-semibold text-gray-900 mb-2">Filter by Subject Area</h2>
+                    <h2 class="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Filter by Subject Area</h2>
                     <div class="flex flex-wrap gap-2" id="filter-buttons">
                         <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 bg-purple-600 text-white" data-filter="all">
                             All Experts
@@ -57,7 +52,7 @@
                         <!-- Filter buttons will be added dynamically -->
                     </div>
                 </div>
-                <div class="text-sm text-gray-600">
+                <div class="text-sm text-gray-600 dark:text-slate-400">
                     Showing <span id="showing-count">0</span> of <span id="total-experts">0</span> experts
                 </div>
             </div>
@@ -91,16 +86,16 @@
             <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
                 Our qualified experts are ready to help you with any academic challenge
             </p>
-            <a href="{{ route('order') }}" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <a href="{{ route('order') }}" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg dark:bg-slate-900">
                 Request Help Now
             </a>
         </div>
     </div>
 
     <!-- Why Choose Our Experts -->
-    <div class="bg-white py-16">
+    <div class="bg-white py-16 dark:bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Experts?</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12 dark:text-white">Why Choose Our Experts?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -108,8 +103,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Verified Credentials</h3>
-                    <p class="text-gray-600">All experts hold advanced degrees from accredited universities and undergo rigorous verification</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Verified Credentials</h3>
+                    <p class="text-gray-600 dark:text-slate-400">All experts hold advanced degrees from accredited universities and undergo rigorous verification</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -117,8 +112,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Quick Response Time</h3>
-                    <p class="text-gray-600">Get matched with an expert quickly and receive prompt responses to your questions</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Quick Response Time</h3>
+                    <p class="text-gray-600 dark:text-slate-400">Get matched with an expert quickly and receive prompt responses to your questions</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -126,15 +121,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Subject Specialists</h3>
-                    <p class="text-gray-600">Each expert specializes in specific subjects to provide in-depth knowledge and guidance</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Subject Specialists</h3>
+                    <p class="text-gray-600 dark:text-slate-400">Each expert specializes in specific subjects to provide in-depth knowledge and guidance</p>
                 </div>
             </div>
         </div>
     </div>
 
-    @include('partials.footer')
-
+    @push('scripts')
     <script>
         // Experts pagination configuration
         const EXPERTS_PER_PAGE = 9;
@@ -236,42 +230,42 @@
         function createExpertCard(expert) {
             const stars = generateStars(expert.rating);
             const subjectsHTML = expert.subjects.slice(0, 3).map(subject =>
-                `<span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">${subject}</span>`
+                `<span class="inline-block bg-purple-100 dark:bg-purple-950/40 text-purple-800 dark:text-purple-300 text-xs px-2 py-1 rounded mr-1 mb-1">${subject}</span>`
             ).join('');
-            const moreSubjects = expert.subjects.length > 3 ? `<span class="text-xs text-gray-600">+${expert.subjects.length - 3} more</span>` : '';
+            const moreSubjects = expert.subjects.length > 3 ? `<span class="text-xs text-gray-600 dark:text-slate-400">+${expert.subjects.length - 3} more</span>` : '';
 
             return `
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                     <!-- Expert Header -->
                     <div class="flex items-start mb-4">
                         <div class="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
                             ${expert.name.split(' ').map(n => n[0]).join('')}
                         </div>
                         <div class="ml-4 flex-1">
-                            <h3 class="text-lg font-bold text-gray-900">${expert.name}</h3>
-                            <p class="text-sm text-purple-600 font-medium">${expert.title}</p>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">${expert.name}</h3>
+                            <p class="text-sm text-purple-600 dark:text-purple-400 font-medium">${expert.title}</p>
                             <div class="flex items-center mt-1">
                                 ${stars}
-                                <span class="ml-2 text-sm text-gray-600">${expert.rating}</span>
+                                <span class="ml-2 text-sm text-gray-600 dark:text-slate-400">${expert.rating}</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Specialization Badge -->
                     <div class="mb-3">
-                        <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full font-medium">
+                        <span class="inline-block bg-indigo-100 dark:bg-indigo-950/40 text-indigo-800 dark:text-indigo-400 text-xs px-3 py-1 rounded-full font-medium">
                             ${expert.specialization}
                         </span>
                     </div>
 
                     <!-- Bio -->
-                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed dark:text-slate-350">
                         ${expert.bio}
                     </p>
 
                     <!-- Subjects -->
                     <div class="mb-4">
-                        <p class="text-xs font-semibold text-gray-600 mb-2">EXPERTISE:</p>
+                        <p class="text-xs font-semibold text-gray-600 mb-2 dark:text-slate-450">EXPERTISE:</p>
                         <div class="flex flex-wrap">
                             ${subjectsHTML}
                             ${moreSubjects}
@@ -279,24 +273,24 @@
                     </div>
 
                     <!-- Stats -->
-                    <div class="border-t pt-4 grid grid-cols-2 gap-4">
+                    <div class="border-t dark:border-slate-800 pt-4 grid grid-cols-2 gap-4">
                         <div>
-                            <p class="text-xs text-gray-600">Experience</p>
-                            <p class="text-sm font-semibold text-gray-900">${expert.experience}</p>
+                            <p class="text-xs text-gray-600 dark:text-slate-400">Experience</p>
+                            <p class="text-sm font-semibold text-gray-900 dark:text-white">${expert.experience}</p>
                         </div>
                         <div>
-                            <p class="text-xs text-gray-600">Completed Projects</p>
-                            <p class="text-sm font-semibold text-gray-900">${expert.completedProjects}+</p>
+                            <p class="text-xs text-gray-600 dark:text-slate-400">Completed Projects</p>
+                            <p class="text-sm font-semibold text-gray-900 dark:text-white">${expert.completedProjects}+</p>
                         </div>
                     </div>
 
                     <!-- Availability Badge -->
-                    <div class="mt-4 pt-4 border-t flex items-center justify-between">
-                        <span class="inline-flex items-center text-xs font-medium text-green-700">
+                    <div class="mt-4 pt-4 border-t dark:border-slate-800 flex items-center justify-between">
+                        <span class="inline-flex items-center text-xs font-medium text-green-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/20 px-2 py-1 rounded-lg">
                             <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                             ${expert.availability}
                         </span>
-                        <a href="{{ route('order') }}" class="text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors">
+                        <a href="{{ route('order') }}" class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
                             Request Help →
                         </a>
                     </div>
@@ -363,7 +357,7 @@
                     const pageButton = createPageButton(i, i === currentPage);
                     container.innerHTML += pageButton;
                 } else if (i === currentPage - 2 || i === currentPage + 2) {
-                    container.innerHTML += '<span class="px-2 text-gray-500">...</span>';
+                    container.innerHTML += '<span class="px-2 text-gray-500 dark:text-slate-500">...</span>';
                 }
             }
 
@@ -424,5 +418,5 @@
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', fetchExperts);
     </script>
-</body>
-</html>
+    @endpush
+@endsection

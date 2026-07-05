@@ -7,7 +7,7 @@
     <meta name="description" content="Read real reviews from students about Assignment Help USA. Join thousands of satisfied users who trust our reliable, plagiarism-free academic support services.">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="antialiased bg-gray-50">
+<body class="antialiased bg-gray-50 dark:bg-slate-950">
     @include('partials.navbar')
 
     <!-- Hero Section -->
@@ -22,23 +22,23 @@
 
     <!-- Stats Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-12 dark:bg-slate-900">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div>
                     <div class="text-4xl font-bold text-blue-600">98%</div>
-                    <div class="text-gray-600 mt-2">Satisfaction Rate</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Satisfaction Rate</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-blue-600">10,000+</div>
-                    <div class="text-gray-600 mt-2">Happy Students</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Happy Students</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-blue-600">4.9/5</div>
-                    <div class="text-gray-600 mt-2">Average Rating</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Average Rating</div>
                 </div>
                 <div>
                     <div class="text-4xl font-bold text-blue-600">50+</div>
-                    <div class="text-gray-600 mt-2">Expert Writers</div>
+                    <div class="text-gray-600 mt-2 dark:text-slate-400">Expert Writers</div>
                 </div>
             </div>
         </div>
@@ -48,10 +48,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div class="mb-8 flex justify-between items-center">
             <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">What Our Students Say</h2>
-                <p class="text-gray-600">Real reviews from real students who have used our services</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-2 dark:text-white">What Our Students Say</h2>
+                <p class="text-gray-600 dark:text-slate-400">Real reviews from real students who have used our services</p>
             </div>
-            <div class="text-sm text-gray-600">
+            <div class="text-sm text-gray-600 dark:text-slate-400">
                 Showing <span id="showing-start">0</span>-<span id="showing-end">0</span> of <span id="total-reviews">0</span> reviews
             </div>
         </div>
@@ -81,14 +81,14 @@
             <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Experience the same quality service that thousands of students trust for their academic success
             </p>
-            <a href="{{ route('order') }}" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+            <a href="{{ route('order') }}" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg dark:bg-slate-900">
                 Get Started Today
             </a>
         </div>
     </div>
 
     <!-- Trust Indicators -->
-    <div class="bg-white py-12">
+    <div class="bg-white py-12 dark:bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -97,8 +97,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-900">100% Original</h3>
-                    <p class="text-sm text-gray-600 mt-1">Plagiarism-free work</p>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">100% Original</h3>
+                    <p class="text-sm text-gray-600 mt-1 dark:text-slate-400">Plagiarism-free work</p>
                 </div>
                 <div>
                     <div class="text-blue-600 mb-2">
@@ -106,8 +106,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-900">On-Time Delivery</h3>
-                    <p class="text-sm text-gray-600 mt-1">Never miss a deadline</p>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">On-Time Delivery</h3>
+                    <p class="text-sm text-gray-600 mt-1 dark:text-slate-400">Never miss a deadline</p>
                 </div>
                 <div>
                     <div class="text-blue-600 mb-2">
@@ -115,8 +115,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-900">Expert Writers</h3>
-                    <p class="text-sm text-gray-600 mt-1">Qualified professionals</p>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Expert Writers</h3>
+                    <p class="text-sm text-gray-600 mt-1 dark:text-slate-400">Qualified professionals</p>
                 </div>
                 <div>
                     <div class="text-blue-600 mb-2">
@@ -124,8 +124,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-gray-900">Secure & Private</h3>
-                    <p class="text-sm text-gray-600 mt-1">Your data is safe</p>
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Secure & Private</h3>
+                    <p class="text-sm text-gray-600 mt-1 dark:text-slate-400">Your data is safe</p>
                 </div>
             </div>
         </div>
@@ -193,27 +193,27 @@
             });
 
             return `
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 dark:bg-slate-900">
                     <!-- Rating Stars -->
                     <div class="flex items-center mb-3">
                         ${stars}
-                        <span class="ml-2 text-sm text-gray-600">${review.rating}.0</span>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-slate-400">${review.rating}.0</span>
                     </div>
 
                     <!-- Service Badge -->
                     <div class="mb-3">
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-medium">
+                        <span class="inline-block bg-blue-100 dark:bg-blue-950/40 text-blue-800 dark:text-blue-400 text-xs px-3 py-1 rounded-full font-medium">
                             ${review.service}
                         </span>
                     </div>
 
                     <!-- Review Text -->
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-gray-700 mb-4 leading-relaxed dark:text-slate-300">
                         "${review.review}"
                     </p>
 
                     <!-- Reviewer Info -->
-                    <div class="border-t pt-4">
+                    <div class="border-t dark:border-slate-800 pt-4">
                         <div class="flex items-center">
                             <div class="flex-shrink-0">
                                 <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold">
@@ -221,11 +221,11 @@
                                 </div>
                             </div>
                             <div class="ml-3">
-                                <p class="text-sm font-semibold text-gray-900">${review.name}</p>
-                                <p class="text-xs text-gray-600">${review.course}</p>
+                                <p class="text-sm font-semibold text-gray-900 dark:text-white">${review.name}</p>
+                                <p class="text-xs text-gray-600 dark:text-slate-400">${review.course}</p>
                             </div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-2">${formattedDate}</p>
+                        <p class="text-xs text-gray-500 mt-2 dark:text-slate-500">${formattedDate}</p>
                     </div>
                 </div>
             `;
@@ -269,7 +269,7 @@
                     const pageButton = createPageButton(i, i === currentPage);
                     container.innerHTML += pageButton;
                 } else if (i === currentPage - 2 || i === currentPage + 2) {
-                    container.innerHTML += '<span class="px-2 text-gray-500">...</span>';
+                    container.innerHTML += '<span class="px-2 text-gray-500 dark:text-slate-500">...</span>';
                 }
             }
 

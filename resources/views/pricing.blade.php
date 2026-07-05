@@ -99,7 +99,7 @@
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse dark:bg-slate-900"></div>
             </div>
         </div>
     </header>
@@ -116,7 +116,7 @@
     </section>
 
     <!-- Pricing Plans Section -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden dark:from-slate-950 dark:to-slate-950">
         <div class="container mx-auto px-4">
             <!-- Section Header -->
             <div class="text-center mb-20">
@@ -124,11 +124,11 @@
                     <span class="mr-3 text-xl">💎</span>
                     PRICING PLANS
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                     Choose Your
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Perfect Plan</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto dark:text-slate-400">
                     All plans include quality guarantee, plagiarism report, and expert assistance
                 </p>
             </div>
@@ -147,7 +147,7 @@
                         @endif
 
                         <!-- Pricing Card -->
-                        <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-2 {{ $plan['recommended'] ? 'border-purple-500' : 'border-gray-200' }} overflow-hidden h-full flex flex-col"
+                        <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-2 {{ $plan['recommended'] ? 'border-purple-500' : 'border-gray-200' }} overflow-hidden h-full flex flex-col dark:bg-slate-900"
                              :class="{ 'scale-105': {{ $plan['recommended'] ? 'true' : 'false' }} }">
 
                             <!-- Background Glow Effect -->
@@ -177,14 +177,14 @@
                                 @endif
 
                                 <!-- Plan Name -->
-                                <h3 class="text-3xl font-black text-gray-900 mb-2">{{ $plan['name'] }}</h3>
-                                <p class="text-gray-600 mb-6">{{ $plan['description'] }}</p>
+                                <h3 class="text-3xl font-black text-gray-900 mb-2 dark:text-white">{{ $plan['name'] }}</h3>
+                                <p class="text-gray-600 mb-6 dark:text-slate-400">{{ $plan['description'] }}</p>
 
                                 <!-- Price -->
                                 <div class="mb-6">
                                     <div class="flex items-baseline justify-center">
-                                        <span class="text-5xl font-black text-gray-900">${{ $plan['price'] }}</span>
-                                        <span class="text-xl text-gray-500 ml-2">/ {{ $plan['period'] }}</span>
+                                        <span class="text-5xl font-black text-gray-900 dark:text-white">${{ $plan['price'] }}</span>
+                                        <span class="text-xl text-gray-500 ml-2 dark:text-slate-500">/ {{ $plan['period'] }}</span>
                                     </div>
                                 </div>
 
@@ -225,7 +225,7 @@
                                                     <span class="text-white text-xs">✓</span>
                                                 </div>
                                             @endif
-                                            <span class="text-gray-700">{{ $feature }}</span>
+                                            <span class="text-gray-700 dark:text-slate-300">{{ $feature }}</span>
                                         </div>
                                     @endforeach
                                 </div>
@@ -237,9 +237,9 @@
 
             <!-- Additional Info -->
             <div class="text-center max-w-3xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">Need a Custom Quote?</h3>
-                    <p class="text-gray-600 mb-6">
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200 dark:bg-slate-900 dark:border-slate-800/80">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Need a Custom Quote?</h3>
+                    <p class="text-gray-600 mb-6 dark:text-slate-400">
                         Have a unique project or specific requirements? Contact us for a personalized quote tailored to your needs.
                     </p>
                     <a href="{{ route('order') }}"
@@ -253,26 +253,26 @@
     </section>
 
     <!-- Price Calculator Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
+    <section class="py-24 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
                     <span class="mr-3 text-xl">🧮</span>
                     INSTANT CALCULATOR
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                     Get Your
                     <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Instant Quote</span>
                 </h2>
-                <p class="text-xl text-gray-600 mb-12">
+                <p class="text-xl text-gray-600 mb-12 dark:text-slate-400">
                     Use our pricing calculator to get an instant quote for your assignment
                 </p>
 
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border border-blue-100">
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border border-blue-100 dark:to-slate-950 dark:border-blue-900/50">
                     <div class="flex flex-col items-center">
                         <div class="text-6xl mb-6">🧮</div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Interactive Price Calculator</h3>
-                        <p class="text-gray-600 mb-8">
+                        <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Interactive Price Calculator</h3>
+                        <p class="text-gray-600 mb-8 dark:text-slate-400">
                             Fill out your assignment details and get an instant price estimate
                         </p>
                         <a href="{{ route('order') }}"
@@ -290,14 +290,14 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
                     <span class="mr-3 text-xl">❓</span>
                     FREQUENTLY ASKED QUESTIONS
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                     Pricing
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions Answered</span>
                 </h2>
@@ -306,17 +306,17 @@
             <div class="max-w-4xl mx-auto space-y-6">
                 @foreach($faqs as $index => $faq)
                     <div class="group" x-data="{ open: false }">
-                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                             <button @click="open = !open"
-                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
+                                    class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 dark:hover:bg-slate-800/50">
                                 <div class="flex items-center flex-1">
                                     <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                                         <span class="text-white font-bold">{{ $index + 1 }}</span>
                                     </div>
-                                    <h3 class="text-lg font-bold text-gray-900">{{ $faq['question'] }}</h3>
+                                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">{{ $faq['question'] }}</h3>
                                 </div>
                                 <svg x-bind:class="open ? 'rotate-180' : ''"
-                                     class="w-6 h-6 text-gray-500 transition-transform duration-300 flex-shrink-0 ml-4"
+                                     class="w-6 h-6 text-gray-500 transition-transform duration-300 flex-shrink-0 ml-4 dark:text-slate-500"
                                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
@@ -329,7 +329,7 @@
                                  x-transition:leave-start="opacity-100 transform translate-y-0"
                                  x-transition:leave-end="opacity-0 transform -translate-y-2"
                                  class="px-8 pb-6">
-                                <div class="pl-14 text-gray-600 leading-relaxed">
+                                <div class="pl-14 text-gray-600 leading-relaxed dark:text-slate-400">
                                     {{ $faq['answer'] }}
                                 </div>
                             </div>
@@ -358,7 +358,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
                     <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl dark:bg-slate-900 dark:hover:bg-slate-800/50">
                         <span class="mr-4 text-3xl">🚀</span>
                         Start Your Order
                         <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"

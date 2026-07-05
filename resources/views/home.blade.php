@@ -14,7 +14,7 @@
     @endpush
 
 
-    <section class="py-32 bg-slate-50 relative overflow-hidden" id="services">
+    <section class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">
         <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
 
         <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
@@ -23,11 +23,11 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
                     Professional Academic Services
                 </div>
-                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 mb-8 leading-tight">
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 mb-8 leading-tight dark:text-white">
                     Reliable <span class="text-blue-600">Assignment Help</span> <br> 
                     Tailored for Success
                 </h2>
-                <p class="text-xl leading-relaxed text-slate-600 max-w-2xl mx-auto">
+                <p class="text-xl leading-relaxed text-slate-600 max-w-2xl mx-auto dark:text-slate-400">
                     We specialize in high-stakes academic projects. Whether it's a freshman essay or a doctoral dissertation, our USA-based quality standards ensure perfection.
                 </p>
             </div>
@@ -35,7 +35,7 @@
             <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
                 <!-- Service Card 1: Assignment Help -->
-                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-2 border border-slate-100">
+                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-2 border border-slate-100 dark:bg-slate-950 dark:hover:bg-slate-800/50 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-blue-500/5 group-hover:bg-blue-500/10 group-hover:scale-150 transition-all duration-700 pointer-events-none"></div>
 
                     <div class="flex items-center gap-5 mb-8 relative">
@@ -45,27 +45,27 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-black text-slate-900 tracking-tight">Assignment Help</h3>
-                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-50 text-[10px] font-black text-emerald-600 uppercase tracking-widest w-fit">
+                            <h3 class="text-xl font-black text-slate-900 tracking-tight dark:text-white">Assignment Help</h3>
+                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-50 text-[10px] font-black text-emerald-600 uppercase tracking-widest w-fit dark:bg-emerald-950/30">
                                 <span class="w-1 h-1 rounded-full bg-emerald-500 animate-ping"></span>
                                 Top Verified
                             </div>
                         </div>
                     </div>
 
-                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium">
+                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium dark:text-slate-500">
                         Bespoke academic solutions crafted by senior researchers. From complex case studies to extensive literature reviews.
                     </p>
 
-                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600">
+                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600 dark:text-slate-400">
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all dark:bg-blue-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Essays & Research Reports
                         </li>
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all dark:bg-blue-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Thesis & Dissertations
@@ -73,14 +73,14 @@
                     </ul>
 
                     <a href="{{ route('services.assignment.index') }}"
-                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-blue-600 font-black rounded-2xl border-2 border-blue-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest">
+                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-blue-600 font-black rounded-2xl border-2 border-blue-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest dark:bg-slate-900">
                         Explore Custom Writing
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </a>
                 </article>
 
                 <!-- Service Card 2: Programming Help -->
-                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-2 border border-slate-100">
+                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-2 border border-slate-100 dark:bg-slate-950 dark:hover:bg-slate-800/50 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-emerald-500/5 group-hover:bg-emerald-500/10 group-hover:scale-150 transition-all duration-700 pointer-events-none"></div>
 
                     <div class="flex items-center gap-5 mb-8 relative">
@@ -90,27 +90,27 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-black text-slate-900 tracking-tight">Programming Help</h3>
-                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-blue-50 text-[10px] font-black text-blue-600 uppercase tracking-widest w-fit">
+                            <h3 class="text-xl font-black text-slate-900 tracking-tight dark:text-white">Programming Help</h3>
+                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-blue-50 text-[10px] font-black text-blue-600 uppercase tracking-widest w-fit dark:bg-blue-950/30">
                                 <span class="w-1 h-1 rounded-full bg-blue-500 animate-pulse"></span>
                                 Code Validated
                             </div>
                         </div>
                     </div>
 
-                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium">
+                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium dark:text-slate-500">
                         Stuck on a coding bug or complex algorithm? Our developers provide clean, commented, and efficient code solutions.
                     </p>
 
-                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600">
+                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600 dark:text-slate-400">
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all dark:bg-emerald-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Algorithms & Data Science
                         </li>
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all dark:bg-emerald-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Web & Application Dev
@@ -118,14 +118,14 @@
                     </ul>
 
                     <a href="{{ route('services.programming.index') }}"
-                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-emerald-600 font-black rounded-2xl border-2 border-emerald-50 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest">
+                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-emerald-600 font-black rounded-2xl border-2 border-emerald-50 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest dark:bg-slate-900">
                         Debug Your Architecture
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </a>
                 </article>
 
                 <!-- Service Card 3: Homework Help -->
-                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-2 border border-slate-100">
+                <article class="flex flex-col bg-slate-50 rounded-[2.5rem] p-10 relative overflow-hidden group transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-2 border border-slate-100 dark:bg-slate-950 dark:hover:bg-slate-800/50 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-amber-500/5 group-hover:bg-amber-500/10 group-hover:scale-150 transition-all duration-700 pointer-events-none"></div>
 
                     <div class="flex items-center gap-5 mb-8 relative">
@@ -135,27 +135,27 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-black text-slate-900 tracking-tight">Homework Help</h3>
-                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-50 text-[10px] font-black text-emerald-600 uppercase tracking-widest w-fit">
+                            <h3 class="text-xl font-black text-slate-900 tracking-tight dark:text-white">Homework Help</h3>
+                            <div class="mt-1 flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-50 text-[10px] font-black text-emerald-600 uppercase tracking-widest w-fit dark:bg-emerald-950/30">
                                 <span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Step-by-Step
                             </div>
                         </div>
                     </div>
 
-                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium">
+                    <p class="text-sm leading-relaxed text-slate-500 mb-8 font-medium dark:text-slate-500">
                         Complete support for your daily problem sets and textbook questions. We clarify the "how" and "why".
                     </p>
 
-                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600">
+                    <ul role="list" class="mb-10 space-y-4 text-sm text-slate-600 dark:text-slate-400">
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-amber-50 flex items-center justify-center text-amber-600 group-hover/item:bg-amber-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-amber-50 flex items-center justify-center text-amber-600 group-hover/item:bg-amber-600 group-hover/item:text-white transition-all dark:bg-amber-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Advanced Mathematics & Calc
                         </li>
                         <li class="flex items-center gap-3 font-bold group/item">
-                            <div class="w-5 h-5 rounded-md bg-amber-50 flex items-center justify-center text-amber-600 group-hover/item:bg-amber-600 group-hover/item:text-white transition-all">
+                            <div class="w-5 h-5 rounded-md bg-amber-50 flex items-center justify-center text-amber-600 group-hover/item:bg-amber-600 group-hover/item:text-white transition-all dark:bg-amber-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                             </div>
                             Physics, Chemistry & Stats
@@ -163,7 +163,7 @@
                     </ul>
 
                     <a href="{{ route('order') }}"
-                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-amber-600 font-black rounded-2xl border-2 border-amber-50 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest">
+                        class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-amber-600 font-black rounded-2xl border-2 border-amber-50 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest dark:bg-slate-900">
                         Submit Your Problems
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </a>
@@ -218,7 +218,7 @@
                                     </div>
                                     <div>
                                         <h3 class="font-bold text-white text-sm transition-colors group-hover:text-indigo-100">Genuine Experts</h3>
-                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors">PhD Holders Only</p>
+                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors dark:text-slate-500">PhD Holders Only</p>
                                     </div>
                                 </div>
                                 
@@ -231,7 +231,7 @@
                                     </div>
                                     <div>
                                         <h3 class="font-bold text-white text-sm transition-colors group-hover:text-indigo-100">Safe Payments</h3>
-                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors">SSL Encrypted</p>
+                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors dark:text-slate-500">SSL Encrypted</p>
                                     </div>
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
 
                                     <!-- Enhanced Progress Bar -->
                                     <div class="space-y-3">
-                                        <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500">
+                                        <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-500">
                                             <span>Current Reliability</span>
                                             <span class="text-white">Optimal Range</span>
                                         </div>
@@ -275,7 +275,7 @@
                                     </div>
 
                                     <div class="pt-4">
-                                        <a href="{{ route('order') }}" class="group/btn relative flex w-full items-center justify-between gap-4 px-8 py-6 bg-blue-600 text-white font-black rounded-[1.5rem] hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] hover:shadow-2xl hover:-translate-y-1 active:scale-95 overflow-hidden">
+                                        <a href="{{ route('order') }}" class="group/btn relative flex w-full items-center justify-between gap-4 px-8 py-6 bg-blue-600 text-white font-black rounded-[1.5rem] hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] hover:shadow-2xl hover:-translate-y-1 active:scale-95 overflow-hidden dark:hover:bg-slate-800/50">
                                             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                                             <div class="flex flex-col items-start relative z-10">
                                                 <span class="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-0.5">Instant Access</span>
@@ -287,7 +287,7 @@
                                                 </svg>
                                             </div>
                                         </a>
-                                        <p class="text-center text-[10px] text-slate-500 mt-4 font-bold uppercase tracking-[0.3em]">Based on 50,000+ Completed Orders</p>
+                                        <p class="text-center text-[10px] text-slate-500 mt-4 font-bold uppercase tracking-[0.3em] dark:text-slate-500">Based on 50,000+ Completed Orders</p>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@
                         View Services
                     </a>
                 </div>
-                <div class="mt-12 flex flex-wrap justify-center gap-8 text-slate-500 text-sm font-bold uppercase tracking-widest">
+                <div class="mt-12 flex flex-wrap justify-center gap-8 text-slate-500 text-sm font-bold uppercase tracking-widest dark:text-slate-500">
                     <span class="flex items-center gap-2">✓ No Plagiarism</span>
                     <span class="flex items-center gap-2">✓ 24/7 Support</span>
                     <span class="flex items-center gap-2">✓ Safe Payment</span>
@@ -364,7 +364,7 @@
     </section>
 
     <!-- Academic Levels We Cover Section: Elite USA Standards -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden">
+    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950">
         <!-- Background Accents -->
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 opacity-20"></div>
         <div class="absolute -right-24 top-1/4 w-96 h-96 bg-blue-100/50 rounded-full blur-[120px] pointer-events-none"></div>
@@ -372,24 +372,24 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-24">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8 dark:bg-slate-900 dark:border-slate-800/80">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
-                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em]">Institutional Grade Support</span>
+                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] dark:text-white">Institutional Grade Support</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-tight dark:text-white">
                     Covering Every <span class="text-blue-600">Academic Milestone.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+                <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto dark:text-slate-500">
                     From foundational high school coursework to advanced post-doctoral research, our USA-based experts deliver institutional precision at every stage.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Level 1: High School -->
-                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
                     
                     <div class="mb-10 relative">
@@ -400,23 +400,23 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight">High School</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">High School</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Foundational assistance for grades 9-12, focusing on AP coursework and GPA optimization.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-blue-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600">AP Coursework</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600 dark:text-slate-300">AP Coursework</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-blue-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600">SAT/ACT Help</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600 dark:text-slate-300">SAT/ACT Help</span>
                         </div>
                     </div>
                 </div>
@@ -455,7 +455,7 @@
                 </div>
 
                 <!-- Level 3: Graduate -->
-                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(16,185,129,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
                     
                     <div class="mb-10 relative">
@@ -466,29 +466,29 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight">Graduate</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">Graduate</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Sophisticated academic solutions for Master's programs, including advanced analytics and thesis work.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-emerald-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600">Master's Thesis</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600 dark:text-slate-300">Master's Thesis</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-emerald-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600">Applied Statistics</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600 dark:text-slate-300">Applied Statistics</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Level 4: PhD -->
-                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(139,92,246,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+                <div class="group relative bg-white rounded-[2.5rem] p-10 border border-slate-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(139,92,246,0.1)] hover:-translate-y-2 overflow-hidden flex flex-col h-full dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-purple-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
                     
                     <div class="mb-10 relative">
@@ -500,23 +500,23 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight">Doctoral (PhD)</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">Doctoral (PhD)</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Elite-level support for dissertation writing, research proposals, and academic publishing.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-purple-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600">Dissertations</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600 dark:text-slate-300">Dissertations</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default">
-                            <div class="w-5 h-5 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110">
+                            <div class="w-5 h-5 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110 dark:bg-purple-950/30">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest">Research Defense</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest dark:text-slate-300">Research Defense</span>
                         </div>
                     </div>
                 </div>
@@ -711,7 +711,7 @@
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <a href="{{ route('order') }}"
-                            class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_50px_-10px_rgba(255,255,255,0.4)]">
+                            class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_50px_-10px_rgba(255,255,255,0.4)] dark:bg-slate-900">
                             <span class="relative z-10">Start Your Order</span>
                             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -755,28 +755,28 @@
     </section>
 
     <!-- Professional Insights Section -->
-    <section class="py-20 bg-white relative overflow-hidden">
+    <section class="py-20 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30"></div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-6xl mx-auto rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 md:p-12">
+            <div class="max-w-6xl mx-auto rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 md:p-12 dark:border-slate-800/80">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-5">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 mb-5 dark:bg-slate-900 dark:border-slate-800/80">
                         <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span class="text-slate-700 font-extrabold text-xs uppercase tracking-[0.18em]">Assignment Help USA</span>
+                        <span class="text-slate-700 font-extrabold text-xs uppercase tracking-[0.18em] dark:text-slate-300">Assignment Help USA</span>
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4 dark:text-white">
                             Assignment Help USA For Serious Academic Results
                         </h2>
-                        <p class="text-slate-600 text-lg leading-relaxed mb-7">
+                        <p class="text-slate-600 text-lg leading-relaxed mb-7 dark:text-slate-400">
                             Clear pricing, expert support, and reliable delivery for essays, research papers, and urgent assignments.
                         </p>
 
                         <div class="space-y-3 mb-8">
-                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">US-ready quality:</span> Academic formatting and citation alignment.</p>
-                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">Transparent process:</span> Scope and timeline defined before payment.</p>
-                            <p class="text-slate-700 text-sm"><span class="font-bold text-slate-900">Always available:</span> 24/7 support from order to final delivery.</p>
+                            <p class="text-slate-700 text-sm dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">US-ready quality:</span> Academic formatting and citation alignment.</p>
+                            <p class="text-slate-700 text-sm dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">Transparent process:</span> Scope and timeline defined before payment.</p>
+                            <p class="text-slate-700 text-sm dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">Always available:</span> 24/7 support from order to final delivery.</p>
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-4">
@@ -784,17 +784,17 @@
                                 Start Order
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
-                            <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-slate-300 text-slate-700 font-black hover:bg-slate-50 transition-colors">
+                            <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-slate-300 text-slate-700 font-black hover:bg-slate-50 transition-colors dark:text-slate-300 dark:hover:bg-slate-800/50">
                                 See Process
                             </a>
                         </div>
                     </div>
 
                     <div>
-                        <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.35)]">
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.35)] dark:border-slate-800/80 dark:bg-slate-900">
                             <img src="{{ asset('images/student-hero.png') }}" alt="USA student receiving assignment help support" class="w-full h-[360px] object-cover object-center">
-                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 border border-slate-200 shadow-sm">
-                                <span class="text-[11px] font-extrabold text-slate-800 uppercase tracking-[0.12em]">USA Student Focus</span>
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 border border-slate-200 shadow-sm dark:border-slate-800/80">
+                                <span class="text-[11px] font-extrabold text-slate-800 uppercase tracking-[0.12em] dark:text-slate-200">USA Student Focus</span>
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-red-500/10 pointer-events-none"></div>
                             <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-slate-900/85 to-transparent">
@@ -803,17 +803,17 @@
                         </div>
 
                         <div class="grid grid-cols-3 gap-3 mt-4">
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
-                                <p class="text-slate-900 text-xl font-black">24/7</p>
-                                <p class="text-slate-500 text-xs uppercase tracking-wide">Support</p>
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800/80 dark:bg-slate-900">
+                                <p class="text-slate-900 text-xl font-black dark:text-white">24/7</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide dark:text-slate-500">Support</p>
                             </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
-                                <p class="text-slate-900 text-xl font-black">50+</p>
-                                <p class="text-slate-500 text-xs uppercase tracking-wide">Subjects</p>
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800/80 dark:bg-slate-900">
+                                <p class="text-slate-900 text-xl font-black dark:text-white">50+</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide dark:text-slate-500">Subjects</p>
                             </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center">
-                                <p class="text-slate-900 text-xl font-black">98%</p>
-                                <p class="text-slate-500 text-xs uppercase tracking-wide">On-Time</p>
+                            <div class="rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800/80 dark:bg-slate-900">
+                                <p class="text-slate-900 text-xl font-black dark:text-white">98%</p>
+                                <p class="text-slate-500 text-xs uppercase tracking-wide dark:text-slate-500">On-Time</p>
                             </div>
                         </div>
                     </div>
@@ -821,17 +821,17 @@
             </div>
 
             <div class="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="rounded-2xl bg-white border border-slate-200 p-5">
-                    <p class="text-slate-900 text-sm font-black mb-1">Plagiarism-Safe Drafts</p>
-                    <p class="text-slate-600 text-xs leading-relaxed">Original, quality-checked content prepared for academic submission.</p>
+                <div class="rounded-2xl bg-white border border-slate-200 p-5 dark:bg-slate-900 dark:border-slate-800/80">
+                    <p class="text-slate-900 text-sm font-black mb-1 dark:text-white">Plagiarism-Safe Drafts</p>
+                    <p class="text-slate-600 text-xs leading-relaxed dark:text-slate-400">Original, quality-checked content prepared for academic submission.</p>
                 </div>
-                <div class="rounded-2xl bg-white border border-slate-200 p-5">
-                    <p class="text-slate-900 text-sm font-black mb-1">Deadline Precision</p>
-                    <p class="text-slate-600 text-xs leading-relaxed">Urgent and standard windows with clear turnaround commitments.</p>
+                <div class="rounded-2xl bg-white border border-slate-200 p-5 dark:bg-slate-900 dark:border-slate-800/80">
+                    <p class="text-slate-900 text-sm font-black mb-1 dark:text-white">Deadline Precision</p>
+                    <p class="text-slate-600 text-xs leading-relaxed dark:text-slate-400">Urgent and standard windows with clear turnaround commitments.</p>
                 </div>
-                <div class="rounded-2xl bg-white border border-slate-200 p-5">
-                    <p class="text-slate-900 text-sm font-black mb-1">Secure Communication</p>
-                    <p class="text-slate-600 text-xs leading-relaxed">Private updates and consistent support at every stage.</p>
+                <div class="rounded-2xl bg-white border border-slate-200 p-5 dark:bg-slate-900 dark:border-slate-800/80">
+                    <p class="text-slate-900 text-sm font-black mb-1 dark:text-white">Secure Communication</p>
+                    <p class="text-slate-600 text-xs leading-relaxed dark:text-slate-400">Private updates and consistent support at every stage.</p>
                 </div>
             </div>
         </div>
@@ -972,7 +972,7 @@
             <!-- CTA Button -->
             <div class="text-center mt-24">
                 <a href="{{ route('order') }}"
-                    class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                    class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] dark:bg-slate-900">
                     <span class="relative z-10">Start Your Journey</span>
                     <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -980,13 +980,13 @@
                             d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
-                <p class="mt-6 text-slate-500 text-sm">No credit card required for quote</p>
+                <p class="mt-6 text-slate-500 text-sm dark:text-slate-500">No credit card required for quote</p>
             </div>
         </div>
     </section>
 
     <!-- Benefits & Guarantees Section: Institutional Protection -->
-    <section class="py-32 bg-white relative overflow-hidden">
+    <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
         <!-- Background decorative elements with motion -->
         <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100/30 rounded-full blur-[120px] -mr-24 -mt-24 pointer-events-none animate-[blob_7s_infinite_alternate]"></div>
         <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-100/30 rounded-full blur-[120px] -ml-24 -mb-24 pointer-events-none animate-[blob_10s_infinite_alternate_reverse]"></div>
@@ -994,25 +994,25 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-24">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 hover:scale-105 transition-transform duration-300 cursor-default">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 hover:scale-105 transition-transform duration-300 cursor-default dark:bg-slate-950 dark:border-slate-800/80">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
                     </span>
-                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em]">Institutional-Grade Protection</span>
+                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] dark:text-white">Institutional-Grade Protection</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-tight dark:text-white">
                     Your Success, <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">Ironclad & Guaranteed.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+                <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto dark:text-slate-500">
                     We stand behind our elite experts with comprehensive protections that ensure every submission meets institutional standards.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- 1: Original Work -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_100px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_100px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1028,8 +1028,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">100% Original Work</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors dark:text-white">100% Original Work</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Every assignment is written from scratch and validated through advanced plagiarism detection software.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1037,19 +1037,19 @@
                             <div class="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600">Turnitin Verified</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600 dark:text-slate-300">Turnitin Verified</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover/item:bg-blue-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600">Scratch-Built Only</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-blue-600 dark:text-slate-300">Scratch-Built Only</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2: Money Back -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-[0_40px_100px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-[0_40px_100px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1065,8 +1065,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors">Money-Back Guarantee</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors dark:text-white">Money-Back Guarantee</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         If we can't meet your institutional requirements, we offer a full, transparent refund. No questions asked.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1074,19 +1074,19 @@
                             <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600">Full Protection</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600 dark:text-slate-300">Full Protection</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 transition-all duration-300 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600">Zero-Risk Hire</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-emerald-600 dark:text-slate-300">Zero-Risk Hire</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3: Revisions -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-[0_40px_100px_-20px_rgba(139,92,246,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-[0_40px_100px_-20px_rgba(139,92,246,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1102,8 +1102,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-purple-600 transition-colors">Unlimited Revisions</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-purple-600 transition-colors dark:text-white">Unlimited Revisions</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         We revise until perfection. Your feedback is our roadmap to an A grade, with zero additional costs.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1111,19 +1111,19 @@
                             <div class="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600">Feedback Loops</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600 dark:text-slate-300">Feedback Loops</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 transition-all duration-300 group-hover/item:bg-purple-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600">Total Satisfaction</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-purple-600 dark:text-slate-300">Total Satisfaction</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4: Delivery -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-[0_40px_100px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-[0_40px_100px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1139,8 +1139,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-amber-600 transition-colors">On-Time Delivery</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-amber-600 transition-colors dark:text-white">On-Time Delivery</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         We respect the clock. 98% of our submissions arrive before the deadline to give you review time.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1148,19 +1148,19 @@
                             <div class="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 transition-all duration-300 group-hover/item:bg-amber-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-amber-600">Deadline Lock</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-amber-600 dark:text-slate-300">Deadline Lock</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 transition-all duration-300 group-hover/item:bg-amber-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-amber-600">Early Access</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-amber-600 dark:text-slate-300">Early Access</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 5: Support -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-cyan-100 hover:shadow-[0_40px_100px_-20px_rgba(6,182,212,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-cyan-100 hover:shadow-[0_40px_100px_-20px_rgba(6,182,212,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1176,8 +1176,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-cyan-600 transition-colors">24/7 Elite Support</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-cyan-600 transition-colors dark:text-white">24/7 Elite Support</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Real humans, available round the clock. Connect with our academic coordinators whenever duty calls.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1185,19 +1185,19 @@
                             <div class="w-5 h-5 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 transition-all duration-300 group-hover/item:bg-cyan-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-cyan-600">Immediate Chat</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-cyan-600 dark:text-slate-300">Immediate Chat</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 transition-all duration-300 group-hover/item:bg-cyan-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-cyan-600">Expert Coordination</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-cyan-600 dark:text-slate-300">Expert Coordination</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 6: Confidentiality -->
-                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-rose-100 hover:shadow-[0_40px_100px_-20px_rgba(244,63,94,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col">
+                <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-rose-100 hover:shadow-[0_40px_100px_-20px_rgba(244,63,94,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <!-- Shine Effect -->
                     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                         <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
@@ -1213,8 +1213,8 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-rose-600 transition-colors">100% Confidential</h3>
-                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-rose-600 transition-colors dark:text-white">100% Confidential</h3>
+                    <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
                         Your identity is your power. We use military-grade encryption to ensure your data stays strictly private.
                     </p>
                     <div class="space-y-4 pt-8 border-t border-slate-200/50">
@@ -1222,13 +1222,13 @@
                             <div class="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 transition-all duration-300 group-hover/item:bg-rose-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-rose-600">Encrypted Vault</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-rose-600 dark:text-slate-300">Encrypted Vault</span>
                         </div>
                         <div class="flex items-center gap-3 group/item cursor-default group-hover:translate-x-1 transition-transform duration-300 delay-75">
                             <div class="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 transition-all duration-300 group-hover/item:bg-rose-600 group-hover/item:text-white group-hover/item:scale-110 group-hover/item:rotate-[360deg]">
                                 <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
                             </div>
-                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-rose-600">Total Anonymity</span>
+                            <span class="text-xs font-black text-slate-700 uppercase tracking-widest transition-colors duration-300 group-hover/item:text-rose-600 dark:text-slate-300">Total Anonymity</span>
                         </div>
                     </div>
                 </div>
@@ -1237,7 +1237,7 @@
     </section>
 
     <!-- Student Testimonials: Verified Success Stories -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden" id="testimonials">
+    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="testimonials">
         <div class="absolute inset-0 z-0 opacity-30">
             <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]"></div>
         </div>
@@ -1245,14 +1245,14 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-24">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 shadow-xl mb-8">
-                    <span class="flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                    <span class="flex h-2 w-2 rounded-full bg-white animate-pulse dark:bg-slate-900"></span>
                     <span class="text-white text-[10px] font-black uppercase tracking-widest">Verified Collegiate Results</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
                     Trusted by <br>
                     <span class="text-blue-600">USA's Elite Students.</span>
                 </h2>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed dark:text-slate-500">
                     Hear from thousands of students across top American universities who transformed their grades with our expert assistance.
                 </p>
             </div>
@@ -1260,57 +1260,57 @@
             <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 
                 <!-- Testimonial 1 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2">
+                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="flex items-center gap-1 text-amber-400 mb-8">
                         @for($i=0; $i<5; $i++)
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         @endfor
                     </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic">
+                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
                         "I was struggling with my Nursing capstone project at NYU. The expert delivered institutional-grade work that exceeded expectations. Secured an A+!"
                     </blockquote>
                     <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-black text-xl shadow-lg">SM</div>
                         <div>
-                            <div class="font-black text-slate-900">Sarah M.</div>
+                            <div class="font-black text-slate-900 dark:text-white">Sarah M.</div>
                             <div class="text-xs font-black text-blue-600 uppercase tracking-widest">Nursing • New York, NY</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 lg:mt-12">
+                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 lg:mt-12 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="flex items-center gap-1 text-amber-400 mb-8">
                         @for($i=0; $i<5; $i++)
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         @endfor
                     </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic">
+                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
                         "The most transparent coding service I've used. No hidden fees, and the Python expert at Stanford was extremely helpful. Clean, elegant code."
                     </blockquote>
                     <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white font-black text-xl shadow-lg">JL</div>
                         <div>
-                            <div class="font-black text-slate-900">James L.</div>
-                            <div class="text-xs font-black text-slate-500 uppercase tracking-widest">CS Student • Palo Alto, CA</div>
+                            <div class="font-black text-slate-900 dark:text-white">James L.</div>
+                            <div class="text-xs font-black text-slate-500 uppercase tracking-widest dark:text-slate-500">CS Student • Palo Alto, CA</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2">
+                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="flex items-center gap-1 text-amber-400 mb-8">
                         @for($i=0; $i<5; $i++)
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         @endfor
                     </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic">
+                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
                         "Absolute lifesaver for my Business minor. The confidentiality policy is robust, and they delivered a perfect business plan on short notice."
                     </blockquote>
                     <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 flex items-center justify-center text-white font-black text-xl shadow-lg">MR</div>
                         <div>
-                            <div class="font-black text-slate-900">Michael R.</div>
+                            <div class="font-black text-slate-900 dark:text-white">Michael R.</div>
                             <div class="text-xs font-black text-emerald-600 uppercase tracking-widest">Business • Austin, TX</div>
                         </div>
                     </div>
@@ -1401,56 +1401,56 @@
     </section>
 
     <!-- Why Students Choose Assignment Help USA -->
-    <section class="py-32 bg-white relative overflow-hidden">
+    <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-24 max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8 dark:bg-blue-950/30 dark:border-blue-900/50">
                     <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Our Value Proposition</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
                     Elevate Your <br>
                     <span class="text-blue-600">Academic Potential.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                <p class="text-xl text-slate-500 font-medium leading-relaxed dark:text-slate-500">
                     We don't just complete assignments; we empower students to achieve excellence through strategic academic support.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Original Content Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-2xl">
+                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">Original Content</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Unique perspectives crafted exclusively for your prompt, ensuring distinctiveness in every paragraph.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Original Content</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Unique perspectives crafted exclusively for your prompt, ensuring distinctiveness in every paragraph.</p>
                 </div>
 
                 <!-- Qualified Professionals Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-2xl lg:mt-12">
+                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <div class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">Expert Minds</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Direct access to subject matter experts with deep pedagogical understanding of American curriculum.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Expert Minds</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Direct access to subject matter experts with deep pedagogical understanding of American curriculum.</p>
                 </div>
 
                 <!-- Reliable Timelines Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-2xl">
+                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <div class="w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">Swift Delivery</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Precision-engineered timelines that respect your deadlines, always allowing time for final review.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Swift Delivery</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Precision-engineered timelines that respect your deadlines, always allowing time for final review.</p>
                 </div>
 
                 <!-- Referencing Specialists Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-2xl lg:mt-12">
+                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
                     <div class="w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 012 2h8a2 2 0 012-2v-2" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">Cite Right</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Mastery of all citation protocols, ensuring your paper meets the strictest academic integrity codes.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Cite Right</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Mastery of all citation protocols, ensuring your paper meets the strictest academic integrity codes.</p>
                 </div>
             </div>
 
@@ -1474,17 +1474,17 @@
 
 
     <!-- Academic Services Deep-Dive: Strategic Support for Every Requirement -->
-    <section class="py-32 bg-white relative overflow-hidden">
+    <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-24 max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8">
-                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em]">Detailed Service Portfolio</span>
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 dark:bg-slate-950 dark:border-slate-800/80">
+                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] dark:text-white">Detailed Service Portfolio</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
                     Precision Academic <br>
                     <span class="text-blue-600">Intervention.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                <p class="text-xl text-slate-500 font-medium leading-relaxed dark:text-slate-500">
                     Our specialized departments provide tailored solutions for every academic challenge, ensuring institutional standards are met with surgical precision.
                 </p>
             </div>
@@ -1492,15 +1492,15 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
                 <!-- Essay Writing -->
                 <div class="group relative flex flex-col p-1 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow dark:bg-slate-900">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-blue-950/30">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Essay Writing</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">From argumentative to descriptive, our writers craft compelling narratives that adhere to specified rubrics and academic levels. We focus on thesis strength, logical flow, and evidence-based argumentation to ensure your ideas resonate with high-authority impact.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Essay Writing</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">From argumentative to descriptive, our writers craft compelling narratives that adhere to specified rubrics and academic levels. We focus on thesis strength, logical flow, and evidence-based argumentation to ensure your ideas resonate with high-authority impact.</p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
                             <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">Starting $15/page</span>
-                            <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors dark:bg-blue-950/30">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </div>
                         </div>
@@ -1509,15 +1509,15 @@
 
                 <!-- Case Study/Report -->
                 <div class="group relative flex flex-col p-1 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors">
-                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-emerald-950/30">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Case Study & Reports</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">In-depth analysis of real-world scenarios or technical datasets. We provide structured reports with executive summaries, SWOT analyses, and data-driven recommendations that mirror professional industry standards and academic rigor.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Case Study & Reports</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">In-depth analysis of real-world scenarios or technical datasets. We provide structured reports with executive summaries, SWOT analyses, and data-driven recommendations that mirror professional industry standards and academic rigor.</p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
                             <span class="text-emerald-600 font-black text-[10px] uppercase tracking-widest">Data-Driven analysis</span>
-                            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors dark:bg-emerald-950/30">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </div>
                         </div>
@@ -1526,15 +1526,15 @@
 
                 <!-- Dissertation -->
                 <div class="group relative flex flex-col p-1 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors">
-                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
+                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-purple-950/30">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Dissertation & Thesis</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">Long-form research support for Masters and PhD candidates. We assist with literature reviews, methodology design, and comprehensive findings. Our experts ensure your original contribution is presented with technical accuracy and academic gravitas.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Dissertation & Thesis</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Long-form research support for Masters and PhD candidates. We assist with literature reviews, methodology design, and comprehensive findings. Our experts ensure your original contribution is presented with technical accuracy and academic gravitas.</p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
                             <span class="text-purple-600 font-black text-[10px] uppercase tracking-widest">PhD Expert network</span>
-                            <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors dark:bg-purple-950/30">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </div>
                         </div>
@@ -1560,15 +1560,15 @@
 
                 <!-- Editing & Proofreading -->
                 <div class="group relative flex flex-col p-1 bg-gradient-to-br from-amber-500 to-orange-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors">
-                        <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
+                        <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-amber-950/30">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Editing & Proofreading</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">Refine your drafts to perfection. We correct syntax, clarify ambiguous phrasing, and ensure perfect adherence to citation styles. Our editorial process elevates your voice while maintaining academic integrity.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Editing & Proofreading</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Refine your drafts to perfection. We correct syntax, clarify ambiguous phrasing, and ensure perfect adherence to citation styles. Our editorial process elevates your voice while maintaining academic integrity.</p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
                             <span class="text-amber-600 font-black text-[10px] uppercase tracking-widest">Grammar & Syntax Hub</span>
-                            <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors dark:bg-amber-950/30">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                             </div>
                         </div>
@@ -1578,13 +1578,13 @@
             
                 <!-- Online Course Help -->
                 <div class="group relative flex flex-col p-1 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors">
+                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
                         <div class="w-16 h-16 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4">Online Course Help</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8">Full-term academic management for your online courses. We assist with weekly discussions, periodic quizzes, midterm exams, and complex final projects to ensure you maintain a consistent GPA throughout the semester.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Online Course Help</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Full-term academic management for your online courses. We assist with weekly discussions, periodic quizzes, midterm exams, and complex final projects to ensure you maintain a consistent GPA throughout the semester.</p>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
                             <span class="text-cyan-600 font-black text-[10px] uppercase tracking-widest">Full-Term Management</span>
                             <div class="w-8 h-8 rounded-full bg-cyan-50 text-cyan-600 flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white transition-colors">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -1597,24 +1597,24 @@
     </section>
 
     <!-- Subject Areas Comprehensive Grid Section -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden">
+    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950">
         <div class="container mx-auto px-6">
             <div class="text-center mb-24 max-w-4xl mx-auto">
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
                     Omni-Disciplinary <br>
                     <span class="text-blue-600">Expertise.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                <p class="text-xl text-slate-500 font-medium leading-relaxed dark:text-slate-500">
                     From STEM to Humanities, our specialty network covers over 100+ academic disciplines with localized US expertise.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- STEM -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
-                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🔬</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">STEM Fields</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold">
+                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-blue-950/30">🔬</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">STEM Fields</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Advanced Mathematics</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Physics & Astrophysics</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Bio-Medical Sciences</li>
@@ -1624,10 +1624,10 @@
                 </div>
 
                 <!-- Business -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
-                    <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💼</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">Business & Econ</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold">
+                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
+                    <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-emerald-950/30">💼</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Business & Econ</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Financial Analysis</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strategic Management</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Market Research</li>
@@ -1637,10 +1637,10 @@
                 </div>
 
                 <!-- CS & Tech -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💻</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">CS & Technology</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">CS & Technology</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Software Engineering</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> AI & Machine Learning</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Cyber Security</li>
@@ -1650,10 +1650,10 @@
                 </div>
 
                 <!-- Humanities -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
-                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">📚</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4">Humanities</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold">
+                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
+                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-purple-950/30">📚</div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Humanities</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> English Literature</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Modern Philosophy</li>
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Political Sociology</li>
@@ -1666,7 +1666,7 @@
     </section>
 
     <!-- Geographic Coverage - USA Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:to-slate-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 px-4 py-2 rounded-full mb-6">
@@ -1677,74 +1677,74 @@
                     </svg>
                     <span class="text-red-900 font-semibold text-sm">Serving Students Across USA</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Available Nationwide in the USA</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 dark:text-white">Available Nationwide in the USA</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed dark:text-slate-400">
                     We proudly serve students from coast to coast with 24/7 online support regardless of your location
                 </p>
             </div>
 
             <div class="max-w-7xl mx-auto">
                 <!-- Major Cities -->
-                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Cities We Serve</h3>
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8 dark:bg-slate-900 dark:border-slate-800/80">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center dark:text-white">Popular Cities We Serve</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🗽</div>
-                            <div class="font-semibold text-gray-900 text-sm">New York</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">New York</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🌴</div>
-                            <div class="font-semibold text-gray-900 text-sm">Los Angeles</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Los Angeles</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🏙️</div>
-                            <div class="font-semibold text-gray-900 text-sm">Chicago</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Chicago</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🤠</div>
-                            <div class="font-semibold text-gray-900 text-sm">Houston</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Houston</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🔔</div>
-                            <div class="font-semibold text-gray-900 text-sm">Philadelphia</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Philadelphia</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🌵</div>
-                            <div class="font-semibold text-gray-900 text-sm">Phoenix</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Phoenix</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🌁</div>
-                            <div class="font-semibold text-gray-900 text-sm">San Francisco</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">San Francisco</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🏖️</div>
-                            <div class="font-semibold text-gray-900 text-sm">Miami</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Miami</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🏛️</div>
-                            <div class="font-semibold text-gray-900 text-sm">Washington DC</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Washington DC</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🎭</div>
-                            <div class="font-semibold text-gray-900 text-sm">Boston</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Boston</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">☕</div>
-                            <div class="font-semibold text-gray-900 text-sm">Seattle</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Seattle</div>
                         </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
                             <div class="text-2xl mb-2">🎸</div>
-                            <div class="font-semibold text-gray-900 text-sm">Austin</div>
+                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Austin</div>
                         </div>
                     </div>
-                    <p class="text-center text-gray-500 mt-6 text-sm">+ Hundreds more cities across all 50 states</p>
+                    <p class="text-center text-gray-500 mt-6 text-sm dark:text-slate-500">+ Hundreds more cities across all 50 states</p>
                 </div>
 
                 <!-- State Coverage -->
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 East Coast</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 dark:border-blue-900/50">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 East Coast</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
                             <div>New York</div>
                             <div>Pennsylvania</div>
                             <div>Massachusetts</div>
@@ -1756,9 +1756,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 Midwest</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 dark:border-emerald-900/50">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 Midwest</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
                             <div>Illinois</div>
                             <div>Ohio</div>
                             <div>Michigan</div>
@@ -1770,9 +1770,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg">🌟 West Coast</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 dark:border-amber-900/50">
+                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 West Coast</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
                             <div>California</div>
                             <div>Washington</div>
                             <div>Oregon</div>
@@ -1804,7 +1804,7 @@
 
 
     <!-- Premium FAQ Section -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden" id="faq">
+    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="faq">
         <!-- Background Accents -->
         <div class="absolute inset-0 opacity-40 pointer-events-none">
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px]"></div>
@@ -1816,69 +1816,69 @@
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 mb-8">
                     <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Clarifying Success</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
                     Frequently Asked <br>
                     <span class="text-blue-600">Questions.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium">Everything you need to know about navigating your academic journey with Assignment Help USA.</p>
+                <p class="text-xl text-slate-500 font-medium dark:text-slate-500">Everything you need to know about navigating your academic journey with Assignment Help USA.</p>
             </div>
 
             <div class="max-w-4xl mx-auto space-y-4">
                 <!-- FAQ Item 1 -->
-                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Is Assignment Help USA legit and safe to use?</span>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">Is Assignment Help USA legit and safe to use?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-600 leading-relaxed font-medium">
+                        <p class="text-slate-600 leading-relaxed font-medium dark:text-slate-400">
                             Yes! Assignment Help USA is a vetted platform trusted by over 50,000 students nationwide. We employ military-grade 256-bit SSL encryption for all data transfers and use industry-standard secure payment processors. Our service is fully compliant with privacy laws, ensuring 100% anonymity for every user.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">How much does it cost?</span>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">How much does it cost?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-600 leading-relaxed font-medium">
+                        <p class="text-slate-600 leading-relaxed font-medium dark:text-slate-400">
                             Our pricing is dynamic and designed to be student-friendly. Writing services start at $15 per page, while complex programming or technical tasks begin at $25. Factors influencing the final quote include academic level, complexity, and deadline urgency. We also offer standard discounts for large orders and first-time users.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">How fast can you complete my assignment?</span>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">How fast can you complete my assignment?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-600 leading-relaxed font-medium">
+                        <p class="text-slate-600 leading-relaxed font-medium dark:text-slate-400">
                             We pride ourselves on meeting tight constraints. Our express delivery team can handle turnarounds as short as 6-12 hours for urgent tasks. Standard assignments are typically delivered within 3-5 days. Regardless of the timeline, 98% of our orders are delivered before the deadline to allow time for student review.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl">
+                <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
                     <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
-                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">What if I'm not satisfied with the work?</span>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
+                        <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">What if I'm not satisfied with the work?</span>
+                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </div>
                     </button>
                     <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="px-10 pb-8">
-                        <p class="text-slate-600 leading-relaxed font-medium">
+                        <p class="text-slate-600 leading-relaxed font-medium dark:text-slate-400">
                             Total satisfaction is guaranteed. We offer an unlimited free revision policy—we will work with you until the paper perfectly aligns with your initial instructions. In the rare event that we fail to meet your institutional requirements, we provide a transparent, full refund under our money-back guarantee.
                         </p>
                     </div>
@@ -1887,7 +1887,7 @@
 
             <!-- FAQ Footer -->
             <div class="mt-20 text-center">
-                <p class="text-slate-500 font-bold mb-6">Didn't find your answer?</p>
+                <p class="text-slate-500 font-bold mb-6 dark:text-slate-500">Didn't find your answer?</p>
                 <a href="{{ route('order') }}" class="inline-flex items-center gap-2 text-blue-600 font-black hover:text-blue-700 transition-colors group">
                     Chat with an expert 
                     <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">

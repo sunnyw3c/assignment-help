@@ -86,7 +86,7 @@
                         </svg>
                     </a>
                     <a href="#our-story"
-                        class="inline-flex items-center justify-center border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 backdrop-blur-sm">
+                        class="inline-flex items-center justify-center border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 backdrop-blur-sm dark:hover:bg-slate-800/50">
                         <span class="mr-3 text-2xl">📖</span>
                         Learn Our Story
                     </a>
@@ -97,13 +97,13 @@
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse dark:bg-slate-900"></div>
             </div>
         </div>
     </header>
 
     <!-- Our Story Section -->
-    <section id="our-story" class="py-24 bg-white relative overflow-hidden">
+    <section id="our-story" class="py-24 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
 
         <div class="container mx-auto px-4 relative z-10">
@@ -114,7 +114,7 @@
                         <span class="mr-3 text-xl">📖</span>
                         OUR STORY
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                         Empowering Students Since
                         <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">2020</span>
                     </h2>
@@ -122,14 +122,14 @@
 
                 <!-- Story Content -->
                 <div class="prose prose-lg max-w-none">
-                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 mb-8">
-                        <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 mb-8 dark:bg-slate-900 dark:border-slate-800/80">
+                        <p class="text-xl text-gray-700 leading-relaxed mb-6 dark:text-slate-300">
                             Assignment Help USA was founded with a simple yet powerful mission: to make quality academic assistance accessible to every student, regardless of their location or background.
                         </p>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6 dark:text-slate-400">
                             We recognized that students often face challenges with complex assignments, tight deadlines, and limited access to personalized support. Our platform bridges this gap by connecting students with experienced tutors who understand their unique needs.
                         </p>
-                        <p class="text-lg text-gray-600 leading-relaxed">
+                        <p class="text-lg text-gray-600 leading-relaxed dark:text-slate-400">
                             What started as a small tutoring service has grown into a comprehensive academic support platform serving thousands of students worldwide. Our success is built on trust, quality, and a genuine commitment to student success.
                         </p>
                     </div>
@@ -139,20 +139,20 @@
     </section>
 
     <!-- Our Mission & Vision Section -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden dark:from-slate-950 dark:to-slate-950">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- Mission -->
                 <div class="group relative">
-                    <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-10 border border-gray-100 h-full">
+                    <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-10 border border-gray-100 h-full dark:bg-slate-900 dark:border-slate-800/80">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-600/0 group-hover:from-blue-500/5 group-hover:to-blue-600/5 rounded-3xl transition-all duration-500"></div>
 
                         <div class="relative">
                             <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                 <span class="text-4xl">🎯</span>
                             </div>
-                            <h3 class="text-3xl font-black text-gray-900 mb-4">Our Mission</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed">
+                            <h3 class="text-3xl font-black text-gray-900 mb-4 dark:text-white">Our Mission</h3>
+                            <p class="text-lg text-gray-600 leading-relaxed dark:text-slate-400">
                                 To empower students worldwide by providing accessible, high-quality academic assistance that helps them achieve their educational goals and build confidence in their abilities.
                             </p>
                         </div>
@@ -161,15 +161,15 @@
 
                 <!-- Vision -->
                 <div class="group relative">
-                    <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-10 border border-gray-100 h-full">
+                    <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-10 border border-gray-100 h-full dark:bg-slate-900 dark:border-slate-800/80">
                         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-600/0 group-hover:from-purple-500/5 group-hover:to-purple-600/5 rounded-3xl transition-all duration-500"></div>
 
                         <div class="relative">
                             <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                 <span class="text-4xl">🔭</span>
                             </div>
-                            <h3 class="text-3xl font-black text-gray-900 mb-4">Our Vision</h3>
-                            <p class="text-lg text-gray-600 leading-relaxed">
+                            <h3 class="text-3xl font-black text-gray-900 mb-4 dark:text-white">Our Vision</h3>
+                            <p class="text-lg text-gray-600 leading-relaxed dark:text-slate-400">
                                 To become the world's most trusted academic support platform, where every student has access to expert guidance and personalized learning experiences that transform their academic journey.
                             </p>
                         </div>
@@ -180,7 +180,7 @@
     </section>
 
     <!-- Core Values Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
+    <section class="py-24 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="container mx-auto px-4">
             <!-- Section Header -->
             <div class="text-center mb-20">
@@ -188,7 +188,7 @@
                     <span class="mr-3 text-xl">💎</span>
                     OUR CORE VALUES
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                     What We
                     <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Stand For</span>
                 </h2>
@@ -198,12 +198,12 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Quality Excellence -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
-                    <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-blue-100 h-full">
+                    <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-blue-100 h-full dark:to-slate-900 dark:border-blue-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">⭐</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Quality Excellence</h3>
-                        <p class="text-gray-600 leading-relaxed">
+                        <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Quality Excellence</h3>
+                        <p class="text-gray-600 leading-relaxed dark:text-slate-400">
                             We maintain the highest standards in every assignment, ensuring accuracy, thoroughness, and academic integrity.
                         </p>
                     </div>
@@ -211,12 +211,12 @@
 
                 <!-- Student-Centric -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
-                    <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-green-100 h-full">
+                    <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-green-100 h-full dark:to-slate-900">
                         <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">🎓</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Student-Centric</h3>
-                        <p class="text-gray-600 leading-relaxed">
+                        <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Student-Centric</h3>
+                        <p class="text-gray-600 leading-relaxed dark:text-slate-400">
                             Your success is our priority. We tailor our approach to meet your unique learning needs and academic goals.
                         </p>
                     </div>
@@ -224,12 +224,12 @@
 
                 <!-- Integrity & Trust -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
-                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-purple-100 h-full">
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-purple-100 h-full dark:to-slate-900 dark:border-purple-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">🔒</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Integrity & Trust</h3>
-                        <p class="text-gray-600 leading-relaxed">
+                        <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Integrity & Trust</h3>
+                        <p class="text-gray-600 leading-relaxed dark:text-slate-400">
                             We uphold ethical practices, maintain confidentiality, and build lasting relationships based on trust.
                         </p>
                     </div>
@@ -237,12 +237,12 @@
 
                 <!-- Innovation -->
                 <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
-                    <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-orange-100 h-full">
+                    <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-orange-100 h-full dark:to-slate-900 dark:border-orange-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">💡</span>
                         </div>
-                        <h3 class="text-2xl font-black text-gray-900 mb-4">Innovation</h3>
-                        <p class="text-gray-600 leading-relaxed">
+                        <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Innovation</h3>
+                        <p class="text-gray-600 leading-relaxed dark:text-slate-400">
                             We continuously improve our platform and methods to provide you with the best learning experience.
                         </p>
                     </div>
@@ -252,7 +252,7 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950">
         <div class="container mx-auto px-4">
             <!-- Section Header -->
             <div class="text-center mb-20">
@@ -260,7 +260,7 @@
                     <span class="mr-3 text-xl">🌟</span>
                     WHY CHOOSE US
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 dark:text-white">
                     What Makes Us
                     <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Different</span>
                 </h2>
@@ -269,55 +269,55 @@
             <!-- Features Grid -->
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Expert Tutors -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">👨‍🏫</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">Expert Tutors</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">Expert Tutors</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         Our team consists of qualified professionals with advanced degrees and extensive teaching experience across various subjects.
                     </p>
                 </div>
 
                 <!-- 24/7 Support -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">⏰</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">24/7 Availability</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">24/7 Availability</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         Get help whenever you need it. Our support team and tutors are available round the clock to assist you.
                     </p>
                 </div>
 
                 <!-- Affordable Pricing -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">💰</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">Fair Pricing</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">Fair Pricing</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         Quality assistance at student-friendly prices. We believe academic help should be accessible to everyone.
                     </p>
                 </div>
 
                 <!-- Timely Delivery -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">🚀</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">On-Time Delivery</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">On-Time Delivery</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         We respect your deadlines. Our tutors ensure timely completion without compromising on quality.
                     </p>
                 </div>
 
                 <!-- Plagiarism-Free -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">✅</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">Original Work</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">Original Work</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         Every assignment is crafted from scratch, ensuring 100% original and plagiarism-free content.
                     </p>
                 </div>
 
                 <!-- Confidential -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:bg-slate-900 dark:border-slate-800/80">
                     <div class="text-6xl mb-6 text-center">🔐</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center">100% Confidential</h3>
-                    <p class="text-gray-600 leading-relaxed text-center">
+                    <h3 class="text-2xl font-black text-gray-900 mb-4 text-center dark:text-white">100% Confidential</h3>
+                    <p class="text-gray-600 leading-relaxed text-center dark:text-slate-400">
                         Your privacy matters. We maintain strict confidentiality and never share your information.
                     </p>
                 </div>
@@ -396,7 +396,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
                     <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl dark:bg-slate-900 dark:hover:bg-slate-800/50">
                         <span class="mr-4 text-3xl">🚀</span>
                         Get Help Now
                         <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"
@@ -406,7 +406,7 @@
                         </svg>
                     </a>
                     <a href="{{ route('how-it-works') }}"
-                        class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300">
+                        class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 dark:hover:bg-slate-800/50">
                         <span class="mr-4 text-3xl">❓</span>
                         How It Works
                     </a>
