@@ -14,7 +14,7 @@
     @endpush
 
 
-    <section class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">
+    <section class="px-4 py-16 sm:px-6 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">
         <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
 
         <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
