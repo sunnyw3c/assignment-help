@@ -283,50 +283,346 @@
         </div>
     </section>
 
-
-
-
-    <!-- Dynamic CTA Section -->
-    <section class="py-32 relative overflow-hidden">
-        <!-- Background with Animated Gradient Orbs -->
+    <!-- Creative SEO Content + CTA: Assignment Help -->
+    <section class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-slate-900">
-            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-5xl mx-auto bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[4rem] p-12 md:p-20 text-center shadow-2xl">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8">
-                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Limited Time Offer: 30% Off Your First Order</span>
+            <div class="max-w-6xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Trusted by 50,000+ Students</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                        Why Students Trust Our<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Assignment Help Services</span>
+                    </h2>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-tight">
-                    Ready to Transform <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Your Academic Future?</span>
-                </h2>
-                <p class="text-xl text-slate-400 font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-                    Join over 50,000 students across the USA who have already unlocked their potential with our expert academic support.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="{{ route('order') }}"
-                        class="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-blue-600 rounded-2xl text-white font-bold text-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
-                        Get Started Now
-                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </a>
-                    <a href="{{ route('services.assignment.index') }}"
-                        class="inline-flex items-center justify-center gap-3 px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-white font-bold text-xl hover:bg-white/10 transition-all duration-300">
-                        View Services
-                    </a>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- Left: Content -->
+                    <div class="space-y-6 text-slate-400 leading-relaxed text-[15px]">
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
+                                What Makes Our Assignment Help Different
+                            </h3>
+                            <p>
+                                Every <strong class="text-white font-semibold">assignment help</strong> request on our platform is handled through a 
+                                rigorous matching process. We don't just assign any writer — we analyze your subject, 
+                                academic level, paper type, and deadline to pair you with a PhD-qualified expert who 
+                                has proven experience in your specific field. This precision ensures that when you 
+                                search for <strong class="text-white font-semibold">assignment help</strong> online, you land with a service that 
+                                delivers genuinely original, well-structured work rather than generic content.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-indigo-500 rounded-full inline-block"></span>
+                                Beyond Deadlines — Quality That Matters
+                            </h3>
+                            <p>
+                                Tight deadlines shouldn't mean compromised quality. Our <strong class="text-white font-semibold">assignment help</strong> 
+                                process includes multi-stage quality checks: subject review, plagiarism scanning via 
+                                Turnitin, and format compliance. Whether you need a last-minute essay or a 
+                                semester-long research project, every submission undergoes the same rigorous 
+                                standards. We've built our reputation on delivering <strong class="text-white font-semibold">assignment help</strong> that 
+                                doesn't just meet requirements — it exceeds expectations.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-purple-500 rounded-full inline-block"></span>
+                                Real Experts, Real Results
+                            </h3>
+                            <p>
+                                Unlike many platforms that outsource <strong class="text-white font-semibold">assignment help</strong> to anonymous writers, 
+                                we maintain a vetted team of subject-matter experts across all major disciplines. 
+                                Our writers hold advanced degrees from accredited USA universities and undergo 
+                                continuous evaluation. This commitment to quality means your <strong class="text-white font-semibold">assignment help</strong> 
+                                is written by someone who truly understands your curriculum, citation style, and 
+                                academic expectations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Features + CTA -->
+                    <div class="space-y-6">
+                        <div class="p-8 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-indigo-600/5 border border-blue-500/10 backdrop-blur-xl">
+                            <h3 class="text-xl font-black text-white mb-6">Everything You Get</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">Plagiarism-Free Guarantee</p>
+                                        <p class="text-xs text-slate-500">Every paper scanned with Turnitin — zero copied content</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">PhD-Level Writers</p>
+                                        <p class="text-xs text-slate-500">Subject-matched experts with verified credentials</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">On-Time Delivery</p>
+                                        <p class="text-xs text-slate-500">98% of orders delivered before the deadline</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">24/7 Support</p>
+                                        <p class="text-xs text-slate-500">Live chat with your writer and support team anytime</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold text-sm">Unlimited Revisions</p>
+                                        <p class="text-xs text-slate-500">Free revisions until you're completely satisfied</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 text-center">
+                            <h3 class="text-lg font-black text-white mb-3">
+                                Get Started With Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Assignment Help</span>
+                            </h3>
+                            <p class="text-xs text-slate-500 mb-6">
+                                100% confidential · No AI-generated content · Fair pricing from $12/page
+                            </p>
+                            <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 px-10 py-5 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)] hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 overflow-hidden text-sm">
+                                <span class="relative z-10">Place Your Order Now</span>
+                                <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                            </a>
+                            <div class="mt-6 flex flex-wrap justify-center gap-6 text-[10px] text-slate-600 font-bold uppercase tracking-wider">
+                                <span class="flex items-center gap-1">✓ No Plagiarism</span>
+                                <span class="flex items-center gap-1">✓ 24/7 Support</span>
+                                <span class="flex items-center gap-1">✓ Safe Payment</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-12 flex flex-wrap justify-center gap-8 text-slate-500 text-sm font-bold uppercase tracking-widest dark:text-slate-500">
-                    <span class="flex items-center gap-2">✓ No Plagiarism</span>
-                    <span class="flex items-center gap-2">✓ 24/7 Support</span>
-                    <span class="flex items-center gap-2">✓ Safe Payment</span>
+
+                <!-- Testimonial Showcase with Cinematic Motion -->
+                <div class="mt-20" x-data="testimonialShowcase()">
+                    <div class="relative rounded-[2.5rem] overflow-hidden" @mouseenter="paused = true" @mouseleave="paused = false; resetParallax()" @mousemove="onMouseMove">
+                        <!-- Animated gradient orbs that follow current testimonial -->
+                        <div class="absolute inset-0 transition-colors duration-1000" :style="'background: radial-gradient(ellipse at 20% 50%, ' + currentTestimonial.orb1 + ' 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, ' + currentTestimonial.orb2 + ' 0%, transparent 60%)'"></div>
+                        
+                        <!-- Floating decorative particles -->
+                        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                            <div class="absolute w-1.5 h-1.5 rounded-full bg-white/10 animate-pulse" :style="'top: 15%; left: 10%; animation-duration: ' + (3 + Math.random() * 4) + 's'"></div>
+                            <div class="absolute w-1 h-1 rounded-full bg-white/5 animate-pulse" style="top: 25%; right: 15%; animation-duration: 5s; animation-delay: 1s"></div>
+                            <div class="absolute w-2 h-2 rounded-full bg-white/5 animate-pulse" style="bottom: 30%; left: 20%; animation-duration: 4s; animation-delay: 2s"></div>
+                            <div class="absolute w-1 h-1 rounded-full bg-white/10 animate-pulse" style="top: 60%; right: 25%; animation-duration: 6s; animation-delay: 0.5s"></div>
+                            <div class="absolute w-1.5 h-1.5 rounded-full bg-white/5 animate-pulse" style="bottom: 15%; right: 10%; animation-duration: 3.5s; animation-delay: 1.5s"></div>
+                            
+                            <!-- Parallax floating elements -->
+                            <div class="absolute w-3 h-3 rounded-full border border-white/10" :style="'top: 20%; left: 30%; transform: translate(' + mouseX * 0.02 + 'px, ' + mouseY * 0.02 + 'px)'"></div>
+                            <div class="absolute w-2 h-2 rounded-full bg-white/5" :style="'bottom: 25%; right: 30%; transform: translate(' + mouseX * -0.015 + 'px, ' + mouseY * -0.015 + 'px)'"></div>
+                        </div>
+
+                        <!-- Large decorative quote mark -->
+                        <div class="absolute -top-6 -left-2 text-8xl font-black text-white/5 select-none pointer-events-none leading-none" :style="'transform: translate(' + mouseX * 0.01 + 'px, ' + mouseY * 0.01 + 'px)'">&ldquo;</div>
+                        <div class="absolute -bottom-16 -right-4 text-9xl font-black text-white/[0.02] select-none pointer-events-none leading-none" :style="'transform: translate(' + mouseX * -0.01 + 'px, ' + mouseY * -0.01 + 'px)'">&rdquo;</div>
+
+                        <!-- Main card -->
+                        <div class="relative p-8 md:p-12" :style="tiltStyle">
+                            <!-- Animated gradient border -->
+                            <div class="absolute inset-0 rounded-[2.5rem] p-[1px] overflow-hidden pointer-events-none">
+                                <div class="absolute inset-[-2px] bg-[conic-gradient(from_var(--angle,0deg),transparent_0%,rgba(255,255,255,0.1)_20%,transparent_40%)] rounded-[2.5rem]" style="animation: rotateBorder 4s linear infinite"></div>
+                            </div>
+
+                            <div class="relative flex flex-col md:flex-row gap-8 items-start">
+                                <!-- Avatar with animated ring -->
+                                <div class="flex-shrink-0 relative">
+                                    <div class="relative">
+                                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-lg font-black text-white shadow-xl border-2 border-white/20 relative z-10" :style="'background: ' + currentTestimonial.color">
+                                            <span x-text="currentTestimonial.initials"></span>
+                                        </div>
+                                        <div class="absolute -inset-2 rounded-2xl opacity-40 animate-ping" :style="'background: ' + currentTestimonial.orb1 + '; animation-duration: 2.5s'"></div>
+                                    </div>
+                                    <!-- Rating badge -->
+                                    <div class="absolute -bottom-2 -right-2 bg-slate-900 border border-white/10 rounded-lg px-2 py-0.5 text-[10px] font-black text-amber-400 flex items-center gap-1 shadow-lg z-20">
+                                        <span x-text="currentTestimonial.rating"></span>
+                                        <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <div class="flex-1 min-w-0 space-y-4">
+                                    <!-- Stars with stagger -->
+                                    <div class="flex items-center gap-1">
+                                        <template x-for="s in 5" :key="s">
+                                            <svg class="w-4 h-4 transition-all duration-300" :class="s <= currentTestimonial.rating ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.3)]' : 'text-slate-600'" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        </template>
+                                    </div>
+
+                                    <!-- Quote text -->
+                                    <div class="relative">
+                                        <p class="text-base md:text-lg text-slate-200 leading-relaxed font-medium" x-text="currentTestimonial.text"></p>
+                                    </div>
+
+                                    <!-- Author info -->
+                                    <div class="flex items-center justify-between pt-2">
+                                        <div>
+                                            <p class="text-base font-bold text-white" x-text="currentTestimonial.name"></p>
+                                            <p class="text-xs text-slate-500 font-extrabold uppercase tracking-wider" x-text="currentTestimonial.university"></p>
+                                        </div>
+                                        <span class="text-[11px] text-blue-400 font-black uppercase tracking-[0.15em] bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-500/20" x-text="currentTestimonial.service"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls row -->
+                    <div class="flex items-center justify-between mt-8">
+                        <!-- Animated progress dots -->
+                        <div class="flex items-center gap-2">
+                            <template x-for="(t, i) in testimonials" :key="'dot-' + i">
+                                <button @click="goTo(i)" class="relative h-1.5 rounded-full transition-all duration-500 overflow-hidden" :class="i === current ? 'w-10 bg-blue-500/30' : 'w-2 bg-white/10 hover:bg-white/30'">
+                                    <div x-show="i === current" class="absolute inset-y-0 left-0 bg-blue-500 rounded-full transition-all duration-100" :style="'width: ' + progress + '%'"></div>
+                                </button>
+                            </template>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="text-xs text-slate-500 font-bold tabular-nums" x-text="pad(current + 1) + ' / ' + pad(testimonials.length)"></span>
+                            <div class="flex gap-1.5">
+                                <button @click="prev" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                                </button>
+                                <button @click="next" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <style>
+                    @keyframes rotateBorder {
+                        to { --angle: 360deg; }
+                    }
+                    @property --angle {
+                        syntax: '<angle>';
+                        initial-value: 0deg;
+                        inherits: false;
+                    }
+                </style>
             </div>
         </div>
     </section>
+
+    <script>
+        function testimonialShowcase() {
+            return {
+                current: 0,
+                paused: false,
+                timer: null,
+                progress: 0,
+                progressInterval: null,
+                tiltX: 0,
+                tiltY: 0,
+                mouseX: 0,
+                mouseY: 0,
+                testimonials: [
+                    { initials: 'SK', color: 'linear-gradient(135deg, #6366f1, #8b5cf6)', orb1: 'rgba(99,102,241,0.15)', orb2: 'rgba(139,92,246,0.1)', name: 'Sarah K.', university: 'University of California', rating: 5, service: 'Research Paper', text: 'I was struggling with my final year research paper until I found this service. The assignment help I received was outstanding \u2014 my professor actually used it as a reference for the class.' },
+                    { initials: 'MT', color: 'linear-gradient(135deg, #10b981, #059669)', orb1: 'rgba(16,185,129,0.15)', orb2: 'rgba(5,150,105,0.1)', name: 'Michael T.', university: 'NYU', rating: 5, service: 'Essay Writing', text: 'Been using them for two semesters now. Every paper has been well-researched, properly cited, and delivered ahead of schedule. Highly recommend their assignment help.' },
+                    { initials: 'AL', color: 'linear-gradient(135deg, #f43f5e, #e11d48)', orb1: 'rgba(244,63,94,0.15)', orb2: 'rgba(225,29,72,0.1)', name: 'Amanda L.', university: 'University of Texas', rating: 5, service: 'Dissertation', text: 'I was genuinely stressed about my dissertation until a friend recommended this platform. The PhD expert assigned to me guided me through every chapter. Truly professional assignment help.' },
+                    { initials: 'JR', color: 'linear-gradient(135deg, #f59e0b, #d97706)', orb1: 'rgba(245,158,11,0.15)', orb2: 'rgba(217,119,6,0.1)', name: 'James R.', university: 'Florida State University', rating: 4, service: 'Programming', text: 'The Python project I submitted got an A. The code was clean, well-commented, and followed all the requirements. Best assignment help for computer science students.' },
+                    { initials: 'EC', color: 'linear-gradient(135deg, #3b82f6, #2563eb)', orb1: 'rgba(59,130,246,0.15)', orb2: 'rgba(37,99,235,0.1)', name: 'Emily C.', university: 'University of Michigan', rating: 5, service: 'Math Problems', text: 'Statistics was killing my GPA. I reached out for assignment help and within hours I was connected to a stats PhD. Not only did I pass, but I actually started understanding.' },
+                    { initials: 'DW', color: 'linear-gradient(135deg, #8b5cf6, #6d28d9)', orb1: 'rgba(139,92,246,0.15)', orb2: 'rgba(109,40,217,0.1)', name: 'David W.', university: 'Ohio State University', rating: 5, service: 'Case Study', text: 'The case study analysis was incredibly detailed and followed all Harvard referencing guidelines. My professor was impressed. Worth every penny.' },
+                    { initials: 'RN', color: 'linear-gradient(135deg, #ec4899, #db2777)', orb1: 'rgba(236,72,153,0.15)', orb2: 'rgba(219,39,119,0.1)', name: 'Rachel N.', university: 'Boston University', rating: 5, service: 'Literature Review', text: 'Went from C+ average to straight As this semester. The writers tailor content to American academic standards perfectly. Best assignment help in the USA.' },
+                    { initials: 'TP', color: 'linear-gradient(135deg, #14b8a6, #0d9488)', orb1: 'rgba(20,184,166,0.15)', orb2: 'rgba(13,148,136,0.1)', name: 'Thomas P.', university: 'University of Washington', rating: 4, service: 'Term Paper', text: 'Deadline was 12 hours and I thought I was done for. The team delivered a complete term paper that passed Turnitin with flying colors. Incredibly fast.' },
+                    { initials: 'LJ', color: 'linear-gradient(135deg, #f97316, #ea580c)', orb1: 'rgba(249,115,22,0.15)', orb2: 'rgba(234,88,12,0.1)', name: 'Laura J.', university: 'Arizona State University', rating: 5, service: 'Admission Essay', text: 'My grad school application essay was beautifully written. The writer captured my voice while keeping it professional. I got into my top-choice program.' },
+                    { initials: 'CB', color: 'linear-gradient(135deg, #06b6d4, #0891b2)', orb1: 'rgba(6,182,212,0.15)', orb2: 'rgba(8,145,178,0.1)', name: 'Chris B.', university: 'Penn State University', rating: 5, service: 'Homework Help', text: 'I work full-time and study part-time. This assignment help service has been a lifesaver. Consistent quality, fair pricing, always on time.' },
+                    { initials: 'KH', color: 'linear-gradient(135deg, #a855f7, #7c3aed)', orb1: 'rgba(168,85,247,0.15)', orb2: 'rgba(124,58,237,0.1)', name: 'Kimberly H.', university: 'University of Illinois', rating: 4, service: 'Proofreading', text: 'Already had a draft but needed polishing. The editor refined my arguments, fixed citations, and improved the flow dramatically. Exactly what I needed.' },
+                    { initials: 'JS', color: 'linear-gradient(135deg, #ef4444, #dc2626)', orb1: 'rgba(239,68,68,0.15)', orb2: 'rgba(220,38,38,0.1)', name: 'Jason S.', university: 'UNC Chapel Hill', rating: 5, service: 'Lab Report', text: 'Science lab reports require precision. Data analysis, methodology, and discussion were all thorough and accurate. Reliable assignment help for STEM.' }
+                ],
+                get currentTestimonial() {
+                    return this.testimonials[this.current];
+                },
+                get tiltStyle() {
+                    return 'transform: perspective(1200px) rotateX(' + this.tiltX + 'deg) rotateY(' + this.tiltY + 'deg)';
+                },
+                pad(n) {
+                    return n < 10 ? '0' + n : '' + n;
+                },
+                init() {
+                    this.startAutoPlay();
+                },
+                startAutoPlay() {
+                    var self = this;
+                    if (this.timer) clearInterval(this.timer);
+                    if (this.progressInterval) clearInterval(this.progressInterval);
+                    this.progress = 0;
+                    this.progressInterval = setInterval(function() {
+                        if (!self.paused) {
+                            self.progress = Math.min(self.progress + 100/120, 100);
+                        }
+                    }, 50);
+                    this.timer = setInterval(function() {
+                        if (!self.paused) {
+                            self.current = (self.current + 1) % self.testimonials.length;
+                            self.progress = 0;
+                        }
+                    }, 6000);
+                },
+                next() {
+                    this.current = (this.current + 1) % this.testimonials.length;
+                    this.startAutoPlay();
+                },
+                prev() {
+                    this.current = (this.current - 1 + this.testimonials.length) % this.testimonials.length;
+                    this.startAutoPlay();
+                },
+                goTo(i) {
+                    this.current = i;
+                    this.startAutoPlay();
+                },
+                resetParallax() {
+                    this.tiltX = 0;
+                    this.tiltY = 0;
+                    this.mouseX = 0;
+                    this.mouseY = 0;
+                },
+                onMouseMove(e) {
+                    var rect = e.currentTarget.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    this.tiltX = ((y - rect.height / 2) / rect.height) * -6;
+                    this.tiltY = ((x - rect.width / 2) / rect.width) * 6;
+                    this.mouseX = x - rect.width / 2;
+                    this.mouseY = y - rect.height / 2;
+                }
+            };
+        }
+    </script>
 
     <!-- Academic Levels We Cover Section: Elite USA Standards -->
     <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950">
