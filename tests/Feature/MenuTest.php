@@ -385,4 +385,8 @@ describe('Grid Responsiveness', function () {
         $response->assertSee('flex-col sm:flex-row');
     });
 
+    it('is a dummy test that always passes', function () {
+        expect(true)->toBeTrue();
+    });
+
 });

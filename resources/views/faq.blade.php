@@ -275,12 +275,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
-                    </a>
-                    <a href="{{ route('pricing') }}"
-                        class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 dark:hover:bg-slate-800/50">
-                        <span class="mr-4 text-3xl">💰</span>
-                        View Pricing
-                    </a>
                 </div>
             </div>
         </div>

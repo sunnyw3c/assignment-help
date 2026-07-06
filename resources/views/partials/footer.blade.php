@@ -20,7 +20,6 @@
                     <div class="flex flex-col gap-2.5 text-sm font-medium">
                         <a href="{{ route('about') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">About Us</a>
                         <a href="{{ route('how-it-works') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">How It Works</a>
-                        <a href="{{ route('pricing') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Pricing Plans</a>
                         <a href="{{ route('experts') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Our Experts</a>
                     </div>
                 </div>

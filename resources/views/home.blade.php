@@ -792,228 +792,6 @@
         </div>
     </section>
 
-    <!-- Budget Calculator Section -->
-    <section class="relative py-24 lg:py-40 bg-[#0F172A] overflow-hidden">
-        <!-- Modern Abstract Background -->
-        <div class="absolute inset-0">
-            <!-- Dynamic Gradient Orbs -->
-            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[150px] animate-pulse" style="animation-delay: 4s"></div>
-
-            <!-- Stylized Mesh Pattern -->
-            <div class="absolute inset-0 opacity-[0.15] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAzMCAwIEwgMzAgNjAgTSAwIDMwIEwgNjAgMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')] [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"></div>
-            
-            <!-- Circuit Lines Accent -->
-            <div class="absolute inset-0 opacity-20">
-                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M 0 20 L 20 20 L 25 25 L 100 25" stroke="rgba(59, 130, 246, 0.2)" stroke-width="0.1" fill="none" />
-                    <path d="M 100 80 L 80 80 L 75 75 L 0 75" stroke="rgba(139, 92, 246, 0.2)" stroke-width="0.1" fill="none" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <!-- Header Section -->
-            <div class="text-center mb-24">
-                <!-- Architectural Step Indicator -->
-                <div class="mb-10">
-                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full mb-5 shadow-[0_10px_30px_-16px_rgba(59,130,246,0.8)]">
-                        <span class="relative flex h-2.5 w-2.5">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-300"></span>
-                        </span>
-                        <span class="text-blue-100 font-extrabold text-xs uppercase tracking-[0.2em]">Pricing Engine v2.0</span>
-                    </div>
-
-                    <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
-                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
-                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-500/20 text-blue-200 text-xs font-black mb-2">1</div>
-                            <p class="text-white text-sm font-bold">Input Details</p>
-                            <p class="text-slate-300 text-xs">Share deadline, pages, and level.</p>
-                        </div>
-                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
-                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-200 text-xs font-black mb-2">2</div>
-                            <p class="text-white text-sm font-bold">Smart Analysis</p>
-                            <p class="text-slate-300 text-xs">Our model evaluates complexity instantly.</p>
-                        </div>
-                        <div class="group rounded-2xl border border-white/15 bg-white/5 px-4 py-4 text-left hover:bg-white/[0.08] transition-colors">
-                            <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-purple-500/20 text-purple-200 text-xs font-black mb-2">3</div>
-                            <p class="text-white text-sm font-bold">Clear Quote</p>
-                            <p class="text-slate-300 text-xs">Get a transparent price with no hidden fees.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Title -->
-                <h2 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
-                    Smart Pricing, <br class="hidden md:block">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Zero Surprises</span>
-                </h2>
-
-                <!-- Subtitle -->
-                <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                    Get a scientifically calculated quote based on academic complexity, 
-                    urgency, and expert level. Transparent. Fast. Precise.
-                </p>
-
-                <!-- Vertical Flow Line -->
-                <div class="mt-12 flex justify-center">
-                    <div class="w-px h-16 bg-gradient-to-b from-blue-500/50 to-transparent"></div>
-                </div>
-            </div>
-
-            <!-- Calculator Component with Premium Frame -->
-            <div class="relative max-w-5xl mx-auto">
-                <!-- Floating Decorative Accents -->
-                <div class="absolute -top-12 -left-12 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-                <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse" style="animation-delay: 1.5s"></div>
-
-                <!-- Live Status Indicator -->
-                <div class="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
-                    <div class="bg-slate-900 border border-white/10 rounded-full px-4 py-1 flex items-center gap-2 shadow-2xl">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span class="text-[10px] font-bold text-white uppercase tracking-tighter">Live Pricing Engine Active</span>
-                    </div>
-                </div>
-
-                <div class="relative h-full bg-slate-800/40 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] overflow-hidden">
-                    <!-- Subtle Glass Highlight -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.02] to-transparent pointer-events-none"></div>
-                    
-                    <div class="relative z-10">
-                        <livewire:budget-calculator />
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Stats Section -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                <!-- Stat 1 -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
-                        <!-- Watermark Number -->
-                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
-                        
-                        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">⚡</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Instant</h3>
-                        <p class="text-blue-200 text-sm">Quote Results</p>
-                    </div>
-                </div>
-
-                <!-- Stat 2 -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
-                        <!-- Watermark Number -->
-                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
-                        
-                        <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">💯</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-1">100%</h3>
-                        <p class="text-indigo-200 text-sm">Price Match</p>
-                    </div>
-                </div>
-
-                <!-- Stat 3 -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
-                        <!-- Watermark Number -->
-                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
-                        
-                        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🎓</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-1">50+</h3>
-                        <p class="text-purple-200 text-sm">Expert Subjects</p>
-                    </div>
-                </div>
-
-                <!-- Stat 4 -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                    <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500 group">
-                        <!-- Watermark Number -->
-                        <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
-                        
-                        <div class="w-14 h-14 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">💰</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-1">20%</h3>
-                        <p class="text-pink-200 text-sm">Early Bird Discount</p>
-                    </div>
-                </div>
-            </div>
-
-                <!-- CTA Section and Satisfaction -->
-                <div class="mt-24 text-center">
-                    <div class="inline-flex flex-wrap items-center justify-center gap-6 mb-12">
-                        <div class="flex items-center gap-2 text-slate-400 text-sm">
-                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                            <span>Enterprise-grade Security</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-slate-400 text-sm">
-                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                            <span>100% Privacy Protected</span>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="{{ route('order') }}"
-                            class="group relative inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full text-indigo-950 font-bold text-lg hover:bg-indigo-50 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_50px_-10px_rgba(255,255,255,0.4)] dark:bg-slate-900">
-                            <span class="relative z-10">Start Your Order</span>
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </a>
-                        <a href="#"
-                            class="inline-flex items-center gap-3 px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                            <svg class="w-5 h-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                            </svg>
-                            <span>Talk to Expert</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Professional Bridge Section -->
-                <div class="mt-16 max-w-5xl mx-auto">
-                    <div class="rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-xl px-6 py-8 md:px-10 md:py-9">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
-                            <div>
-                                <p class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-cyan-300 mb-2">Pricing Integrity</p>
-                                <h3 class="text-white text-2xl font-black leading-tight">Professional and transparent by design</h3>
-                            </div>
-                            <div class="space-y-2">
-                                <p class="text-sm font-semibold text-white">Structured Estimation</p>
-                                <p class="text-sm text-slate-300">Pricing is calculated from deadline, complexity, and academic level.</p>
-                            </div>
-                            <div class="space-y-2">
-                                <p class="text-sm font-semibold text-white">No Hidden Charges</p>
-                                <p class="text-sm text-slate-300">You see the real cost upfront with clear revision and support coverage.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Dark Separator -->
-            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none"></div>
-    </section>
 
     <!-- Professional Insights Section -->
     <section class="py-20 bg-white relative overflow-hidden dark:bg-slate-900">
@@ -1497,89 +1275,6 @@
         </div>
     </section>
 
-    <!-- Student Testimonials: Verified Success Stories -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="testimonials">
-        <div class="absolute inset-0 z-0 opacity-30">
-            <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-24">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 shadow-xl mb-8">
-                    <span class="flex h-2 w-2 rounded-full bg-white animate-pulse dark:bg-slate-900"></span>
-                    <span class="text-white text-[10px] font-black uppercase tracking-widest">Verified Collegiate Results</span>
-                </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
-                    Trusted by <br>
-                    <span class="text-blue-600">USA's Elite Students.</span>
-                </h2>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed dark:text-slate-500">
-                    Hear from thousands of students across top American universities who transformed their grades with our expert assistance.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                
-                <!-- Testimonial 1 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="flex items-center gap-1 text-amber-400 mb-8">
-                        @for($i=0; $i<5; $i++)
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        @endfor
-                    </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
-                        "I was struggling with my Nursing capstone project at NYU. The expert delivered institutional-grade work that exceeded expectations. Secured an A+!"
-                    </blockquote>
-                    <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-black text-xl shadow-lg">SM</div>
-                        <div>
-                            <div class="font-black text-slate-900 dark:text-white">Sarah M.</div>
-                            <div class="text-xs font-black text-blue-600 uppercase tracking-widest">Nursing • New York, NY</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 lg:mt-12 dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="flex items-center gap-1 text-amber-400 mb-8">
-                        @for($i=0; $i<5; $i++)
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        @endfor
-                    </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
-                        "The most transparent coding service I've used. No hidden fees, and the Python expert at Stanford was extremely helpful. Clean, elegant code."
-                    </blockquote>
-                    <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white font-black text-xl shadow-lg">JL</div>
-                        <div>
-                            <div class="font-black text-slate-900 dark:text-white">James L.</div>
-                            <div class="text-xs font-black text-slate-500 uppercase tracking-widest dark:text-slate-500">CS Student • Palo Alto, CA</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="group bg-white rounded-[3rem] p-10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.1)] hover:-translate-y-2 dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="flex items-center gap-1 text-amber-400 mb-8">
-                        @for($i=0; $i<5; $i++)
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        @endfor
-                    </div>
-                    <blockquote class="text-lg font-medium text-slate-700 leading-relaxed mb-10 italic dark:text-slate-300">
-                        "Absolute lifesaver for my Business minor. The confidentiality policy is robust, and they delivered a perfect business plan on short notice."
-                    </blockquote>
-                    <div class="flex items-center gap-5 border-t border-slate-50 pt-8">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 flex items-center justify-center text-white font-black text-xl shadow-lg">MR</div>
-                        <div>
-                            <div class="font-black text-slate-900 dark:text-white">Michael R.</div>
-                            <div class="text-xs font-black text-emerald-600 uppercase tracking-widest">Business • Austin, TX</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Premium SEO Content Section: Target "Assignment Help" USA -->
     <section class="py-32 bg-[#0F172A] relative overflow-hidden text-white">
         <!-- Background Accents -->
@@ -1734,131 +1429,126 @@
     </section>
 
 
-    <!-- Academic Services Deep-Dive: Strategic Support for Every Requirement -->
-    <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
+    <!-- Academic Services — Compact Minimal -->
+    <section class="py-16 bg-white dark:bg-slate-900" id="services">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-24 max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 dark:bg-slate-950 dark:border-slate-800/80">
-                    <span class="text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] dark:text-white">Detailed Service Portfolio</span>
+
+            <!-- Compact header -->
+            <div class="text-center mb-12 max-w-xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span class="text-slate-600 dark:text-slate-400 font-bold text-[10px] uppercase tracking-widest">Service Portfolio</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
-                    Precision Academic <br>
-                    <span class="text-blue-600">Intervention.</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight mb-3">
+                    Precision Academic <span class="text-blue-600">Intervention.</span>
                 </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed dark:text-slate-500">
-                    Our specialized departments provide tailored solutions for every academic challenge, ensuring institutional standards are met with surgical precision.
-                </p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">Tailored solutions for every academic challenge — delivered with surgical precision.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+            <!-- Service cards grid — compact -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
+
                 <!-- Essay Writing -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow dark:bg-slate-900">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-blue-950/30">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Essay Writing</h3>
+                            <span class="text-[10px] font-bold text-blue-600 dark:text-blue-400 shrink-0 ml-2">from $15/pg</span>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Essay Writing</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">From argumentative to descriptive, our writers craft compelling narratives that adhere to specified rubrics and academic levels. We focus on thesis strength, logical flow, and evidence-based argumentation to ensure your ideas resonate with high-authority impact.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
-                            <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">Starting $15/page</span>
-                            <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors dark:bg-blue-950/30">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Argumentative, descriptive, analytical — crafted to rubric with strong thesis &amp; flow.</p>
                     </div>
                 </div>
 
-                <!-- Case Study/Report -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
-                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-emerald-950/30">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <!-- Case Study & Reports -->
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Case Study &amp; Reports</h3>
+                            <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 shrink-0 ml-2">Data-driven</span>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Case Study & Reports</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">In-depth analysis of real-world scenarios or technical datasets. We provide structured reports with executive summaries, SWOT analyses, and data-driven recommendations that mirror professional industry standards and academic rigor.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
-                            <span class="text-emerald-600 font-black text-[10px] uppercase tracking-widest">Data-Driven analysis</span>
-                            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors dark:bg-emerald-950/30">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">SWOT analysis, executive summaries &amp; data-backed recommendations.</p>
                     </div>
                 </div>
 
-                <!-- Dissertation -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
-                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-purple-950/30">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+                <!-- Dissertation & Thesis -->
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Dissertation &amp; Thesis</h3>
+                            <span class="text-[10px] font-bold text-purple-600 dark:text-purple-400 shrink-0 ml-2">PhD experts</span>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Dissertation & Thesis</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Long-form research support for Masters and PhD candidates. We assist with literature reviews, methodology design, and comprehensive findings. Our experts ensure your original contribution is presented with technical accuracy and academic gravitas.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
-                            <span class="text-purple-600 font-black text-[10px] uppercase tracking-widest">PhD Expert network</span>
-                            <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors dark:bg-purple-950/30">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Literature reviews, methodology design &amp; full-chapter support for Masters &amp; PhD.</p>
                     </div>
                 </div>
 
                 <!-- Programming Help -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-indigo-900 to-slate-900 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-slate-900 rounded-[2.9rem] p-10 flex-grow text-white">
-                        <div class="w-16 h-16 bg-white/10 text-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Programming Help</h3>
+                            <span class="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 shrink-0 ml-2">Full-stack</span>
                         </div>
-                        <h3 class="text-2xl font-black text-white mb-4">Programming Help</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-8">Clean, commented, and executable code in Java, Python, C++, and more. We handle complex algorithms, data structures, and full-stack projects, providing robust documentation and logical breakdowns for every code snippet.</p>
-                        <div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                            <span class="text-indigo-400 font-black text-[10px] uppercase tracking-widest">Full-Stack Experts</span>
-                            <div class="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center group-hover:bg-white group-hover:text-indigo-950 transition-colors">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Clean, commented code in Python, Java, C++ with full documentation.</p>
                     </div>
                 </div>
 
                 <!-- Editing & Proofreading -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-amber-500 to-orange-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
-                        <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform dark:bg-amber-950/30">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Editing &amp; Proofreading</h3>
+                            <span class="text-[10px] font-bold text-amber-600 dark:text-amber-400 shrink-0 ml-2">Grammar hub</span>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Editing & Proofreading</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Refine your drafts to perfection. We correct syntax, clarify ambiguous phrasing, and ensure perfect adherence to citation styles. Our editorial process elevates your voice while maintaining academic integrity.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
-                            <span class="text-amber-600 font-black text-[10px] uppercase tracking-widest">Grammar & Syntax Hub</span>
-                            <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors dark:bg-amber-950/30">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Syntax, citation style &amp; clarity refinement while preserving your voice.</p>
                     </div>
                 </div>
 
-            
                 <!-- Online Course Help -->
-                <div class="group relative flex flex-col p-1 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-[3rem] transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                    <div class="bg-white rounded-[2.9rem] p-10 flex-grow transition-colors dark:bg-slate-900">
-                        <div class="w-16 h-16 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                <div class="group flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                    <div class="shrink-0 w-10 h-10 rounded-xl bg-cyan-100 dark:bg-cyan-950/60 text-cyan-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h3 class="font-black text-slate-900 dark:text-white text-sm">Online Course Help</h3>
+                            <span class="text-[10px] font-bold text-cyan-600 dark:text-cyan-400 shrink-0 ml-2">Full-term</span>
                         </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Online Course Help</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-8 dark:text-slate-500">Full-term academic management for your online courses. We assist with weekly discussions, periodic quizzes, midterm exams, and complex final projects to ensure you maintain a consistent GPA throughout the semester.</p>
-                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between dark:border-slate-800/80">
-                            <span class="text-cyan-600 font-black text-[10px] uppercase tracking-widest">Full-Term Management</span>
-                            <div class="w-8 h-8 rounded-full bg-cyan-50 text-cyan-600 flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white transition-colors">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                            </div>
-                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">Quizzes, discussions, exams &amp; projects managed to keep your GPA consistent.</p>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Footer row -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="{{ route('order') }}" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold transition-all duration-200 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5">
+                    Get Expert Help Now
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
+                <span class="text-slate-400 dark:text-slate-600 text-xs font-medium">100% Confidential &nbsp;·&nbsp; PhD Experts &nbsp;·&nbsp; 24/7 Support</span>
+            </div>
+
         </div>
     </section>
 
     <!-- Subject Areas Comprehensive Grid Section -->
     <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950">
+
         <div class="container mx-auto px-6">
             <div class="text-center mb-24 max-w-4xl mx-auto">
                 <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
@@ -1922,150 +1612,178 @@
                         <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Applied Psychology</li>
                     </ul>
                 </div>
-            </div>
+        <!-- Geographic Coverage - USA Section -->
+    </div>
         </div>
     </section>
 
     <!-- Geographic Coverage - USA Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:to-slate-900">
+    <!-- Nationwide Coverage Section (Compact) -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-950 relative overflow-hidden" id="locations">
+
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 px-4 py-2 rounded-full mb-6">
-                    <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                            clip-rule="evenodd" />
+
+            <!-- Compact Header -->
+            <div class="text-center mb-10 max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 mb-5">
+                    <span class="relative flex h-1.5 w-1.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-rose-500"></span>
+                    </span>
+                    <span class="text-rose-600 dark:text-rose-400 font-bold text-[10px] uppercase tracking-[0.2em]">National Academic Network</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight mb-3">
+                    Nationwide Coverage.
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Coast-to-Coast.</span>
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">All 50 states covered. PhD experts routing your requests 24/7.</p>
+            </div>
+
+            <!-- Stylized SVG Connection Network Map -->
+            <div class="max-w-4xl mx-auto mb-10 relative rounded-3xl border border-slate-200/60 bg-white/40 p-8 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/30 overflow-hidden shadow-2xl" id="coverage-map">
+                <!-- Grid background patterns inside map card -->
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+
+                <!-- Tooltip -->
+                <div id="map-tooltip" class="absolute z-50 hidden pointer-events-none">
+                    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2.5 shadow-xl min-w-[140px]">
+                        <div id="tooltip-city" class="font-black text-slate-900 dark:text-white text-sm mb-0.5"></div>
+                        <div id="tooltip-sub" class="text-[11px] text-slate-500 dark:text-slate-400 font-medium mb-1.5"></div>
+                        <div class="flex items-center gap-1 text-blue-600 dark:text-blue-400 text-[10px] font-bold">
+                            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            Open in Maps
+                        </div>
+                    </div>
+                    <div class="w-2.5 h-2.5 bg-white dark:bg-slate-800 border-b border-r border-slate-200 dark:border-slate-700 rotate-45 mx-auto -mt-1.5 relative z-10"></div>
+                </div>
+
+                <div class="relative z-10 w-full h-[220px] md:h-[300px]">
+                    <svg id="network-svg" class="w-full h-full text-slate-300 dark:text-slate-700" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Connecting network route lines -->
+                        <path d="M120 80 L350 140 M350 140 L680 70 M350 140 L520 220 M120 80 L220 200 M220 200 L350 140 M520 220 L680 70 M520 220 L600 240 M680 70 L600 240 M350 140 L600 240" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
+                        <path d="M120 80 L350 140 M350 140 L680 70 M520 220 L680 70" stroke="url(#lineGrad)" stroke-width="2" stroke-dasharray="10 10">
+                            <animate attributeName="stroke-dashoffset" values="20;0" dur="2s" repeatCount="indefinite" />
+                        </path>
+
+                        <!-- Glowing Node Beacons (Pulsing circles) -->
+                        <!-- Seattle/West Coast Hub -->
+                        <circle cx="120" cy="80" r="12" class="fill-blue-500/10 dark:fill-blue-400/10" />
+                        <circle cx="120" cy="80" r="6" class="fill-blue-600 dark:fill-blue-400" />
+                        <circle cx="120" cy="80" r="2" fill="white" />
+                        <text x="120" y="60" text-anchor="middle" class="font-extrabold text-[10px] tracking-wider fill-slate-500 dark:fill-slate-400 uppercase">PST Hub</text>
+
+                        <!-- San Francisco Hub -->
+                        <circle cx="220" cy="200" r="16" class="fill-indigo-500/10 dark:fill-indigo-400/10">
+                            <animate attributeName="r" values="8;18;8" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="220" cy="200" r="6" class="fill-indigo-600 dark:fill-indigo-400" />
+
+                        <!-- Midwest Hub (Chicago) -->
+                        <circle cx="350" cy="140" r="20" class="fill-purple-500/10 dark:fill-purple-400/10">
+                            <animate attributeName="r" values="10;24;10" dur="2.5s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="350" cy="140" r="8" class="fill-purple-600 dark:fill-purple-400" />
+                        <circle cx="350" cy="140" r="3" fill="white" />
+                        <text x="350" y="115" text-anchor="middle" class="font-extrabold text-[10px] tracking-wider fill-slate-500 dark:fill-slate-400 uppercase">CST Hub</text>
+
+                        <!-- Houston Hub -->
+                        <circle cx="520" cy="220" r="14" class="fill-teal-500/10 dark:fill-teal-400/10" />
+                        <circle cx="520" cy="220" r="6" class="fill-teal-600 dark:fill-teal-400" />
+
+                        <!-- East Coast Hub (New York) -->
+                        <circle cx="680" cy="70" r="22" class="fill-blue-500/15 dark:fill-blue-400/15">
+                            <animate attributeName="r" values="10;26;10" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="680" cy="70" r="9" class="fill-blue-600 dark:fill-blue-400" />
+                        <circle cx="680" cy="70" r="3" fill="white" />
+                        <text x="680" y="45" text-anchor="middle" class="font-extrabold text-[10px] tracking-wider fill-slate-500 dark:fill-slate-400 uppercase">EST Hub</text>
+
+                        <!-- Miami Hub -->
+                        <circle cx="600" cy="240" r="12" class="fill-pink-500/10 dark:fill-pink-400/10" />
+                        <circle cx="600" cy="240" r="5" class="fill-pink-600 dark:fill-pink-400" />
+
+                        <!-- Gradients definition -->
+                        <defs>
+                            <linearGradient id="lineGrad" x1="120" y1="80" x2="680" y2="70" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2563eb" />
+                                <stop offset="0.5" stop-color="#8b5cf6" />
+                                <stop offset="1" stop-color="#ec4899" />
+                            </linearGradient>
+                        </defs>
                     </svg>
-                    <span class="text-red-900 font-semibold text-sm">Serving Students Across USA</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 dark:text-white">Available Nationwide in the USA</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed dark:text-slate-400">
-                    We proudly serve students from coast to coast with 24/7 online support regardless of your location
-                </p>
-            </div>
-
-            <div class="max-w-7xl mx-auto">
-                <!-- Major Cities -->
-                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8 dark:bg-slate-900 dark:border-slate-800/80">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center dark:text-white">Popular Cities We Serve</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🗽</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">New York</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🌴</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Los Angeles</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🏙️</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Chicago</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🤠</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Houston</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🔔</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Philadelphia</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🌵</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Phoenix</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🌁</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">San Francisco</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🏖️</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Miami</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🏛️</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Washington DC</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🎭</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Boston</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">☕</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Seattle</div>
-                        </div>
-                        <div class="text-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors dark:bg-blue-950/30">
-                            <div class="text-2xl mb-2">🎸</div>
-                            <div class="font-semibold text-gray-900 text-sm dark:text-white">Austin</div>
-                        </div>
-                    </div>
-                    <p class="text-center text-gray-500 mt-6 text-sm dark:text-slate-500">+ Hundreds more cities across all 50 states</p>
                 </div>
 
-                <!-- State Coverage -->
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 dark:border-blue-900/50">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 East Coast</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
-                            <div>New York</div>
-                            <div>Pennsylvania</div>
-                            <div>Massachusetts</div>
-                            <div>Virginia</div>
-                            <div>Florida</div>
-                            <div>Maryland</div>
-                            <div>New Jersey</div>
-                            <div>Georgia</div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-100 dark:border-emerald-900/50">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 Midwest</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
-                            <div>Illinois</div>
-                            <div>Ohio</div>
-                            <div>Michigan</div>
-                            <div>Wisconsin</div>
-                            <div>Minnesota</div>
-                            <div>Missouri</div>
-                            <div>Indiana</div>
-                            <div>Iowa</div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100 dark:border-amber-900/50">
-                        <h4 class="font-bold text-gray-900 mb-4 text-lg dark:text-white">🌟 West Coast</h4>
-                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-slate-400">
-                            <div>California</div>
-                            <div>Washington</div>
-                            <div>Oregon</div>
-                            <div>Arizona</div>
-                            <div>Nevada</div>
-                            <div>Colorado</div>
-                            <div>Utah</div>
-                            <div>Texas</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
-                    <h4 class="text-2xl font-bold mb-3">🇺🇸 All 50 States Covered</h4>
-                    <p class="text-lg mb-4">No matter where you are in the United States, our expert help is just a click
-                        away</p>
-                    <div class="flex flex-wrap gap-3 justify-center text-sm">
-                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">Online Platform</span>
-                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">24/7 Available</span>
-                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">All Time Zones</span>
-                    </div>
+                <!-- Info overlay -->
+                <div class="absolute bottom-6 right-6 flex items-center gap-2 bg-slate-900/85 backdrop-blur-md px-4 py-2 rounded-xl text-white border border-white/10 shadow-lg text-xs font-bold cursor-default">
+                    <span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    Live Academic Routing Active
                 </div>
             </div>
+
+            <!-- JS tooltip -->
+            <script>
+            (function(){
+                var tip=document.getElementById('map-tooltip'),
+                    tc=document.getElementById('tooltip-city'),
+                    ts=document.getElementById('tooltip-sub'),
+                    svg=document.getElementById('network-svg'),
+                    mc=document.getElementById('coverage-map');
+                document.querySelectorAll('.map-node').forEach(function(n){
+                    var dot=n.querySelector('.node-dot'),origR=dot?dot.getAttribute('r'):null;
+                    n.addEventListener('mouseenter',function(){
+                        tc.textContent=n.dataset.city; ts.textContent=n.dataset.sub;
+                        if(dot&&origR)dot.setAttribute('r',parseFloat(origR)*1.45);
+                        tip.classList.remove('hidden'); pos(n);
+                    });
+                    n.addEventListener('mouseleave',function(){
+                        tip.classList.add('hidden');
+                        if(dot&&origR)dot.setAttribute('r',origR);
+                    });
+                    n.addEventListener('click',function(){window.open(n.dataset.url,'_blank','noopener');});
+                });
+                function pos(n){
+                    if(!svg||!mc)return;
+                    var sr=svg.getBoundingClientRect(),cr=mc.getBoundingClientRect(),vb=svg.viewBox.baseVal;
+                    var sx=sr.width/vb.width,sy=sr.height/vb.height;
+                    var px=sr.left-cr.left+parseFloat(n.dataset.cx)*sx;
+                    var py=sr.top-cr.top+parseFloat(n.dataset.cy)*sy;
+                    var tw=tip.querySelector('div');
+                    var w=tw?tw.offsetWidth:140,h=tw?tw.offsetHeight:70;
+                    var l=px-w/2, t=py-h-14;
+                    l=Math.max(4,Math.min(l,cr.width-w-4));
+                    if(t<4)t=py+22;
+                    tip.style.left=l+'px'; tip.style.top=t+'px';
+                }
+            })();
+            </script>
+
+            <!-- City links — slim pill row -->
+            <div class="max-w-4xl mx-auto">
+                <p class="text-center text-[10px] font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-4">Popular Cities</p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <a href="https://www.google.com/maps/search/assignment+help+New+York" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-sm transition-all duration-200">🗽 <span>New York</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Los+Angeles" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-orange-400 hover:text-orange-600 dark:hover:text-orange-400 hover:shadow-sm transition-all duration-200">🌴 <span>Los Angeles</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Chicago" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-purple-400 hover:text-purple-600 dark:hover:text-purple-400 hover:shadow-sm transition-all duration-200">🏙️ <span>Chicago</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Houston" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-sm transition-all duration-200">🤠 <span>Houston</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Philadelphia" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-teal-400 hover:text-teal-600 dark:hover:text-teal-400 hover:shadow-sm transition-all duration-200">🔔 <span>Philadelphia</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Phoenix" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-yellow-400 hover:text-yellow-600 dark:hover:text-yellow-400 hover:shadow-sm transition-all duration-200">🌵 <span>Phoenix</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+San+Francisco" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-red-400 hover:text-red-600 dark:hover:text-red-400 hover:shadow-sm transition-all duration-200">🌁 <span>San Francisco</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Miami" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-pink-400 hover:text-pink-600 dark:hover:text-pink-400 hover:shadow-sm transition-all duration-200">🏖️ <span>Miami</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Washington+DC" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-sm transition-all duration-200">🏛️ <span>Washington DC</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Boston" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-rose-400 hover:text-rose-600 dark:hover:text-rose-400 hover:shadow-sm transition-all duration-200">🎭 <span>Boston</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Seattle" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-400 hover:shadow-sm transition-all duration-200">☕ <span>Seattle</span></a>
+                    <a href="https://www.google.com/maps/search/assignment+help+Austin" target="_blank" rel="noopener" class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-sm transition-all duration-200">🎸 <span>Austin</span></a>
+                    <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-600 text-xs font-semibold">+ 38 more states</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
 
 
-
-
     <!-- Premium FAQ Section -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="faq">
+    <section class="py-16 lg:py-24 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="faq">
         <!-- Background Accents -->
         <div class="absolute inset-0 opacity-40 pointer-events-none">
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px]"></div>
@@ -2073,11 +1791,11 @@
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center mb-24">
+            <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 mb-8">
                     <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Clarifying Success</span>
                 </div>
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight dark:text-white">
                     Frequently Asked <br>
                     <span class="text-blue-600">Questions.</span>
                 </h2>
@@ -2147,7 +1865,7 @@
             </div>
 
             <!-- FAQ Footer -->
-            <div class="mt-20 text-center">
+            <div class="mt-12 lg:mt-16 text-center">
                 <p class="text-slate-500 font-bold mb-6 dark:text-slate-500">Didn't find your answer?</p>
                 <a href="{{ route('order') }}" class="inline-flex items-center gap-2 text-blue-600 font-black hover:text-blue-700 transition-colors group">
                     Chat with an expert 
