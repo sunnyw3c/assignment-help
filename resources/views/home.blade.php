@@ -186,111 +186,76 @@
                     <!-- Mesh Pattern -->
                     <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAzMCAwIEwgMzAgNjAgTSAwIDMwIEwgNjAgMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjUiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9zdmc+')]"></div>
 
-                    <div class="relative grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:items-center">
-                        <div>
-                            <div class="flex items-center gap-3 mb-8">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-white group-hover:text-emerald-500 transition-all duration-500 shadow-lg">
-                                    <svg class="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                    </svg>
+                    <div class="relative max-w-4xl mx-auto text-center">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                            <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            <span class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">Privacy Guaranteed</span>
+                        </div>
+
+                        <h2 class="text-4xl sm:text-5xl font-black text-white mb-4 leading-[1.1]">
+                            Trust Us With<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Your Grades</span>
+                        </h2>
+
+                        <p class="text-base text-slate-400 max-w-2xl mx-auto mb-10">
+                            Legally registered academic assistance provider with strict privacy policies.
+                        </p>
+
+                        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 mb-10">
+                            <div class="flex items-center gap-3">
+                                <div class="flex -space-x-2">
+                                    <div class="w-9 h-9 rounded-full border-2 border-[#0F172A] bg-blue-500 flex items-center justify-center text-[10px] font-bold text-white">JD</div>
+                                    <div class="w-9 h-9 rounded-full border-2 border-[#0F172A] bg-indigo-500 flex items-center justify-center text-[10px] font-bold text-white">AS</div>
+                                    <div class="w-9 h-9 rounded-full border-2 border-[#0F172A] bg-slate-600 flex items-center justify-center text-[9px] font-bold text-white">+5k</div>
                                 </div>
-                                <span class="text-emerald-400 group-hover:text-white text-xs font-black uppercase tracking-[0.2em] transition-colors">Verified Secure Platform</span>
-                                <div class="h-px flex-1 bg-gradient-to-r from-emerald-500/20 to-transparent ml-4"></div>
+                                <div class="text-left">
+                                    <div class="flex items-baseline gap-0.5">
+                                        <span class="text-2xl font-black text-white">98</span>
+                                        <span class="text-lg font-bold text-blue-500">%</span>
+                                    </div>
+                                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Success Rate</p>
+                                </div>
                             </div>
 
-                            <h2 class="text-4xl sm:text-5xl font-black text-white mb-8 leading-[1.1]">
-                                Trust Us With <br>
-                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Your Grades</span>
-                            </h2>
+                            <div class="hidden sm:block w-px h-12 bg-white/10"></div>
 
-                            <p class="text-lg leading-relaxed text-slate-400 group-hover:text-indigo-100 transition-colors duration-500 mb-10 max-w-xl">
-                                Assignment Help USA is a legally registered academic assistance provider. We adhere to
-                                strict privacy policies and <span class="text-white font-semibold">academic integrity standards</span>.
-                            </p>
-                            
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 lg:mb-0">
-                                <!-- Genuine Experts -->
-                                <div class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-500">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-white group-hover:text-blue-600 transition-all duration-500 shadow-lg">
-                                        <svg class="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h3 class="font-bold text-white text-sm transition-colors group-hover:text-indigo-100">Genuine Experts</h3>
-                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors dark:text-slate-500">PhD Holders Only</p>
+                                    <div class="text-left">
+                                        <p class="text-sm font-bold text-white">PhD Experts</p>
+                                        <p class="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">Qualified Only</p>
                                     </div>
                                 </div>
-                                
-                                <!-- Bank-Grade Security -->
-                                <div class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-500">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-white group-hover:text-indigo-600 transition-all duration-500 shadow-lg">
-                                        <svg class="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h3 class="font-bold text-white text-sm transition-colors group-hover:text-indigo-100">Safe Payments</h3>
-                                        <p class="text-[11px] text-slate-500 group-hover:text-white/60 mt-0.5 uppercase tracking-wider font-extrabold transition-colors dark:text-slate-500">SSL Encrypted</p>
+                                    <div class="text-left">
+                                        <p class="text-sm font-bold text-white">Safe Payments</p>
+                                        <p class="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">SSL Encrypted</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="relative">
-                            <!-- Premium Success Metrics Card -->
-                            <div class="relative p-8 sm:p-10 rounded-[2rem] bg-gradient-to-br from-white/[0.08] to-transparent border border-white/10 backdrop-blur-xl overflow-hidden group/metric">
-                                <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent opacity-0 group-hover/metric:opacity-100 transition-opacity duration-700"></div>
-                                
-                                <div class="relative space-y-8">
-                                    <div class="flex justify-between items-end">
-                                        <div>
-                                            <span class="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] block mb-2">Platform Performance</span>
-                                            <div class="flex items-baseline gap-1">
-                                                <span class="text-6xl font-black text-white tracking-tighter">98</span>
-                                                <span class="text-3xl font-bold text-blue-500">%</span>
-                                            </div>
-                                        </div>
-                                        <div class="text-right pb-1">
-                                            <div class="flex items-center justify-end -space-x-2 mb-2">
-                                                <div class="w-8 h-8 rounded-full border-2 border-[#0F172A] bg-blue-500 flex items-center justify-center text-[10px] font-bold text-white">JD</div>
-                                                <div class="w-8 h-8 rounded-full border-2 border-[#0F172A] bg-indigo-500 flex items-center justify-center text-[10px] font-bold text-white">AS</div>
-                                                <div class="w-8 h-8 rounded-full border-2 border-[#0F172A] bg-slate-700 flex items-center justify-center text-[10px] font-bold text-white">+5k</div>
-                                            </div>
-                                            <span class="text-xs font-bold text-slate-400 italic">Trusted Success Rate</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Enhanced Progress Bar -->
-                                    <div class="space-y-3">
-                                        <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-500">
-                                            <span>Current Reliability</span>
-                                            <span class="text-white">Optimal Range</span>
-                                        </div>
-                                        <div class="relative h-4 w-full bg-white/5 rounded-full p-1 border border-white/5">
-                                            <div class="absolute inset-y-1 left-1 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 rounded-full shadow-[0_0_20px_rgba(37,99,235,0.4)]" style="width: 98%">
-                                                <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.15)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0.15)_75%,transparent_75%,transparent)] bg-[length:20px_20px] animate-[shimmer_2s_linear_infinite]"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="pt-4">
-                                        <a href="{{ route('order') }}" class="group/btn relative flex w-full items-center justify-between gap-4 px-8 py-6 bg-blue-600 text-white font-black rounded-[1.5rem] hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)] hover:shadow-2xl hover:-translate-y-1 active:scale-95 overflow-hidden dark:hover:bg-slate-800/50">
-                                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                                            <div class="flex flex-col items-start relative z-10">
-                                                <span class="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-0.5">Instant Access</span>
-                                                <span class="text-sm font-black">START YOUR ORDER NOW</span>
-                                            </div>
-                                            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center group-hover/btn:bg-blue-600 group-hover/btn:text-white transition-all duration-500 relative z-10 shadow-lg">
-                                                <svg class="w-5 h-5 transition-transform group-hover/btn:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <p class="text-center text-[10px] text-slate-500 mt-4 font-bold uppercase tracking-[0.3em] dark:text-slate-500">Based on 50,000+ Completed Orders</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)] hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                                <span class="relative z-10 text-sm">Place Your Order</span>
+                                <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">50,000+ Orders Completed</span>
                         </div>
                     </div>
                 </div>
