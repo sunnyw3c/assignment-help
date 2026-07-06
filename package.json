@@ -30,5 +30,12 @@
         "tailwindcss": "^3.1.0",
         "typescript": "^5.9.3",
         "vite": "^6.2.4"
+    },
+    "dependencies": {
+        "filepond": "^4.32.12",
+        "filepond-plugin-file-validate-size": "^2.2.8",
+        "filepond-plugin-file-validate-type": "^1.2.9",
+        "filepond-plugin-image-preview": "^4.6.12",
+        "react-filepond": "^7.1.3"
     }
 }

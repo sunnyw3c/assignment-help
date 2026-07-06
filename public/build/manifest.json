@@ -12,7 +12,7 @@
     "name": "vendor"
   },
   "resources/css/app.css": {
-    "file": "assets/css/app-4Dk3SSFJ.css",
+    "file": "assets/css/app-B8u5Eqvy.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -27,7 +27,7 @@
     ]
   },
   "resources/js/creative-hero-entry.tsx": {
-    "file": "assets/js/creative-hero-entry-6zUopF5x.js",
+    "file": "assets/js/creative-hero-entry-DNSZ0nB1.js",
     "name": "creative-hero-entry",
     "src": "resources/js/creative-hero-entry.tsx",
     "isEntry": true,
