@@ -1052,10 +1052,6 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- 1: Original Work -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_100px_-20px_rgba(37,99,235,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1089,10 +1085,6 @@
 
                 <!-- 2: Money Back -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-[0_40px_100px_-20px_rgba(16,185,129,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1126,10 +1118,6 @@
 
                 <!-- 3: Revisions -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-[0_40px_100px_-20px_rgba(139,92,246,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-purple-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1163,10 +1151,6 @@
 
                 <!-- 4: Delivery -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-[0_40px_100px_-20px_rgba(245,158,11,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-amber-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1200,10 +1184,6 @@
 
                 <!-- 5: Support -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-cyan-100 hover:shadow-[0_40px_100px_-20px_rgba(6,182,212,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1237,10 +1217,6 @@
 
                 <!-- 6: Confidentiality -->
                 <div class="group relative bg-slate-50 rounded-[2.5rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-rose-100 hover:shadow-[0_40px_100px_-20px_rgba(244,63,94,0.15)] hover:-translate-y-3 overflow-hidden flex flex-col dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <!-- Shine Effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div class="absolute -inset-full bg-gradient-to-tr from-transparent via-white/40 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-                    </div>
 
                     <!-- Decorative Expanding Circle -->
                     <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50/50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
@@ -1275,86 +1251,6 @@
         </div>
     </section>
 
-    <!-- Premium SEO Content Section: Target "Assignment Help" USA -->
-    <section class="py-32 bg-[#0F172A] relative overflow-hidden text-white">
-        <!-- Background Accents -->
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
-        </div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mb-24">
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
-                    <span class="flex h-2 w-2 rounded-full bg-blue-400 animate-ping"></span>
-                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">E-E-A-T Verified Support</span>
-                </div>
-                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tight leading-[1.1]">
-                    The Gold Standard for <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Online Assignment Help USA.</span>
-                </h2>
-                <p class="text-xl text-slate-400 font-medium leading-relaxed max-w-3xl">
-                    In the competitive landscape of American higher education, average work isn't enough. We provide elite academic intervention that bridges the gap between struggling and succeeding.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-                <!-- Left Column: Expertise -->
-                <div class="space-y-12">
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-blue-600/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform shadow-lg border border-blue-500/30">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Expert US-Based PhD Writers</h3>
-                        </div>
-                        <p class="text-slate-400 leading-relaxed">
-                            Our platform connects you with the finest academic minds in America. Every writer in our <strong class="text-white">assignment help USA</strong> network holds an advanced degree (Masters or PhD) from prestigious institutions. We don’t just write; we research, analyze, and synthesize according to the highest Ivy League and state university standards.
-                        </p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform shadow-lg border border-emerald-500/30">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Zero-AI & Plagiarism-Free Content</h3>
-                        </div>
-                        <p class="text-slate-400 leading-relaxed">
-                            Integrity is our hallmark. We guarantee that every assignment is 100% human-written. Each order is accompanied by a comprehensive <strong class="text-white">Turnitin Report</strong>, ensuring your submission is entirely original and free from AI-generated patterns.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Right Column: Reliability -->
-                <div class="space-y-12">
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-purple-600/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform shadow-lg border border-purple-500/30">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">24/7 Coast-to-Coast Support</h3>
-                        </div>
-                        <p class="text-slate-400 leading-relaxed">
-                            Whether you're in New York (EST) or Los Angeles (PST), our coordinators are always awake. We provide round-the-clock assistance, ensuring that urgent deadlines are met with precision. Your <strong class="text-white">assignment helper</strong> is just a chat away, anytime.
-                        </p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-600/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform shadow-lg border border-amber-500/30">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                            </div>
-                            <h3 class="text-2xl font-bold">Native Academic Formatting</h3>
-                        </div>
-                        <p class="text-slate-400 leading-relaxed">
-                            Presentation matters. Our writers are specialists in all American academic formatting styles: <strong class="text-white">APA, MLA, Chicago, Harvard, and Bluebook</strong>. We ensure perfect citations, consistent referencing, and professional layout standards.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Why Students Choose Assignment Help USA -->
     <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
@@ -1374,39 +1270,47 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Original Content Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                <div class="group relative overflow-hidden bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
+                    <!-- Watermark Number -->
+                    <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-slate-950/[0.03] dark:text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
+                    <div class="relative z-10 w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Original Content</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Unique perspectives crafted exclusively for your prompt, ensuring distinctiveness in every paragraph.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 relative z-10 dark:text-white">Original Content</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed relative z-10 dark:text-slate-500">Unique perspectives crafted exclusively for your prompt, ensuring distinctiveness in every paragraph.</p>
                 </div>
 
                 <!-- Qualified Professionals Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                <div class="group relative overflow-hidden bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-emerald-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
+                    <!-- Watermark Number -->
+                    <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-slate-950/[0.03] dark:text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
+                    <div class="relative z-10 w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Expert Minds</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Direct access to subject matter experts with deep pedagogical understanding of American curriculum.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 relative z-10 dark:text-white">Expert Minds</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed relative z-10 dark:text-slate-500">Direct access to subject matter experts with deep pedagogical understanding of American curriculum.</p>
                 </div>
 
                 <!-- Reliable Timelines Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <div class="w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                <div class="group relative overflow-hidden bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-amber-100 hover:shadow-2xl dark:bg-slate-950 dark:hover:bg-slate-800/50">
+                    <!-- Watermark Number -->
+                    <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-slate-950/[0.03] dark:text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
+                    <div class="relative z-10 w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Swift Delivery</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Precision-engineered timelines that respect your deadlines, always allowing time for final review.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 relative z-10 dark:text-white">Swift Delivery</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed relative z-10 dark:text-slate-500">Precision-engineered timelines that respect your deadlines, always allowing time for final review.</p>
                 </div>
 
                 <!-- Referencing Specialists Card -->
-                <div class="group bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
-                    <div class="w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                <div class="group relative overflow-hidden bg-slate-50 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-white hover:border-purple-100 hover:shadow-2xl lg:mt-12 dark:bg-slate-950 dark:hover:bg-slate-800/50">
+                    <!-- Watermark Number -->
+                    <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-slate-950/[0.03] dark:text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
+                    <div class="relative z-10 w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 012 2h8a2 2 0 012-2v-2" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-slate-900 mb-4 dark:text-white">Cite Right</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed dark:text-slate-500">Mastery of all citation protocols, ensuring your paper meets the strictest academic integrity codes.</p>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 relative z-10 dark:text-white">Cite Right</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed relative z-10 dark:text-slate-500">Mastery of all citation protocols, ensuring your paper meets the strictest academic integrity codes.</p>
                 </div>
             </div>
 
