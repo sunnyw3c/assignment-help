@@ -7,19 +7,12 @@
     "file": "assets/js/axios-C5C3fESb.js",
     "name": "axios"
   },
-  "_utils-d51x4zUa.js": {
-    "file": "assets/js/utils-d51x4zUa.js",
-    "name": "utils",
-    "imports": [
-      "_vendor-MyFXUCRH.js"
-    ]
-  },
-  "_vendor-MyFXUCRH.js": {
-    "file": "assets/js/vendor-MyFXUCRH.js",
+  "_vendor-BClgSahe.js": {
+    "file": "assets/js/vendor-BClgSahe.js",
     "name": "vendor"
   },
   "resources/css/app.css": {
-    "file": "assets/css/app-B93XGqci.css",
+    "file": "assets/css/app-B8u5Eqvy.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -34,23 +27,21 @@
     ]
   },
   "resources/js/creative-hero-entry.tsx": {
-    "file": "assets/js/creative-hero-entry-BGpgvcms.js",
+    "file": "assets/js/creative-hero-entry-DNSZ0nB1.js",
     "name": "creative-hero-entry",
     "src": "resources/js/creative-hero-entry.tsx",
     "isEntry": true,
     "imports": [
-      "_vendor-MyFXUCRH.js",
-      "_utils-d51x4zUa.js"
+      "_vendor-BClgSahe.js"
     ]
   },
   "resources/js/react-hero.tsx": {
-    "file": "assets/js/react-hero-PzK4vm4_.js",
+    "file": "assets/js/react-hero-DNbjqBav.js",
     "name": "react-hero",
     "src": "resources/js/react-hero.tsx",
     "isEntry": true,
     "imports": [
-      "_vendor-MyFXUCRH.js",
-      "_utils-d51x4zUa.js"
+      "_vendor-BClgSahe.js"
     ]
   }
 }

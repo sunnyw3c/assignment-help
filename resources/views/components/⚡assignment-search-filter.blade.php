@@ -158,7 +158,7 @@ new class extends Component
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 @foreach($this->filteredSubjects as $key => $subject)
                     <a
-                        href="{{ route('services.assignment.index') }}?subject={{ $key }}"
+                        href="#"
                         class="group px-4 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-2 border-blue-200/50 hover:border-blue-400 rounded-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-md"
                         wire:key="subject-{{ $key }}"
                     >

@@ -166,7 +166,7 @@
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
                     Professional academic writing services for essays, research papers, dissertations, and more.
                 </p>
-                <a href="{{ route('services.assignment.index') }}"
+                <a href="#assignment-services"
                     class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group">
                     View All Assignment Services
                     <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"

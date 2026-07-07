@@ -16,33 +16,19 @@
     </filter>
   </defs>
 
-  <!-- Creative Book/Document Icon -->
-  <g transform="translate(5, 5)" filter="url(#shadow)">
-    <!-- Open book base -->
-    <path d="M0,45 L22,40 L22,5 L0,10 Z" fill="url(#iconGradient)" opacity="0.9"/>
-    <path d="M22,40 L44,45 L44,10 L22,5 Z" fill="url(#iconGradient)"/>
-
-    <!-- Book spine -->
-    <path d="M20,5 L24,5 L24,40 L20,40 Z" fill="#9D0208"/>
-
-    <!-- Page lines on left -->
-    <line x1="4" y1="15" x2="18" y2="12" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
-    <line x1="4" y1="22" x2="18" y2="19" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
-    <line x1="4" y1="29" x2="18" y2="26" stroke="#fff" stroke-width="1.5" opacity="0.7"/>
-
-    <!-- Page lines on right -->
-    <line x1="26" y1="12" x2="40" y2="15" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
-    <line x1="26" y1="19" x2="40" y2="22" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
-    <line x1="26" y1="26" x2="40" y2="29" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
-
-    <!-- Graduation cap on top -->
-    <polygon points="22,0 8,8 22,12 36,8" fill="#1D3557"/>
-    <line x1="22" y1="12" x2="22" y2="5" stroke="#1D3557" stroke-width="2"/>
-    <circle cx="22" cy="2" r="2" fill="#F4A261"/>
-
-    <!-- Tassel -->
-    <path d="M36,8 Q40,12 38,18" stroke="#F4A261" stroke-width="1.5" fill="none"/>
-    <circle cx="38" cy="18" r="2" fill="#F4A261"/>
+  <!-- Creative Book/Document Icon replaced with new Books Favicon -->
+  <g transform="translate(5, 7) scale(0.4)" filter="url(#shadow)">
+    <!-- Right leaning book (drawn first so it goes behind middle book) -->
+    <rect x="86" y="24" width="22" height="74" rx="2" fill="#E3322B" transform="rotate(-11 86 98)"/>
+    
+    <!-- Middle book -->
+    <rect x="50" y="24" width="22" height="74" rx="2" fill="#D9251D"/>
+    
+    <!-- Left book -->
+    <rect x="20" y="24" width="22" height="74" rx="2" fill="#F26522"/>
+    
+    <!-- Base book (drawn last so it covers the bottom edges) -->
+    <rect x="8" y="96" width="112" height="18" rx="3" fill="#B71C1C"/>
   </g>
 
   <!-- ASSIGNMENT HELP text -->
