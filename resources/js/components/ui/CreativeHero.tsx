@@ -130,21 +130,21 @@ const InfoTooltip = ({ text }: { text: string }) => {
 
 // ─── PhoneField ───────────────────────────────────────────────────────────────
 const PhoneField = ({ countryCode, setCountryCode, phone, setPhone }: any) => (
-    <div className="flex items-center h-[41px] border-[1.5px] border-[var(--ph-bdr)] rounded-[10px] bg-[var(--ph-bg)] overflow-hidden transition-[border-color,box-shadow] duration-[180ms] focus-within:border-[#f16700] focus-within:shadow-[0_0_0_3px_rgba(241,103,0,0.13)]">
+    <div className="flex items-center w-full min-w-0 h-[41px] border-[1.5px] border-[var(--ph-bdr)] rounded-[10px] bg-[var(--ph-bg)] overflow-hidden transition-[border-color,box-shadow] duration-[180ms] focus-within:border-[#f16700] focus-within:shadow-[0_0_0_3px_rgba(241,103,0,0.13)]">
         <select value={countryCode} onChange={e => setCountryCode(e.target.value)}
-            className="h-full border-0 bg-transparent pl-2.5 pr-1 text-[12px] text-[var(--ph-clr)] cursor-pointer min-w-[80px] outline-none shadow-none appearance-none">
+            className="h-full border-0 bg-transparent pl-2.5 pr-1 text-[12px] text-[var(--ph-clr)] cursor-pointer w-[80px] max-sm:w-[72px] shrink-0 outline-none shadow-none appearance-none">
             {countryCodes.map(c => <option key={c.code} value={c.code}>{c.flag} {c.code}</option>)}
         </select>
         <div className="w-px h-5 flex-shrink-0 bg-[var(--ph-sep)]"/>
         <input type="tel" placeholder="Phone no." value={phone}
             onChange={e => setPhone(e.target.value)}
-            className="flex-1 min-w-0 h-full px-3 border-0 bg-transparent text-[13px] text-[var(--ph-clr)] placeholder:text-[var(--i-ph)] outline-none shadow-none"/>
+            className="flex-1 min-w-0 h-full px-3 max-sm:px-2.5 border-0 bg-transparent text-[13px] text-[var(--ph-clr)] placeholder:text-[var(--i-ph)] outline-none shadow-none"/>
     </div>
 );
 
 // ─── DeadlinePicker ───────────────────────────────────────────────────────────
 const DeadlinePicker = ({ deadlineTime, setDeadlineTime, showDeadline, setShowDeadline }: any) => (
-    <div className="relative">
+    <div className="relative w-full min-w-0">
         <div className="flex items-center justify-between h-[41px] px-3 cursor-pointer select-none border-[1.5px] border-[var(--dl-bdr)] rounded-[10px] bg-[var(--dl-bg)] transition-[border-color,box-shadow] duration-[180ms] hover:border-[#f16700] hover:shadow-[0_0_0_3px_rgba(241,103,0,0.10)]"
             onClick={() => setShowDeadline(!showDeadline)}>
             <span className="text-[12.5px] font-semibold text-[var(--dl-lbl)]">Deadline</span>
@@ -171,22 +171,22 @@ const DeadlinePicker = ({ deadlineTime, setDeadlineTime, showDeadline, setShowDe
 
 // ─── PagesCounter ─────────────────────────────────────────────────────────────
 const PagesCounter = ({ pages, setPages }: any) => (
-    <div className="border-[1.5px] border-[var(--pg-bdr)] rounded-[10px] bg-[var(--pg-bg)] px-3 py-[7px] flex flex-col gap-[6px]">
+    <div className="w-full min-w-0 border-[1.5px] border-[var(--pg-bdr)] rounded-[10px] bg-[var(--pg-bg)] px-3 max-sm:px-2.5 py-[7px] flex flex-col gap-[6px]">
         <span className="text-[9.5px] font-bold text-[var(--pg-lbl)] uppercase tracking-[0.06em]">Pages</span>
-        <div className="flex items-center gap-[7px]">
+        <div className="flex items-center gap-[7px] min-w-0">
             <button type="button" onClick={() => setPages(Math.max(1, pages - 1))}
                 className="w-[25px] h-[25px] shrink-0 flex items-center justify-center rounded-[6px] border-[1.5px] border-[var(--pg-btn-bdr)] bg-[var(--pg-btn-bg)] text-[var(--pg-btn-clr)] text-[15px] font-bold cursor-pointer outline-none transition-all duration-150 hover:!bg-[#f16700] hover:!border-[#f16700] hover:!text-white">−</button>
             <span className="text-[14px] font-extrabold text-[var(--pg-num)] min-w-[18px] text-center">{pages}</span>
             <button type="button" onClick={() => setPages(pages + 1)}
                 className="w-[25px] h-[25px] shrink-0 flex items-center justify-center rounded-[6px] border-[1.5px] border-[var(--pg-btn-bdr)] bg-[var(--pg-btn-bg)] text-[var(--pg-btn-clr)] text-[15px] font-bold cursor-pointer outline-none transition-all duration-150 hover:!bg-[#f16700] hover:!border-[#f16700] hover:!text-white">+</button>
-            <span className="text-[11.5px] font-medium text-[var(--pg-wrd)]">{pages * 250} words</span>
+            <span className="text-[11.5px] font-medium text-[var(--pg-wrd)] truncate">{pages * 250} words</span>
         </div>
     </div>
 );
 
 // ─── DescField ────────────────────────────────────────────────────────────────
 const DescField = ({ description, setDescription, attachedFiles, onAttach }: any) => (
-    <div className="border-[1.5px] border-[var(--desc-bdr)] rounded-[10px] bg-[var(--desc-bg)] overflow-hidden flex flex-col flex-1 min-h-[145px] transition-[border-color,box-shadow] duration-[180ms] focus-within:border-[#f16700] focus-within:shadow-[0_0_0_3px_rgba(241,103,0,0.13)]">
+    <div className="w-full min-w-0 border-[1.5px] border-[var(--desc-bdr)] rounded-[10px] bg-[var(--desc-bg)] overflow-hidden flex flex-col flex-1 min-h-[145px] transition-[border-color,box-shadow] duration-[180ms] focus-within:border-[#f16700] focus-within:shadow-[0_0_0_3px_rgba(241,103,0,0.13)]">
         <textarea placeholder="Description (Write/Attach)" value={description}
             onChange={e => setDescription(e.target.value)}
             className="flex-1 resize-none px-3 py-[10px] border-0 bg-transparent text-[13px] text-[var(--desc-clr)] placeholder:text-[var(--i-ph)] leading-[1.55] min-h-[90px] outline-none shadow-none"/>
@@ -208,19 +208,21 @@ const DescField = ({ description, setDescription, attachedFiles, onAttach }: any
 );
 
 // ─── Input / Select shared class ─────────────────────────────────────────────
-const inputCls = "block w-full h-[41px] px-3 border-[1.5px] border-[var(--i-bdr)] rounded-[10px] text-[13px] text-[var(--i-clr)] bg-[var(--i-bg)] transition-[border-color,background,box-shadow] duration-[180ms] outline-none shadow-none placeholder:text-[var(--i-ph)] focus:border-[#f16700] focus:!bg-[var(--i-fbg)] focus:!shadow-[0_0_0_3px_rgba(241,103,0,0.13)]";
+const inputCls = "block w-full min-w-0 h-[41px] px-3 max-sm:px-2.5 border-[1.5px] border-[var(--i-bdr)] rounded-[10px] text-[13px] text-[var(--i-clr)] bg-[var(--i-bg)] transition-[border-color,background,box-shadow] duration-[180ms] outline-none shadow-none placeholder:text-[var(--i-ph)] focus:border-[#f16700] focus:!bg-[var(--i-fbg)] focus:!shadow-[0_0_0_3px_rgba(241,103,0,0.13)]";
 const selectCls = `${inputCls} appearance-none cursor-pointer bg-[image:url("data:image/svg+xml,%3Csvg%20width%3D'10'%20height%3D'6'%20viewBox%3D'0%200%2010%206'%20fill%3D'none'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M1%201L5%205L9%201'%20stroke%3D'%2394a3b8'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%2F%3E%3C%2Fsvg%3E")] bg-no-repeat bg-[right_11px_center] pr-8`;
+const fieldRowCls = "flex gap-2 max-md:flex-col max-md:items-stretch";
+const fieldColCls = "flex-1 min-w-0 max-md:w-full";
 
 // ─── Field sets ───────────────────────────────────────────────────────────────
 const WritingFields = (p: any) => (
     <>
-        <div className="flex gap-2 max-sm:flex-col">
+        <div className={fieldRowCls}>
             <input type="email" required placeholder="Email" value={p.email}
-                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} flex-[3] min-w-0`}/>
-            <div className="flex-[4] min-w-0"><PhoneField {...p}/></div>
+                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} flex-[3] min-w-0 max-md:w-full`}/>
+            <div className="flex-[4] min-w-0 max-md:w-full"><PhoneField {...p}/></div>
         </div>
-        <div className="flex gap-2 items-start max-sm:flex-col">
-            <div className="flex-1 min-w-0 flex flex-col gap-2">
+        <div className={`${fieldRowCls} items-start`}>
+            <div className={`${fieldColCls} flex flex-col gap-2`}>
                 <select value={p.subject} onChange={e => p.setSubject(e.target.value)} className={selectCls}>
                     <option value="">Subject / Course Code</option>
                     {writingSubjects.map(s => <option key={s}>{s}</option>)}
@@ -228,32 +230,32 @@ const WritingFields = (p: any) => (
                 <DeadlinePicker {...p}/>
                 <PagesCounter {...p}/>
             </div>
-            <div className="flex-1 min-w-0 flex flex-col gap-2"><DescField {...p}/></div>
+            <div className={`${fieldColCls} flex flex-col gap-2`}><DescField {...p}/></div>
         </div>
     </>
 );
 
 const TechnicalFields = (p: any) => (
     <>
-        <div className="flex gap-2 max-sm:flex-col">
+        <div className={fieldRowCls}>
             <input type="email" required placeholder="Email" value={p.email}
-                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} flex-1 min-w-0`}/>
-            <div className="flex-1 min-w-0"><PhoneField {...p}/></div>
+                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} ${fieldColCls}`}/>
+            <div className={fieldColCls}><PhoneField {...p}/></div>
         </div>
-        <div className="flex gap-2 max-sm:flex-col">
-            <select value={p.subject} onChange={e => p.setSubject(e.target.value)} className={`${selectCls} flex-1 min-w-0`}>
+        <div className={fieldRowCls}>
+            <select value={p.subject} onChange={e => p.setSubject(e.target.value)} className={`${selectCls} ${fieldColCls}`}>
                 <option value="">Select Technology / Subject</option>
                 {technicalSubjects.map(s => <option key={s}>{s}</option>)}
             </select>
-            <select value={p.difficulty} onChange={e => p.setDifficulty(e.target.value)} className={`${selectCls} flex-1 min-w-0`}>
+            <select value={p.difficulty} onChange={e => p.setDifficulty(e.target.value)} className={`${selectCls} ${fieldColCls}`}>
                 <option value="">Difficulty Level</option>
                 <option>Beginner / Undergraduate</option>
                 <option>Intermediate / Graduate</option>
                 <option>Advanced / PhD Level</option>
             </select>
         </div>
-        <div className="flex gap-2 items-start max-sm:flex-col">
-            <div className="flex-1 min-w-0 flex flex-col gap-2">
+        <div className={`${fieldRowCls} items-start`}>
+            <div className={`${fieldColCls} flex flex-col gap-2`}>
                 <DeadlinePicker {...p}/>
                 <div className="border-[1.5px] border-[var(--pg-bdr)] rounded-[10px] bg-[var(--pg-bg)] px-3 py-[7px] flex flex-col gap-[6px]">
                     <span className="text-[9.5px] font-bold text-[var(--pg-lbl)] uppercase tracking-[0.06em]">Delivery Format</span>
@@ -268,30 +270,30 @@ const TechnicalFields = (p: any) => (
                     </div>
                 </div>
             </div>
-            <div className="flex-1 min-w-0 flex flex-col gap-2"><DescField {...p}/></div>
+            <div className={`${fieldColCls} flex flex-col gap-2`}><DescField {...p}/></div>
         </div>
     </>
 );
 
 const OnlineClassFields = (p: any) => (
     <>
-        <div className="flex gap-2 max-sm:flex-col">
+        <div className={fieldRowCls}>
             <input type="email" required placeholder="Email" value={p.email}
-                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} flex-1 min-w-0`}/>
-            <div className="flex-1 min-w-0"><PhoneField {...p}/></div>
+                onChange={e => p.setEmail(e.target.value)} className={`${inputCls} ${fieldColCls}`}/>
+            <div className={fieldColCls}><PhoneField {...p}/></div>
         </div>
-        <div className="flex gap-2 max-sm:flex-col">
-            <select value={p.subject} onChange={e => p.setSubject(e.target.value)} className={`${selectCls} flex-1 min-w-0`}>
+        <div className={fieldRowCls}>
+            <select value={p.subject} onChange={e => p.setSubject(e.target.value)} className={`${selectCls} ${fieldColCls}`}>
                 <option value="">Course / Subject Name</option>
                 {onlineClassSubjects.map(s => <option key={s}>{s}</option>)}
             </select>
-            <select value={p.classDuration} onChange={e => p.setClassDuration(e.target.value)} className={`${selectCls} flex-1 min-w-0`}>
+            <select value={p.classDuration} onChange={e => p.setClassDuration(e.target.value)} className={`${selectCls} ${fieldColCls}`}>
                 <option value="">Class Duration</option>
                 {["1 Week","2 Weeks","1 Month","2 Months","Full Semester","Full Year"].map(d => <option key={d}>{d}</option>)}
             </select>
         </div>
-        <div className="flex gap-2 items-start max-sm:flex-col">
-            <div className="flex-1 min-w-0 flex flex-col gap-2">
+        <div className={`${fieldRowCls} items-start`}>
+            <div className={`${fieldColCls} flex flex-col gap-2`}>
                 <input type="url" placeholder="Course Platform URL (optional)" value={p.classUrl}
                     onChange={e => p.setClassUrl(e.target.value)} className={inputCls}/>
                 <div className="border-[1.5px] border-[var(--pg-bdr)] rounded-[10px] bg-[var(--pg-bg)] px-3 py-[7px] flex flex-col gap-[6px]">
@@ -307,7 +309,7 @@ const OnlineClassFields = (p: any) => (
                     </div>
                 </div>
             </div>
-            <div className="flex-1 min-w-0 flex flex-col gap-2"><DescField {...p}/></div>
+            <div className={`${fieldColCls} flex flex-col gap-2`}><DescField {...p}/></div>
         </div>
     </>
 );
