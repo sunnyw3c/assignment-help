@@ -1100,7 +1100,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @@keyframes float {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg) scale(1);
             }
@@ -1115,7 +1115,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg) scale(1);
             }
@@ -1130,7 +1130,7 @@
             }
         }
 
-        @keyframes glow {
+        @@keyframes glow {
             0%, 100% {
                 box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
             }
@@ -1139,12 +1139,12 @@
             }
         }
 
-        @keyframes code-typing {
+        @@keyframes code-typing {
             0% { width: 0; }
             100% { width: 100%; }
         }
 
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
             0%, 100% {
                 background-position: 0% 50%;
             }
@@ -1195,7 +1195,7 @@
         }
 
         /* Glitch effect for tech elements */
-        @keyframes glitch {
+        @@keyframes glitch {
             0%, 100% { transform: translate(0); }
             10% { transform: translate(-1px, -1px); }
             20% { transform: translate(1px, 1px); }
@@ -1239,7 +1239,7 @@
         }
 
         /* Slide fade in animation */
-        @keyframes slideIn {
+        @@keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -1303,14 +1303,14 @@
             animation: gradientShift 12s ease infinite;
         }
 
-        @keyframes gradientShift {
+        @@keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
         /* Mobile-specific enhancements for code background */
-        @media (max-width: 768px) {
+        @@media (max-width: 768px) {
             .code-snippet {
                 transform: scale(0.8);
                 opacity: 0.4 !important;
@@ -1346,7 +1346,7 @@
         }
 
         /* Extra small screens */
-        @media (max-width: 480px) {
+        @@media (max-width: 480px) {
             .code-snippet {
                 opacity: 0.25 !important;
                 font-size: 0.7rem;

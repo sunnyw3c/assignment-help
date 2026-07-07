@@ -52,7 +52,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
-                <button type="button" @click="$dispatch('close')" class="w-full sm:flex-1 py-4 bg-slate-100 text-slate-600 font-black rounded-2xl hover:bg-slate-200 transition-all text-xs uppercase tracking-widest">
+                <button type="button" x-on:click="$dispatch('close')" class="w-full sm:flex-1 py-4 bg-slate-100 text-slate-600 font-black rounded-2xl hover:bg-slate-200 transition-all text-xs uppercase tracking-widest">
                     {{ __('Cancel') }}
                 </button>
 

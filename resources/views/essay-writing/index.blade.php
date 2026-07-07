@@ -1564,7 +1564,7 @@
                 @foreach($faqs as $i => $faq)
                 <div class="border border-gray-200 rounded-xl overflow-hidden">
                     <button
-                        @click="open = open === {{ $i }} ? null : {{ $i }}"
+                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
                         class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
                         :class="open === {{ $i }} ? 'bg-blue-50' : 'bg-white'">
                         <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>

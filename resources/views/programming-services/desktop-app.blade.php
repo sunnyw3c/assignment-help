@@ -735,7 +735,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @@keyframes float {
 
             0%,
             100% {
@@ -751,7 +751,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
 
             0%,
             100% {

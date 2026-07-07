@@ -208,7 +208,7 @@
                             </div>
 
                             <div class="lg:w-80 flex flex-col gap-4">
-                                <button @click="openMessaging(assignment)" class="group w-full p-6 bg-slate-900 rounded-[2rem] text-white hover:bg-indigo-600 transition-all duration-500 shadow-xl shadow-slate-200 active:scale-95 text-left relative overflow-hidden">
+                                <button x-on:click="openMessaging(assignment)" class="group w-full p-6 bg-slate-900 rounded-[2rem] text-white hover:bg-indigo-600 transition-all duration-500 shadow-xl shadow-slate-200 active:scale-95 text-left relative overflow-hidden">
                                     <div class="relative z-10 flex flex-col gap-4">
                                         <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-indigo-600 transition-all">
                                             <svg class="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
@@ -440,9 +440,9 @@
                                         </template>
 
                                         <!-- Hidden Multi-File Input -->
-                                        <input type="file" x-ref="fileInput" class="hidden" @change="uploadFiles($event)" multiple>
+                                        <input type="file" x-ref="fileInput" class="hidden" x-on:change="uploadFiles($event)" multiple>
                                         
-                                        <button @click="triggerUpload()" 
+                                        <button x-on:click="triggerUpload()" 
                                                 :disabled="fileUploading"
                                                 class="w-full group/up p-8 bg-slate-50 border-2 border-dashed border-slate-200 rounded-[2.5rem] hover:border-indigo-400 hover:bg-indigo-50/30 transition-all duration-500 disabled:opacity-50">
                                             <template x-if="!fileUploading">
@@ -494,7 +494,7 @@
              style="display: none;">
             <div class="absolute inset-0 overflow-hidden">
                 <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity" 
-                     @click="showMessaging = false"
+                     x-on:click="showMessaging = false"
                      x-show="showMessaging"
                      x-transition:enter="ease-out duration-500"
                      x-transition:enter-start="opacity-0"
@@ -526,7 +526,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <button @click="showMessaging = false" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 text-white hover:bg-white/20 transition-all active:scale-90">
+                                    <button x-on:click="showMessaging = false" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 text-white hover:bg-white/20 transition-all active:scale-90">
                                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                                     </button>
                                 </div>
@@ -563,7 +563,7 @@
                                        @keydown.enter.prevent="sendMessage()"
                                        class="w-full bg-slate-50 border-none rounded-3xl py-5 pl-8 pr-20 text-sm font-bold placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-500 transition-all shadow-inner min-h-[60px] max-h-32"
                                        placeholder="Share your details..."></textarea>
-                                    <button @click="sendMessage()" 
+                                    <button x-on:click="sendMessage()" 
                                             class="absolute right-3 top-2 w-12 h-12 bg-indigo-600 text-white rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-indigo-200 flex items-center justify-center active:scale-90 group-hover:scale-105">
                                         <svg class="w-6 h-6 rotate-45 -translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                                     </button>

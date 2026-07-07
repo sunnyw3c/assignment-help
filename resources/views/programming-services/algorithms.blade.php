@@ -1961,7 +1961,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @@keyframes float {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg);
             }
@@ -1973,7 +1973,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg);
             }
@@ -1985,7 +1985,7 @@
             }
         }
 
-        @keyframes bounce-slow {
+        @@keyframes bounce-slow {
             0%, 100% {
                 transform: translateY(-5%);
                 animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
@@ -1996,7 +1996,7 @@
             }
         }
 
-        @keyframes pulse-slow {
+        @@keyframes pulse-slow {
             0%, 100% {
                 opacity: 0.9;
             }
@@ -2005,7 +2005,7 @@
             }
         }
 
-        @keyframes pulse-glow {
+        @@keyframes pulse-glow {
             0%, 100% {
                 box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
             }
@@ -2014,7 +2014,7 @@
             }
         }
 
-        @keyframes gradient {
+        @@keyframes gradient {
             0% {
                 background-position: 0% 50%;
             }
@@ -2062,7 +2062,7 @@
             transform: translateZ(0);
         }
 
-        @keyframes blob {
+        @@keyframes blob {
             0%, 100% {
                 transform: translate3d(0, 0, 0) scale(1);
             }

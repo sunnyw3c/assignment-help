@@ -586,7 +586,7 @@ new class extends Component {
                                                 increment() { if(this.count < 100) this.count++ },
                                                 decrement() { if(this.count > 1) this.count-- }
                                             }" class="flex items-center gap-3 sm:gap-6 bg-slate-50/80 p-3 sm:p-4 rounded-xl sm:rounded-[1.5rem] border border-slate-100 shadow-inner w-full md:w-auto justify-center">
-                                                <button type="button" @click="decrement()"
+                                                <button type="button" x-on:click="decrement()"
                                                     class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
                                                     <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"></path></svg>
                                                 </button>
@@ -597,7 +597,7 @@ new class extends Component {
                                                     <div class="text-[10px] font-bold text-purple-600 uppercase tracking-widest">Pages</div>
                                                 </div>
 
-                                                <button type="button" @click="increment()"
+                                                <button type="button" x-on:click="increment()"
                                                     class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-emerald-50 text-slate-400 hover:text-emerald-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100">
                                                     <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
                                                 </button>

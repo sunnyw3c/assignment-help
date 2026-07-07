@@ -262,17 +262,17 @@
             </div>
 
             <style>
-                @keyframes scroll {
+                @@keyframes scroll {
                     0% { transform: translateY(-100%); }
                     100% { transform: translateY(200%); }
                 }
 
-                @keyframes shimmer {
+                @@keyframes shimmer {
                     0% { background-position: 0 0; }
                     100% { background-position: 40px 0; }
                 }
 
-                @keyframes blob {
+                @@keyframes blob {
                     0% { transform: translate(0, 0) scale(1); }
                     33% { transform: translate(30px, -50px) scale(1.1); }
                     66% { transform: translate(-20px, 20px) scale(0.9); }
@@ -428,7 +428,7 @@
 
                 <!-- Testimonial Showcase with Cinematic Motion -->
                 <div class="mt-20" x-data="testimonialShowcase()">
-                    <div class="relative rounded-[2.5rem] overflow-hidden" @mouseenter="paused = true" @mouseleave="paused = false; resetParallax()" @mousemove="onMouseMove">
+                    <div class="relative rounded-[2.5rem] overflow-hidden" x-on:mouseenter="paused = true" x-on:mouseleave="paused = false; resetParallax()" @mousemove="onMouseMove">
                         <!-- Animated gradient orbs that follow current testimonial -->
                         <div class="absolute inset-0 transition-colors duration-1000" :style="'background: radial-gradient(ellipse at 20% 50%, ' + currentTestimonial.orb1 + ' 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, ' + currentTestimonial.orb2 + ' 0%, transparent 60%)'"></div>
                         
@@ -504,7 +504,7 @@
                         <!-- Animated progress dots -->
                         <div class="flex items-center gap-2">
                             <template x-for="(t, i) in testimonials" :key="'dot-' + i">
-                                <button @click="goTo(i)" class="relative h-1.5 rounded-full transition-all duration-500 overflow-hidden" :class="i === current ? 'w-10 bg-blue-500/30' : 'w-2 bg-white/10 hover:bg-white/30'">
+                                <button x-on:click="goTo(i)" class="relative h-1.5 rounded-full transition-all duration-500 overflow-hidden" :class="i === current ? 'w-10 bg-blue-500/30' : 'w-2 bg-white/10 hover:bg-white/30'">
                                     <div x-show="i === current" class="absolute inset-y-0 left-0 bg-blue-500 rounded-full transition-all duration-100" :style="'width: ' + progress + '%'"></div>
                                 </button>
                             </template>
@@ -513,10 +513,10 @@
                         <div class="flex items-center gap-4">
                             <span class="text-xs text-slate-500 font-bold tabular-nums" x-text="pad(current + 1) + ' / ' + pad(testimonials.length)"></span>
                             <div class="flex gap-1.5">
-                                <button @click="prev" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
+                                <button x-on:click="prev" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
                                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                                 </button>
-                                <button @click="next" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
+                                <button x-on:click="next" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200">
                                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                                 </button>
                             </div>
@@ -525,7 +525,7 @@
                 </div>
 
                 <style>
-                    @keyframes rotateBorder {
+                    @@keyframes rotateBorder {
                         to { --angle: 360deg; }
                     }
                     @property --angle {
@@ -1709,7 +1709,7 @@
             <div class="max-w-4xl mx-auto space-y-4">
                 <!-- FAQ Item 1 -->
                 <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
-                    <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                    <button x-on:click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
                         <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">Is Assignment Help USA legit and safe to use?</span>
                         <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
@@ -1724,7 +1724,7 @@
 
                 <!-- FAQ Item 2 -->
                 <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
-                    <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                    <button x-on:click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
                         <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">How much does it cost?</span>
                         <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
@@ -1739,7 +1739,7 @@
 
                 <!-- FAQ Item 3 -->
                 <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
-                    <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                    <button x-on:click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
                         <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">How fast can you complete my assignment?</span>
                         <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
@@ -1754,7 +1754,7 @@
 
                 <!-- FAQ Item 4 -->
                 <div x-data="{ open: false }" class="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-300 hover:shadow-xl dark:bg-slate-900 dark:border-slate-800/80">
-                    <button @click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
+                    <button x-on:click="open = !open" class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none">
                         <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors dark:text-white">What if I'm not satisfied with the work?</span>
                         <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 transition-transform duration-500 dark:bg-slate-950" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>

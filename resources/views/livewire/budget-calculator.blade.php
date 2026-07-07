@@ -138,12 +138,12 @@ new class extends Component
         
         <!-- Tab switcher -->
         <div class="relative flex items-center gap-1 p-2 bg-slate-100 dark:bg-white/5 border-b border-slate-200 dark:border-white/5">
-            <button type="button" @click="activeTab = 'calculator'" 
+            <button type="button" x-on:click="activeTab = 'calculator'" 
                 class="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300"
                 :class="activeTab === 'calculator' ? 'bg-red-50 text-red-600 dark:bg-red-500/20 dark:text-red-300 shadow-sm' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'">
                 Calculator
             </button>
-            <button type="button" @click="activeTab = 'compare'" 
+            <button type="button" x-on:click="activeTab = 'compare'" 
                 class="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300"
                 :class="activeTab === 'compare' ? 'bg-red-50 text-red-600 dark:bg-red-500/20 dark:text-red-300 shadow-sm' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'">
                 Compare Pricing

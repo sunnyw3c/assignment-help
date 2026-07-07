@@ -848,7 +848,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @@keyframes float {
 
             0%,
             100% {
@@ -864,7 +864,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
 
             0%,
             100% {
@@ -880,7 +880,7 @@
             }
         }
 
-        @keyframes glow {
+        @@keyframes glow {
 
             0%,
             100% {
@@ -892,7 +892,7 @@
             }
         }
 
-        @keyframes slide-down {
+        @@keyframes slide-down {
             0% {
                 transform: translateY(-100%);
                 opacity: 0;
@@ -912,7 +912,7 @@
             }
         }
 
-        @keyframes pulse-glow {
+        @@keyframes pulse-glow {
 
             0%,
             100% {
@@ -948,7 +948,7 @@
         }
 
         /* Matrix rain effect */
-        @keyframes matrix-fall {
+        @@keyframes matrix-fall {
             0% {
                 transform: translateY(-100%);
                 opacity: 0;
@@ -978,7 +978,7 @@
         }
 
         /* Gradient animation for hero background */
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
             0% {
                 background-position: 0% 50%;
             }
@@ -999,7 +999,7 @@
         }
 
         /* Code line animations */
-        @keyframes type-line {
+        @@keyframes type-line {
             from {
                 width: 0;
             }
@@ -1016,7 +1016,7 @@
         }
 
         /* Particle effects */
-        @keyframes particle-float {
+        @@keyframes particle-float {
             0% {
                 transform: translate(0, 0) rotate(0deg);
                 opacity: 0;

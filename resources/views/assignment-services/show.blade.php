@@ -303,7 +303,7 @@
 
     <!-- Custom Styles -->
     <style>
-        @keyframes float {
+        @@keyframes float {
 
             0%,
             100% {
@@ -315,7 +315,7 @@
             }
         }
 
-        @keyframes float-slow {
+        @@keyframes float-slow {
 
             0%,
             100% {
@@ -327,7 +327,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
 
             0%,
             100% {

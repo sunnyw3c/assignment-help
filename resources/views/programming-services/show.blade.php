@@ -393,7 +393,7 @@
             <div class="max-w-4xl mx-auto space-y-6">
                 @foreach ($serviceDetails['faq'] as $index => $faq)
                     <div x-data="{ open: false }" class="bg-white rounded-2xl shadow-lg border border-gray-100">
-                        <button @click="open = !open"
+                        <button x-on:click="open = !open"
                             class="w-full text-left px-8 py-6 flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors duration-200">
                             <span class="text-lg font-bold text-gray-900">{{ $faq['question'] }}</span>
                             <svg x-bind:class="open ? 'rotate-180' : ''"
@@ -447,7 +447,7 @@
 
     <!-- Custom Styles -->
     <style>
-        @keyframes float {
+        @@keyframes float {
 
             0%,
             100% {
@@ -459,7 +459,7 @@
             }
         }
 
-        @keyframes float-slow {
+        @@keyframes float-slow {
 
             0%,
             100% {
@@ -471,7 +471,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
 
             0%,
             100% {
@@ -483,7 +483,7 @@
             }
         }
 
-        @keyframes pulse-slow {
+        @@keyframes pulse-slow {
 
             0%,
             100% {
@@ -495,7 +495,7 @@
             }
         }
 
-        @keyframes bounce-slow {
+        @@keyframes bounce-slow {
 
             0%,
             100% {
