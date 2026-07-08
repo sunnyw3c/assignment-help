@@ -820,15 +820,46 @@ export default function CreativeHero() {
                     width: 92px;
                     border-left: 1px solid var(--dl-dbdr);
                     background: var(--dl-dbg);
+<<<<<<< Updated upstream
+=======
+                    float: none !important;
+                }
+                .ahusa-deadline-picker .react-datepicker__time {
+                    height: 100% !important;
+                    background: var(--dl-dbg);
+                    float: none !important;
+>>>>>>> Stashed changes
                 }
                 .ahusa-deadline-picker .react-datepicker__time,
                 .ahusa-deadline-picker .react-datepicker__time-box {
                     width: 100% !important;
+<<<<<<< Updated upstream
+=======
+                    height: 204px !important;
+>>>>>>> Stashed changes
                     background: var(--dl-dbg);
                 }
                 .ahusa-deadline-picker .react-datepicker__time-list {
+<<<<<<< Updated upstream
                     background: var(--dl-dbg);
                     scrollbar-color: #f16700 transparent;
+=======
+                    height: 204px !important;
+                    overflow-y: auto !important;
+                    background: var(--dl-dbg);
+                    scrollbar-color: #f16700 transparent;
+                    scrollbar-width: thin;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar {
+                    width: 5px;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar-thumb {
+                    background: #f16700;
+                    border-radius: 9999px;
+>>>>>>> Stashed changes
                 }
                 .ahusa-deadline-picker .react-datepicker__time-list-item {
                     color: var(--dl-muted);
@@ -848,6 +879,12 @@ export default function CreativeHero() {
                         width: 100%;
                         border-left: 0;
                         border-top: 1px solid var(--dl-dbdr);
+<<<<<<< Updated upstream
+=======
+                    }
+                    .ahusa-deadline-picker .react-datepicker__time-box {
+                        height: auto !important;
+>>>>>>> Stashed changes
                     }
                     .ahusa-deadline-picker .react-datepicker__time-list {
                         display: grid;
