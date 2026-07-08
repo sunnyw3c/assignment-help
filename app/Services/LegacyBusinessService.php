@@ -21,7 +21,7 @@ class LegacyBusinessService
     public function calculatePrice(string $currency, int $pageCount, string $deadline): float
     {
         $deadlineDays = $this->parseDeadlineDays($deadline);
-        
+
         // Cap deadline days at 10 as per legacy logic
         $cappedDays = min($deadlineDays, 10);
 
@@ -57,12 +57,40 @@ class LegacyBusinessService
      */
     private function parseDeadlineDays(string $deadline): int
     {
-        if (str_contains($deadline, 'hours')) {
+        $deadlineValue = trim($deadline);
+
+        if (preg_match('/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?$/', $deadlineValue) === 1) {
+            $deadlineDateTime = \Carbon\Carbon::parse($deadlineValue);
+            $hoursUntilDeadline = now()->diffInHours($deadlineDateTime, false);
+
+            if ($hoursUntilDeadline <= 0) {
+                return 0;
+            }
+
+            if ($hoursUntilDeadline <= 24) {
+                return 0;
+            }
+
+            return (int) ceil($hoursUntilDeadline / 24);
+        }
+
+        if (str_contains($deadlineValue, 'hours')) {
             return 0; // Legacy treated less than a day as '0' in the array
         }
-        
-        if (str_contains($deadline, 'days')) {
-            return (int) $deadline;
+
+        if (str_contains($deadlineValue, 'days')) {
+            return (int) $deadlineValue;
+        }
+
+        if (str_contains($deadlineValue, '-')) {
+            $deadlineDateTime = \Carbon\Carbon::parse($deadlineValue);
+            $hoursUntilDeadline = now()->diffInHours($deadlineDateTime, false);
+
+            if ($hoursUntilDeadline <= 24) {
+                return 0;
+            }
+
+            return (int) ceil($hoursUntilDeadline / 24);
         }
 
         return 7; // Default
