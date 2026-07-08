@@ -6,12 +6,7 @@
 
 @section('content')
 
-    <!-- Creative Animated Hero Section -->
-    <div id="creative-hero-root"></div>
-
-    @push('scripts')
-        @vite(['resources/js/creative-hero-entry.tsx'])
-    @endpush
+    <x-creative-hero />
 
 
     <section class="px-4 py-16 sm:px-6 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">

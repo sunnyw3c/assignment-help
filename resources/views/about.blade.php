@@ -8,15 +8,15 @@
     <!-- Structured Data for Organization -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Organization",
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
         "name": "Assignment Help USA",
         "description": "Professional assignment help and academic support service connecting students with expert tutors",
         "url": "{{ url('/') }}",
         "logo": "{{ asset('images/logo.png') }}",
         "foundingDate": "2020",
         "contactPoint": {
-            "@type": "ContactPoint",
+            "@@type": "ContactPoint",
             "contactType": "Customer Service",
             "areaServed": "Worldwide",
             "availableLanguage": ["English"]
@@ -197,7 +197,7 @@
             <!-- Values Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <!-- Quality Excellence -->
-                <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
+                <div class="group relative" x-data="{ hovered: false }" x-on:mouseenter="hovered = true" x-on:mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-blue-100 h-full dark:to-slate-900 dark:border-blue-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">⭐</span>
@@ -210,7 +210,7 @@
                 </div>
 
                 <!-- Student-Centric -->
-                <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
+                <div class="group relative" x-data="{ hovered: false }" x-on:mouseenter="hovered = true" x-on:mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-green-100 h-full dark:to-slate-900">
                         <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">🎓</span>
@@ -223,7 +223,7 @@
                 </div>
 
                 <!-- Integrity & Trust -->
-                <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
+                <div class="group relative" x-data="{ hovered: false }" x-on:mouseenter="hovered = true" x-on:mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-purple-100 h-full dark:to-slate-900 dark:border-purple-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">🔒</span>
@@ -236,7 +236,7 @@
                 </div>
 
                 <!-- Innovation -->
-                <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true" @mouseleave="hovered = false">
+                <div class="group relative" x-data="{ hovered: false }" x-on:mouseenter="hovered = true" x-on:mouseleave="hovered = false">
                     <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-orange-100 h-full dark:to-slate-900 dark:border-orange-900/50">
                         <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg">
                             <span class="text-3xl">💡</span>

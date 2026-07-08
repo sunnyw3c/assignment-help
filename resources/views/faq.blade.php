@@ -8,16 +8,16 @@
     <!-- Structured Data for FAQ -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
         "mainEntity": [
             @foreach($faqCategories as $category)
                 @foreach($category['questions'] as $faq)
                 {
-                    "@type": "Question",
+                    "@@type": "Question",
                     "name": "{{ $faq['question'] }}",
                     "acceptedAnswer": {
-                        "@type": "Answer",
+                        "@@type": "Answer",
                         "text": "{{ $faq['answer'] }}"
                     }
                 }@if(!$loop->parent->last || !$loop->last),@endif

@@ -7,34 +7,34 @@
     <!-- Structured Data for Assignment Services -->
     {{-- <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
+        "@@context": "https://schema.org",
+        "@@type": "ItemList",
         "name": "Assignment Help Services We Offer",
         "description": "Professional academic assignment help services for students at all levels",
         "numberOfItems": {{ count($services) }},
         "itemListElement": [
             @foreach($services as $index => $service)
             {
-                "@type": "ListItem",
+                "@@type": "ListItem",
                 "position": {{ $index + 1 }},
                 "item": {
-                    "@type": "Service",
+                    "@@type": "Service",
                     "name": "{{ $service->name }}",
                     "description": "{{ $service->short_description }}",
                     "provider": {
-                        "@type": "Organization",
+                        "@@type": "Organization",
                         "name": "AssignmentHelp"
                     },
                     "offers": {
-                        "@type": "Offer",
+                        "@@type": "Offer",
                         "priceSpecification": {
-                            "@type": "PriceSpecification",
+                            "@@type": "PriceSpecification",
                             "price": "{{ $service->base_price_per_page }}",
                             "priceCurrency": "USD"
                         }
                     },
                     "aggregateRating": {
-                        "@type": "AggregateRating",
+                        "@@type": "AggregateRating",
                         "ratingValue": "{{ $service->rating }}",
                         "ratingCount": "{{ $service->orders_completed }}"
                     }

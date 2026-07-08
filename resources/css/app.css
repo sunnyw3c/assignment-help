@@ -58,3 +58,129 @@ html {
 .dark ::selection {
     background-color: rgba(139, 92, 246, 0.4);
 }
+
+/*
+ * Dark-mode fallback for legacy Blade pages.
+ *
+ * Many older views were authored with light-only Tailwind utilities. These
+ * selectors only apply when the root .dark class is present, preserving the
+ * existing light-mode UI while giving unconverted pages readable dark surfaces.
+ */
+.dark .bg-white:not([class*="dark:bg-"]),
+.dark .bg-gray-50:not([class*="dark:bg-"]),
+.dark .bg-slate-50:not([class*="dark:bg-"]) {
+    background-color: rgb(15 23 42); /* slate-950 */
+}
+
+.dark .bg-gray-100:not([class*="dark:bg-"]),
+.dark .bg-slate-100:not([class*="dark:bg-"]) {
+    background-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .bg-gray-200:not([class*="dark:bg-"]),
+.dark .bg-slate-200:not([class*="dark:bg-"]) {
+    background-color: rgb(51 65 85); /* slate-700 */
+}
+
+.dark .text-gray-950:not([class*="dark:text-"]),
+.dark .text-gray-900:not([class*="dark:text-"]),
+.dark .text-slate-950:not([class*="dark:text-"]),
+.dark .text-slate-900:not([class*="dark:text-"]) {
+    color: rgb(248 250 252); /* slate-50 */
+}
+
+.dark .text-gray-800:not([class*="dark:text-"]),
+.dark .text-gray-700:not([class*="dark:text-"]),
+.dark .text-slate-800:not([class*="dark:text-"]),
+.dark .text-slate-700:not([class*="dark:text-"]) {
+    color: rgb(226 232 240); /* slate-200 */
+}
+
+.dark .text-gray-600:not([class*="dark:text-"]),
+.dark .text-gray-500:not([class*="dark:text-"]),
+.dark .text-slate-600:not([class*="dark:text-"]),
+.dark .text-slate-500:not([class*="dark:text-"]) {
+    color: rgb(148 163 184); /* slate-400 */
+}
+
+.dark .border-gray-50:not([class*="dark:border-"]),
+.dark .border-gray-100:not([class*="dark:border-"]),
+.dark .border-gray-200:not([class*="dark:border-"]),
+.dark .border-slate-50:not([class*="dark:border-"]),
+.dark .border-slate-100:not([class*="dark:border-"]),
+.dark .border-slate-200:not([class*="dark:border-"]) {
+    border-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .divide-gray-100:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-gray-200:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-100:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-200:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .from-white:not([class*="dark:from-"]),
+.dark .from-gray-50:not([class*="dark:from-"]),
+.dark .from-gray-100:not([class*="dark:from-"]),
+.dark .from-slate-50:not([class*="dark:from-"]),
+.dark .from-slate-100:not([class*="dark:from-"]),
+.dark .from-blue-50:not([class*="dark:from-"]),
+.dark .from-indigo-50:not([class*="dark:from-"]),
+.dark .from-purple-50:not([class*="dark:from-"]),
+.dark .from-green-50:not([class*="dark:from-"]),
+.dark .from-emerald-50:not([class*="dark:from-"]),
+.dark .from-cyan-50:not([class*="dark:from-"]),
+.dark .from-pink-50:not([class*="dark:from-"]),
+.dark .from-orange-50:not([class*="dark:from-"]),
+.dark .from-amber-50:not([class*="dark:from-"]),
+.dark .from-yellow-50:not([class*="dark:from-"]),
+.dark .from-red-50:not([class*="dark:from-"]) {
+    --tw-gradient-from: rgb(15 23 42) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.dark .via-white:not([class*="dark:via-"]),
+.dark .via-gray-50:not([class*="dark:via-"]),
+.dark .via-gray-100:not([class*="dark:via-"]),
+.dark .via-slate-50:not([class*="dark:via-"]),
+.dark .via-slate-100:not([class*="dark:via-"]),
+.dark .via-blue-50:not([class*="dark:via-"]),
+.dark .via-indigo-50:not([class*="dark:via-"]),
+.dark .via-purple-50:not([class*="dark:via-"]),
+.dark .via-green-50:not([class*="dark:via-"]),
+.dark .via-emerald-50:not([class*="dark:via-"]),
+.dark .via-cyan-50:not([class*="dark:via-"]),
+.dark .via-pink-50:not([class*="dark:via-"]),
+.dark .via-orange-50:not([class*="dark:via-"]),
+.dark .via-amber-50:not([class*="dark:via-"]),
+.dark .via-yellow-50:not([class*="dark:via-"]),
+.dark .via-red-50:not([class*="dark:via-"]) {
+    --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgb(30 41 59) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.dark .to-white:not([class*="dark:to-"]),
+.dark .to-gray-50:not([class*="dark:to-"]),
+.dark .to-gray-100:not([class*="dark:to-"]),
+.dark .to-slate-50:not([class*="dark:to-"]),
+.dark .to-slate-100:not([class*="dark:to-"]),
+.dark .to-blue-50:not([class*="dark:to-"]),
+.dark .to-indigo-50:not([class*="dark:to-"]),
+.dark .to-purple-50:not([class*="dark:to-"]),
+.dark .to-green-50:not([class*="dark:to-"]),
+.dark .to-emerald-50:not([class*="dark:to-"]),
+.dark .to-cyan-50:not([class*="dark:to-"]),
+.dark .to-pink-50:not([class*="dark:to-"]),
+.dark .to-orange-50:not([class*="dark:to-"]),
+.dark .to-amber-50:not([class*="dark:to-"]),
+.dark .to-yellow-50:not([class*="dark:to-"]),
+.dark .to-red-50:not([class*="dark:to-"]) {
+    --tw-gradient-to: rgb(30 41 59) var(--tw-gradient-to-position);
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+    color-scheme: dark;
+}
