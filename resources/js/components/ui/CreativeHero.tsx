@@ -202,8 +202,8 @@ const DeadlinePicker = ({ deadlineValue, setDeadlineValue, showDeadline, setShow
                 </span>
             </button>
             {showDeadline && (
-                <div className="mt-1 w-full">
-                    <div className="ahusa-deadline-popover rounded-[14px] bg-[var(--dl-dbg)] shadow-[0_18px_48px_rgba(0,0,0,0.28)] overflow-auto">
+                <div className="absolute left-0 top-full mt-1 z-[100] w-[340px] max-w-[calc(100vw-32px)]">
+                    <div className="ahusa-deadline-popover rounded-[14px] bg-[var(--dl-dbg)] shadow-[0_18px_48px_rgba(0,0,0,0.28)] overflow-hidden">
                         <div className="ahusa-deadline-picker">
                             <DatePicker
                                 selected={parseLocalDateTimeValue(deadlineValue) || getDraftDefault()}
@@ -753,7 +753,6 @@ export default function CreativeHero() {
                 }
                 .ahusa-deadline-popover {
                     max-height: min(420px, calc(100vh - 140px));
-                    scrollbar-color: #f16700 transparent;
                 }
                 .ahusa-deadline-picker .react-datepicker {
                     display: flex;
@@ -768,6 +767,7 @@ export default function CreativeHero() {
                 .ahusa-deadline-picker .react-datepicker__month-container {
                     flex: 1 1 auto;
                     min-width: 0;
+                    float: none !important;
                 }
                 .ahusa-deadline-picker .react-datepicker__header {
                     border-bottom: 1px solid var(--dl-dbdr);
@@ -818,23 +818,58 @@ export default function CreativeHero() {
                 }
                 .ahusa-deadline-picker .react-datepicker__time-container {
                     width: 92px;
+                    height: 250px !important;
                     border-left: 1px solid var(--dl-dbdr);
                     background: var(--dl-dbg);
+                    float: none !important;
+                    display: flex !important;
+                    flex-direction: column !important;
                 }
-                .ahusa-deadline-picker .react-datepicker__time,
+                .ahusa-deadline-picker .react-datepicker__time {
+                    flex: 1 1 auto !important;
+                    height: auto !important;
+                    background: var(--dl-dbg);
+                    float: none !important;
+                    display: flex !important;
+                    flex-direction: column !important;
+                }
                 .ahusa-deadline-picker .react-datepicker__time-box {
                     width: 100% !important;
+                    flex: 1 1 auto !important;
+                    height: auto !important;
                     background: var(--dl-dbg);
+                    float: none !important;
+                    overflow: hidden;
                 }
                 .ahusa-deadline-picker .react-datepicker__time-list {
+                    height: 100% !important;
+                    overflow-y: auto !important;
                     background: var(--dl-dbg);
                     scrollbar-color: #f16700 transparent;
+                    scrollbar-width: thin;
+                    padding-top: 4px !important;
+                    padding-bottom: 4px !important;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar {
+                    width: 5px;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+                .ahusa-deadline-picker .react-datepicker__time-list::-webkit-scrollbar-thumb {
+                    background: #f16700;
+                    border-radius: 9999px;
                 }
                 .ahusa-deadline-picker .react-datepicker__time-list-item {
                     color: var(--dl-muted);
                     font-size: 12px;
                     height: 30px !important;
                     line-height: 30px !important;
+                    padding: 0 10px !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    box-sizing: border-box !important;
                 }
                 .ahusa-deadline-picker .react-datepicker__time-list-item:hover {
                     background: var(--dl-hov) !important;
@@ -846,13 +881,24 @@ export default function CreativeHero() {
                     }
                     .ahusa-deadline-picker .react-datepicker__time-container {
                         width: 100%;
+                        height: auto !important;
                         border-left: 0;
                         border-top: 1px solid var(--dl-dbdr);
+                        display: block !important;
+                    }
+                    .ahusa-deadline-picker .react-datepicker__time {
+                        display: block !important;
+                        height: auto !important;
+                    }
+                    .ahusa-deadline-picker .react-datepicker__time-box {
+                        height: auto !important;
+                        display: block !important;
                     }
                     .ahusa-deadline-picker .react-datepicker__time-list {
-                        display: grid;
-                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                        display: grid !important;
+                        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
                         height: 78px !important;
+                        padding: 0 !important;
                     }
                     .ahusa-deadline-picker .react-datepicker__day-name,
                     .ahusa-deadline-picker .react-datepicker__day {
