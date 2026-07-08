@@ -14,7 +14,7 @@ new class extends Component {
     public $subject = 'general';
     public $title = '';
     public $difficulty = 'Intermediate';
-    public $deadline = '7-days';
+    public $deadline = '';
     public $pages = 1;
     public $spacing = 'double'; // double (275 words), single (550 words)
     public $files = [];
@@ -40,6 +40,10 @@ new class extends Component {
     {
         if (auth()->check()) {
             $this->email = auth()->user()->email;
+        }
+
+        if (empty($this->deadline)) {
+            $this->deadline = now()->addDays(7)->format('Y-m-d\TH:i');
         }
     }
 
@@ -120,6 +124,32 @@ new class extends Component {
         $this->tempFiles = []; // Reset temp files for next selection
     }
 
+    private function isDateTimeDeadline(string $deadline): bool
+    {
+        return preg_match('/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/', $deadline) === 1;
+    }
+
+    private function resolveDeadlineDateTime(): \Carbon\Carbon
+    {
+        $deadlineValue = trim((string) $this->deadline);
+
+        if ($this->isDateTimeDeadline($deadlineValue)) {
+            return \Carbon\Carbon::parse($deadlineValue);
+        }
+
+        if (str_contains($deadlineValue, 'hours')) {
+            $hours = (int) $deadlineValue;
+            return now()->addHours($hours);
+        }
+
+        if (str_contains($deadlineValue, 'days')) {
+            $days = (int) $deadlineValue;
+            return now()->addDays($days);
+        }
+
+        return now()->addDays(7);
+    }
+
     public function submit()
     {
         $rules = [
@@ -181,22 +211,12 @@ new class extends Component {
             }
         }
 
-        // Parse deadline into a proper DateTime
-        $deadlineStr = $this->deadline;
-        $deadlineDateTime = now();
-        
-        if (str_contains($deadlineStr, 'hours')) {
-            $hours = (int) $deadlineStr;
-            $deadlineDateTime = now()->addHours($hours);
-        } elseif (str_contains($deadlineStr, 'days')) {
-            $days = (int) $deadlineStr;
-            $deadlineDateTime = now()->addDays($days);
-        }
+        $deadlineDateTime = $this->resolveDeadlineDateTime();
 
         // Legacy Business Service logic
         $legacyService = new \App\Services\LegacyBusinessService();
         $orderNumber = $legacyService->generateOrderNumber($user->id);
-        $originalPrice = $legacyService->calculatePrice('USD', (int) $this->pages, $this->deadline);
+        $originalPrice = $legacyService->calculatePrice('USD', (int) $this->pages, $deadlineDateTime->toDateTimeString());
 
         // Calculate word count based on legacy logic: 250 words per page
         $wordCount = (int) $this->pages * 250;
@@ -265,7 +285,22 @@ new class extends Component {
     #[Computed]
     public function urgencyMultiplier()
     {
-        return $this->urgencyMultipliers[$this->deadline] ?? 1.0;
+        $deadlineValue = trim((string) $this->deadline);
+
+        if ($this->isDateTimeDeadline($deadlineValue)) {
+            $hoursUntilDeadline = now()->diffInHours(\Carbon\Carbon::parse($deadlineValue), false);
+
+            if ($hoursUntilDeadline < 0) return 1.5;
+            if ($hoursUntilDeadline <= 6) return 2.0;
+            if ($hoursUntilDeadline <= 12) return 1.8;
+            if ($hoursUntilDeadline <= 24) return 1.5;
+            if ($hoursUntilDeadline <= 48) return 1.3;
+            if ($hoursUntilDeadline <= 72) return 1.15;
+            if ($hoursUntilDeadline <= 168) return 1.0;
+            return 0.9;
+        }
+
+        return $this->urgencyMultipliers[$deadlineValue] ?? 1.0;
     }
 
     #[Computed]
@@ -546,18 +581,10 @@ new class extends Component {
                                     </div>
                                     <div>
                                         <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Deadline *</label>
-                                        <select wire:model.live="deadline" required class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
-                                            <option value="">Select Deadline</option>
-                                            <option value="3-hours">3 Hours (Very Urgent)</option>
-                                            <option value="6-hours">6 Hours</option>
-                                            <option value="12-hours">12 Hours</option>
-                                            <option value="24-hours">24 Hours</option>
-                                            <option value="2-days">2 Days</option>
-                                            <option value="3-days">3 Days</option>
-                                            <option value="7-days">7 Days (Standard)</option>
-                                            <option value="15-days">15 Days</option>
-                                            <option value="30-days">1 Month</option>
-                                        </select>
+                                        <input type="datetime-local" wire:model.live="deadline" required min="{{ now()->format('Y-m-d\TH:i') }}"
+                                            class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                        <p class="text-[11px] text-slate-500 mt-2">Choose the exact date and time you need the work delivered.</p>
+                                        @error('deadline') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                     </div>
                                 </div>
 

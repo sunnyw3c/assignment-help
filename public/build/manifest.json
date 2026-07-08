@@ -7,12 +7,23 @@
     "file": "assets/js/axios-C5C3fESb.js",
     "name": "axios"
   },
-  "_vendor-BClgSahe.js": {
-    "file": "assets/js/vendor-BClgSahe.js",
-    "name": "vendor"
+  "_vendor-B5U4kmJ6.css": {
+    "file": "assets/css/vendor-B5U4kmJ6.css",
+    "src": "_vendor-B5U4kmJ6.css"
+  },
+  "_vendor-BdyDjqC2.js": {
+    "file": "assets/js/vendor-BdyDjqC2.js",
+    "name": "vendor",
+    "css": [
+      "assets/css/vendor-B5U4kmJ6.css"
+    ]
   },
   "resources/css/app.css": {
+<<<<<<< HEAD
     "file": "assets/css/app-DT-OP2AD.css",
+=======
+    "file": "assets/css/app-DeNDrDAD.css",
+>>>>>>> ebe179a25b3da7a1cf680953d8098277fe5a692c
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -27,21 +38,21 @@
     ]
   },
   "resources/js/creative-hero-entry.tsx": {
-    "file": "assets/js/creative-hero-entry-DNSZ0nB1.js",
+    "file": "assets/js/creative-hero-entry-C_iZkVhf.js",
     "name": "creative-hero-entry",
     "src": "resources/js/creative-hero-entry.tsx",
     "isEntry": true,
     "imports": [
-      "_vendor-BClgSahe.js"
+      "_vendor-BdyDjqC2.js"
     ]
   },
   "resources/js/react-hero.tsx": {
-    "file": "assets/js/react-hero-DNbjqBav.js",
+    "file": "assets/js/react-hero-CmOlUNHL.js",
     "name": "react-hero",
     "src": "resources/js/react-hero.tsx",
     "isEntry": true,
     "imports": [
-      "_vendor-BClgSahe.js"
+      "_vendor-BdyDjqC2.js"
     ]
   }
 }
