@@ -778,8 +778,192 @@ new class extends Component {
                                     </div>
                                     <div class="space-y-2">
                                         <label class="block text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Deadline *</label>
-                                        <input type="datetime-local" wire:model.live="deadline" required min="{{ now()->format('Y-m-d\TH:i') }}"
-                                            class="w-full h-[41px] px-3 bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-xl text-[13px] text-slate-800 dark:text-slate-200 focus:border-[#f16700] focus:bg-white dark:focus:bg-slate-900 focus:outline-none transition-all cursor-pointer">
+                                        
+                                        <div x-data="{
+                                            open: false,
+                                            selected: @entangle('deadline'),
+                                            viewDate: new Date(),
+                                            times: [],
+                                            get formattedLabel() {
+                                                if (!this.selected) return 'Select deadline';
+                                                const d = new Date(this.selected);
+                                                if (isNaN(d.getTime())) return 'Select deadline';
+                                                return d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' }) + ', ' + d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+                                            },
+                                            get daysInMonth() {
+                                                const year = this.viewDate.getFullYear();
+                                                const month = this.viewDate.getMonth();
+                                                const firstDay = new Date(year, month, 1).getDay();
+                                                const totalDays = new Date(year, month + 1, 0).getDate();
+                                                
+                                                const arr = [];
+                                                for (let i = 0; i < firstDay; i++) {
+                                                    arr.push(null);
+                                                }
+                                                for (let d = 1; d <= totalDays; d++) {
+                                                    arr.push(new Date(year, month, d));
+                                                }
+                                                return arr;
+                                            },
+                                            get monthLabel() {
+                                                return this.viewDate.toLocaleString([], { month: 'long', year: 'numeric' });
+                                            },
+                                            prevMonth() {
+                                                this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() - 1, 1);
+                                            },
+                                            nextMonth() {
+                                                this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() + 1, 1);
+                                            },
+                                            selectDate(date) {
+                                                const now = new Date();
+                                                const currentSel = this.selected ? new Date(this.selected) : new Date(Date.now() + 24*60*60*1000);
+                                                
+                                                const nextDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), currentSel.getHours(), currentSel.getMinutes());
+                                                if (nextDate < now) {
+                                                    nextDate.setHours(now.getHours() + 2, 0, 0, 0);
+                                                }
+                                                this.selected = this.toLocalISOString(nextDate);
+                                            },
+                                            selectTime(hour, minute) {
+                                                const currentSel = this.selected ? new Date(this.selected) : new Date(Date.now() + 24*60*60*1000);
+                                                const nextDate = new Date(currentSel.getFullYear(), currentSel.getMonth(), currentSel.getDate(), hour, minute);
+                                                this.selected = this.toLocalISOString(nextDate);
+                                            },
+                                            isSameDate(d) {
+                                                if (!d || !this.selected) return false;
+                                                const sel = new Date(this.selected);
+                                                return d.getFullYear() === sel.getFullYear() && d.getMonth() === sel.getMonth() && d.getDate() === sel.getDate();
+                                            },
+                                            isTimeSelected(hour, minute) {
+                                                if (!this.selected) return false;
+                                                const sel = new Date(this.selected);
+                                                return sel.getHours() === hour && sel.getMinutes() === minute;
+                                            },
+                                            isDateDisabled(d) {
+                                                if (!d) return true;
+                                                const today = new Date();
+                                                today.setHours(0,0,0,0);
+                                                return d < today;
+                                            },
+                                            isTimeDisabled(hour, minute) {
+                                                if (!this.selected) return false;
+                                                const sel = new Date(this.selected);
+                                                const target = new Date(sel.getFullYear(), sel.getMonth(), sel.getDate(), hour, minute);
+                                                return target < new Date();
+                                            },
+                                            toLocalISOString(date) {
+                                                const pad = n => String(n).padStart(2, '0');
+                                                return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+                                            },
+                                            init() {
+                                                for (let h = 0; h < 24; h++) {
+                                                    for (let m of [0, 30]) {
+                                                        const labelDate = new Date();
+                                                        labelDate.setHours(h, m, 0, 0);
+                                                        this.times.push({
+                                                            hour: h,
+                                                            minute: m,
+                                                            label: labelDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+                                                        });
+                                                    }
+                                                }
+                                                if (this.selected) {
+                                                    this.viewDate = new Date(this.selected);
+                                                }
+                                                this.$watch('open', value => {
+                                                    if (value) {
+                                                        this.$nextTick(() => {
+                                                            const activeBtn = this.$refs.timeScroll?.querySelector('.is-selected');
+                                                            if (activeBtn) {
+                                                                activeBtn.scrollIntoView({ block: 'center' });
+                                                            }
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        }" class="relative w-full" @click.away="open = false">
+                                            
+                                            <button type="button" @click="open = !open" 
+                                                class="flex items-center justify-between w-full h-[41px] px-3 cursor-pointer select-none border border-slate-200/60 dark:border-slate-800/80 rounded-xl bg-slate-50 dark:bg-slate-950 focus:border-[#f16700] dark:focus:border-[#f16700] focus:outline-none transition-all">
+                                                <span class="text-[12.5px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Deadline</span>
+                                                <span class="flex items-center justify-end gap-[5px] min-w-0 text-[12.5px] font-semibold text-slate-700 dark:text-slate-300">
+                                                    <span class="max-w-[170px] max-sm:max-w-[145px] text-right truncate" x-text="formattedLabel">Select deadline</span>
+                                                    <svg class="flex-shrink-0 w-3 h-3 text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                                </span>
+                                            </button>
+                                        
+                                            <!-- Calendar Picker Container -->
+                                            <div x-show="open" 
+                                                x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="opacity-0 transform scale-95"
+                                                x-transition:enter-end="opacity-100 transform scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="opacity-100 transform scale-100"
+                                                x-transition:leave-end="opacity-0 transform scale-95"
+                                                class="absolute right-0 z-50 mt-1.5 w-[280px] sm:w-[410px] rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden flex flex-col sm:flex-row"
+                                                style="display: none;">
+                                                
+                                                <!-- Date Picker Calendar Side -->
+                                                <div class="flex-1 p-3 min-w-0">
+                                                    <div class="flex items-center justify-between mb-2">
+                                                        <button type="button" @click="prevMonth()" class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                                        </button>
+                                                        <div class="text-xs font-bold text-slate-700 dark:text-slate-350" x-text="monthLabel"></div>
+                                                        <button type="button" @click="nextMonth()" class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+                                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                                        </button>
+                                                    </div>
+                                                    
+                                                    <div class="grid grid-cols-7 gap-1 text-center">
+                                                        @foreach (['Su','Mo','Tu','We','Th','Fr','Sa'] as $day)
+                                                            <span class="text-[9px] font-extrabold uppercase text-slate-400 tracking-wider py-1">{{ $day }}</span>
+                                                        @endforeach
+                                                        
+                                                        <template x-for="(d, idx) in daysInMonth" :key="idx">
+                                                            <div class="aspect-square flex items-center justify-center">
+                                                                <template x-if="d === null">
+                                                                    <span class="w-full h-full"></span>
+                                                                </template>
+                                                                <template x-if="d !== null">
+                                                                    <button type="button" 
+                                                                        @click="selectDate(d)"
+                                                                        :disabled="isDateDisabled(d)"
+                                                                        class="w-7 h-7 rounded-lg text-xs font-semibold transition-all flex items-center justify-center cursor-pointer"
+                                                                        :class="isSameDate(d) 
+                                                                            ? 'bg-[#f16700] text-white font-bold is-selected' 
+                                                                            : (isDateDisabled(d) 
+                                                                                ? 'text-slate-300 dark:text-slate-700 cursor-not-allowed opacity-40' 
+                                                                                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800')">
+                                                                        <span x-text="d.getDate()"></span>
+                                                                    </button>
+                                                                </template>
+                                                            </div>
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Time Picker Side -->
+                                                <div class="w-full sm:w-28 border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-slate-800 flex flex-col">
+                                                    <div class="px-2 py-2 text-center text-[9px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20">Time</div>
+                                                    <div class="grid grid-cols-3 sm:grid-cols-1 overflow-y-auto max-h-[84px] sm:max-h-[224px] scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-800 p-1 sm:p-0" x-ref="timeScroll">
+                                                        <template x-for="t in times" :key="t.hour + '-' + t.minute">
+                                                            <button type="button" 
+                                                                @click="selectTime(t.hour, t.minute)"
+                                                                :disabled="isTimeDisabled(t.hour, t.minute)"
+                                                                class="py-2 text-center text-xs font-semibold transition-all cursor-pointer rounded-lg sm:rounded-none"
+                                                                :class="isTimeSelected(t.hour, t.minute) 
+                                                                    ? 'bg-[#f16700] text-white font-bold is-selected' 
+                                                                    : (isTimeDisabled(t.hour, t.minute)
+                                                                        ? 'text-slate-300 dark:text-slate-700 cursor-not-allowed opacity-40'
+                                                                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800')">
+                                                                <span x-text="t.label"></span>
+                                                            </button>
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         @error('deadline') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                     </div>
                                 </div>
