@@ -3,109 +3,87 @@
 @section('title', 'Place Order - Get Academic Help')
 
 @section('content')
-<div class="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 py-6 sm:py-12 lg:py-16 relative overflow-hidden">
-    {{-- Animated Background Elements - Responsive --}}
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-purple-300/20 rounded-full blur-3xl animate-float-slow"></div>
-        <div class="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-blue-300/20 rounded-full blur-3xl animate-float-slower"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] bg-indigo-300/10 rounded-full blur-3xl animate-pulse-slower"></div>
+<div class="relative min-h-screen py-8 sm:py-16 bg-gradient-to-br from-[#f5f0e8] via-[#fdf8f0] to-[#f9f4ec] dark:from-[#0f172a] dark:via-[#1a2537] dark:to-[#0f172a] overflow-hidden transition-colors duration-300">
+    <!-- Dot grid overlay -->
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-50 bg-[radial-gradient(#d1c9bd_1px,transparent_1px)] dark:bg-[radial-gradient(#1e3a5f_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    
+    <!-- Radial glow elements -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute top-[10%] left-[5%] w-[60%] h-[50%] bg-[radial-gradient(circle_at_center,rgba(255,200,120,0.18),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(241,103,0,0.06),transparent_70%)]"></div>
+        <div class="absolute bottom-[20%] right-[5%] w-[50%] h-[40%] bg-[radial-gradient(circle_at_center,rgba(255,230,170,0.14),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.04),transparent_70%)]"></div>
     </div>
 
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Header Section with Text Reveal Animation -->
-        <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-reveal gradient-text px-4">
-                Get Academic Help
+    <div class="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Minimal Header Section -->
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-3">
+                Place Your <span class="text-[#f16700]">Order</span>
             </h1>
-            <p class="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto text-reveal text-reveal-delay-1 px-4">
-                Submit your assignment and get expert help in minutes
+            <p class="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+                Submit your assignment details and get matched with a verified expert in minutes
             </p>
 
             <!-- Expected Response Time -->
-            <div class="mt-6 inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl px-6 py-3 shadow-sm text-sm text-gray-600">
-                <span class="text-xl">⏱️</span>
-                <span>An expert is typically matched within <strong class="text-blue-600">15–30 minutes</strong> of submitting your order</span>
+            <div class="mt-5 inline-flex items-center gap-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 rounded-full px-5 py-2 shadow-sm text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 transition-colors">
+                <span>⏱️</span>
+                <span>An expert is typically matched within <strong class="text-[#f16700]">15–30 minutes</strong> of submitting your order</span>
             </div>
         </div>
 
         @if(session('success'))
-            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg mb-6 animate-fade-in">
-                <div class="flex">
-                    <div class="text-green-500 mr-3">✓</div>
-                    <div>{{ session('success') }}</div>
-                </div>
+            <div class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 p-4 rounded-xl mb-6 text-sm flex items-center gap-2">
+                <span>✓</span>
+                <span>{{ session('success') }}</span>
             </div>
         @endif
 
-        <!-- Livewire Order Form Component with Glass Card -->
-        <div class="page-transition">
+        <!-- Livewire Order Form Component -->
+        <div class="transition-all duration-300">
             @livewire('order.⚡order-form-component')
         </div>
 
-
         {{-- Enhanced Protection Cards Grid --}}
-        <div class="mt-6 sm:mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <!-- Feature 1: Expert Writers -->
-            <div class="card-3d-hover glass-card rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item">
-                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
-                    <img src="{{ asset('images/ui/premium_academic_bg.png') }}" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute top-0 right-0 p-3 sm:p-5">
-                    <span class="bg-emerald-500 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-emerald-400 shadow-lg shadow-emerald-200/50">Verified Expert</span>
-                </div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 shadow-inner group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500">✍️</div>
-                <h3 class="text-lg sm:text-xl font-black text-slate-800 mb-2 sm:mb-3">Premium Authors</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Access a global network of PhD-qualified subject matter experts vetted for academic excellence.</p>
-                <div class="mt-4 sm:mt-6 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+                <div class="w-10 h-10 bg-purple-100 dark:bg-purple-950/40 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">✍️</div>
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-800 dark:text-slate-200 mb-1.5">Premium Academic Authors</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Access a global network of PhD-qualified subject matter experts vetted for academic excellence.</p>
+                <div class="mt-4 flex items-center gap-1.5 text-[9px] font-bold text-slate-400 uppercase tracking-wider">
+                    <span class="text-emerald-500">✓</span>
                     Top 2% Accuracy Guaranteed
                 </div>
             </div>
 
             <!-- Feature 2: Fast Delivery -->
-            <div class="card-3d-hover glass-card rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item">
-                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
-                    <img src="{{ asset('images/ui/premium_academic_bg.png') }}" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute top-0 right-0 p-3 sm:p-5">
-                    <span class="bg-blue-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-blue-500 shadow-lg shadow-blue-200/50">Express Service</span>
-                </div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 shadow-inner group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">⚡</div>
-                <h3 class="text-lg sm:text-xl font-black text-slate-800 mb-2 sm:mb-3">Ultra-Fast Turnaround</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Meeting tight deadlines is our specialty. Receive high-quality solutions in as little as 3 hours.</p>
-                <div class="mt-4 sm:mt-6 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+                <div class="w-10 h-10 bg-blue-100 dark:bg-blue-950/40 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300">⚡</div>
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-800 dark:text-slate-200 mb-1.5">Ultra-Fast Turnaround</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Meeting tight deadlines is our specialty. Receive high-quality solutions in as little as 3 hours.</p>
+                <div class="mt-4 flex items-center gap-1.5 text-[9px] font-bold text-slate-400 uppercase tracking-wider">
+                    <span class="text-blue-500">✓</span>
                     100% On-Time Delivery
                 </div>
             </div>
 
             <!-- Feature 3: Security -->
-            <div class="card-3d-hover glass-card rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 border-2 border-white/70 shadow-2xl relative overflow-hidden group stagger-item sm:col-span-2 lg:col-span-1">
-                <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
-                    <img src="{{ asset('images/ui/secure_pattern_bg.png') }}" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute top-0 right-0 p-3 sm:p-5">
-                    <span class="bg-indigo-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-indigo-500 shadow-lg shadow-indigo-200/50">256-Bit SSL</span>
-                </div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">🔒</div>
-                <h3 class="text-lg sm:text-xl font-black text-slate-800 mb-2 sm:mb-3">Confidential & Secure</h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Your data is fully encrypted. We maintain 100% privacy with zero-data-sharing policies.</p>
-                <div class="mt-4 sm:mt-6 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group sm:col-span-2 lg:col-span-1">
+                <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-950/40 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">🔒</div>
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-800 dark:text-slate-200 mb-1.5">Confidential & Secure</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Your data is fully encrypted. We maintain 100% privacy with zero-data-sharing policies.</p>
+                <div class="mt-4 flex items-center gap-1.5 text-[9px] font-bold text-slate-400 uppercase tracking-wider">
+                    <span class="text-emerald-500">✓</span>
                     Bank-Level Data Privacy
                 </div>
-                <a href="{{ url('/privacy-policy') }}" class="mt-3 inline-block text-[10px] sm:text-xs text-indigo-500 hover:text-indigo-700 font-semibold underline underline-offset-2 transition-colors">
-                    Read our Privacy Policy →
-                </a>
             </div>
         </div>
 
         <!-- Legal Disclaimer -->
-        <p class="text-center text-xs text-gray-400 mt-8 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-center text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 mt-8 max-w-2xl mx-auto leading-relaxed">
             By placing an order you agree to our
-            <a href="{{ url('/terms-of-service') }}" class="text-blue-500 hover:underline">Terms of Service</a>
+            <a href="{{ url('/terms-of-service') }}" class="text-[#f16700] hover:underline font-bold">Terms of Service</a>
             and
-            <a href="{{ url('/privacy-policy') }}" class="text-blue-500 hover:underline">Privacy Policy</a>.
+            <a href="{{ url('/privacy-policy') }}" class="text-[#f16700] hover:underline font-bold">Privacy Policy</a>.
             All work is intended for reference and learning purposes only.
         </p>
     </div>
