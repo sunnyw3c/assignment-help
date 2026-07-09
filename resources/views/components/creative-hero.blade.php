@@ -440,21 +440,26 @@
             transform: rotate(-45deg) translate(1px, -1px);
         }
         .ahusa-deadline-calendar {
-            max-width: 100%;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            z-index: 60;
+            width: min(430px, calc(100vw - 28px));
+            max-width: none;
         }
         .ahusa-deadline-calendar__body {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 116px;
+            grid-template-columns: minmax(0, 1fr) 118px;
         }
         .ahusa-deadline-calendar__date {
             min-width: 0;
-            padding: 10px;
+            padding: 10px 12px 12px;
         }
         .ahusa-deadline-calendar__weekdays,
         .ahusa-deadline-calendar [data-deadline-days] {
             display: grid;
             grid-template-columns: repeat(7, minmax(0, 1fr));
-            gap: 6px;
+            gap: 4px;
         }
         .ahusa-deadline-calendar__weekdays {
             margin-bottom: 6px;
@@ -472,7 +477,7 @@
         }
         .ahusa-deadline-calendar [data-deadline-days] span {
             min-width: 0;
-            height: 2rem;
+            height: 1.9rem;
         }
         .ahusa-deadline-calendar [data-deadline-days] button {
             display: flex;
@@ -480,7 +485,7 @@
             justify-content: center;
             width: 100%;
             min-width: 0;
-            height: 2rem;
+            height: 1.9rem;
             padding: 0;
             border: 0;
             border-radius: 8px;
@@ -515,22 +520,25 @@
         .ahusa-deadline-calendar [data-deadline-times] {
             display: grid;
             grid-template-columns: 1fr;
-            max-height: 226px;
+            max-height: 224px;
             overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #f16700 transparent;
         }
         .ahusa-deadline-calendar [data-deadline-times] button {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 30px;
-            padding: 0 0.5rem;
+            min-height: 29px;
+            padding: 0 0.65rem;
             border: 0;
             background: transparent;
             color: var(--dl-muted);
             font-size: 12px;
             font-weight: 700;
             line-height: 1;
+            white-space: nowrap;
             transition: background 150ms, color 150ms;
         }
         .ahusa-deadline-calendar [data-deadline-times]::-webkit-scrollbar {
@@ -541,6 +549,9 @@
             border-radius: 999px;
         }
         @media (max-width: 420px) {
+            .ahusa-deadline-calendar {
+                width: min(330px, calc(100vw - 28px));
+            }
             .ahusa-deadline-calendar__body {
                 grid-template-columns: 1fr;
             }
@@ -718,6 +729,8 @@
                             });
                             times.appendChild(button);
                         });
+
+                        times.querySelector('button.is-selected')?.scrollIntoView({ block: 'center' });
                     };
 
                     const setError = message => {
