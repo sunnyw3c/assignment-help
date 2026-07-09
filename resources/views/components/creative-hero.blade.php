@@ -229,7 +229,10 @@
             --dl-bg: #f8fafc;
             --dl-bdr: #e2e8f0;
             --dl-dbg: #ffffff;
+            --dl-dbdr: #e2e8f0;
+            --dl-hov: #fff5ed;
             --dl-lbl: #94a3b8;
+            --dl-muted: #64748b;
             --pg-bg: #f8fafc;
             --pg-bdr: #e2e8f0;
             --pg-btn-bg: #ffffff;
@@ -287,7 +290,10 @@
             --dl-bg: #0f172a;
             --dl-bdr: #2d3f55;
             --dl-dbg: #1a2537;
+            --dl-dbdr: #2d3f55;
+            --dl-hov: rgba(241,103,0,0.18);
             --dl-lbl: #4a5e75;
+            --dl-muted: #94a3b8;
             --pg-bg: #0f172a;
             --pg-bdr: #2d3f55;
             --pg-btn-bg: #1e293b;
@@ -433,6 +439,139 @@
             border-bottom: 2px solid #fff;
             transform: rotate(-45deg) translate(1px, -1px);
         }
+        .ahusa-deadline-calendar {
+            max-width: 100%;
+        }
+        .ahusa-deadline-calendar__body {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 116px;
+        }
+        .ahusa-deadline-calendar__date {
+            min-width: 0;
+            padding: 10px;
+        }
+        .ahusa-deadline-calendar__weekdays,
+        .ahusa-deadline-calendar [data-deadline-days] {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 6px;
+        }
+        .ahusa-deadline-calendar__weekdays {
+            margin-bottom: 6px;
+        }
+        .ahusa-deadline-calendar__weekdays span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.65rem;
+            color: var(--dl-muted);
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 1;
+            white-space: nowrap;
+        }
+        .ahusa-deadline-calendar [data-deadline-days] span {
+            min-width: 0;
+            height: 2rem;
+        }
+        .ahusa-deadline-calendar [data-deadline-days] button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
+            height: 2rem;
+            padding: 0;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--dl-muted);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            transition: background 150ms, color 150ms;
+        }
+        .ahusa-deadline-calendar [data-deadline-days] button:not(:disabled):hover,
+        .ahusa-deadline-calendar [data-deadline-times] button:not(:disabled):hover {
+            background: var(--dl-hov);
+            color: #f16700;
+        }
+        .ahusa-deadline-calendar [data-deadline-days] button.is-selected,
+        .ahusa-deadline-calendar [data-deadline-times] button.is-selected {
+            background: #f16700;
+            color: #fff;
+        }
+        .ahusa-deadline-calendar [data-deadline-days] button:disabled,
+        .ahusa-deadline-calendar [data-deadline-times] button:disabled {
+            cursor: not-allowed;
+            color: var(--dl-lbl);
+            opacity: 0.4;
+        }
+        .ahusa-deadline-calendar__time {
+            min-width: 0;
+            border-left: 1px solid var(--dl-dbdr);
+            background: var(--dl-dbg);
+        }
+        .ahusa-deadline-calendar [data-deadline-times] {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-height: 226px;
+            overflow-y: auto;
+        }
+        .ahusa-deadline-calendar [data-deadline-times] button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 30px;
+            padding: 0 0.5rem;
+            border: 0;
+            background: transparent;
+            color: var(--dl-muted);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            transition: background 150ms, color 150ms;
+        }
+        .ahusa-deadline-calendar [data-deadline-times]::-webkit-scrollbar {
+            width: 7px;
+        }
+        .ahusa-deadline-calendar [data-deadline-times]::-webkit-scrollbar-thumb {
+            background: #f16700;
+            border-radius: 999px;
+        }
+        @media (max-width: 420px) {
+            .ahusa-deadline-calendar__body {
+                grid-template-columns: 1fr;
+            }
+            .ahusa-deadline-calendar__date {
+                padding: 8px 10px 10px;
+            }
+            .ahusa-deadline-calendar__weekdays,
+            .ahusa-deadline-calendar [data-deadline-days] {
+                gap: 4px;
+            }
+            .ahusa-deadline-calendar__time {
+                border-top: 1px solid var(--dl-dbdr);
+                border-left: 0;
+            }
+            .ahusa-deadline-calendar [data-deadline-days] span {
+                height: 1.7rem;
+            }
+            .ahusa-deadline-calendar [data-deadline-days] button {
+                height: 1.7rem;
+                border-radius: 7px;
+                font-size: 11.5px;
+            }
+            .ahusa-deadline-calendar [data-deadline-times] {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                max-height: 84px;
+            }
+            .ahusa-deadline-calendar [data-deadline-times] button {
+                min-height: 26px;
+                font-size: 11.5px;
+            }
+        }
         .ahusa-hero input[type="datetime-local"] {
             color-scheme: light;
         }
@@ -481,6 +620,30 @@
                     return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
                 };
 
+                const padDate = value => String(value).padStart(2, '0');
+                const toLocalDateTime = date => `${date.getFullYear()}-${padDate(date.getMonth() + 1)}-${padDate(date.getDate())}T${padDate(date.getHours())}:${padDate(date.getMinutes())}`;
+                const parseLocalDateTime = value => {
+                    const date = value ? new Date(value) : null;
+                    return date && !Number.isNaN(date.getTime()) ? date : null;
+                };
+                const sameDate = (a, b) => a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+                const startOfDay = date => new Date(date.getFullYear(), date.getMonth(), date.getDate());
+                const timeLabel = (hour, minute) => {
+                    const date = new Date();
+                    date.setHours(hour, minute, 0, 0);
+                    return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+                };
+                const buildTimes = () => {
+                    const times = [];
+                    for (let hour = 0; hour < 24; hour += 1) {
+                        for (let minute = 0; minute < 60; minute += 30) {
+                            times.push({ hour, minute, label: timeLabel(hour, minute) });
+                        }
+                    }
+                    return times;
+                };
+                const deadlineTimes = buildTimes();
+
                 document.querySelectorAll('[data-creative-hero]').forEach(hero => {
                     const form = hero.querySelector('[data-hero-form]');
                     const serviceInput = form.querySelector('[data-service-input]');
@@ -499,6 +662,63 @@
                     const activePanel = () => form.querySelector(`[data-service-panel="${activeService}"]`);
                     const activeSubject = () => activePanel().querySelector('[data-subject-select]');
                     const activeDeadline = () => activePanel().querySelector('[data-deadline-input]');
+
+                    const setDeadlineValue = (wrap, date) => {
+                        const input = wrap.querySelector('[data-deadline-input]');
+                        input.value = toLocalDateTime(date);
+                        input.dispatchEvent(new Event('input', { bubbles: true }));
+                    };
+
+                    const renderDeadlinePicker = wrap => {
+                        const input = wrap.querySelector('[data-deadline-input]');
+                        const days = wrap.querySelector('[data-deadline-days]');
+                        const times = wrap.querySelector('[data-deadline-times]');
+                        const monthLabel = wrap.querySelector('[data-deadline-month]');
+                        const now = new Date();
+                        const selected = parseLocalDateTime(input.value) || parseLocalDateTime(defaultDeadline());
+                        const view = wrap._deadlineView || new Date(selected.getFullYear(), selected.getMonth(), 1);
+                        const first = new Date(view.getFullYear(), view.getMonth(), 1);
+                        const firstDay = first.getDay();
+                        const daysInMonth = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+
+                        monthLabel.textContent = first.toLocaleString([], { month: 'long', year: 'numeric' });
+                        days.innerHTML = '';
+
+                        for (let index = 0; index < firstDay; index += 1) {
+                            days.appendChild(document.createElement('span'));
+                        }
+
+                        for (let day = 1; day <= daysInMonth; day += 1) {
+                            const button = document.createElement('button');
+                            const date = new Date(view.getFullYear(), view.getMonth(), day, selected.getHours(), selected.getMinutes(), 0, 0);
+                            const disabled = startOfDay(date) < startOfDay(now);
+                            button.type = 'button';
+                            button.textContent = String(day);
+                            button.disabled = disabled;
+                            button.className = sameDate(date, selected) ? 'is-selected' : '';
+                            button.addEventListener('click', () => {
+                                setDeadlineValue(wrap, date);
+                                renderDeadlinePicker(wrap);
+                            });
+                            days.appendChild(button);
+                        }
+
+                        times.innerHTML = '';
+                        deadlineTimes.forEach(time => {
+                            const button = document.createElement('button');
+                            const date = new Date(selected);
+                            date.setHours(time.hour, time.minute, 0, 0);
+                            button.type = 'button';
+                            button.textContent = time.label;
+                            button.disabled = date < now;
+                            button.className = selected.getHours() === time.hour && selected.getMinutes() === time.minute ? 'is-selected' : '';
+                            button.addEventListener('click', () => {
+                                setDeadlineValue(wrap, date);
+                                renderDeadlinePicker(wrap);
+                            });
+                            times.appendChild(button);
+                        });
+                    };
 
                     const setError = message => {
                         errorBox.textContent = message || '';
@@ -602,14 +822,35 @@
                         updateSubmit();
                     }));
                     form.querySelectorAll('[data-subject-select]').forEach(select => select.addEventListener('change', updateSubmit));
-                    form.querySelectorAll('[data-deadline-toggle]').forEach(button => button.addEventListener('click', () => {
-                        const wrap = button.closest('[data-deadline-wrap]');
+                    form.querySelectorAll('[data-deadline-wrap]').forEach(wrap => {
                         const picker = wrap.querySelector('[data-deadline-picker]');
                         const input = wrap.querySelector('[data-deadline-input]');
-                        if (!input.value) input.value = defaultDeadline();
-                        picker.classList.toggle('hidden');
-                        updateDeadlineLabels();
-                    }));
+                        const toggle = wrap.querySelector('[data-deadline-toggle]');
+
+                        wrap._deadlineView = new Date();
+
+                        toggle.addEventListener('click', () => {
+                            if (!input.value) input.value = defaultDeadline();
+                            const selected = parseLocalDateTime(input.value);
+                            wrap._deadlineView = new Date(selected.getFullYear(), selected.getMonth(), 1);
+                            form.querySelectorAll('[data-deadline-picker]').forEach(item => {
+                                if (item !== picker) item.classList.add('hidden');
+                            });
+                            picker.classList.toggle('hidden');
+                            renderDeadlinePicker(wrap);
+                            updateDeadlineLabels();
+                        });
+
+                        wrap.querySelector('[data-deadline-prev]').addEventListener('click', () => {
+                            wrap._deadlineView = new Date(wrap._deadlineView.getFullYear(), wrap._deadlineView.getMonth() - 1, 1);
+                            renderDeadlinePicker(wrap);
+                        });
+
+                        wrap.querySelector('[data-deadline-next]').addEventListener('click', () => {
+                            wrap._deadlineView = new Date(wrap._deadlineView.getFullYear(), wrap._deadlineView.getMonth() + 1, 1);
+                            renderDeadlinePicker(wrap);
+                        });
+                    });
                     form.querySelectorAll('[data-deadline-input]').forEach(input => input.addEventListener('input', updateDeadlineLabels));
                     form.querySelectorAll('[data-page-minus]').forEach(button => button.addEventListener('click', () => {
                         pages = Math.max(1, pages - 1);
