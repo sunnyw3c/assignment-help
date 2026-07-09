@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -159,7 +159,7 @@
 
         <!-- Comprehensive Mobile App Development Content Section -->
         <section class="py-20 bg-gradient-to-b from-gray-50 via-purple-50 to-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
@@ -649,7 +649,7 @@
 
         <!-- Technologies Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mobile Technologies We Master</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert mobile developers work with cutting-edge
@@ -762,7 +762,7 @@
 
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on app complexity.
@@ -875,7 +875,7 @@
 
         <!-- Process Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mobile App Development Process</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering high-quality
@@ -924,7 +924,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
@@ -996,7 +996,7 @@
 
         <!-- Additional Expert Content Section -->
         <section class="py-20 bg-gradient-to-b from-white to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
@@ -1383,7 +1383,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our mobile app
@@ -1433,7 +1433,7 @@
 
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="container mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Mobile App?</h2>
                 <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully
                     launched their mobile apps with our expert development help.</p>

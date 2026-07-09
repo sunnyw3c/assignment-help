@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -194,7 +194,7 @@
 
         <!-- Technologies Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">API Technologies We Master</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert API developers work with modern frameworks, protocols, and tools to build robust, scalable APIs.</p>
@@ -306,7 +306,7 @@
 
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on API complexity and features. No hidden fees, no surprises.</p>
@@ -418,7 +418,7 @@
 
         <!-- Process Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our API Development Process</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering secure, scalable, and well-documented APIs.</p>
@@ -462,7 +462,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their API development projects.</p>
@@ -528,7 +528,7 @@
 
         <!-- Use Cases Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">API Development Use Cases</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore the diverse applications of our API development expertise across different domains.</p>
@@ -576,7 +576,7 @@
 
         <!-- API Features Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Essential API Features We Implement</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every API we build includes industry-standard features for security, performance, and scalability.</p>
@@ -700,7 +700,7 @@
 
         <!-- Why Choose Us Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our API Development Service?</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">We go beyond basic API development to deliver production-ready, enterprise-grade solutions.</p>
@@ -744,7 +744,7 @@
 
         <!-- Comprehensive API Development Guide Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Guide to API Development Excellence</h2>
@@ -824,7 +824,7 @@
 
         <!-- Popular API Projects Section -->
         <section class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular API Development Projects</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real-world API projects our experts have successfully delivered to students.</p>
@@ -896,7 +896,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our API development service.</p>
@@ -933,7 +933,7 @@
 
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="container mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your API?</h2>
                 <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully completed their API projects with our expert help.</p>
                 <a href="{{ route('order') }}"

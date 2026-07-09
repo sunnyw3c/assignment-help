@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -208,7 +208,7 @@
 
         <!-- Comprehensive Content Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Professional Web Development Services</h2>
@@ -346,7 +346,7 @@
 
         <!-- Technologies Section -->
         <section class="py-20 gradient-bg">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technologies We Master</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert developers work with the latest technologies and frameworks to build modern, scalable web applications.</p>
@@ -653,7 +653,7 @@
 
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on project
@@ -766,7 +766,7 @@
 
         <!-- Process Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Simple, straightforward process to get your web
@@ -814,7 +814,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
@@ -884,7 +884,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our web
@@ -933,7 +933,7 @@
 
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="container mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Web Development Project?
                 </h2>
                 <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join thousands of students who have successfully
@@ -947,7 +947,7 @@
 
         <!-- Industry Trends & Best Practices Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-6xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Industry Trends & Best Practices</h2>

@@ -282,11 +282,32 @@
                 <!-- Deadline and Pages/Lines -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-3">Deadline *</label>
-                        <input type="datetime-local" name="deadline" x-model="deadline" value="{{ old('deadline') }}" required
-                               class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors duration-200">
-                        @error('deadline') <p class="text-red-500 text-sm mt-2">{{ $message }}</p> @enderror
+                        <label class="flex items-center gap-1.5 text-sm font-semibold text-gray-700 dark:text-slate-300 mb-2">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Deadline <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="datetime-local"
+                            name="deadline"
+                            x-model="deadline"
+                            value="{{ old('deadline') }}"
+                            min="{{ now()->format('Y-m-d\TH:i') }}"
+                            required
+                            class="w-full border-2 border-gray-200 dark:border-slate-700
+                                   bg-white dark:bg-slate-900
+                                   text-gray-900 dark:text-slate-100
+                                   rounded-xl px-4 py-3 text-sm font-medium
+                                   focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10
+                                   focus:outline-none transition-all duration-200
+                                   cursor-pointer dark:[color-scheme:dark]"
+                        >
+                        @error('deadline') <p class="text-red-500 text-xs mt-1.5 font-medium">{{ $message }}</p> @enderror
                     </div>
+
 
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-3">

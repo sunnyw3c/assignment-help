@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -250,7 +250,7 @@
 
         <!-- First Engaging Content Section -->
         <section class="py-20 bg-gradient-to-b from-white via-purple-50 to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div
@@ -439,7 +439,7 @@
 
         <!-- Algorithm Categories Section -->
         <section class="py-20 bg-gradient-to-b from-white to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-6 py-2 rounded-full text-sm font-bold mb-6">
                         <span class="text-xl">📚</span>
@@ -607,7 +607,7 @@
             <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
             <div class="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16">
                     <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-6 py-2 rounded-full text-sm font-bold mb-6">
                         <span class="text-xl">💰</span>
@@ -745,7 +745,7 @@
 
         <!-- Process Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Problem-Solving Process</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Systematic approach to solving algorithmic problems
@@ -794,7 +794,7 @@
 
         <!-- Second Engaging Content Section -->
         <section class="py-20 bg-gradient-to-b from-white to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div
@@ -1580,7 +1580,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Student Success Stories</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who mastered algorithms
@@ -1655,7 +1655,7 @@
             <div class="absolute top-0 right-0 w-64 h-64 bg-purple-200 rounded-full opacity-20 -mr-32 -mt-32 blur-3xl"></div>
             <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-200 rounded-full opacity-20 -ml-32 -mb-32 blur-3xl"></div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-12">
                     <div class="inline-flex items-center gap-2 bg-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg border-2 border-purple-200">
                         <span class="text-2xl">🛡️</span>
@@ -1821,7 +1821,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Common questions about our algorithm and data
@@ -1886,7 +1886,7 @@
                 <div class="h-full w-full" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 50px 50px;"></div>
             </div>
 
-            <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <!-- Badge -->
                     <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-bold mb-6 border border-white/30 animate-pulse-glow">

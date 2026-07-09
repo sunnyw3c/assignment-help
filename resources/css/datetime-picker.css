@@ -1,0 +1,403 @@
+/* =============================================================
+ * AHUSA DateTime Picker — datetime-picker.css
+ * MUI-inspired calendar + scrollable time picker
+ * ============================================================= */
+
+/* ── CSS Variables ── */
+.ahusa-dtp {
+    --dtp-accent:       #6366f1;        /* indigo-500 */
+    --dtp-accent-light: #eef2ff;        /* indigo-50  */
+    --dtp-accent-dark:  #4f46e5;        /* indigo-600 */
+    --dtp-danger:       #ef4444;
+    --dtp-warn:         #f59e0b;
+    --dtp-ok:           #10b981;
+
+    --dtp-bg:           #ffffff;
+    --dtp-surface:      #f8fafc;
+    --dtp-border:       #e2e8f0;
+    --dtp-text:         #1e293b;
+    --dtp-muted:        #94a3b8;
+    --dtp-trigger-bg:   #ffffff;
+
+    --dtp-radius:       14px;
+    --dtp-shadow:       0 20px 60px -12px rgba(0,0,0,.22), 0 4px 16px -4px rgba(0,0,0,.12);
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: inherit;
+}
+
+/* Dark mode */
+.dark .ahusa-dtp {
+    --dtp-bg:           #1e293b;
+    --dtp-surface:      #0f172a;
+    --dtp-border:       #334155;
+    --dtp-text:         #f1f5f9;
+    --dtp-muted:        #64748b;
+    --dtp-trigger-bg:   #1e293b;
+    --dtp-accent-light: rgba(99,102,241,.15);
+}
+
+/* ── Trigger ── */
+.ahusa-dtp__trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--dtp-trigger-bg);
+    border: 1.5px solid var(--dtp-border);
+    border-radius: 10px;
+    color: var(--dtp-text);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 160ms, box-shadow 160ms;
+    text-align: left;
+    outline: none;
+}
+.ahusa-dtp__trigger:hover,
+.ahusa-dtp--open .ahusa-dtp__trigger {
+    border-color: var(--dtp-accent);
+    box-shadow: 0 0 0 3px rgba(99,102,241,.14);
+}
+.ahusa-dtp__trigger-icon {
+    flex-shrink: 0;
+    color: var(--dtp-accent);
+    display: flex;
+}
+.ahusa-dtp__trigger-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ahusa-dtp__trigger-caret {
+    flex-shrink: 0;
+    color: var(--dtp-muted);
+    transition: transform 220ms cubic-bezier(.4,0,.2,1);
+}
+.ahusa-dtp--open .ahusa-dtp__trigger-caret { transform: rotate(180deg); }
+
+/* Urgency badge on trigger */
+.ahusa-dtp__trigger-badge {
+    display: none;
+    align-items: center;
+    padding: 1px 7px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    white-space: nowrap;
+}
+.ahusa-dtp__trigger-badge.badge--danger { display:flex; background:#fef2f2; color:#dc2626; }
+.ahusa-dtp__trigger-badge.badge--warn   { display:flex; background:#fffbeb; color:#b45309; }
+.ahusa-dtp__trigger-badge.badge--ok     { display:flex; background:#f0fdf4; color:#16a34a; }
+.dark .ahusa-dtp__trigger-badge.badge--danger { background:rgba(239,68,68,.15); color:#f87171; }
+.dark .ahusa-dtp__trigger-badge.badge--warn   { background:rgba(245,158,11,.15); color:#fbbf24; }
+.dark .ahusa-dtp__trigger-badge.badge--ok     { background:rgba(16,185,129,.15); color:#34d399; }
+
+/* ── Panel ── */
+.ahusa-dtp__panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 9999;
+    min-width: 540px;
+    background: var(--dtp-bg);
+    border: 1px solid var(--dtp-border);
+    border-radius: var(--dtp-radius);
+    box-shadow: var(--dtp-shadow);
+    opacity: 0;
+    transform: translateY(-6px) scale(.98);
+    pointer-events: none;
+    transition: opacity 200ms cubic-bezier(.4,0,.2,1),
+                transform 200ms cubic-bezier(.4,0,.2,1);
+    transform-origin: top left;
+}
+.ahusa-dtp--open .ahusa-dtp__panel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+@media (max-width: 600px) {
+    .ahusa-dtp__panel { min-width: calc(100vw - 32px); left: 50%; transform: translateX(-50%) translateY(-6px) scale(.98); }
+    .ahusa-dtp--open .ahusa-dtp__panel { transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+.ahusa-dtp__inner {
+    display: flex;
+    gap: 0;
+}
+
+/* ── Calendar column ── */
+.ahusa-dtp__calendar {
+    padding: 16px 14px 14px;
+    flex-shrink: 0;
+    width: 272px;
+}
+
+.ahusa-dtp__cal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.ahusa-dtp__cal-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dtp-text);
+    letter-spacing: -.01em;
+}
+.ahusa-dtp__nav-btn {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    color: var(--dtp-muted);
+    cursor: pointer;
+    transition: background 140ms, color 140ms;
+}
+.ahusa-dtp__nav-btn:hover { background: var(--dtp-accent-light); color: var(--dtp-accent); }
+
+.ahusa-dtp__cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 4px;
+}
+.ahusa-dtp__cal-weekdays span {
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--dtp-muted);
+    padding: 3px 0;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.ahusa-dtp__cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+.ahusa-dtp__day {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--dtp-text);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: background 120ms, color 120ms, transform 80ms;
+    line-height: 1;
+    padding: 0;
+}
+.ahusa-dtp__day:hover:not(.is-disabled):not(.is-selected) {
+    background: var(--dtp-accent-light);
+    color: var(--dtp-accent);
+}
+.ahusa-dtp__day.is-other-month { color: var(--dtp-muted); opacity: .45; }
+.ahusa-dtp__day.is-today:not(.is-selected) {
+    border: 1.5px solid var(--dtp-accent);
+    color: var(--dtp-accent);
+    font-weight: 700;
+}
+.ahusa-dtp__day.is-selected {
+    background: var(--dtp-accent);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px -2px rgba(99,102,241,.5);
+    transform: scale(1.08);
+}
+.ahusa-dtp__day.is-disabled {
+    color: var(--dtp-muted);
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+/* ── Divider ── */
+.ahusa-dtp__divider {
+    width: 1px;
+    background: var(--dtp-border);
+    margin: 10px 0;
+    flex-shrink: 0;
+}
+
+/* ── Time column ── */
+.ahusa-dtp__time {
+    flex: 1;
+    padding: 16px 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+.ahusa-dtp__time-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--dtp-muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin: 0;
+}
+
+/* Big time display */
+.ahusa-dtp__time-display {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--dtp-text);
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+.ahusa-dtp__ampm-display {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--dtp-accent);
+    letter-spacing: .04em;
+    margin-left: 2px;
+    align-self: center;
+}
+
+.ahusa-dtp__time-cols {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+}
+.ahusa-dtp__time-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.ahusa-dtp__col-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--dtp-muted);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    text-align: center;
+}
+
+/* Scrollable hour/minute columns */
+.ahusa-dtp__scroll {
+    height: 130px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid var(--dtp-border);
+    background: var(--dtp-surface);
+    scrollbar-width: thin;
+    scrollbar-color: var(--dtp-border) transparent;
+}
+.ahusa-dtp__scroll::-webkit-scrollbar { width: 4px; }
+.ahusa-dtp__scroll::-webkit-scrollbar-thumb { background: var(--dtp-border); border-radius: 4px; }
+
+.ahusa-dtp__time-item {
+    display: block;
+    width: 100%;
+    padding: 6px 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--dtp-text);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    transition: background 100ms, color 100ms;
+    font-variant-numeric: tabular-nums;
+}
+.ahusa-dtp__time-item:hover:not(.is-selected) {
+    background: var(--dtp-accent-light);
+    color: var(--dtp-accent);
+}
+.ahusa-dtp__time-item.is-selected {
+    background: var(--dtp-accent);
+    color: #fff;
+    font-weight: 700;
+}
+
+/* AM/PM toggle */
+.ahusa-dtp__ampm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 130px;
+    border-radius: 8px;
+    border: 1px solid var(--dtp-border);
+    background: var(--dtp-surface);
+    overflow: hidden;
+    padding: 4px;
+}
+.ahusa-dtp__period-btn {
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--dtp-muted);
+    cursor: pointer;
+    transition: background 120ms, color 120ms;
+    letter-spacing: .04em;
+}
+.ahusa-dtp__period-btn:hover:not(.is-active) { background: var(--dtp-accent-light); color: var(--dtp-accent); }
+.ahusa-dtp__period-btn.is-active { background: var(--dtp-accent); color: #fff; }
+
+/* ── Urgency indicator ── */
+.ahusa-dtp__urgency {
+    min-height: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 4px 8px;
+    text-align: center;
+    transition: all 200ms;
+}
+.ahusa-dtp__urgency:empty { display: none; }
+.urgency--danger { background: #fef2f2; color: #dc2626; }
+.urgency--warn   { background: #fffbeb; color: #b45309; }
+.urgency--ok     { background: #f0fdf4; color: #16a34a; }
+.dark .urgency--danger { background: rgba(239,68,68,.15); color: #f87171; }
+.dark .urgency--warn   { background: rgba(245,158,11,.15); color: #fbbf24; }
+.dark .urgency--ok     { background: rgba(16,185,129,.15); color: #34d399; }
+
+/* ── Actions ── */
+.ahusa-dtp__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+.ahusa-dtp__btn-clear,
+.ahusa-dtp__btn-apply {
+    flex: 1;
+    padding: 7px 0;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background 140ms, transform 80ms;
+}
+.ahusa-dtp__btn-clear {
+    background: var(--dtp-surface);
+    color: var(--dtp-muted);
+    border: 1px solid var(--dtp-border);
+}
+.ahusa-dtp__btn-clear:hover { background: var(--dtp-border); color: var(--dtp-text); }
+.ahusa-dtp__btn-apply {
+    background: var(--dtp-accent);
+    color: #fff;
+    box-shadow: 0 2px 8px -2px rgba(99,102,241,.45);
+}
+.ahusa-dtp__btn-apply:hover { background: var(--dtp-accent-dark); }
+.ahusa-dtp__btn-apply:active,
+.ahusa-dtp__btn-clear:active { transform: scale(.97); }

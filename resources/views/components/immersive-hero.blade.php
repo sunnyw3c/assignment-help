@@ -8,7 +8,7 @@
     </div>
 
     {{-- Hero Content --}}
-    <div class="relative container mx-auto px-6 py-20 lg:py-32">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div class="max-w-4xl mx-auto text-center">
             {{-- Title with Text Reveal Animation --}}
             <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-reveal gradient-text">
@@ -56,7 +56,7 @@
 
 {{-- Stats Section with Counter Animation --}}
 <div class="bg-white dark:bg-gray-900 py-16">
-    <div class="container mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             @foreach ([
                 ['number' => '5,000+', 'label' => 'Assignments Completed'],

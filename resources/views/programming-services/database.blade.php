@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -248,7 +248,7 @@
 
         <!-- First Engaging Content Section -->
         <section class="py-20 bg-gradient-to-b from-white via-purple-50 to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div
@@ -435,7 +435,7 @@
 
         <!-- Technologies Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Database Technologies We Master</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert database developers work with SQL, NoSQL,
@@ -548,7 +548,7 @@
 
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on database
@@ -661,7 +661,7 @@
 
         <!-- Process Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Database Development Process</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Proven methodology for delivering efficient and
@@ -710,7 +710,7 @@
 
         <!-- Second Engaging Content Section -->
         <section class="py-20 bg-gradient-to-b from-white to-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <div
@@ -1006,7 +1006,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
@@ -1077,7 +1077,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our database
@@ -1126,7 +1126,7 @@
 
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="container mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Database?</h2>
                 <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join hundreds of students who have successfully
                     completed their database projects with our expert help.</p>
