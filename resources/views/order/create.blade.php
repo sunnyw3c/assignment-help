@@ -14,21 +14,7 @@
     </div>
 
     <div class="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Minimal Header Section -->
-        <div class="text-center mb-8 sm:mb-12">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-3">
-                Place Your <span class="text-[#f16700]">Order</span>
-            </h1>
-            <p class="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
-                Submit your assignment details and get matched with a verified expert in minutes
-            </p>
 
-            <!-- Expected Response Time -->
-            <div class="mt-5 inline-flex items-center gap-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 rounded-full px-5 py-2 shadow-sm text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 transition-colors">
-                <span>⏱️</span>
-                <span>An expert is typically matched within <strong class="text-[#f16700]">15–30 minutes</strong> of submitting your order</span>
-            </div>
-        </div>
 
         @if(session('success'))
             <div class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 p-4 rounded-xl mb-6 text-sm flex items-center gap-2">
