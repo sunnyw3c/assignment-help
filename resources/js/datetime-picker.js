@@ -66,12 +66,20 @@ class AhusaDtp {
             this.selHour = parseInt(btn.dataset.val, 10);
             this.ampm = this.selHour < 12 ? 'AM' : 'PM';
             this._refreshTimeUI();
+            // Auto-close once date + time are both chosen
+            if (this.selYear !== null && this.selMinute !== null) {
+                this._apply();
+            }
         });
         this.minsEl.addEventListener('click', (e) => {
             const btn = e.target.closest('.ahusa-dtp__time-item');
             if (!btn) return;
             this.selMinute = parseInt(btn.dataset.val, 10);
             this._refreshTimeUI();
+            // Auto-close once date + time are both chosen
+            if (this.selYear !== null && this.selHour !== null) {
+                this._apply();
+            }
         });
         this.ampmEl.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-period]');
@@ -162,6 +170,10 @@ class AhusaDtp {
                     this.selMinute = n.getMinutes();
                     this.ampm      = this.selHour < 12 ? 'AM' : 'PM';
                     this._refreshTimeUI();
+                }
+                // Auto-close once date + time are both chosen
+                if (this.selHour !== null && this.selMinute !== null) {
+                    this._apply();
                 }
             });
         });

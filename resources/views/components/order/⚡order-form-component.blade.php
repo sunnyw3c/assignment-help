@@ -828,6 +828,8 @@ new class extends Component {
                                                 const currentSel = this.selected ? new Date(this.selected) : new Date(Date.now() + 24*60*60*1000);
                                                 const nextDate = new Date(currentSel.getFullYear(), currentSel.getMonth(), currentSel.getDate(), hour, minute);
                                                 this.selected = this.toLocalISOString(nextDate);
+                                                // Auto-close after time is picked
+                                                this.open = false;
                                             },
                                             isSameDate(d) {
                                                 if (!d || !this.selected) return false;
@@ -1047,9 +1049,9 @@ new class extends Component {
                                     accept=".pdf,.doc,.docx,.zip,.rar,.txt,.jpg,.jpeg,.png">
 
                                 <label for="files-upload" class="cursor-pointer block">
-                                    <div class="text-2xl mb-2">📁</div>
+                                    <div class="text-2xl mb-2">ðŸ“</div>
                                     <p class="text-xs font-semibold text-[#f16700]">Click to browse or drag files here</p>
-                                    <p class="text-[10px] text-slate-400 mt-1">PDF, DOC, DOCX, ZIP • Max 10MB per file</p>
+                                    <p class="text-[10px] text-slate-400 mt-1">PDF, DOC, DOCX, ZIP â€¢ Max 10MB per file</p>
                                 </label>
 
                                 <div wire:loading wire:target="tempFiles" class="mt-2 text-xs text-slate-500">
@@ -1062,7 +1064,7 @@ new class extends Component {
                                     @foreach ($files as $index => $file)
                                         <div class="flex items-center justify-between p-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-xl">
                                             <div class="flex items-center gap-2 min-w-0">
-                                                <span class="text-base">📄</span>
+                                                <span class="text-base">ðŸ“„</span>
                                                 <span class="text-xs text-slate-700 dark:text-slate-300 truncate font-medium">{{ $file->getClientOriginalName() }}</span>
                                             </div>
                                             <button type="button" wire:click="removeFile({{ $index }})"
@@ -1161,22 +1163,22 @@ new class extends Component {
                 <!-- Trust Badges Grid -->
                 <div class="grid grid-cols-2 gap-3">
                     <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-xl p-3 text-center shadow-sm animate-fade-in">
-                        <span class="text-lg">🛡️</span>
+                        <span class="text-lg">ðŸ›¡ï¸</span>
                         <div class="text-[9px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider mt-1">SSL Secure</div>
                         <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider">Encrypted Connection</div>
                     </div>
                     <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-xl p-3 text-center shadow-sm animate-fade-in">
-                        <span class="text-lg">👩‍🎓</span>
+                        <span class="text-lg">ðŸ‘©â€ðŸŽ“</span>
                         <div class="text-[9px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider mt-1">Verified Expert</div>
                         <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider">Top Vetted Writers</div>
                     </div>
                     <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-xl p-3 text-center shadow-sm animate-fade-in">
-                        <span class="text-lg">💵</span>
+                        <span class="text-lg">ðŸ’µ</span>
                         <div class="text-[9px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider mt-1">Guaranteed</div>
                         <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider">Grade or Refund</div>
                     </div>
                     <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-xl p-3 text-center shadow-sm animate-fade-in">
-                        <span class="text-lg">📦</span>
+                        <span class="text-lg">ðŸ“¦</span>
                         <div class="text-[9px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider mt-1">On-Time</div>
                         <div class="text-[8px] text-slate-400 font-semibold uppercase tracking-wider">Fast Turnaround</div>
                     </div>
