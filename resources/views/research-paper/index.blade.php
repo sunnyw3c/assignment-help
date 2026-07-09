@@ -356,7 +356,7 @@
                             <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
                                 <h4 class="font-bold text-purple-900 mb-2">📄 Page Details</h4>
                                 <ul class="text-sm text-gray-700 space-y-1">
-                                    <li>• 1 page = 275 words (double-spaced)</li>
+                                    <li>• 1 page = 250 words (double-spaced)</li>
                                     <li>• Minimum order: 5 pages</li>
                                     <li>• References not counted in page count</li>
                                     <li>• Tables/figures included free</li>

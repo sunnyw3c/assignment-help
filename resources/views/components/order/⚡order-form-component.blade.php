@@ -16,7 +16,7 @@ new class extends Component {
     public $difficulty = 'Intermediate';
     public $deadline = '';
     public $pages = 1;
-    public $spacing = 'double'; // double (275 words), single (550 words)
+    public $spacing = 'double'; // double (250 words), single (500 words)
     public $files = [];
     public $tempFiles = []; // For Livewire 3 file upload handling
     public $email = '';
@@ -218,8 +218,8 @@ new class extends Component {
         $orderNumber = $legacyService->generateOrderNumber($user->id);
         $originalPrice = $legacyService->calculatePrice('USD', (int) $this->pages, $deadlineDateTime->toDateTimeString());
 
-        // Calculate word count based on legacy logic: 250 words per page
-        $wordCount = (int) $this->pages * 250;
+        // Calculate word count based on legacy logic: 250 words per page (double spaced equivalent)
+        $wordCount = (int) $this->pages * $this->wordsPerPage;
 
         // Create order/assignment
         $assignment = \App\Models\Assignment::create([
@@ -359,7 +359,7 @@ new class extends Component {
     #[Computed]
     public function wordsPerPage()
     {
-        return $this->spacing === 'single' ? 550 : 275;
+        return $this->spacing === 'single' ? 500 : 250;
     }
 
     #[Computed]
@@ -437,6 +437,7 @@ new class extends Component {
                                         search: '',
                                         subjects: @js($this->subjects),
                                         selected: @entangle('subject'),
+                                        activeIdx: -1,
                                         get filteredSubjects() {
                                             if (this.search === '') return this.subjects.slice(0, 15);
                                             return this.subjects.filter(s => s.toLowerCase().includes(this.search.toLowerCase())).slice(0, 15);
@@ -445,6 +446,45 @@ new class extends Component {
                                             this.selected = subject;
                                             this.search = subject;
                                             this.open = false;
+                                            this.activeIdx = -1;
+                                        },
+                                        clear() {
+                                            this.selected = '';
+                                            this.search = '';
+                                            this.open = true;
+                                            this.activeIdx = -1;
+                                        },
+                                        onArrowDown() {
+                                            if (!this.open) {
+                                                this.open = true;
+                                                this.activeIdx = 0;
+                                                return;
+                                            }
+                                            if (this.activeIdx < this.filteredSubjects.length - 1) {
+                                                this.activeIdx++;
+                                                this.scrollToActive();
+                                            }
+                                        },
+                                        onArrowUp() {
+                                            if (this.activeIdx > 0) {
+                                                this.activeIdx--;
+                                                this.scrollToActive();
+                                            }
+                                        },
+                                        onEnter(e) {
+                                            if (this.open && this.activeIdx >= 0 && this.activeIdx < this.filteredSubjects.length) {
+                                                e.preventDefault();
+                                                this.select(this.filteredSubjects[this.activeIdx]);
+                                            }
+                                        },
+                                        scrollToActive() {
+                                            this.$nextTick(() => {
+                                                const list = this.$refs.list;
+                                                const activeEl = list.children[this.activeIdx];
+                                                if (activeEl) {
+                                                    activeEl.scrollIntoView({ block: 'nearest' });
+                                                }
+                                            });
                                         },
                                         init() {
                                             this.search = this.selected || '';
@@ -462,16 +502,26 @@ new class extends Component {
                                                 @focus="open = true"
                                                 @click.away="open = false"
                                                 @keydown.escape="open = false"
+                                                @keydown.down.prevent="onArrowDown()"
+                                                @keydown.up.prevent="onArrowUp()"
+                                                @keydown.enter.prevent="onEnter($event)"
+                                                autocomplete="off"
                                                 placeholder="Type to search subject..."
                                                 class="w-full h-[41px] pl-3 pr-8 bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-xl text-[13px] text-slate-800 dark:text-slate-200 focus:border-[#f16700] focus:bg-white dark:focus:bg-slate-900 focus:outline-none transition-all">
-                                            <!-- Chevron icon -->
-                                            <div class="absolute right-3 text-slate-400 pointer-events-none transition-transform duration-200" :class="open ? 'rotate-180' : ''">
-                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            
+                                            <!-- Clear Button & Chevron -->
+                                            <div class="absolute right-3 flex items-center gap-1.5 text-slate-400">
+                                                <button x-show="search.length > 0" @click="clear()" type="button" class="hover:text-slate-600 dark:hover:text-slate-300 focus:outline-none cursor-pointer">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                                </button>
+                                                <div class="pointer-events-none transition-transform duration-200" :class="open ? 'rotate-180' : ''">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                                </div>
                                             </div>
                                         </div>
                                         
                                         <!-- Suggestions Dropdown -->
-                                        <div x-show="open && filteredSubjects.length > 0" 
+                                        <div x-show="open" 
                                             x-transition:enter="transition ease-out duration-100"
                                             x-transition:enter-start="opacity-0 transform scale-95"
                                             x-transition:enter-end="opacity-100 transform scale-100"
@@ -480,13 +530,20 @@ new class extends Component {
                                             x-transition:leave-end="opacity-0 transform scale-95"
                                             class="absolute left-0 z-50 w-full mt-1.5 max-h-52 overflow-y-auto bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-800"
                                             style="display: none;">
-                                            <template x-for="sub in filteredSubjects" :key="sub">
-                                                <button type="button" 
-                                                    @mousedown="select(sub)"
-                                                    class="w-full text-left px-4 py-2.5 text-[13px] hover:bg-slate-50 dark:hover:bg-slate-900/60 text-slate-700 dark:text-slate-300 hover:text-[#f16700] dark:hover:text-[#f16700] transition-colors cursor-pointer font-medium">
-                                                    <span x-text="sub"></span>
-                                                </button>
-                                            </template>
+                                            <div x-ref="list">
+                                                <template x-for="(sub, idx) in filteredSubjects" :key="sub">
+                                                    <button type="button" 
+                                                        @mousedown="select(sub)"
+                                                        @mouseenter="activeIdx = idx"
+                                                        class="w-full text-left px-4 py-2.5 text-[13px] transition-colors cursor-pointer font-medium"
+                                                        :class="activeIdx === idx ? 'bg-slate-100 dark:bg-slate-900 text-[#f16700] dark:text-[#f16700]' : 'text-slate-700 dark:text-slate-300'">
+                                                        <span x-text="sub"></span>
+                                                    </button>
+                                                </template>
+                                                <div x-show="filteredSubjects.length === 0" class="px-4 py-3 text-[13px] text-slate-400 dark:text-slate-500 font-medium italic">
+                                                    No matching subjects found
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -531,6 +588,7 @@ new class extends Component {
                                         search: '',
                                         subjects: @js($this->subjects),
                                         selected: @entangle('subject'),
+                                        activeIdx: -1,
                                         get filteredSubjects() {
                                             if (this.search === '') return this.subjects.slice(0, 15);
                                             return this.subjects.filter(s => s.toLowerCase().includes(this.search.toLowerCase())).slice(0, 15);
@@ -539,6 +597,45 @@ new class extends Component {
                                             this.selected = subject;
                                             this.search = subject;
                                             this.open = false;
+                                            this.activeIdx = -1;
+                                        },
+                                        clear() {
+                                            this.selected = '';
+                                            this.search = '';
+                                            this.open = true;
+                                            this.activeIdx = -1;
+                                        },
+                                        onArrowDown() {
+                                            if (!this.open) {
+                                                this.open = true;
+                                                this.activeIdx = 0;
+                                                return;
+                                            }
+                                            if (this.activeIdx < this.filteredSubjects.length - 1) {
+                                                this.activeIdx++;
+                                                this.scrollToActive();
+                                            }
+                                        },
+                                        onArrowUp() {
+                                            if (this.activeIdx > 0) {
+                                                this.activeIdx--;
+                                                this.scrollToActive();
+                                            }
+                                        },
+                                        onEnter(e) {
+                                            if (this.open && this.activeIdx >= 0 && this.activeIdx < this.filteredSubjects.length) {
+                                                e.preventDefault();
+                                                this.select(this.filteredSubjects[this.activeIdx]);
+                                            }
+                                        },
+                                        scrollToActive() {
+                                            this.$nextTick(() => {
+                                                const list = this.$refs.list;
+                                                const activeEl = list.children[this.activeIdx];
+                                                if (activeEl) {
+                                                    activeEl.scrollIntoView({ block: 'nearest' });
+                                                }
+                                            });
                                         },
                                         init() {
                                             this.search = this.selected || '';
@@ -556,16 +653,26 @@ new class extends Component {
                                                 @focus="open = true"
                                                 @click.away="open = false"
                                                 @keydown.escape="open = false"
+                                                @keydown.down.prevent="onArrowDown()"
+                                                @keydown.up.prevent="onArrowUp()"
+                                                @keydown.enter.prevent="onEnter($event)"
+                                                autocomplete="off"
                                                 placeholder="Type to search subject..."
                                                 class="w-full h-[41px] pl-3 pr-8 bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-xl text-[13px] text-slate-800 dark:text-slate-200 focus:border-[#f16700] focus:bg-white dark:focus:bg-slate-900 focus:outline-none transition-all">
-                                            <!-- Chevron icon -->
-                                            <div class="absolute right-3 text-slate-400 pointer-events-none transition-transform duration-200" :class="open ? 'rotate-180' : ''">
-                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            
+                                            <!-- Clear Button & Chevron -->
+                                            <div class="absolute right-3 flex items-center gap-1.5 text-slate-400">
+                                                <button x-show="search.length > 0" @click="clear()" type="button" class="hover:text-slate-600 dark:hover:text-slate-300 focus:outline-none cursor-pointer">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                                </button>
+                                                <div class="pointer-events-none transition-transform duration-200" :class="open ? 'rotate-180' : ''">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                                </div>
                                             </div>
                                         </div>
                                         
                                         <!-- Suggestions Dropdown -->
-                                        <div x-show="open && filteredSubjects.length > 0" 
+                                        <div x-show="open" 
                                             x-transition:enter="transition ease-out duration-100"
                                             x-transition:enter-start="opacity-0 transform scale-95"
                                             x-transition:enter-end="opacity-100 transform scale-100"
@@ -574,13 +681,20 @@ new class extends Component {
                                             x-transition:leave-end="opacity-0 transform scale-95"
                                             class="absolute left-0 z-50 w-full mt-1.5 max-h-52 overflow-y-auto bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-800"
                                             style="display: none;">
-                                            <template x-for="sub in filteredSubjects" :key="sub">
-                                                <button type="button" 
-                                                    @mousedown="select(sub)"
-                                                    class="w-full text-left px-4 py-2.5 text-[13px] hover:bg-slate-50 dark:hover:bg-slate-900/60 text-slate-700 dark:text-slate-300 hover:text-[#f16700] dark:hover:text-[#f16700] transition-colors cursor-pointer font-medium">
-                                                    <span x-text="sub"></span>
-                                                </button>
-                                            </template>
+                                            <div x-ref="list">
+                                                <template x-for="(sub, idx) in filteredSubjects" :key="sub">
+                                                    <button type="button" 
+                                                        @mousedown="select(sub)"
+                                                        @mouseenter="activeIdx = idx"
+                                                        class="w-full text-left px-4 py-2.5 text-[13px] transition-colors cursor-pointer font-medium"
+                                                        :class="activeIdx === idx ? 'bg-slate-100 dark:bg-slate-900 text-[#f16700] dark:text-[#f16700]' : 'text-slate-700 dark:text-slate-300'">
+                                                        <span x-text="sub"></span>
+                                                    </button>
+                                                </template>
+                                                <div x-show="filteredSubjects.length === 0" class="px-4 py-3 text-[13px] text-slate-400 dark:text-slate-500 font-medium italic">
+                                                    No matching subjects found
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

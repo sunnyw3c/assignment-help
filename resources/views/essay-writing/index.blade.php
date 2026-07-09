@@ -301,8 +301,8 @@
                             <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
                                 <h4 class="font-bold text-purple-900 mb-2">📏 Page Specifications</h4>
                                 <ul class="text-sm text-gray-700 space-y-1">
-                                    <li>• 1 page = 275 words (double-spaced)</li>
-                                    <li>• 1 page = 550 words (single-spaced)</li>
+                                    <li>• 1 page = 250 words (double-spaced)</li>
+                                    <li>• 1 page = 500 words (single-spaced)</li>
                                     <li>• Standard: Times New Roman, 12pt</li>
                                     <li>• 1-inch margins on all sides</li>
                                     <li>• Free formatting in any style</li>
