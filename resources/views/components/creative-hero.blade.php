@@ -93,8 +93,8 @@
 
                     <div class="flex flex-col gap-2" data-service-panel="Writing">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input flex-[3]">
-                            <div class="flex-[4] min-w-0">@include('components.creative-hero-phone')</div>
+                            <input type="email" name="email" required placeholder="Email" class="ahusa-input ahusa-email-input">
+                            <div class="ahusa-phone-col">@include('components.creative-hero-phone')</div>
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
@@ -389,6 +389,13 @@
             flex: 1 1 0%;
             min-width: 0;
         }
+        .ahusa-email-input {
+            flex: 3;
+        }
+        .ahusa-phone-col {
+            flex: 4;
+            min-width: 0;
+        }
         .ahusa-box {
             border: 1.5px solid var(--pg-bdr);
             border-radius: 10px;
@@ -593,6 +600,11 @@
             .ahusa-field-row {
                 flex-direction: column;
                 align-items: stretch;
+            }
+            .ahusa-field-col,
+            .ahusa-email-input,
+            .ahusa-phone-col {
+                flex: none;
             }
         }
         @keyframes ahusaShimmer { 0% { background-position: 0% 0%; } 100% { background-position: 200% 0%; } }
