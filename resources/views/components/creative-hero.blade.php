@@ -10,10 +10,7 @@
 
     <div class="relative z-[2] w-full max-w-[1260px] mx-auto px-8 max-lg:px-5 max-sm:px-3.5 flex items-start gap-11 max-lg:flex-col max-lg:gap-7 max-sm:gap-[22px] min-h-[calc(100vh-96px)] max-lg:min-h-0">
         <div class="flex-1 min-w-0 flex flex-col gap-5 pt-2 max-lg:items-center max-lg:text-center max-lg:pt-0 max-lg:gap-4">
-            <div class="inline-flex items-center gap-2 rounded-full px-4 py-[5px] text-[11.5px] font-bold tracking-[0.02em] backdrop-blur-[8px] w-fit shadow-sm bg-[var(--badge-bg)] border border-[var(--badge-bdr)] text-[var(--badge-clr)]">
-                <span class="ahusa-live-dot w-2 h-2 shrink-0 rounded-full bg-green-500"></span>
-                USA-Based Experts - Live Now
-            </div>
+            
 
             <h1 class="text-[clamp(22px,2.8vw,40px)] font-extrabold leading-tight tracking-tight m-0 break-words text-[var(--h1-clr)] max-sm:text-[clamp(22px,7.5vw,30px)] max-sm:leading-[1.22]">
                 Assignment Help USA for Students by Expert Academic Writers
