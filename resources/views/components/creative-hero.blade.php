@@ -92,7 +92,6 @@
                     <div class="flex flex-col gap-2" data-service-panel="Writing">
                         <div class="ahusa-field-row">
                             <input type="email" name="email" required placeholder="Email" class="ahusa-input ahusa-email-input">
-                            <div class="ahusa-phone-col">@include('components.creative-hero-phone')</div>
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
@@ -112,7 +111,6 @@
                     <div class="hidden flex-col gap-2" data-service-panel="Technical">
                         <div class="ahusa-field-row">
                             <input type="email" name="email" required placeholder="Email" class="ahusa-input">
-                            <div class="ahusa-field-col">@include('components.creative-hero-phone')</div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
@@ -150,7 +148,6 @@
                     <div class="hidden flex-col gap-2" data-service-panel="Online Class">
                         <div class="ahusa-field-row">
                             <input type="email" name="email" required placeholder="Email" class="ahusa-input">
-                            <div class="ahusa-field-col">@include('components.creative-hero-phone')</div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
@@ -390,10 +387,6 @@
         .ahusa-email-input {
             flex: 3;
         }
-        .ahusa-phone-col {
-            flex: 4;
-            min-width: 0;
-        }
         .ahusa-box {
             border: 1.5px solid var(--pg-bdr);
             border-radius: 10px;
@@ -600,8 +593,7 @@
                 align-items: stretch;
             }
             .ahusa-field-col,
-            .ahusa-email-input,
-            .ahusa-phone-col {
+            .ahusa-email-input {
                 flex: none;
             }
         }
@@ -720,6 +712,9 @@
                             button.addEventListener('click', () => {
                                 setDeadlineValue(wrap, date);
                                 renderDeadlinePicker(wrap);
+                                // Auto-close after date is picked (time is always pre-set)
+                                wrap.querySelector('[data-deadline-picker]')?.classList.add('hidden');
+                                updateDeadlineLabels();
                             });
                             days.appendChild(button);
                         }
@@ -736,6 +731,9 @@
                             button.addEventListener('click', () => {
                                 setDeadlineValue(wrap, date);
                                 renderDeadlinePicker(wrap);
+                                // Auto-close after time is picked
+                                wrap.querySelector('[data-deadline-picker]')?.classList.add('hidden');
+                                updateDeadlineLabels();
                             });
                             times.appendChild(button);
                         });
@@ -819,8 +817,6 @@
                         const parts = [];
                         const base = panel.querySelector('[data-base-description]')?.value;
                         const email = panel.querySelector('input[type="email"]').value;
-                        const phone = panel.querySelector('[data-phone]')?.value;
-                        const code = panel.querySelector('[data-country-code]')?.value;
                         const difficulty = panel.querySelector('[data-difficulty-select]')?.value || '';
                         const delivery = form.querySelector('input[name="delivery_format_ui"]:checked')?.value;
                         const classUrl = panel.querySelector('[data-class-url]')?.value;
@@ -828,7 +824,6 @@
                         const tasks = Array.from(panel.querySelectorAll('[data-class-task]:checked')).map(input => input.value);
 
                         if (base) parts.push(base);
-                        if (phone) parts.push(`Phone: ${code} ${phone}`);
                         if (activeService === 'Technical' && delivery) parts.push(`Delivery Format: ${delivery}`);
                         if (classUrl) parts.push(`Course URL: ${classUrl}`);
                         if (classDuration) parts.push(`Class Duration: ${classDuration}`);
