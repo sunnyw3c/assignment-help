@@ -16,11 +16,12 @@
             </div>
 
             <h1 class="text-[clamp(22px,2.8vw,40px)] font-extrabold leading-tight tracking-tight m-0 break-words text-[var(--h1-clr)] max-sm:text-[clamp(22px,7.5vw,30px)] max-sm:leading-[1.22]">
-                AI-Free Assignment Help from <span class="text-[#f16700]">Real Experts</span> to Do My Assignment
+                Assignment Help USA for Students by Expert Academic Writers
+                
             </h1>
 
             <p class="text-[15px] leading-relaxed m-0 text-[var(--sub-clr)] max-sm:text-[13.5px]">
-                Get expert help in <span class="text-[#f16700] font-bold">any subject</span> - delivered plagiarism-free before your deadline.
+                Fast, Confidential, and High-Quality  <span class="text-[#f16700] font-bold">Assignment Writing Service</span> 
             </p>
 
             <div class="flex items-center gap-4 flex-wrap max-lg:justify-center max-sm:gap-[10px]">
@@ -68,7 +69,7 @@
 
                     <div class="flex flex-col gap-2">
                         <h2 class="text-[16px] max-sm:text-[15px] font-extrabold leading-[1.35] m-0 text-center max-lg:text-left text-[var(--title-clr)] break-words">
-                            AI-Free Assignment Help from Real Experts to Do My Assignment
+                            Get Expert Assignment Help | Place Your Order Now
                         </h2>
                         <div class="flex items-center justify-center max-lg:justify-start gap-[10px] flex-wrap">
                             @foreach (['Guaranteed Grade or Refund','No AI','24/7 Support'] as $item)
