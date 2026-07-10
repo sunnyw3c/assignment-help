@@ -60,6 +60,7 @@
                     <input type="hidden" name="service_type" value="Writing" data-service-input>
                     <input type="hidden" name="subject" data-subject-input>
                     <input type="hidden" name="title" data-title-input>
+                    <input type="hidden" name="pages" value="1" data-pages-input>
                     <input type="hidden" name="word_count" value="250" data-word-count-input>
                     <input type="hidden" name="description" data-description-input>
                     <input type="hidden" name="difficulty" data-difficulty-input>
@@ -91,7 +92,12 @@
 
                     <div class="flex flex-col gap-2" data-service-panel="Writing">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input ahusa-email-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
@@ -110,7 +116,12 @@
 
                     <div class="hidden flex-col gap-2" data-service-panel="Technical">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
@@ -147,7 +158,12 @@
 
                     <div class="hidden flex-col gap-2" data-service-panel="Online Class">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
@@ -662,6 +678,7 @@
                     const serviceInput = form.querySelector('[data-service-input]');
                     const subjectInput = form.querySelector('[data-subject-input]');
                     const titleInput = form.querySelector('[data-title-input]');
+                    const pagesInput = form.querySelector('[data-pages-input]');
                     const wordCountInput = form.querySelector('[data-word-count-input]');
                     const descriptionInput = form.querySelector('[data-description-input]');
                     const difficultyInput = form.querySelector('[data-difficulty-input]');
@@ -675,6 +692,7 @@
                     const activePanel = () => form.querySelector(`[data-service-panel="${activeService}"]`);
                     const activeSubject = () => activePanel().querySelector('[data-subject-select]');
                     const activeDeadline = () => activePanel().querySelector('[data-deadline-input]');
+                    const activePhone = () => activePanel().querySelector('[data-phone]');
 
                     const setDeadlineValue = (wrap, date) => {
                         const input = wrap.querySelector('[data-deadline-input]');
@@ -753,7 +771,8 @@
                     const updateSubmit = () => {
                         const subject = activeSubject()?.value || '';
                         const deadline = activeDeadline()?.value || '';
-                        submit.disabled = !(terms.checked && activePanel().querySelector('input[type="email"]').value && subject && deadline);
+                        const phone = activePhone()?.value || '';
+                        submit.disabled = !(terms.checked && activePanel().querySelector('input[type="email"]').value && phone && subject && deadline);
                         submit.textContent = serviceLabels[activeService];
                     };
 
@@ -775,6 +794,7 @@
                     };
 
                     const updateWords = () => {
+                        pagesInput.value = String(pages);
                         wordCountInput.value = String(pages * 250);
                         form.querySelectorAll('[data-pages-value]').forEach(item => item.textContent = String(pages));
                         form.querySelectorAll('[data-words-value]').forEach(item => item.textContent = `${pages * 250} words`);
@@ -839,6 +859,7 @@
                         syncEmails(event.target.value);
                         updateSubmit();
                     }));
+                    form.querySelectorAll('[data-phone]').forEach(input => input.addEventListener('input', updateSubmit));
                     form.querySelectorAll('[data-subject-select]').forEach(select => select.addEventListener('change', updateSubmit));
                     form.querySelectorAll('[data-deadline-wrap]').forEach(wrap => {
                         const picker = wrap.querySelector('[data-deadline-picker]');
@@ -897,9 +918,10 @@
                     form.addEventListener('submit', event => {
                         const subject = activeSubject()?.value || '';
                         const deadline = activeDeadline()?.value || '';
-                        if (!terms.checked || !subject || !deadline) {
+                        const phone = activePhone()?.value || '';
+                        if (!terms.checked || !subject || !deadline || !phone) {
                             event.preventDefault();
-                            setError(!subject ? 'Please select a subject or course.' : (!deadline ? 'Please choose a deadline.' : 'Please accept the terms.'));
+                            setError(!subject ? 'Please select a subject or course.' : (!deadline ? 'Please choose a deadline.' : (!phone ? 'Please enter your phone number.' : 'Please accept the terms.')));
                             return;
                         }
 
