@@ -1,7 +1,131 @@
+@props([
+    'service' => null,
+    'title' => null,
+    'subtitle' => null,
+    'serviceType' => null,
+    'defaultSubject' => null,
+    'stats' => null,
+    'features' => null,
+    'breadcrumbs' => null,
+])
+
 @php
-    $writingSubjects = ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
-    $technicalSubjects = ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
+    $orderPageSubjects = [];
+    $subjectsPath = base_path('subjects.json');
+
+    if (file_exists($subjectsPath)) {
+        $subjectsList = json_decode(file_get_contents($subjectsPath), true);
+
+        if (is_array($subjectsList)) {
+            asort($subjectsList);
+            $orderPageSubjects = array_values(array_unique($subjectsList));
+        }
+    }
+
+    $writingSubjects = $orderPageSubjects ?: ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
+    $technicalSubjects = $orderPageSubjects ?: ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
     $onlineClassSubjects = ['Business / MBA','Computer Science','Nursing / Healthcare','Mathematics','English / Writing','History / Social Sciences','Psychology','Law','Accounting','Engineering','Science','Other'];
+
+    // Determine the service object type (Array or Object)
+    $serviceIsObj = is_object($service);
+    $serviceIsArray = is_array($service);
+
+    // Extract name/title
+    if (!$title) {
+        if ($serviceIsObj) {
+            $title = $service->details->hero_title ?? $service->name;
+        } elseif ($serviceIsArray) {
+            $title = $service['name'] ?? 'Assignment Help USA for Students by Expert Academic Writers';
+        } else {
+            $title = 'Assignment Help USA for Students by Expert Academic Writers';
+        }
+    }
+
+    // Extract description/subtitle
+    if (!$subtitle) {
+        if ($serviceIsObj) {
+            $subtitle = $service->details->hero_description ?? $service->short_description;
+        } elseif ($serviceIsArray) {
+            $subtitle = $service['description'] ?? 'Fast, Confidential, and High-Quality <span class="text-[#f16700] font-bold">Assignment Writing Service</span>';
+        } else {
+            $subtitle = 'Fast, Confidential, and High-Quality <span class="text-[#f16700] font-bold">Assignment Writing Service</span>';
+        }
+    }
+
+    // Extract rating, orders, turnaround stats
+    if (!$stats) {
+        $rating = '4.9';
+        $orders = '50K+';
+        $delivery = '3-72 Hours';
+
+        if ($serviceIsObj) {
+            $rating = $service->rating ?? '4.9';
+            $orders = ($service->orders_completed ?? 500) . '+';
+            $delivery = $service->turnaround ?? '3-72 Hours';
+        } elseif ($serviceIsArray) {
+            $rating = $service['rating'] ?? '4.9';
+            $orders = ($service['orders_completed'] ?? 500) . '+';
+            $delivery = $service['turnaround'] ?? '3-72 Hours';
+        }
+
+        $stats = [
+            [$orders, 'Orders Completed'],
+            [$rating, 'Average Rating'],
+            [$delivery, 'Delivery Speed']
+        ];
+    }
+
+    // Determine default service type tab (Writing or Technical)
+    if (!$serviceType) {
+        if ($serviceIsArray) {
+            // All programming-services are technical
+            $serviceType = 'Technical';
+        } else {
+            // Assignment services are Writing by default
+            $serviceType = 'Writing';
+        }
+    }
+
+    // Preselect subject based on service name if not specified
+    if (!$defaultSubject) {
+        if ($serviceIsObj) {
+            $defaultSubject = $service->name;
+        } elseif ($serviceIsArray) {
+            $defaultSubject = $service['name'] ?? null;
+        }
+    }
+
+    // Build breadcrumbs if not provided and service is set
+    if (!$breadcrumbs && $service) {
+        $breadcrumbs = [
+            ['label' => 'Home', 'url' => route('home')],
+        ];
+        if ($serviceIsObj) {
+            $breadcrumbs[] = ['label' => 'All Services', 'url' => route('services.index')];
+            $breadcrumbs[] = ['label' => $service->name, 'url' => ''];
+        } elseif ($serviceIsArray) {
+            $breadcrumbs[] = ['label' => 'Programming Help', 'url' => route('services.programming.index')];
+            $breadcrumbs[] = ['label' => $service['name'] ?? 'Service Details', 'url' => ''];
+        }
+    }
+
+    if (!$features) {
+        if ($serviceIsObj && !empty($service->features)) {
+            $features = is_string($service->features) ? json_decode($service->features, true) : $service->features;
+        } elseif ($serviceIsArray && !empty($service['features'])) {
+            $features = is_string($service['features']) ? json_decode($service['features'], true) : $service['features'];
+        }
+        
+        // Fallback if still empty or not array
+        if (empty($features) || !is_array($features)) {
+            $features = ['Guaranteed Grade or Refund','100% AI-Free Content','24/7 Live Support','Free Turnitin Report','On-Time Delivery Promise'];
+        }
+    }
+
+    // Check if default subject is in the predefined lists
+    $isInWriting = $defaultSubject && in_array($defaultSubject, $writingSubjects);
+    $isInTechnical = $defaultSubject && in_array($defaultSubject, $technicalSubjects);
+    $isInOnlineClass = $defaultSubject && in_array($defaultSubject, $onlineClassSubjects);
 @endphp
 
 <section class="ahusa-hero relative flex items-start overflow-hidden py-24 max-lg:py-20 max-sm:py-[72px]" data-creative-hero>
@@ -10,19 +134,33 @@
 
     <div class="relative z-[2] w-full max-w-[1260px] mx-auto px-8 max-lg:px-5 max-sm:px-3.5 flex items-start gap-11 max-lg:flex-col max-lg:gap-7 max-sm:gap-[22px] min-h-[calc(100vh-96px)] max-lg:min-h-0">
         <div class="flex-1 min-w-0 flex flex-col gap-5 pt-2 max-lg:items-center max-lg:text-center max-lg:pt-0 max-lg:gap-4">
-            
+            @if (!empty($breadcrumbs))
+                <nav class="mb-2 self-start max-lg:mx-auto">
+                    <div class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 text-[11px] font-bold uppercase tracking-wider">
+                        @foreach ($breadcrumbs as $bc)
+                            @if (!$loop->first)
+                                <span>›</span>
+                            @endif
+                            @if ($bc['url'])
+                                <a href="{{ $bc['url'] }}" class="hover:text-[#f16700] transition-colors">{{ $bc['label'] }}</a>
+                            @else
+                                <span class="text-[var(--sub-clr)] font-bold">{{ $bc['label'] }}</span>
+                            @endif
+                        @endforeach
+                    </div>
+                </nav>
+            @endif
 
             <h1 class="text-[clamp(22px,2.8vw,40px)] font-extrabold leading-tight tracking-tight m-0 break-words text-[var(--h1-clr)] max-sm:text-[clamp(22px,7.5vw,30px)] max-sm:leading-[1.22]">
-                Assignment Help USA for Students by Expert Academic Writers
-                
+                {!! $title !!}
             </h1>
 
             <p class="text-[15px] leading-relaxed m-0 text-[var(--sub-clr)] max-sm:text-[13.5px]">
-                Fast, Confidential, and High-Quality  <span class="text-[#f16700] font-bold">Assignment Writing Service</span> 
+                {!! $subtitle !!}
             </p>
 
             <div class="flex items-center gap-4 flex-wrap max-lg:justify-center max-sm:gap-[10px]">
-                @foreach ([['50K+','Orders Completed'], ['4.9','Average Rating'], ['500+','PhD Experts']] as $index => $stat)
+                @foreach ($stats as $index => $stat)
                     @if ($index > 0)
                         <div class="w-px h-9 shrink-0 bg-[var(--stat-div)] max-lg:hidden"></div>
                     @endif
@@ -34,7 +172,7 @@
             </div>
 
             <ul class="list-none m-0 p-0 flex flex-col gap-[9px] max-lg:items-start max-lg:text-left max-lg:w-full max-lg:max-w-[480px]">
-                @foreach (['Guaranteed Grade or Refund','100% AI-Free Content','24/7 Live Support','Free Turnitin Report','On-Time Delivery Promise'] as $feature)
+                @foreach ($features as $feature)
                     <li class="flex items-center gap-[10px] text-[13.5px] font-medium text-[var(--feat-clr)]">
                         <span class="w-5 h-5 shrink-0 rounded-full bg-[#f16700] flex items-center justify-center text-white text-[11px] font-extrabold">✓</span>
                         {{ $feature }}
@@ -60,6 +198,7 @@
                     <input type="hidden" name="service_type" value="Writing" data-service-input>
                     <input type="hidden" name="subject" data-subject-input>
                     <input type="hidden" name="title" data-title-input>
+                    <input type="hidden" name="pages" value="1" data-pages-input>
                     <input type="hidden" name="word_count" value="250" data-word-count-input>
                     <input type="hidden" name="description" data-description-input>
                     <input type="hidden" name="difficulty" data-difficulty-input>
@@ -79,7 +218,7 @@
 
                     <div class="flex items-center flex-wrap gap-3 max-sm:gap-2 border-t border-b border-t-[var(--svc-bdr)] border-b-[var(--svc-bdr)] py-2 max-sm:py-[7px]">
                         @foreach (['Writing','Technical','Online Class'] as $type)
-                            <button type="button" class="ahusa-service-tab flex items-center gap-[6px] cursor-pointer text-[13px] max-sm:text-[12.5px] font-semibold select-none transition-colors duration-150 {{ $type === 'Writing' ? 'is-active' : '' }}" data-service-tab="{{ $type }}">
+                            <button type="button" class="ahusa-service-tab flex items-center gap-[6px] cursor-pointer text-[13px] max-sm:text-[12.5px] font-semibold select-none transition-colors duration-150 {{ $type === $serviceType ? 'is-active' : '' }}" data-service-tab="{{ $type }}">
                                 <span class="ahusa-service-ring w-[17px] h-[17px] rounded-full shrink-0 inline-flex items-center justify-center border-2 transition-[border-color] duration-150"><span></span></span>
                                 {{ $type }}
                                 <span class="relative inline-flex items-center cursor-help text-slate-400" title="{{ $type === 'Writing' ? 'Essays, reports, dissertations, case studies and more.' : ($type === 'Technical' ? 'Coding, data science, math, engineering and science problems.' : 'Online courses, quizzes, discussions and assignments.') }}">
@@ -89,16 +228,24 @@
                         @endforeach
                     </div>
 
-                    <div class="flex flex-col gap-2" data-service-panel="Writing">
+                    <div class="{{ $serviceType === 'Writing' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Writing">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input ahusa-email-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
                                 <select class="ahusa-select" data-subject-select>
                                     <option value="">Subject / Course Code</option>
-                                    @foreach ($writingSubjects as $subject)
-                                        <option>{{ $subject }}</option>
+                                    @if ($defaultSubject && !$isInWriting && $serviceType === 'Writing')
+                                        <option selected>{{ $defaultSubject }}</option>
+                                    @endif
+                                    @foreach ($writingSubjects as $sub)
+                                        <option {{ ($defaultSubject && $isInWriting && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
                                     @endforeach
                                 </select>
                                 @include('components.creative-hero-deadline')
@@ -108,15 +255,23 @@
                         </div>
                     </div>
 
-                    <div class="hidden flex-col gap-2" data-service-panel="Technical">
+                    <div class="{{ $serviceType === 'Technical' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Technical">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
                                 <option value="">Select Technology / Subject</option>
-                                @foreach ($technicalSubjects as $subject)
-                                    <option>{{ $subject }}</option>
+                                @if ($defaultSubject && !$isInTechnical && $serviceType === 'Technical')
+                                    <option selected>{{ $defaultSubject }}</option>
+                                @endif
+                                @foreach ($technicalSubjects as $sub)
+                                    <option {{ ($defaultSubject && $isInTechnical && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
                                 @endforeach
                             </select>
                             <select class="ahusa-select" data-difficulty-select>
@@ -145,15 +300,23 @@
                         </div>
                     </div>
 
-                    <div class="hidden flex-col gap-2" data-service-panel="Online Class">
+                    <div class="{{ $serviceType === 'Online Class' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Online Class">
                         <div class="ahusa-field-row">
-                            <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            <div class="ahusa-field-col">
+                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                            </div>
+                            <div class="ahusa-field-col">
+                                @include('components.creative-hero-phone')
+                            </div>
                         </div>
                         <div class="ahusa-field-row">
                             <select class="ahusa-select" data-subject-select>
                                 <option value="">Course / Subject Name</option>
-                                @foreach ($onlineClassSubjects as $subject)
-                                    <option>{{ $subject }}</option>
+                                @if ($defaultSubject && !$isInOnlineClass && $serviceType === 'Online Class')
+                                    <option selected>{{ $defaultSubject }}</option>
+                                @endif
+                                @foreach ($onlineClassSubjects as $sub)
+                                    <option {{ ($defaultSubject && $isInOnlineClass && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
                                 @endforeach
                             </select>
                             <select class="ahusa-select" data-class-duration>
@@ -662,6 +825,7 @@
                     const serviceInput = form.querySelector('[data-service-input]');
                     const subjectInput = form.querySelector('[data-subject-input]');
                     const titleInput = form.querySelector('[data-title-input]');
+                    const pagesInput = form.querySelector('[data-pages-input]');
                     const wordCountInput = form.querySelector('[data-word-count-input]');
                     const descriptionInput = form.querySelector('[data-description-input]');
                     const difficultyInput = form.querySelector('[data-difficulty-input]');
@@ -675,6 +839,7 @@
                     const activePanel = () => form.querySelector(`[data-service-panel="${activeService}"]`);
                     const activeSubject = () => activePanel().querySelector('[data-subject-select]');
                     const activeDeadline = () => activePanel().querySelector('[data-deadline-input]');
+                    const activePhone = () => activePanel().querySelector('[data-phone]');
 
                     const setDeadlineValue = (wrap, date) => {
                         const input = wrap.querySelector('[data-deadline-input]');
@@ -753,7 +918,8 @@
                     const updateSubmit = () => {
                         const subject = activeSubject()?.value || '';
                         const deadline = activeDeadline()?.value || '';
-                        submit.disabled = !(terms.checked && activePanel().querySelector('input[type="email"]').value && subject && deadline);
+                        const phone = activePhone()?.value || '';
+                        submit.disabled = !(terms.checked && activePanel().querySelector('input[type="email"]').value && phone && subject && deadline);
                         submit.textContent = serviceLabels[activeService];
                     };
 
@@ -775,6 +941,7 @@
                     };
 
                     const updateWords = () => {
+                        pagesInput.value = String(pages);
                         wordCountInput.value = String(pages * 250);
                         form.querySelectorAll('[data-pages-value]').forEach(item => item.textContent = String(pages));
                         form.querySelectorAll('[data-words-value]').forEach(item => item.textContent = `${pages * 250} words`);
@@ -839,6 +1006,7 @@
                         syncEmails(event.target.value);
                         updateSubmit();
                     }));
+                    form.querySelectorAll('[data-phone]').forEach(input => input.addEventListener('input', updateSubmit));
                     form.querySelectorAll('[data-subject-select]').forEach(select => select.addEventListener('change', updateSubmit));
                     form.querySelectorAll('[data-deadline-wrap]').forEach(wrap => {
                         const picker = wrap.querySelector('[data-deadline-picker]');
@@ -897,9 +1065,10 @@
                     form.addEventListener('submit', event => {
                         const subject = activeSubject()?.value || '';
                         const deadline = activeDeadline()?.value || '';
-                        if (!terms.checked || !subject || !deadline) {
+                        const phone = activePhone()?.value || '';
+                        if (!terms.checked || !subject || !deadline || !phone) {
                             event.preventDefault();
-                            setError(!subject ? 'Please select a subject or course.' : (!deadline ? 'Please choose a deadline.' : 'Please accept the terms.'));
+                            setError(!subject ? 'Please select a subject or course.' : (!deadline ? 'Please choose a deadline.' : (!phone ? 'Please enter your phone number.' : 'Please accept the terms.')));
                             return;
                         }
 
@@ -909,7 +1078,7 @@
                         composeDescription();
                     });
 
-                    setService('Writing');
+                    setService('{{ $serviceType }}');
                     updateWords();
                     updateDeadlineLabels();
                 });

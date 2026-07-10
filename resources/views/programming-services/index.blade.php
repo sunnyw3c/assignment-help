@@ -7,177 +7,11 @@
 @section('content')
 
     <!-- Hero Section -->
-    <header class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50" role="banner">
-        <!-- Geometric Shapes -->
-        <div class="absolute top-20 right-20 w-32 h-32 bg-purple-200 rounded-full opacity-30 animate-pulse"></div>
-        <div class="absolute bottom-40 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-40 animate-bounce"></div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-indigo-200 transform rotate-45 opacity-25"></div>
-
-        <div class="relative z-10 container mx-auto px-4 py-20 lg:py-32">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div class="text-left">
-                    <!-- Status Badge -->
-                    <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                        Professional Programming Services Available 24/7
-                    </div>
-
-                    <!-- Main Headline -->
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                        Expert <br>
-                        <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Programming
-                            Services</span> <br>
-                        for Every Need
-                    </h1>
-
-                    <!-- Subtitle -->
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                        From simple coding assignments to complex enterprise applications. Get professional development services with guaranteed quality and timely delivery.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="{{ route('order') }}"
-                            class="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                            <span class="mr-2">🚀</span>
-                            Get Help Now
-                            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                        <a href="#services"
-                            class="inline-flex items-center justify-center border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
-                            <span class="mr-2">⚡</span>
-                            View Services
-                        </a>
-                    </div>
-
-                    <!-- Trust Indicators -->
-                    <div class="grid grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-purple-600 mb-1">{{ count($services) }}+</div>
-                            <div class="text-sm text-gray-500">Services</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-green-600 mb-1">98%</div>
-                            <div class="text-sm text-gray-500">Satisfaction Rate</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-blue-600 mb-1">24/7</div>
-                            <div class="text-sm text-gray-500">Support</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Content -->
-                <div class="relative">
-                    <!-- Background Gradient Blob -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400/20 via-blue-400/20 to-indigo-400/20 rounded-3xl transform rotate-6 scale-110"></div>
-
-                    <!-- Main Dashboard Card -->
-                    <div class="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 overflow-hidden">
-                        <!-- Header with Live Status -->
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xl font-bold">PS</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-gray-900">Programming Services</h3>
-                                    <div class="flex items-center text-sm text-green-600">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                                        Live Dashboard
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-2xl font-bold text-purple-600">98%</div>
-                                <div class="text-xs text-gray-500">Success Rate</div>
-                            </div>
-                        </div>
-
-                        <!-- Services Grid -->
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            @php
-                                $featuredServices = array_slice($services, 0, 4);
-                            @endphp
-                            @foreach($featuredServices as $index => $service)
-                                @php
-                                    $colors = ['purple', 'blue', 'green', 'orange'];
-                                    $color = $colors[$index % 4];
-                                @endphp
-                                <div class="group p-4 bg-gradient-to-br from-{{ $color }}-50 to-{{ $color }}-100 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                    <div class="text-2xl mb-2 group-hover:scale-110 transition-transform">{{ $service['icon'] }}</div>
-                                    <div class="text-sm font-semibold text-{{ $color }}-700">{{ Str::limit($service['name'], 15) }}</div>
-                                    <div class="text-xs text-{{ $color }}-600">{{ $service['orders_completed'] }}+ projects</div>
-                                </div>
-                            @endforeach
-                        </div>
-
-                        <!-- Service Stats -->
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm font-medium text-gray-900">5,000+ Projects Completed</div>
-                                        <div class="text-xs text-gray-500">Across all languages & frameworks</div>
-                                    </div>
-                                </div>
-                                <div class="text-green-600 font-semibold text-sm">98% Satisfied</div>
-                            </div>
-                            <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <span class="text-blue-600 text-xs">⚡</span>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm font-medium text-gray-900">Expert matched in 15–30 min</div>
-                                        <div class="text-xs text-gray-500">After order submission</div>
-                                    </div>
-                                </div>
-                                <div class="text-blue-600 font-semibold text-sm">24/7 Support</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Achievement Badges -->
-                    <div class="absolute -top-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl p-4 shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300">
-                        <div class="text-center">
-                            <div class="text-2xl mb-1">🏆</div>
-                            <div class="text-xs font-bold">5★ Rated</div>
-                            <div class="text-xs opacity-90">By Students</div>
-                        </div>
-                    </div>
-
-                    <div class="absolute -bottom-6 -left-6 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-2xl p-4 shadow-xl transform -rotate-12 hover:-rotate-6 transition-transform duration-300">
-                        <div class="text-center">
-                            <div class="text-2xl mb-1">⚡</div>
-                            <div class="text-xs font-bold">Fast</div>
-                            <div class="text-xs opacity-90">Delivery</div>
-                        </div>
-                    </div>
-
-                    <div class="absolute top-1/2 -left-8 bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-2xl p-3 shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300">
-                        <div class="text-center">
-                            <div class="text-xl mb-1">💻</div>
-                            <div class="text-xs font-bold">Expert</div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Particles -->
-                    <div class="absolute top-10 right-10 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                    <div class="absolute bottom-20 right-16 w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
-                    <div class="absolute top-20 left-12 w-4 h-4 bg-indigo-400 rounded-full animate-ping"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <x-creative-hero
+        title="Expert Programming Services for Every Need"
+        subtitle="From simple coding assignments to complex enterprise applications. Get professional development services with guaranteed quality and timely delivery."
+        service-type="Technical"
+    />
 
     <!-- Assignment Search Filter Section -->
     <section class="py-20 bg-white">
@@ -439,7 +273,7 @@
             <!-- Services Grid -->
             <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
                 @foreach($services as $service)
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
+                <div class="group relative bg-white dark:bg-slate-950 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100 dark:border-slate-800">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <!-- Header -->
@@ -471,15 +305,15 @@
 
                         <!-- Content -->
                         <div class="p-8">
-                            <p class="text-gray-600 mb-6 leading-relaxed">{{ $service['description'] }}</p>
+                            <p class="text-gray-600 dark:text-slate-400 mb-6 leading-relaxed">{{ $service['description'] }}</p>
 
                             <div class="mb-8">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Key Features:</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     @foreach($service['features'] as $feature)
-                                    <div class="flex items-center text-gray-700">
-                                        <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                            <span class="text-green-600 text-xs">✓</span>
+                                    <div class="flex items-center text-gray-700 dark:text-slate-300">
+                                        <span class="w-5 h-5 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-green-600 dark:text-green-400 text-xs">✓</span>
                                         </span>
                                         <span class="text-sm">{{ $feature }}</span>
                                     </div>
@@ -488,7 +322,7 @@
                             </div>
 
                             <div class="flex gap-3">
-                                <a href="{{ route('services.programming.show', $service['slug']) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
+                                <a href="{{ route('services.programming.show', $service['slug']) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-900 dark:text-slate-200 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
                                     Learn More
                                     <svg class="ml-2 w-4 h-4 group-hover/learn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
