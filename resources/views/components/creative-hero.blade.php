@@ -1,6 +1,18 @@
 @php
-    $writingSubjects = ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
-    $technicalSubjects = ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
+    $orderPageSubjects = [];
+    $subjectsPath = base_path('subjects.json');
+
+    if (file_exists($subjectsPath)) {
+        $subjectsList = json_decode(file_get_contents($subjectsPath), true);
+
+        if (is_array($subjectsList)) {
+            asort($subjectsList);
+            $orderPageSubjects = array_values(array_unique($subjectsList));
+        }
+    }
+
+    $writingSubjects = $orderPageSubjects ?: ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
+    $technicalSubjects = $orderPageSubjects ?: ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
     $onlineClassSubjects = ['Business / MBA','Computer Science','Nursing / Healthcare','Mathematics','English / Writing','History / Social Sciences','Psychology','Law','Accounting','Engineering','Science','Other'];
 @endphp
 

@@ -45,7 +45,8 @@ test('creative hero form submits page count', function () {
         ->assertSee('name="pages"', false)
         ->assertSee('data-pages-input', false)
         ->assertSee('name="phone"', false)
-        ->assertSee('name="country_code"', false);
+        ->assertSee('name="country_code"', false)
+        ->assertSee('Applied Mathematics');
 });
 
 test('existing logged out user order is held until login', function () {
