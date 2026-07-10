@@ -6,18 +6,13 @@
 
 @section('content')
 
-    <!-- Creative Animated Hero Section -->
-    <div id="creative-hero-root"></div>
-
-    @push('scripts')
-        @vite(['resources/js/creative-hero-entry.tsx'])
-    @endpush
+    <x-creative-hero />
 
 
-    <section class="px-4 py-16 sm:px-6 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">
+    <section class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="services">
         <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
 
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="mx-auto max-w-3xl text-center mb-24">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/50 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-200">
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
@@ -290,7 +285,7 @@
             <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-6xl mx-auto">
                 <!-- Header -->
                 <div class="text-center mb-16">
@@ -631,7 +626,7 @@
         <div class="absolute -right-24 top-1/4 w-96 h-96 bg-blue-100/50 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute -left-24 bottom-1/4 w-96 h-96 bg-indigo-100/50 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-24">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 mb-8 dark:bg-slate-900 dark:border-slate-800/80">
                     <span class="relative flex h-2 w-2">
@@ -797,7 +792,7 @@
     <section class="py-20 bg-white relative overflow-hidden dark:bg-slate-900">
         <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-6xl mx-auto rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 md:p-12 dark:border-slate-800/80">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div>
@@ -886,7 +881,7 @@
                 style="animation-delay: 2s"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-20">
                 <div
@@ -1031,7 +1026,7 @@
         <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-100/30 rounded-full blur-[120px] -ml-24 -mb-24 pointer-events-none animate-[blob_10s_infinite_alternate_reverse]"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:40px_40px] opacity-20 pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-24">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 hover:scale-105 transition-transform duration-300 cursor-default dark:bg-slate-950 dark:border-slate-800/80">
                     <span class="relative flex h-2 w-2">
@@ -1254,7 +1249,7 @@
 
     <!-- Why Students Choose Assignment Help USA -->
     <section class="py-32 bg-white relative overflow-hidden dark:bg-slate-900">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24 max-w-4xl mx-auto">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-8 dark:bg-blue-950/30 dark:border-blue-900/50">
                     <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Our Value Proposition</span>
@@ -1335,7 +1330,7 @@
 
     <!-- Academic Services — Compact Minimal -->
     <section class="py-16 bg-white dark:bg-slate-900" id="services">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Compact header -->
             <div class="text-center mb-12 max-w-xl mx-auto">
@@ -1450,82 +1445,13 @@
         </div>
     </section>
 
-    <!-- Subject Areas Comprehensive Grid Section -->
-    <section class="py-32 bg-slate-50 relative overflow-hidden dark:bg-slate-950">
 
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-24 max-w-4xl mx-auto">
-                <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight dark:text-white">
-                    Omni-Disciplinary <br>
-                    <span class="text-blue-600">Expertise.</span>
-                </h2>
-                <p class="text-xl text-slate-500 font-medium leading-relaxed dark:text-slate-500">
-                    From STEM to Humanities, our specialty network covers over 100+ academic disciplines with localized US expertise.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- STEM -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-blue-950/30">🔬</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">STEM Fields</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Advanced Mathematics</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Physics & Astrophysics</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Bio-Medical Sciences</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Chemical Engineering</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Environmental Geology</li>
-                    </ul>
-                </div>
-
-                <!-- Business -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-emerald-950/30">💼</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Business & Econ</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Financial Analysis</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strategic Management</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Market Research</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Econometrics</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Supply Chain Logistics</li>
-                    </ul>
-                </div>
-
-                <!-- CS & Tech -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">💻</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">CS & Technology</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Software Engineering</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> AI & Machine Learning</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Cyber Security</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Data Science & Analytics</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Cloud Architecture</li>
-                    </ul>
-                </div>
-
-                <!-- Humanities -->
-                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group dark:bg-slate-900 dark:border-slate-800/80">
-                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform dark:bg-purple-950/30">📚</div>
-                    <h3 class="text-2xl font-black text-gray-900 mb-4 dark:text-white">Humanities</h3>
-                    <ul class="space-y-3 text-sm text-gray-600 font-bold dark:text-slate-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> English Literature</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Modern Philosophy</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Political Sociology</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Cultural Anthropology</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Applied Psychology</li>
-                    </ul>
-                </div>
-        <!-- Geographic Coverage - USA Section -->
-    </div>
-        </div>
-    </section>
 
     <!-- Geographic Coverage - USA Section -->
     <!-- Nationwide Coverage Section (Compact) -->
     <section class="py-16 bg-slate-50 dark:bg-slate-950 relative overflow-hidden" id="locations">
 
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Compact Header -->
             <div class="text-center mb-10 max-w-2xl mx-auto">
@@ -1694,7 +1620,7 @@
             <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-100 rounded-full blur-[120px]"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 mb-8">
                     <span class="text-blue-600 text-[10px] font-black uppercase tracking-[0.2em]">Clarifying Success</span>

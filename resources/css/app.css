@@ -2,6 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+ * CANONICAL SECTION CONTAINER
+ * Matches the navbar/footer layout: max-w-7xl, responsive px.
+ * Use this on every inner section wrapper to keep left/right
+ * alignment consistent across the entire site.
+ * ============================================================ */
+@layer components {
+    .section-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+}
+
+/* ============================================================
+ * COMPACT TYPE SCALE — Global Typography Override
+ *
+ * Strategy: Override Tailwind's CSS custom properties for
+ * font-size at the :root level so every text-* utility
+ * automatically uses the tighter value. Zero template edits
+ * required. Fully reversible by removing this block.
+ *
+ * Reduction map (old → new):
+ *   text-xs      : 0.75rem  → 0.7rem   (11.2px)
+ *   text-sm      : 0.875rem → 0.8rem   (12.8px)
+ *   text-base    : 1rem     → 0.875rem (14px)   ← body copy
+ *   text-lg      : 1.125rem → 0.95rem  (15.2px)
+ *   text-xl      : 1.25rem  → 1.05rem  (16.8px)
+ *   text-2xl     : 1.5rem   → 1.2rem   (19.2px)
+ *   text-3xl     : 1.875rem → 1.4rem   (22.4px)
+ *   text-4xl     : 2.25rem  → 1.65rem  (26.4px) ← section h2
+ *   text-5xl     : 3rem     → 1.9rem   (30.4px)
+ *   text-6xl     : 3.75rem  → 2.2rem   (35.2px)
+ *   text-7xl     : 4.5rem   → 2.5rem   (40px)
+ *   text-8xl     : 6rem     → 2.9rem   (46.4px)
+ *   text-9xl     : 8rem     → 3.25rem  (52px)
+ * ============================================================ */
+@layer base {
+    :root {
+        /* Remap Tailwind's internal font-size tokens */
+        --tw-font-size-xs:   0.7rem;
+        --tw-font-size-sm:   0.8rem;
+        --tw-font-size-base: 0.875rem;
+        --tw-font-size-lg:   0.95rem;
+        --tw-font-size-xl:   1.05rem;
+        --tw-font-size-2xl:  1.2rem;
+        --tw-font-size-3xl:  1.4rem;
+        --tw-font-size-4xl:  1.65rem;
+        --tw-font-size-5xl:  1.9rem;
+        --tw-font-size-6xl:  2.2rem;
+        --tw-font-size-7xl:  2.5rem;
+        --tw-font-size-8xl:  2.9rem;
+        --tw-font-size-9xl:  3.25rem;
+    }
+
+    /* Override Tailwind v3's compiled text-* classes directly.
+       Tailwind v3 does NOT use CSS vars for font-size natively,
+       so we override them via explicit rules here. */
+    .text-xs   { font-size: 0.7rem  !important; line-height: 1rem; }
+    .text-sm   { font-size: 0.8rem  !important; line-height: 1.15rem; }
+    .text-base { font-size: 0.875rem !important; line-height: 1.4rem; }
+    .text-lg   { font-size: 0.95rem !important; line-height: 1.5rem; }
+    .text-xl   { font-size: 1.05rem !important; line-height: 1.5rem; }
+    .text-2xl  { font-size: 1.2rem  !important; line-height: 1.55rem; }
+    .text-3xl  { font-size: 1.4rem  !important; line-height: 1.7rem; }
+    .text-4xl  { font-size: 1.65rem !important; line-height: 2rem; }
+    .text-5xl  { font-size: 1.9rem  !important; line-height: 2.25rem; }
+    .text-6xl  { font-size: 2.2rem  !important; line-height: 2.5rem; }
+    .text-7xl  { font-size: 2.5rem  !important; line-height: 2.75rem; }
+    .text-8xl  { font-size: 2.9rem  !important; line-height: 3.2rem; }
+    .text-9xl  { font-size: 3.25rem !important; line-height: 3.5rem; }
+
+    /* Tighten line-height utilities used for body copy */
+    .leading-relaxed { line-height: 1.55 !important; }
+    .leading-loose   { line-height: 1.75 !important; }
+    .leading-normal  { line-height: 1.4  !important; }
+
+    /* Tighten large vertical section spacing */
+    .py-32 { padding-top: 4rem  !important; padding-bottom: 4rem  !important; }
+    .py-24 { padding-top: 3rem  !important; padding-bottom: 3rem  !important; }
+    .py-20 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+    .py-16 { padding-top: 2rem  !important; padding-bottom: 2rem  !important; }
+
+    /* Tighten large bottom margin gaps (section headings, hero text blocks) */
+    .mb-24 { margin-bottom: 2.5rem !important; }
+    .mb-20 { margin-bottom: 2rem   !important; }
+    .mb-16 { margin-bottom: 1.5rem !important; }
+    .mb-12 { margin-bottom: 1.25rem !important; }
+    .mb-10 { margin-bottom: 1rem   !important; }
+    .mb-8  { margin-bottom: 0.75rem !important; }
+
+    /* Hero / display headings: preserve tight leading */
+    h1, h2 { letter-spacing: -0.01em; }
+    h3, h4  { letter-spacing: 0; }
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -62,4 +156,130 @@ body {
 
 .dark ::selection {
     background-color: rgba(139, 92, 246, 0.4);
+}
+
+/*
+ * Dark-mode fallback for legacy Blade pages.
+ *
+ * Many older views were authored with light-only Tailwind utilities. These
+ * selectors only apply when the root .dark class is present, preserving the
+ * existing light-mode UI while giving unconverted pages readable dark surfaces.
+ */
+.dark .bg-white:not([class*="dark:bg-"]),
+.dark .bg-gray-50:not([class*="dark:bg-"]),
+.dark .bg-slate-50:not([class*="dark:bg-"]) {
+    background-color: rgb(15 23 42); /* slate-950 */
+}
+
+.dark .bg-gray-100:not([class*="dark:bg-"]),
+.dark .bg-slate-100:not([class*="dark:bg-"]) {
+    background-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .bg-gray-200:not([class*="dark:bg-"]),
+.dark .bg-slate-200:not([class*="dark:bg-"]) {
+    background-color: rgb(51 65 85); /* slate-700 */
+}
+
+.dark .text-gray-950:not([class*="dark:text-"]),
+.dark .text-gray-900:not([class*="dark:text-"]),
+.dark .text-slate-950:not([class*="dark:text-"]),
+.dark .text-slate-900:not([class*="dark:text-"]) {
+    color: rgb(248 250 252); /* slate-50 */
+}
+
+.dark .text-gray-800:not([class*="dark:text-"]),
+.dark .text-gray-700:not([class*="dark:text-"]),
+.dark .text-slate-800:not([class*="dark:text-"]),
+.dark .text-slate-700:not([class*="dark:text-"]) {
+    color: rgb(226 232 240); /* slate-200 */
+}
+
+.dark .text-gray-600:not([class*="dark:text-"]),
+.dark .text-gray-500:not([class*="dark:text-"]),
+.dark .text-slate-600:not([class*="dark:text-"]),
+.dark .text-slate-500:not([class*="dark:text-"]) {
+    color: rgb(148 163 184); /* slate-400 */
+}
+
+.dark .border-gray-50:not([class*="dark:border-"]),
+.dark .border-gray-100:not([class*="dark:border-"]),
+.dark .border-gray-200:not([class*="dark:border-"]),
+.dark .border-slate-50:not([class*="dark:border-"]),
+.dark .border-slate-100:not([class*="dark:border-"]),
+.dark .border-slate-200:not([class*="dark:border-"]) {
+    border-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .divide-gray-100:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-gray-200:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-100:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]),
+.dark .divide-slate-200:not([class*="dark:divide-"]) > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgb(30 41 59); /* slate-800 */
+}
+
+.dark .from-white:not([class*="dark:from-"]),
+.dark .from-gray-50:not([class*="dark:from-"]),
+.dark .from-gray-100:not([class*="dark:from-"]),
+.dark .from-slate-50:not([class*="dark:from-"]),
+.dark .from-slate-100:not([class*="dark:from-"]),
+.dark .from-blue-50:not([class*="dark:from-"]),
+.dark .from-indigo-50:not([class*="dark:from-"]),
+.dark .from-purple-50:not([class*="dark:from-"]),
+.dark .from-green-50:not([class*="dark:from-"]),
+.dark .from-emerald-50:not([class*="dark:from-"]),
+.dark .from-cyan-50:not([class*="dark:from-"]),
+.dark .from-pink-50:not([class*="dark:from-"]),
+.dark .from-orange-50:not([class*="dark:from-"]),
+.dark .from-amber-50:not([class*="dark:from-"]),
+.dark .from-yellow-50:not([class*="dark:from-"]),
+.dark .from-red-50:not([class*="dark:from-"]) {
+    --tw-gradient-from: rgb(15 23 42) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.dark .via-white:not([class*="dark:via-"]),
+.dark .via-gray-50:not([class*="dark:via-"]),
+.dark .via-gray-100:not([class*="dark:via-"]),
+.dark .via-slate-50:not([class*="dark:via-"]),
+.dark .via-slate-100:not([class*="dark:via-"]),
+.dark .via-blue-50:not([class*="dark:via-"]),
+.dark .via-indigo-50:not([class*="dark:via-"]),
+.dark .via-purple-50:not([class*="dark:via-"]),
+.dark .via-green-50:not([class*="dark:via-"]),
+.dark .via-emerald-50:not([class*="dark:via-"]),
+.dark .via-cyan-50:not([class*="dark:via-"]),
+.dark .via-pink-50:not([class*="dark:via-"]),
+.dark .via-orange-50:not([class*="dark:via-"]),
+.dark .via-amber-50:not([class*="dark:via-"]),
+.dark .via-yellow-50:not([class*="dark:via-"]),
+.dark .via-red-50:not([class*="dark:via-"]) {
+    --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgb(30 41 59) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.dark .to-white:not([class*="dark:to-"]),
+.dark .to-gray-50:not([class*="dark:to-"]),
+.dark .to-gray-100:not([class*="dark:to-"]),
+.dark .to-slate-50:not([class*="dark:to-"]),
+.dark .to-slate-100:not([class*="dark:to-"]),
+.dark .to-blue-50:not([class*="dark:to-"]),
+.dark .to-indigo-50:not([class*="dark:to-"]),
+.dark .to-purple-50:not([class*="dark:to-"]),
+.dark .to-green-50:not([class*="dark:to-"]),
+.dark .to-emerald-50:not([class*="dark:to-"]),
+.dark .to-cyan-50:not([class*="dark:to-"]),
+.dark .to-pink-50:not([class*="dark:to-"]),
+.dark .to-orange-50:not([class*="dark:to-"]),
+.dark .to-amber-50:not([class*="dark:to-"]),
+.dark .to-yellow-50:not([class*="dark:to-"]),
+.dark .to-red-50:not([class*="dark:to-"]) {
+    --tw-gradient-to: rgb(30 41 59) var(--tw-gradient-to-position);
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+    color-scheme: dark;
 }

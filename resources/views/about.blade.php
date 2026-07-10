@@ -8,15 +8,15 @@
     <!-- Structured Data for Organization -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Organization",
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
         "name": "Assignment Help USA",
         "description": "Professional assignment help and academic support service connecting students with expert tutors",
         "url": "{{ url('/') }}",
         "logo": "{{ asset('images/logo.png') }}",
         "foundingDate": "2020",
         "contactPoint": {
-            "@type": "ContactPoint",
+            "@@type": "ContactPoint",
             "contactType": "Customer Service",
             "areaServed": "Worldwide",
             "availableLanguage": ["English"]

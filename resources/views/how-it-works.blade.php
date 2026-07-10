@@ -1199,14 +1199,14 @@
     <script type="application/ld+json">
     {
         "@@context": "https://schema.org",
-        "@type": "FAQPage",
+        "@@type": "FAQPage",
         "mainEntity": [
             @foreach($faqs as $faq)
             {
-                "@type": "Question",
+                "@@type": "Question",
                 "name": "{{ $faq['question'] }}",
                 "acceptedAnswer": {
-                    "@type": "Answer",
+                    "@@type": "Answer",
                     "text": "{{ $faq['answer'] }}"
                 }
             }@if(!$loop->last),@endif

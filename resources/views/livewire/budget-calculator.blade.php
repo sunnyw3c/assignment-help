@@ -273,7 +273,7 @@ new class extends Component
                                     style="background: linear-gradient(to right, #ef4444 {{ ($pages / 30) * 100 }}%, rgba(255,255,255,0.05) {{ ($pages / 30) * 100 }}%);">
                                 <div class="flex justify-between mt-1.5">
                                     <span class="text-[10px] text-slate-600">1</span>
-                                    <span class="text-[10px] text-slate-600">~{{ number_format($pages * 275) }} words</span>
+                                    <span class="text-[10px] text-slate-600">~{{ number_format($pages * 250) }} words</span>
                                     <span class="text-[10px] text-slate-600">30</span>
                                 </div>
                             </div>

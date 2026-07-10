@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div>
@@ -246,7 +246,7 @@
 
         <!-- Comprehensive Content Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Expert Java Programming Services</h2>
@@ -398,7 +398,7 @@
 
         <!-- How It Works Section -->
         <section id="how-it-works" class="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our Assignment Help Process Works</h2>
                     <p class="text-xl text-gray-600">Get your programming assignment completed in 4 simple steps</p>
@@ -446,7 +446,7 @@
 
         <!-- Pricing Section -->
         <section id="pricing" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing for Java Projects</h2>
                     <p class="text-xl text-gray-600">Choose the package that fits your project needs</p>
@@ -590,7 +590,7 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories from Students</h2>
                     <p class="text-xl text-gray-600">See how we've helped students excel in their Java projects</p>
@@ -659,7 +659,7 @@
 
         <!-- FAQ Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
@@ -693,7 +693,7 @@
 
         <!-- Related Services Section -->
         <section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
-            <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Related Programming Services</h2>
                     <p class="text-xl text-gray-600">Expand your development capabilities with complementary services</p>
@@ -804,7 +804,7 @@
 
         <!-- Final CTA Section -->
         <section class="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
-            <div class="container mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Build Your Java Project?</h2>
                 <p class="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
                     Join 1350+ students who have successfully completed their Java programming projects with our expert help.

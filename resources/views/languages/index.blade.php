@@ -9,21 +9,21 @@
     <script type="application/ld+json">
     {
         "@@context": "https://schema.org",
-        "@type": "ItemList",
+        "@@type": "ItemList",
         "name": "Programming Languages We Support",
         "description": "Comprehensive list of programming languages with expert help available",
         "numberOfItems": {{ count($languages) }},
         "itemListElement": [
             @foreach($languages as $index => $language)
             {
-                "@type": "ListItem",
+                "@@type": "ListItem",
                 "position": {{ $index + 1 }},
                 "item": {
-                    "@type": "Course",
+                    "@@type": "Course",
                     "name": "{{ $language['name'] }} Programming Help",
                     "description": "{{ $language['description'] }}",
                     "provider": {
-                        "@type": "Organization",
+                        "@@type": "Organization",
                         "name": "Trending Tutor"
                     }
                 }

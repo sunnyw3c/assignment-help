@@ -197,7 +197,7 @@ new class extends Component {
                         </button>
                     </div>
                     <div class="text-center mt-2 text-xs font-medium text-gray-400">
-                        ≈ {{ number_format($pages * 275) }} words
+                        ≈ {{ number_format($pages * 250) }} words
                     </div>
                 </div>
 
