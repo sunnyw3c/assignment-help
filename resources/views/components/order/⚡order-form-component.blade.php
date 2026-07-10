@@ -388,27 +388,49 @@ new class extends Component {
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- LEFT COLUMN - ORDER FORM -->
             <div class="lg:col-span-2 space-y-6">
-                <!-- Form Card -->
                 <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-[20px] max-sm:rounded-2xl p-6 sm:p-8 shadow-sm transition-[background,box-shadow] duration-300">
-                    
-                    <!-- Form Title -->
-                    <div class="mb-6">
-                        <h2 class="text-base sm:text-lg font-extrabold text-slate-800 dark:text-slate-200">Assignment Details</h2>
-                        <p class="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Please provide your assignment specifications below.</p>
+                    <!-- Form Card Header -->
+                    <div class="text-center pb-2 mb-2">
+                        <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">
+                            Get Expert Assignment Help | Place Your Order Now
+                        </h2>
+                        <div class="flex items-center justify-center flex-wrap gap-x-4 gap-y-1 text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400">
+                            <span class="inline-flex items-center gap-1">
+                                <span class="text-emerald-500 font-extrabold">✓</span> Guaranteed Grade or Refund
+                            </span>
+                            <span class="inline-flex items-center gap-1">
+                                <span class="text-emerald-500 font-extrabold">✓</span> No AI
+                            </span>
+                            <span class="inline-flex items-center gap-1">
+                                <span class="text-emerald-500 font-extrabold">✓</span> 24/7 Support
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Category Switcher (Tabs) -->
-                    <div class="flex items-center flex-wrap gap-4 border-b border-slate-200/50 dark:border-slate-800/80 pb-4 mb-6">
+                    <div class="flex items-center flex-wrap gap-x-6 gap-y-3 border-t border-b border-slate-200/60 dark:border-slate-800/80 py-3 mb-5 -mx-6 px-6 sm:-mx-8 sm:px-8">
                         @foreach (['writing' => 'Writing', 'technical' => 'Technical', 'online_class' => 'Online Class'] as $type => $label)
-                            <button type="button" wire:click="$set('assignmentType', '{{ $type }}')"
-                                class="flex items-center gap-2 cursor-pointer text-xs font-semibold select-none transition-colors duration-150 {{ $assignmentType === $type ? 'text-[#f16700]' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200' }}">
-                                <span class="w-[17px] h-[17px] rounded-full shrink-0 inline-flex items-center justify-center border-2 transition-[border-color] duration-150 {{ $assignmentType === $type ? 'border-[#f16700]' : 'border-slate-300 dark:border-slate-700' }}">
-                                    @if($assignmentType === $type)
-                                        <span class="w-1.5 h-1.5 rounded-full bg-[#f16700]"></span>
-                                    @endif
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" wire:click="$set('assignmentType', '{{ $type }}')"
+                                    class="flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-semibold select-none transition-colors duration-150 {{ $assignmentType === $type ? 'text-[#f16700]' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200' }}">
+                                    <span class="w-4 h-4 rounded-full shrink-0 inline-flex items-center justify-center border-2 transition-[border-color] duration-150 {{ $assignmentType === $type ? 'border-[#f16700]' : 'border-slate-300 dark:border-slate-700' }}">
+                                        @if($assignmentType === $type)
+                                            <span class="w-1.5 h-1.5 rounded-full bg-[#f16700]"></span>
+                                        @endif
+                                    </span>
+                                    {{ $label }}
+                                </button>
+                                
+                                {{-- Info Icon with Tooltip --}}
+                                <span class="inline-flex items-center cursor-help text-slate-400 dark:text-slate-500 hover:text-[#f16700] dark:hover:text-[#f16700] transition-colors" 
+                                    title="{{ $type === 'writing' ? 'Essays, reports, dissertations, case studies and more.' : ($type === 'technical' ? 'Coding, data science, math, engineering and science problems.' : 'Online courses, quizzes, discussions and assignments.') }}">
+                                    <svg class="w-3 h-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                        <circle cx="10" cy="10" r="8"/>
+                                        <line x1="10" y1="14" x2="10" y2="10"/>
+                                        <line x1="10" y1="7" x2="10" y2="7" stroke-linecap="round"/>
+                                    </svg>
                                 </span>
-                                {{ $label }}
-                            </button>
+                            </div>
                         @endforeach
                     </div>
 
