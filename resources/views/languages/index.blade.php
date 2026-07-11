@@ -726,244 +726,220 @@
     </section>
 
     <!-- Why Choose Our Programming Language Help -->
-    <section class="py-24 bg-gradient-to-br from-purple-50 to-indigo-50 relative overflow-hidden" aria-labelledby="why-choose-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-xl">
-                    <span class="mr-3 text-xl">⭐</span>
-                    WHY STUDENTS CHOOSE US
-                </div>
-
-                <h2 id="why-choose-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Expert Programming Help
-                    <br>
-                    <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">For Every Language</span>
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="why-choose-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Why Students Choose Us</p>
+                <h2 id="why-choose-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Expert Programming Help <span class="text-blue-600 dark:text-blue-400">for Every Language</span>
                 </h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Language-Specific Experts</h3>
-                    <p class="text-gray-600 leading-relaxed">Our developers specialize in specific programming languages, ensuring you get expert-level help tailored to each language's unique features and best practices.</p>
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">🎯</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Language-Specific Experts</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Developers who specialize in specific languages, so you get help tailored to each language's unique features and best practices.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">📚</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Learning-Focused Approach</h3>
-                    <p class="text-gray-600 leading-relaxed">We don't just solve problems - we teach you the concepts, syntax, and programming patterns that make you a better developer in your chosen language.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-lg text-white">📚</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Learning-Focused Approach</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We don't just solve problems — we explain the concepts, syntax, and patterns that make you a better developer.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">💡</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Real-World Examples</h3>
-                    <p class="text-gray-600 leading-relaxed">Get practical, industry-standard solutions with detailed explanations that help you understand how each language is used in professional development.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500 text-lg text-white">💡</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Real-World Examples</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Practical, industry-standard solutions with clear explanations of how each language is used in professional development.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">⚡</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Instant Support</h3>
-                    <p class="text-gray-600 leading-relaxed">Get help within minutes, not hours. Our experts are available 24/7 to assist with urgent assignments, debugging sessions, and project deadlines.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">⚡</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Instant Support</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Help within minutes, not hours. Experts available 24/7 for urgent assignments, debugging, and deadlines.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🔧</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Complete Solutions</h3>
-                    <p class="text-gray-600 leading-relaxed">From simple syntax questions to complex algorithm implementations, we provide complete, tested solutions with comprehensive documentation.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">🔧</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Complete Solutions</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">From simple syntax questions to complex algorithm implementations — complete, tested solutions with documentation.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🎓</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Academic Excellence</h3>
-                    <p class="text-gray-600 leading-relaxed">Boost your grades with professionally written code that follows academic standards and includes detailed explanations for better understanding.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-rose-600 text-lg text-white">🎓</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Academic Excellence</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Boost your grades with professionally written code that follows academic standards and includes clear explanations.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programming Content Types Section -->
-    <section class="py-24 bg-white relative overflow-hidden" aria-labelledby="content-types-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="mr-3 text-xl">📋</span>
-                    WHAT WE HELP WITH
-                </div>
-
-                <h2 id="content-types-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Every Type of Programming
-                    <br>
-                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Assignment & Project</span>
+    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="content-types-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">What We Help With</p>
+                <h2 id="content-types-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Every Type of Programming <span class="text-blue-600 dark:text-blue-400">Assignment & Project</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
                     From basic syntax to complex algorithms, we provide expert assistance for all types of programming content across every language.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Assignments & Homework -->
-                <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">📝</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Assignments & Homework</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">📝</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Assignments & Homework</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
                             Coding exercises and problems
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
                             Algorithm implementations
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
                             Data structure assignments
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
                             Object-oriented programming
                         </li>
                     </ul>
                 </div>
 
                 <!-- Projects & Applications -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🚀</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Projects & Applications</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">🚀</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Projects & Applications</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                            Web applications (Frontend/Backend)
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
+                            Web applications (frontend/backend)
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
                             Mobile app development
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
                             Desktop applications
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
                             API development & integration
                         </li>
                     </ul>
                 </div>
 
                 <!-- Debugging & Code Review -->
-                <div class="group bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🔧</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Debugging & Code Review</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-lg text-white">🔧</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Debugging & Code Review</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
                             Error fixing and troubleshooting
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
                             Code optimization
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
                             Performance improvements
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
                             Code refactoring
                         </li>
                     </ul>
                 </div>
 
                 <!-- Exam Preparation -->
-                <div class="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-green-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🎓</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Exam Preparation</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-lg text-white">🎓</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Exam Preparation</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                             Coding interview practice
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                             Algorithm challenges
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                             Technical assessments
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                             Certification preparation
                         </li>
                     </ul>
                 </div>
 
                 <!-- Database & Backend -->
-                <div class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-cyan-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🗄️</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Database & Backend</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-600 text-lg text-white">🗄️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Database & Backend</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
                             SQL query optimization
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
                             Database design & modeling
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
                             Server-side programming
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
                             RESTful API development
                         </li>
                     </ul>
                 </div>
 
                 <!-- Data Science & AI -->
-                <div class="group bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-indigo-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🤖</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Data Science & AI</h3>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">🤖</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Data Science & AI</h3>
                     </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
                             Machine learning models
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
                             Data analysis & visualization
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
                             Neural networks & deep learning
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
                             Statistical programming
                         </li>
                     </ul>
@@ -971,47 +947,43 @@
             </div>
 
             <!-- Bottom CTA -->
-            <div class="text-center mt-20">
-                <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-12 max-w-4xl mx-auto border border-gray-200">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
-                        Don't See Your Programming Need?
-                    </h3>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        We cover every programming concept, framework, and technology.
-                        Get personalized help for any coding challenge you're facing.
-                    </p>
-                    <a href="{{ route('order') }}"
-                       class="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        <span class="mr-3">💬</span>
-                        Describe Your Project
-                        <svg class="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </a>
-                </div>
+            <div class="mt-10 rounded-2xl bg-slate-900 p-8 text-center sm:p-10 dark:border dark:border-slate-800 dark:bg-slate-950">
+                <h3 class="text-2xl font-bold text-white">
+                    Don't See Your Programming Need?
+                </h3>
+                <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+                    We cover every programming concept, framework, and technology. Get personalized help for any coding challenge you're facing.
+                </p>
+                <a href="{{ route('order') }}"
+                   class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                    Describe Your Project
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-                    Ready to Master Your Programming Language?
-                </h2>
-                <p class="text-xl text-purple-100 mb-12 leading-relaxed">
-                    Join thousands of students who've accelerated their programming journey with our expert help.
-                    Get instant assistance, learn faster, and achieve better grades.
-                </p>
-                <a href="{{ route('order') }}"
-                   class="group inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    <span class="mr-4 text-3xl">🚀</span>
-                    Start Getting Help Now
-                    <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="rounded-2xl bg-slate-900 p-8 text-center sm:p-10 dark:border dark:border-slate-800 dark:bg-slate-950">
+                <div class="mx-auto max-w-2xl">
+                    <h2 class="text-2xl font-bold text-white sm:text-3xl">
+                        Ready to Master Your Programming Language?
+                    </h2>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                        Join thousands of students who've accelerated their programming journey with our expert help. Get instant assistance, learn faster, and achieve better grades.
+                    </p>
+                    <a href="{{ route('order') }}"
+                       class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                        Start Getting Help Now
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

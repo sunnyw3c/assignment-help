@@ -564,19 +564,19 @@
                             </div>
                         </div>
 
-                        <div class="mt-8 text-center">
-                            <div class="inline-flex items-center bg-white rounded-lg px-6 py-4 shadow-md">
-                                <div class="text-4xl font-black text-gray-900 mr-4">4.9/5.0</div>
+                        <div class="mt-6 text-center">
+                            <div class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-5 py-3 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                                <div class="text-2xl font-bold text-slate-900 dark:text-white mr-3">4.9/5.0</div>
                                 <div class="text-left">
-                                    <div class="flex text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
-                                    <p class="text-sm text-gray-600">Based on 4,500+ law student reviews</p>
+                                    <div class="flex text-amber-400 text-sm mb-0.5">★★★★★</div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-500">Based on 4,500+ law student reviews</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Final CTA -->
-                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center">
                             <span class="text-3xl mr-3">⚖️</span>
                             Ready for Expert Law Assignment Help?
