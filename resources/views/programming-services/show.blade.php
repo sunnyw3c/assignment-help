@@ -5,23 +5,21 @@
     <x-creative-hero :service="$service" />
 
     <!-- Technologies Section -->
-    <section class="py-20 bg-gray-50 dark:bg-slate-950 transition-colors duration-300">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-6">Technologies We Work With</h2>
-                <p class="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">Our experts are proficient in all modern web development
-                    technologies and frameworks</p>
+    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Technologies We Work With</h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Our experts are proficient in all modern web development technologies and frameworks.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($serviceDetails['technologies'] as $category => $techs)
-                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-slate-800">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">{{ $category }}</h3>
-                        <div class="space-y-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">{{ $category }}</h3>
+                        <div class="space-y-2">
                             @foreach ($techs as $tech)
-                                <div
-                                    class="flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-950 dark:to-slate-950 rounded-lg py-2 px-4">
-                                    <span class="text-gray-700 dark:text-slate-300 font-medium">{{ $tech }}</span>
+                                <div class="flex items-center justify-center rounded-lg bg-blue-50 px-4 py-2 dark:bg-slate-950">
+                                    <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{{ $tech }}</span>
                                 </div>
                             @endforeach
                         </div>
@@ -32,48 +30,43 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-6">Transparent Pricing</h2>
-                <p class="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">Choose the package that fits your project needs and
-                    budget</p>
+    <section id="pricing" class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Transparent Pricing</h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Choose the package that fits your project needs and budget.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
                 @foreach ($serviceDetails['pricing'] as $key => $package)
                     <div
-                        class="relative bg-white dark:bg-slate-950 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border {{ $key === 'standard' ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200 dark:border-slate-800' }}">
+                        class="relative flex flex-col rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:bg-slate-950 {{ $key === 'standard' ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-200 dark:border-slate-800' }}">
 
                         @if ($key === 'standard')
-                            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                <span
-                                    class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold">Most
-                                    Popular</span>
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                                <span class="rounded-full bg-blue-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">Most Popular</span>
                             </div>
                         @endif
 
-                        <div class="text-center mb-8">
-                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">{{ $package['name'] }}</h3>
-                            <div class="text-5xl font-black text-gray-900 dark:text-white mb-2">{{ $package['price'] }}</div>
-                            <div class="text-gray-600 dark:text-slate-400">{{ $package['timeframe'] }}</div>
+                        <div class="mb-6 text-center">
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white">{{ $package['name'] }}</h3>
+                            <p class="mt-2 text-3xl font-bold text-slate-900 dark:text-white">{{ $package['price'] }}</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">{{ $package['timeframe'] }}</p>
                         </div>
 
-                        <ul class="space-y-4 mb-8">
+                        <ul class="mb-6 space-y-2">
                             @foreach ($package['features'] as $feature)
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor"
-                                        viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span class="text-gray-700 dark:text-slate-300">{{ $feature }}</span>
+                                    <span class="text-sm text-slate-700 dark:text-slate-300">{{ $feature }}</span>
                                 </li>
                             @endforeach
                         </ul>
 
                         <a href="{{ route('order') }}"
-                            class="w-full block text-center {{ $key === 'standard' ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white' : 'bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-900 dark:text-slate-100' }} py-4 rounded-2xl font-bold text-lg transition-all duration-300">
+                            class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition-colors {{ $key === 'standard' ? 'bg-blue-600 text-white hover:bg-blue-500' : 'border border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400' }}">
                             Get Started
                         </a>
                     </div>
@@ -83,23 +76,22 @@
     </section>
 
     <!-- Process Section -->
-    <section class="py-20 bg-gray-50 dark:bg-slate-950 transition-colors duration-300">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-6">Our Development Process</h2>
-                <p class="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">A proven methodology that delivers results</p>
+    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Our Development Process</h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">A proven methodology that delivers results.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($serviceDetails['process'] as $step)
-                    <div class="text-center group">
-                        <div
-                            class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-3xl">{{ $step['icon'] }}</span>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-lg">
+                            <span>{{ $step['icon'] }}</span>
                         </div>
-                        <div class="text-2xl font-black text-blue-500 mb-2">{{ $step['step'] }}</div>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">{{ $step['title'] }}</h3>
-                        <p class="text-gray-600 dark:text-slate-400 leading-relaxed">{{ $step['description'] }}</p>
+                        <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">{{ $step['step'] }}</p>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">{{ $step['title'] }}</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{{ $step['description'] }}</p>
                     </div>
                 @endforeach
             </div>
@@ -160,17 +152,10 @@
 
             <div class="max-w-4xl mx-auto space-y-6">
                 @foreach ($serviceDetails['faq'] as $index => $faq)
-<<<<<<< HEAD
-                    <div x-data="{ open: false }" class="bg-white rounded-2xl shadow-lg border border-gray-100">
-                        <button x-on:click="open = !open"
-                            class="w-full text-left px-8 py-6 flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors duration-200">
-                            <span class="text-lg font-bold text-gray-900">{{ $faq['question'] }}</span>
-=======
                     <div x-data="{ open: false }" class="bg-white dark:bg-slate-900 rounded-2xl shadow-lg border border-gray-100 dark:border-slate-800">
                         <button @click="open = !open"
                             class="w-full text-left px-8 py-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-slate-800 rounded-2xl transition-colors duration-200">
                             <span class="text-lg font-bold text-gray-900 dark:text-white">{{ $faq['question'] }}</span>
->>>>>>> f215b4723cc776ee0579bc5f504e47922c18b5c0
                             <svg x-bind:class="open ? 'rotate-180' : ''"
                                 class="w-6 h-6 text-gray-500 transition-transform duration-200" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">

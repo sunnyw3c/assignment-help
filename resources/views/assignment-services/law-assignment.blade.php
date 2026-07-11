@@ -20,103 +20,102 @@
 
 @section('custom-content')
     <!-- Comprehensive Law Assignment Content Section -->
-    <section class="py-20 bg-white" itemscope itemtype="https://schema.org/Service">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-black text-gray-900 mb-6" itemprop="name">Professional Law Assignment Help Service</h1>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" itemprop="description">
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" itemscope itemtype="https://schema.org/Service">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl">
+                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                    <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white" itemprop="name">Professional Law Assignment Help Service</h1>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400" itemprop="description">
                         Expert law assignment assistance from qualified legal professionals. Comprehensive help with case briefs, legal research, IRAC analysis, memorandums, and all areas of law.
                     </p>
                 </div>
 
-                <div class="prose prose-lg max-w-none">
-                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Law school and legal studies present unique challenges requiring precise analytical thinking, comprehensive understanding of legal principles, mastery of legal research methodologies, proficiency in legal writing conventions, ability to synthesize complex statutory and case law, critical evaluation of judicial reasoning, application of legal frameworks to factual scenarios, and articulation of well-reasoned legal arguments supported by authoritative sources and persuasive logic. Successfully completing law assignments demands not only thorough knowledge of substantive and procedural law across diverse practice areas including constitutional law, criminal law, civil procedure, torts, contracts, property law, administrative law, and specialized subjects, but also sophisticated research skills using legal databases like Westlaw, LexisNexis, and HeinOnline, precise citation in Bluebook or other legal citation formats, structured analysis using frameworks like IRAC (Issue, Rule, Application, Conclusion), and clear professional legal writing that meets the exacting standards expected in legal education and practice. Our professional law assignment help service provides expert assistance from qualified legal professionals including practicing attorneys, law professors, and advanced law students who understand legal doctrine and can help you excel in your legal studies.
+                <div class="space-y-5">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Law school and legal studies present unique challenges requiring precise analytical thinking, comprehensive understanding of legal principles, mastery of legal research methodologies, and proficiency in legal writing conventions. Successfully completing law assignments demands thorough knowledge of substantive and procedural law across diverse practice areas — constitutional law, criminal law, civil procedure, torts, contracts, property law, administrative law, and specialized subjects — plus sophisticated research skills using legal databases like Westlaw, LexisNexis, and HeinOnline, precise citation in Bluebook or other legal citation formats, and structured analysis using frameworks like IRAC (Issue, Rule, Application, Conclusion). Our professional law assignment help service provides expert assistance from qualified legal professionals including practicing attorneys, law professors, and advanced law students who understand legal doctrine and can help you excel in your legal studies.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Our team consists of legal experts holding JD, LLB, LLM, or SJD degrees from accredited law schools, bar-qualified attorneys with litigation and transactional experience, law professors and adjunct faculty teaching at universities, legal researchers with expertise in various jurisdictions including U.S. federal and state law, common law systems, civil law traditions, and international law, who bring both academic knowledge and practical legal experience to assignment assistance. We provide comprehensive support for all law assignment types including case briefs that identify key facts, procedural history, issues, holdings, reasoning, and dissenting opinions, legal memorandums analyzing legal questions with objective research and application of law to facts, IRAC-format analyses demonstrating systematic legal reasoning, legal research assignments using primary authorities (cases, statutes, regulations) and secondary sources (treatises, law review articles), contract analysis examining formation, terms, performance, breach, and remedies, constitutional law essays analyzing constitutional provisions, judicial review, federalism, separation of powers, and individual rights, criminal law assignments addressing elements of crimes, defenses, criminal procedure, and sentencing, tort law analyses covering negligence, intentional torts, strict liability, and damages, and properly cited work using Bluebook legal citation format or other required citation systems. Every assignment demonstrates legal reasoning, analytical depth, citation accuracy, and professional legal writing quality expected in law school coursework.
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Our team consists of legal experts holding JD, LLB, LLM, or SJD degrees from accredited law schools, bar-qualified attorneys with litigation and transactional experience, and law professors and adjunct faculty teaching at universities, who bring both academic knowledge and practical legal experience to assignment assistance. We provide comprehensive support for all law assignment types including case briefs that identify key facts, procedural history, issues, holdings, reasoning, and dissenting opinions; legal memorandums analyzing legal questions with objective research and application of law to facts; IRAC-format analyses demonstrating systematic legal reasoning; legal research assignments using primary and secondary authorities; contract analysis; constitutional, criminal, and tort law assignments; and properly cited work using Bluebook legal citation format. Every assignment demonstrates legal reasoning, analytical depth, citation accuracy, and professional legal writing quality expected in law school coursework.
                         </p>
                     </div>
 
                     <!-- Trust & Guarantees Section -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border-2 border-green-200 shadow-lg">
-                        <div class="text-center mb-8">
-                            <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Legal Expertise Guarantees</h2>
-                            <p class="text-lg text-gray-600">Your law school success is our commitment</p>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 dark:border-slate-800 dark:bg-slate-950">
+                        <div class="mx-auto mb-8 max-w-2xl text-center">
+                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Our Legal Expertise Guarantees</h2>
+                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Your law school success is our commitment</p>
                         </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">⚖️</div>
+                        <div class="grid gap-5 md:grid-cols-2">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">⚖️</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Qualified Legal Professionals</h3>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            Your law assignment will be handled by legal professionals with JD, LLB, or LLM degrees from accredited law schools. Our team includes postgraduate law graduates and legal researchers with backgrounds in areas like corporate law, criminal law, civil rights, and public law. Some are law graduates and teaching assistants with deep academic knowledge of legal theory, doctrine, and pedagogy who understand exactly what law professors expect in assignments.
+                                        <h3 class="mb-1 text-base font-bold text-slate-900 dark:text-white">Qualified Legal Professionals</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                            Your law assignment will be handled by legal professionals with JD, LLB, or LLM degrees from accredited law schools. Our team includes postgraduate law graduates and legal researchers with backgrounds in corporate law, criminal law, civil rights, and public law who understand exactly what law professors expect in assignments.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">📚</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">📚</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Comprehensive Legal Research</h3>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            We conduct thorough legal research using authoritative legal databases including Westlaw, LexisNexis, Bloomberg Law, HeinOnline, Google Scholar, and law library resources. Our research covers primary authorities (U.S. Supreme Court decisions, federal and state court cases, statutes, regulations, constitutional provisions) and secondary sources (legal treatises, Restatements, law review articles, legal encyclopedias) to support legal analysis with credible, relevant, and current authority properly cited in Bluebook format.
+                                        <h3 class="mb-1 text-base font-bold text-slate-900 dark:text-white">Comprehensive Legal Research</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                            We conduct thorough legal research using authoritative databases including Westlaw, LexisNexis, Bloomberg Law, HeinOnline, and Google Scholar. Our research covers primary authorities (cases, statutes, regulations, constitutional provisions) and secondary sources (treatises, Restatements, law review articles) properly cited in Bluebook format.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">🎯</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🎯</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">IRAC Method Expertise</h3>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            We structure legal analyses using the IRAC framework (Issue, Rule, Application, Conclusion) that is fundamental to legal reasoning and writing. Issue identification frames the precise legal question, Rule section states the applicable law from statutes and cases with proper authority, Application systematically applies legal rules to the specific facts with analogical reasoning comparing to precedent cases, and Conclusion clearly answers the legal question. This analytical framework demonstrates legal thinking valued in law school and legal practice.
+                                        <h3 class="mb-1 text-base font-bold text-slate-900 dark:text-white">IRAC Method Expertise</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                            We structure legal analyses using the IRAC framework (Issue, Rule, Application, Conclusion) that is fundamental to legal reasoning and writing. Application systematically applies legal rules to the specific facts with analogical reasoning to precedent cases, and Conclusion clearly answers the legal question.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">📖</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">📖</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Perfect Bluebook Citations</h3>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            All legal citations follow Bluebook format (The Bluebook: A Uniform System of Citation) or alternative citation systems like ALWD Guide to Legal Citation as specified by your law school. We ensure accurate citation of cases (proper case name format, reporter citation, court, year), statutes (code abbreviation, section, year), constitutional provisions, law review articles, books, and other legal authorities. Citations are correctly formatted for textual sentences, citation sentences, and string citations. Proper citation demonstrates legal research competence and academic integrity.
+                                        <h3 class="mb-1 text-base font-bold text-slate-900 dark:text-white">Perfect Bluebook Citations</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                            All legal citations follow Bluebook format or alternative systems like ALWD as specified by your law school. We ensure accurate citation of cases, statutes, constitutional provisions, and other legal authorities — properly formatted for textual, citation, and string citations.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-8 bg-gray-50 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Our Law Assignment Success Record</h3>
-                            <div class="grid md:grid-cols-4 gap-4 text-center">
+                        <div class="mt-6 rounded-xl bg-slate-50 p-5 dark:bg-slate-900">
+                            <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">Our Law Assignment Success Record</h3>
+                            <div class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
                                 <div>
-                                    <div class="text-3xl font-bold text-blue-600 mb-2">4500+</div>
-                                    <p class="text-sm text-gray-700">Law Assignments Completed</p>
+                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4500+</div>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Law Assignments Completed</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">97%</div>
-                                    <p class="text-sm text-gray-700">Student Satisfaction Rate</p>
+                                    <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">97%</div>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Student Satisfaction Rate</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
-                                    <p class="text-sm text-gray-700">Legal Experts</p>
+                                    <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">50+</div>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Legal Experts</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-orange-600 mb-2">All</div>
-                                    <p class="text-sm text-gray-700">Legal Areas Covered</p>
+                                    <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">All</div>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Legal Areas Covered</p>
                                 </div>
                             </div>
                         </div>

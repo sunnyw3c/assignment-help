@@ -38,24 +38,24 @@
 
     <!-- What We Offer Section -->
     @if ($details && $details->what_we_offer && count($details->what_we_offer) > 0)
-        <section class="py-20 bg-gray-50 dark:bg-slate-950 transition-colors duration-300">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-6">What We Offer</h2>
-                    <p class="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">Comprehensive {{ strtolower($service->name) }}
+        <section class="bg-slate-50 py-14 transition-colors duration-300 sm:py-16 dark:bg-slate-950">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">What We Offer</h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Comprehensive {{ strtolower($service->name) }}
                         services tailored to your academic needs</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="mx-auto grid max-w-6xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     @foreach ($details->what_we_offer as $offer)
                         <div
-                            class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-slate-800">
-                            <div class="flex items-start space-x-3">
+                            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                            <div class="flex items-start gap-3">
                                 <div
-                                    class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <span class="text-blue-600 dark:text-blue-400 text-sm font-bold">✓</span>
+                                    class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-950/40">
+                                    <span class="text-sm font-bold text-blue-600 dark:text-blue-400">✓</span>
                                 </div>
-                                <div class="text-gray-700 dark:text-slate-300 font-medium">{{ $offer }}</div>
+                                <div class="text-sm font-medium text-slate-700 dark:text-slate-300">{{ $offer }}</div>
                             </div>
                         </div>
                     @endforeach
@@ -68,29 +68,29 @@
     @yield('custom-content')
 
     <!-- Final CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-8">Ready to Get Started with {{ $service->name }}?</h2>
-            <p class="text-xl mb-12 max-w-3xl mx-auto">
-                Get matched with an expert academic writer who understands your subject and requirements.
-            </p>
+    <section class="bg-blue-600 py-14 text-white sm:py-16">
+        <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to Get Started with {{ $service->name }}?</h2>
+                <p class="mt-4 text-base leading-relaxed text-blue-100 sm:text-lg">
+                    Get matched with an expert academic writer who understands your subject and requirements.
+                </p>
 
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="{{ route('order', ['assignment_service' => $service->id]) }}"
-                    class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 dark:bg-slate-900 dark:text-blue-400 dark:hover:bg-slate-800 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl border border-transparent dark:border-slate-800">
-                    <span class="mr-4 text-3xl">📝</span>
-                    Order Now
-                    <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-                <a href="{{ route('services.index') }}"
-                    class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 rounded-2xl font-black text-xl transition-all duration-300">
-                    <span class="mr-4 text-3xl">📚</span>
-                    View All Services
-                </a>
+                <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="{{ route('order', ['assignment_service' => $service->id]) }}"
+                        class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm transition-colors hover:bg-slate-100 dark:bg-slate-900 dark:text-blue-400 dark:hover:bg-slate-800">
+                        Order Now
+                        <svg class="h-4 w-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="{{ route('services.index') }}"
+                        class="inline-flex items-center justify-center gap-2 rounded-xl border border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-blue-600">
+                        View All Services
+                    </a>
+                </div>
             </div>
         </div>
     </section>

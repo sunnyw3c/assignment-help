@@ -53,262 +53,228 @@
     />
 
     <!-- Budget Calculator Section -->
-    <section class="py-20" style="background: #0f0f1e;">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-3" style="color: #ffffff;">Calculate Your Assignment Cost</h2>
-                <p class="text-lg" style="color: #6b7a99;">Get an instant price estimate — no signup required</p>
+    <section class="bg-slate-900 py-14 sm:py-16 dark:bg-slate-950">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Calculate Your Assignment Cost</h2>
+                <p class="mt-3 text-sm text-slate-400 sm:text-base">Get an instant price estimate — no signup required</p>
             </div>
-            <div class="max-w-sm mx-auto">
+            <div class="mx-auto max-w-sm">
                 <livewire:budget-calculator />
             </div>
         </div>
     </section>
 
     <!-- Assignment Search Filter Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <livewire:assignment-search-filter />
         </div>
     </section>
 
     <!-- Assignment Services Showcase -->
-    <section id="services" class="py-24 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 relative overflow-hidden" role="main" aria-labelledby="services-heading">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/20 to-purple-50/20"></div>
-        <div class="absolute top-20 right-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
-
-        <div class="container mx-auto px-4 relative z-10">
+    <section id="services" class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" role="main" aria-labelledby="services-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
-                    <span class="mr-2">📚</span>
-                    ASSIGNMENT HELP SERVICES
-                </div>
-                <h2 id="services-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    Professional Academic <br>
-                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Writing & Assignment Help</span>
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Assignment Help Services</p>
+                <h2 id="services-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Professional Academic <span class="text-blue-600 dark:text-blue-400">Writing &amp; Assignment Help</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
                     Not every assignment is the same — and neither is our assignment help service. Browse below and find the right academic assistance for your subject, your level, and your deadline.
                 </p>
             </div>
 
             <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
                 @foreach($services as $service)
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-blue-500 to-purple-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-3xl">{{ $service->icon }}</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white leading-tight">{{ $service->name }}</h3>
-                                        <p class="text-blue-100 text-sm">{{ $service->turnaround }}</p>
-                                    </div>
+                <article class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <!-- Header -->
+                    <div class="bg-blue-600 p-6">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                                    <span class="text-xl">{{ $service->icon }}</span>
                                 </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">{{ $service->formatted_price }}</span>
+                                <div>
+                                    <h3 class="text-base font-bold leading-tight text-white">{{ $service->name }}</h3>
+                                    <p class="text-xs text-blue-100">{{ $service->turnaround }}</p>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between text-white/90 text-sm">
-                                <div class="flex items-center">
-                                    <span class="mr-2">⭐</span>
-                                    <span>{{ $service->rating }}/5 Rating</span>
-                                </div>
-                                <div class="text-blue-100">
-                                    {{ $service->orders_completed }}+ completed
-                                </div>
+                            <div class="shrink-0 rounded-full bg-white/20 px-2.5 py-1">
+                                <span class="text-xs font-semibold text-white">{{ $service->formatted_price }}</span>
                             </div>
                         </div>
-
-                        <!-- Content -->
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-6 leading-relaxed">{{ $service->short_description }}</p>
-
-                            @if($service->features)
-                            <div class="mb-8">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-4">What We Offer:</h4>
-                                <div class="grid grid-cols-2 gap-3">
-                                    @foreach($service->features as $feature)
-                                    <div class="flex items-center text-gray-700">
-                                        <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                            <span class="text-green-600 text-xs">✓</span>
-                                        </span>
-                                        <span class="text-sm">{{ $feature }}</span>
-                                    </div>
-                                    @endforeach
-                                </div>
+                        <div class="flex items-center justify-between text-xs text-white/90">
+                            <div class="flex items-center gap-1.5">
+                                <span>⭐</span>
+                                <span>{{ $service->rating }}/5 Rating</span>
                             </div>
-                            @endif
-
-                            @if($service->academic_levels && count($service->academic_levels) > 0)
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-700 mb-3">Academic Levels:</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    @foreach(array_slice($service->academic_levels, 0, 3) as $level)
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">{{ $level }}</span>
-                                    @endforeach
-                                    @if(count($service->academic_levels) > 3)
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">+{{ count($service->academic_levels) - 3 }} more</span>
-                                    @endif
-                                </div>
-                            </div>
-                            @endif
-
-                            <div class="flex gap-3">
-                                <a href="{{ route('services.assignment.show', $service->slug) }}" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group/learn">
-                                    Learn More
-                                    <svg class="ml-2 w-4 h-4 group-hover/learn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
-                                <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="group/btn flex-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                    <span class="mr-2">📝</span>
-                                    Order Now
-                                    <svg class="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                                </a>
+                            <div class="text-blue-100">
+                                {{ $service->orders_completed }}+ completed
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Content -->
+                    <div class="flex flex-1 flex-col p-6">
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{{ $service->short_description }}</p>
+
+                        @if($service->features)
+                        <div class="mb-4">
+                            <h4 class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">What We Offer</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                @foreach($service->features as $feature)
+                                <div class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                                    <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/40">
+                                        <span class="text-[10px] text-emerald-600 dark:text-emerald-400">✓</span>
+                                    </span>
+                                    <span class="text-xs">{{ $feature }}</span>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+
+                        @if($service->academic_levels && count($service->academic_levels) > 0)
+                        <div class="mb-5">
+                            <h4 class="mb-2 text-xs font-semibold text-slate-500 dark:text-slate-400">Academic Levels</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                @foreach(array_slice($service->academic_levels, 0, 3) as $level)
+                                <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-semibold text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">{{ $level }}</span>
+                                @endforeach
+                                @if(count($service->academic_levels) > 3)
+                                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-400">+{{ count($service->academic_levels) - 3 }} more</span>
+                                @endif
+                            </div>
+                        </div>
+                        @endif
+
+                        <div class="mt-auto flex gap-3">
+                            <a href="{{ route('services.assignment.show', $service->slug) }}" class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400">
+                                Learn More
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                                Order Now
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
                 @endforeach
             </div>
         </div>
     </section>
 
     <!-- Why Choose Our Services -->
-    <section class="py-24 bg-white relative overflow-hidden" aria-labelledby="why-choose-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="mr-3 text-xl">⭐</span>
-                    WHY CHOOSE OUR ASSIGNMENT HELP
-                </div>
-
-                <h2 id="why-choose-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    What Makes Our Assignment Help
-                    <br>
-                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Worth Choosing</span>
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="why-choose-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why Choose Our Assignment Help</p>
+                <h2 id="why-choose-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    What Makes Our Assignment Help <span class="text-emerald-600 dark:text-emerald-400">Worth Choosing</span>
                 </h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
-                    <div class="text-5xl mb-6">🎓</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Writers</h3>
-                    <p class="text-gray-600 leading-relaxed">Every writer on our team holds at least a Master's degree in their subject area. They've been through the academic grind themselves — they know what professors look for and how to deliver it.</p>
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-xl dark:bg-blue-950/40">🎓</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Expert Writers</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every writer on our team holds at least a Master's degree in their subject area. They've been through the academic grind themselves — they know what professors look for and how to deliver it.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100">
-                    <div class="text-5xl mb-6">✅</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Plagiarism-Free</h3>
-                    <p class="text-gray-600 leading-relaxed">We start from scratch every time. Your assignment goes through plagiarism detection before it reaches you, so you're getting work that's 100% original and properly cited — no exceptions.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-xl dark:bg-purple-950/40">✅</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Plagiarism-Free</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We start from scratch every time. Your assignment goes through plagiarism detection before it reaches you, so you're getting work that's 100% original and properly cited — no exceptions.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-green-100">
-                    <div class="text-5xl mb-6">⏰</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">On-Time Delivery</h3>
-                    <p class="text-gray-600 leading-relaxed">Deadlines are non-negotiable — we get that. Our writers work to your timeline so you're never left refreshing your inbox and hoping the work shows up in time.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-xl dark:bg-emerald-950/40">⏰</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">On-Time Delivery</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Deadlines are non-negotiable — we get that. Our writers work to your timeline so you're never left refreshing your inbox and hoping the work shows up in time.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
-                    <div class="text-5xl mb-6">🔄</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Free Revisions</h3>
-                    <p class="text-gray-600 leading-relaxed">Not quite what you had in mind? We'll fix it. Unlimited free revisions means you don't pay a cent more until the work is exactly right.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-50 text-xl dark:bg-amber-950/40">🔄</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Free Revisions</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Not quite what you had in mind? We'll fix it. Unlimited free revisions means you don't pay a cent more until the work is exactly right.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-cyan-100">
-                    <div class="text-5xl mb-6">🔒</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Confidential & Secure</h3>
-                    <p class="text-gray-600 leading-relaxed">Your order details, your identity, your payment — all of it stays private. We use encrypted transactions and never share your information with anyone, period.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-50 text-xl dark:bg-cyan-950/40">🔒</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Confidential &amp; Secure</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Your order details, your identity, your payment — all of it stays private. We use encrypted transactions and never share your information with anyone, period.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-indigo-100">
-                    <div class="text-5xl mb-6">💰</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Affordable Pricing</h3>
-                    <p class="text-gray-600 leading-relaxed">We price for students, not corporations. Our rates are competitive, we offer flexible payment options, and we run regular discounts so quality assignment help stays actually affordable.</p>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-50 text-xl dark:bg-indigo-950/40">💰</div>
+                    <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Affordable Pricing</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We price for students, not corporations. Our rates are competitive, we offer flexible payment options, and we run regular discounts so quality assignment help stays actually affordable.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 relative overflow-hidden" aria-labelledby="process-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="mr-3 text-xl">⚡</span>
-                    HOW IT WORKS
-                </div>
-
-                <h2 id="process-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Getting Assignment Help Is
-                    <br>
-                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Easier Than You Think</span>
+    <section class="bg-slate-900 py-14 sm:py-16" aria-labelledby="process-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-indigo-400">How It Works</p>
+                <h2 id="process-heading" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Getting Assignment Help Is <span class="text-indigo-400">Easier Than You Think</span>
                 </h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-3xl text-white font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Submit Your Assignment</h3>
-                    <p class="text-gray-600 leading-relaxed">Fill out our quick order form with your subject, requirements, deadline, and any notes from your professor. It takes under five minutes.</p>
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-2xl border border-white/10 bg-slate-800/60 p-6">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500/20 text-lg font-bold text-white">1</div>
+                    <h3 class="mb-2 text-lg font-bold text-white">Submit Your Assignment</h3>
+                    <p class="text-sm leading-relaxed text-slate-400">Fill out our quick order form with your subject, requirements, deadline, and any notes from your professor. It takes under five minutes.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-3xl text-white font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Match</h3>
-                    <p class="text-gray-600 leading-relaxed">We pair you with an assignment helper who genuinely knows your subject — someone with the right academic background for your field and level, not just whoever's available.</p>
+                <div class="rounded-2xl border border-white/10 bg-slate-800/60 p-6">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-500/20 text-lg font-bold text-white">2</div>
+                    <h3 class="mb-2 text-lg font-bold text-white">Expert Match</h3>
+                    <p class="text-sm leading-relaxed text-slate-400">We pair you with an assignment helper who genuinely knows your subject — someone with the right academic background for your field and level, not just whoever's available.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-3xl text-white font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Writing & Review</h3>
-                    <p class="text-gray-600 leading-relaxed">Your writer researches, writes, and cites everything correctly. Before it reaches you, it passes through our quality check and plagiarism scan — so what you get is solid.</p>
+                <div class="rounded-2xl border border-white/10 bg-slate-800/60 p-6">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/20 text-lg font-bold text-white">3</div>
+                    <h3 class="mb-2 text-lg font-bold text-white">Writing &amp; Review</h3>
+                    <p class="text-sm leading-relaxed text-slate-400">Your writer researches, writes, and cites everything correctly. Before it reaches you, it passes through our quality check and plagiarism scan — so what you get is solid.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="text-3xl text-white font-bold">4</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Delivery & Support</h3>
-                    <p class="text-gray-600 leading-relaxed">Your finished assignment lands in your inbox before the deadline. Need adjustments? Our team is available 24/7 and unlimited free revisions are always included.</p>
+                <div class="rounded-2xl border border-white/10 bg-slate-800/60 p-6">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/20 text-lg font-bold text-white">4</div>
+                    <h3 class="mb-2 text-lg font-bold text-white">Delivery &amp; Support</h3>
+                    <p class="text-sm leading-relaxed text-slate-400">Your finished assignment lands in your inbox before the deadline. Need adjustments? Our team is available 24/7 and unlimited free revisions are always included.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+    <section class="bg-blue-600 py-14 sm:py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Ready to Ace Your Assignments?
                 </h2>
-                <p class="text-xl text-blue-100 mb-12 leading-relaxed">
+                <p class="mt-4 text-base leading-relaxed text-blue-100 sm:text-lg">
                     Thousands of students have used our assignment help online and hit their deadlines with confidence. You're next — let's get yours sorted.
                 </p>
                 <a href="{{ route('order') }}"
-                   class="group inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    <span class="mr-4 text-3xl">📝</span>
+                   class="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm transition-colors hover:bg-slate-100">
                     Order Assignment Help Now
-                    <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
             </div>
@@ -316,113 +282,90 @@
     </section>
 
     <!-- Comprehensive Assignment Services Information -->
-    <section class="py-24 bg-white relative overflow-hidden" aria-labelledby="comprehensive-info-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-6xl mx-auto">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <div class="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                        <span class="mr-3 text-xl">📚</span>
-                        COMPREHENSIVE ACADEMIC SUPPORT
-                    </div>
-                    <h2 id="comprehensive-info-heading" class="text-4xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">
-                        Straight Answers About Our
-                        <br>
-                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Assignment Help Services</span>
-                    </h2>
-                </div>
+    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="comprehensive-info-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Comprehensive Academic Support</p>
+                <h2 id="comprehensive-info-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Straight Answers About Our <span class="text-blue-600 dark:text-blue-400">Assignment Help Services</span>
+                </h2>
+            </div>
 
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Left Column -->
-                    <div class="space-y-8">
-                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-lg">🎯</span>
-                                </span>
-                                Our Academic Expertise
-                            </h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                As a trusted assignment help provider, we work only with real academics — most hold Master's or PhD degrees from recognized universities, with hands-on experience in research, teaching, and academic writing. They understand citation formats, academic standards, and what it actually takes to produce work that holds up.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Whatever your level — high school, undergrad, grad, or doctoral — and whatever your subject, we have someone who genuinely knows the field. Business, Engineering, Medicine, Law, Social Sciences, STEM: our team covers it all, and we match you based on fit, not just availability.
-                            </p>
-                        </div>
-
-                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-lg">⚡</span>
-                                </span>
-                                Quality Assurance Process
-                            </h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                Before anything leaves our hands, it goes through a thorough review. Writers pull from credible, peer-reviewed sources and follow your required citation format — APA, MLA, Chicago, Harvard, whatever your institution uses. No shortcuts.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Then our QA team checks it: grammar, structure, flow, and plagiarism detection. What you receive is properly formatted, academically sound work — not just something that looks good on the surface, but a piece that can genuinely hold up.
-                            </p>
-                        </div>
+            <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
+                <!-- Left Column -->
+                <div class="space-y-5">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-2 flex items-center gap-3 text-base font-bold text-slate-900 dark:text-white">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">🎯</span>
+                            Our Academic Expertise
+                        </h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            As a trusted assignment help provider, we work only with real academics — most hold Master's or PhD degrees from recognized universities, with hands-on experience in research, teaching, and academic writing. They understand citation formats, academic standards, and what it actually takes to produce work that holds up.
+                            Whatever your level — high school, undergrad, grad, or doctoral — and whatever your subject, we have someone who genuinely knows the field. Business, Engineering, Medicine, Law, Social Sciences, STEM: our team covers it all, and we match you based on fit, not just availability.
+                        </p>
                     </div>
 
-                    <!-- Right Column -->
-                    <div class="space-y-8">
-                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-lg">🚀</span>
-                                </span>
-                                Subject Coverage
-                            </h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                Struggling with an English essay? Behind on a psychology research paper? Need help with a math problem set or a computer science assignment? We have subject matter experts across every major discipline — ready to take it on without you having to explain the basics.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Essays, research papers, term papers, dissertations, theses, case studies, lab reports, literature reviews, annotated bibliographies, presentations, homework — if your professor assigned it, we can help. We work to your format, your word count, and your rubric.
-                            </p>
-                        </div>
-
-                        <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-lg">📋</span>
-                                </span>
-                                Student Success Support
-                            </h3>
-                            <p class="text-gray-700 leading-relaxed mb-6">
-                                We don't just hand over a finished file and disappear. Each assignment comes with references you can actually use and learn from. If anything's unclear or doesn't match what you expected, you ask — we respond.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                Our support team is available around the clock — for updates, revision requests, or just peace of mind that your order is on track. Unlimited free revisions are always included, so we keep going until the work is exactly what you need.
-                            </p>
-                        </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-2 flex items-center gap-3 text-base font-bold text-slate-900 dark:text-white">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-600 text-white">⚡</span>
+                            Quality Assurance Process
+                        </h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Before anything leaves our hands, it goes through a thorough review. Writers pull from credible, peer-reviewed sources and follow your required citation format — APA, MLA, Chicago, Harvard, whatever your institution uses. No shortcuts.
+                            Then our QA team checks it: grammar, structure, flow, and plagiarism detection. What you receive is properly formatted, academically sound work — not just something that looks good on the surface, but a piece that can genuinely hold up.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Bottom Statistics Section -->
-                <div class="mt-12 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
-                    <div class="text-center mb-12">
-                        <h3 class="text-3xl font-bold mb-4">Trusted by Students Worldwide</h3>
-                        <p class="text-gray-300 text-lg">Real students, real deadlines, real results — the numbers speak for themselves.</p>
+                <!-- Right Column -->
+                <div class="space-y-5">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-2 flex items-center gap-3 text-base font-bold text-slate-900 dark:text-white">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-purple-600 text-white">🚀</span>
+                            Subject Coverage
+                        </h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Struggling with an English essay? Behind on a psychology research paper? Need help with a math problem set or a computer science assignment? We have subject matter experts across every major discipline — ready to take it on without you having to explain the basics.
+                            Essays, research papers, term papers, dissertations, theses, case studies, lab reports, literature reviews, annotated bibliographies, presentations, homework — if your professor assigned it, we can help. We work to your format, your word count, and your rubric.
+                        </p>
                     </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div class="text-4xl font-black text-blue-400 mb-2">{{ $services->sum('orders_completed') }}+</div>
-                            <div class="text-gray-300">Assignments Completed</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-black text-green-400 mb-2">{{ count($services) }}+</div>
-                            <div class="text-gray-300">Service Types</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-black text-purple-400 mb-2">4.8★</div>
-                            <div class="text-gray-300">Average Rating</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-black text-orange-400 mb-2">24/7</div>
-                            <div class="text-gray-300">Expert Support</div>
-                        </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-2 flex items-center gap-3 text-base font-bold text-slate-900 dark:text-white">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-500 text-white">📋</span>
+                            Student Success Support
+                        </h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            We don't just hand over a finished file and disappear. Each assignment comes with references you can actually use and learn from. If anything's unclear or doesn't match what you expected, you ask — we respond.
+                            Our support team is available around the clock — for updates, revision requests, or just peace of mind that your order is on track. Unlimited free revisions are always included, so we keep going until the work is exactly what you need.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Statistics Section -->
+            <div class="mt-8 rounded-2xl bg-slate-900 p-8 sm:p-10 dark:border dark:border-slate-800 dark:bg-slate-950">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h3 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Trusted by Students Worldwide</h3>
+                    <p class="mt-2 text-sm text-slate-400">Real students, real deadlines, real results — the numbers speak for themselves.</p>
+                </div>
+                <div class="mt-7 grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+                    <div>
+                        <div class="text-2xl font-bold text-white">{{ $services->sum('orders_completed') }}+</div>
+                        <div class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Assignments Completed</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">{{ count($services) }}+</div>
+                        <div class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Service Types</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">4.8★</div>
+                        <div class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Rating</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">24/7</div>
+                        <div class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Expert Support</div>
                     </div>
                 </div>
             </div>
