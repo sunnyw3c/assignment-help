@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Admin\AuthController;
+use App\Http\Controllers\Api\Admin\MailController;
 use App\Http\Controllers\Api\Admin\MessageController;
 use App\Http\Controllers\Api\Admin\OrderController;
 use App\Http\Controllers\Api\Admin\StatsController;
@@ -48,6 +49,9 @@ Route::prefix('admin')->group(function () {
         Route::middleware('role:admin,manager')->group(function () {
             Route::post('/writers', [UserController::class, 'storeWriter']);
             Route::post('/writers/{user}', [UserController::class, 'updateWriter']);
+
+            // Mail
+            Route::post('/mail/send', [MailController::class, 'send']);
         });
 
         // Messages

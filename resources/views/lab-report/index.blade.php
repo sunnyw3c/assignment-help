@@ -23,22 +23,21 @@
 
 @section('custom-content')
     <!-- Comprehensive Lab Report Content Section -->
-    <section class="py-20 bg-white" itemscope itemtype="https://schema.org/Service">
-        <div class="container mx-auto px-4">
+    <section class="py-14 sm:py-16 bg-white" itemscope itemtype="https://schema.org/Service">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-black text-gray-900 mb-6" itemprop="name">Professional Lab Report Writing
+                <div class="text-center mb-10 sm:mb-12">
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4" itemprop="name">Professional Lab Report Writing
                         Service</h1>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" itemprop="description">
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto" itemprop="description">
                         Expert lab report writing for all science courses. Professional methodology, accurate data analysis,
                         publication-quality graphs and tables, and proper scientific formatting.
                     </p>
                 </div>
 
-                <div class="prose prose-lg max-w-none">
-                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <div class="max-w-none">
+                    <div class="rounded-2xl bg-slate-50 p-6 mb-6 border border-slate-200">
+                        <p class="text-sm leading-relaxed text-slate-600 mb-4 max-w-3xl">
                             Laboratory reports represent a fundamental component of scientific education, requiring students
                             to document experimental procedures, present data systematically, analyze results critically,
                             and draw evidence-based conclusions that demonstrate understanding of scientific principles and
@@ -51,7 +50,7 @@
                             standards across all science disciplines.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-sm leading-relaxed text-slate-600 max-w-3xl">
                             Our team consists of qualified science specialists holding advanced degrees in chemistry,
                             physics, biology, biochemistry, engineering, environmental science, and related fields who have
                             extensive laboratory experience and deep understanding of scientific methodology. We provide
@@ -66,20 +65,19 @@
                     </div>
 
                     <!-- Trust & Guarantees Section -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border-2 border-green-200 shadow-lg">
-                        <div class="text-center mb-8">
-                            <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Scientific Excellence Guarantees</h2>
-                            <p class="text-lg text-gray-600">Your laboratory success is our commitment</p>
+                    <div class="bg-white rounded-2xl p-6 mb-6 border border-slate-200 shadow-sm">
+                        <div class="text-center mb-10 sm:mb-12">
+                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-2">Our Scientific Excellence Guarantees</h2>
+                            <p class="text-sm text-slate-600">Your laboratory success is our commitment</p>
                         </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div
-                                class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">🔬</div>
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🔬</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Science Specialists</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Expert Science Specialists</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             Your lab report will be written by a science specialist with an advanced degree
                                             in your specific field (chemistry, physics, biology, etc.) who has hands-on
                                             laboratory experience. All our scientists understand experimental protocols,
@@ -90,12 +88,12 @@
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">📊</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">📊</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Data Presentation</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Professional Data Presentation</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             We create publication-quality tables and graphs using Excel, Origin, GraphPad
                                             Prism, or specialized scientific software. All data visualizations include
                                             proper titles, axis labels, units, legends, error bars, trendlines, and
@@ -106,13 +104,12 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">✅</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">✅</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Accurate Scientific Analysis</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Accurate Scientific Analysis</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             Every lab report includes accurate calculations, proper unit conversions,
                                             significant figure handling, error propagation analysis, and appropriate
                                             statistical tests when required. We ensure all mathematical operations are
@@ -123,13 +120,12 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">📝</div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white text-xl">📝</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Proper Scientific Format</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Proper Scientific Format</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             All reports follow standard scientific format with clearly defined sections,
                                             appropriate tense usage (past tense for methods/results, present for
                                             discussion), third-person perspective, passive voice where appropriate, proper
@@ -141,36 +137,36 @@
                             </div>
                         </div>
 
-                        <div class="mt-8 bg-gray-50 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Our Lab Report Success Record</h3>
+                        <div class="mt-6 rounded-2xl bg-slate-900 p-6 sm:p-8">
+                            <h3 class="text-base font-bold text-white mb-4 text-center">Our Lab Report Success Record</h3>
                             <div class="grid md:grid-cols-4 gap-4 text-center">
                                 <div>
-                                    <div class="text-3xl font-bold text-blue-600 mb-2">3000+</div>
-                                    <p class="text-sm text-gray-700">Lab Reports Completed</p>
+                                    <p class="text-2xl font-bold text-white">3000+</p>
+                                    <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Lab Reports Completed</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">98%</div>
-                                    <p class="text-sm text-gray-700">Student Satisfaction Rate</p>
+                                    <p class="text-2xl font-bold text-white">98%</p>
+                                    <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Student Satisfaction Rate</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-purple-600 mb-2">120+</div>
-                                    <p class="text-sm text-gray-700">Science Specialists</p>
+                                    <p class="text-2xl font-bold text-white">120+</p>
+                                    <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Science Specialists</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-orange-600 mb-2">✓</div>
-                                    <p class="text-sm text-gray-700">Rigorous Scientific Writing</p>
+                                    <p class="text-2xl font-bold text-white">✓</p>
+                                    <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Rigorous Scientific Writing</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="text-3xl mr-3">🧪</span>
+                    <div class="grid md:grid-cols-2 gap-5 mb-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                            <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-xl">🧪</span>
                                 Comprehensive Data Analysis
                             </h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
+                            <p class="text-sm leading-relaxed text-slate-600 mb-3">
                                 Our science specialists provide thorough data analysis tailored to your experimental type
                                 and scientific discipline. For quantitative experiments, we perform all necessary
                                 calculations including mean, standard deviation, standard error, percent error, percent
@@ -179,7 +175,7 @@
                                 appropriate significant figures throughout all calculations, and show all mathematical work
                                 clearly so you can understand the analytical process.
                             </p>
-                            <p class="text-gray-700 leading-relaxed">
+                            <p class="text-sm leading-relaxed text-slate-600">
                                 For experiments requiring statistical analysis, we conduct appropriate tests including
                                 t-tests, ANOVA, chi-square tests, regression analysis, and correlation studies using Excel,
                                 R, or statistical software. We calculate and report confidence intervals, p-values, and
@@ -191,12 +187,12 @@
                             </p>
                         </div>
 
-                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="text-3xl mr-3">📈</span>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                            <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-xl">📈</span>
                                 Publication-Quality Visualizations
                             </h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
+                            <p class="text-sm leading-relaxed text-slate-600 mb-3">
                                 Professional scientific visualization is crucial for effective data presentation in
                                 laboratory reports. We create high-quality graphs and charts using industry-standard
                                 software including Microsoft Excel, Origin, GraphPad Prism, MATLAB, or specialized
@@ -205,7 +201,7 @@
                                 units, descriptive titles, appropriate scale ranges, professional color schemes, and legends
                                 when multiple data series are presented.
                             </p>
-                            <p class="text-gray-700 leading-relaxed">
+                            <p class="text-sm leading-relaxed text-slate-600">
                                 Data tables are professionally formatted with proper column headers, units specified,
                                 appropriate decimal places and significant figures, clear organization of experimental
                                 trials or conditions, and descriptive captions. We include error values (standard deviation,
@@ -219,14 +215,14 @@
                     </div>
 
                     <!-- Science Disciplines Covered -->
-                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                    <div class="rounded-2xl bg-slate-50 p-6 mb-6 border border-slate-200">
+                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-8 text-center">
                             Scientific Disciplines We Cover
                         </h2>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">General Chemistry Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">General Chemistry Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Titrations, stoichiometry experiments, equilibrium studies, thermochemistry, redox
                                     reactions, qualitative analysis, gas laws, colligative properties, spectroscopy,
                                     synthesis reactions, and analytical chemistry procedures with proper chemical equations
@@ -234,9 +230,9 @@
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Organic Chemistry Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Organic Chemistry Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Synthesis experiments, purification techniques (recrystallization, distillation,
                                     extraction), characterization methods (melting point, IR, NMR, mass spectrometry),
                                     reaction mechanisms, percent yield calculations, and spectroscopic analysis with proper
@@ -244,9 +240,9 @@
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Physics Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Physics Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Mechanics experiments (motion, forces, energy, momentum), electricity and magnetism
                                     studies, optics experiments (lenses, diffraction, interference), thermodynamics, wave
                                     phenomena, modern physics topics, with proper formula derivation and uncertainty
@@ -254,27 +250,27 @@
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Biology Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Biology Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Microbiology experiments, enzyme kinetics, DNA extraction and analysis, microscopy
                                     studies, cellular respiration, photosynthesis, genetics experiments, ecology field
                                     studies, dissections, and physiological measurements with proper biological terminology.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Biochemistry Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Biochemistry Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Protein purification and characterization, enzyme assays (Michaelis-Menten kinetics),
                                     electrophoresis (SDS-PAGE, gel electrophoresis), spectrophotometry, chromatography
                                     techniques (HPLC, GC), Western blotting, and metabolic pathway studies.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Environmental Science Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Environmental Science Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Water quality testing, soil analysis, air pollution monitoring, ecological sampling
                                     methods, environmental chemistry experiments, biodiversity assessments, and
                                     sustainability studies with appropriate environmental parameters and field data
@@ -282,9 +278,9 @@
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Engineering Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Engineering Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Materials testing (tensile strength, hardness), circuit analysis, fluid dynamics
                                     experiments, heat transfer studies, structural analysis, electronics projects, control
                                     systems, and design verification with engineering calculations and technical
@@ -292,27 +288,27 @@
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Anatomy & Physiology Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Anatomy & Physiology Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Human anatomy studies, physiological measurements (heart rate, blood pressure,
                                     respiratory function), muscle physiology, nervous system experiments, sensory system
                                     studies, and dissection observations with proper anatomical terminology.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Geology & Earth Science Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Geology & Earth Science Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Mineral and rock identification, soil composition analysis, geological mapping, fossil
                                     analysis, plate tectonics studies, weathering experiments, and geological time scale
                                     investigations with proper geological terminology and classification.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Computer Science Lab Reports</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Computer Science Lab Reports</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Algorithm analysis, programming experiments, database design projects, network
                                     configuration studies, software testing reports, performance benchmarking, and
                                     computational experiments with code documentation and output analysis.
@@ -322,73 +318,73 @@
                     </div>
 
                     <!-- Lab Report Structure -->
-                    <div class="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-8 mb-8 border border-gray-200">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Standard Lab Report Sections We Write
+                    <div class="rounded-2xl bg-white p-6 mb-6 border border-slate-200">
+                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-2 text-center">Standard Lab Report Sections We Write
                         </h2>
-                        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+                        <p class="text-center text-sm text-slate-600 mb-10 sm:mb-12 max-w-2xl mx-auto">
                             Comprehensive coverage of all scientific report components
                         </p>
 
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📋</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Title & Abstract</h4>
-                                <p class="text-xs text-gray-600">Descriptive title, concise abstract summarizing purpose,
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">📋</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Title & Abstract</h4>
+                                <p class="text-xs text-slate-500">Descriptive title, concise abstract summarizing purpose,
                                     methods, results, conclusions</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">🎯</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Introduction</h4>
-                                <p class="text-xs text-gray-600">Background theory, objectives, hypothesis, experimental
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">🎯</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Introduction</h4>
+                                <p class="text-xs text-slate-500">Background theory, objectives, hypothesis, experimental
                                     rationale, relevant citations</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">🔧</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Materials & Methods</h4>
-                                <p class="text-xs text-gray-600">Equipment list, reagents, detailed procedure, experimental
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">🔧</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Materials & Methods</h4>
+                                <p class="text-xs text-slate-500">Equipment list, reagents, detailed procedure, experimental
                                     design, safety considerations</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📊</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Results</h4>
-                                <p class="text-xs text-gray-600">Data tables, graphs, observations, calculations,
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">📊</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Results</h4>
+                                <p class="text-xs text-slate-500">Data tables, graphs, observations, calculations,
                                     statistical analysis without interpretation</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">💡</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Discussion</h4>
-                                <p class="text-xs text-gray-600">Result interpretation, theory connection, error analysis,
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">💡</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Discussion</h4>
+                                <p class="text-xs text-slate-500">Result interpretation, theory connection, error analysis,
                                     comparison with literature</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">✅</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Conclusion</h4>
-                                <p class="text-xs text-gray-600">Summary of findings, hypothesis evaluation, experimental
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">✅</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Conclusion</h4>
+                                <p class="text-xs text-slate-500">Summary of findings, hypothesis evaluation, experimental
                                     significance, future directions</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📚</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">References</h4>
-                                <p class="text-xs text-gray-600">Properly cited sources in APA, CSE, ACS, or other
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">📚</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">References</h4>
+                                <p class="text-xs text-slate-500">Properly cited sources in APA, CSE, ACS, or other
                                     scientific citation formats</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📎</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Appendices</h4>
-                                <p class="text-xs text-gray-600">Raw data, sample calculations, additional graphs,
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                <div class="text-xl mb-2">📎</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Appendices</h4>
+                                <p class="text-xs text-slate-500">Raw data, sample calculations, additional graphs,
                                     equipment specifications</p>
                             </div>
                         </div>
 
-                        <div class="mt-8 bg-white rounded-xl p-6 border-l-4 border-blue-600">
-                            <p class="text-gray-700 leading-relaxed">
+                        <div class="mt-6 rounded-2xl bg-slate-50 p-6 border-l-4 border-blue-600">
+                            <p class="text-sm leading-relaxed text-slate-600">
                                 <strong>Scientific Writing Excellence:</strong> Every section is written with appropriate
                                 scientific terminology, proper tense (past for methods/results, present for
                                 discussion/introduction), third-person perspective, clear and concise language, logical flow
@@ -400,52 +396,52 @@
                     </div>
 
                     <!-- Transparent Pricing -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Lab Report Service Pricing</h2>
-                        <p class="text-center text-gray-600 mb-8">Affordable rates for scientific laboratory reports</p>
+                    <div class="rounded-2xl bg-white p-6 mb-6 border border-slate-200 shadow-sm">
+                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-2 text-center">Lab Report Service Pricing</h2>
+                        <p class="text-center text-sm text-slate-600 mb-8">Affordable rates for scientific laboratory reports</p>
 
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
-                                    <tr class="bg-gray-100">
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">Academic Level
+                                    <tr class="bg-slate-100">
+                                        <th class="p-3 border-b-2 border-slate-300 font-bold text-sm text-slate-900">Academic Level
                                         </th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">72+ Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">48 Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">24 Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">12 Hours</th>
+                                        <th class="p-3 border-b-2 border-slate-300 font-bold text-sm text-slate-900">72+ Hours</th>
+                                        <th class="p-3 border-b-2 border-slate-300 font-bold text-sm text-slate-900">48 Hours</th>
+                                        <th class="p-3 border-b-2 border-slate-300 font-bold text-sm text-slate-900">24 Hours</th>
+                                        <th class="p-3 border-b-2 border-slate-300 font-bold text-sm text-slate-900">12 Hours</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 border-b border-gray-200 font-semibold">High School</td>
-                                        <td class="p-4 border-b border-gray-200">$15/page</td>
-                                        <td class="p-4 border-b border-gray-200">$18/page</td>
-                                        <td class="p-4 border-b border-gray-200">$22/page</td>
-                                        <td class="p-4 border-b border-gray-200">$28/page</td>
+                                <tbody class="text-sm text-slate-600">
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border-b border-slate-200 font-semibold text-slate-900">High School</td>
+                                        <td class="p-3 border-b border-slate-200">$15/page</td>
+                                        <td class="p-3 border-b border-slate-200">$18/page</td>
+                                        <td class="p-3 border-b border-slate-200">$22/page</td>
+                                        <td class="p-3 border-b border-slate-200">$28/page</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 border-b border-gray-200 font-semibold">Undergraduate</td>
-                                        <td class="p-4 border-b border-gray-200">$20/page</td>
-                                        <td class="p-4 border-b border-gray-200">$25/page</td>
-                                        <td class="p-4 border-b border-gray-200">$30/page</td>
-                                        <td class="p-4 border-b border-gray-200">$38/page</td>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 border-b border-slate-200 font-semibold text-slate-900">Undergraduate</td>
+                                        <td class="p-3 border-b border-slate-200">$20/page</td>
+                                        <td class="p-3 border-b border-slate-200">$25/page</td>
+                                        <td class="p-3 border-b border-slate-200">$30/page</td>
+                                        <td class="p-3 border-b border-slate-200">$38/page</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 font-semibold">Graduate</td>
-                                        <td class="p-4">$28/page</td>
-                                        <td class="p-4">$35/page</td>
-                                        <td class="p-4">$42/page</td>
-                                        <td class="p-4">$50/page</td>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-3 font-semibold text-slate-900">Graduate</td>
+                                        <td class="p-3">$28/page</td>
+                                        <td class="p-3">$35/page</td>
+                                        <td class="p-3">$42/page</td>
+                                        <td class="p-3">$50/page</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="mt-6 grid md:grid-cols-3 gap-4">
-                            <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                                <h4 class="font-bold text-green-900 mb-2">✓ What's Included</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                            <div class="rounded-xl bg-emerald-50 p-4 border border-emerald-200">
+                                <h4 class="font-bold text-sm text-emerald-900 mb-2">✓ What's Included</h4>
+                                <ul class="text-sm text-slate-600 space-y-1">
                                     <li>• Complete lab report (all sections)</li>
                                     <li>• Professional data tables & graphs</li>
                                     <li>• All calculations with work shown</li>
@@ -456,9 +452,9 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                                <h4 class="font-bold text-blue-900 mb-2">🎨 Graph Services</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                            <div class="rounded-xl bg-blue-50 p-4 border border-blue-200">
+                                <h4 class="font-bold text-sm text-blue-900 mb-2">🎨 Graph Services</h4>
+                                <ul class="text-sm text-slate-600 space-y-1">
                                     <li>• Professional Excel/Origin graphs</li>
                                     <li>• Proper axis labels & units</li>
                                     <li>• Error bars & trendlines</li>
@@ -468,9 +464,9 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                                <h4 class="font-bold text-purple-900 mb-2">📏 Page Specifications</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                            <div class="rounded-xl bg-purple-50 p-4 border border-purple-200">
+                                <h4 class="font-bold text-sm text-purple-900 mb-2">📏 Page Specifications</h4>
+                                <ul class="text-sm text-slate-600 space-y-1">
                                     <li>• 1 page = 250 words (double-spaced)</li>
                                     <li>• Tables & graphs included in price</li>
                                     <li>• References not counted separately</li>
@@ -482,19 +478,19 @@
                     </div>
 
                     <!-- FAQ Section -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200" itemscope
+                    <div class="rounded-2xl bg-white p-6 mb-6 border border-slate-200" itemscope
                         itemtype="https://schema.org/FAQPage">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-10 sm:mb-12 text-center">
                             Lab Report Writing FAQs
                         </h2>
 
-                        <div class="space-y-6">
+                        <div class="space-y-4">
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">What information do I
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">What information do I
                                     need to provide for my lab report?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Share your lab manual or
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Share your lab manual or
                                         experimental procedure, all raw data you collected (measurements, observations,
                                         photos), your course level and discipline, specific requirements from your
                                         instructor (format, sections, page length), and your deadline. If you have
@@ -505,11 +501,11 @@
                             </div>
 
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Can you create
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">Can you create
                                     professional graphs and tables for my lab report?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Yes! Creating professional
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Yes! Creating professional
                                         data visualizations is a core part of our lab report service. We use Excel, Origin,
                                         GraphPad Prism, MATLAB, or other specialized software to create publication-quality
                                         graphs with proper axis labels (including units), descriptive titles, appropriate
@@ -522,11 +518,11 @@
                             </div>
 
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Do you handle error
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">Do you handle error
                                     analysis and uncertainty calculations?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Absolutely. Comprehensive
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Absolutely. Comprehensive
                                         error analysis is a critical component of scientific laboratory reports. We
                                         calculate experimental errors, percent error, percent difference, standard
                                         deviation, standard error, confidence intervals, and propagated uncertainty for
@@ -540,11 +536,11 @@
                             </div>
 
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">What scientific
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">What scientific
                                     disciplines do you cover for lab reports?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">We provide lab report writing
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">We provide lab report writing
                                         services across all major scientific disciplines including General Chemistry,
                                         Organic Chemistry, Physical Chemistry, Analytical Chemistry, Biochemistry, Physics
                                         (mechanics, electricity, optics, thermodynamics, modern physics), Biology,
@@ -558,11 +554,11 @@
                             </div>
 
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">How do you ensure
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">How do you ensure
                                     scientific accuracy in lab reports?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Scientific accuracy is our
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Scientific accuracy is our
                                         top priority. Every lab report is written by a science specialist with an advanced
                                         degree and laboratory experience in the relevant field. All calculations are
                                         double-checked for mathematical accuracy, unit consistency, and appropriate
@@ -577,11 +573,11 @@
                             </div>
 
                             <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                                class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">What if I don't have
+                                class="rounded-2xl bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">What if I don't have
                                     complete data from my experiment?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">We can work with incomplete
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">We can work with incomplete
                                         or partial data. Share whatever measurements, observations, and information you have
                                         from your experiment. If critical data is missing, we can: (1) help identify what
                                         additional measurements would be most useful if you can return to the lab, (2)
@@ -597,208 +593,203 @@
                     </div>
 
                     <!-- Student Success Stories -->
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 mb-8 border border-blue-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                    <div class="rounded-2xl bg-slate-50 p-6 mb-6 border border-slate-200">
+                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-10 sm:mb-12 text-center">
                             Science Student Success Stories
                         </h2>
 
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "My chemistry titration lab report was perfect! The calculations were accurate, the
-                                    graph was professional with a beautiful linear trendline, and the error analysis was
-                                    thorough. My professor commented that it was one of the best-formatted reports in the
-                                    class. Got a 98%!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "My chemistry titration lab report was perfect — accurate calculations, a
+                                    professional graph with a clean linear trendline, and thorough error analysis.
+                                    My professor called it one of the best-formatted reports in class. Got a 98%!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white text-xs font-bold mr-3">
                                         BL
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Brian L.</p>
-                                        <p class="text-sm text-gray-600">Chemistry, Sophomore</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Brian L.</p>
+                                        <p class="text-xs text-slate-500">Chemistry, Sophomore</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "Physics lab reports are so difficult for me, but this service made it easy. The
-                                    uncertainty calculations were spot-on, the graphs had proper error bars, and the
-                                    discussion connected our results to theory perfectly. My TA was impressed. Highly
-                                    recommend!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "Physics lab reports are so difficult for me, but this service made it easy.
+                                    The uncertainty calculations were spot-on, the graphs had proper error bars,
+                                    and the discussion connected our results to theory perfectly. Highly recommend!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white text-xs font-bold mr-3">
                                         AK
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Amanda K.</p>
-                                        <p class="text-sm text-gray-600">Physics, Junior</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Amanda K.</p>
+                                        <p class="text-xs text-slate-500">Physics, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "Needed help with my organic chemistry synthesis report. The writer understood reaction
-                                    mechanisms perfectly, calculated percent yield correctly, and interpreted IR and NMR
-                                    spectra accurately. The report was scientifically rigorous and well-written. Excellent
-                                    service!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "Needed help with my organic chemistry synthesis report. The writer understood
+                                    reaction mechanisms perfectly, calculated percent yield correctly, and
+                                    interpreted the IR and NMR spectra accurately. Excellent service!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-white text-xs font-bold mr-3">
                                         CM
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Chris M.</p>
-                                        <p class="text-sm text-gray-600">Organic Chemistry, Senior</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Chris M.</p>
+                                        <p class="text-xs text-slate-500">Organic Chemistry, Senior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "My biology enzyme kinetics report was fantastic! The Michaelis-Menten graph was perfect
-                                    with proper curve fitting, the Km and Vmax calculations were correct, and the discussion
-                                    explained enzyme behavior clearly. Professor gave it full marks. Thank you so much!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "My biology enzyme kinetics report was fantastic! The Michaelis-Menten graph had
+                                    perfect curve fitting, the Km and Vmax calculations were correct, and the
+                                    discussion explained enzyme behavior clearly. Professor gave it full marks!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-white text-xs font-bold mr-3">
                                         JW
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Jessica W.</p>
-                                        <p class="text-sm text-gray-600">Biochemistry, Junior</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Jessica W.</p>
+                                        <p class="text-xs text-slate-500">Biochemistry, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "As a high school student, writing lab reports is new to me. This service helped me
-                                    create a professional report for my AP Chemistry class with proper format, chemical
-                                    equations, and data tables. I learned so much from seeing how a good report should
-                                    look!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "As a high school student, writing lab reports was new to me. This service
+                                    helped me create a professional report for my AP Chemistry class with proper
+                                    format, chemical equations, and data tables. I learned so much from it!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white text-xs font-bold mr-3">
                                         MR
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Mark R.</p>
-                                        <p class="text-sm text-gray-600">AP Chemistry, High School</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Mark R.</p>
+                                        <p class="text-xs text-slate-500">AP Chemistry, High School</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
-                                    "Environmental science field study report was challenging with so much data. The writer
-                                    organized everything beautifully, created clear graphs showing water quality parameters
-                                    over time, and wrote an insightful discussion linking our findings to environmental
-                                    theory. Excellent work!"
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                    "My environmental science field study had so much data to organize. The writer
+                                    laid it out beautifully, built clear graphs of water quality over time, and
+                                    linked our findings to environmental theory. Excellent work!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope
                                     itemtype="https://schema.org/Person">
                                     <div
-                                        class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-white text-xs font-bold mr-3">
                                         SN
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Sarah N.</p>
-                                        <p class="text-sm text-gray-600">Environmental Science, Sophomore</p>
+                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Sarah N.</p>
+                                        <p class="text-xs text-slate-500">Environmental Science, Sophomore</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-8 text-center">
-                            <div class="inline-flex items-center bg-white rounded-lg px-6 py-4 shadow-md">
-                                <div class="text-4xl font-black text-gray-900 mr-4">4.85/5.0</div>
+                        <div class="mt-6 text-center">
+                            <div class="inline-flex items-center rounded-2xl bg-white px-6 py-4 shadow-sm border border-slate-200">
+                                <div class="text-2xl font-bold text-slate-900 mr-4">4.85/5.0</div>
                                 <div class="text-left">
-                                    <div class="flex text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
-                                    <p class="text-sm text-gray-600">Based on 3,000+ lab report reviews</p>
+                                    <div class="flex text-yellow-400 text-sm mb-1">⭐⭐⭐⭐⭐</div>
+                                    <p class="text-xs text-slate-500">Based on 3,000+ lab report reviews</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Final CTA -->
-                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-                            <span class="text-3xl mr-3">🔬</span>
+                    <div class="rounded-2xl bg-slate-50 p-6 border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 flex items-center justify-center gap-2">
+                            <span class="text-xl">🔬</span>
                             Ready for Professional Lab Report Help?
                         </h3>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
-                            Join thousands of science students who've achieved excellent grades with our expert lab report
-                            writing service. Qualified scientists, accurate calculations, professional graphs and tables,
-                            thorough error analysis, and proper scientific formatting. Your laboratory success starts here.
+                        <p class="text-sm leading-relaxed text-slate-600 mb-6 text-center max-w-2xl mx-auto">
+                            Join thousands of science students who've earned excellent grades with our expert lab
+                            report writing service — qualified scientists, accurate calculations, professional
+                            graphs and tables, and thorough error analysis.
                         </p>
                         <div class="text-center">
                             <a href="{{ route('order', ['assignment_service' => $service->id ?? 5]) }}"
-                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                <span class="mr-2">📝</span>
+                                class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                                <span>📝</span>
                                 Order Your Lab Report Today
-                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
@@ -810,10 +801,12 @@
         </div>
 
         <!-- Academic Integrity Notice -->
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
-            <p class="text-sm text-amber-800 leading-relaxed">
-                <strong>Academic Use Notice:</strong> Our lab report assistance is provided as a scientific writing guide and reference to support your learning. All work should be reviewed, understood, and used in accordance with your institution's academic integrity policies.
-            </p>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="rounded-xl bg-amber-50 border border-amber-200 p-6 mt-8 max-w-5xl mx-auto">
+                <p class="text-sm leading-relaxed text-amber-800">
+                    <strong>Academic Use Notice:</strong> Our lab report assistance is provided as a scientific writing guide and reference to support your learning. All work should be reviewed, understood, and used in accordance with your institution's academic integrity policies.
+                </p>
+            </div>
         </div>
     </section>
 @endsection

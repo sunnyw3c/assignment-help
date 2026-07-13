@@ -417,22 +417,22 @@
 
     <!-- Custom Animations -->
     <style>
-        @keyframes float {
+        @@keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
 
-        @keyframes float-slow {
+        @@keyframes float-slow {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
         }
 
-        @keyframes pulse-slow {
+        @@keyframes pulse-slow {
             0%, 100% { opacity: 0.5; }
             50% { opacity: 0.8; }
         }
 
-        @keyframes fade-in-up {
+        @@keyframes fade-in-up {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -443,17 +443,17 @@
             }
         }
 
-        @keyframes bounce-slow {
+        @@keyframes bounce-slow {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
 
-        @keyframes spin-slow {
+        @@keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }

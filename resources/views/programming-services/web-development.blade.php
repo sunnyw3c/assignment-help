@@ -11,135 +11,135 @@
         <x-creative-hero :service="$service" />
 
         <!-- Comprehensive Content Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-14 sm:py-16 bg-white">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Professional Web Development Services</h2>
-                        <p class="text-xl text-gray-600 leading-relaxed">Get expert help with your web development projects from experienced developers who understand modern frameworks, industry best practices, and cutting-edge technologies.</p>
+                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Professional Web Development Services</h2>
+                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Get expert help with your web development projects from experienced developers who understand modern frameworks, industry best practices, and cutting-edge technologies.</p>
                     </div>
 
-                    <div class="prose prose-lg max-w-none">
-                        <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="max-w-prose mx-auto">
+                        <div class="grid gap-6 sm:grid-cols-2 mb-10">
                             <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                    <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">🎯</span>
+                                <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
+                                    <span class="rounded-lg bg-purple-100 p-1.5 text-base">🎯</span>
                                     Why Choose Our Web Development Help?
                                 </h3>
-                                <p class="text-gray-600 mb-4">
-                                    In today's digital landscape, having a robust web presence is crucial for success. Our team of expert web developers specializes in creating high-quality, scalable, and responsive web applications that meet modern industry standards. Whether you're a student working on your first project or a professional looking to enhance your skills, we provide comprehensive support tailored to your specific needs.
+                                <p class="mb-3 text-sm leading-relaxed text-slate-600">
+                                    Our team of expert web developers specializes in creating high-quality, scalable, and responsive web applications that meet modern industry standards. Whether you're a student working on your first project or a professional looking to enhance your skills, we provide comprehensive support tailored to your specific needs.
                                 </p>
-                                <p class="text-gray-600">
-                                    We understand that web development can be challenging, especially when dealing with complex frameworks, database integrations, and responsive design requirements. Our experienced developers have worked on hundreds of projects ranging from simple static websites to complex full-stack applications, giving us the expertise to tackle any challenge you might face.
+                                <p class="text-sm leading-relaxed text-slate-600">
+                                    Our experienced developers have worked on hundreds of projects ranging from simple static websites to complex full-stack applications, giving us the expertise to tackle any challenge you might face.
                                 </p>
                             </div>
 
                             <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                    <span class="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">🚀</span>
+                                <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
+                                    <span class="rounded-lg bg-blue-100 p-1.5 text-base">🚀</span>
                                     Our Development Approach
                                 </h3>
-                                <p class="text-gray-600 mb-4">
-                                    Our development process follows industry best practices and modern methodologies. We begin by thoroughly understanding your project requirements, analyzing the scope, and selecting the most appropriate technology stack. Whether you need a React single-page application, a Vue.js dashboard, an Angular enterprise solution, or a full-stack application with Laravel or Node.js backend, we have the expertise to deliver.
+                                <p class="mb-3 text-sm leading-relaxed text-slate-600">
+                                    We begin by thoroughly understanding your project requirements, analyzing the scope, and selecting the most appropriate technology stack — whether that's a React single-page application, a Vue.js dashboard, an Angular enterprise solution, or a full-stack application with Laravel or Node.js.
                                 </p>
-                                <p class="text-gray-600">
-                                    Every project includes proper code documentation, clean architecture, responsive design implementation, and thorough testing. We ensure that your web application not only works flawlessly but also follows modern development standards that make it maintainable and scalable for future enhancements.
+                                <p class="text-sm leading-relaxed text-slate-600">
+                                    Every project includes proper code documentation, clean architecture, responsive design implementation, and thorough testing, so your application is maintainable and scalable for future enhancements.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 mb-16">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">What We Cover in Web Development</h3>
-                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-orange-500 mr-2">⚛️</span>
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-10">
+                            <h3 class="mb-5 text-center text-lg font-bold text-slate-900">What We Cover in Web Development</h3>
+                            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>⚛️</span>
                                         Frontend Development
                                     </h4>
-                                    <p class="text-sm text-gray-600">React, Vue.js, Angular, HTML5, CSS3, JavaScript, TypeScript, responsive design, and modern UI frameworks.</p>
+                                    <p class="text-xs text-slate-600">React, Vue.js, Angular, HTML5, CSS3, JavaScript, TypeScript, responsive design, and modern UI frameworks.</p>
                                 </div>
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-green-500 mr-2">🔧</span>
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>🔧</span>
                                         Backend Development
                                     </h4>
-                                    <p class="text-sm text-gray-600">Node.js, Laravel, Django, Express.js, API development, database design, and server-side logic implementation.</p>
+                                    <p class="text-xs text-slate-600">Node.js, Laravel, Django, Express.js, API development, database design, and server-side logic implementation.</p>
                                 </div>
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-blue-500 mr-2">🗄️</span>
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>🗄️</span>
                                         Database Integration
                                     </h4>
-                                    <p class="text-sm text-gray-600">MySQL, PostgreSQL, MongoDB, Firebase, database optimization, and data modeling for web applications.</p>
+                                    <p class="text-xs text-slate-600">MySQL, PostgreSQL, MongoDB, Firebase, database optimization, and data modeling for web applications.</p>
                                 </div>
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-purple-500 mr-2">🎨</span>
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>🎨</span>
                                         UI/UX Implementation
                                     </h4>
-                                    <p class="text-sm text-gray-600">Modern design implementation, user interface optimization, accessibility standards, and cross-browser compatibility.</p>
+                                    <p class="text-xs text-slate-600">Modern design implementation, user interface optimization, accessibility standards, and cross-browser compatibility.</p>
                                 </div>
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-red-500 mr-2">🚀</span>
-                                        Deployment & DevOps
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>🚀</span>
+                                        Deployment &amp; DevOps
                                     </h4>
-                                    <p class="text-sm text-gray-600">Cloud deployment, Docker containerization, CI/CD pipelines, and production environment setup.</p>
+                                    <p class="text-xs text-slate-600">Cloud deployment, Docker containerization, CI/CD pipelines, and production environment setup.</p>
                                 </div>
-                                <div class="bg-white rounded-lg p-4 shadow-sm">
-                                    <h4 class="font-semibold text-gray-900 mb-2 flex items-center">
-                                        <span class="text-yellow-500 mr-2">🧪</span>
-                                        Testing & Quality
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                        <span>🧪</span>
+                                        Testing &amp; Quality
                                     </h4>
-                                    <p class="text-sm text-gray-600">Unit testing, integration testing, code quality assurance, performance optimization, and debugging.</p>
+                                    <p class="text-xs text-slate-600">Unit testing, integration testing, code quality assurance, performance optimization, and debugging.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-16">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
-                            <p class="text-gray-600 mb-8 text-center">
-                                Our web development expertise spans across various industries and project types. We've successfully delivered solutions for students, startups, small businesses, and enterprise clients.
+                        <div class="mb-10">
+                            <h3 class="mb-2 text-center text-lg font-bold text-slate-900">Industries We Serve</h3>
+                            <p class="mb-6 text-center text-sm leading-relaxed text-slate-600">
+                                Our web development expertise spans across various industries and project types — students, startups, small businesses, and enterprise clients.
                             </p>
-                            <div class="grid md:grid-cols-2 gap-8">
+                            <div class="grid gap-6 sm:grid-cols-2">
                                 <div>
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Educational Projects</h4>
-                                    <ul class="space-y-2 text-gray-600">
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Student portfolio websites and personal projects</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>University coursework and assignment submissions</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Capstone projects and final year dissertations</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Learning management systems and educational platforms</li>
+                                    <h4 class="mb-2 text-sm font-semibold text-slate-900">Educational Projects</h4>
+                                    <ul class="space-y-1.5 text-sm text-slate-600">
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Student portfolio websites and personal projects</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>University coursework and assignment submissions</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Capstone projects and final year dissertations</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Learning management systems and educational platforms</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Business Applications</h4>
-                                    <ul class="space-y-2 text-gray-600">
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>E-commerce platforms and online stores</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Customer management systems and dashboards</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Content management systems and blogs</li>
-                                        <li class="flex items-start"><span class="text-green-500 mr-2 mt-1">✓</span>Real-time applications and progressive web apps</li>
+                                    <h4 class="mb-2 text-sm font-semibold text-slate-900">Business Applications</h4>
+                                    <ul class="space-y-1.5 text-sm text-slate-600">
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>E-commerce platforms and online stores</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Customer management systems and dashboards</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Content management systems and blogs</li>
+                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Real-time applications and progressive web apps</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gray-50 rounded-2xl p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Why Students and Professionals Trust Us</h3>
-                            <p class="text-gray-600 mb-6 text-center">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                            <h3 class="mb-2 text-center text-lg font-bold text-slate-900">Why Students and Professionals Trust Us</h3>
+                            <p class="mb-5 text-center text-sm leading-relaxed text-slate-600">
                                 With over 1200+ successful web development projects completed and a 4.9/5 average rating, we've established ourselves as the go-to solution for quality web development assistance.
                             </p>
-                            <div class="grid md:grid-cols-3 gap-6 text-center">
+                            <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
-                                    <div class="text-3xl font-bold text-purple-600 mb-2">98%</div>
-                                    <div class="text-sm text-gray-600">Project Success Rate</div>
+                                    <div class="text-xl font-bold text-purple-600">98%</div>
+                                    <div class="text-xs text-slate-600">Project Success Rate</div>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-blue-600 mb-2">2-24hr</div>
-                                    <div class="text-sm text-gray-600">Average Delivery Time</div>
+                                    <div class="text-xl font-bold text-blue-600">2-24hr</div>
+                                    <div class="text-xs text-slate-600">Average Delivery Time</div>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
-                                    <div class="text-sm text-gray-600">Expert Availability</div>
+                                    <div class="text-xl font-bold text-green-600">24/7</div>
+                                    <div class="text-xs text-slate-600">Expert Availability</div>
                                 </div>
                             </div>
                         </div>
@@ -149,19 +149,19 @@
         </section>
 
         <!-- Technologies Section -->
-        <section class="py-20 gradient-bg">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technologies We Master</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our expert developers work with the latest technologies and frameworks to build modern, scalable web applications.</p>
-                    <div class="mt-6 flex justify-center space-x-4">
-                        <button id="prevBtn" class="nav-button bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <section class="py-14 sm:py-16 gradient-bg">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Technologies We Master</h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Our expert developers work with the latest technologies and frameworks to build modern, scalable web applications.</p>
+                    <div class="mt-5 flex justify-center gap-3">
+                        <button id="prevBtn" class="nav-button flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white shadow-sm hover:bg-purple-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                             </svg>
                         </button>
-                        <button id="nextBtn" class="nav-button bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button id="nextBtn" class="nav-button flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white shadow-sm hover:bg-purple-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </button>
@@ -173,8 +173,8 @@
                     <div id="techSlider" class="flex transition-transform duration-700 ease-out will-change-transform">
                         <!-- Frontend Technologies -->
                         <div class="flex-none w-full">
-                            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Frontend Technologies</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                            <h3 class="mb-6 text-center text-lg font-bold text-slate-900">Frontend Technologies</h3>
+                            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
                                 <div class="text-center tech-card cursor-pointer slide-in">
                                     <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                                         <div class="tech-icon text-5xl mb-3">⚛️</div>
@@ -264,8 +264,8 @@
 
                         <!-- Backend Technologies -->
                         <div class="flex-none w-full">
-                            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Backend Technologies</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                            <h3 class="mb-6 text-center text-lg font-bold text-slate-900">Backend Technologies</h3>
+                            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
                                 <div class="text-center tech-card cursor-pointer slide-in">
                                     <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
                                         <div class="tech-icon text-5xl mb-3">🟢</div>
@@ -904,7 +904,7 @@
     </div>
 
     <style>
-        @keyframes float {
+        @@keyframes float {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg) scale(1);
             }
@@ -919,7 +919,7 @@
             }
         }
 
-        @keyframes float-delayed {
+        @@keyframes float-delayed {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg) scale(1);
             }
@@ -934,7 +934,7 @@
             }
         }
 
-        @keyframes glow {
+        @@keyframes glow {
             0%, 100% {
                 box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
             }
@@ -943,12 +943,12 @@
             }
         }
 
-        @keyframes code-typing {
+        @@keyframes code-typing {
             0% { width: 0; }
             100% { width: 100%; }
         }
 
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
             0%, 100% {
                 background-position: 0% 50%;
             }
@@ -999,7 +999,7 @@
         }
 
         /* Glitch effect for tech elements */
-        @keyframes glitch {
+        @@keyframes glitch {
             0%, 100% { transform: translate(0); }
             10% { transform: translate(-1px, -1px); }
             20% { transform: translate(1px, 1px); }
@@ -1043,7 +1043,7 @@
         }
 
         /* Slide fade in animation */
-        @keyframes slideIn {
+        @@keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -1107,14 +1107,14 @@
             animation: gradientShift 12s ease infinite;
         }
 
-        @keyframes gradientShift {
+        @@keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
         /* Mobile-specific enhancements for code background */
-        @media (max-width: 768px) {
+        @@media (max-width: 768px) {
             .code-snippet {
                 transform: scale(0.8);
                 opacity: 0.4 !important;
@@ -1150,7 +1150,7 @@
         }
 
         /* Extra small screens */
-        @media (max-width: 480px) {
+        @@media (max-width: 480px) {
             .code-snippet {
                 opacity: 0.25 !important;
                 font-size: 0.7rem;

@@ -34,72 +34,59 @@
     </script>
 
     <!-- Hero Section -->
-    <header class="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50" role="banner">
-        <!-- Background Elements -->
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
-        </div>
-
-        <div class="container mx-auto px-4 py-20 lg:py-32 relative z-10">
-            <div class="text-center max-w-5xl mx-auto">
+    <header class="bg-white dark:bg-slate-900" role="banner">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center">
                 <!-- Status Badge -->
-                <div class="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-6 py-3 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></span>
+                <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
                     Expert Support for 20+ Programming Languages
                 </div>
 
                 <!-- Main Headline -->
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-tight mb-8">
-                    Master Every
-                    <br>
-                    <span class="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">Programming Language</span>
-                    <br>
-                    with Expert Help
+                <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Master Every <span class="text-blue-600 dark:text-blue-400">Programming Language</span> with Expert Help
                 </h1>
 
                 <!-- Subtitle -->
-                <p class="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
+                <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
                     From beginner-friendly Python to advanced system languages like Rust and C++.
                     Get instant, professional help with coding assignments, debugging, and project development
                     in any programming language.
                 </p>
 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                     <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25">
-                        <span class="mr-3 text-2xl">🚀</span>
+                        class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
                         Get Programming Help Now
-                        <svg class="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
                     <a href="#languages"
-                        class="inline-flex items-center justify-center border-3 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 shadow-lg">
-                        <span class="mr-3 text-2xl">👁️</span>
+                        class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400">
                         Browse Languages
                     </a>
                 </div>
 
                 <!-- Quick Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
                     <div class="text-center">
-                        <div class="text-4xl font-black text-purple-600 mb-2">20+</div>
-                        <div class="text-gray-600 font-semibold">Languages Supported</div>
+                        <div class="text-2xl font-bold text-slate-900 dark:text-white">20+</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Languages Supported</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-black text-indigo-600 mb-2">15min</div>
-                        <div class="text-gray-600 font-semibold">Average Response</div>
+                        <div class="text-2xl font-bold text-slate-900 dark:text-white">15min</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Average Response</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-black text-blue-600 mb-2">98%</div>
-                        <div class="text-gray-600 font-semibold">Success Rate</div>
+                        <div class="text-2xl font-bold text-slate-900 dark:text-white">98%</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Success Rate</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-black text-green-600 mb-2">24/7</div>
-                        <div class="text-gray-600 font-semibold">Expert Support</div>
+                        <div class="text-2xl font-bold text-slate-900 dark:text-white">24/7</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Expert Support</div>
                     </div>
                 </div>
             </div>
@@ -107,1219 +94,630 @@
     </header>
 
     <!-- Programming Languages Showcase -->
-    <section id="languages" class="py-24 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 relative overflow-hidden" role="main" aria-labelledby="languages-heading">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/20 to-purple-50/20"></div>
-        <div class="absolute top-20 right-10 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
-
-        <div class="container mx-auto px-4 relative z-10">
+    <section id="languages" class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" role="main" aria-labelledby="languages-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
-                    <span class="mr-2">💻</span>
-                    PROGRAMMING LANGUAGES
-                </div>
-                <h2 id="languages-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    Expert Help in <br>
-                    <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Every Programming Language</span>
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Programming Languages</p>
+                <h2 id="languages-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Expert Help in <span class="text-blue-600 dark:text-blue-400">Every Programming Language</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
                     Choose from our comprehensive selection of programming languages. Our certified experts provide
                     step-by-step solutions, code debugging, and complete project development.
                 </p>
             </div>
 
             <!-- Languages Grid -->
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
                 <!-- Python Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-blue-500 to-green-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">🐍</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Python</h3>
-                                        <p class="text-blue-100">Most Popular</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#1</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.9/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">🐍</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Python</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Most Popular</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#1 &middot; 4.9/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">150+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-green-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-green-600 mb-1">12min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Data Science & Machine Learning
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Django & Flask Web Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Automation & Scripting
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    AI & Deep Learning
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🚀</span>
-                                Get Python Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">150+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">12min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Data Science & Machine Learning
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Django & Flask Web Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Automation & Scripting
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            AI & Deep Learning
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                        Get Python Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- JavaScript Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-yellow-500 to-orange-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-3xl font-bold text-yellow-600">JS</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">JavaScript</h3>
-                                        <p class="text-yellow-100">Full-Stack</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#2</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.8/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-sm font-bold text-white">JS</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">JavaScript</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">Full-Stack</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#2 &middot; 4.8/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-yellow-600 mb-1">120+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-orange-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-orange-600 mb-1">15min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    React.js & Vue.js Frontend
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Node.js Backend Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Full-Stack Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    API Integration & Development
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">⚡</span>
-                                Get JavaScript Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">120+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">15min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            React.js & Vue.js Frontend
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Node.js Backend Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Full-Stack Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            API Integration & Development
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-600">
+                        Get JavaScript Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Java Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-orange-500 to-red-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-3xl font-bold text-orange-600">☕</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Java</h3>
-                                        <p class="text-orange-100">Enterprise</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#3</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.7/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-600 text-lg text-white">☕</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Java</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-red-600 dark:text-red-400">Enterprise</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#3 &middot; 4.7/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-orange-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-orange-600 mb-1">98+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-red-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-red-600 mb-1">18min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Object-Oriented Programming
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Spring Boot Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Android Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Enterprise Solutions
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">☕</span>
-                                Get Java Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">98+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">18min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Object-Oriented Programming
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Spring Boot Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Android Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Enterprise Solutions
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-700">
+                        Get Java Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- C++ Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-blue-600">C++</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">C++</h3>
-                                        <p class="text-blue-100">Performance</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#4</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.6/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-xs font-bold text-white">C++</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">C++</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">Performance</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#4 &middot; 4.6/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">85+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-purple-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-purple-600 mb-1">20min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    System Programming
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Game Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Data Structures & Algorithms
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Performance Optimization
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">⚡</span>
-                                Get C++ Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">85+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">20min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            System Programming
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Game Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Data Structures & Algorithms
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Performance Optimization
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700">
+                        Get C++ Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- C# Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-purple-600">C#</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">C#</h3>
-                                        <p class="text-purple-100">Microsoft</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#5</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.5/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-xs font-bold text-white">C#</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">C#</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">Microsoft</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#5 &middot; 4.5/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-purple-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-purple-600 mb-1">72+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-pink-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-pink-600 mb-1">22min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    .NET Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Desktop Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Web APIs & Services
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Unity Game Development
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🎮</span>
-                                Get C# Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">72+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">22min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            .NET Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Desktop Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Web APIs & Services
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Unity Game Development
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-700">
+                        Get C# Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- PHP Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-indigo-600 to-blue-600 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-indigo-600">🐘</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">PHP</h3>
-                                        <p class="text-indigo-100">Web Backend</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#6</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.4/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">🐘</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">PHP</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">Web Backend</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#6 &middot; 4.4/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-indigo-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-indigo-600 mb-1">64+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">25min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Laravel Web Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    WordPress Customization
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    E-commerce Solutions
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Database Integration
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🐘</span>
-                                Get PHP Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">64+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">25min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Laravel Web Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            WordPress Customization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            E-commerce Solutions
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Database Integration
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700">
+                        Get PHP Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Go Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-cyan-500 to-blue-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-cyan-600">🐹</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Go</h3>
-                                        <p class="text-cyan-100">Cloud Native</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#7</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.6/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-600 text-lg text-white">🐹</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Go</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-cyan-600 dark:text-cyan-400">Cloud Native</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#7 &middot; 4.6/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-cyan-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-cyan-600 mb-1">45+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">18min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Backend Microservices
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Cloud Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    DevOps Tools
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Concurrent Programming
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🐹</span>
-                                Get Go Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">45+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">18min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Backend Microservices
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Cloud Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            DevOps Tools
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Concurrent Programming
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-cyan-700">
+                        Get Go Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Rust Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-600/5 to-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-orange-600 to-red-600 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-orange-600">🦀</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Rust</h3>
-                                        <p class="text-orange-100">Memory Safe</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#8</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.7/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-lg text-white">🦀</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Rust</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">Memory Safe</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#8 &middot; 4.7/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-orange-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-orange-600 mb-1">38+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-red-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-red-600 mb-1">25min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Systems Programming
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    WebAssembly Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Blockchain Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Performance-Critical Apps
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🦀</span>
-                                Get Rust Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">38+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">25min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Systems Programming
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            WebAssembly Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Blockchain Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Performance-Critical Apps
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-orange-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-700">
+                        Get Rust Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Swift Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-orange-500 to-pink-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-orange-600">🍎</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Swift</h3>
-                                        <p class="text-orange-100">iOS Development</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#9</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.5/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-500 text-lg text-white">🍎</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Swift</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-rose-600 dark:text-rose-400">iOS Development</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#9 &middot; 4.5/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-orange-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-orange-600 mb-1">32+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-pink-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-pink-600 mb-1">30min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    iOS App Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    macOS Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    SwiftUI Interfaces
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Apple Ecosystem Apps
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🍎</span>
-                                Get Swift Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">32+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">30min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            iOS App Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            macOS Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            SwiftUI Interfaces
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Apple Ecosystem Apps
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-rose-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-600">
+                        Get Swift Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Kotlin Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-purple-500 to-blue-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-purple-600">🎯</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Kotlin</h3>
-                                        <p class="text-purple-100">Modern JVM</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#10</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.6/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">🎯</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Kotlin</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">Modern JVM</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#10 &middot; 4.6/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-purple-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-purple-600 mb-1">41+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">20min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Android App Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Server-side Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Multiplatform Projects
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Spring Boot with Kotlin
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🎯</span>
-                                Get Kotlin Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">41+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">20min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Android App Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Server-side Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Multiplatform Projects
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Spring Boot with Kotlin
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-700">
+                        Get Kotlin Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- TypeScript Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-blue-500 to-indigo-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-blue-600">TS</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">TypeScript</h3>
-                                        <p class="text-blue-100">Typed JavaScript</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#11</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.7/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-sm font-bold text-white">TS</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">TypeScript</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Typed JavaScript</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#11 &middot; 4.7/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-blue-600 mb-1">89+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-indigo-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-indigo-600 mb-1">16min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Large-scale Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    React/Angular/Vue with TS
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Node.js Backend APIs
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Type Safety & Refactoring
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">🔷</span>
-                                Get TypeScript Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">89+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">16min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
+
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Large-scale Applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            React/Angular/Vue with TS
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Node.js Backend APIs
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Type Safety & Refactoring
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700">
+                        Get TypeScript Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <!-- Ruby Card -->
-                <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <!-- Header -->
-                        <div class="bg-gradient-to-br from-red-500 to-pink-500 p-8">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span class="text-2xl font-bold text-red-600">💎</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white">Ruby</h3>
-                                        <p class="text-red-100">Developer Joy</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                                    <span class="text-white text-sm font-semibold">#12</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center text-white/90 text-sm">
-                                <span class="mr-2">⭐</span>
-                                <span>4.4/5 Expert Rating</span>
+                <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-600 text-lg text-white">💎</div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Ruby</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wide text-rose-600 dark:text-rose-400">Developer Joy</p>
                             </div>
                         </div>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">#12 &middot; 4.4/5</span>
+                    </div>
 
-                        <!-- Content -->
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-red-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-red-600 mb-1">35+</div>
-                                    <div class="text-xs text-gray-600">Projects Done</div>
-                                </div>
-                                <div class="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-pink-50 transition-colors duration-300">
-                                    <div class="text-2xl font-bold text-pink-600 mb-1">28min</div>
-                                    <div class="text-xs text-gray-600">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-3 mb-8">
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Ruby on Rails Applications
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Web Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    API Development
-                                </li>
-                                <li class="flex items-center text-gray-700">
-                                    <span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                        <span class="text-green-600 text-xs">✓</span>
-                                    </span>
-                                    Scripting & Automation
-                                </li>
-                            </ul>
-
-                            <a href="{{ route('order') }}" class="group/btn w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                <span class="mr-2">💎</span>
-                                Get Ruby Help
-                                <svg class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                    <div class="mb-4 grid grid-cols-2 gap-3">
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">35+</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Projects Done</div>
+                        </div>
+                        <div class="rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-900">
+                            <div class="text-lg font-bold text-slate-900 dark:text-white">28min</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400">Avg Response</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Why Choose Our Programming Language Help -->
-    <section class="py-24 bg-gradient-to-br from-purple-50 to-indigo-50 relative overflow-hidden" aria-labelledby="why-choose-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-xl">
-                    <span class="mr-3 text-xl">⭐</span>
-                    WHY STUDENTS CHOOSE US
-                </div>
-
-                <h2 id="why-choose-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Expert Programming Help
-                    <br>
-                    <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">For Every Language</span>
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Language-Specific Experts</h3>
-                    <p class="text-gray-600 leading-relaxed">Our developers specialize in specific programming languages, ensuring you get expert-level help tailored to each language's unique features and best practices.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">📚</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Learning-Focused Approach</h3>
-                    <p class="text-gray-600 leading-relaxed">We don't just solve problems - we teach you the concepts, syntax, and programming patterns that make you a better developer in your chosen language.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">💡</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Real-World Examples</h3>
-                    <p class="text-gray-600 leading-relaxed">Get practical, industry-standard solutions with detailed explanations that help you understand how each language is used in professional development.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">⚡</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Instant Support</h3>
-                    <p class="text-gray-600 leading-relaxed">Get help within minutes, not hours. Our experts are available 24/7 to assist with urgent assignments, debugging sessions, and project deadlines.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🔧</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Complete Solutions</h3>
-                    <p class="text-gray-600 leading-relaxed">From simple syntax questions to complex algorithm implementations, we provide complete, tested solutions with comprehensive documentation.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6">🎓</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Academic Excellence</h3>
-                    <p class="text-gray-600 leading-relaxed">Boost your grades with professionally written code that follows academic standards and includes detailed explanations for better understanding.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programming Content Types Section -->
-    <section class="py-24 bg-white relative overflow-hidden" aria-labelledby="content-types-heading">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-8 py-4 rounded-full text-sm font-bold mb-8 shadow-lg">
-                    <span class="mr-3 text-xl">📋</span>
-                    WHAT WE HELP WITH
-                </div>
-
-                <h2 id="content-types-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                    Every Type of Programming
-                    <br>
-                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Assignment & Project</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    From basic syntax to complex algorithms, we provide expert assistance for all types of programming content across every language.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Assignments & Homework -->
-                <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">📝</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Assignments & Homework</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                            Coding exercises and problems
+                    <ul class="mb-6 space-y-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Ruby on Rails Applications
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                            Algorithm implementations
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Web Development
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                            Data structure assignments
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            API Development
                         </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                            Object-oriented programming
+                        <li class="flex items-center gap-2">
+                            <svg class="h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                            Scripting & Automation
                         </li>
                     </ul>
-                </div>
 
-                <!-- Projects & Applications -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🚀</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Projects & Applications</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                            Web applications (Frontend/Backend)
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                            Mobile app development
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                            Desktop applications
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                            API development & integration
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Debugging & Code Review -->
-                <div class="group bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🔧</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Debugging & Code Review</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                            Error fixing and troubleshooting
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                            Code optimization
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                            Performance improvements
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                            Code refactoring
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Exam Preparation -->
-                <div class="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-green-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🎓</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Exam Preparation</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                            Coding interview practice
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                            Algorithm challenges
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                            Technical assessments
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                            Certification preparation
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Database & Backend -->
-                <div class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-cyan-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🗄️</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Database & Backend</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                            SQL query optimization
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                            Database design & modeling
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                            Server-side programming
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                            RESTful API development
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Data Science & AI -->
-                <div class="group bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-indigo-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <span class="text-3xl">🤖</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Data Science & AI</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                            Machine learning models
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                            Data analysis & visualization
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                            Neural networks & deep learning
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                            Statistical programming
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bottom CTA -->
-            <div class="text-center mt-20">
-                <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-12 max-w-4xl mx-auto border border-gray-200">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">
-                        Don't See Your Programming Need?
-                    </h3>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        We cover every programming concept, framework, and technology.
-                        Get personalized help for any coding challenge you're facing.
-                    </p>
-                    <a href="{{ route('order') }}"
-                       class="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        <span class="mr-3">💬</span>
-                        Describe Your Project
-                        <svg class="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    <a href="{{ route('order') }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-rose-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700">
+                        Get Ruby Help
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
                 </div>
@@ -1327,25 +725,265 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-                    Ready to Master Your Programming Language?
+    <!-- Why Choose Our Programming Language Help -->
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="why-choose-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Why Students Choose Us</p>
+                <h2 id="why-choose-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Expert Programming Help <span class="text-blue-600 dark:text-blue-400">for Every Language</span>
                 </h2>
-                <p class="text-xl text-purple-100 mb-12 leading-relaxed">
-                    Join thousands of students who've accelerated their programming journey with our expert help.
-                    Get instant assistance, learn faster, and achieve better grades.
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">🎯</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Language-Specific Experts</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Developers who specialize in specific languages, so you get help tailored to each language's unique features and best practices.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-lg text-white">📚</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Learning-Focused Approach</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We don't just solve problems — we explain the concepts, syntax, and patterns that make you a better developer.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500 text-lg text-white">💡</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Real-World Examples</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Practical, industry-standard solutions with clear explanations of how each language is used in professional development.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">⚡</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Instant Support</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Help within minutes, not hours. Experts available 24/7 for urgent assignments, debugging, and deadlines.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">🔧</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Complete Solutions</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">From simple syntax questions to complex algorithm implementations — complete, tested solutions with documentation.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
+                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-rose-600 text-lg text-white">🎓</div>
+                    <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Academic Excellence</h3>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Boost your grades with professionally written code that follows academic standards and includes clear explanations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Content Types Section -->
+    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="content-types-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+                <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">What We Help With</p>
+                <h2 id="content-types-heading" class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                    Every Type of Programming <span class="text-blue-600 dark:text-blue-400">Assignment & Project</span>
+                </h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
+                    From basic syntax to complex algorithms, we provide expert assistance for all types of programming content across every language.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Assignments & Homework -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">📝</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Assignments & Homework</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+                            Coding exercises and problems
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+                            Algorithm implementations
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+                            Data structure assignments
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+                            Object-oriented programming
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Projects & Applications -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">🚀</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Projects & Applications</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
+                            Web applications (frontend/backend)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
+                            Mobile app development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
+                            Desktop applications
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-purple-600 dark:bg-purple-400"></span>
+                            API development & integration
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Debugging & Code Review -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-lg text-white">🔧</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Debugging & Code Review</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
+                            Error fixing and troubleshooting
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
+                            Code optimization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
+                            Performance improvements
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600 dark:bg-orange-400"></span>
+                            Code refactoring
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Exam Preparation -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-lg text-white">🎓</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Exam Preparation</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+                            Coding interview practice
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+                            Algorithm challenges
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+                            Technical assessments
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+                            Certification preparation
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Database & Backend -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-600 text-lg text-white">🗄️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Database & Backend</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
+                            SQL query optimization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
+                            Database design & modeling
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
+                            Server-side programming
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
+                            RESTful API development
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Science & AI -->
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="mb-4 flex items-center gap-3">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">🤖</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Data Science & AI</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
+                            Machine learning models
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
+                            Data analysis & visualization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
+                            Neural networks & deep learning
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
+                            Statistical programming
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-10 rounded-2xl bg-slate-900 p-8 text-center sm:p-10 dark:border dark:border-slate-800 dark:bg-slate-950">
+                <h3 class="text-2xl font-bold text-white">
+                    Don't See Your Programming Need?
+                </h3>
+                <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+                    We cover every programming concept, framework, and technology. Get personalized help for any coding challenge you're facing.
                 </p>
                 <a href="{{ route('order') }}"
-                   class="group inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-50 px-12 py-6 rounded-2xl font-black text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    <span class="mr-4 text-3xl">🚀</span>
-                    Start Getting Help Now
-                    <svg class="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                   class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                    Describe Your Project
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="rounded-2xl bg-slate-900 p-8 text-center sm:p-10 dark:border dark:border-slate-800 dark:bg-slate-950">
+                <div class="mx-auto max-w-2xl">
+                    <h2 class="text-2xl font-bold text-white sm:text-3xl">
+                        Ready to Master Your Programming Language?
+                    </h2>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                        Join thousands of students who've accelerated their programming journey with our expert help. Get instant assistance, learn faster, and achieve better grades.
+                    </p>
+                    <a href="{{ route('order') }}"
+                       class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                        Start Getting Help Now
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

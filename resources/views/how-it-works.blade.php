@@ -400,7 +400,7 @@
 
                                     <!-- Enhanced Expand Button -->
                                     @if ($index == 0)
-                                        <button @click="expanded = !expanded"
+                                        <button x-on:click="expanded = !expanded"
                                             class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-500/90 hover:to-blue-600/90 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group-hover:shadow-2xl transform hover:scale-105">
                                             <span x-text="expanded ? 'Hide Details' : 'View Details'"
                                                 class="mr-2"></span>
@@ -412,7 +412,7 @@
                                             </svg>
                                         </button>
                                     @elseif($index == 1)
-                                        <button @click="expanded = !expanded"
+                                        <button x-on:click="expanded = !expanded"
                                             class="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group-hover:shadow-2xl transform hover:scale-105">
                                             <span x-text="expanded ? 'Hide Details' : 'View Details'"
                                                 class="mr-2"></span>
@@ -424,7 +424,7 @@
                                             </svg>
                                         </button>
                                     @elseif($index == 2)
-                                        <button @click="expanded = !expanded"
+                                        <button x-on:click="expanded = !expanded"
                                             class="w-full bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-500/90 hover:to-rose-600/90 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group-hover:shadow-2xl transform hover:scale-105">
                                             <span x-text="expanded ? 'Hide Details' : 'View Details'"
                                                 class="mr-2"></span>
@@ -436,7 +436,7 @@
                                             </svg>
                                         </button>
                                     @else
-                                        <button @click="expanded = !expanded"
+                                        <button x-on:click="expanded = !expanded"
                                             class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-500/90 hover:to-emerald-600/90 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center group-hover:shadow-2xl transform hover:scale-105">
                                             <span x-text="expanded ? 'Hide Details' : 'View Details'"
                                                 class="mr-2"></span>
@@ -734,8 +734,8 @@
                 <!-- Enhanced Features Grid -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     @foreach ($features as $index => $feature)
-                        <div class="group relative" x-data="{ hovered: false }" @mouseenter="hovered = true"
-                            @mouseleave="hovered = false">
+                        <div class="group relative" x-data="{ hovered: false }" x-on:mouseenter="hovered = true"
+                            x-on:mouseleave="hovered = false">
 
                             <!-- Enhanced Card with Better Animations -->
                             <div class="relative h-full">
@@ -1008,7 +1008,7 @@
                                 </blockquote>
 
                                 @if (strlen($review['review']) > 120)
-                                    <button @click="expanded = !expanded"
+                                    <button x-on:click="expanded = !expanded"
                                             class="text-blue-600 hover:text-blue-700 font-semibold text-sm mb-4 transition-colors duration-200">
                                         <span x-text="expanded ? 'Show Less' : 'Read More'"></span>
                                         <svg x-bind:class="expanded ? 'rotate-180' : ''"
@@ -1171,7 +1171,7 @@
             <div class="max-w-4xl mx-auto" x-data="{ open: null }">
                 @foreach($faqs as $index => $faq)
                     <div class="border-b border-gray-200 dark:border-slate-800/80">
-                        <button @click="open = open === {{ $index }} ? null : {{ $index }} " class="w-full flex justify-between items-center py-6 text-left">
+                        <button x-on:click="open = open === {{ $index }} ? null : {{ $index }} " class="w-full flex justify-between items-center py-6 text-left">
                             <h3 class="text-xl font-semibold text-gray-800 dark:text-slate-200">{{ $faq['question'] }}</h3>
                             <svg :class="{'transform rotate-180': open === {{ $index }} }" class="w-6 h-6 text-gray-500 transition-transform duration-300 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -1218,7 +1218,7 @@
 
     <!-- Custom Animations and JavaScript -->
     <style>
-        @keyframes float {
+        @@keyframes float {
 
             0%,
             100% {
@@ -1230,7 +1230,7 @@
             }
         }
 
-        @keyframes float-slow {
+        @@keyframes float-slow {
 
             0%,
             100% {
@@ -1242,7 +1242,7 @@
             }
         }
 
-        @keyframes pulse-slow {
+        @@keyframes pulse-slow {
 
             0%,
             100% {
@@ -1254,7 +1254,7 @@
             }
         }
 
-        @keyframes fade-in-up {
+        @@keyframes fade-in-up {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -1269,7 +1269,7 @@
             animation: fade-in-up 0.8s ease-out forwards;
         }
 
-        @keyframes bounce-slow {
+        @@keyframes bounce-slow {
 
             0%,
             100% {
@@ -1281,7 +1281,7 @@
             }
         }
 
-        @keyframes spin-slow {
+        @@keyframes spin-slow {
             from {
                 transform: rotate(0deg);
             }
@@ -1291,7 +1291,7 @@
             }
         }
 
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
 
             0%,
             100% {
@@ -1303,7 +1303,7 @@
             }
         }
 
-        @keyframes fade-in-up {
+        @@keyframes fade-in-up {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -1315,7 +1315,7 @@
             }
         }
 
-        @keyframes expand-underline {
+        @@keyframes expand-underline {
             from {
                 transform: scaleX(0);
             }

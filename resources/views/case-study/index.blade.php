@@ -15,83 +15,82 @@
     <meta property="twitter:title" content="Professional Case Study Analysis Service | Business Experts">
     <meta property="twitter:description" content="Expert case study analysis for business and management courses. SWOT analysis, strategic recommendations, and more.">
 
-   
+
 @endpush
 
 @section('custom-content')
     <!-- Comprehensive Case Study Content Section -->
-    <section class="py-20 bg-white" itemscope itemtype="https://schema.org/Service">
-        <div class="container mx-auto px-4">
+    <section class="py-14 sm:py-16 bg-white" itemscope itemtype="https://schema.org/Service">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-black text-gray-900 mb-6" itemprop="name">Professional Case Study Analysis Service</h1>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" itemprop="description">
+                <div class="text-center mb-10 sm:mb-12">
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4" itemprop="name">Professional Case Study Analysis Service</h1>
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto" itemprop="description">
                         Expert case study analysis for business, management, and MBA courses. Comprehensive SWOT analysis, strategic frameworks, financial evaluation, and actionable recommendations.
                     </p>
                 </div>
 
-                <div class="prose prose-lg max-w-none">
-                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <div class="max-w-none">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <p class="text-sm leading-relaxed text-slate-600 mb-4 max-w-3xl">
                             Case study analysis represents one of the most challenging and practically valuable assignments in business education, requiring students to examine real-world business situations, identify complex problems, analyze multiple stakeholder perspectives, evaluate competitive dynamics, assess financial implications, and develop strategic recommendations that balance theoretical frameworks with practical business realities. Mastering case study analysis demands not only comprehensive understanding of business concepts across multiple functional areas including strategy, marketing, finance, operations, and human resources, but also critical thinking abilities, analytical rigor, creative problem-solving skills, and the capacity to synthesize diverse information sources into coherent strategic narratives that demonstrate business acumen and decision-making competence. Our professional case study analysis service provides expert assistance from experienced business analysts, consultants, and MBA-qualified professionals who understand industry dynamics and can help you create insightful, well-structured analyses that earn top grades.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-sm leading-relaxed text-slate-600 mb-4 max-w-3xl">
                             Our team consists of business experts holding MBA degrees, industry certifications, and professional experience across diverse sectors including technology, retail, healthcare, manufacturing, financial services, consulting, and entrepreneurship who bring real-world business knowledge to academic case analysis. We provide comprehensive support for all case study components including executive summaries, company background and situation analysis, problem identification and definition, SWOT analysis examining internal strengths and weaknesses alongside external opportunities and threats, application of strategic frameworks such as PESTEL analysis, Porter's Five Forces, Value Chain Analysis, BCG Matrix, and Ansoff Matrix, evaluation of alternative strategic options with pros and cons assessment, development of actionable recommendations with clear justification, implementation plans specifying concrete steps and timelines, financial analysis including ratio analysis, break-even calculations, NPV/IRR computations, and profitability projections, and properly cited references from business literature, industry reports, and credible sources. Every analysis demonstrates strategic thinking, business literacy, analytical depth, and practical applicability expected in graduate-level business education.
                         </p>
                     </div>
 
                     <!-- Trust & Guarantees Section -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border-2 border-green-200 shadow-lg">
-                        <div class="text-center mb-8">
-                            <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Business Analysis Guarantees</h2>
-                            <p class="text-lg text-gray-600">Your business education success is our priority</p>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <div class="text-center mb-6">
+                            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2">Our Business Analysis Guarantees</h2>
+                            <p class="text-sm text-slate-600">Your business education success is our priority</p>
                         </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">💼</div>
+                        <div class="grid gap-5 sm:grid-cols-2">
+                            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="mb-4 flex items-start gap-3">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-xl">💼</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">MBA-Qualified Business Analysts</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">MBA-Qualified Business Analysts</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             Your case study will be analyzed by business professionals with MBA degrees or equivalent qualifications who possess deep understanding of strategic management, competitive analysis, and business decision-making. Many of our analysts have industry and consulting backgrounds, with experience in strategy, business development, and executive roles, bringing practical insights to academic analysis.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">📊</div>
+                            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="mb-4 flex items-start gap-3">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-xl">📊</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Comprehensive Strategic Frameworks</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Comprehensive Strategic Frameworks</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             We apply proven business frameworks including SWOT analysis for internal/external assessment, PESTEL analysis for macro-environmental factors, Porter's Five Forces for industry competitiveness, Value Chain Analysis for operational efficiency, BCG Matrix for portfolio management, Ansoff Matrix for growth strategies, and other analytical tools appropriate for your specific case situation and course requirements.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">💰</div>
+                            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="mb-4 flex items-start gap-3">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-xl">💰</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Financial Analysis Expertise</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Financial Analysis Expertise</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             When cases require financial evaluation, we perform thorough analysis including financial ratio calculations (liquidity, profitability, efficiency, leverage), trend analysis across multiple years, break-even analysis, cost-benefit assessment, NPV and IRR calculations for investment decisions, sensitivity analysis, and financial projections. All calculations are accurate, properly formatted, and clearly explained with business implications discussed.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-200">
-                                <div class="flex items-start mb-4">
-                                    <div class="text-4xl mr-4">🎯</div>
+                            <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                <div class="mb-4 flex items-start gap-3">
+                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-xl">🎯</div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Actionable Recommendations</h3>
-                                        <p class="text-gray-700 leading-relaxed">
+                                        <h3 class="text-base font-bold text-slate-900 mb-1">Actionable Recommendations</h3>
+                                        <p class="text-sm leading-relaxed text-slate-600">
                                             We develop practical, implementable recommendations grounded in analysis and supported by business theory. Each recommendation is clearly justified with supporting evidence, addresses identified problems, considers resource constraints and organizational capabilities, includes implementation steps with timelines, anticipates potential challenges, and aligns with overall business strategy. Recommendations demonstrate strategic thinking and business judgment.
                                         </p>
                                     </div>
@@ -99,129 +98,129 @@
                             </div>
                         </div>
 
-                        <div class="mt-8 bg-gray-50 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Our Case Study Success Record</h3>
-                            <div class="grid md:grid-cols-4 gap-4 text-center">
+                        <div class="mt-6 rounded-2xl bg-slate-50 p-6">
+                            <h3 class="text-base font-bold text-slate-900 mb-4 text-center">Our Case Study Success Record</h3>
+                            <div class="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
                                 <div>
-                                    <div class="text-3xl font-bold text-blue-600 mb-2">3200+</div>
-                                    <p class="text-sm text-gray-700">Case Studies Completed</p>
+                                    <div class="text-2xl font-bold text-blue-600 mb-1">3200+</div>
+                                    <p class="text-xs text-slate-600">Case Studies Completed</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-green-600 mb-2">96%</div>
-                                    <p class="text-sm text-gray-700">Student Satisfaction Rate</p>
+                                    <div class="text-2xl font-bold text-emerald-600 mb-1">96%</div>
+                                    <p class="text-xs text-slate-600">Student Satisfaction Rate</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-purple-600 mb-2">150+</div>
-                                    <p class="text-sm text-gray-700">Business Analysts</p>
+                                    <div class="text-2xl font-bold text-purple-600 mb-1">150+</div>
+                                    <p class="text-xs text-slate-600">Business Analysts</p>
                                 </div>
                                 <div>
-                                    <div class="text-3xl font-bold text-orange-600 mb-2">50+</div>
-                                    <p class="text-sm text-gray-700">Industries Covered</p>
+                                    <div class="text-2xl font-bold text-amber-600 mb-1">50+</div>
+                                    <p class="text-xs text-slate-600">Industries Covered</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="text-3xl mr-3">🔍</span>
+                    <div class="grid gap-5 lg:grid-cols-2 mb-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-xl">🔍</span>
                                 Strategic Analysis Frameworks
                             </h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
+                            <p class="text-sm leading-relaxed text-slate-600 mb-3">
                                 Professional case study analysis requires systematic application of proven strategic frameworks that provide structured approaches to examining business situations. Our SWOT analysis comprehensively identifies internal strengths including core competencies, resources, capabilities, brand equity, and competitive advantages, as well as weaknesses such as resource limitations, capability gaps, operational inefficiencies, and competitive vulnerabilities. We assess external opportunities including market growth potential, emerging trends, technological innovations, regulatory changes, and strategic partnerships, alongside threats like competitive pressures, market disruptions, economic challenges, and regulatory obstacles.
                             </p>
-                            <p class="text-gray-700 leading-relaxed">
+                            <p class="text-sm leading-relaxed text-slate-600">
                                 Beyond SWOT, we apply additional frameworks as appropriate: PESTEL analysis examines Political, Economic, Social, Technological, Environmental, and Legal factors affecting the business environment. Porter's Five Forces evaluates industry competitiveness by analyzing threat of new entrants, bargaining power of suppliers and buyers, threat of substitutes, and competitive rivalry. Value Chain Analysis identifies primary and support activities creating value and competitive advantage. BCG Matrix assesses business portfolio positioning. Ansoff Matrix explores growth strategies. Each framework application is thorough, insightful, and directly connected to strategic recommendations.
                             </p>
                         </div>
 
-                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                                <span class="text-3xl mr-3">📈</span>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-xl">📈</span>
                                 Industry & Competitive Analysis
                             </h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
+                            <p class="text-sm leading-relaxed text-slate-600 mb-3">
                                 Understanding industry dynamics and competitive positioning is essential for effective case study analysis. We conduct thorough industry research using credible sources including industry reports from IBISWorld, Statista, MarketLine, business publications like Harvard Business Review, Forbes, Bloomberg, company financial statements, investor presentations, and market research databases. Our competitive analysis identifies key competitors, maps competitive positioning, evaluates competitive strategies, assesses market share distribution, analyzes differentiation strategies, and identifies competitive advantages and vulnerabilities.
                             </p>
-                            <p class="text-gray-700 leading-relaxed">
+                            <p class="text-sm leading-relaxed text-slate-600">
                                 We analyze business models, revenue streams, cost structures, distribution channels, customer segments, and value propositions. Market trends are examined including growth rates, technological disruptions, consumer behavior shifts, regulatory developments, and globalization impacts. Industry structure analysis considers concentration ratios, barriers to entry, supplier and buyer power dynamics, and profitability drivers. All analysis is supported with current data, industry benchmarks, and credible citations, demonstrating research depth and analytical rigor expected in graduate business education.
                             </p>
                         </div>
                     </div>
 
                     <!-- Industries & Business Areas Covered -->
-                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-6 text-center">
                             Industries & Business Areas We Cover
                         </h2>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Technology & Digital Business</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Technology & Digital Business</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Software companies, SaaS platforms, e-commerce businesses, digital transformation cases, platform economics, tech startups, social media companies, cloud computing, artificial intelligence applications, cybersecurity, and technology disruption strategies with understanding of digital business models and tech industry dynamics.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Retail & Consumer Goods</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Retail & Consumer Goods</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Traditional retail, online retail, omnichannel strategies, consumer packaged goods, luxury brands, fast fashion, grocery retail, supply chain management, merchandising strategies, customer experience, retail analytics, and adaptation to changing consumer preferences with retail industry expertise.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Healthcare & Pharmaceuticals</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Healthcare & Pharmaceuticals</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Hospital management, pharmaceutical companies, biotech firms, healthcare delivery systems, medical devices, health insurance, telemedicine, drug development, regulatory compliance, healthcare policy impacts, patient care quality, and healthcare innovation with understanding of complex healthcare industry.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Financial Services & Banking</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Financial Services & Banking</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Commercial banking, investment banking, fintech companies, insurance, asset management, private equity, venture capital, payment systems, financial regulation, risk management, digital banking, blockchain applications, and financial services transformation with finance industry knowledge.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Manufacturing & Operations</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Manufacturing & Operations</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Manufacturing strategy, operations management, supply chain optimization, lean manufacturing, quality management, production planning, capacity management, process improvement, Industry 4.0, automation, global manufacturing, and operational excellence with operations management expertise.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Hospitality & Tourism</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Hospitality & Tourism</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Hotels, restaurants, travel agencies, airlines, cruise lines, tourism destinations, event management, hospitality technology, customer service excellence, revenue management, sustainability in tourism, and pandemic recovery strategies with hospitality industry understanding.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Energy & Sustainability</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Energy & Sustainability</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Oil and gas, renewable energy, utilities, energy transition, sustainable business practices, corporate social responsibility, circular economy, environmental strategy, climate change adaptation, green technology, and sustainability reporting with ESG expertise.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Automotive & Transportation</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Automotive & Transportation</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Automobile manufacturers, electric vehicles, autonomous vehicles, mobility services, logistics companies, supply chain networks, transportation infrastructure, shared mobility, automotive technology, and industry transformation with automotive sector knowledge.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Telecommunications & Media</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Telecommunications & Media</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Telecom operators, media companies, streaming services, content production, advertising, digital media, 5G deployment, convergence strategies, entertainment industry, publishing, and media business model innovation with media industry expertise.
                                 </p>
                             </div>
 
-                            <div class="bg-white rounded-lg p-5 shadow-sm">
-                                <h4 class="text-xl font-bold text-blue-600 mb-3">Entrepreneurship & Startups</h4>
-                                <p class="text-gray-700 leading-relaxed">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h4 class="text-base font-bold text-blue-600 mb-2">Entrepreneurship & Startups</h4>
+                                <p class="text-sm leading-relaxed text-slate-600">
                                     Startup strategy, business model canvas, lean startup methodology, growth hacking, venture funding, entrepreneurial challenges, scaling strategies, pivot decisions, innovation management, and entrepreneurial ecosystem with startup experience and entrepreneurship knowledge.
                                 </p>
                             </div>
@@ -229,115 +228,115 @@
                     </div>
 
                     <!-- Case Study Components -->
-                    <div class="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-8 mb-8 border border-gray-200">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Case Study Analysis Components</h2>
-                        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2 text-center">Case Study Analysis Components</h2>
+                        <p class="text-center text-sm text-slate-600 mb-6 max-w-2xl mx-auto">
                             Comprehensive coverage of all case analysis elements
                         </p>
 
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📋</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Executive Summary</h4>
-                                <p class="text-xs text-gray-600">Concise overview of key issues, analysis, and recommendations for quick understanding</p>
+                        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">📋</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Executive Summary</h4>
+                                <p class="text-xs text-slate-600">Concise overview of key issues, analysis, and recommendations for quick understanding</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">🏢</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Company Background</h4>
-                                <p class="text-xs text-gray-600">Company history, business model, products/services, market position, organizational structure</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">🏢</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Company Background</h4>
+                                <p class="text-xs text-slate-600">Company history, business model, products/services, market position, organizational structure</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">❓</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Problem Identification</h4>
-                                <p class="text-xs text-gray-600">Clear definition of core issues, challenges, and decision points requiring analysis</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">❓</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Problem Identification</h4>
+                                <p class="text-xs text-slate-600">Clear definition of core issues, challenges, and decision points requiring analysis</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">🔍</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">SWOT Analysis</h4>
-                                <p class="text-xs text-gray-600">Comprehensive assessment of Strengths, Weaknesses, Opportunities, and Threats</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">🔍</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">SWOT Analysis</h4>
+                                <p class="text-xs text-slate-600">Comprehensive assessment of Strengths, Weaknesses, Opportunities, and Threats</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📊</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Industry Analysis</h4>
-                                <p class="text-xs text-gray-600">Market dynamics, competitive landscape, Porter's Five Forces, industry trends</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">📊</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Industry Analysis</h4>
+                                <p class="text-xs text-slate-600">Market dynamics, competitive landscape, Porter's Five Forces, industry trends</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">💡</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Alternative Solutions</h4>
-                                <p class="text-xs text-gray-600">Multiple strategic options with pros/cons evaluation for each alternative</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">💡</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Alternative Solutions</h4>
+                                <p class="text-xs text-slate-600">Multiple strategic options with pros/cons evaluation for each alternative</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">🎯</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Recommendations</h4>
-                                <p class="text-xs text-gray-600">Selected strategy with clear justification, expected outcomes, and strategic fit</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">🎯</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Recommendations</h4>
+                                <p class="text-xs text-slate-600">Selected strategy with clear justification, expected outcomes, and strategic fit</p>
                             </div>
 
-                            <div class="bg-white rounded-xl p-5 shadow-sm">
-                                <div class="text-3xl mb-2">📅</div>
-                                <h4 class="font-bold text-gray-900 mb-2 text-sm">Implementation Plan</h4>
-                                <p class="text-xs text-gray-600">Action steps, timeline, resource requirements, responsibilities, and milestones</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <div class="text-2xl mb-2">📅</div>
+                                <h4 class="font-bold text-slate-900 mb-1 text-sm">Implementation Plan</h4>
+                                <p class="text-xs text-slate-600">Action steps, timeline, resource requirements, responsibilities, and milestones</p>
                             </div>
                         </div>
 
-                        <div class="mt-8 bg-white rounded-xl p-6 border-l-4 border-blue-600">
-                            <p class="text-gray-700 leading-relaxed">
-                                <strong>Business Writing Excellence:</strong> Every case study analysis is written with professional business communication style, executive-level clarity, logical structure, smooth transitions between sections, appropriate business terminology, objective analytical tone, evidence-based arguments, and properly cited sources from business literature, industry reports, and company information. We balance theoretical frameworks with practical business insights.
+                        <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6 border-l-4 border-l-blue-600">
+                            <p class="text-sm leading-relaxed text-slate-600">
+                                <strong class="text-slate-900">Business Writing Excellence:</strong> Every case study analysis is written with professional business communication style, executive-level clarity, logical structure, smooth transitions between sections, appropriate business terminology, objective analytical tone, evidence-based arguments, and properly cited sources from business literature, industry reports, and company information. We balance theoretical frameworks with practical business insights.
                             </p>
                         </div>
                     </div>
 
                     <!-- Transparent Pricing -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Case Study Analysis Pricing</h2>
-                        <p class="text-center text-gray-600 mb-8">Professional rates for business case study analysis</p>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2 text-center">Case Study Analysis Pricing</h2>
+                        <p class="text-center text-sm text-slate-600 mb-6">Professional rates for business case study analysis</p>
 
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
+                        <div class="overflow-x-auto rounded-xl border border-slate-200">
+                            <table class="w-full text-left border-collapse text-sm">
                                 <thead>
-                                    <tr class="bg-gray-100">
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">Service Level</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">96+ Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">72 Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">48 Hours</th>
-                                        <th class="p-4 border-b-2 border-gray-300 font-bold text-gray-900">24 Hours</th>
+                                    <tr class="bg-slate-50">
+                                        <th class="p-4 border-b border-slate-200 font-bold text-slate-900">Service Level</th>
+                                        <th class="p-4 border-b border-slate-200 font-bold text-slate-900">96+ Hours</th>
+                                        <th class="p-4 border-b border-slate-200 font-bold text-slate-900">72 Hours</th>
+                                        <th class="p-4 border-b border-slate-200 font-bold text-slate-900">48 Hours</th>
+                                        <th class="p-4 border-b border-slate-200 font-bold text-slate-900">24 Hours</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 border-b border-gray-200 font-semibold">Undergraduate</td>
-                                        <td class="p-4 border-b border-gray-200">$20/page</td>
-                                        <td class="p-4 border-b border-gray-200">$24/page</td>
-                                        <td class="p-4 border-b border-gray-200">$28/page</td>
-                                        <td class="p-4 border-b border-gray-200">$35/page</td>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-4 border-b border-slate-200 font-semibold text-slate-700">Undergraduate</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$20/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$24/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$28/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$35/page</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 border-b border-gray-200 font-semibold">Graduate/MBA</td>
-                                        <td class="p-4 border-b border-gray-200">$28/page</td>
-                                        <td class="p-4 border-b border-gray-200">$35/page</td>
-                                        <td class="p-4 border-b border-gray-200">$42/page</td>
-                                        <td class="p-4 border-b border-gray-200">$50/page</td>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-4 border-b border-slate-200 font-semibold text-slate-700">Graduate/MBA</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$28/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$35/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$42/page</td>
+                                        <td class="p-4 border-b border-slate-200 text-slate-600">$50/page</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 font-semibold">Executive MBA</td>
-                                        <td class="p-4">$38/page</td>
-                                        <td class="p-4">$45/page</td>
-                                        <td class="p-4">$55/page</td>
-                                        <td class="p-4">$65/page</td>
+                                    <tr class="hover:bg-slate-50">
+                                        <td class="p-4 font-semibold text-slate-700">Executive MBA</td>
+                                        <td class="p-4 text-slate-600">$38/page</td>
+                                        <td class="p-4 text-slate-600">$45/page</td>
+                                        <td class="p-4 text-slate-600">$55/page</td>
+                                        <td class="p-4 text-slate-600">$65/page</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <div class="mt-6 grid md:grid-cols-3 gap-4">
-                            <div class="bg-green-50 rounded-lg p-4 border border-green-200">
-                                <h4 class="font-bold text-green-900 mb-2">✓ What's Included</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                        <div class="mt-5 grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                                <h4 class="font-bold text-emerald-900 mb-2 text-sm">✓ What's Included</h4>
+                                <ul class="text-xs text-slate-600 space-y-1">
                                     <li>• Complete case study analysis</li>
                                     <li>• SWOT & strategic frameworks</li>
                                     <li>• Financial analysis (if required)</li>
@@ -348,9 +347,9 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                                <h4 class="font-bold text-blue-900 mb-2">🎁 Add-On Services</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                            <div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
+                                <h4 class="font-bold text-blue-900 mb-2 text-sm">🎁 Add-On Services</h4>
+                                <ul class="text-xs text-slate-600 space-y-1">
                                     <li>• PowerPoint presentation slides</li>
                                     <li>• Executive summary one-pager</li>
                                     <li>• Additional frameworks (PESTEL, etc.)</li>
@@ -360,9 +359,9 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                                <h4 class="font-bold text-purple-900 mb-2">📏 Page Specifications</h4>
-                                <ul class="text-sm text-gray-700 space-y-1">
+                            <div class="rounded-xl border border-purple-200 bg-purple-50 p-4">
+                                <h4 class="font-bold text-purple-900 mb-2 text-sm">📏 Page Specifications</h4>
+                                <ul class="text-xs text-slate-600 space-y-1">
                                     <li>• 1 page = 250 words (double-spaced)</li>
                                     <li>• Tables & charts included</li>
                                     <li>• References not counted separately</li>
@@ -374,314 +373,314 @@
                     </div>
 
                     <!-- FAQ Section -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200" itemscope itemtype="https://schema.org/FAQPage">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm" itemscope itemtype="https://schema.org/FAQPage">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-6 text-center">
                             Case Study Analysis FAQs
                         </h2>
 
-                        <div class="space-y-6">
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">What information do I need to provide for my case study analysis?</h3>
+                        <div class="space-y-4">
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">What information do I need to provide for my case study analysis?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Share the case study document (PDF, Word file, or textbook reference), specific questions you need to answer, required analytical frameworks (SWOT, PESTEL, Porter's Five Forces, etc.) from your course syllabus, page length or word count requirements, citation style (APA, Harvard, Chicago), deadline, and any specific instructions from your professor. If you have access to additional company information, financial statements, or industry reports, those are helpful but not required. We can conduct additional research as needed. The more details you provide about your course requirements and professor's expectations, the better we can tailor the analysis.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Share the case study document (PDF, Word file, or textbook reference), specific questions you need to answer, required analytical frameworks (SWOT, PESTEL, Porter's Five Forces, etc.) from your course syllabus, page length or word count requirements, citation style (APA, Harvard, Chicago), deadline, and any specific instructions from your professor. If you have access to additional company information, financial statements, or industry reports, those are helpful but not required. We can conduct additional research as needed. The more details you provide about your course requirements and professor's expectations, the better we can tailor the analysis.</p>
                                 </div>
                             </div>
 
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">What business frameworks do you use in case study analysis?</h3>
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">What business frameworks do you use in case study analysis?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">We apply a comprehensive range of strategic management frameworks depending on your case requirements. SWOT Analysis identifies internal strengths/weaknesses and external opportunities/threats. PESTEL Analysis examines Political, Economic, Social, Technological, Environmental, and Legal factors. Porter's Five Forces evaluates industry competitiveness. Value Chain Analysis assesses operational efficiency and competitive advantage. BCG Matrix analyzes business portfolio. Ansoff Matrix explores growth strategies. Resource-Based View examines strategic resources and capabilities. We also use financial analysis frameworks including ratio analysis, break-even analysis, NPV/IRR for investment decisions, and various other tools appropriate for your specific case situation and academic requirements.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">We apply a comprehensive range of strategic management frameworks depending on your case requirements. SWOT Analysis identifies internal strengths/weaknesses and external opportunities/threats. PESTEL Analysis examines Political, Economic, Social, Technological, Environmental, and Legal factors. Porter's Five Forces evaluates industry competitiveness. Value Chain Analysis assesses operational efficiency and competitive advantage. BCG Matrix analyzes business portfolio. Ansoff Matrix explores growth strategies. Resource-Based View examines strategic resources and capabilities. We also use financial analysis frameworks including ratio analysis, break-even analysis, NPV/IRR for investment decisions, and various other tools appropriate for your specific case situation and academic requirements.</p>
                                 </div>
                             </div>
 
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Can you handle industry-specific case studies?</h3>
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">Can you handle industry-specific case studies?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Yes! Our team includes business analysts with expertise across diverse industries including technology, retail, healthcare, financial services, manufacturing, hospitality, energy, automotive, telecommunications, media, pharmaceuticals, logistics, real estate, and more. We have experience analyzing cases from various sectors and understand industry-specific dynamics, competitive landscapes, regulatory environments, and business models. Whether your case involves a tech startup disrupting traditional industries, a retail company adapting to e-commerce, a healthcare organization managing regulatory changes, or a manufacturing firm implementing lean operations, we have the industry knowledge to provide insightful analysis grounded in sector-specific understanding.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Yes! Our team includes business analysts with expertise across diverse industries including technology, retail, healthcare, financial services, manufacturing, hospitality, energy, automotive, telecommunications, media, pharmaceuticals, logistics, real estate, and more. We have experience analyzing cases from various sectors and understand industry-specific dynamics, competitive landscapes, regulatory environments, and business models. Whether your case involves a tech startup disrupting traditional industries, a retail company adapting to e-commerce, a healthcare organization managing regulatory changes, or a manufacturing firm implementing lean operations, we have the industry knowledge to provide insightful analysis grounded in sector-specific understanding.</p>
                                 </div>
                             </div>
 
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Do you provide financial analysis for case studies?</h3>
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">Do you provide financial analysis for case studies?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Absolutely. When cases include financial data or require financial evaluation, we perform comprehensive financial analysis. This includes calculating and interpreting financial ratios (liquidity ratios like current ratio and quick ratio, profitability ratios like ROA, ROE, and profit margins, efficiency ratios like asset turnover and inventory turnover, and leverage ratios like debt-to-equity). We conduct trend analysis comparing financial performance across multiple years, break-even analysis for pricing and volume decisions, NPV and IRR calculations for capital investment decisions, cost-benefit analysis, sensitivity analysis showing impact of changing assumptions, and financial projections with reasonable assumptions. All calculations are accurate, clearly presented in tables, and thoroughly interpreted with business implications discussed in context of strategic recommendations.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Absolutely. When cases include financial data or require financial evaluation, we perform comprehensive financial analysis. This includes calculating and interpreting financial ratios (liquidity ratios like current ratio and quick ratio, profitability ratios like ROA, ROE, and profit margins, efficiency ratios like asset turnover and inventory turnover, and leverage ratios like debt-to-equity). We conduct trend analysis comparing financial performance across multiple years, break-even analysis for pricing and volume decisions, NPV and IRR calculations for capital investment decisions, cost-benefit analysis, sensitivity analysis showing impact of changing assumptions, and financial projections with reasonable assumptions. All calculations are accurate, clearly presented in tables, and thoroughly interpreted with business implications discussed in context of strategic recommendations.</p>
                                 </div>
                             </div>
 
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">How do you develop strategic recommendations?</h3>
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">How do you develop strategic recommendations?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Our recommendations follow a systematic process. First, we thoroughly analyze the case situation using appropriate frameworks to understand problems, opportunities, constraints, and strategic options. Second, we identify and evaluate multiple alternative solutions, examining pros and cons, feasibility, resource requirements, and strategic fit for each option. Third, we select the most appropriate recommendation based on analysis, strategic alignment, and practical feasibility. Fourth, we provide clear justification explaining why this recommendation addresses the identified problems, leverages opportunities, fits organizational capabilities, and creates competitive advantage. Finally, we develop an implementation plan specifying concrete action steps, timeline with milestones, resource allocation, responsibilities, success metrics, and potential challenges with mitigation strategies. Recommendations are practical, actionable, and grounded in both analysis and business theory.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Our recommendations follow a systematic process. First, we thoroughly analyze the case situation using appropriate frameworks to understand problems, opportunities, constraints, and strategic options. Second, we identify and evaluate multiple alternative solutions, examining pros and cons, feasibility, resource requirements, and strategic fit for each option. Third, we select the most appropriate recommendation based on analysis, strategic alignment, and practical feasibility. Fourth, we provide clear justification explaining why this recommendation addresses the identified problems, leverages opportunities, fits organizational capabilities, and creates competitive advantage. Finally, we develop an implementation plan specifying concrete action steps, timeline with milestones, resource allocation, responsibilities, success metrics, and potential challenges with mitigation strategies. Recommendations are practical, actionable, and grounded in both analysis and business theory.</p>
                                 </div>
                             </div>
 
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-gray-50 rounded-lg p-6">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3" itemprop="name">Can you create PowerPoint presentations for case study presentations?</h3>
+                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6">
+                                <h3 class="text-base font-bold text-slate-900 mb-2" itemprop="name">Can you create PowerPoint presentations for case study presentations?</h3>
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-gray-700 leading-relaxed" itemprop="text">Yes! Many MBA and business courses require case study presentations in addition to written analysis. We can create professional PowerPoint presentations summarizing your case analysis with clear structure, executive summary, problem identification, key findings from frameworks (SWOT, Porter's Five Forces, etc.), strategic recommendations with justification, implementation plan, and conclusion. Slides include professional design, clear bullet points, charts and graphs visualizing data and analysis, appropriate business graphics, and speaker notes for each slide to guide your presentation. Presentations follow best practices for business communication with clean layouts, readable fonts, logical flow, and appropriate use of visuals to support your narrative. This add-on service helps you confidently present your case analysis to your class or professor.</p>
+                                    <p class="text-sm leading-relaxed text-slate-600" itemprop="text">Yes! Many MBA and business courses require case study presentations in addition to written analysis. We can create professional PowerPoint presentations summarizing your case analysis with clear structure, executive summary, problem identification, key findings from frameworks (SWOT, Porter's Five Forces, etc.), strategic recommendations with justification, implementation plan, and conclusion. Slides include professional design, clear bullet points, charts and graphs visualizing data and analysis, appropriate business graphics, and speaker notes for each slide to guide your presentation. Presentations follow best practices for business communication with clean layouts, readable fonts, logical flow, and appropriate use of visuals to support your narrative. This add-on service helps you confidently present your case analysis to your class or professor.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Student Success Stories -->
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 mb-8 border border-blue-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-6 text-center">
                             Business Student Success Stories
                         </h2>
 
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "My Netflix case study analysis was outstanding! The competitive analysis using Porter's Five Forces was thorough, the SWOT was insightful, and the strategic recommendations for international expansion were well-justified with industry data. My MBA professor praised the depth of analysis. Got an A!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         TB
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Thomas B.</p>
-                                        <p class="text-sm text-gray-600">MBA, Strategy Course</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Thomas B.</p>
+                                        <p class="text-xs text-slate-500">MBA, Strategy Course</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "Tesla case study required financial analysis which I struggle with. The analyst calculated all ratios correctly, performed valuation analysis, and connected financial performance to strategic decisions beautifully. The implementation plan was detailed and practical. Excellent service!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         ND
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Nicole D.</p>
-                                        <p class="text-sm text-gray-600">Business Administration, Senior</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Nicole D.</p>
+                                        <p class="text-xs text-slate-500">Business Administration, Senior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "Starbucks international expansion case was complex with so many strategic considerations. The analysis covered market entry modes, competitive landscape in emerging markets, and cultural adaptation strategies. Recommendations were backed by solid evidence. My professor was impressed!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         KP
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Kevin P.</p>
-                                        <p class="text-sm text-gray-600">International Business, MBA</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Kevin P.</p>
+                                        <p class="text-xs text-slate-500">International Business, MBA</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "Healthcare management case on hospital operations was challenging. The analyst understood healthcare industry complexities, regulatory environment, and operational challenges perfectly. SWOT analysis was spot-on and recommendations addressed patient care quality while maintaining financial sustainability."
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         RM
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Rachel M.</p>
-                                        <p class="text-sm text-gray-600">Healthcare Administration, Graduate</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Rachel M.</p>
+                                        <p class="text-xs text-slate-500">Healthcare Administration, Graduate</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "Amazon vs Walmart competitive case required deep retail industry knowledge. The analysis compared business models, supply chain strategies, and digital transformation approaches brilliantly. Alternative strategies were evaluated thoroughly. Plus got a great PowerPoint presentation for my class presentation!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         JL
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">James L.</p>
-                                        <p class="text-sm text-gray-600">Marketing Management, MBA</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">James L.</p>
+                                        <p class="text-xs text-slate-500">Marketing Management, MBA</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
                                         <meta itemprop="bestRating" content="5">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
                                     "Startup case study on fintech company required understanding of innovation, disruption theory, and venture capital considerations. The analyst demonstrated excellent entrepreneurship knowledge. PESTEL analysis covered regulatory challenges beautifully. Implementation plan was realistic and actionable. Highly recommend!"
                                 </p>
                                 <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="w-9 h-9 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         SC
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Sarah C.</p>
-                                        <p class="text-sm text-gray-600">Entrepreneurship, Graduate Student</p>
+                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Sarah C.</p>
+                                        <p class="text-xs text-slate-500">Entrepreneurship, Graduate Student</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-8 text-center">
-                            <div class="inline-flex items-center bg-white rounded-lg px-6 py-4 shadow-md">
-                                <div class="text-4xl font-black text-gray-900 mr-4">4.88/5.0</div>
+                        <div class="mt-6 text-center">
+                            <div class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-5 py-3 shadow-sm">
+                                <div class="text-2xl font-bold text-slate-900 mr-4">4.88/5.0</div>
                                 <div class="text-left">
-                                    <div class="flex text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
-                                    <p class="text-sm text-gray-600">Based on 3,200+ case study reviews</p>
+                                    <div class="flex text-amber-400 text-sm mb-0.5">⭐⭐⭐⭐⭐</div>
+                                    <p class="text-xs text-slate-600">Based on 3,200+ case study reviews</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- USA MBA Programs Section -->
-                    <div class="bg-gradient-to-br from-red-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border-2 border-gray-200">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4 text-center">
                             🇺🇸 Case Study Analysis for USA MBA & Business Programs
                         </h2>
-                        <p class="text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
-                            Specialized in <strong>Harvard Business School case method</strong>, Wharton MBA cases, Stanford GSB analysis, and case studies from top US business schools. Our analysts understand US business frameworks, corporate governance standards, and American management practices.
+                        <p class="text-sm leading-relaxed text-slate-600 mb-6 text-center max-w-2xl mx-auto">
+                            Specialized in <strong class="text-slate-900 font-semibold">Harvard Business School case method</strong>, Wharton MBA cases, Stanford GSB analysis, and case studies from top US business schools. Our analysts understand US business frameworks, corporate governance standards, and American management practices.
                         </p>
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-lg p-6">
-                                <h3 class="font-bold text-gray-900 mb-2">🎓 US Business Schools</h3>
-                                <p class="text-sm text-gray-700">Expert with Harvard, Wharton, Stanford, Kellogg, MIT Sloan, Columbia, Chicago Booth case studies</p>
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h3 class="font-bold text-slate-900 mb-1 text-sm">🎓 US Business Schools</h3>
+                                <p class="text-xs text-slate-600">Expert with Harvard, Wharton, Stanford, Kellogg, MIT Sloan, Columbia, Chicago Booth case studies</p>
                             </div>
-                            <div class="bg-white rounded-lg p-6">
-                                <h3 class="font-bold text-gray-900 mb-2">📊 US Business Context</h3>
-                                <p class="text-sm text-gray-700">Understanding of US markets, regulations, corporate culture, and competitive dynamics</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h3 class="font-bold text-slate-900 mb-1 text-sm">📊 US Business Context</h3>
+                                <p class="text-xs text-slate-600">Understanding of US markets, regulations, corporate culture, and competitive dynamics</p>
                             </div>
-                            <div class="bg-white rounded-lg p-6">
-                                <h3 class="font-bold text-gray-900 mb-2">💰 From $30/page</h3>
-                                <p class="text-sm text-gray-700">Competitive pricing for US MBA students with 15% first-order discount</p>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                                <h3 class="font-bold text-slate-900 mb-1 text-sm">💰 From $30/page</h3>
+                                <p class="text-xs text-slate-600">Competitive pricing for US MBA students with 15% first-order discount</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- How to Analyze Case Study -->
-                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 mb-8 border border-yellow-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">How to Analyze a Business Case Study</h2>
-                        <div class="bg-white rounded-lg p-6" itemscope itemtype="https://schema.org/HowTo">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4" itemprop="name">8-Step Case Study Analysis Framework</h3>
-                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
-                                <li itemprop="text"><strong>Read thoroughly</strong> - Understand company situation, industry, and stakeholders</li>
-                                <li itemprop="text"><strong>Identify key problems</strong> - Distinguish symptoms from root causes</li>
-                                <li itemprop="text"><strong>Conduct SWOT analysis</strong> - Internal strengths/weaknesses, external opportunities/threats</li>
-                                <li itemprop="text"><strong>Apply strategic frameworks</strong> - Porter's Five Forces, PESTEL, Value Chain, BCG Matrix</li>
-                                <li itemprop="text"><strong>Analyze financials</strong> - Review ratios, profitability, cash flow, break-even</li>
-                                <li itemprop="text"><strong>Generate alternatives</strong> - Develop 2-3 strategic options with pros/cons</li>
-                                <li itemprop="text"><strong>Make recommendations</strong> - Choose best option with clear justification</li>
-                                <li itemprop="text"><strong>Create implementation plan</strong> - Specific actions, timeline, responsibilities, metrics</li>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4 text-center">How to Analyze a Business Case Study</h2>
+                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6" itemscope itemtype="https://schema.org/HowTo">
+                            <h3 class="text-base font-bold text-slate-900 mb-3" itemprop="name">8-Step Case Study Analysis Framework</h3>
+                            <ol class="list-decimal list-inside text-sm leading-relaxed text-slate-600 space-y-2">
+                                <li itemprop="text"><strong class="text-slate-900">Read thoroughly</strong> - Understand company situation, industry, and stakeholders</li>
+                                <li itemprop="text"><strong class="text-slate-900">Identify key problems</strong> - Distinguish symptoms from root causes</li>
+                                <li itemprop="text"><strong class="text-slate-900">Conduct SWOT analysis</strong> - Internal strengths/weaknesses, external opportunities/threats</li>
+                                <li itemprop="text"><strong class="text-slate-900">Apply strategic frameworks</strong> - Porter's Five Forces, PESTEL, Value Chain, BCG Matrix</li>
+                                <li itemprop="text"><strong class="text-slate-900">Analyze financials</strong> - Review ratios, profitability, cash flow, break-even</li>
+                                <li itemprop="text"><strong class="text-slate-900">Generate alternatives</strong> - Develop 2-3 strategic options with pros/cons</li>
+                                <li itemprop="text"><strong class="text-slate-900">Make recommendations</strong> - Choose best option with clear justification</li>
+                                <li itemprop="text"><strong class="text-slate-900">Create implementation plan</strong> - Specific actions, timeline, responsibilities, metrics</li>
                             </ol>
                         </div>
                     </div>
 
                     <!-- Industry-Specific Case Studies -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Case Study Analysis by Industry</h2>
-                        <div class="grid md:grid-cols-4 gap-4">
-                            <div class="bg-blue-50 rounded-lg p-4 text-center">
-                                <div class="text-3xl mb-2">🏭</div>
-                                <h4 class="font-bold text-sm text-gray-900 mb-1">Manufacturing</h4>
-                                <p class="text-xs text-gray-600">Operations, supply chain, lean</p>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4 text-center">Case Study Analysis by Industry</h2>
+                        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                            <div class="rounded-xl border border-slate-200 bg-blue-50 p-4 text-center">
+                                <div class="text-2xl mb-2">🏭</div>
+                                <h4 class="font-bold text-sm text-slate-900 mb-1">Manufacturing</h4>
+                                <p class="text-xs text-slate-600">Operations, supply chain, lean</p>
                             </div>
-                            <div class="bg-green-50 rounded-lg p-4 text-center">
-                                <div class="text-3xl mb-2">💻</div>
-                                <h4 class="font-bold text-sm text-gray-900 mb-1">Technology</h4>
-                                <p class="text-xs text-gray-600">Innovation, disruption, platforms</p>
+                            <div class="rounded-xl border border-slate-200 bg-emerald-50 p-4 text-center">
+                                <div class="text-2xl mb-2">💻</div>
+                                <h4 class="font-bold text-sm text-slate-900 mb-1">Technology</h4>
+                                <p class="text-xs text-slate-600">Innovation, disruption, platforms</p>
                             </div>
-                            <div class="bg-purple-50 rounded-lg p-4 text-center">
-                                <div class="text-3xl mb-2">🏥</div>
-                                <h4 class="font-bold text-sm text-gray-900 mb-1">Healthcare</h4>
-                                <p class="text-xs text-gray-600">Policy, quality, patient care</p>
+                            <div class="rounded-xl border border-slate-200 bg-purple-50 p-4 text-center">
+                                <div class="text-2xl mb-2">🏥</div>
+                                <h4 class="font-bold text-sm text-slate-900 mb-1">Healthcare</h4>
+                                <p class="text-xs text-slate-600">Policy, quality, patient care</p>
                             </div>
-                            <div class="bg-orange-50 rounded-lg p-4 text-center">
-                                <div class="text-3xl mb-2">🏪</div>
-                                <h4 class="font-bold text-sm text-gray-900 mb-1">Retail</h4>
-                                <p class="text-xs text-gray-600">Consumer behavior, e-commerce</p>
+                            <div class="rounded-xl border border-slate-200 bg-amber-50 p-4 text-center">
+                                <div class="text-2xl mb-2">🏪</div>
+                                <h4 class="font-bold text-sm text-slate-900 mb-1">Retail</h4>
+                                <p class="text-xs text-slate-600">Consumer behavior, e-commerce</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Related Services -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Related Business Services</h2>
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <a href="{{ route('services.essay-writing.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
-                                <div class="text-4xl mb-3">✍️</div>
-                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Business Essays</h3>
-                                <p class="text-gray-700 text-sm">MBA essays, strategic management papers, organizational behavior analysis</p>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4 text-center">Related Business Services</h2>
+                        <div class="grid gap-5 sm:grid-cols-3">
+                            <a href="{{ route('services.essay-writing.index') }}" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md group">
+                                <div class="text-2xl mb-2">✍️</div>
+                                <h3 class="text-base font-bold text-blue-600 group-hover:text-blue-700 mb-1">Business Essays</h3>
+                                <p class="text-sm text-slate-600">MBA essays, strategic management papers, organizational behavior analysis</p>
                             </a>
-                            <a href="{{ route('services.research-paper.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
-                                <div class="text-4xl mb-3">📊</div>
-                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Business Research</h3>
-                                <p class="text-gray-700 text-sm">Market research, industry analysis, business strategy research papers</p>
+                            <a href="{{ route('services.research-paper.index') }}" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md group">
+                                <div class="text-2xl mb-2">📊</div>
+                                <h3 class="text-base font-bold text-purple-600 group-hover:text-purple-700 mb-1">Business Research</h3>
+                                <p class="text-sm text-slate-600">Market research, industry analysis, business strategy research papers</p>
                             </a>
-                            <a href="{{ route('services.presentation-design.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border hover:shadow-lg transition-all group">
-                                <div class="text-4xl mb-3">📽️</div>
-                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Business Presentations</h3>
-                                <p class="text-gray-700 text-sm">Case study presentations, pitch decks, executive summaries</p>
+                            <a href="{{ route('services.presentation-design.index') }}" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md group">
+                                <div class="text-2xl mb-2">📽️</div>
+                                <h3 class="text-base font-bold text-emerald-600 group-hover:text-emerald-700 mb-1">Business Presentations</h3>
+                                <p class="text-sm text-slate-600">Case study presentations, pitch decks, executive summaries</p>
                             </a>
                         </div>
                     </div>
 
                     <!-- Final CTA -->
-                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-                            <span class="text-3xl mr-3">💼</span>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 flex items-center justify-center gap-2">
+                            <span class="text-xl">💼</span>
                             Ready for Expert Case Study Analysis?
                         </h3>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
+                        <p class="text-sm leading-relaxed text-slate-600 mb-5 text-center max-w-2xl mx-auto">
                             Join thousands of business students who've achieved top grades with our professional case study analysis service. MBA-qualified analysts, comprehensive frameworks, strategic insights, financial expertise, and actionable recommendations. Your business education success starts here.
                         </p>
                         <div class="text-center">
                             <a href="{{ route('order', ['assignment_service' => $service->id ?? 6]) }}"
-                               class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                <span class="mr-2">📝</span>
+                               class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
+                                <span>📝</span>
                                 Order Your Case Study Analysis Today
-                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </a>
                         </div>
@@ -692,14 +691,14 @@
     </section>
 
     <!-- Common Case Study Mistakes -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Case Study Mistakes That Cost Business Students Marks</h2>
-                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our MBA analysts see these errors in nearly every student case study they review.</p>
+    <section class="py-14 sm:py-16 bg-slate-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block bg-red-50 text-red-700 text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">What to Avoid</span>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-3">6 Case Study Mistakes That Cost Business Students Marks</h2>
+                <p class="text-slate-600 text-base max-w-2xl mx-auto">Our MBA analysts see these errors in nearly every student case study they review.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid gap-5 sm:grid-cols-2">
                 @php
                 $mistakes = [
                     ['title' => 'Describing the Company Instead of Analysing It', 'desc' => 'A case study is not a company profile. Students lose marks by spending too much of their word count summarising what the company does. The analysis — what went wrong, why, and what should change — is where the marks are.'],
@@ -711,15 +710,15 @@
                 ];
                 @endphp
                 @foreach($mistakes as $m)
-                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
-                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                <div class="flex gap-4 p-5 rounded-xl border border-slate-200 bg-white hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
+                    <div class="flex-shrink-0 w-8 h-8 bg-red-50 rounded-full flex items-center justify-center mt-0.5">
                         <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                        <h3 class="font-bold text-slate-900 mb-1 text-sm">{{ $m['title'] }}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
                     </div>
                 </div>
                 @endforeach
@@ -728,14 +727,14 @@
     </section>
 
     <!-- Meet Our Case Study Analysts -->
-    <section class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Analysts</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">MBA Analysts Behind Your Case Study</h2>
-                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Our case study experts combine academic credentials with real-world business experience.</p>
+    <section class="py-14 sm:py-16 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block bg-purple-50 text-purple-700 text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">Our Analysts</span>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-3">MBA Analysts Behind Your Case Study</h2>
+                <p class="text-slate-600 text-base max-w-2xl mx-auto">Our case study experts combine academic credentials with real-world business experience.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid gap-5 sm:grid-cols-3">
                 @php
                 $analysts = [
                     ['name' => 'David Kingsford', 'degree' => 'MBA, Strategy — Harvard Business School', 'speciality' => 'Corporate Strategy, Competitive Analysis, Tech Industry Case Studies', 'orders' => '620+', 'rating' => '4.97', 'avatar' => 'DK', 'color' => 'purple'],
@@ -744,23 +743,23 @@
                 ];
                 @endphp
                 @foreach($analysts as $a)
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 rounded-full flex items-center justify-center font-black text-white text-lg bg-{{ $a['color'] }}-500">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center font-bold text-white text-base bg-{{ $a['color'] }}-500">
                             {{ $a['avatar'] }}
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-900">{{ $a['name'] }}</h3>
-                            <div class="flex items-center gap-1 text-sm text-yellow-500">
-                                ★★★★★ <span class="text-gray-500 ml-1">{{ $a['rating'] }}</span>
+                            <h3 class="font-bold text-slate-900 text-sm">{{ $a['name'] }}</h3>
+                            <div class="flex items-center gap-1 text-xs text-amber-500">
+                                ★★★★★ <span class="text-slate-500 ml-1">{{ $a['rating'] }}</span>
                             </div>
                         </div>
                     </div>
                     <p class="text-xs text-purple-700 font-semibold mb-2">{{ $a['degree'] }}</p>
-                    <p class="text-sm text-gray-600 mb-4 leading-relaxed"><strong>Specialises in:</strong> {{ $a['speciality'] }}</p>
-                    <div class="flex items-center justify-between text-sm pt-3 border-t border-gray-100">
-                        <span class="text-gray-500">{{ $a['orders'] }} cases completed</span>
-                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Available</span>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed"><strong class="text-slate-900">Specialises in:</strong> {{ $a['speciality'] }}</p>
+                    <div class="flex items-center justify-between text-xs pt-3 border-t border-slate-100">
+                        <span class="text-slate-500">{{ $a['orders'] }} cases completed</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-1 rounded-full">Available</span>
                     </div>
                 </div>
                 @endforeach
@@ -769,13 +768,13 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">FAQ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Case Study Help — Frequently Asked Questions</h2>
+    <section class="py-14 sm:py-16 bg-slate-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block bg-slate-100 text-slate-700 text-[11px] font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3">FAQ</span>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Case Study Help — Frequently Asked Questions</h2>
             </div>
-            <div class="space-y-4" x-data="{ open: null }">
+            <div class="space-y-3" x-data="{ open: null }">
                 @php
                 $faqs = [
                     ['q' => 'What business frameworks do you use in case studies?', 'a' => 'Our analysts apply the frameworks most appropriate to your specific case and rubric — including SWOT, PESTEL, Porter\'s Five Forces, Value Chain Analysis, BCG Matrix, McKinsey 7S, Balanced Scorecard, and financial ratio analysis. We always justify our framework selection rather than applying templates mechanically.'],
@@ -787,20 +786,20 @@
                 ];
                 @endphp
                 @foreach($faqs as $i => $faq)
-                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
                     <button
-                        @click="open = open === {{ $i }} ? null : {{ $i }}"
-                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-slate-50 transition-colors"
                         :class="open === {{ $i }} ? 'bg-purple-50' : 'bg-white'">
-                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
-                        <svg class="w-5 h-5 text-purple-600 flex-shrink-0 transition-transform duration-200"
+                        <span class="font-semibold text-sm text-slate-900 pr-4">{{ $faq['q'] }}</span>
+                        <svg class="w-4 h-4 text-purple-600 flex-shrink-0 transition-transform duration-200"
                             :class="open === {{ $i }} ? 'rotate-180' : ''"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
-                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-purple-50">
-                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-4 bg-purple-50">
+                        <p class="text-sm leading-relaxed text-slate-600">{{ $faq['a'] }}</p>
                     </div>
                 </div>
                 @endforeach

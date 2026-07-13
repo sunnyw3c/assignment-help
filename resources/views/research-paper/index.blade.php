@@ -24,14 +24,14 @@
    
 @section('custom-content')
     <!-- Comprehensive Research Paper Content Section -->
-    <section class="py-20 bg-white" itemscope itemtype="https://schema.org/Service">
-        <div class="container mx-auto px-4">
+    <section class="py-14 sm:py-16 bg-white" itemscope itemtype="https://schema.org/Service">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-black text-gray-900 mb-6" itemprop="name">Professional Research Paper Writing
+                <div class="text-center mb-10 sm:mb-12">
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4" itemprop="name">Professional Research Paper Writing
                         Service</h1>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" itemprop="description">
+                    <div class="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto" itemprop="description">
                         Get expert research paper help from PhD-qualified researchers. Original, well-researched papers with
                         proper methodology, citations, and academic rigor.
                     </p>
@@ -958,7 +958,7 @@
 
                         <div class="mt-8 text-center">
                             <div class="inline-flex items-center bg-white rounded-lg px-6 py-4 shadow-md">
-                                <div class="text-4xl font-black text-gray-900 mr-4">4.9/5.0</div>
+                                <div class="text-3xl font-bold text-gray-900 mr-4">4.9/5.0</div>
                                 <div class="text-left">
                                     <div class="flex text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
                                     <p class="text-sm text-gray-600">Based on 500+ research paper reviews</p>
@@ -1288,12 +1288,12 @@
     </section>
 
     <!-- Common Research Paper Mistakes -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">What to Avoid</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">6 Research Paper Mistakes That Undermine Your Grade</h2>
-                <p class="text-gray-500 text-lg max-w-2xl mx-auto">These are the errors our researchers fix most often when students send us draft papers to improve.</p>
+    <section class="py-14 sm:py-16 bg-white">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block bg-red-100 text-red-700 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">What to Avoid</span>
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-3">6 Research Paper Mistakes That Undermine Your Grade</h2>
+                <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">These are the errors our researchers fix most often when students send us draft papers to improve.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 @php
@@ -1324,14 +1324,14 @@
     </section>
 
     <!-- Meet Our Researchers -->
-    <section class="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-green-100 text-green-700 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Our Researchers</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">PhD Researchers Who Write Your Paper</h2>
-                <p class="text-gray-500 text-lg max-w-2xl mx-auto">All research paper writers hold doctoral qualifications and active publishing records in their disciplines.</p>
+    <section class="py-14 sm:py-16 bg-emerald-50">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="inline-block bg-green-100 text-green-700 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Our Researchers</span>
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-3">PhD Researchers Who Write Your Paper</h2>
+                <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">All research paper writers hold doctoral qualifications and active publishing records in their disciplines.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-5">
                 @php
                 $researchers = [
                     ['name' => 'Dr. Marcus Webb', 'degree' => 'PhD, Economics — University of Oxford', 'speciality' => 'Quantitative Research, Econometrics, Business & Finance Papers', 'orders' => '780+', 'rating' => '4.98', 'avatar' => 'MW', 'color' => 'green'],
@@ -1342,7 +1342,7 @@
                 @foreach($researchers as $r)
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 rounded-full flex items-center justify-center font-black text-white text-lg bg-{{ $r['color'] }}-500">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-white text-base bg-{{ $r['color'] }}-500">
                             {{ $r['avatar'] }}
                         </div>
                         <div>

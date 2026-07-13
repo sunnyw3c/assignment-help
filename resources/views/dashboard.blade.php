@@ -152,7 +152,7 @@
                     
                     <div class="flex bg-slate-100 p-1 rounded-xl overflow-x-auto max-w-full">
                         <template x-for="t in ['all', 'new', 'assigned', 'in progress', 'completed']">
-                            <button @click="filter = t" 
+                            <button x-on:click="filter = t" 
                                 :class="filter === t ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
                                 class="px-4 py-2 rounded-lg text-sm font-bold capitalize transition-all whitespace-nowrap"
                                 x-text="t">
@@ -234,7 +234,7 @@
                                     </td>
                                     <td class="px-8 py-6 text-right">
                                         <div class="flex items-center justify-end gap-2">
-                                            <button @click="openMessaging(assignment)" class="p-2 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all">
+                                            <button x-on:click="openMessaging(assignment)" class="p-2 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
                                             </button>
                                             <a :href="'/dashboard/' + assignment.order_number" class="p-2 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">
@@ -255,7 +255,7 @@
                         <template x-if="apiError">
                             <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 font-bold inline-block animate-shake">
                                 ⚠️ <span x-text="apiError"></span>
-                                <button @click="fetchAssignments()" class="ml-4 text-red-800 underline hover:text-red-900">Retry</button>
+                                <button x-on:click="fetchAssignments()" class="ml-4 text-red-800 underline hover:text-red-900">Retry</button>
                             </div>
                         </template>
                         <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl opacity-50">📂</div>
@@ -289,7 +289,7 @@
              style="display: none;">
             <div class="absolute inset-0 overflow-hidden">
                 <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity" 
-                     @click="showMessaging = false"
+                     x-on:click="showMessaging = false"
                      x-show="showMessaging"
                      x-transition:enter="ease-in-out duration-500"
                      x-transition:enter-start="opacity-0"
@@ -315,7 +315,7 @@
                                         Messaging Panel<br>
                                         <span class="text-indigo-100 text-sm font-bold opacity-80" x-text="activeAssignment ? '#' + activeAssignment.order_number : ''"></span>
                                     </h2>
-                                    <button @click="showMessaging = false" class="text-indigo-200 hover:text-white transition-colors">
+                                    <button x-on:click="showMessaging = false" class="text-indigo-200 hover:text-white transition-colors">
                                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                                     </button>
                                 </div>
@@ -359,7 +359,7 @@
                                               @keydown.enter.prevent="sendMessage()"
                                               placeholder="Type your message..." 
                                               class="flex-1 bg-white border-slate-200 rounded-2xl p-4 text-sm font-medium focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all resize-none h-14"></textarea>
-                                    <button @click="sendMessage()" 
+                                    <button x-on:click="sendMessage()" 
                                             class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center hover:bg-slate-900 transition-all shadow-lg shadow-indigo-200 active:scale-95">
                                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                                     </button>

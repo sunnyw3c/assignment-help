@@ -149,7 +149,7 @@
                         @foreach($category['questions'] as $questionIndex => $faq)
                             <div class="group" x-data="{ open: false }" data-faq-item>
                                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-2 @if($category['color'] == 'blue') border-blue-100 hover:border-blue-300 @elseif($category['color'] == 'green') border-green-100 hover:border-green-300 @elseif($category['color'] == 'purple') border-purple-100 hover:border-purple-300 @elseif($category['color'] == 'orange') border-orange-100 hover:border-orange-300 @elseif($category['color'] == 'indigo') border-indigo-100 hover:border-indigo-300 @else border-pink-100 hover:border-pink-300 @endif dark:bg-slate-900 dark:border-blue-900/50 dark:border-purple-900/50 dark:border-orange-900/50">
-                                    <button @click="open = !open"
+                                    <button x-on:click="open = !open"
                                             class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 dark:hover:bg-slate-800/50">
                                         <div class="flex items-center flex-1">
                                             <div class="w-12 h-12 bg-gradient-to-br @if($category['color'] == 'blue') from-blue-500 to-blue-600 @elseif($category['color'] == 'green') from-green-500 to-green-600 @elseif($category['color'] == 'purple') from-purple-500 to-purple-600 @elseif($category['color'] == 'orange') from-orange-500 to-orange-600 @elseif($category['color'] == 'indigo') from-indigo-500 to-indigo-600 @else from-pink-500 to-pink-600 @endif rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -282,22 +282,22 @@
 
     <!-- Custom Animations -->
     <style>
-        @keyframes float {
+        @@keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
 
-        @keyframes float-slow {
+        @@keyframes float-slow {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
         }
 
-        @keyframes pulse-slow {
+        @@keyframes pulse-slow {
             0%, 100% { opacity: 0.5; }
             50% { opacity: 0.8; }
         }
 
-        @keyframes fade-in-up {
+        @@keyframes fade-in-up {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -308,12 +308,12 @@
             }
         }
 
-        @keyframes bounce-slow {
+        @@keyframes bounce-slow {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
 
-        @keyframes gradient-shift {
+        @@keyframes gradient-shift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
