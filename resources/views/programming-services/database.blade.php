@@ -1,709 +1,673 @@
 @extends('layouts.app')
 
-@section('title', 'Database Programming - Expert Help Available')
-@section('description', 'Get professional help with database programming projects. Expert developers available 24/7 for SQL, NoSQL, database design, optimization, and more.')
+@section('title', 'Database Assignment Help | Expert SQL & NoSQL Programming Assistance')
+@section('description', 'Struggling with complex SQL joins, ERD schema design, or MongoDB aggregations? Get expert database assignment help from vetted USA DBAs. 100% working queries.')
 
 @section('content')
     <div class="min-h-screen">
-        <!-- Hero Section with Code Background -->
+        {{-- ===================================================
+             CREATIVE HERO SECTION — DO NOT MODIFY
+        =================================================== --}}
         <x-creative-hero :service="$service" />
 
-        <!-- First Engaging Content Section -->
-        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        {{-- ===================================================
+             SECTION 1 – TRUST BAR / SOCIAL PROOF
+             SEO: Builds E-E-A-T immediately after hero
+        =================================================== --}}
+        <section class="border-y border-slate-100 bg-white py-5 dark:border-slate-800 dark:bg-slate-900" aria-label="Trust signals">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-5xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">Master Database Architecture</p>
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-                            From Data Chaos to <span class="text-purple-600 dark:text-purple-400">Database Excellence</span>
-                        </h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Unlock the power of efficient data management and build scalable database systems.</p>
+                <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">from 1,600+ database reviews</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">28</strong> DB Experts Online</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">8,000+ Databases Engineered</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">100% Normalized (3NF / BCNF)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 2 – CORE DATABASES COVERED
+             SEO: Keyword coverage for search terms
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" id="db-ecosystem" aria-labelledby="db-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Database Engine Coverage</p>
+                    <h2 id="db-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get <span class="text-blue-600 dark:text-blue-400">Database Assignment Help</span> in Any Engine
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Whether it is writing complex SQL transactions, designing document schemas in MongoDB, configuring Redis caches, or mapping relational schemas — we cover all DBMS platforms.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐘</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">PostgreSQL</span>
+                        <span class="text-[10px] text-slate-500">PL/pgSQL / Triggers</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐬</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">MySQL</span>
+                        <span class="text-[10px] text-slate-500">Joins / Indexing</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🎯</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">SQL Server</span>
+                        <span class="text-[10px] text-slate-500">T-SQL / Procedures</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🍃</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">MongoDB</span>
+                        <span class="text-[10px] text-slate-500">NoSQL / Aggregations</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🔴</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Oracle DB</span>
+                        <span class="text-[10px] text-slate-500">PL/SQL / Packages</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">💾</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">SQLite</span>
+                        <span class="text-[10px] text-slate-500">Embedded Databases</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 3 – WHY STUDENTS PREFER US FOR DB HELP
+             SEO: High EEAT block
+        =================================================== --}}
+        <section class="bg-slate-900 py-16 sm:py-20" aria-labelledby="why-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Oracle &middot; AWS Certified DBAs</span>
+                    </div>
+                    <h2 id="why-heading" class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Why Choose Our <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Database Programming Help</span>
+                    </h2>
+                    <p class="mt-5 text-base text-slate-400 max-w-2xl mx-auto">
+                        Database assignments demand correct relational models, normalized schema structures, optimized SQL queries, and strict transaction constraints. Here is why we are the preferred choice.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-5 text-slate-400 text-[15px] leading-relaxed">
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
+                                Certified DBAs &amp; Database Engineers
+                            </h3>
+                            <p>Every database assignment is assigned to a certified specialist holding Oracle Database Developer or AWS Database Specialty credentials. They write optimized, correct DML/DDL logic conforming to theoretical standards.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-indigo-500 rounded-full inline-block"></span>
+                                100% Normalized Schemas
+                            </h3>
+                            <p>We ensure that your database structural designs are normalized to satisfy specific normal forms (1NF, 2NF, 3NF, BCNF) to reduce data redundancies and prevent update/insert anomalies.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-purple-500 rounded-full inline-block"></span>
+                                Complete SQL Scripts &amp; Dummy Datasets
+                            </h3>
+                            <p>We deliver fully tested SQL files. Every solution contains schema creation scripts, dummy record insertions, and testing queries, ensuring your project runs flawlessly on first execution.</p>
+                        </div>
                     </div>
 
                     <div class="space-y-5">
-                        <!-- Hero Stats Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">
-                                    <span class="text-lg">&#128640;</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Why Database Skills Are Critical in 2025</h3>
-                                    <p class="text-sm font-semibold text-purple-600 dark:text-purple-400">The backbone of every modern application and business decision</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                                <div class="rounded-xl border-l-4 border-purple-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                    <div class="mb-1 text-2xl font-bold text-purple-600 dark:text-purple-400">90%</div>
-                                    <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">Companies Use Databases</p>
-                                </div>
-                                <div class="rounded-xl border-l-4 border-blue-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                    <div class="mb-1 text-2xl font-bold text-blue-600 dark:text-blue-400">$120K+</div>
-                                    <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">Average DBA Salary</p>
-                                </div>
-                                <div class="rounded-xl border-l-4 border-indigo-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                    <div class="mb-1 text-2xl font-bold text-indigo-600 dark:text-indigo-400">2.5M</div>
-                                    <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">Database Jobs Globally</p>
-                                </div>
-                                <div class="rounded-xl border-l-4 border-emerald-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                    <div class="mb-1 text-2xl font-bold text-emerald-600 dark:text-emerald-400">95%</div>
-                                    <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">Web Apps Need DBs</p>
-                                </div>
-                            </div>
-
-                            <p class="mb-4 max-w-prose text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                <strong class="font-semibold text-purple-600 dark:text-purple-400">Data is the new oil, and databases are the refineries.</strong>
-                                Every modern application&mdash;from social media giants like Facebook and Instagram to e-commerce platforms like Amazon and Shopify&mdash;relies on robust database systems. Whether you're building a startup MVP, scaling to millions of users, or analyzing business intelligence, database expertise is non-negotiable.
-                            </p>
-
-                            <div class="rounded-xl bg-slate-900 p-5 dark:bg-slate-800">
-                                <p class="mb-2 text-sm font-bold text-white">&#128161; Industry Reality:</p>
-                                <p class="max-w-prose text-sm leading-relaxed text-slate-300">
-                                    A poorly designed database can cripple a billion-dollar business. Amazon loses $66,240 per minute when systems go down. Twitter's fail whale was often caused by database bottlenecks. Mastering database design, optimization, and scaling isn't just about passing courses&mdash;it's about building systems that can handle real-world scale and complexity!
-                                </p>
-                            </div>
+                        <div class="p-7 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-indigo-600/5 border border-blue-500/10">
+                            <h3 class="text-xl font-black text-white mb-6">What We Deliver with Every Order</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">✅</div>
+                                    <div><p class="text-white font-bold text-sm">Tested SQL Scripts (.sql files)</p><p class="text-xs text-slate-500 mt-0.5">DDL and DML code validated against PostgreSQL, MySQL, or SQL Server</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📊</div>
+                                    <div><p class="text-white font-bold text-sm">ERD &amp; Schema Diagrams</p><p class="text-xs text-slate-500 mt-0.5">High-quality Entity-Relationship diagrams mapping primary/foreign keys</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📝</div>
+                                    <div><p class="text-white font-bold text-sm">Inline Query Explanations</p><p class="text-xs text-slate-500 mt-0.5">Clear explanations for complex subqueries, joins, and aggregates</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">⚡</div>
+                                    <div><p class="text-white font-bold text-sm">3-Hour Urgent Delivery Options</p><p class="text-xs text-slate-500 mt-0.5">Stuck on nested query syntax or trigger loops? We deliver correct code in hours</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔒</div>
+                                    <div><p class="text-white font-bold text-sm">100% Privacy Protection</p><p class="text-xs text-slate-500 mt-0.5">Your email, names, class parameters, and databases are kept strictly confidential</p></div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <!-- SQL vs NoSQL Comparison Cards -->
-                        <div class="grid gap-5 md:grid-cols-2">
-                            <!-- SQL Databases Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
-                                        <span class="text-lg">&#128024;</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900 dark:text-white">SQL Databases Power</h4>
-                                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400">Structured, reliable, ACID-compliant</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border-l-4 border-blue-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            <strong class="font-semibold text-blue-600 dark:text-blue-400">SQL = Business Critical Data.</strong>
-                                            PostgreSQL, MySQL, SQL Server&mdash;these relational databases power banking systems, e-commerce transactions, healthcare records, and any application where data integrity is paramount. Master SQL and unlock enterprise opportunities!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-blue-50 p-3 text-center dark:bg-blue-950/40">
-                                            <p class="text-base font-bold text-blue-900 dark:text-blue-300">ACID</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Transaction Guarantees</p>
-                                        </div>
-                                        <div class="rounded-lg bg-blue-50 p-3 text-center dark:bg-blue-950/40">
-                                            <p class="text-base font-bold text-blue-900 dark:text-blue-300">Joins</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Complex Queries</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="rounded-lg bg-blue-600 p-4 text-white">
-                                        <p class="mb-2 text-sm font-semibold">&#127919; Popular SQL Databases:</p>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">PostgreSQL</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">MySQL</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">SQL Server</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">Oracle DB</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- NoSQL Databases Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
-                                        <span class="text-lg">&#127811;</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900 dark:text-white">NoSQL Database Flexibility</h4>
-                                        <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Scalable, fast, schema-less</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border-l-4 border-emerald-500 bg-slate-50 p-4 dark:bg-slate-900">
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            <strong class="font-semibold text-emerald-600 dark:text-emerald-400">NoSQL = Modern Scale.</strong>
-                                            MongoDB, Redis, Cassandra&mdash;these databases power real-time apps, IoT systems, big data analytics, and applications serving millions of concurrent users. From Netflix's recommendations to Uber's real-time matching, NoSQL enables modern innovation!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-emerald-50 p-3 text-center dark:bg-emerald-950/40">
-                                            <p class="text-base font-bold text-emerald-900 dark:text-emerald-300">Horizontal</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Easy Scaling</p>
-                                        </div>
-                                        <div class="rounded-lg bg-emerald-50 p-3 text-center dark:bg-emerald-950/40">
-                                            <p class="text-base font-bold text-emerald-900 dark:text-emerald-300">Flexible</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Schema-less Design</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="rounded-lg bg-emerald-600 p-4 text-white">
-                                        <p class="mb-2 text-sm font-semibold">&#127760; Popular NoSQL Databases:</p>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">MongoDB</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">Redis</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">Cassandra</span>
-                                            <span class="rounded-full bg-white/20 px-2.5 py-1 text-xs">DynamoDB</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Section -->
-        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Database Technologies We Master</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Our expert database developers work with SQL, NoSQL, and modern database technologies to build efficient data solutions.</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <!-- SQL Databases -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">SQL Databases</h3>
-                        <div class="space-y-2.5">
-                            <div class="flex items-center gap-3 rounded-lg bg-blue-50 p-3 dark:bg-blue-950/40">
-                                <span class="text-xl">&#128024;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">MySQL</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-blue-50 p-3 dark:bg-blue-950/40">
-                                <span class="text-xl">&#128024;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">PostgreSQL</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-blue-50 p-3 dark:bg-blue-950/40">
-                                <span class="text-xl">&#128311;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">SQL Server</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- NoSQL Databases -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">NoSQL Databases</h3>
-                        <div class="space-y-2.5">
-                            <div class="flex items-center gap-3 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/40">
-                                <span class="text-xl">&#127811;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">MongoDB</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/40">
-                                <span class="text-xl">&#128293;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Firebase</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/40">
-                                <span class="text-xl">&#128202;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Redis</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud Databases -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">Cloud Databases</h3>
-                        <div class="space-y-2.5">
-                            <div class="flex items-center gap-3 rounded-lg bg-amber-50 p-3 dark:bg-amber-950/40">
-                                <span class="text-xl">&#9729;&#65039;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">AWS RDS</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-amber-50 p-3 dark:bg-amber-950/40">
-                                <span class="text-xl">&#127780;&#65039;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Azure SQL</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-amber-50 p-3 dark:bg-amber-950/40">
-                                <span class="text-xl">&#128309;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Google Cloud SQL</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tools & ORMs -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">Tools &amp; ORMs</h3>
-                        <div class="space-y-2.5">
-                            <div class="flex items-center gap-3 rounded-lg bg-purple-50 p-3 dark:bg-purple-950/40">
-                                <span class="text-xl">&#128295;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Sequelize</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-purple-50 p-3 dark:bg-purple-950/40">
-                                <span class="text-xl">&#128736;&#65039;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Prisma</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-purple-50 p-3 dark:bg-purple-950/40">
-                                <span class="text-xl">&#9881;&#65039;</span>
-                                <h4 class="text-sm font-semibold text-slate-900 dark:text-white">TypeORM</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="bg-white py-14 sm:py-16 dark:bg-slate-900">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Transparent Pricing</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Fair, transparent pricing based on database complexity. No hidden fees, no surprises.</p>
-                </div>
-
-                <div class="mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-3">
-                    <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center">
-                            <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Basic Database</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600 dark:text-purple-400">From $30</div>
-                        </div>
-                        <ul class="mb-6 flex-grow space-y-2 text-left text-sm text-slate-600 dark:text-slate-400">
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Simple database design
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Basic SQL queries
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                3-24 hour delivery
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Documentation included
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-500">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <div class="relative flex flex-col rounded-2xl border-2 border-purple-600 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:bg-slate-950">
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-purple-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                            Most Popular
-                        </div>
-                        <div class="text-center">
-                            <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Advanced Database</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600 dark:text-purple-400">From $75</div>
-                        </div>
-                        <ul class="mb-6 flex-grow space-y-2 text-left text-sm text-slate-600 dark:text-slate-400">
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Complex database design
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Query optimization
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                24-48 hour delivery
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Stored procedures
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Performance tuning
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-500">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center">
-                            <h3 class="mb-2 text-lg font-bold text-slate-900 dark:text-white">Enterprise Solution</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600 dark:text-purple-400">From $150</div>
-                        </div>
-                        <ul class="mb-6 flex-grow space-y-2 text-left text-sm text-slate-600 dark:text-slate-400">
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Full database architecture
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Data migration
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                2-3 day delivery
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Replication setup
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                Backup strategies
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-500">
-                            Get Started
+                        <a href="{{ route('order') }}" class="group relative inline-flex w-full items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-500 transition-all duration-300 shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            <span class="relative z-10">Get Database Assignment Help Now</span>
+                            <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
+        {{-- ===================================================
+             SECTION 4 – TYPES OF DATABASE PROJECTS TACKLED
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" id="db-services" aria-labelledby="services-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Our Database Development Process</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Proven methodology for delivering efficient and scalable database solutions.</p>
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Assignment Scope</p>
+                    <h2 id="services-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Types of <span class="text-blue-600 dark:text-blue-400">Database Assignments</span> We Handle
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Our experts possess deep knowledge of schema design, normalization, complex querying, and server management.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-base font-bold text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">1</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Requirements Analysis</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We analyze your data requirements, relationships, and query patterns to design optimal solutions.</p>
-                    </div>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">✍️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">SQL Query Writing</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Writing optimized SQL queries. Support for DDL/DML scripts, nested subqueries, CTEs, complex INNER/OUTER joins, and window functions.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Complex SELECT statements</li>
+                            <li>• GROUP BY &amp; HAVING filters</li>
+                            <li>• Common Table Expressions (CTEs)</li>
+                        </ul>
+                    </article>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-base font-bold text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">2</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Database Design</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Create normalized schema, define relationships, and establish proper indexing strategies.</p>
-                    </div>
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl">📊</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Schema Design &amp; ERDs</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing relational models. Creating Entity-Relationship Diagrams (ERD) using Crow's Foot notation, specifying primary/foreign key mappings, and normalizing tables.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Crow's Foot notation ERDs</li>
+                            <li>• 1NF, 2NF, 3NF, BCNF layout</li>
+                            <li>• Referential integrity settings</li>
+                        </ul>
+                    </article>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-base font-bold text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">3</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Implementation &amp; Testing</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Build the database, create queries, and conduct thorough performance testing.</p>
-                    </div>
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">⚙️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Stored Procedures &amp; Triggers</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Writing procedural SQL routines inside databases. Implementing Oracle PL/SQL blocks, SQL Server T-SQL procedures, triggers, cursors, and transactions.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Custom database triggers</li>
+                            <li>• Input/Output stored procedures</li>
+                            <li>• Transaction COMMIT/ROLLBACK blocks</li>
+                        </ul>
+                    </article>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 text-base font-bold text-purple-600 dark:bg-purple-950/40 dark:text-purple-400">4</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Optimization &amp; Delivery</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Optimize performance, provide documentation, and deliver your complete database solution.</p>
-                    </div>
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🍃</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">NoSQL Data Modeling</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing JSON-like document models in MongoDB, setting up Mongoose schemas, coding document aggregations, or managing key-value models in Redis.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• MongoDB aggregation pipelines</li>
+                            <li>• Document schema validations</li>
+                            <li>• Embedded vs Referenced patterns</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white text-xl">💾</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database Administration (DBA)</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Managing database instances. Writing scripts for query indexing, performance tuning, transaction log analyses, user permissions, and database backup routines.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Database index optimization</li>
+                            <li>• Query execution plan (EXPLAIN)</li>
+                            <li>• Backups &amp; database recovery scripts</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white text-xl">🔧</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database Connection &amp; ORM</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Connecting applications to databases. Configuring JDBC connections, JPA/Hibernate mapping files, Entity Framework configurations, or Node/Mongoose hooks.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• JDBC / ODBC connections</li>
+                            <li>• ORM data mappings (Hibernate/Eloquent)</li>
+                            <li>• Database connection pooling configuration</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Second Engaging Content Section -->
-        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        {{-- ===================================================
+             SECTION 5 – STEPS TO GET DATABASE ASSISTANCE
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="steps-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-5xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Comprehensive Database Guide</p>
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-                            Complete Guide to <span class="text-indigo-600 dark:text-indigo-400">Database Systems &amp; Design</span>
-                        </h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Essential knowledge for computer science students, database administrators, and software developers.</p>
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">Streamlined Process</p>
+                    <h2 id="steps-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get Your Database Code in 4 Steps
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-base font-black text-white shadow-md">1</div>
+                        <div class="mb-3 text-2xl">📋</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Upload Guidelines</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Upload your schema criteria, query requirements, deadline, and target engine guidelines (MySQL, Oracle, etc.).</p>
                     </div>
-
-                    <div class="space-y-5">
-                        <!-- Main Informative Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white">
-                                    <span class="text-lg">&#128218;</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Understanding Database Systems</h3>
-                                    <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">The foundation of modern data-driven applications</p>
-                                </div>
-                            </div>
-
-                            <div class="max-w-prose space-y-4">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    <strong class="font-semibold text-indigo-600 dark:text-indigo-400">A database is an organized collection of structured data stored electronically in a computer system.</strong>
-                                    Modern databases are managed by Database Management Systems (DBMS), which provide an interface for users and applications to interact with data. Databases can be classified into two main categories: relational (SQL) databases that store data in structured tables with predefined schemas, and non-relational (NoSQL) databases that offer flexible schemas for unstructured or semi-structured data.
-                                </p>
-
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Relational databases like PostgreSQL, MySQL, and SQL Server use Structured Query Language (SQL) for data manipulation and querying. They excel at maintaining data integrity through ACID properties (Atomicity, Consistency, Isolation, Durability) and support complex relationships between data entities. NoSQL databases like MongoDB, Redis, and Cassandra offer different data models including document stores, key-value pairs, column-family stores, and graph databases, each optimized for specific use cases and scalability patterns.
-                                </p>
-
-                                <div class="rounded-xl border-l-4 border-indigo-500 bg-indigo-50 p-5 dark:bg-indigo-950/30">
-                                    <h4 class="mb-3 text-base font-bold text-slate-900 dark:text-white">Why Database Knowledge Is Essential</h4>
-                                    <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-                                        <li class="flex items-start gap-2">
-                                            <span class="mt-0.5 font-bold text-indigo-600 dark:text-indigo-400">&bull;</span>
-                                            <span><strong class="font-semibold">Universal Application Requirement:</strong> Nearly every modern application requires data persistence. From mobile apps to enterprise systems, databases are fundamental. Understanding database design, querying, and optimization is essential for any software developer.</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="mt-0.5 font-bold text-indigo-600 dark:text-indigo-400">&bull;</span>
-                                            <span><strong class="font-semibold">Career Opportunities:</strong> Database skills are among the most sought-after in tech. Database administrators, data engineers, and backend developers with database expertise command salaries averaging $120,000+, reflecting the critical importance of these skills.</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="mt-0.5 font-bold text-indigo-600 dark:text-indigo-400">&bull;</span>
-                                            <span><strong class="font-semibold">Performance Impact:</strong> A well-designed database can handle millions of queries per second, while a poorly designed one can bring an entire application to a halt. Understanding indexing, query optimization, and database architecture directly impacts application performance.</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="mt-0.5 font-bold text-indigo-600 dark:text-indigo-400">&bull;</span>
-                                            <span><strong class="font-semibold">Data-Driven Decision Making:</strong> Businesses rely on databases to store and analyze massive amounts of data. Mastering SQL, data modeling, and analytics enables you to extract valuable insights and drive business decisions.</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Database Design Principles -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">
-                                    <span class="text-lg">&#127912;</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Database Design Principles and Normalization</h3>
-                                    <p class="text-sm font-semibold text-purple-600 dark:text-purple-400">Creating efficient and maintainable database schemas</p>
-                                </div>
-                            </div>
-
-                            <p class="mb-5 max-w-prose text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Database normalization is the process of organizing data to minimize redundancy and dependency. This systematic approach divides larger tables into smaller, more manageable ones and defines relationships between them. Normalization follows several forms (1NF, 2NF, 3NF, BCNF) to ensure data integrity, reduce storage requirements, and improve query performance.
-                            </p>
-
-                            <div class="mb-5 grid gap-4 md:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <div class="mb-2 text-base font-bold text-indigo-600 dark:text-indigo-400">1NF &mdash; First Normal Form</div>
-                                    <p class="mb-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Ensures that each column contains atomic (indivisible) values and each column contains values of a single type.</p>
-                                    <div class="rounded-lg bg-indigo-50 p-3 dark:bg-indigo-950/30">
-                                        <p class="mb-1 text-xs font-semibold text-indigo-900 dark:text-indigo-300">Requirements:</p>
-                                        <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                            <li>&bull; Eliminate repeating groups</li>
-                                            <li>&bull; Create separate table for related data</li>
-                                            <li>&bull; Identify each row with primary key</li>
-                                            <li>&bull; Atomic column values only</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <div class="mb-2 text-base font-bold text-purple-600 dark:text-purple-400">2NF &mdash; Second Normal Form</div>
-                                    <p class="mb-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Meets 1NF requirements and removes partial dependencies. Every non-key attribute must depend on the entire primary key.</p>
-                                    <div class="rounded-lg bg-purple-50 p-3 dark:bg-purple-950/30">
-                                        <p class="mb-1 text-xs font-semibold text-purple-900 dark:text-purple-300">Requirements:</p>
-                                        <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                            <li>&bull; Must be in 1NF</li>
-                                            <li>&bull; Remove partial dependencies</li>
-                                            <li>&bull; Non-key attributes depend on whole key</li>
-                                            <li>&bull; Create separate tables for subsets</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <div class="mb-2 text-base font-bold text-rose-600 dark:text-rose-400">3NF &mdash; Third Normal Form</div>
-                                    <p class="mb-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Meets 2NF requirements and eliminates transitive dependencies. Non-key attributes cannot depend on other non-key attributes.</p>
-                                    <div class="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/30">
-                                        <p class="mb-1 text-xs font-semibold text-rose-900 dark:text-rose-300">Requirements:</p>
-                                        <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                            <li>&bull; Must be in 2NF</li>
-                                            <li>&bull; Remove transitive dependencies</li>
-                                            <li>&bull; Non-key attributes independent</li>
-                                            <li>&bull; Highest practical normal form</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl bg-slate-900 p-5 dark:bg-slate-800">
-                                <h4 class="mb-2 text-base font-bold text-white">Indexing and Query Optimization</h4>
-                                <p class="mb-3 max-w-prose text-sm leading-relaxed text-slate-300">
-                                    Database indexes are data structures that improve the speed of data retrieval operations. Like a book's index, they allow the database to find data without scanning every row. Common index types include B-tree indexes (default in most databases), hash indexes for exact matches, and full-text indexes for text search. However, indexes have trade-offs: they speed up reads but slow down writes and consume additional storage.
-                                </p>
-                                <p class="max-w-prose text-sm leading-relaxed text-slate-300">
-                                    Query optimization involves analyzing query execution plans, choosing appropriate indexes, rewriting queries for efficiency, and understanding how the database engine processes queries. Tools like EXPLAIN in SQL help visualize query execution and identify bottlenecks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- ACID Properties and Transactions -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
-                                    <span class="text-lg">&#128274;</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">ACID Properties and Database Transactions</h3>
-                                    <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400">Ensuring data integrity and reliability</p>
-                                </div>
-                            </div>
-
-                            <p class="mb-5 max-w-prose text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                ACID is an acronym representing four key properties that guarantee database transactions are processed reliably. These properties are fundamental to relational databases and critical for applications requiring data consistency, such as financial systems, e-commerce platforms, and enterprise applications where data integrity is paramount.
-                            </p>
-
-                            <div class="mb-5 grid gap-4 md:grid-cols-2">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h4 class="mb-2 text-base font-bold text-blue-900 dark:text-blue-300">Atomicity</h4>
-                                    <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                        Transactions are "all-or-nothing" operations. Either all changes in a transaction are committed to the database, or none are. If any part of the transaction fails, the entire transaction is rolled back to its previous state.
-                                    </p>
-                                    <div class="rounded-lg bg-white p-3 dark:bg-slate-950">
-                                        <p class="mb-1 text-xs font-semibold text-blue-900 dark:text-blue-300">Real-World Example:</p>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">
-                                            In a bank transfer, money must be deducted from one account AND added to another. If either operation fails, both are rolled back&mdash;you can't have money disappear or duplicate!
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h4 class="mb-2 text-base font-bold text-purple-900 dark:text-purple-300">Consistency</h4>
-                                    <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                        Transactions must take the database from one valid state to another, maintaining all defined rules, constraints, and triggers. Data integrity constraints are never violated.
-                                    </p>
-                                    <div class="rounded-lg bg-white p-3 dark:bg-slate-950">
-                                        <p class="mb-1 text-xs font-semibold text-purple-900 dark:text-purple-300">Real-World Example:</p>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">
-                                            If a database rule states that account balances cannot be negative, the database will reject any transaction that would violate this constraint, maintaining consistency.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h4 class="mb-2 text-base font-bold text-emerald-900 dark:text-emerald-300">Isolation</h4>
-                                    <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                        Concurrent transactions execute independently without interference. The intermediate state of a transaction is invisible to other transactions, preventing conflicts and ensuring data integrity.
-                                    </p>
-                                    <div class="rounded-lg bg-white p-3 dark:bg-slate-950">
-                                        <p class="mb-1 text-xs font-semibold text-emerald-900 dark:text-emerald-300">Real-World Example:</p>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">
-                                            When two people try to book the last seat on a flight simultaneously, isolation ensures only one succeeds. The other sees the seat as unavailable, preventing double-booking.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h4 class="mb-2 text-base font-bold text-amber-900 dark:text-amber-300">Durability</h4>
-                                    <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                        Once a transaction is committed, it remains permanent even in the event of system failures, crashes, or power outages. Data is safely stored in non-volatile memory.
-                                    </p>
-                                    <div class="rounded-lg bg-white p-3 dark:bg-slate-950">
-                                        <p class="mb-1 text-xs font-semibold text-amber-900 dark:text-amber-300">Real-World Example:</p>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">
-                                            After you complete an online purchase and receive confirmation, even if the server crashes immediately after, your order is permanently recorded and will be processed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl bg-slate-900 p-5 dark:bg-slate-800">
-                                <h4 class="mb-2 text-base font-bold text-white">CAP Theorem and Distributed Databases</h4>
-                                <p class="mb-3 max-w-prose text-sm leading-relaxed text-slate-300">
-                                    The CAP theorem states that distributed databases can only guarantee two of three properties: Consistency (all nodes see the same data), Availability (every request receives a response), and Partition Tolerance (system continues despite network failures). This fundamental theorem guides distributed database design decisions.
-                                </p>
-                                <p class="max-w-prose text-sm leading-relaxed text-slate-300">
-                                    <strong class="font-semibold text-white">Need Database Help?</strong> Our database experts provide professional assistance with database design, SQL optimization, NoSQL implementation, and complex query development. Whether you're struggling with normalization, need help with stored procedures, or require expert guidance on database architecture, our experienced developers are available 24/7. Get database help from experts who understand ACID properties, indexing strategies, query optimization, and modern database technologies.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-base font-black text-white shadow-md">2</div>
+                        <div class="mb-3 text-2xl">🎯</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Get Fair Pricing</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">A certified database engineer reviews your normalization or query guidelines and provides a quote.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-base font-black text-white shadow-md">3</div>
+                        <div class="mb-3 text-2xl">💻</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Expert Codes Database</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">The developer creates schemas, codes SQL queries/procedures, validates normalization constraints, and tests queries.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white shadow-md">4</div>
+                        <div class="mb-3 text-2xl">🚀</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Download &amp; Test</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Download the working .sql scripts or database files, execute queries locally, and request tweaks if needed.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
+        {{-- ===================================================
+             SECTION 6 – RISK-FREE GUARANTEES
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="guarantee-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">What Our Clients Say</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Real feedback from students who got help with their database programming projects.</p>
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Guarantees</p>
+                    <h2 id="guarantee-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Guaranteed Database Integrity
+                    </h2>
                 </div>
 
-                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">"Excellent database design for my e-commerce project! The expert created a normalized schema with proper indexing, and the queries are lightning fast. Great documentation too!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white">S</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900 dark:text-white">Sarah M.</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">Database Student</div>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-900/40 dark:bg-blue-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">💡</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">100% Original Scripts</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every schema creation script, index mapping, and query logic is coded from scratch based on your custom requirements.</p>
                     </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">"Amazing help with complex SQL queries! The developer optimized my slow queries and implemented proper indexes. Performance improved by 10x. Highly recommend!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white">D</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900 dark:text-white">David K.</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">CS Student</div>
-                            </div>
-                        </div>
+                    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900/40 dark:bg-emerald-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-xl text-white">⏱️</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Deadline Compliance</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We manage our database development timelines continuously to ensure your query files and setup guides are delivered before the deadline.</p>
                     </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">"Professional MongoDB implementation! The NoSQL design was perfect for my social media app. Clean data modeling and efficient aggregation queries. Excellent work!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white">L</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900 dark:text-white">Lisa T.</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">Software Engineering Student</div>
-                            </div>
-                        </div>
+                    <div class="rounded-2xl border border-purple-200 bg-purple-50 p-6 dark:border-purple-900/40 dark:bg-purple-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-xl text-white">🔄</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">72-Hour Free Revisions</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Need minor query adjustments, extra normalization, or updated class attributes? We offer free revisions within 72 hours of delivery.</p>
+                    </div>
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-900/40 dark:bg-amber-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-600 text-xl text-white">💰</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Refund Guarantee</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">If our queries fail to compile on your target database server or miss core database normalization specifications, you are protected by our refund policy.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-slate-700 text-xl text-white">🔒</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Privacy</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Your details are kept private and secure under database encryption. Your class code and data files are never shared.</p>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-200 bg-cyan-50 p-6 dark:border-cyan-900/40 dark:bg-cyan-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-600 text-xl text-white">💬</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">24/7 Expert Support</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Speak to our support desk or message your assigned database specialist directly through our system to ask questions at any stage.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        {{-- ===================================================
+             SECTION 7 – STUDENT DB REVIEWS
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Frequently Asked Questions</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Everything you need to know about our database programming service.</p>
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-amber-600 dark:text-amber-400">Student Reviews</p>
+                    <h2 id="reviews-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        What Students Say About Our Database Help
+                    </h2>
                 </div>
 
-                <div class="mx-auto max-w-3xl space-y-3">
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Which database systems do you support?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We work with all major database systems including MySQL, PostgreSQL, SQL Server, Oracle, MongoDB, Redis, Firebase, and more. We can help you choose the best database for your project requirements.</p>
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">Postgres stored procedure</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I was struggling to write a PL/pgSQL stored procedure with custom triggers for a database project. The developer resolved my loop errors and included tests checking the inserts. Highly recommended!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Liam N.</p><p class="text-xs text-slate-500">NYU</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">3NF Normalisation ERD</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"Had a normalization task requiring converting a large unnormalized database schema into 3NF relation tables. The ERD diagram designed was clean and easy to follow, scoring full marks!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Olivia S.</p><p class="text-xs text-slate-500">UT Austin</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">MongoDB Aggregation</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I was stuck on a complex MongoDB aggregate matching and grouping query pipeline. The NoSQL expert structured the pipeline layers cleanly and explained each stage. Awesome help!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Lucas P.</p><p class="text-xs text-slate-500">Georgia Tech</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 8 – IN-DEPTH SEO CONTENT BLOCK
+             SEO: Long-form keyword-rich educational material
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="content-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h2 id="content-heading" class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">🎯</span>
+                                What is Database Assignment Help?
+                            </h2>
+                            <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <p><strong class="text-slate-900 dark:text-white font-semibold">Database assignment help</strong> is a specialized programming service designed to support students and developers with database schema design, normalization, query creation, and server administration. Developing database code is challenging because it requires understanding mathematical relations, normalization rules, query indexes, and transaction safety states (ACID).</p>
+                                <p>Whether you are writing complex nested SQL joins, structuring ER diagrams, coding stored procedures, or building NoSQL pipelines in MongoDB — our experts deliver optimized code and instructions to help you succeed.</p>
+                                <p>We cover all major platforms: PostgreSQL, MySQL, MS SQL Server, Oracle DB, SQLite, MongoDB, Redis, Cassandra, and Neo4j.</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">🏫</span>
+                                Common Database Challenges We Solve
+                            </h3>
+                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Normalization Anomalies:</strong> Struggling to split large tables into clean 3NF structures? We provide step-by-step normal form mapping to prevent update/insert issues.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Inefficient SQL Joins:</strong> Resolving slow-running queries. We restructure subqueries, add indexes, write CTEs, and analyze query execution paths.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Recursive Triggers &amp; Loops:</strong> Debugging infinite trigger loop blocks or procedure lockups. We write clean, conditional PL/SQL and T-SQL.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Can you help optimize slow database queries?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Absolutely! We specialize in query optimization, indexing strategies, execution plan analysis, and database performance tuning. We can significantly improve your database performance.</p>
-                    </div>
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">⭐</span>
+                                DBMS Technologies We Cover
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach(['PostgreSQL','MySQL','MS SQL Server','Oracle Database','SQLite','MongoDB','Redis','Cassandra','DynamoDB','MariaDB','IBM DB2','SQLite','PL/SQL','T-SQL','ERD Diagrams','BCNF Normalization','Database Indexes','REST API Connection','JDBC Connections','JPA Hibernate'] as $tech)
+                                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">{{ $tech }}</span>
+                                @endforeach
+                            </div>
+                        </div>
 
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Do you provide database design and modeling?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes! We provide complete database design services including ER diagrams, schema design, normalization, relationship mapping, and data modeling following best practices.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Can you help with data migration projects?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes, we assist with data migration between different database systems, including ETL processes, data transformation, and ensuring data integrity during migration.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">What's included in the database delivery?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">You'll receive complete database scripts, schema documentation, ER diagrams, query examples, and setup instructions. For advanced projects, we also include optimization reports and maintenance guidelines.</p>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-white">📊</span>
+                                Our Database Track Record
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-blue-600 dark:text-blue-400">8,000+</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Databases Designed</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-emerald-600 dark:text-emerald-400">98%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-amber-600 dark:text-amber-400">4.9★</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Student Rating</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-purple-600 dark:text-purple-400">100%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Query Compilation</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="bg-slate-900 py-14 sm:py-16 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Ready to Build Your Database?</h2>
-                <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">Join hundreds of students who have successfully completed their database projects with our expert help.</p>
-                <a href="{{ route('order') }}" class="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-slate-100">
-                    Start Your Database Project Today
-                </a>
+        {{-- ===================================================
+             SECTION 9 – FAQ ACCORDION
+             SEO: Targets rich SERP results
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="faq-heading">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">FAQs</p>
+                    <h2 id="faq-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Database Assignment Help FAQs
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">What SQL engines do you support for database tasks?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Our experts support all relational systems, including PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, and SQLite. We write standard ANSI SQL or framework-specific scripts (T-SQL, PL/SQL).</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Do you design Entity-Relationship Diagrams (ERD)?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We design high-quality logical and physical ERD schemas using Crow's Foot notation, specifying table relationships (one-to-one, one-to-many, many-to-many), primary keys, and foreign keys.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Will the query files compile out of the box?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We verify all DDL and DML scripts against your target database engine. We include dummy insertions so queries compile and run correctly on first launch.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Can your developers write NoSQL aggregation pipelines?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. Our NoSQL specialists build MongoDB aggregation pipelines (using $match, $group, $lookup, $unwind), document schemes, schema validations, and cache configurations in Redis.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How fast can you complete my database assignment?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Simple database query tasks, table alterations, or index creations can be solved in 3 to 12 hours. Normalized schema designs with ERDs or complex stored procedures usually take 24 to 72 hours.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        {{-- ===================================================
+             SECTION 10 – FINAL CTA
+             SEO: High converting closing block
+        =================================================== --}}
+        <section class="relative overflow-hidden bg-slate-900 py-16 sm:py-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">Database Engineers Online Now</span>
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-5">
+                    Ready to Get Your<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Database Queries Optimized?</span>
+                </h2>
+
+                <p class="text-base text-slate-400 max-w-2xl mx-auto mb-10">
+                    Get clean, bug-free, and thoroughly normalized database code files complete with ERD diagrams and query execution guides. Submit your details for a free quote within 5 minutes.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-lg hover:-translate-y-0.5 active:scale-95 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span class="relative z-10 text-sm">Get Database Assignment Help</span>
+                        <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                    </a>
+                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Free Quote &middot; No Obligation</span>
+                </div>
+
+                <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">8,000+</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Databases Engineered</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">4.9/5</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Rating</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">98%</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             FAQ & SERVICE SCHEMA MARKUP
+        =================================================== --}}
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "What SQL engines do you support for database tasks?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Our experts support all relational systems, including PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, and SQLite. We write standard ANSI SQL or framework-specific scripts (T-SQL, PL/SQL)."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you design Entity-Relationship Diagrams (ERD)?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We design high-quality logical and physical ERD schemas using Crow's Foot notation, specifying table relationships (one-to-one, one-to-many, many-to-many), primary keys, and foreign keys."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Will the query files compile out of the box?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We verify all DDL and DML scripts against your target database engine. We include dummy insertions so queries compile and run correctly on first launch."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can your developers write NoSQL aggregation pipelines?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Our NoSQL specialists build MongoDB aggregation pipelines (using $match, $group, $lookup, $unwind), document schemes, schema validations, and cache configurations in Redis."
+              }
+            }
+          ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Service",
+          "name": "Database Assignment Help",
+          "description": "Professional database assignment help and SQL programming assistance. Expert developers available 24/7 for PostgreSQL, MySQL, Oracle DB, SQL Server, NoSQL document modeling, and Normalization layouts.",
+          "provider": {
+            "@@type": "Organization",
+            "name": "AssignmentHelpUSA",
+            "url": "https://assignmenthelpusa.com"
+          },
+          "areaServed": "US",
+          "serviceType": "Database Assignment Help",
+          "offers": {
+            "@@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "15",
+            "highPrice": "500"
+          },
+          "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1600",
+            "bestRating": "5"
+          }
+        }
+        </script>
     </div>
 @endsection
