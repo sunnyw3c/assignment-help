@@ -197,11 +197,20 @@ class ServiceController extends Controller
 
     public function show($slug)
     {
+        $normalizedSlug = $slug;
+        if ($slug === 'java') {
+            $normalizedSlug = 'java-programming-help';
+        } elseif ($slug === 'php') {
+            $normalizedSlug = 'php-programming-help';
+        } elseif ($slug === 'python') {
+            $normalizedSlug = 'python-programming-help';
+        }
+
         // Get all services data
         $services = $this->getAllServices();
 
         // Find the specific service by slug
-        $service = collect($services)->firstWhere('slug', $slug);
+        $service = collect($services)->firstWhere('slug', $normalizedSlug);
 
         if (!$service) {
             abort(404);
@@ -233,7 +242,7 @@ class ServiceController extends Controller
         }
 
         // Fallback to generic service view for other services
-        $serviceDetails = $this->getServiceDetails($slug);
+        $serviceDetails = $this->getServiceDetails($normalizedSlug);
         return view('programming-services.show', compact('service', 'serviceDetails'));
     }
 

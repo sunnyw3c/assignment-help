@@ -1,1428 +1,704 @@
 @extends('layouts.app')
 
-@section('title', 'Web Development Projects - Expert Help Available')
-@section('description',
-    'Get professional help with web development projects. Expert developers available 24/7 for
-    React, Vue, Angular, PHP, Laravel, and more.')
+@section('title', 'Web Development Assignment Help | Expert Coding Projects USA')
+@section('description', 'Struggling with React, Vue, Angular, PHP, Node.js, or HTML/CSS? Get expert web development assignment help from vetted USA programmers. 100% working code, on-time.')
 
 @section('content')
     <div class="min-h-screen">
-        <!-- Hero Section with Code Background -->
+        {{-- ===================================================
+             CREATIVE HERO SECTION — DO NOT MODIFY
+        =================================================== --}}
         <x-creative-hero :service="$service" />
 
-        <!-- Comprehensive Content Section -->
-        <section class="py-14 sm:py-16 bg-white">
+        {{-- ===================================================
+             SECTION 1 – TRUST BAR / SOCIAL PROOF
+             SEO: Builds E-E-A-T immediately after hero
+        =================================================== --}}
+        <section class="border-y border-slate-100 bg-white py-5 dark:border-slate-800 dark:bg-slate-900" aria-label="Trust signals">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="max-w-4xl mx-auto">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Professional Web Development Services</h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Get expert help with your web development projects from experienced developers who understand modern frameworks, industry best practices, and cutting-edge technologies.</p>
+                <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">from 1,800+ Web Dev reviews</span>
                     </div>
-
-                    <div class="max-w-prose mx-auto">
-                        <div class="grid gap-6 sm:grid-cols-2 mb-10">
-                            <div>
-                                <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
-                                    <span class="rounded-lg bg-purple-100 p-1.5 text-base">🎯</span>
-                                    Why Choose Our Web Development Help?
-                                </h3>
-                                <p class="mb-3 text-sm leading-relaxed text-slate-600">
-                                    Our team of expert web developers specializes in creating high-quality, scalable, and responsive web applications that meet modern industry standards. Whether you're a student working on your first project or a professional looking to enhance your skills, we provide comprehensive support tailored to your specific needs.
-                                </p>
-                                <p class="text-sm leading-relaxed text-slate-600">
-                                    Our experienced developers have worked on hundreds of projects ranging from simple static websites to complex full-stack applications, giving us the expertise to tackle any challenge you might face.
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
-                                    <span class="rounded-lg bg-blue-100 p-1.5 text-base">🚀</span>
-                                    Our Development Approach
-                                </h3>
-                                <p class="mb-3 text-sm leading-relaxed text-slate-600">
-                                    We begin by thoroughly understanding your project requirements, analyzing the scope, and selecting the most appropriate technology stack — whether that's a React single-page application, a Vue.js dashboard, an Angular enterprise solution, or a full-stack application with Laravel or Node.js.
-                                </p>
-                                <p class="text-sm leading-relaxed text-slate-600">
-                                    Every project includes proper code documentation, clean architecture, responsive design implementation, and thorough testing, so your application is maintainable and scalable for future enhancements.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-10">
-                            <h3 class="mb-5 text-center text-lg font-bold text-slate-900">What We Cover in Web Development</h3>
-                            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>⚛️</span>
-                                        Frontend Development
-                                    </h4>
-                                    <p class="text-xs text-slate-600">React, Vue.js, Angular, HTML5, CSS3, JavaScript, TypeScript, responsive design, and modern UI frameworks.</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>🔧</span>
-                                        Backend Development
-                                    </h4>
-                                    <p class="text-xs text-slate-600">Node.js, Laravel, Django, Express.js, API development, database design, and server-side logic implementation.</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>🗄️</span>
-                                        Database Integration
-                                    </h4>
-                                    <p class="text-xs text-slate-600">MySQL, PostgreSQL, MongoDB, Firebase, database optimization, and data modeling for web applications.</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>🎨</span>
-                                        UI/UX Implementation
-                                    </h4>
-                                    <p class="text-xs text-slate-600">Modern design implementation, user interface optimization, accessibility standards, and cross-browser compatibility.</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>🚀</span>
-                                        Deployment &amp; DevOps
-                                    </h4>
-                                    <p class="text-xs text-slate-600">Cloud deployment, Docker containerization, CI/CD pipelines, and production environment setup.</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-white p-4">
-                                    <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900">
-                                        <span>🧪</span>
-                                        Testing &amp; Quality
-                                    </h4>
-                                    <p class="text-xs text-slate-600">Unit testing, integration testing, code quality assurance, performance optimization, and debugging.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-10">
-                            <h3 class="mb-2 text-center text-lg font-bold text-slate-900">Industries We Serve</h3>
-                            <p class="mb-6 text-center text-sm leading-relaxed text-slate-600">
-                                Our web development expertise spans across various industries and project types — students, startups, small businesses, and enterprise clients.
-                            </p>
-                            <div class="grid gap-6 sm:grid-cols-2">
-                                <div>
-                                    <h4 class="mb-2 text-sm font-semibold text-slate-900">Educational Projects</h4>
-                                    <ul class="space-y-1.5 text-sm text-slate-600">
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Student portfolio websites and personal projects</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>University coursework and assignment submissions</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Capstone projects and final year dissertations</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Learning management systems and educational platforms</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-2 text-sm font-semibold text-slate-900">Business Applications</h4>
-                                    <ul class="space-y-1.5 text-sm text-slate-600">
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>E-commerce platforms and online stores</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Customer management systems and dashboards</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Content management systems and blogs</li>
-                                        <li class="flex items-start gap-2"><span class="mt-0.5 text-green-500">✓</span>Real-time applications and progressive web apps</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-                            <h3 class="mb-2 text-center text-lg font-bold text-slate-900">Why Students and Professionals Trust Us</h3>
-                            <p class="mb-5 text-center text-sm leading-relaxed text-slate-600">
-                                With over 1200+ successful web development projects completed and a 4.9/5 average rating, we've established ourselves as the go-to solution for quality web development assistance.
-                            </p>
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <div class="text-xl font-bold text-purple-600">98%</div>
-                                    <div class="text-xs text-slate-600">Project Success Rate</div>
-                                </div>
-                                <div>
-                                    <div class="text-xl font-bold text-blue-600">2-24hr</div>
-                                    <div class="text-xs text-slate-600">Average Delivery Time</div>
-                                </div>
-                                <div>
-                                    <div class="text-xl font-bold text-green-600">24/7</div>
-                                    <div class="text-xs text-slate-600">Expert Availability</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">24</strong> Web Experts Online</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">5,000+ Web Apps Delivered</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">W3C Compliant &amp; Bug-Free</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technologies Section -->
-        <section class="py-14 sm:py-16 gradient-bg">
+        {{-- ===================================================
+             SECTION 2 – CORE WEB DEV TECHNOLOGIES
+             SEO: Keyword coverage for specific frameworks
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" id="tech-coverage" aria-labelledby="tech-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Technologies We Master</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Our expert developers work with the latest technologies and frameworks to build modern, scalable web applications.</p>
-                    <div class="mt-5 flex justify-center gap-3">
-                        <button id="prevBtn" class="nav-button flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white shadow-sm hover:bg-purple-700">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </button>
-                        <button id="nextBtn" class="nav-button flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 text-white shadow-sm hover:bg-purple-700">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
+                <div class="mx-auto mb-10 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Comprehensive Stack Coverage</p>
+                    <h2 id="tech-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get <span class="text-blue-600 dark:text-blue-400">Web Development Assignment Help</span> in Any Tech Stack
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Whether it is building modern frontend UIs, complex backend servers, database management, or deploying production-ready full-stack applications — our experts have got you covered.
+                    </p>
                 </div>
 
-                <!-- Technology Slider -->
-                <div class="relative overflow-hidden rounded-2xl">
-                    <div id="techSlider" class="flex transition-transform duration-700 ease-out will-change-transform">
-                        <!-- Frontend Technologies -->
-                        <div class="flex-none w-full">
-                            <h3 class="mb-6 text-center text-lg font-bold text-slate-900">Frontend Technologies</h3>
-                            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">⚛️</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">React</h3>
-                                        <p class="text-xs text-gray-500 mt-1">UI Library</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🟢</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Vue.js</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Progressive Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"red-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🅰️</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Angular</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Full Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"yellow-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">⚡</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">JavaScript</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Core Language</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">📘</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">TypeScript</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Typed JavaScript</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"purple-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🎨</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Tailwind</h3>
-                                        <p class="text-xs text-gray-500 mt-1">CSS Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"indigo-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🌐</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Next.js</h3>
-                                        <p class="text-xs text-gray-500 mt-1">React Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🍃</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Nuxt.js</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Vue Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"pink-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">💅</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Sass/SCSS</h3>
-                                        <p class="text-xs text-gray-500 mt-1">CSS Preprocessor</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"orange-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔥</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Vite</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Build Tool</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"cyan-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">📦</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Webpack</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Module Bundler</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"teal-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🎭</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Redux</h3>
-                                        <p class="text-xs text-gray-500 mt-1">State Management</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Backend Technologies -->
-                        <div class="flex-none w-full">
-                            <h3 class="mb-6 text-center text-lg font-bold text-slate-900">Backend Technologies</h3>
-                            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🟢</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Node.js</h3>
-                                        <p class="text-xs text-gray-500 mt-1">JavaScript Runtime</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"purple-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🐘</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">PHP</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Server Language</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"red-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔧</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Laravel</h3>
-                                        <p class="text-xs text-gray-500 mt-1">PHP Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"gray-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">⚡</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Express.js</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Node Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🐍</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Django</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Python Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🌪️</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">FastAPI</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Python API</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"orange-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">☕</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Spring Boot</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Java Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"purple-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">💎</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Ruby on Rails</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Ruby Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"indigo-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔷</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">ASP.NET</h3>
-                                        <p class="text-xs text-gray-500 mt-1">C# Framework</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"cyan-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🚀</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">GraphQL</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Query Language</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"gray-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔌</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">REST API</h3>
-                                        <p class="text-xs text-gray-500 mt-1">API Architecture</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"teal-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🌐</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Serverless</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Cloud Functions</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Database & DevOps -->
-                        <div class="flex-none w-full">
-                            <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Database & DevOps</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🐬</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">MySQL</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Relational DB</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🐘</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">PostgreSQL</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Advanced SQL</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🍃</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">MongoDB</h3>
-                                        <p class="text-xs text-gray-500 mt-1">NoSQL Database</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"orange-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔥</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Firebase</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Google Cloud</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"red-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">⚡</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Redis</h3>
-                                        <p class="text-xs text-gray-500 mt-1">In-Memory DB</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🐳</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Docker</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Containerization</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">☸️</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Kubernetes</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Orchestration</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"orange-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">☁️</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">AWS</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Cloud Platform</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"blue-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">⚡</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Azure</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Microsoft Cloud</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"yellow-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔧</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">CI/CD</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Automation</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"gray-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">🔍</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Git</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Version Control</p>
-                                    </div>
-                                </div>
-                                <div class="text-center tech-card cursor-pointer slide-in">
-                                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100"green-50 transition-all duration-300 border border-gray-100">
-                                        <div class="tech-icon text-5xl mb-3">📊</div>
-                                        <h3 class="font-semibold text-gray-900 text-sm">Monitoring</h3>
-                                        <p class="text-xs text-gray-500 mt-1">Performance</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">⚛️</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">React.js</span>
+                        <span class="text-[10px] text-slate-500">JSX / Redux / Hooks</span>
                     </div>
-                </div>
-
-                <!-- Slide Indicators -->
-                <div class="flex justify-center mt-8 space-x-2">
-                    <button class="slide-indicator w-3 h-3 rounded-full bg-purple-600 transition-all duration-200" data-slide="0"></button>
-                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-purple-400 transition-all duration-200" data-slide="1"></button>
-                    <button class="slide-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-purple-400 transition-all duration-200" data-slide="2"></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Fair, transparent pricing based on project
-                        complexity. No hidden fees, no surprises.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Web Project</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $25</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Simple HTML/CSS/JS
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Responsive Design
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    2-6 hour delivery
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Basic documentation
-                                </li>
-                            </ul>
-                            <a href="{{ route('order') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
-                            </a>
-                        </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🟢</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Vue.js</span>
+                        <span class="text-[10px] text-slate-500">Vuex / Composition API</span>
                     </div>
-
-                    <div
-                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200 border-2 border-purple-600 relative">
-                        <div
-                            class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                            Most Popular
-                        </div>
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Project</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $75</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    React/Vue/Angular
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    API Integration
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    6-24 hour delivery
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Complete documentation
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Testing included
-                                </li>
-                            </ul>
-                            <a href="{{ route('order') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
-                            </a>
-                        </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🅰️</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Angular</span>
+                        <span class="text-[10px] text-slate-500">TypeScript / RxJS</span>
                     </div>
-
-                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-200">
-                        <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Full-Stack Project</h3>
-                            <div class="text-3xl font-bold text-purple-600 mb-4">From $150</div>
-                            <ul class="text-left space-y-3 mb-8">
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Complete web application
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Database integration
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    1-3 day delivery
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Deployment assistance
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="text-green-500 mr-2">✓</span>
-                                    Post-project support
-                                </li>
-                            </ul>
-                            <a href="{{ route('order') }}"
-                                class="block w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 text-center">
-                                Get Started
-                            </a>
-                        </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🟢</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Node.js</span>
+                        <span class="text-[10px] text-slate-500">Express / NestJS</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐘</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">PHP &amp; Laravel</span>
+                        <span class="text-[10px] text-slate-500">Eloquent / Blade / APIs</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐍</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Django / Flask</span>
+                        <span class="text-[10px] text-slate-500">Python Web Apps</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">HTML5</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">HTML &amp; CSS3</span>
+                        <span class="text-[10px] text-slate-500">Flexbox / Grid / Semantic</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🟨</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">JavaScript</span>
+                        <span class="text-[10px] text-slate-500">ES6+ / Async / DOM</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🗄️</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">MongoDB</span>
+                        <span class="text-[10px] text-slate-500">NoSQL / Mongoose</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">📊</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">SQL Databases</span>
+                        <span class="text-[10px] text-slate-500">MySQL / Postgres</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🌐</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Next.js &amp; Nuxt</span>
+                        <span class="text-[10px] text-slate-500">SSR / Static Site</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🛒</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">CMS Platforms</span>
+                        <span class="text-[10px] text-slate-500">WordPress / Shopify</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Simple, straightforward process to get your web
-                        development project completed.</p>
+        {{-- ===================================================
+             SECTION 3 – WHY STUDENTS PREFER US FOR WEB DEV HELP
+             SEO: High EEAT block
+        =================================================== --}}
+        <section class="bg-slate-900 py-16 sm:py-20" aria-labelledby="why-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">High Grade Guarantee</span>
+                    </div>
+                    <h2 id="why-heading" class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Why Choose Our <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Web Development Assignment Help</span>
+                    </h2>
+                    <p class="mt-5 text-base text-slate-400 max-w-2xl mx-auto">
+                        Web development requires combining HTML, CSS, JavaScript, framework states, databases, and APIs. When you request help, you want clean, working, and easily readable code. Here's why students choose us.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold text-purple-600">1</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Submit Project</h3>
-                        <p class="text-gray-600">Tell us about your web development project requirements and deadline.</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold text-purple-600">2</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Assignment</h3>
-                        <p class="text-gray-600">We match you with a web development expert who specializes in your
-                            technology stack.</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold text-purple-600">3</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Development</h3>
-                        <p class="text-gray-600">Your expert works on your project, keeping you updated throughout the
-                            process.</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl font-bold text-purple-600">4</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Delivery</h3>
-                        <p class="text-gray-600">Receive your completed project with documentation and post-project
-                            support.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real feedback from students who got help with their
-                        web development projects.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg p-8">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6">"Amazing work on my React project! The developer created a beautiful,
-                            responsive web app that exceeded my expectations. Great communication throughout."</p>
-                        <div class="flex items-center">
-                            <div
-                                class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                S</div>
-                            <div>
-                                <div class="font-semibold text-gray-900">Sarah M.</div>
-                                <div class="text-sm text-gray-500">Computer Science Student</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-lg p-8">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6">"Needed help with a complex Laravel application. The expert delivered
-                            a fully functional web app with clean code and excellent documentation."</p>
-                        <div class="flex items-center">
-                            <div
-                                class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                M</div>
-                            <div>
-                                <div class="font-semibold text-gray-900">Michael R.</div>
-                                <div class="text-sm text-gray-500">Web Development Student</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-lg p-8">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-6">"The Vue.js project was completed ahead of schedule. Professional
-                            work with modern best practices. Highly recommend for any web development needs!"</p>
-                        <div class="flex items-center">
-                            <div
-                                class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                                E</div>
-                            <div>
-                                <div class="font-semibold text-gray-900">Emily K.</div>
-                                <div class="text-sm text-gray-500">Software Engineering Student</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our web
-                        development help service.</p>
-                </div>
-
-                <div class="max-w-3xl mx-auto space-y-6">
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What web technologies do you support?</h3>
-                        <p class="text-gray-600">We support all major web technologies including React, Vue.js, Angular,
-                            JavaScript, PHP, Laravel, Node.js, HTML5, CSS3, and many more. Our experts have experience with
-                            both frontend and backend technologies.</p>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How quickly can you complete my project?</h3>
-                        <p class="text-gray-600">Most web development projects are completed within 2-24 hours, depending
-                            on complexity. Larger full-stack applications may take 1-3 days. We always work within your
-                            deadline requirements.</p>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you provide responsive designs?</h3>
-                        <p class="text-gray-600">Yes! All our web development projects include responsive design by
-                            default. Your website or application will work perfectly on desktop, tablet, and mobile devices.
-                        </p>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you help with existing projects or only
-                            new ones?</h3>
-                        <p class="text-gray-600">We can help with both new projects from scratch and improvements to
-                            existing web applications. This includes bug fixes, feature additions, code refactoring, and
-                            performance optimization.</p>
-                    </div>
-
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What's included in the delivery?</h3>
-                        <p class="text-gray-600">You'll receive complete source code, documentation, setup instructions,
-                            and any necessary configuration files. For larger projects, we also provide deployment
-                            assistance and post-project support.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Web Development Project?
-                </h2>
-                <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">Join thousands of students who have successfully
-                    completed their web development projects with our expert help.</p>
-                <a href="{{ route('order') }}"
-                    class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                    Get Started Today
-                </a>
-            </div>
-        </section>
-
-        <!-- Industry Trends & Best Practices Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Industry Trends & Best Practices</h2>
-                        <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">Stay ahead of the curve with our deep understanding of current web development trends, emerging technologies, and industry best practices that ensure your project meets modern standards.</p>
-                    </div>
-
-                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
-                        <!-- Current Web Development Trends -->
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-3 rounded-lg mr-4">📈</span>
-                                Current Web Development Trends
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-5 text-slate-400 text-[15px] leading-relaxed">
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
+                                Vetted Full-Stack Engineers
                             </h3>
-                            <div class="space-y-6">
-                                <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-purple-600 mr-2">⚛️</span>
-                                        Component-Based Architecture
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">Modern web applications leverage component-based frameworks like React, Vue.js, and Angular to build scalable, maintainable user interfaces. Our developers excel at creating reusable components that improve development efficiency and code quality while ensuring consistent user experiences across your application.</p>
-                                </div>
-
-                                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-green-600 mr-2">🚀</span>
-                                        JAMstack & Static Site Generation
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">The JAMstack architecture (JavaScript, APIs, and Markup) represents the future of web development, offering improved performance, security, and developer experience. We utilize tools like Next.js, Nuxt.js, and Gatsby to build fast, secure websites that load instantly and rank higher in search engines.</p>
-                                </div>
-
-                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-blue-600 mr-2">🔄</span>
-                                        Serverless & Edge Computing
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">Serverless functions and edge computing are revolutionizing how we deploy and scale web applications. Our team implements serverless architectures using AWS Lambda, Vercel Functions, and Netlify Functions to create highly scalable, cost-effective solutions that automatically handle traffic spikes.</p>
-                                </div>
-                            </div>
+                            <p>Unlike basic coding tutoring, our team consists of vetted software engineers and web developers who work daily in the tech industry. They write industry-standard code using semantic HTML5, modern CSS layouts (Grid/Flexbox), component-driven React/Vue architecture, and secure backend routing (REST/GraphQL).</p>
                         </div>
-
-                        <!-- Modern Development Practices -->
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                                <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-3 rounded-lg mr-4">⚡</span>
-                                Modern Development Practices
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-indigo-500 rounded-full inline-block"></span>
+                                Pixel-Perfect Responsive Designs
                             </h3>
-                            <div class="space-y-6">
-                                <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-orange-600 mr-2">🛠️</span>
-                                        DevOps & CI/CD Integration
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">We implement comprehensive DevOps practices including automated testing, continuous integration, and deployment pipelines. Using tools like GitHub Actions, GitLab CI, and Docker, we ensure your code is automatically tested, built, and deployed with zero downtime, maintaining high code quality and rapid delivery cycles.</p>
-                                </div>
-
-                                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-indigo-600 mr-2">🔒</span>
-                                        Security-First Development
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">Security is integrated into every stage of our development process. We implement OWASP best practices, conduct security audits, use secure authentication methods like OAuth 2.0 and JWT, and ensure all data transmission is encrypted. Our developers stay updated on the latest security vulnerabilities and mitigation strategies.</p>
-                                </div>
-
-                                <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl p-6 border border-cyan-100">
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-                                        <span class="text-cyan-600 mr-2">📱</span>
-                                        Mobile-First & Progressive Web Apps
-                                    </h4>
-                                    <p class="text-gray-600 leading-relaxed">With mobile traffic dominating web usage, we prioritize mobile-first design and Progressive Web App (PWA) features. Our applications work seamlessly across all devices, offer offline functionality, push notifications, and app-like experiences that keep users engaged while maintaining excellent performance on slower networks.</p>
-                                </div>
-                            </div>
+                            <p>We ensure that all web interfaces delivered are fully responsive and cross-browser compatible. The design is tested across various screen sizes (mobile, tablet, desktop) using modern responsive layout models and frameworks like TailwindCSS or Bootstrap as requested by your assignment guidelines.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-purple-500 rounded-full inline-block"></span>
+                                Complete Deployment &amp; Repo Support
+                            </h3>
+                            <p>Struggling with server deployments, database configurations, or Git version control? We don't just send plain text files. We deliver structured folders with README instructions, package files, environment variables, Git histories, and even help you deploy live to Heroku, Vercel, Netlify, or AWS.</p>
                         </div>
                     </div>
 
-                    <!-- Performance & Optimization -->
-                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 mb-12">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
-                            <span class="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-3 rounded-lg mr-4">⚡</span>
-                            Performance Optimization & Core Web Vitals
-                        </h3>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="text-center">
-                                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 h-full">
-                                    <div class="text-4xl mb-4">🚀</div>
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Speed Optimization</h4>
-                                    <p class="text-gray-600 text-sm leading-relaxed">We optimize every aspect of your web application for speed, including image optimization, code splitting, lazy loading, and CDN implementation. Our goal is to achieve sub-3-second load times and perfect Core Web Vitals scores, directly impacting your SEO rankings and user experience.</p>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 h-full">
-                                    <div class="text-4xl mb-4">♿</div>
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Accessibility Standards</h4>
-                                    <p class="text-gray-600 text-sm leading-relaxed">We ensure your web application meets WCAG 2.1 AA accessibility standards, making it usable for everyone including users with disabilities. This includes proper semantic HTML, keyboard navigation, screen reader compatibility, and color contrast optimization for inclusive user experiences.</p>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 h-full">
-                                    <div class="text-4xl mb-4">🔍</div>
-                                    <h4 class="text-lg font-semibold text-gray-900 mb-3">SEO Excellence</h4>
-                                    <p class="text-gray-600 text-sm leading-relaxed">Every project includes comprehensive SEO optimization with proper meta tags, structured data, sitemap generation, and social media integration. We implement technical SEO best practices that help your website rank higher in search results and attract more organic traffic.</p>
-                                </div>
-                            </div>
+                    <div class="space-y-5">
+                        <div class="p-7 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-indigo-600/5 border border-blue-500/10">
+                            <h3 class="text-xl font-black text-white mb-6">What We Deliver with Every Project</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">✅</div>
+                                    <div><p class="text-white font-bold text-sm">W3C Validated Clean Code</p><p class="text-xs text-slate-500 mt-0.5">Written from scratch, semantic, and passing all linting/testing requirements</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📝</div>
+                                    <div><p class="text-white font-bold text-sm">Step-by-Step README &amp; Walkthrough</p><p class="text-xs text-slate-500 mt-0.5">Clear setup instructions (`npm install`, DB import queries, startup commands)</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">⚡</div>
+                                    <div><p class="text-white font-bold text-sm">Fast 3-Hour Urgent Delivery</p><p class="text-xs text-slate-500 mt-0.5">We accept urgent web assignments and deliver fully-functional systems on time</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔄</div>
+                                    <div><p class="text-white font-bold text-sm">72 Hours Free Revision Window</p><p class="text-xs text-slate-500 mt-0.5">Need to adjust CSS styling or add a new backend route? We revision it for free</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔒</div>
+                                    <div><p class="text-white font-bold text-sm">Strict Academic Confidentiality</p><p class="text-xs text-slate-500 mt-0.5">Your identity, code files, and university details remain 100% confidential</p></div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <!-- Technology Stack Evolution -->
-                    <div class="text-center mb-12">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Technology Stack Evolution</h3>
-                        <p class="text-gray-600 leading-relaxed mb-8 max-w-4xl mx-auto">
-                            The web development landscape evolves rapidly, and staying current with the latest technologies is crucial for project success. Our developers continuously update their skills and adapt to new tools, frameworks, and methodologies to ensure your project benefits from the latest innovations while maintaining stability and reliability.
-                        </p>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                                <div class="text-3xl mb-3">🔄</div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Continuous Learning</h4>
-                                <p class="text-sm text-gray-600">Our team stays current with emerging technologies and industry updates</p>
-                            </div>
-                            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                                <div class="text-3xl mb-3">🧪</div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Innovation Testing</h4>
-                                <p class="text-sm text-gray-600">We evaluate and integrate new tools that enhance development efficiency</p>
-                            </div>
-                            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                                <div class="text-3xl mb-3">📊</div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Performance Monitoring</h4>
-                                <p class="text-sm text-gray-600">Real-time analytics and monitoring ensure optimal application performance</p>
-                            </div>
-                            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                                <div class="text-3xl mb-3">🔮</div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Future-Proofing</h4>
-                                <p class="text-sm text-gray-600">Architecture designed to adapt to future technological advancements</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Call to Action for This Section -->
-                    <div class="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-4">Ready to Build with Modern Technologies?</h3>
-                        <p class="text-purple-100 mb-6 max-w-2xl mx-auto">
-                            Let our expert developers create a cutting-edge web application that leverages the latest technologies and follows industry best practices for optimal performance, security, and user experience.
-                        </p>
-                        <a href="{{ route('order') }}"
-                           class="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                            Start Your Modern Web Project
+                        <a href="{{ route('order') }}" class="group relative inline-flex w-full items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-500 transition-all duration-300 shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            <span class="relative z-10">Get Web Dev Assignment Help Now</span>
+                            <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        {{-- ===================================================
+             SECTION 4 – TYPES OF WEB DEV PROJECTS WE TACKLE
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" id="dev-services" aria-labelledby="services-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Assignment Scope</p>
+                    <h2 id="services-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Types of <span class="text-blue-600 dark:text-blue-400">Web Development Assignments</span> We Handle
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Our experts possess deep knowledge of frontend, backend, database design, and CMS integration to cover all assignment rubrics.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">🎨</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Frontend Projects</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing static web pages using semantic HTML5, styling layouts with modern CSS3, Sass, TailwindCSS, Bootstrap, and adding dynamic client-side interactions with vanilla JavaScript or TypeScript.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Responsive Landing Pages</li>
+                            <li>• DOM Manipulation Tasks</li>
+                            <li>• Flexbox &amp; Grid Alignment</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl">⚙️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Framework &amp; SPA Projects</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Developing complex Single Page Applications (SPAs) with state management (Redux, Vuex, Pinia), dynamic routing, hooks, component files, and API integration using React.js, Vue.js, or Angular.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• React hooks &amp; contexts</li>
+                            <li>• Angular dependency injection</li>
+                            <li>• Vue components &amp; composition</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">🗄️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Backend &amp; API Projects</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Writing robust server-side code using Node.js/Express, PHP/Laravel, Python/Django, or Java Spring Boot. Setting up RESTful or GraphQL APIs with JWT authentication and middleware protection.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• User auth &amp; sessions</li>
+                            <li>• RESTful API architecture</li>
+                            <li>• Middleware &amp; data validation</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🗄️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Full-Stack Web Applications</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Integrating frontend UIs with backend servers and databases. Expertise in MERN stack (MongoDB, Express, React, Node), LAMP stack, Laravel+Vue, and Next.js applications with database queries.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Database CRUD operations</li>
+                            <li>• Full-Stack MERN apps</li>
+                            <li>• Next.js/Nuxt.js SSR pages</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white text-xl">💾</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database Design &amp; Integration</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Structuring schemas, designing entity relationship diagrams (ERDs), writing optimized SQL or NoSQL queries, configuring migrations, and connecting applications to MySQL, PostgreSQL, or MongoDB.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Schema design &amp; relationships</li>
+                            <li>• SQL transaction handling</li>
+                            <li>• ODM/ORM (Mongoose, Eloquent)</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white text-xl">🚀</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">CMS &amp; E-commerce Tasks</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Building custom WordPress themes from scratch, writing PHP plugins, customizing WooCommerce sites, managing Shopify themes, Liquid templates, and styling e-commerce storefronts.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• WordPress custom themes</li>
+                            <li>• PHP plugin development</li>
+                            <li>• Shopify Liquid coding</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 5 – STEPS TO GET HELP
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="steps-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">Streamlined Process</p>
+                    <h2 id="steps-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get Your Web Project Done in 4 Steps
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-base font-black text-white shadow-md">1</div>
+                        <div class="mb-3 text-2xl">📋</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Upload Guidelines</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Submit your web assignment guidelines, specify required frameworks, deadline, and databases.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-base font-black text-white shadow-md">2</div>
+                        <div class="mb-3 text-2xl">🎯</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Get Custom Quote</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We assign a qualified full-stack developer who reviews your project and offers a fair price quote.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-base font-black text-white shadow-md">3</div>
+                        <div class="mb-3 text-2xl">💻</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Developer Codes &amp; Tests</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">The developer writes the code, structures folders, compiles documentation, and tests responsive styles.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white shadow-md">4</div>
+                        <div class="mb-3 text-2xl">🚀</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Download &amp; Verify</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Receive zip folder, run the web application, review instructions, and request revisions if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 6 – GUARANTEES
+             SEO: Addresses customer objections
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="guarantee-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Guarantees</p>
+                    <h2 id="guarantee-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Risk-Free Web Programming Assistance
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-900/40 dark:bg-blue-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">💡</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">100% Original Solutions</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every project is coded from scratch based on your custom requirements. We do not recycle code templates, guaranteeing absolute academic originality.</p>
+                    </div>
+                    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900/40 dark:bg-emerald-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-xl text-white">⏱️</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict On-Time Delivery</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Missing assignments ruins grades. We monitor coding progress continuously to ensure your web folder is delivered before the deadline.</p>
+                    </div>
+                    <div class="rounded-2xl border border-purple-200 bg-purple-50 p-6 dark:border-purple-900/40 dark:bg-purple-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-xl text-white">🔄</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Free Revisions (72 hrs)</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Need minor adjustments to your CSS, state management, or route endpoints? We offer unlimited modifications within 72 hours of delivery.</p>
+                    </div>
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-900/40 dark:bg-amber-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-600 text-xl text-white">💰</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Money-Back Refund</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">If our coders fail to meet the mandatory requirements specified in your order, you are fully covered by our fair refund policy.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-slate-700 text-xl text-white">🔒</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Confidential Service</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Your personal details and institutional names are kept highly confidential and secure via full database encryption. We never share files with anyone.</p>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-200 bg-cyan-50 p-6 dark:border-cyan-900/40 dark:bg-cyan-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-600 text-xl text-white">💬</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">24/7 Live Support</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Get instant updates, clarify requirements directly with your coder, or speak to our support desk anytime you need assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 7 – TESTIMONIALS
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-amber-600 dark:text-amber-400">Web Developer Reviews</p>
+                    <h2 id="reviews-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        What Students Say About Our Web Development Help
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">MERN Stack app</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I was struggling to connect my React frontend with Express API and MongoDB because of CORS errors and state bugs. The expert refactored the backend controllers, added proper config, and documented how to run it. Got an A!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Jonathan R.</p><p class="text-xs text-slate-500">Penn State</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">Laravel / Vue</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"Had a Laravel final project involving relational database design (Eloquent) and Vue frontend. The programmer designed clean DB migrations, fully documented the setup inside a README, and even helped me deploy to Heroku."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Sarah H.</p><p class="text-xs text-slate-500">University of Illinois</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">TailwindCSS</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I had to build a fully responsive dashboard template using semantic HTML5 and utility classes from Tailwind CSS. The output was pixel-perfect on mobile and desktop, completely meeting the W3C standards."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">David K.</p><p class="text-xs text-slate-500">Ohio State University</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 8 – IN-DEPTH SEO CONTENT BLOCK
+             SEO: Long-form keyword-rich educational material
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="content-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h2 id="content-heading" class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">🎯</span>
+                                What is Web Development Assignment Help?
+                            </h2>
+                            <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <p><strong class="text-slate-900 dark:text-white font-semibold">Web development assignment help</strong> is a premium, expert service designed to guide students and programmers through complex web application tasks. Modern web engineering is challenging because it requires developers to be proficient in multiple abstraction layers — including semantic structuring, responsive visual layouts, client-side scripts, database queries, and server environments.</p>
+                                <p>Our dedicated web specialists provide structured code, debugging support, framework setup, database configuration, and documentation, ensuring you receive fully operational code folders that meet grading criteria.</p>
+                                <p>We cover all major technologies: React.js, Vue.js, Angular, Next.js, Node.js, Express, PHP/Laravel, Python/Django, ASP.NET, MySQL, PostgreSQL, MongoDB, HTML5, CSS3, JavaScript, and TailwindCSS.</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">💻</span>
+                                Common Web Assignment Challenges We Solve
+                            </h3>
+                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">CORS &amp; API Integration Errors:</strong> Struggling to fetch data from your Node or Laravel backend due to Cross-Origin Resource Sharing (CORS) blocks? We configure route middleware to allow smooth data fetching.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">State Management State Overlap:</strong> Resolving React rendering loops, Vue reactivity issues, or Redux state configuration glitches.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Database Query Performance:</strong> Connecting ORMs (Eloquent, Mongoose, Hibernate) to databases, writing joins, aggregations, and structuring schemas.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">⭐</span>
+                                Web Stack &amp; Libraries We Cover
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach(['HTML5','CSS3','JavaScript','TypeScript','React.js','Vue.js','Angular','Next.js','Nuxt.js','TailwindCSS','Bootstrap','Sass','Node.js','Express.js','Laravel','Symfony','Django','Flask','Spring Boot','ASP.NET','MySQL','PostgreSQL','MongoDB','SQLite','Firebase','GraphQL','REST API','JWT Auth','OAuth','WebSockets','Docker','Git','Vercel','Netlify','Heroku','AWS'] as $tech)
+                                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">{{ $tech }}</span>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-white">📊</span>
+                                Our Web Dev Track Record
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-blue-600 dark:text-blue-400">5,000+</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Web Apps Coded</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-emerald-600 dark:text-emerald-400">98%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time rate</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-amber-600 dark:text-amber-400">4.9★</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Avg Student Rating</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-purple-600 dark:text-purple-400">200+</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Developers on Call</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 9 – FAQ ACCORDION
+             SEO: Targets rich SERP results
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="faq-heading">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">FAQs</p>
+                    <h2 id="faq-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Web Development Assignment Help FAQs
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Can your developers write my React or Vue assignment from scratch?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We specialize in custom development assignments. Our programmers set up the folder structure, configure `package.json`, write components using clean syntax (like functional components with hooks in React), compile standard styles, and ensure the local project works perfectly.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Do you deliver backend code and database files?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. For backend and database assignments, we provide the complete server folder (Node/Laravel/Django), API route files, authentication middleware, alongside SQL schema export dumps (.sql files) or MongoDB connection setup scripts.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How do I run and test the delivered web project locally?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every project we deliver includes a comprehensive `README.md` file detailing dependencies installation (e.g. `npm install`), configuration steps (e.g. database credentials in `.env`), and startup commands (e.g. `npm run dev` or `php artisan serve`). We are also happy to guide you through setup via live chat.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Will the code be original and free from plagiarism?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Absolutely. We enforce a zero-plagiarism policy. Every line of HTML, CSS, JavaScript, and backend logic is written from scratch specifically for your assignment parameters. We can provide screenshots of testing or code originality scans upon request.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How fast can you complete my web programming assignment?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">For urgent frontend bugs, HTML styling, or simple Javascript tasks, we can deliver solutions in as fast as 3 to 12 hours. Full-stack projects containing complex dashboard features or backend database connections typically require 24 to 72 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 10 – FINAL CTA
+             SEO: High converting closing block
+        =================================================== --}}
+        <section class="relative overflow-hidden bg-slate-900 py-16 sm:py-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">Certified Web Coders Online</span>
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-5">
+                    Ready to Get Your<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Web Development Assignment Coded?</span>
+                </h2>
+
+                <p class="text-base text-slate-400 max-w-2xl mx-auto mb-10">
+                    Get clean, responsive, and working code files alongside a step-by-step setup guide. Chat with our specialists now and receive a custom quote in under 5 minutes.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-lg hover:-translate-y-0.5 active:scale-95 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span class="relative z-10 text-sm">Get Web Development Help Now</span>
+                        <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                    </a>
+                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">No Commitment &middot; Free Quote</span>
+                </div>
+
+                <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">5,000+</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Apps Completed</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">4.9/5</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Student Rating</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">98%</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             FAQ & SERVICE SCHEMA MARKUP
+        =================================================== --}}
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Can your developers write my React or Vue assignment from scratch?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We specialize in custom development assignments. Our programmers set up the folder structure, configure package.json, write components using clean syntax, compile standard styles, and ensure the local project works perfectly."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you deliver backend code and database files?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. For backend and database assignments, we provide the complete server folder (Node/Laravel/Django), API route files, authentication middleware, alongside SQL schema export dumps (.sql files) or MongoDB connection setup scripts."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "How do I run and test the delivered web project locally?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Every project we deliver includes a comprehensive README.md file detailing dependencies installation (e.g. npm install), configuration steps (e.g. database credentials in .env), and startup commands (e.g. npm run dev or php artisan serve)."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Will the code be original and free from plagiarism?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Absolutely. We enforce a zero-plagiarism policy. Every line of HTML, CSS, JavaScript, and backend logic is written from scratch specifically for your assignment parameters."
+              }
+            }
+          ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Service",
+          "name": "Web Development Assignment Help",
+          "description": "Professional web development assignment help and coding project assistance. Expert developers available 24/7 for React, Vue, Angular, HTML/CSS, Node.js, PHP, and databases.",
+          "provider": {
+            "@@type": "Organization",
+            "name": "AssignmentHelpUSA",
+            "url": "https://assignmenthelpusa.com"
+          },
+          "areaServed": "US",
+          "serviceType": "Web Development Assignment Help",
+          "offers": {
+            "@@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "15",
+            "highPrice": "600"
+          },
+          "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1800",
+            "bestRating": "5"
+          }
+        }
+        </script>
     </div>
-
-    <style>
-        @@keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg) scale(1);
-            }
-            25% {
-                transform: translateY(-15px) rotate(1deg) scale(1.02);
-            }
-            50% {
-                transform: translateY(-5px) rotate(-0.5deg) scale(1.01);
-            }
-            75% {
-                transform: translateY(-10px) rotate(0.5deg) scale(1.02);
-            }
-        }
-
-        @@keyframes float-delayed {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg) scale(1);
-            }
-            25% {
-                transform: translateY(12px) rotate(-1deg) scale(1.01);
-            }
-            50% {
-                transform: translateY(-8px) rotate(1deg) scale(1.02);
-            }
-            75% {
-                transform: translateY(5px) rotate(-0.5deg) scale(1.01);
-            }
-        }
-
-        @@keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
-            }
-        }
-
-        @@keyframes code-typing {
-            0% { width: 0; }
-            100% { width: 100%; }
-        }
-
-        @@keyframes gradient-shift {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .animate-float {
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .animate-float-delayed {
-            animation: float-delayed 10s ease-in-out infinite;
-        }
-
-        .animate-glow {
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        .code-section {
-            background: linear-gradient(-45deg, #1f2937, #111827, #1f2937, #0f172a);
-            background-size: 400% 400%;
-            animation: gradient-shift 8s ease infinite;
-        }
-
-        .code-snippet {
-            transition: all 0.3s ease;
-        }
-
-        .code-snippet:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-bg {
-            background: linear-gradient(-45deg, #f3e8ff, #dbeafe, #e0e7ff, #f0f9ff);
-            background-size: 400% 400%;
-            animation: gradient-shift 15s ease infinite;
-        }
-
-        /* Typing effect for code */
-        .typing-effect {
-            overflow: hidden;
-            border-right: 2px solid #10b981;
-            white-space: nowrap;
-            animation: code-typing 3s steps(40, end) infinite alternate;
-        }
-
-        /* Glitch effect for tech elements */
-        @@keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            10% { transform: translate(-1px, -1px); }
-            20% { transform: translate(1px, 1px); }
-            30% { transform: translate(-1px, 1px); }
-            40% { transform: translate(1px, -1px); }
-        }
-
-        .glitch {
-            animation: glitch 0.3s infinite;
-        }
-
-        /* Enhanced smooth transitions */
-        .smooth-transition {
-            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            will-change: transform;
-        }
-
-        .ultra-smooth {
-            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        /* Technology card animations */
-        .tech-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-origin: center;
-            backface-visibility: hidden;
-            perspective: 1000px;
-        }
-
-        .tech-card:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .tech-icon {
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .tech-card:hover .tech-icon {
-            transform: scale(1.2) rotate(5deg);
-        }
-
-        /* Slide fade in animation */
-        @@keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .slide-in {
-            animation: slideIn 0.6s ease-out forwards;
-        }
-
-        /* Staggered animation for cards */
-        .tech-card:nth-child(1) { animation-delay: 0.1s; }
-        .tech-card:nth-child(2) { animation-delay: 0.15s; }
-        .tech-card:nth-child(3) { animation-delay: 0.2s; }
-        .tech-card:nth-child(4) { animation-delay: 0.25s; }
-        .tech-card:nth-child(5) { animation-delay: 0.3s; }
-        .tech-card:nth-child(6) { animation-delay: 0.35s; }
-        .tech-card:nth-child(7) { animation-delay: 0.4s; }
-        .tech-card:nth-child(8) { animation-delay: 0.45s; }
-        .tech-card:nth-child(9) { animation-delay: 0.5s; }
-        .tech-card:nth-child(10) { animation-delay: 0.55s; }
-        .tech-card:nth-child(11) { animation-delay: 0.6s; }
-        .tech-card:nth-child(12) { animation-delay: 0.65s; }
-
-        /* Enhanced button animations */
-        .nav-button {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-origin: center;
-        }
-
-        .nav-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-        }
-
-        .nav-button:active {
-            transform: scale(0.95);
-        }
-
-        /* Indicator smooth transitions */
-        .slide-indicator {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .slide-indicator:hover {
-            transform: scale(1.3);
-        }
-
-        .slide-indicator.active {
-            transform: scale(1.2);
-        }
-
-        /* Smooth gradient background animation */
-        .gradient-bg {
-            background: linear-gradient(-45deg, #f9fafb, #e0e7ff, #ddd6fe, #fdf2f8);
-            background-size: 400% 400%;
-            animation: gradientShift 12s ease infinite;
-        }
-
-        @@keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Mobile-specific enhancements for code background */
-        @@media (max-width: 768px) {
-            .code-snippet {
-                transform: scale(0.8);
-                opacity: 0.4 !important;
-            }
-
-            .hero-bg {
-                background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #cbd5e1, #f1f5f9);
-            }
-
-            /* Hide some floating elements on very small screens */
-            .code-snippet:nth-child(n+4) {
-                display: none;
-            }
-
-            /* Adjust positioning for remaining elements */
-            .code-snippet:nth-child(1) {
-                top: 2rem;
-                left: 0.5rem;
-                max-width: 12rem;
-            }
-
-            .code-snippet:nth-child(2) {
-                top: 6rem;
-                right: 0.5rem;
-                max-width: 12rem;
-            }
-
-            .code-snippet:nth-child(3) {
-                bottom: 4rem;
-                left: 1rem;
-                max-width: 12rem;
-            }
-        }
-
-        /* Extra small screens */
-        @@media (max-width: 480px) {
-            .code-snippet {
-                opacity: 0.25 !important;
-                font-size: 0.7rem;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('techSlider');
-            const nextBtn = document.getElementById('nextBtn');
-            const prevBtn = document.getElementById('prevBtn');
-            const indicators = document.querySelectorAll('.slide-indicator');
-
-            let currentSlide = 0;
-            const totalSlides = 3;
-            let autoSlideInterval;
-            let isAutoSliding = true;
-            let isTransitioning = false;
-
-            // Enhanced smooth transition function
-            function goToSlide(slideIndex, smooth = true) {
-                if (isTransitioning) return;
-
-                isTransitioning = true;
-                currentSlide = slideIndex;
-
-                // Add ultra-smooth class for better easing
-                slider.classList.add('ultra-smooth');
-
-                const translateX = -slideIndex * 100;
-                slider.style.transform = `translateX(${translateX}%)`;
-
-                // Update indicators with smooth transitions
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.remove('active');
-                    if (index === slideIndex) {
-                        indicator.classList.remove('bg-gray-300');
-                        indicator.classList.add('bg-purple-600', 'active');
-                    } else {
-                        indicator.classList.remove('bg-purple-600', 'active');
-                        indicator.classList.add('bg-gray-300');
-                    }
-                });
-
-                // Trigger staggered card animations for the current slide
-                setTimeout(() => {
-                    animateCurrentSlideCards(slideIndex);
-                }, 100);
-
-                // Reset transition lock
-                setTimeout(() => {
-                    isTransitioning = false;
-                    slider.classList.remove('ultra-smooth');
-                }, 800);
-            }
-
-            // Animate cards in current slide with staggered effect
-            function animateCurrentSlideCards(slideIndex) {
-                const currentSlideElement = slider.children[slideIndex];
-                const cards = currentSlideElement.querySelectorAll('.tech-card');
-
-                cards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-
-                    setTimeout(() => {
-                        card.style.transition = `all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, index * 50);
-                });
-            }
-
-            // Next slide function
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                goToSlide(currentSlide);
-            }
-
-            // Previous slide function
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                goToSlide(currentSlide);
-            }
-
-            // Start auto-slide with smoother timing
-            function startAutoSlide() {
-                autoSlideInterval = setInterval(nextSlide, 6000); // Slightly longer for better UX
-                isAutoSliding = true;
-            }
-
-            // Stop auto-slide
-            function stopAutoSlide() {
-                clearInterval(autoSlideInterval);
-                isAutoSliding = false;
-            }
-
-            // Enhanced button interactions
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (isTransitioning) return;
-
-                stopAutoSlide();
-                nextSlide();
-
-                // Add button feedback
-                nextBtn.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    nextBtn.style.transform = '';
-                }, 150);
-
-                setTimeout(startAutoSlide, 8000); // Resume auto-slide after 8 seconds
-            });
-
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (isTransitioning) return;
-
-                stopAutoSlide();
-                prevSlide();
-
-                // Add button feedback
-                prevBtn.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    prevBtn.style.transform = '';
-                }, 150);
-
-                setTimeout(startAutoSlide, 8000); // Resume auto-slide after 8 seconds
-            });
-
-            // Enhanced indicator interactions
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (isTransitioning || index === currentSlide) return;
-
-                    stopAutoSlide();
-                    goToSlide(index);
-                    setTimeout(startAutoSlide, 8000); // Resume auto-slide after 8 seconds
-                });
-
-                // Add hover effects
-                indicator.addEventListener('mouseenter', () => {
-                    if (index !== currentSlide) {
-                        indicator.style.transform = 'scale(1.3)';
-                        indicator.style.backgroundColor = '#a855f7';
-                    }
-                });
-
-                indicator.addEventListener('mouseleave', () => {
-                    if (index !== currentSlide) {
-                        indicator.style.transform = 'scale(1)';
-                        indicator.style.backgroundColor = '#d1d5db';
-                    }
-                });
-            });
-
-            // Pause auto-slide on hover
-            slider.addEventListener('mouseenter', stopAutoSlide);
-            slider.addEventListener('mouseleave', () => {
-                if (!isAutoSliding) {
-                    startAutoSlide();
-                }
-            });
-
-            // Touch/swipe support for mobile
-            let startX = 0;
-            let startY = 0;
-            let isDragging = false;
-
-            slider.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isDragging = true;
-                stopAutoSlide();
-            });
-
-            slider.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-            });
-
-            slider.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                isDragging = false;
-
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                const diffX = startX - endX;
-                const diffY = startY - endY;
-
-                // Check if horizontal swipe is more significant than vertical
-                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                    if (diffX > 0) {
-                        nextSlide(); // Swipe left - next slide
-                    } else {
-                        prevSlide(); // Swipe right - previous slide
-                    }
-                }
-
-                setTimeout(startAutoSlide, 10000); // Resume auto-slide after 10 seconds
-            });
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    stopAutoSlide();
-                    prevSlide();
-                    setTimeout(startAutoSlide, 10000);
-                } else if (e.key === 'ArrowRight') {
-                    stopAutoSlide();
-                    nextSlide();
-                    setTimeout(startAutoSlide, 10000);
-                }
-            });
-
-            // Initialize the slider with smooth animations
-            function initializeSlider() {
-                // Set initial slide
-                goToSlide(0, false);
-
-                // Animate initial cards
-                setTimeout(() => {
-                    animateCurrentSlideCards(0);
-                }, 300);
-
-                // Start auto-slide
-                setTimeout(startAutoSlide, 2000);
-            }
-
-            // Enhanced tech card interactions
-            document.querySelectorAll('.tech-card').forEach((card, index) => {
-                card.addEventListener('click', () => {
-                    // Add click effect with bounce
-                    card.style.transform = 'scale(0.95) translateY(-5px)';
-                    setTimeout(() => {
-                        card.style.transform = '';
-                    }, 200);
-                });
-
-                // Add subtle parallax effect on mouse move
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const centerX = rect.left + rect.width / 2;
-                    const centerY = rect.top + rect.height / 2;
-                    const deltaX = (e.clientX - centerX) * 0.1;
-                    const deltaY = (e.clientY - centerY) * 0.1;
-
-                    const icon = card.querySelector('.tech-icon');
-                    if (icon) {
-                        icon.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.1)`;
-                    }
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    const icon = card.querySelector('.tech-icon');
-                    if (icon) {
-                        icon.style.transform = '';
-                    }
-                });
-            });
-
-            // Performance optimization - use RAF for smooth animations
-            let rafId;
-            function smoothUpdate() {
-                rafId = requestAnimationFrame(smoothUpdate);
-            }
-            smoothUpdate();
-
-            // Initialize everything
-            initializeSlider();
-        });
-    </script>
 @endsection

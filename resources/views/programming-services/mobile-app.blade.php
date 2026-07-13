@@ -1,1164 +1,673 @@
 @extends('layouts.app')
 
-@section('title', 'Mobile App Development - Expert Help Available')
-@section('description', 'Get professional help with mobile app development projects. Expert developers available 24/7
-    for React Native, Flutter, Swift, Kotlin, and more.')
+@section('title', 'Mobile App Assignment Help | Android & iOS Programming Assistance')
+@section('description', 'Struggling with Flutter, React Native, Swift, or Kotlin? Get expert mobile app assignment help from vetted USA developers. 100% working code, emulator tested.')
 
 @section('content')
     <div class="min-h-screen">
-        <!-- Hero Section with Code Background -->
+        {{-- ===================================================
+             CREATIVE HERO SECTION — DO NOT MODIFY
+        =================================================== --}}
         <x-creative-hero :service="$service" />
 
-        <!-- Comprehensive Mobile App Development Content Section -->
-        <section class="bg-slate-50 py-14 sm:py-16">
+        {{-- ===================================================
+             SECTION 1 – TRUST BAR / SOCIAL PROOF
+             SEO: Builds E-E-A-T immediately after hero
+        =================================================== --}}
+        <section class="border-y border-slate-100 bg-white py-5 dark:border-slate-800 dark:bg-slate-900" aria-label="Trust signals">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600">Comprehensive Mobile Development Guide</p>
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                            Complete Mobile App <span class="text-blue-600">Development Solutions</span>
-                        </h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">From idea to App Store launch—your complete roadmap to mobile app success</p>
+                <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">from 1,400+ Mobile reviews</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">20</strong> App Experts Online</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">3,500+ Mobile Apps Delivered</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Simulator &amp; Emulator Tested</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 2 – CORE MOBILE APP PLATFORMS
+             SEO: Keyword coverage for specific frameworks
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" id="app-platforms" aria-labelledby="platforms-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Mobile Ecosystem Coverage</p>
+                    <h2 id="platforms-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get <span class="text-blue-600 dark:text-blue-400">Mobile App Assignment Help</span> in Any Framework
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Whether it is coding cross-platform systems, designing native Android layouts, debugging iOS build constraints, or integrating databases — we have you covered.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">⚛️</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">React Native</span>
+                        <span class="text-[10px] text-slate-500">JS / Expo / Redux</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">💙</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Flutter</span>
+                        <span class="text-[10px] text-slate-500">Dart / BLoC / UI</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🍎</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Swift &amp; iOS</span>
+                        <span class="text-[10px] text-slate-500">SwiftUI / UIKit / Xcode</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🤖</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Kotlin &amp; Android</span>
+                        <span class="text-[10px] text-slate-500">Compose / Gradle / Java</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🔥</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Firebase</span>
+                        <span class="text-[10px] text-slate-500">Auth / Firestore / Cloud</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🗄️</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Local Databases</span>
+                        <span class="text-[10px] text-slate-500">Room / CoreData / SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 3 – WHY STUDENTS PREFER US FOR APP HELP
+             SEO: High EEAT block
+        =================================================== --}}
+        <section class="bg-slate-900 py-16 sm:py-20" aria-labelledby="why-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Build Guarantee</span>
+                    </div>
+                    <h2 id="why-heading" class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Why Choose Our <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Mobile App Programming Help</span>
+                    </h2>
+                    <p class="mt-5 text-base text-slate-400 max-w-2xl mx-auto">
+                        Mobile development requires combining UI components, handling device state cycles, managing localized storage, and handling build setups. Here's why students choose us.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-5 text-slate-400 text-[15px] leading-relaxed">
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
+                                Vetted Mobile Software Engineers
+                            </h3>
+                            <p>Every mobile app project is handled by an expert developer specializing in iOS and Android ecosystems. They write clean codes conforming to Google's Material Design principles and Apple's Human Interface Guidelines.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-indigo-500 rounded-full inline-block"></span>
+                                Emulator &amp; Simulator Testing
+                            </h3>
+                            <p>We don't just write code. We test the app inside Xcode's iOS Simulator and Android Studio's Emulator. We can provide screenshots, build folders (APKs / IPAs), or even a quick demo screen recording showing that your app runs perfectly.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-purple-500 rounded-full inline-block"></span>
+                                Architecture-Driven Code
+                            </h3>
+                            <p>We implement clean code architecture patterns. Whether your guidelines specify MVVM (Model-View-ViewModel), MVC, clean architecture, BLoC state configurations, or Redux toolkits — our code matches your class requirements.</p>
+                        </div>
                     </div>
 
                     <div class="space-y-5">
-                        <!-- Hero Introduction Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">
-                                    <span class="text-xl">🚀</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Transform Your Ideas Into Reality</h3>
-                                    <p class="text-sm font-semibold text-purple-600">Join 5+ billion smartphone users worldwide</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 grid gap-3 sm:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-1 text-2xl font-bold text-purple-600">5B+</div>
-                                    <p class="text-xs font-semibold text-slate-700">Global Mobile Users</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-1 text-2xl font-bold text-blue-600">90%</div>
-                                    <p class="text-xs font-semibold text-slate-700">Time Spent on Mobile Apps</p>
-                                </div>
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-1 text-2xl font-bold text-indigo-600">$693B</div>
-                                    <p class="text-xs font-semibold text-slate-700">App Revenue (2024)</p>
-                                </div>
-                            </div>
-
-                            <p class="mb-4 text-sm leading-relaxed text-slate-600">
-                                <span class="font-semibold text-purple-600">Mobile apps have revolutionized how we live.</span> From ordering food and managing finances to staying connected and learning new skills, billions of people worldwide rely on mobile applications every single day. Whether you're a student tackling a mobile development assignment, an entrepreneur with the next big app idea, or a developer needing expert guidance on complex features—professional mobile app development services are your shortcut to success.
-                            </p>
-
-                            <div class="rounded-xl bg-slate-900 p-5 text-white">
-                                <p class="mb-1 text-sm font-semibold">Why Mobile Matters:</p>
-                                <p class="text-sm text-slate-300">
-                                    Mobile isn't the future—it's the present. Apps generate more revenue than desktop, have higher engagement rates, and provide experiences that websites simply can't match. The question isn't whether to build mobile apps, but how to build them right.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Technology Deep Dive Cards -->
-                        <div class="grid gap-5 sm:grid-cols-2">
-                            <!-- Cross-Platform Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
-                                        <span class="text-xl">⚛️</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Cross-Platform Magic</h4>
-                                        <p class="text-xs font-semibold text-purple-600">Write once, deploy everywhere</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <p class="text-sm leading-relaxed text-slate-600">
-                                            <span class="font-semibold text-blue-600">React Native + Flutter = Developer Paradise.</span> Build stunning apps for iOS and Android using a single codebase. Save 50% development time while maintaining near-native performance. Facebook, Instagram, Alibaba, and Google Ads all trust cross-platform frameworks—so can you!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-blue-50 p-3 text-center">
-                                            <p class="text-base font-bold text-blue-700">60%</p>
-                                            <p class="text-xs text-slate-600">Cost Reduction</p>
-                                        </div>
-                                        <div class="rounded-lg bg-purple-50 p-3 text-center">
-                                            <p class="text-base font-bold text-purple-700">2x</p>
-                                            <p class="text-xs text-slate-600">Faster Launch</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">React Native</span>
-                                        <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">Flutter</span>
-                                        <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700">Hot Reload</span>
-                                        <span class="rounded-full bg-pink-50 px-3 py-1 text-xs font-semibold text-pink-700">Single Codebase</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- iOS Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white">
-                                        <span class="text-xl">🍎</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Native iOS Excellence</h4>
-                                        <p class="text-xs font-semibold text-orange-600">Premium Apple experience</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <p class="text-sm leading-relaxed text-slate-600">
-                                            <span class="font-semibold text-orange-600">Swift + SwiftUI = iOS Perfection.</span> Build lightning-fast apps that feel like they were made by Apple. Access exclusive features like ARKit, HealthKit, and seamless integration with Apple Watch, iPad, and Mac. Your users deserve the best—give it to them!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-orange-50 p-3 text-center">
-                                            <p class="text-base font-bold text-orange-700">1.5B+</p>
-                                            <p class="text-xs text-slate-600">Active Devices</p>
-                                        </div>
-                                        <div class="rounded-lg bg-pink-50 p-3 text-center">
-                                            <p class="text-base font-bold text-pink-700">$1.1T</p>
-                                            <p class="text-xs text-slate-600">App Store Revenue</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700">Swift</span>
-                                        <span class="rounded-full bg-pink-50 px-3 py-1 text-xs font-semibold text-pink-700">SwiftUI</span>
-                                        <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700">UIKit</span>
-                                        <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700">Combine</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Android Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
-                                        <span class="text-xl">🤖</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Native Android Power</h4>
-                                        <p class="text-xs font-semibold text-emerald-600">Reach the world's largest audience</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <p class="text-sm leading-relaxed text-slate-600">
-                                            <span class="font-semibold text-emerald-600">Kotlin + Jetpack Compose = Modern Android.</span> Tap into 3+ billion Android devices worldwide! Modern, declarative UI, null-safe code, and seamless coroutines make Android development a joy. Google Play's massive reach means unlimited potential!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-emerald-50 p-3 text-center">
-                                            <p class="text-base font-bold text-emerald-700">3B+</p>
-                                            <p class="text-xs text-slate-600">Active Devices</p>
-                                        </div>
-                                        <div class="rounded-lg bg-teal-50 p-3 text-center">
-                                            <p class="text-base font-bold text-teal-700">72%</p>
-                                            <p class="text-xs text-slate-600">Market Share</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">Kotlin</span>
-                                        <span class="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700">Jetpack Compose</span>
-                                        <span class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700">Material Design</span>
-                                        <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">Coroutines</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Backend Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white">
-                                        <span class="text-xl">🔥</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Backend &amp; APIs</h4>
-                                        <p class="text-xs font-semibold text-amber-600">Power your app with cloud magic</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <p class="text-sm leading-relaxed text-slate-600">
-                                            <span class="font-semibold text-amber-600">Firebase + REST APIs = Unlimited Power.</span> Real-time databases, cloud storage, authentication, push notifications, and analytics—all in one platform. Your app becomes intelligent, connected, and scalable from day one!
-                                        </p>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="rounded-lg bg-amber-50 p-3 text-center">
-                                            <p class="text-base font-bold text-amber-700">99.9%</p>
-                                            <p class="text-xs text-slate-600">Uptime SLA</p>
-                                        </div>
-                                        <div class="rounded-lg bg-orange-50 p-3 text-center">
-                                            <p class="text-base font-bold text-orange-700">&lt;100ms</p>
-                                            <p class="text-xs text-slate-600">API Response</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700">Firebase</span>
-                                        <span class="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700">REST APIs</span>
-                                        <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700">GraphQL</span>
-                                        <span class="rounded-full bg-pink-50 px-3 py-1 text-xs font-semibold text-pink-700">WebSocket</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Advanced Features Showcase -->
-                        <div class="rounded-2xl bg-slate-900 p-6 text-white sm:p-8">
-                            <div class="mb-6 text-center">
-                                <h3 class="mb-2 text-2xl font-bold">Advanced Features Arsenal</h3>
-                                <p class="text-sm text-slate-400">Everything you need to build world-class mobile apps</p>
-                            </div>
-
-                            <div class="grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">📸</span>
-                                        <h5 class="text-sm font-bold text-white">Camera &amp; Media</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Photo/video capture</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Image filters &amp; editing</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> QR code scanning</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Gallery integration</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Media compression</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">📍</span>
-                                        <h5 class="text-sm font-bold text-white">Location Services</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> GPS tracking</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Geofencing alerts</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Maps integration</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Location-based notifications</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Distance calculations</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">💳</span>
-                                        <h5 class="text-sm font-bold text-white">Payments &amp; Commerce</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Stripe integration</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> In-app purchases</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Payment gateways</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Subscription management</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Digital wallets</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">🔔</span>
-                                        <h5 class="text-sm font-bold text-white">Notifications</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Push notifications</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Local notifications</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Rich media alerts</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Notification actions</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Badge management</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">🔐</span>
-                                        <h5 class="text-sm font-bold text-white">Authentication</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Social login integration</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Biometric auth (Face/Touch ID)</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> JWT token management</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Multi-factor authentication</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Password recovery flows</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <div class="mb-3 flex items-center gap-2">
-                                        <span class="text-lg">💾</span>
-                                        <h5 class="text-sm font-bold text-white">Data Management</h5>
-                                    </div>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> SQLite databases</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Realm integration</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Offline-first architecture</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Data synchronization</li>
-                                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Encrypted storage</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Why Choose Us Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white">
-                                    <span class="text-xl">🏆</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Why We're Different</h3>
-                                    <p class="text-sm font-semibold text-amber-600">Not just code—we build mobile app masterpieces</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center">
-                                    <div class="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-100">
-                                        <span class="text-xl">🎯</span>
-                                    </div>
-                                    <h4 class="mb-2 text-sm font-bold text-slate-900">Clean Architecture</h4>
-                                    <p class="text-xs text-slate-600">
-                                        MVVM, Redux, BLoC—we use battle-tested patterns that make your code maintainable, testable, and scalable for years to come.
-                                    </p>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center">
-                                    <div class="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100">
-                                        <span class="text-xl">⚡</span>
-                                    </div>
-                                    <h4 class="mb-2 text-sm font-bold text-slate-900">Performance First</h4>
-                                    <p class="text-xs text-slate-600">
-                                        Lazy loading, image caching, memory optimization—your app will be lightning fast on day one, not after months of debugging.
-                                    </p>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center">
-                                    <div class="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100">
-                                        <span class="text-xl">🔒</span>
-                                    </div>
-                                    <h4 class="mb-2 text-sm font-bold text-slate-900">Fort Knox Security</h4>
-                                    <p class="text-xs text-slate-600">
-                                        Keychain storage, certificate pinning, OWASP compliance—we protect your users' data like it's our own.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 rounded-xl bg-slate-900 p-6 text-white">
-                                <div class="grid grid-cols-3 gap-4 text-center">
-                                    <div>
-                                        <div class="text-2xl font-bold text-white">100%</div>
-                                        <p class="text-xs text-slate-400">Code Coverage</p>
-                                    </div>
-                                    <div>
-                                        <div class="text-2xl font-bold text-white">24/7</div>
-                                        <p class="text-xs text-slate-400">Expert Support</p>
-                                    </div>
-                                    <div>
-                                        <div class="text-2xl font-bold text-white">500+</div>
-                                        <p class="text-xs text-slate-400">Apps Delivered</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                <h4 class="mb-2 flex items-center gap-2 text-sm font-bold text-slate-900">
-                                    <span class="text-lg">📚</span> Complete Documentation Included
-                                </h4>
-                                <p class="mb-3 text-sm text-slate-600">
-                                    You don't just get working code—you get the knowledge to maintain and enhance it. Every project includes:
-                                </p>
-                                <div class="grid gap-2 sm:grid-cols-2">
-                                    <div class="flex items-center gap-2 text-xs text-slate-600">
-                                        <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                        <span>Architecture decision records</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-slate-600">
-                                        <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                        <span>API integration guides</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-slate-600">
-                                        <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                        <span>Setup &amp; deployment instructions</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-slate-600">
-                                        <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                        <span>Maintenance best practices</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Section -->
-        <section class="bg-white py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Mobile Technologies We Master</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Our expert mobile developers work with cutting-edge
-                        technologies to build native and cross-platform mobile applications.</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <!-- Cross-Platform -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900">Cross-Platform</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">⚛️</span>
-                                <h4 class="text-sm font-semibold text-slate-900">React Native</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🎯</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Flutter</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">⚡</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Xamarin</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- iOS Development -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900">iOS Development</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🍎</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Swift</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">📱</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Objective-C</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🎨</span>
-                                <h4 class="text-sm font-semibold text-slate-900">SwiftUI</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Android Development -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900">Android Development</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🤖</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Kotlin</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">☕</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Java</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🎯</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Jetpack Compose</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Backend & APIs -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900">Backend &amp; APIs</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🔥</span>
-                                <h4 class="text-sm font-semibold text-slate-900">Firebase</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">🌐</span>
-                                <h4 class="text-sm font-semibold text-slate-900">REST APIs</h4>
-                            </div>
-                            <div class="flex items-center gap-3 rounded-lg bg-slate-50 p-3">
-                                <span class="text-xl">📊</span>
-                                <h4 class="text-sm font-semibold text-slate-900">GraphQL</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="bg-slate-50 py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Transparent Pricing</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Fair, transparent pricing based on app complexity.
-                        No hidden fees, no surprises.</p>
-                </div>
-
-                <div class="mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-3">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-                        <div class="text-center">
-                            <h3 class="mb-1 text-base font-bold text-slate-900">Basic Mobile App</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600">From $75</div>
-                            <ul class="mb-6 space-y-2 text-left text-sm text-slate-600">
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Simple mobile app features
+                        <div class="p-7 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-indigo-600/5 border border-blue-500/10">
+                            <h3 class="text-xl font-black text-white mb-6">What We Deliver with Every Order</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">✅</div>
+                                    <div><p class="text-white font-bold text-sm">Working Code &amp; Build Folders</p><p class="text-xs text-slate-500 mt-0.5">Fully-functional code directory, Gradle scripts, configuration files, and APKs</p></div>
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Basic UI/UX design
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📝</div>
+                                    <div><p class="text-white font-bold text-sm">Step-by-Step Setup README</p><p class="text-xs text-slate-500 mt-0.5">Instructions to run the app on Android Studio, Xcode, or Expo CLI</p></div>
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    3-5 day delivery
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">⚡</div>
+                                    <div><p class="text-white font-bold text-sm">Fast Urgent Delivery Options</p><p class="text-xs text-slate-500 mt-0.5">Stuck on Gradle errors or autolayout bugs before a deadline? We solve them in hours</p></div>
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Documentation included
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔄</div>
+                                    <div><p class="text-white font-bold text-sm">72 Hours Free Revision Window</p><p class="text-xs text-slate-500 mt-0.5">Need to adjust some buttons, add comments, or tune colors? Revisions are free</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔒</div>
+                                    <div><p class="text-white font-bold text-sm">Complete Confidentiality</p><p class="text-xs text-slate-500 mt-0.5">Your email, name, class codes, and credentials are kept highly secure</p></div>
                                 </li>
                             </ul>
-                            <a href="{{ route('order') }}"
-                                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-700">
-                                Get Started
-                            </a>
                         </div>
-                    </div>
 
-                    <div class="relative rounded-2xl border-2 border-purple-600 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-purple-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                            Most Popular
+                        <a href="{{ route('order') }}" class="group relative inline-flex w-full items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-500 transition-all duration-300 shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            <span class="relative z-10">Get Mobile App Help Now</span>
+                            <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 4 – TYPES OF MOBILE APP ASSIGNMENTS TACKLED
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" id="app-services" aria-labelledby="services-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Assignment Scope</p>
+                    <h2 id="services-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Types of <span class="text-blue-600 dark:text-blue-400">Mobile App Assignments</span> We Handle
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Our experts possess deep knowledge of mobile ecosystems to cover any UI layout, database, or device API task.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">📱</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">UI/UX &amp; Screen Layouts</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing custom view files using SwiftUI declarative syntax, Jetpack Compose layouts, Flutter widget trees, or XML/Storyboards with auto-layout constraint settings.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Adaptive layout constraints</li>
+                            <li>• Material / Apple design guidelines</li>
+                            <li>• Custom animations &amp; gestures</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl">🔄</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">State Management &middot; Storage</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Handling global store updates and offline capabilities. Support for Redux, Context API, Dart BLoC, MobX, Room DB, CoreData, and SQLite storage routines.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Local offline data caching</li>
+                            <li>• Redux Toolkit state stores</li>
+                            <li>• Room database CRUD operations</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">⚙️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Hardware API Integrations</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Accessing mobile hardware modules. Implementing GPS/Map locations, camera photo captures, push notifications, gyroscope/sensor triggers, and bluetooth connectors.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• GPS location tracking</li>
+                            <li>• Push notification services</li>
+                            <li>• Device camera permissions</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🔥</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Firebase &amp; Backend APIs</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Connecting apps to live backend servers. Setting up Firebase authentication, Firestore databases, REST API JSON fetches, and OAuth integrations.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• JWT / Firebase user login</li>
+                            <li>• RESTful API integration</li>
+                            <li>• Asynchronous data fetching</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white text-xl">🛒</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Full Application Prototypes</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Building end-to-end mobile applications. E-commerce storefront layouts, chat applications with WebSockets, social media feeds, or fitness tracking dashboards.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Real-time chat systems</li>
+                            <li>• E-commerce cart checkouts</li>
+                            <li>• Full-Stack mobile systems</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white text-xl">🔧</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Debugging &amp; Build Fixing</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Resolving tricky compilation errors. Fixing Gradle dependency conflicts, CocoaPods mismatch blocks, target SDK updates, and linting issues.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Gradle configuration bugs</li>
+                            <li>• CocoaPods setup errors</li>
+                            <li>• Target SDK version updates</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 5 – STEPS TO GET MOBILE APP ASSISTANCE
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="steps-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">Streamlined Process</p>
+                    <h2 id="steps-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get Your Mobile App Coded in 4 Steps
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-base font-black text-white shadow-md">1</div>
+                        <div class="mb-3 text-2xl">📋</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Upload Guidelines</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Submit your app design parameters, framework constraints, deadlines, and database guidelines.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-base font-black text-white shadow-md">2</div>
+                        <div class="mb-3 text-2xl">🎯</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Get Custom Quote</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">A vetted mobile software specialist reviews your layout and framework guidelines and provides a quote.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-base font-black text-white shadow-md">3</div>
+                        <div class="mb-3 text-2xl">💻</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Expert Codes App</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">The developer structures modules, styles layouts, integrates APIs, and runs tests inside mobile simulators.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white shadow-md">4</div>
+                        <div class="mb-3 text-2xl">🚀</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Run &amp; Review</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Download the zip folder, review the README run directions, run the app, and request adjustments if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 6 – RISK-FREE GUARANTEES
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="guarantee-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Guarantees</p>
+                    <h2 id="guarantee-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Guaranteed Mobile App Build Execution
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-900/40 dark:bg-blue-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">💡</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">100% Original Code</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every widget layout, controller, and backend endpoint is written from scratch according to your specific order parameters.</p>
+                    </div>
+                    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900/40 dark:bg-emerald-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-xl text-white">⏱️</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Deadline Compliance</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We monitor our mobile build processes continuously to ensure your files and execution guides are delivered before the deadline.</p>
+                    </div>
+                    <div class="rounded-2xl border border-purple-200 bg-purple-50 p-6 dark:border-purple-900/40 dark:bg-purple-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-xl text-white">🔄</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">72-Hour Free Revisions</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Need minor shifts in styling, layout adjustments, or library versions? We offer free revisions within 72 hours of delivery.</p>
+                    </div>
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-900/40 dark:bg-amber-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-600 text-xl text-white">💰</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Refund Guarantee</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">If our code fails to compile or misses key features explicitly detailed in your guidelines, you are covered by our refund policy.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-slate-700 text-xl text-white">🔒</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Privacy</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Your custom designs, email, class details, and files are kept strictly secure. We never share code folders.</p>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-200 bg-cyan-50 p-6 dark:border-cyan-900/40 dark:bg-cyan-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-600 text-xl text-white">💬</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">24/7 Support Desk</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Connect with customer support or message your assigned mobile developer directly to clarify requirements or get progress updates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 7 – STUDENT MOBILE REVIEWS
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-amber-600 dark:text-amber-400">Student Reviews</p>
+                    <h2 id="reviews-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        What Students Say About Our Mobile App Help
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">React Native / Expo</span>
                         </div>
-                        <div class="text-center">
-                            <h3 class="mb-1 text-base font-bold text-slate-900">Advanced Mobile App</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600">From $150</div>
-                            <ul class="mb-6 space-y-2 text-left text-sm text-slate-600">
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Cross-platform development
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I was struggling to link Redux states with AsyncStorage in a React Native app. The coder fixed my store configuration, tested it on the emulator, and sent me a screen recording of the app working. Absolutely amazing!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Ethan D.</p><p class="text-xs text-slate-500">NYU</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">SwiftUI / CoreData</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"My SwiftUI final project required local database persistence using CoreData. The expert coded the persistent container, set up the preview mock datasets, and documented everything inside a README."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Sophia K.</p><p class="text-xs text-slate-500">University of Southern California</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">Kotlin Android</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"Had persistent Gradle build crashes on my Kotlin Jetpack Compose assignment. The expert updated the dependency classpaths, fixed the target SDK compilation values, and got the app working. Highly recommended!"</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Alex M.</p><p class="text-xs text-slate-500">University of Michigan</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 8 – IN-DEPTH SEO CONTENT BLOCK
+             SEO: Long-form keyword-rich educational material
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="content-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h2 id="content-heading" class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">🎯</span>
+                                What is Mobile App Assignment Help?
+                            </h2>
+                            <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <p><strong class="text-slate-900 dark:text-white font-semibold">Mobile app assignment help</strong> is a premium, expert service that assists students and developers with mobile layouts, lifecycle states, localized databases, and compiler configuration tasks. Developing apps is complex because it requires managing multiple device environments, handling constraints, local databases, and package build tools like Gradle or CocoaPods.</p>
+                                <p>Whether you are coding custom widgets in Flutter, designing auto-layouts in SwiftUI, handling local room queries in Android, or connecting to Firebase — our vetted developers write clean code and provide testing guides to help you succeed.</p>
+                                <p>We cover all major platforms: React Native, Flutter, Swift, SwiftUI, Kotlin, Jetpack Compose, Java, XML, Firebase, CoreData, Room, SQLite, and custom APIs.</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">🏫</span>
+                                Common Mobile Assignment Challenges We Solve
+                            </h3>
+                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Gradle &amp; Pod Installation Bugs:</strong> Fixing build-breaking dependency versions, target SDK compile values, and architecture mismatch errors.</span>
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    API integration
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Device Lifecycle Constraints:</strong> Preventing state resets on orientation changes and handling background network fetches cleanly.</span>
                                 </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    5-7 day delivery
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Testing &amp; debugging
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    App store guidelines
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Offline Database Syncs:</strong> Designing robust Room, SQLite, or CoreData structures to cache feeds and support offline navigation.</span>
                                 </li>
                             </ul>
-                            <a href="{{ route('order') }}"
-                                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-700">
-                                Get Started
-                            </a>
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-                        <div class="text-center">
-                            <h3 class="mb-1 text-base font-bold text-slate-900">Complete Mobile Solution</h3>
-                            <div class="mb-4 text-2xl font-bold text-purple-600">From $300</div>
-                            <ul class="mb-6 space-y-2 text-left text-sm text-slate-600">
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Full-featured mobile app
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Backend integration
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    7-14 day delivery
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    App store deployment
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="h-4 w-4 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    Post-launch support
-                                </li>
-                            </ul>
-                            <a href="{{ route('order') }}"
-                                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-purple-700">
-                                Get Started
-                            </a>
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">⭐</span>
+                                Mobile Tech &amp; Tools We Cover
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach(['React Native','Flutter','Swift','SwiftUI','Kotlin','Jetpack Compose','Java','Android Studio','Xcode','CocoaPods','Gradle','Expo CLI','Firebase','Room DB','CoreData','SQLite','REST API','GraphQL','JWT Auth','MapBox','Google Maps API','Push Notifications','Docker','Git','TestFlight'] as $tech)
+                                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">{{ $tech }}</span>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-white">📊</span>
+                                Our Mobile App Track Record
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-blue-600 dark:text-blue-400">3,500+</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Apps Completed</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-emerald-600 dark:text-emerald-400">98%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-amber-600 dark:text-amber-400">4.9★</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Review</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-purple-600 dark:text-purple-400">100%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Working Builds</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="bg-white py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Mobile App Development Process</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Proven methodology for delivering high-quality
-                        mobile applications.</p>
+        {{-- ===================================================
+             SECTION 9 – FAQ ACCORDION
+             SEO: Targets rich SERP results
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="faq-heading">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">FAQs</p>
+                    <h2 id="faq-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Mobile App Assignment Help FAQs
+                    </h2>
                 </div>
 
-                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="space-y-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Can your developers build React Native or Flutter apps?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We specialize in cross-platform development. Our developers structure code directories, configure local states, style custom views, connect endpoints, and package fully compilable source code.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Do you test mobile applications on physical devices or emulators?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We test every project inside simulators (iOS) and emulators (Android) across different device resolutions. We are happy to provide screenshots or a short screen recording demonstrating build functionality.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How do I run the delivered mobile code locally?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every project we deliver contains a comprehensive `README.md` detail sheet. It includes instructions for setup (e.g. `npm install` or `pod install`), configuration keys, and run commands (e.g. `npx react-native run-android` or `flutter run`). We can also guide you through compilation via live chat.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Will the application code be plagiarism-free?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Absolutely. We write all pre-processors, widget trees, database managers, and network layers from scratch for your specific assignment instructions. We do not use recycled templates.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How quickly can you complete my mobile assignment?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Simple layout fixes, Gradle bugs, or XML changes can be solved within 6 to 12 hours. Complete application builds involving databases or complex state controllers usually take 24 to 72 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 10 – FINAL CTA
+             SEO: High converting closing block
+        =================================================== --}}
+        <section class="relative overflow-hidden bg-slate-900 py-16 sm:py-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">App specialists Online</span>
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-5">
+                    Ready to Get Your<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Mobile Application Coded?</span>
+                </h2>
+
+                <p class="text-base text-slate-400 max-w-2xl mx-auto mb-10">
+                    Get clean, emulator-tested mobile code alongside a step-by-step setup guide. Submit details for a free quote within 5 minutes.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-lg hover:-translate-y-0.5 active:scale-95 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span class="relative z-10 text-sm">Get Mobile App Help</span>
+                        <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                    </a>
+                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Free Quote &middot; No Obligation</span>
+                </div>
+
+                <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
                     <div class="text-center">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-white">
-                            <span class="text-base font-bold">1</span>
-                        </div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Requirements Analysis</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">We analyze your app requirements, target platform, and user experience
-                            needs.</p>
+                        <p class="text-2xl font-black text-white">3,500+</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Apps Completed</p>
                     </div>
-
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
                     <div class="text-center">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-white">
-                            <span class="text-base font-bold">2</span>
-                        </div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Design &amp; Architecture</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Create wireframes, UI design, and technical architecture for your mobile
-                            app.</p>
+                        <p class="text-2xl font-black text-white">4.9/5</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Rating</p>
                     </div>
-
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
                     <div class="text-center">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-white">
-                            <span class="text-base font-bold">3</span>
-                        </div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Development &amp; Testing</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Build your app with clean code, implement features, and conduct thorough
-                            testing.</p>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-white">
-                            <span class="text-base font-bold">4</span>
-                        </div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Delivery &amp; Support</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Deliver your completed app with documentation and deployment assistance.
-                        </p>
+                        <p class="text-2xl font-black text-white">98%</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="bg-slate-50 py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">What Our Clients Say</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Real feedback from students who got help with their
-                        mobile app development projects.</p>
-                </div>
+        {{-- ===================================================
+             FAQ & SERVICE SCHEMA MARKUP
+        =================================================== --}}
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Can your developers build React Native or Flutter apps?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We specialize in cross-platform development. Our developers structure code directories, configure local states, style custom views, connect endpoints, and package fully compilable source code."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you test mobile applications on physical devices or emulators?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We test every project inside simulators (iOS) and emulators (Android) across different device resolutions. We are happy to provide screenshots or a short screen recording demonstrating build functionality."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "How do I run the delivered mobile code locally?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Every project we deliver contains a comprehensive README.md detail sheet. It includes instructions for setup (e.g. npm install or pod install), configuration keys, and run commands (e.g. npx react-native run-android or flutter run)."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Will the application code be plagiarism-free?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Absolutely. We write all pre-processors, widget trees, database managers, and network layers from scratch for your specific assignment instructions. We do not use recycled templates."
+              }
+            }
+          ]
+        }
+        </script>
 
-                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600">"Incredible work on my React Native app! The developer created a
-                            beautiful, functional mobile app that works perfectly on both iOS and Android. Excellent
-                            communication!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-sm font-bold text-white">
-                                A</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900">Alex T.</div>
-                                <div class="text-xs text-slate-500">Mobile Development Student</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600">"Amazing Flutter app development! The expert delivered a
-                            cross-platform app with smooth animations and perfect performance. Highly recommend for mobile
-                            projects."</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
-                                J</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900">Jessica L.</div>
-                                <div class="text-xs text-slate-500">Computer Science Student</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <div class="mb-3 flex items-center gap-1 text-amber-400">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="mb-5 text-sm leading-relaxed text-slate-600">"Professional iOS development with Swift! The app was delivered ahead
-                            of schedule with clean code and excellent documentation. Great experience overall!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
-                                R</div>
-                            <div>
-                                <div class="text-sm font-semibold text-slate-900">Ryan M.</div>
-                                <div class="text-xs text-slate-500">iOS Development Student</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Expert Content Section -->
-        <section class="bg-white py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600">Expert Insights</p>
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                            Master Mobile App Development <span class="text-blue-600">Like a Pro</span>
-                        </h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Industry-proven strategies that separate amateur apps from professional success stories</p>
-                    </div>
-
-                    <div class="space-y-5">
-                        <!-- Interactive UI/UX Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">
-                                    <span class="text-xl">🎨</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Mobile UI/UX Design That Users Love</h3>
-                                    <p class="text-sm font-semibold text-purple-600">The secret to 5-star app store ratings</p>
-                                </div>
-                            </div>
-
-                            <div class="space-y-4">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <h4 class="mb-2 flex items-center text-sm font-bold text-slate-900">
-                                        <span class="mr-2 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-purple-100 text-xs text-purple-700">1</span>
-                                        Platform-Native Design Language
-                                    </h4>
-                                    <p class="text-sm leading-relaxed text-slate-600">
-                                        Creating exceptional mobile experiences isn't about copying desktop designs—it's about embracing each platform's unique personality. iOS users expect the elegance of Apple's Human Interface Guidelines: crisp typography, smooth animations, and interfaces that feel like they belong on an iPhone. Android users appreciate Material Design's bold colors, responsive surfaces, and meaningful motion that makes apps feel alive and interactive.
-                                    </p>
-                                    <div class="mt-3 flex flex-wrap gap-2">
-                                        <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">iOS Guidelines</span>
-                                        <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Material Design</span>
-                                        <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700">Adaptive UI</span>
-                                    </div>
-                                </div>
-
-                                <div class="grid gap-4 sm:grid-cols-2">
-                                    <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-                                        <div class="mb-2 flex items-center gap-2">
-                                            <span class="text-lg">👆</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Touch Target Perfection</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Mobile screens demand precision. We ensure every button, link, and interactive element meets the golden standard: <span class="font-semibold text-purple-600">44x44 points on iOS, 48x48dp on Android</span>. No more frustrated taps on tiny buttons—your users will thank you!
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-                                        <div class="mb-2 flex items-center gap-2">
-                                            <span class="text-lg">🧭</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Intuitive Navigation</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Users should never feel lost in your app. Whether it's tab bars, drawer navigation, or stack-based flows, we implement navigation patterns that feel natural and familiar, reducing cognitive load and boosting user satisfaction.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl bg-slate-900 p-5 text-white">
-                                    <p class="mb-1 text-sm font-semibold">Pro Tip:</p>
-                                    <p class="text-sm text-slate-300">
-                                        The best mobile UIs are invisible—users don't think about how to use them, they just do. We achieve this through relentless focus on information hierarchy, whitespace, and platform conventions that users already understand.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Performance & Security Cards -->
-                        <div class="grid gap-5 sm:grid-cols-2">
-                            <!-- Performance Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
-                                        <span class="text-xl">⚡</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Lightning-Fast Performance</h4>
-                                        <p class="text-xs font-semibold text-blue-600">Speed is a feature</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">🚀</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Launch Speed</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Users abandon apps that take more than 3 seconds to load. We optimize startup time through code splitting, lazy loading, and efficient initialization sequences.
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">🖼️</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Image Optimization</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Smart image handling with WebP/HEIF formats, progressive loading, and caching strategies using SDWebImage or Glide keeps your app snappy.
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">📡</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Network Efficiency</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Request batching, intelligent caching, pagination, and debouncing ensure smooth operation even on 3G connections.
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg bg-blue-600 p-3.5 text-white">
-                                        <p class="text-xs font-semibold">Performance Impact:</p>
-                                        <p class="mt-1 text-xs text-blue-50">
-                                            A 1-second delay decreases user satisfaction by 16%. We ensure your app performs flawlessly across all devices!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Security Card -->
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
-                                        <span class="text-xl">🔒</span>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-base font-bold text-slate-900">Fort Knox Security</h4>
-                                        <p class="text-xs font-semibold text-emerald-600">Protect your users</p>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">🔐</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Secure Data Storage</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            Keychain (iOS) and Keystore (Android) protect sensitive data. Never plain-text passwords or tokens in UserDefaults!
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">🛡️</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Network Security</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            HTTPS with certificate pinning prevents man-in-the-middle attacks. All API communications are encrypted and verified.
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg border border-slate-200 bg-slate-50 p-3.5">
-                                        <div class="mb-1 flex items-center gap-2">
-                                            <span class="text-base">👤</span>
-                                            <h5 class="text-sm font-bold text-slate-900">Authentication Done Right</h5>
-                                        </div>
-                                        <p class="text-sm text-slate-600">
-                                            OAuth 2.0, biometric authentication, JWT tokens, and secure session management keep accounts safe.
-                                        </p>
-                                    </div>
-
-                                    <div class="rounded-lg bg-emerald-600 p-3.5 text-white">
-                                        <p class="text-xs font-semibold">Security Alert:</p>
-                                        <p class="mt-1 text-xs text-emerald-50">
-                                            81% of mobile apps have security vulnerabilities. Don't be a statistic—we follow OWASP best practices!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Architecture Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white">
-                                    <span class="text-xl">🏗️</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Architecture That Scales</h3>
-                                    <p class="text-sm font-semibold text-indigo-600">From MVP to enterprise-grade applications</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 rounded-xl bg-slate-900 p-5 text-white">
-                                <p class="mb-1 text-sm font-semibold">The Truth About Bad Architecture:</p>
-                                <p class="text-sm text-slate-300">
-                                    Without proper architecture, your app becomes a tangled mess of spaghetti code. Adding features takes weeks instead of days. Bugs multiply faster than you can fix them. Testing becomes impossible. We've seen it too many times—don't let it happen to you!
-                                </p>
-                            </div>
-
-                            <div class="mb-5 grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-2 flex items-center gap-2">
-                                        <span class="text-lg">📐</span>
-                                        <h5 class="text-sm font-bold text-slate-900">MVVM</h5>
-                                    </div>
-                                    <p class="mb-3 text-xs text-slate-600">
-                                        Model-View-ViewModel separates UI from business logic. Your ViewModels expose reactive data streams that Views observe—making testing a breeze!
-                                    </p>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span class="rounded bg-purple-100 px-2 py-1 text-xs text-purple-800">Testable</span>
-                                        <span class="rounded bg-purple-100 px-2 py-1 text-xs text-purple-800">Reactive</span>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-2 flex items-center gap-2">
-                                        <span class="text-lg">🎯</span>
-                                        <h5 class="text-sm font-bold text-slate-900">Clean Architecture</h5>
-                                    </div>
-                                    <p class="mb-3 text-xs text-slate-600">
-                                        Layers (Presentation, Domain, Data) with clear boundaries. Your business logic stays pure, independent, and portable.
-                                    </p>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">Scalable</span>
-                                        <span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">Maintainable</span>
-                                    </div>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                    <div class="mb-2 flex items-center gap-2">
-                                        <span class="text-lg">💾</span>
-                                        <h5 class="text-sm font-bold text-slate-900">Repository Pattern</h5>
-                                    </div>
-                                    <p class="mb-3 text-xs text-slate-600">
-                                        Single source of truth for data. Seamlessly switch between cache, API, or mocks without changing business logic.
-                                    </p>
-                                    <div class="flex flex-wrap gap-1">
-                                        <span class="rounded bg-emerald-100 px-2 py-1 text-xs text-emerald-800">Flexible</span>
-                                        <span class="rounded bg-emerald-100 px-2 py-1 text-xs text-emerald-800">Clean</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                <h5 class="mb-2 flex items-center gap-2 text-sm font-bold text-slate-900">
-                                    <span class="text-lg">🎮</span> State Management Mastery
-                                </h5>
-                                <p class="mb-3 text-sm text-slate-600">
-                                    State management is the beating heart of modern apps. We implement battle-tested solutions:
-                                </p>
-                                <div class="grid gap-3 sm:grid-cols-3">
-                                    <div class="rounded-lg bg-purple-50 p-3">
-                                        <p class="mb-1 text-sm font-semibold text-purple-900">React Native</p>
-                                        <p class="text-xs text-slate-600">Redux, MobX, Zustand</p>
-                                    </div>
-                                    <div class="rounded-lg bg-blue-50 p-3">
-                                        <p class="mb-1 text-sm font-semibold text-blue-900">Flutter</p>
-                                        <p class="text-xs text-slate-600">BLoC, Provider, Riverpod</p>
-                                    </div>
-                                    <div class="rounded-lg bg-emerald-50 p-3">
-                                        <p class="mb-1 text-sm font-semibold text-emerald-900">SwiftUI</p>
-                                        <p class="text-xs text-slate-600">@State, @ObservedObject</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testing Card -->
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white">
-                                    <span class="text-xl">🧪</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-slate-900">Testing That Catches Bugs Before Users Do</h3>
-                                    <p class="text-sm font-semibold text-amber-600">Quality isn't luck—it's process</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 grid gap-4 sm:grid-cols-3">
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-red-100">
-                                        <span class="text-lg">🎯</span>
-                                    </div>
-                                    <h5 class="mb-2 text-sm font-bold text-slate-900">Unit Tests</h5>
-                                    <p class="text-sm text-slate-600">
-                                        XCTest, JUnit, Jest—we test every function in isolation to ensure rock-solid foundations.
-                                    </p>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100">
-                                        <span class="text-lg">🔗</span>
-                                    </div>
-                                    <h5 class="mb-2 text-sm font-bold text-slate-900">Integration Tests</h5>
-                                    <p class="text-sm text-slate-600">
-                                        Verify modules work together seamlessly. No surprises when components interact!
-                                    </p>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100">
-                                        <span class="text-lg">📱</span>
-                                    </div>
-                                    <h5 class="mb-2 text-sm font-bold text-slate-900">UI Tests</h5>
-                                    <p class="text-sm text-slate-600">
-                                        Automated user flows catch regressions before they reach production.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl bg-slate-900 p-5 text-white">
-                                <p class="mb-1 text-sm font-semibold">CI/CD Pipeline Magic:</p>
-                                <p class="text-sm text-slate-300">
-                                    GitHub Actions + Fastlane = automated builds, tests on every commit, beta distribution, and smooth App Store releases. Set it once, benefit forever!
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- App Store Deployment Card -->
-                        <div class="rounded-2xl bg-slate-900 p-6 text-white sm:p-8">
-                            <div class="mb-5 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                                    <span class="text-xl">🚀</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold text-white">Launch Like a Rocket: App Store Success</h3>
-                                    <p class="text-sm font-semibold text-slate-300">From submission to 5-star reviews</p>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 grid gap-4 sm:grid-cols-2">
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <h5 class="mb-3 flex items-center gap-2 text-sm font-bold text-white">
-                                        <span>📝</span> App Store Optimization (ASO)
-                                    </h5>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li>Compelling descriptions that convert</li>
-                                        <li>Screenshot designs that pop</li>
-                                        <li>Preview videos that engage</li>
-                                        <li>Keyword strategies that rank</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-                                    <h5 class="mb-3 flex items-center gap-2 text-sm font-bold text-white">
-                                        <span>✅</span> Submission Mastery
-                                    </h5>
-                                    <ul class="space-y-1.5 text-xs text-slate-300">
-                                        <li>Pass App Store Review first try</li>
-                                        <li>Google Play compliance</li>
-                                        <li>Privacy policies handled</li>
-                                        <li>Legal compliance guaranteed</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 rounded-xl bg-amber-500 p-5 text-slate-900">
-                                <div class="flex items-start gap-3">
-                                    <span class="text-2xl">📊</span>
-                                    <div>
-                                        <h5 class="mb-1 text-sm font-bold">Post-Launch Analytics &amp; Optimization</h5>
-                                        <p class="text-sm text-slate-800">
-                                            Firebase Analytics + Crashlytics + A/B Testing = data-driven decisions. We help you understand users, fix crashes instantly, and optimize for growth!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                                <p class="text-center text-sm text-slate-300">
-                                    <span class="font-semibold text-white">Success Rate:</span> Our apps average <span class="font-semibold text-amber-400">4.5+ stars</span> on app stores with <span class="font-semibold text-amber-400">95% first-submission approval</span> rate!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="bg-slate-50 py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Frequently Asked Questions</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Everything you need to know about our mobile app
-                        development service.</p>
-                </div>
-
-                <div class="mx-auto max-w-3xl space-y-4">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Which mobile platforms do you support?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">We develop for both iOS and Android platforms, using native technologies
-                            (Swift, Kotlin) or cross-platform frameworks (React Native, Flutter). We can help you choose the
-                            best approach for your project.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="mb-2 text-base font-bold text-slate-900">How long does mobile app development take?
-                        </h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Development time varies by complexity. Simple apps take 3-5 days, advanced
-                            apps with multiple features take 5-7 days, and complete solutions with backend integration take
-                            7-14 days.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Do you help with app store submission?</h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Yes! For complete mobile solutions, we provide guidance on app store
-                            submission requirements, help with app store optimization, and assist with the deployment
-                            process for both iOS App Store and Google Play Store.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="mb-2 text-base font-bold text-slate-900">Can you integrate APIs and backend services?
-                        </h3>
-                        <p class="text-sm leading-relaxed text-slate-600">Absolutely! We can integrate your app with REST APIs, GraphQL, Firebase,
-                            authentication services, payment gateways, and other third-party services your app requires.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6">
-                        <h3 class="mb-2 text-base font-bold text-slate-900">What's included in the mobile app delivery?
-                        </h3>
-                        <p class="text-sm leading-relaxed text-slate-600">You'll receive complete source code, project documentation, setup
-                            instructions, and any necessary configuration files. For advanced projects, we also include
-                            testing documentation and deployment guides.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="bg-slate-900 py-14 sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Ready to Build Your Mobile App?</h2>
-                <p class="mx-auto mt-3 max-w-2xl text-sm text-slate-400">Join hundreds of students who have successfully
-                    launched their mobile apps with our expert development help.</p>
-                <a href="{{ route('order') }}"
-                    class="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
-                    Start Your Mobile App Today
-                </a>
-            </div>
-        </section>
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Service",
+          "name": "Mobile App Assignment Help",
+          "description": "Professional mobile application development assignment help and coding project assistance. Expert developers available 24/7 for React Native, Flutter, Swift, SwiftUI, Kotlin, and Gradle setups.",
+          "provider": {
+            "@@type": "Organization",
+            "name": "AssignmentHelpUSA",
+            "url": "https://assignmenthelpusa.com"
+          },
+          "areaServed": "US",
+          "serviceType": "Mobile App Assignment Help",
+          "offers": {
+            "@@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "15",
+            "highPrice": "600"
+          },
+          "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1400",
+            "bestRating": "5"
+          }
+        }
+        </script>
     </div>
 @endsection
