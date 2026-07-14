@@ -51,6 +51,9 @@ Route::get('/essay-writing-help/{slug}', [EssayWritingController::class, 'show']
 Route::get('/research-paper-help', [ResearchPaperController::class, 'index'])->name('services.research-paper.index');
 Route::get('/case-study-help', [CaseStudyController::class, 'index'])->name('services.case-study.index');
 Route::get('/homework-help', [HomeworkHelpController::class, 'index'])->name('services.homework-help.index');
+Route::get('/homework-help/math', [HomeworkHelpController::class, 'math'])->name('services.homework-help.math');
+Route::get('/homework-help/nursing', [HomeworkHelpController::class, 'nursing'])->name('services.homework-help.nursing');
+Route::get('/homework-help/physics', [HomeworkHelpController::class, 'physics'])->name('services.homework-help.physics');
 Route::get('/lab-report-help', [LabReportController::class, 'index'])->name('services.lab-report.index');
 Route::get('/literature-review-help', [LiteratureReviewController::class, 'index'])->name('services.literature-review.index');
 Route::get('/presentation-design-help', [PresentationDesignController::class, 'index'])->name('services.presentation-design.index');
