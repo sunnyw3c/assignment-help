@@ -1,626 +1,673 @@
 @extends('layouts.app')
 
-@section('title', 'PHP Programming Help - Expert Laravel & PHP Development')
-@section('description',
-    'Get professional PHP programming help from expert developers. 24/7 support for Laravel,
-    Symfony, WordPress, custom PHP projects, and more.')
+@section('title', 'PHP Assignment Help | Expert Laravel, Symfony & OOP Coding Assistance')
+@section('description', 'Struggling with PHP OOP classes, Laravel database migrations, or custom API endpoints? Get expert PHP assignment help from vetted USA developers. 100% working code.')
 
 @section('content')
     <div class="min-h-screen">
-        <!-- Hero Section with Code Background -->
+        {{-- ===================================================
+             CREATIVE HERO SECTION — DO NOT MODIFY
+        =================================================== --}}
         <x-creative-hero :service="$service" />
 
-        <!-- Comprehensive Content Section -->
-        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
+        {{-- ===================================================
+             SECTION 1 – TRUST BAR / SOCIAL PROOF
+             SEO: Builds E-E-A-T immediately after hero
+        =================================================== --}}
+        <section class="border-y border-slate-100 bg-white py-5 dark:border-slate-800 dark:bg-slate-900" aria-label="Trust signals">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Expert PHP Programming Services</h2>
-                        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">Get professional PHP development help from
-                            experienced developers who specialize in Laravel, Symfony, WordPress, and custom PHP solutions
-                            for web applications.</p>
+                <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5</span>
+                        <span class="text-xs text-slate-500 dark:text-slate-400">from 1,100+ PHP reviews</span>
                     </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">18</strong> PHP Experts Online</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">4,200+ PHP Systems Coded</span>
+                    </div>
+                    <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
+                    <div class="flex items-center gap-2">
+                        <svg class="h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4" /></svg>
+                        <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">PSR-12 &amp; PHPUnit Verified</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="grid gap-6 md:grid-cols-2">
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-3 flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white">
-                                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-100 text-base dark:bg-indigo-950/40">🎯</span>
-                                Why Choose Our PHP Development Help?
+        {{-- ===================================================
+             SECTION 2 – CORE PHP TECH & FRAMEWORKS
+             SEO: Keyword coverage for search terms
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" id="php-coverage" aria-labelledby="php-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Complete PHP Ecosystem</p>
+                    <h2 id="php-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get <span class="text-blue-600 dark:text-blue-400">PHP Programming Help</span> in Any Framework
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Whether it is designing web controllers in Laravel, coding Symfony bundles, syncing MySQL databases via Eloquent/Doctrine, or scripting custom PHP functions — we cover it all.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🔴</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Laravel</span>
+                        <span class="text-[10px] text-slate-500">Eloquent / Blade / Breeze</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🎼</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Symfony</span>
+                        <span class="text-[10px] text-slate-500">Doctrine / Twig / Bundles</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐘</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Core PHP OOP</span>
+                        <span class="text-[10px] text-slate-500">Traits / Namespaces / PDO</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">📦</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">Composer</span>
+                        <span class="text-[10px] text-slate-500">Packages / Autoloading</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">📝</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">WordPress</span>
+                        <span class="text-[10px] text-slate-500">Plugins / Theme filters</span>
+                    </div>
+                    <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                        <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🧪</span>
+                        <span class="text-sm font-bold text-slate-900 dark:text-white">PHPUnit</span>
+                        <span class="text-[10px] text-slate-500">Tests / Mocking / Pest</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 3 – WHY STUDENTS PREFER US FOR PHP HELP
+             SEO: High EEAT block
+        =================================================== --}}
+        <section class="bg-slate-900 py-16 sm:py-20" aria-labelledby="why-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">PSR-12 Standards Compliant</span>
+                    </div>
+                    <h2 id="why-heading" class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        Why Choose Our <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">PHP Programming Help</span>
+                    </h2>
+                    <p class="mt-5 text-base text-slate-400 max-w-2xl mx-auto">
+                        PHP applications require correct MVC routing structures, Eloquent relationships, Composer dependency autoloading, and secure variables inputs. Here is why we lead.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-5 text-slate-400 text-[15px] leading-relaxed">
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
+                                Vetted PHP Developers
                             </h3>
-                            <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                PHP remains one of the most popular server-side programming languages, powering over 77%
-                                of all websites. Our team of expert PHP developers specializes in creating robust,
-                                secure, and scalable PHP applications using modern frameworks and best practices.
-                                Whether you're working on a Laravel project, building a WordPress plugin, or creating a
-                                custom PHP application, we have the expertise to help you succeed.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                We understand that PHP development can present unique challenges, from managing
-                                dependencies with Composer to implementing complex database relationships with Eloquent
-                                ORM. Our experienced developers have worked on hundreds of PHP projects, giving us deep
-                                knowledge of modern PHP 8.x features, framework-specific patterns, and industry best
-                                practices.
-                            </p>
+                            <p>Every PHP assignment is assigned to an expert developer specializing in modern PHP 8.x architectures. They write clean code following strict object-oriented patterns and standard PSR guidelines.</p>
                         </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-3 flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white">
-                                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-purple-100 text-base dark:bg-purple-950/40">🚀</span>
-                                Our Development Approach
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-indigo-500 rounded-full inline-block"></span>
+                                Clean Composer Configurations
                             </h3>
-                            <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Our PHP development process follows modern methodologies and PSR standards. We begin by
-                                understanding your project requirements and selecting the most appropriate
-                                approach—whether that's Laravel for full-featured web applications, Symfony for
-                                enterprise solutions, or custom PHP for specific needs. We leverage the latest PHP 8.x
-                                features including typed properties, named arguments, and match expressions.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Every project includes clean, well-documented code following PSR-12 coding standards,
-                                proper MVC architecture, comprehensive error handling, and security best practices. We
-                                ensure your PHP application is not only functional but also maintainable, testable, and
-                                ready for production deployment.
-                            </p>
+                            <p>We solve all library compilation issues. We setup correct `composer.json` coordinate files and define modern autoload routes (PSR-4) so dependencies compile flawlessly.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-purple-500 rounded-full inline-block"></span>
+                                Complete PHPUnit Test Suites
+                            </h3>
+                            <p>We write comprehensive test logic. If requested, we include detailed PHPUnit or Pest test files verifying route parameters, controller inputs, and database migrations.</p>
                         </div>
                     </div>
 
-                    <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-5 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-white">What We Cover in PHP Development</h3>
-                        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-red-500">🔴</span>
-                                    Laravel Development
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Complete Laravel applications, Eloquent ORM,
-                                    migrations, authentication, API development, and deployment.</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-purple-500">🎼</span>
-                                    Symfony Projects
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Symfony framework development, bundles, Doctrine ORM,
-                                    form handling, and enterprise applications.</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-blue-500">📝</span>
-                                    WordPress Development
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Custom themes, plugins, WooCommerce customization,
-                                    REST API integration, and WordPress optimization.</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-orange-500">🗄️</span>
-                                    Database Integration
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">MySQL, PostgreSQL, MongoDB integration, query
-                                    optimization, database design, and migrations.</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-green-500">🔗</span>
-                                    API Development
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">RESTful APIs, GraphQL, authentication, rate limiting,
-                                    API documentation, and third-party integrations.</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                                    <span class="text-indigo-500">🛡️</span>
-                                    Security & Testing
-                                </h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Security best practices, input validation, CSRF
-                                    protection, unit testing, and feature testing.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-6">
-                        <h3 class="mb-5 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-white">PHP Technologies & Frameworks We Master</h3>
-                        <div class="grid gap-5 md:grid-cols-2">
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                                <h4 class="mb-3 flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
-                                    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-sm text-white">⚙️</span>
-                                    Frameworks & Tools
-                                </h4>
-                                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-indigo-600 dark:text-indigo-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Laravel:</strong> The most popular PHP framework for web artisans,
-                                            including Livewire, Jetstream, and Breeze</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-indigo-600 dark:text-indigo-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Symfony:</strong> Enterprise-grade framework with reusable
-                                            components and bundles</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-indigo-600 dark:text-indigo-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">CodeIgniter:</strong> Lightweight framework perfect for smaller
-                                            applications</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-indigo-600 dark:text-indigo-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Slim Framework:</strong> Micro-framework ideal for APIs and
-                                            microservices</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-indigo-600 dark:text-indigo-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Composer:</strong> Dependency management and autoloading</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                                <h4 class="mb-3 flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
-                                    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-purple-500 text-sm text-white">🔧</span>
-                                    PHP Technologies
-                                </h4>
-                                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-purple-600 dark:text-purple-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">PHP 8.x:</strong> Modern PHP with typed properties, attributes,
-                                            and JIT compilation</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-purple-600 dark:text-purple-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">OOP & Design Patterns:</strong> SOLID principles, MVC, Repository
-                                            pattern, Service layer</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-purple-600 dark:text-purple-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">WordPress:</strong> Custom themes, plugins, Gutenberg blocks, and
-                                            WooCommerce</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-purple-600 dark:text-purple-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Testing:</strong> PHPUnit, Pest, feature testing, and integration
-                                            testing</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="mt-0.5 text-purple-600 dark:text-purple-400">✓</span>
-                                        <span><strong class="font-semibold text-slate-900 dark:text-white">Databases:</strong> MySQL, PostgreSQL, Redis, MongoDB, Eloquent,
-                                            and Doctrine</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">How Our Assignment Help Process Works</h2>
-                    <p class="mt-4 text-base text-slate-600 sm:text-lg dark:text-slate-400">Get your programming assignment completed in 4 simple steps</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-xl text-white">
-                            📋
-                        </div>
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Step 1</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Submit Your Assignment</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Share your assignment requirements, deadline, and any specific instructions. Upload relevant files if needed.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-xl text-white">
-                            👨‍💻
-                        </div>
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">Step 2</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Expert Assignment</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We match you with a qualified programming expert who specializes in your assignment topic and language.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-pink-600 text-xl text-white">
-                            ✍️
-                        </div>
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-pink-600 dark:text-pink-400">Step 3</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Solution Development</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Our expert completes your assignment with clean code, comments, and explanations to help you learn.</p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-xl text-white">
-                            🎓
-                        </div>
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-red-600 dark:text-red-400">Step 4</div>
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Review & Learn</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Get your completed assignment with detailed documentation. Free revisions included to ensure your satisfaction.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="bg-white py-14 sm:py-16 dark:bg-slate-900">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Transparent Pricing for PHP Projects</h2>
-                    <p class="mt-4 text-base text-slate-600 sm:text-lg dark:text-slate-400">Choose the package that fits your project needs</p>
-                </div>
-
-                <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-                    <!-- Basic Package -->
-                    <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Basic</div>
-                        <h3 class="mb-3 text-lg font-bold text-slate-900 dark:text-white">Simple PHP Script</h3>
-                        <div class="mb-4">
-                            <span class="text-3xl font-bold text-slate-900 dark:text-white">$30</span>
-                            <span class="text-sm text-slate-600 dark:text-slate-400">/project</span>
-                        </div>
-                        <div class="mb-5 text-sm text-slate-600 dark:text-slate-400">⏱️ 12-24 hours delivery</div>
-                        <ul class="mb-6 space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Basic PHP functionality
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Form processing
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Database CRUD operations
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Simple authentication
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Clean, commented code
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}"
-                            class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-500">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <!-- Standard Package - Popular -->
-                    <div class="flex flex-col rounded-2xl border border-indigo-600 bg-indigo-600 p-6 text-white shadow-sm">
-                        <div class="mb-2 inline-block w-fit rounded-full bg-yellow-400 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-indigo-900">
-                            Most Popular
-                        </div>
-                        <h3 class="mb-3 text-lg font-bold">PHP Web Application</h3>
-                        <div class="mb-4">
-                            <span class="text-3xl font-bold">$80</span>
-                            <span class="text-sm text-indigo-100">/project</span>
-                        </div>
-                        <div class="mb-5 text-sm text-indigo-100">⏱️ 2-3 days delivery</div>
-                        <ul class="mb-6 space-y-2 text-sm">
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                Laravel or Symfony framework
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                MVC architecture
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                RESTful API development
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                Database design & migrations
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                User authentication & authorization
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-yellow-400">✓</span>
-                                Unit testing
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}"
-                            class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50">
-                            Get Started
-                        </a>
-                    </div>
-
-                    <!-- Premium Package -->
-                    <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-950">
-                        <div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">Premium</div>
-                        <h3 class="mb-3 text-lg font-bold text-slate-900 dark:text-white">Enterprise PHP Solution</h3>
-                        <div class="mb-4">
-                            <span class="text-3xl font-bold text-slate-900 dark:text-white">$180</span>
-                            <span class="text-sm text-slate-600 dark:text-slate-400">/project</span>
-                        </div>
-                        <div class="mb-5 text-sm text-slate-600 dark:text-slate-400">⏱️ 5-7 days delivery</div>
-                        <ul class="mb-6 space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Full-featured PHP application
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Advanced Laravel features
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Payment gateway integration
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Admin dashboard
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Email notifications
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Deployment setup
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                Complete documentation
-                            </li>
-                        </ul>
-                        <a href="{{ route('order') }}"
-                            class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-500">
-                            Get Started
-                        </a>
-                    </div>
-                </div>
-
-                <div class="mt-8 text-center">
-                    <p class="mb-2 text-sm text-slate-600 dark:text-slate-400">Need a custom solution? Contact us for a personalized quote.</p>
-                    <a href="{{ route('order') }}"
-                        class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
-                        Request Custom Quote →
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Success Stories from Students</h2>
-                    <p class="mt-4 text-base text-slate-600 sm:text-lg dark:text-slate-400">See how we've helped students excel in their PHP projects</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center text-amber-400">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                        <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">"I was completely lost with Laravel for my web development
-                            course. The developer helped me build a complete blog system with authentication, CRUD
-                            operations, and file uploads. They explained everything step by step and now I actually
-                            understand how Laravel works!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">
-                                AJ
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-slate-900 dark:text-white">Alex Johnson</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">Web Development Student • NYU</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-500">Laravel Blog System</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center text-amber-400">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                        <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">"My e-commerce project was due in 3 days and I had barely
-                            started. They built an amazing PHP shopping cart with payment integration, admin panel, and
-                            order management. The code quality was excellent and well-documented. Saved my semester!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-600 text-sm font-bold text-white">
-                                PP
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-slate-900 dark:text-white">Priya Patel</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">Computer Science Major • UC Berkeley</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-500">PHP E-commerce Platform</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                        <div class="mb-3 flex items-center text-amber-400">
-                            ⭐⭐⭐⭐⭐
-                        </div>
-                        <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">"Needed help building a REST API in PHP for my mobile app
-                            backend. The developer created a robust API using Slim Framework with JWT authentication, proper
-                            error handling, and comprehensive documentation. Exactly what I needed!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pink-600 text-sm font-bold text-white">
-                                MW
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-slate-900 dark:text-white">Marcus Williams</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400">Full Stack Development Student • MIT</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-500">RESTful API Development</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-3xl">
-                    <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Frequently Asked Questions</h2>
-                        <p class="mt-4 text-base text-slate-600 sm:text-lg dark:text-slate-400">Everything you need to know about our PHP development services</p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Which PHP frameworks do you work with?</h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We specialize in Laravel and Symfony but also work with CodeIgniter,
-                                Yii, CakePHP, Slim, and pure PHP. We choose the best framework based on your project
-                                requirements and learning goals.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Can you help with WordPress development?</h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes! We provide WordPress theme development, plugin creation, custom
-                                functionality, WooCommerce customization, and WordPress API integration services.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Do you follow modern PHP best practices?</h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Absolutely! We use PHP 8.x features, follow PSR standards, implement
-                                OOP principles, use Composer for dependency management, and write clean, well-documented
-                                code with proper error handling.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Can you integrate payment gateways and APIs?</h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes, we can integrate popular payment gateways like Stripe, PayPal,
-                                and Razorpay, as well as third-party APIs including social media, email services, SMS, and
-                                more.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Services Section -->
-        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Related Programming Services</h2>
-                    <p class="mt-4 text-base text-slate-600 sm:text-lg dark:text-slate-400">Expand your development capabilities with complementary services</p>
-                </div>
-
-                <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-                    <!-- Java Programming Card -->
-                    <div class="rounded-2xl border border-slate-800 bg-orange-600 p-6 text-white shadow-sm">
-                        <div class="mb-4 flex items-center gap-3">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-2xl shadow-sm">
-                                ☕
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold">Java Programming</h3>
-                                <div class="flex items-center gap-1 text-xs text-orange-200">
-                                    <span>⭐</span>
-                                    <span>4.9/5 • 1350+ Projects</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="mb-4 text-sm leading-relaxed text-orange-100">
-                            Need enterprise-grade applications or Android development? Our Java experts specialize in Spring Boot, microservices, and mobile apps.
-                        </p>
-
-                        <div class="mb-5 grid grid-cols-2 gap-2 text-sm">
-                            <div class="flex items-center gap-1.5">
-                                <span class="text-yellow-400">✓</span>
-                                Spring Boot & MVC
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <span class="text-yellow-400">✓</span>
-                                Android Development
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <span class="text-yellow-400">✓</span>
-                                Enterprise Solutions
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <span class="text-yellow-400">✓</span>
-                                From $35/project
-                            </div>
-                        </div>
-
-                        <a href="{{ route('services.programming.show', 'java') }}"
-                            class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-orange-600 shadow-sm transition-colors hover:bg-orange-50">
-                            Explore Java Services →
-                        </a>
-                    </div>
-
-                    <!-- Full-Stack Combination -->
-                    <div class="rounded-2xl border border-indigo-200 bg-white p-6 shadow-sm dark:border-indigo-900/40 dark:bg-slate-900">
-                        <div class="mb-4 text-center">
-                            <div class="mb-3 flex items-center justify-center gap-3">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100 text-lg dark:bg-indigo-950/40">🐘</div>
-                                <span class="text-lg font-bold text-slate-400 dark:text-slate-600">+</span>
-                                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-lg dark:bg-orange-950/40">☕</div>
-                            </div>
-                            <h3 class="mb-1 text-lg font-bold text-slate-900 dark:text-white">Full-Stack Solution</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">Combine PHP & Java expertise</p>
-                        </div>
-
-                        <div class="mb-5 rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
-                            <h4 class="mb-2 text-sm font-semibold text-slate-900 dark:text-white">Why Use Both?</h4>
-                            <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                    <span>PHP for web frontend + Java for enterprise backend</span>
+                    <div class="space-y-5">
+                        <div class="p-7 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-indigo-600/5 border border-blue-500/10">
+                            <h3 class="text-xl font-black text-white mb-6">What We Deliver with Every Order</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">✅</div>
+                                    <div><p class="text-white font-bold text-sm">Tested Source Code (.php files)</p><p class="text-xs text-slate-500 mt-0.5">Fully-functional code directory, Blade views, model files, and controllers</p></div>
                                 </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                    <span>Laravel web app + Spring Boot microservices</span>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📦</div>
+                                    <div><p class="text-white font-bold text-sm">Autoloading Configs</p><p class="text-xs text-slate-500 mt-0.5">Correct composer.json files containing required dependency mapping definitions</p></div>
                                 </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                    <span>PHP API + Java Android mobile app</span>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">📝</div>
+                                    <div><p class="text-white font-bold text-sm">Step-by-Step Setup README</p><p class="text-xs text-slate-500 mt-0.5">Instructions to run local servers, execute composer updates, or migrate database schemas</p></div>
                                 </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-600 dark:text-emerald-400">✓</span>
-                                    <span>Best of both ecosystems for complex projects</span>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">⚡</div>
+                                    <div><p class="text-white font-bold text-sm">Fast 6-Hour Urgent Delivery</p><p class="text-xs text-slate-500 mt-0.5">Stuck on Laravel route mismatches or array parser errors? We deliver correct code fast</p></div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0 mt-0.5 text-base">🔒</div>
+                                    <div><p class="text-white font-bold text-sm">100% Secure &amp; Confidential</p><p class="text-xs text-slate-500 mt-0.5">Your email, names, class parameters, and source code are kept strictly confidential</p></div>
                                 </li>
                             </ul>
                         </div>
 
-                        <a href="{{ route('order') }}"
-                            class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-500">
-                            Discuss Full-Stack Project →
+                        <a href="{{ route('order') }}" class="group relative inline-flex w-full items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-500 transition-all duration-300 shadow-lg hover:-translate-y-0.5 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            <span class="relative z-10">Get PHP Assignment Help Now</span>
+                            <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Quick Navigation -->
-                <div class="mt-8 text-center">
-                    <a href="{{ route('services.programming.index') }}"
-                        class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
-                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                        View All Programming Services
-                    </a>
+        {{-- ===================================================
+             SECTION 4 – TYPES OF PHP ASSIGNMENTS TACKLED
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" id="php-services" aria-labelledby="services-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Assignment Scope</p>
+                    <h2 id="services-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Types of <span class="text-blue-600 dark:text-blue-400">PHP Assignments</span> We Handle
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                        Our experts possess deep knowledge of PHP frameworks, Eloquent database entities, API structures, and package setups.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">🐘</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Core OOP &amp; Classes</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing abstract PHP structures. Coding OOP classes, inheritance loops, namespaces, traits, and interface separations using PHP 8.x attributes.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Class properties &amp; traits</li>
+                            <li>• PHP namespaces &amp; PSR standards</li>
+                            <li>• Polymorphic interface override</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl">🔴</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Laravel Web applications</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Building server web systems. Coding Laravel routes, Blade templates, middleware parameters, controller actions, and Livewire layouts.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Blade template configurations</li>
+                            <li>• Middleware route protections</li>
+                            <li>• Livewire responsive actions</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">🗄️</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database &amp; Eloquent ORM</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Managing database data persistence. Writing database migrations, Eloquent relationships (hasMany, belongsTo), raw PDO requests, and SQLite syncs.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Laravel migrations structure</li>
+                            <li>• Eloquent relationships mapping</li>
+                            <li>• Raw PDO query transactions</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🔗</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">RESTful API Controllers</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing application backend endpoints. Structuring JSON payloads, setting up JWT auth rules, handling resource policies, and rate limits.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• JWT backend authorizations</li>
+                            <li>• Resource serialization classes</li>
+                            <li>• CORS header configurations</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white text-xl">📝</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">WordPress Theme &amp; Plugin</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Customizing WordPress systems. Coding action hooks, filter configurations, custom themes, plugin actions, and WooCommerce integrations.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Theme template overrides</li>
+                            <li>• Action &amp; filter hook calls</li>
+                            <li>• WooCommerce checkout configurations</li>
+                        </ul>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white text-xl">🔧</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Composer &amp; Testing</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Managing package installations. Syncing composer.json dependencies, configuring autoloading namespaces, and coding PHPUnit/Pest test blocks.</p>
+                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-100 pt-4 dark:border-slate-800">
+                            <li>• Composer package synchronization</li>
+                            <li>• PHPUnit test cases execution</li>
+                            <li>• PSR-4 autoloading configurations</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section class="bg-indigo-600 py-14 text-white sm:py-16">
-            <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to Build Your PHP Project?</h2>
-                <p class="mx-auto mt-4 max-w-2xl text-base text-indigo-100 sm:text-lg">
-                    Join 1100+ students who have successfully completed their PHP programming projects with our expert help.
+        {{-- ===================================================
+             SECTION 5 – STEPS TO GET PHP ASSISTANCE
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="steps-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">Streamlined Process</p>
+                    <h2 id="steps-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Get Your PHP Code in 4 Steps
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-600 text-base font-black text-white shadow-md">1</div>
+                        <div class="mb-3 text-2xl">📋</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Upload Guidelines</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Submit your class criteria, database migrations, framework specifications, and deadlines.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-base font-black text-white shadow-md">2</div>
+                        <div class="mb-3 text-2xl">🎯</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Get Fair Pricing</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">A vetted PHP coding specialist reviews your requirements or database rules and provides a quote.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-base font-black text-white shadow-md">3</div>
+                        <div class="mb-3 text-2xl">💻</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Expert Codes App</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">The developer structures routes, designs models, sets up migrations, codes controllers, and tests routes.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-base font-black text-white shadow-md">4</div>
+                        <div class="mb-3 text-2xl">🚀</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Download &amp; Test</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Download the working project folder, execute migration scripts, run servers, and request tweaks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 6 – RISK-FREE GUARANTEES
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="guarantee-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Guarantees</p>
+                    <h2 id="guarantee-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        Guaranteed PHP Execution
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-900/40 dark:bg-blue-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">💡</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">100% Original Code</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Every route setup, Eloquent relation class, and custom theme hook is coded from scratch based on your custom requirements.</p>
+                    </div>
+                    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900/40 dark:bg-emerald-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-xl text-white">⏱️</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Deadline Compliance</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">We monitor our template compilation workflows continuously to ensure your script folders are delivered before the deadline.</p>
+                    </div>
+                    <div class="rounded-2xl border border-purple-200 bg-purple-50 p-6 dark:border-purple-900/40 dark:bg-purple-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-600 text-xl text-white">🔄</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">72-Hour Free Revisions</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Need minor model adjustments, extra code comments, or configuration shifts? We offer free revisions within 72 hours of delivery.</p>
+                    </div>
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-900/40 dark:bg-amber-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-600 text-xl text-white">💰</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Refund Guarantee</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">If our code fails compilation or misses critical MVC specifications explicitly detailed in your guidelines, you are protected by our refund policy.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-slate-700 text-xl text-white">🔒</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Strict Privacy</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Your details are kept strictly private. Your source folders and database configurations are never shared.</p>
+                    </div>
+                    <div class="rounded-2xl border border-cyan-200 bg-cyan-50 p-6 dark:border-cyan-900/40 dark:bg-cyan-950/20">
+                        <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-600 text-xl text-white">💬</div>
+                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">24/7 Expert Support</h3>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Speak to our support desk or message your assigned PHP specialist directly through our system to ask questions at any stage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 7 – STUDENT PHP REVIEWS
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-amber-600 dark:text-amber-400">Student Reviews</p>
+                    <h2 id="reviews-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        What Students Say About Our PHP Help
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">Laravel MVC</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"I was struggling to link Laravel database migrations with custom Eloquent hasMany models. The developer resolved the relationships, created the seeders, and verified the database loaded cleanly."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Ethan P.</p><p class="text-xs text-slate-500">Penn State</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">Custom PHP Router</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"Had an assignment requiring building a custom MVC routing architecture in core PHP. The expert structured clean controller classes, mapped path variables, and documented everything."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">Chloe D.</p><p class="text-xs text-slate-500">USC</p></div>
+                        </div>
+                    </article>
+
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <div class="mb-3 flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-950/40 dark:text-blue-400">WordPress plugin</span>
+                        </div>
+                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 italic">"Stuck trying to capture user form submissions and save them inside a custom database table in WordPress. The PHP expert coded a clean plugin using actions and database hooks."</p>
+                        <div class="border-t border-slate-100 pt-4 dark:border-slate-800 flex items-center justify-between">
+                            <div><p class="text-sm font-bold text-slate-900 dark:text-white">William K.</p><p class="text-xs text-slate-500">UC Berkeley</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 8 – IN-DEPTH SEO CONTENT BLOCK
+             SEO: Long-form keyword-rich educational material
+        =================================================== --}}
+        <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="content-heading">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h2 id="content-heading" class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">🎯</span>
+                                What is PHP Assignment Help?
+                            </h2>
+                            <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <p><strong class="text-slate-900 dark:text-white font-semibold">PHP assignment help</strong> is a specialized programming service designed to support computer science students with OOP script structures, MVC frameworks, database migrations, and CMS integration tasks. Developing PHP code demands understanding framework architecture, PSR coding standards, database relationships, and web request lifecycles.</p>
+                                <p>Whether you are setting up Eloquent models in Laravel, writing custom controllers in Symfony, coding actions/filters in WordPress, or writing custom routing handlers in core PHP — our experts write clean code and provide setup guides to help you succeed.</p>
+                                <p>We cover all major platforms: Core PHP 7.4-8.x+, Laravel, Symfony, CodeIgniter, Slim, WordPress, Composer, MySQL, and PHPUnit.</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">🏫</span>
+                                Common PHP Coding Challenges We Solve
+                            </h3>
+                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Composer Dependency Lockups:</strong> Resolving version mismatches, missing extensions, and PSR-4 autoloading namespace errors.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Database Migration Errors:</strong> Resolving key constraint violations, table creation orders, and invalid column schemas in Laravel/Doctrine.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Route &amp; Middleware Configuration:</strong> Fixing 404 errors, CSRF token blocks, and setting up CORS permissions in API requests.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-white">⭐</span>
+                                PHP Technologies &amp; Tools We Cover
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach(['Laravel','Symfony','CodeIgniter','Slim','WordPress','Composer','Eloquent ORM','Doctrine','MySQL','PostgreSQL','SQLite','REST API','JWT Auth','Blade','Twig','PHPUnit','Pest','Docker','Git','PSR-12 standards'] as $tech)
+                                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">{{ $tech }}</span>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                            <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-900 dark:text-white">
+                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-white">📊</span>
+                                Our PHP Track Record
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-blue-600 dark:text-blue-400">4,200+</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Systems Built</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-emerald-600 dark:text-emerald-400">98%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-amber-600 dark:text-amber-400">4.9★</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Rating</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-xl font-black text-purple-600 dark:text-purple-400">100%</p>
+                                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Execution Pass Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 9 – FAQ ACCORDION
+             SEO: Targets rich SERP results
+        =================================================== --}}
+        <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="faq-heading">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <p class="mb-3 text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">FAQs</p>
+                    <h2 id="faq-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+                        PHP Assignment Help FAQs
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Can your developers build custom web systems in Laravel or Symfony?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. We specialize in PHP web frameworks. Our developers code Eloquent database models, set up schema migrations, configure routes, build controllers, and verify API responses.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Do you write PHPUnit test files?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. If specified in your assignment guidelines, we include PHPUnit or Pest unit and feature tests checking endpoints, middleware, and request validation responses.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Will you include a database migration and seeder config?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Yes. Every project requiring a database persistence layer includes Laravel migration files and test seeders, alongside instructions to set up database configurations in your local environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">Will the PHP code be original and secure?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Absolutely. We write all routing, controllers, variables sanitizations, and database queries from scratch based on your custom requirements. We do not use recycled templates.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 overflow-hidden">
+                        <button onclick="this.closest('div').querySelector('.faq-body').classList.toggle('hidden');this.querySelector('.faq-chevron').classList.toggle('rotate-180')" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left">
+                            <span class="text-sm font-bold text-slate-900 dark:text-white">How fast can you deliver my PHP project?</span>
+                            <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-body hidden px-6 pb-5">
+                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Simple scripting modifications, database table structures, or config tweaks can be solved inside 3 to 12 hours. Large Laravel portals usually take 24 to 72 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 10 – FINAL CTA
+             SEO: High converting closing block
+        =================================================== --}}
+        <section class="relative overflow-hidden bg-slate-900 py-16 sm:py-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">PHP Specialists Online Now</span>
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-5">
+                    Ready to Get Your<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">PHP Application Coded?</span>
+                </h2>
+
+                <p class="text-base text-slate-400 max-w-2xl mx-auto mb-10">
+                    Get clean, compilable, PSR-12 compliant PHP code files complete with environment setups, database migrations, and PHPUnit test suites. Submit your details for a free quote within 5 minutes.
                 </p>
-                <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                    <a href="{{ route('order') }}"
-                        class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50">
-                        Start Your Project Now
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="{{ route('order') }}" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-500 shadow-lg hover:-translate-y-0.5 active:scale-95 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span class="relative z-10 text-sm">Get PHP Assignment Help</span>
+                        <svg class="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                     </a>
-                    <a href="#pricing"
-                        class="inline-flex items-center justify-center gap-2 rounded-xl border border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-indigo-600">
-                        View Pricing Plans
-                    </a>
+                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Free Quote &middot; No Obligation</span>
+                </div>
+
+                <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">4,200+</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Systems Built</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">4.9/5</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Rating</p>
+                    </div>
+                    <div class="hidden h-10 w-px bg-white/10 sm:block"></div>
+                    <div class="text-center">
+                        <p class="text-2xl font-black text-white">98%</p>
+                        <p class="mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500">On-Time Delivery</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        {{-- ===================================================
+             FAQ & SERVICE SCHEMA MARKUP
+        =================================================== --}}
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Can your developers build custom web systems in Laravel or Symfony?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. We specialize in PHP web frameworks. Our developers code Eloquent database models, set up schema migrations, configure routes, build controllers, and verify API responses."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you write PHPUnit test files?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. If specified in your assignment guidelines, we include PHPUnit or Pest unit and feature tests checking endpoints, middleware, and request validation responses."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Will you include a database migration and seeder config?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Every project requiring a database persistence layer includes Laravel migration files and test seeders, alongside instructions to set up database configurations in your local environment."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Will the PHP code be original and secure?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Absolutely. We write all routing, controllers, variables sanitizations, and database queries from scratch based on your custom requirements. We do not use recycled templates."
+              }
+            }
+          ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Service",
+          "name": "PHP Assignment Help",
+          "description": "Professional PHP assignment help and programming project assistance. Expert developers available 24/7 for Laravel, Symfony, custom MVC frameworks, Eloquent ORM, and PHPUnit setups.",
+          "provider": {
+            "@@type": "Organization",
+            "name": "AssignmentHelpUSA",
+            "url": "https://assignmenthelpusa.com"
+          },
+          "areaServed": "US",
+          "serviceType": "PHP Assignment Help",
+          "offers": {
+            "@@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "15",
+            "highPrice": "500"
+          },
+          "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1100",
+            "bestRating": "5"
+          }
+        }
+        </script>
     </div>
 @endsection
