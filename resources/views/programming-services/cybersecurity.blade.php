@@ -603,7 +603,7 @@
         =================================================== --}}
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
             {
@@ -644,7 +644,7 @@
 
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": "Service",
           "name": "Cybersecurity Assignment Help",
           "description": "Professional cybersecurity assignment help and cryptography project assistance. Expert security engineers available 24/7 for OWASP secure coding, penetration testing audits, and Wireshark/Snort setups.",
