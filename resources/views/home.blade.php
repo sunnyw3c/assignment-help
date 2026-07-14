@@ -801,7 +801,7 @@
                         <span class="text-slate-700 font-extrabold text-xs uppercase tracking-[0.18em] dark:text-slate-300">Assignment Help USA</span>
                         </div>
                         <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4 dark:text-white">
-                            Assignment Help USA For excellent Academic Results
+                            Assignment Help USA For Excellent Academic Results
                         </h2>
                         <p class="text-slate-600 text-lg leading-relaxed mb-7 dark:text-slate-400">
                             Clear pricing, expert support, and reliable delivery for essays, research papers, and urgent assignments.
