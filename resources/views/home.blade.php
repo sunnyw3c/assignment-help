@@ -67,7 +67,7 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('services.assignment.index') }}"
+                    <a href="{{ route('services.essay-writing.index') }}"
                         class="mt-auto inline-flex items-center justify-center gap-2 w-full py-4 bg-white text-blue-600 font-black rounded-2xl border-2 border-blue-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 shadow-sm text-xs uppercase tracking-widest dark:bg-slate-900">
                         Explore Custom Writing
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>

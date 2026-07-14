@@ -234,6 +234,9 @@ class ServiceController extends Controller
             'php' => 'programming-services.php-help',
             'java' => 'programming-services.java-help',
             'python' => 'programming-services.python-help',
+            'php-programming-help' => 'programming-services.php-help',
+            'java-programming-help' => 'programming-services.java-help',
+            'python-programming-help' => 'programming-services.python-help',
         ];
 
         // Check if we have a specific view for this service

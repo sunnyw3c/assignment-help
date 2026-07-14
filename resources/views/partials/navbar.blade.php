@@ -1,141 +1,217 @@
-<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 sm:h-20">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
+@php
+    $serviceMenu = [
+        [
+            'title' => 'Programming Help',
+            'description' => 'Code, apps, data, cloud, security, and debugging.',
+            'href' => route('services.programming.index'),
+            'accent' => 'text-violet-600 dark:text-violet-400',
+            'groups' => [
+                'Languages' => [
+                    ['label' => 'Python Help', 'href' => route('services.programming.show', 'python-programming-help')],
+                    ['label' => 'Java Help', 'href' => route('services.programming.show', 'java-programming-help')],
+                    ['label' => 'PHP Help', 'href' => route('services.programming.show', 'php-programming-help')],
+                ],
+                'Web & Apps' => [
+                    ['label' => 'Web Development', 'href' => route('services.programming.show', 'web-development')],
+                    ['label' => 'Mobile Apps', 'href' => route('services.programming.show', 'mobile-app')],
+                    ['label' => 'Desktop Apps', 'href' => route('services.programming.show', 'desktop-app')],
+                    ['label' => 'API Development', 'href' => route('services.programming.show', 'api-development')],
+                ],
+                'CS & Data' => [
+                    ['label' => 'Algorithms', 'href' => route('services.programming.show', 'algorithms')],
+                    ['label' => 'Databases', 'href' => route('services.programming.show', 'database')],
+                    ['label' => 'Machine Learning', 'href' => route('services.programming.show', 'machine-learning')],
+                ],
+                'Systems & Security' => [
+                    ['label' => 'Cybersecurity', 'href' => route('services.programming.show', 'cybersecurity')],
+                    ['label' => 'Cloud Computing', 'href' => route('services.programming.show', 'cloud-computing')],
+                    ['label' => 'DevOps', 'href' => route('services.programming.show', 'devops')],
+                    ['label' => 'Testing & QA', 'href' => route('services.programming.show', 'testing-qa')],
+                    ['label' => 'Debugging', 'href' => route('services.programming.show', 'debugging')],
+                    ['label' => 'Game Development', 'href' => route('services.programming.show', 'game-development')],
+                ],
+            ],
+        ],
+        [
+            'title' => 'Assignment Help',
+            'description' => 'General assignments, subjects, homework, and reports.',
+            'href' => route('services.index'),
+            'accent' => 'text-blue-600 dark:text-blue-400',
+            'groups' => [
+                'Core Assignment Help' => [
+                    ['label' => 'Homework Help', 'href' => route('services.homework-help.index')],
+                    ['label' => 'Lab Report Help', 'href' => route('services.lab-report.index')],
+                ],
+                'Subject Help' => [
+                    ['label' => 'Math Assignment Help', 'href' => route('services.math-assignment')],
+                    ['label' => 'Mathematics Help', 'href' => route('services.mathematics-assignment.index')],
+                    ['label' => 'Law Assignment Help', 'href' => route('services.law-assignment.index')],
+                ],
+            ],
+        ],
+        [
+            'title' => 'Essay Help',
+            'description' => 'Essays, papers, case studies, editing, and presentations.',
+            'href' => route('services.essay-writing.index'),
+            'accent' => 'text-indigo-600 dark:text-indigo-400',
+            'groups' => [
+                'Essays & Papers' => [
+                    ['label' => 'Essay Writing', 'href' => route('services.essay-writing.index')],
+                    ['label' => 'Research Paper', 'href' => route('services.research-paper.index')],
+                    ['label' => 'Case Study', 'href' => route('services.case-study.index')],
+                    ['label' => 'Literature Review', 'href' => route('services.literature-review.index')],
+                ],
+                'Long Form & Polish' => [
+                    ['label' => 'Thesis & Dissertation', 'href' => route('services.thesis-dissertation.index')],
+                    ['label' => 'Proofreading & Editing', 'href' => route('services.proofreading-editing.index')],
+                    ['label' => 'Presentation Design', 'href' => route('services.presentation-design.index')],
+                ],
+            ],
+        ],
+    ];
+@endphp
+
+<nav class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between sm:h-20">
+            <div class="flex shrink-0 items-center">
                 <a href="{{ url('/') }}" class="flex items-center gap-2">
-                    <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400 bg-clip-text text-transparent tracking-tight">
+                    <span class="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-xl font-black tracking-tight text-transparent dark:from-violet-400 dark:to-indigo-400 sm:text-2xl">
                         AssignmentHelp<span class="text-slate-800 dark:text-white">USA</span>
                     </span>
                 </a>
             </div>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center gap-8 font-semibold text-sm">
-                <a href="{{ url('/') }}" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors {{ request()->is('/') ? 'text-indigo-600 dark:text-white' : '' }}">
+            <div class="hidden items-center gap-8 text-sm font-semibold lg:flex">
+                <a href="{{ url('/') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->is('/') ? 'text-indigo-600 dark:text-white' : '' }}">
                     Home
                 </a>
 
-                <!-- Services Mega-Menu Trigger -->
-                <div class="relative group">
-                    <button id="mega-menu-trigger" class="flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors py-2 focus:outline-none">
+                <div class="group relative">
+                    <button id="mega-menu-trigger" class="flex items-center gap-1 py-2 text-slate-600 transition-colors hover:text-indigo-600 focus:outline-none dark:text-slate-300 dark:hover:text-white">
                         <span>Services</span>
-                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
 
-                    <!-- Mega-Menu Dropdown Panel -->
-                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-[800px] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-2xl rounded-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-350 transform origin-top scale-95 group-hover:scale-100 flex gap-8 z-50">
-                        <!-- Programming Services -->
-                        <div class="flex-1 flex flex-col gap-4">
-                            <div class="flex items-center gap-2 text-violet-600 dark:text-violet-400 font-bold border-b border-slate-100 dark:border-slate-800 pb-2">
-                                <span>💻</span>
-                                <span>Programming Help</span>
+                    <div class="invisible fixed left-1/2 top-16 z-50 w-[920px] max-w-[calc(100vw-2rem)] origin-top -translate-x-1/2 scale-95 rounded-2xl border border-slate-100 bg-white p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-slate-800 dark:bg-slate-900 sm:top-20">
+                        <div class="grid grid-cols-[250px_1fr] gap-4">
+                            <div class="space-y-2 rounded-xl bg-slate-50 p-2 dark:bg-slate-950/50">
+                                @foreach($serviceMenu as $section)
+                                    <button type="button" data-service-tab="{{ $loop->index }}" class="service-menu-tab w-full rounded-lg p-3 text-left transition-colors {{ $loop->index === 1 ? 'bg-white shadow-sm dark:bg-slate-800' : 'hover:bg-white dark:hover:bg-slate-800/70' }}">
+                                        <span class="{{ $section['accent'] }} block text-sm font-black">{{ $section['title'] }}</span>
+                                        <span class="mt-1 block text-[11px] font-medium leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</span>
+                                    </button>
+                                @endforeach
+
+                                <a href="{{ route('services.index') }}" class="mt-3 block rounded-lg border border-slate-200 px-3 py-2 text-center text-[10px] font-black uppercase tracking-widest text-slate-500 transition-colors hover:border-indigo-300 hover:text-indigo-600 dark:border-slate-800 dark:text-slate-400 dark:hover:border-indigo-500 dark:hover:text-white">
+                                    Browse All Services
+                                </a>
                             </div>
-                            <div class="grid grid-cols-2 gap-2 text-xs font-normal">
-                                <a href="{{ route('services.programming.show', 'web-development') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Web Development</a>
-                                <a href="{{ route('services.programming.show', 'mobile-app') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Mobile Apps</a>
-                                <a href="{{ route('services.programming.show', 'algorithms') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Algorithms</a>
-                                <a href="{{ route('services.programming.show', 'database') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Databases</a>
-                                <a href="{{ route('services.programming.show', 'machine-learning') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Machine Learning</a>
-                                <a href="{{ route('services.programming.show', 'debugging') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Code Debugging</a>
+
+                            <div class="rounded-xl border border-slate-100 bg-slate-50/70 p-4 dark:border-slate-800 dark:bg-slate-950/40">
+                            @foreach($serviceMenu as $section)
+                                <div data-service-panel="{{ $loop->index }}" class="service-menu-panel {{ $loop->index === 1 ? '' : 'hidden' }}">
+                                    <div class="mb-4 flex items-start justify-between gap-4 border-b border-slate-200 pb-3 dark:border-slate-800">
+                                        <div>
+                                            <p class="{{ $section['accent'] }} text-base font-black">{{ $section['title'] }}</p>
+                                            <p class="mt-1 text-xs font-medium leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</p>
+                                        </div>
+                                        <a href="{{ $section['href'] }}" class="shrink-0 rounded-lg bg-white px-3 py-2 text-[10px] font-black uppercase tracking-widest text-slate-600 transition-colors hover:text-indigo-600 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                                            View all
+                                        </a>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-5">
+                                        @foreach($section['groups'] as $groupTitle => $links)
+                                            <div>
+                                                <p class="mb-2 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{{ $groupTitle }}</p>
+                                                <div class="grid grid-cols-2 gap-1">
+                                                    @foreach($links as $link)
+                                                        <a href="{{ $link['href'] }}" class="rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-700 transition-colors hover:bg-white hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800/70 dark:hover:text-white">
+                                                            {{ $link['label'] }}
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endforeach
                             </div>
-                            <a href="{{ route('services.programming.index') }}" class="text-xs text-indigo-600 dark:text-indigo-400 font-semibold hover:underline mt-2 inline-flex items-center gap-1">
-                                View All Programming Services &rarr;
-                            </a>
                         </div>
 
-                        <!-- Academic Writing Services -->
-                        <div class="flex-1 flex flex-col gap-4">
-                            <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold border-b border-slate-100 dark:border-slate-800 pb-2">
-                                <span>📝</span>
-                                <span>Academic Writing</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2 text-xs font-normal">
-                                <a href="{{ route('services.essay-writing.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Essay Writing</a>
-                                <a href="{{ route('services.research-paper.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Research Paper</a>
-                                <a href="{{ route('services.case-study.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Case Studies</a>
-                                <a href="{{ route('services.homework-help.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Homework Help</a>
-                                <a href="{{ route('services.thesis-dissertation.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Thesis & Diss.</a>
-                                <a href="{{ route('services.proofreading-editing.index') }}" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg text-slate-700 dark:text-slate-300 transition-colors font-medium">Editing & Proof</a>
-                            </div>
-                            <a href="{{ route('services.assignment.index') }}" class="text-xs text-indigo-600 dark:text-indigo-400 font-semibold hover:underline mt-2 inline-flex items-center gap-1">
-                                View All Assignment Services &rarr;
-                            </a>
+                        <div class="mt-5 flex items-center justify-between rounded-xl bg-slate-900 px-4 py-3 text-white dark:bg-white dark:text-slate-900">
+                            <span class="text-xs font-black uppercase tracking-widest">Need help choosing?</span>
+                            <a href="{{ route('order') }}" class="rounded-lg bg-white px-4 py-2 text-xs font-black text-slate-900 transition-colors hover:bg-slate-100 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800">Order Now</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="{{ route('how-it-works') }}" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors {{ request()->routeIs('how-it-works') ? 'text-indigo-600 dark:text-white' : '' }}">
+                <a href="{{ route('how-it-works') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('how-it-works') ? 'text-indigo-600 dark:text-white' : '' }}">
                     How It Works
                 </a>
-                <a href="{{ route('experts') }}" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors {{ request()->routeIs('experts') ? 'text-indigo-600 dark:text-white' : '' }}">
+                <a href="{{ route('experts') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('experts') ? 'text-indigo-600 dark:text-white' : '' }}">
                     Experts
                 </a>
-                <a href="{{ route('reviews') }}" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors {{ request()->routeIs('reviews') ? 'text-indigo-600 dark:text-white' : '' }}">
+                <a href="{{ route('reviews') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('reviews') ? 'text-indigo-600 dark:text-white' : '' }}">
                     Reviews
                 </a>
-                <a href="{{ route('faq') }}" class="text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors {{ request()->routeIs('faq') ? 'text-indigo-600 dark:text-white' : '' }}">
+                <a href="{{ route('faq') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('faq') ? 'text-indigo-600 dark:text-white' : '' }}">
                     FAQ
                 </a>
             </div>
 
-            <!-- Action Buttons + Theme Toggle (Desktop) -->
-            <div class="hidden lg:flex items-center gap-4">
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle Theme">
-                    <!-- Sun Icon -->
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <div class="hidden items-center gap-4 lg:flex">
+                <button id="theme-toggle" class="rounded-xl p-2 text-slate-500 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800" aria-label="Toggle Theme">
+                    <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                     </svg>
-                    <!-- Moon Icon -->
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
 
                 @guest
-                    <a href="{{ route('login') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors">
+                    <a href="{{ route('login') }}" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
                         Log In
                     </a>
-                    <a href="{{ route('register') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm shadow-indigo-600/10">
+                    <a href="{{ route('register') }}" class="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-600/10 transition-all hover:bg-indigo-700">
                         Sign Up
                     </a>
                 @else
-                    <a href="{{ route('dashboard') }}" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white transition-colors">
+                    <a href="{{ route('dashboard') }}" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
                         Dashboard
                     </a>
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
-                        <button type="submit" class="border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 px-4 py-2 rounded-xl text-sm font-semibold transition-all">
+                        <button type="submit" class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
                             Logout
                         </button>
                     </form>
                 @endguest
 
-                <a href="{{ route('order') }}" class="bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm">
+                <a href="{{ route('order') }}" class="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
                     Order Now
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle (Burger) -->
             <div class="flex items-center gap-3 lg:hidden">
-                <!-- Theme Toggle Button (Mobile) -->
-                <button id="theme-toggle-mobile" class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle Theme">
-                    <svg id="theme-toggle-light-icon-mob" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button id="theme-toggle-mobile" class="rounded-xl p-2 text-slate-500 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800" aria-label="Toggle Theme">
+                    <svg id="theme-toggle-light-icon-mob" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                     </svg>
-                    <svg id="theme-toggle-dark-icon-mob" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="theme-toggle-dark-icon-mob" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
 
-                <button id="mobile-menu-btn" class="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle Menu">
-                    <svg id="mobile-menu-burger" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" class="rounded-xl p-2 text-slate-600 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Toggle Menu">
+                    <svg id="mobile-menu-burger" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                    <svg id="mobile-menu-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="mobile-menu-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
@@ -143,53 +219,63 @@
         </div>
     </div>
 
-    <!-- Mobile Navigation Panel -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="px-4 pt-4 pb-6 space-y-3 font-semibold text-base flex flex-col">
-            <a href="{{ url('/') }}" class="px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">Home</a>
-            
-            <!-- Mobile Services Accordion -->
+    <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col space-y-3 px-4 pb-6 pt-4 text-base font-semibold">
+            <a href="{{ url('/') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Home</a>
+
             <div>
-                <button id="mobile-services-btn" class="w-full px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-between transition-colors focus:outline-none">
+                <button id="mobile-services-btn" class="flex w-full items-center justify-between rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800">
                     <span>Services</span>
-                    <svg id="mobile-services-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="mobile-services-arrow" class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div id="mobile-services-list" class="hidden pl-6 pr-3 py-2 space-y-2 text-sm font-medium">
-                    <div class="text-violet-600 dark:text-violet-400 font-bold text-xs uppercase tracking-wider mt-2 mb-1">Programming Help</div>
-                    <a href="{{ route('services.programming.show', 'web-development') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Web Development</a>
-                    <a href="{{ route('services.programming.show', 'mobile-app') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Mobile Apps</a>
-                    <a href="{{ route('services.programming.show', 'algorithms') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Algorithms</a>
-                    <a href="{{ route('services.programming.index') }}" class="block p-2 text-indigo-600 dark:text-indigo-400 font-semibold">All Programming &rarr;</a>
+                <div id="mobile-services-list" class="hidden space-y-4 px-3 py-2 text-sm font-medium">
+                    @foreach($serviceMenu as $section)
+                        <div class="rounded-xl border border-slate-100 p-3 dark:border-slate-800">
+                            <a href="{{ $section['href'] }}" class="{{ $section['accent'] }} block text-xs font-black uppercase tracking-wider">{{ $section['title'] }}</a>
+                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</p>
 
-                    <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider mt-4 mb-1">Academic Writing</div>
-                    <a href="{{ route('services.essay-writing.index') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Essay Writing</a>
-                    <a href="{{ route('services.research-paper.index') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Research Paper</a>
-                    <a href="{{ route('services.case-study.index') }}" class="block p-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600">Case Studies</a>
-                    <a href="{{ route('services.assignment.index') }}" class="block p-2 text-indigo-600 dark:text-indigo-400 font-semibold">All Assignments &rarr;</a>
+                            <div class="mt-3 space-y-3">
+                                @foreach($section['groups'] as $groupTitle => $links)
+                                    <div>
+                                        <p class="mb-1 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{{ $groupTitle }}</p>
+                                        <div class="grid grid-cols-1 gap-1">
+                                            @foreach($links as $link)
+                                                <a href="{{ $link['href'] }}" class="block rounded-lg px-2 py-1.5 text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+                                                    {{ $link['label'] }}
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endforeach
+
+                    <a href="{{ route('services.index') }}" class="block rounded-xl bg-slate-100 px-3 py-2 text-center text-xs font-black uppercase tracking-widest text-slate-700 dark:bg-slate-800 dark:text-slate-200">Browse All Services</a>
                 </div>
             </div>
 
-            <a href="{{ route('how-it-works') }}" class="px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">How It Works</a>
-            <a href="{{ route('experts') }}" class="px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">Experts</a>
-            <a href="{{ route('reviews') }}" class="px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">Reviews</a>
-            <a href="{{ route('faq') }}" class="px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">FAQ</a>
+            <a href="{{ route('how-it-works') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">How It Works</a>
+            <a href="{{ route('experts') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Experts</a>
+            <a href="{{ route('reviews') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Reviews</a>
+            <a href="{{ route('faq') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">FAQ</a>
 
-            <div class="border-t border-slate-100 dark:border-slate-800 pt-4 mt-2 space-y-2">
+            <div class="mt-2 space-y-2 border-t border-slate-100 pt-4 dark:border-slate-800">
                 @guest
-                    <a href="{{ route('login') }}" class="block text-center px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">Log In</a>
-                    <a href="{{ route('register') }}" class="block text-center bg-indigo-600 text-white px-4 py-2.5 rounded-xl transition-all shadow-sm">Sign Up</a>
+                    <a href="{{ route('login') }}" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Log In</a>
+                    <a href="{{ route('register') }}" class="block rounded-xl bg-indigo-600 px-4 py-2.5 text-center text-white shadow-sm transition-all">Sign Up</a>
                 @else
-                    <a href="{{ route('dashboard') }}" class="block text-center px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">Dashboard</a>
+                    <a href="{{ route('dashboard') }}" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Dashboard</a>
                     <form method="POST" action="{{ route('logout') }}" class="block w-full">
                         @csrf
-                        <button type="submit" class="w-full text-center px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                        <button type="submit" class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-center text-slate-700 transition-all hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
                             Logout
                         </button>
                     </form>
                 @endguest
-                <a href="{{ route('order') }}" class="block text-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-2.5 rounded-xl font-bold transition-all shadow-sm">
+                <a href="{{ route('order') }}" class="block rounded-xl bg-slate-900 px-4 py-2.5 text-center font-bold text-white shadow-sm transition-all dark:bg-white dark:text-slate-900">
                     Order Now
                 </a>
             </div>
@@ -201,25 +287,23 @@
     document.addEventListener('DOMContentLoaded', function() {
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
-        
+
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
         const lightIcon = document.getElementById('theme-toggle-light-icon');
         const darkIconMob = document.getElementById('theme-toggle-dark-icon-mob');
         const lightIconMob = document.getElementById('theme-toggle-light-icon-mob');
 
-        // Apply visual toggle state based on element class
         function syncThemeIcons() {
             const isDark = document.documentElement.classList.contains('dark');
-            if (isDark) {
-                lightIcon.classList.remove('hidden');
-                darkIcon.classList.add('hidden');
-                lightIconMob.classList.remove('hidden');
-                darkIconMob.classList.add('hidden');
-            } else {
-                lightIcon.classList.add('hidden');
-                darkIcon.classList.remove('hidden');
-                lightIconMob.classList.add('hidden');
-                darkIconMob.classList.remove('hidden');
+
+            if (darkIcon && lightIcon) {
+                lightIcon.classList.toggle('hidden', !isDark);
+                darkIcon.classList.toggle('hidden', isDark);
+            }
+
+            if (darkIconMob && lightIconMob) {
+                lightIconMob.classList.toggle('hidden', !isDark);
+                darkIconMob.classList.toggle('hidden', isDark);
             }
         }
 
@@ -234,22 +318,45 @@
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('color-theme', 'light');
                 }
+            } else if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
             } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
             }
+
             syncThemeIcons();
         }
 
         if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
         if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
 
-        // Mobile menu toggle logic
+        const serviceTabs = document.querySelectorAll('.service-menu-tab');
+        const servicePanels = document.querySelectorAll('.service-menu-panel');
+
+        function setActiveServicePanel(index) {
+            serviceTabs.forEach(function(tab) {
+                const isActive = tab.dataset.serviceTab === String(index);
+                tab.classList.toggle('bg-white', isActive);
+                tab.classList.toggle('shadow-sm', isActive);
+                tab.classList.toggle('dark:bg-slate-800', isActive);
+            });
+
+            servicePanels.forEach(function(panel) {
+                panel.classList.toggle('hidden', panel.dataset.servicePanel !== String(index));
+            });
+        }
+
+        serviceTabs.forEach(function(tab) {
+            tab.addEventListener('mouseenter', function() {
+                setActiveServicePanel(tab.dataset.serviceTab);
+            });
+            tab.addEventListener('click', function() {
+                setActiveServicePanel(tab.dataset.serviceTab);
+            });
+        });
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const burgerIcon = document.getElementById('mobile-menu-burger');
@@ -258,19 +365,14 @@
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', function() {
                 const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    burgerIcon.classList.add('hidden');
-                    closeIcon.classList.remove('hidden');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    burgerIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
+                mobileMenu.classList.toggle('hidden', !isHidden);
+                if (burgerIcon && closeIcon) {
+                    burgerIcon.classList.toggle('hidden', isHidden);
+                    closeIcon.classList.toggle('hidden', !isHidden);
                 }
             });
         }
 
-        // Mobile services accordion logic
         const mobileServicesBtn = document.getElementById('mobile-services-btn');
         const mobileServicesList = document.getElementById('mobile-services-list');
         const mobileServicesArrow = document.getElementById('mobile-services-arrow');
@@ -278,12 +380,9 @@
         if (mobileServicesBtn && mobileServicesList) {
             mobileServicesBtn.addEventListener('click', function() {
                 const isHidden = mobileServicesList.classList.contains('hidden');
-                if (isHidden) {
-                    mobileServicesList.classList.remove('hidden');
-                    mobileServicesArrow.classList.add('rotate-180');
-                } else {
-                    mobileServicesList.classList.add('hidden');
-                    mobileServicesArrow.classList.remove('rotate-180');
+                mobileServicesList.classList.toggle('hidden', !isHidden);
+                if (mobileServicesArrow) {
+                    mobileServicesArrow.classList.toggle('rotate-180', isHidden);
                 }
             });
         }

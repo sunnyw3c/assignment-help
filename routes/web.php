@@ -40,10 +40,9 @@ Route::get('/services', [AllServicesController::class, 'index'])->name('services
 Route::get('/programming-help', [ServiceController::class, 'index'])->name('services.programming.index');
 Route::get('/programming-help/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
 
-Route::get('/assignment-help', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
 Route::get('/assignment-help/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
 Route::post('/assignment-help/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
-Route::get('/math-assignment-help', [AssignmentServiceController::class, 'show'])->defaults('slug', 'math-assignment-help')->name('services.math-assignment');
+Route::redirect('/math-assignment-help', '/mathematics-assignment-help', 301)->name('services.math-assignment');
 
 
 // Individual Assignment Service Routes

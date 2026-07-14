@@ -28,7 +28,7 @@
                 <div class="flex flex-col gap-4 min-w-[150px]">
                     <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Services</h4>
                     <div class="flex flex-col gap-2.5 text-sm font-medium">
-                        <a href="{{ route('services.assignment.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Assignment Help</a>
+                        <a href="{{ route('services.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">All Services</a>
                         <a href="{{ route('services.programming.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Programming Help</a>
                         <a href="{{ route('services.essay-writing.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Essay Writing</a>
                         <a href="{{ route('services.thesis-dissertation.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Writing</a>

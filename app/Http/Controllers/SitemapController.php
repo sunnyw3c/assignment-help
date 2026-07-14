@@ -55,7 +55,6 @@ class SitemapController extends Controller
         // Priority 0.8 — trust/conversion pages
         foreach ([
             '/how-it-works',
-            '/pricing',
             '/faq',
             '/reviews',
             '/experts',

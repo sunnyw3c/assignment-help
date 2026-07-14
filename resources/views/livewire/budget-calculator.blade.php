@@ -343,7 +343,7 @@ new class extends Component
                             </div>
                             <div class="text-[10px] text-slate-600 mt-1">${{ number_format($this->pricePerPage, 2) }} per page</div>
                         </div>
-                        <a href="{{ route('services.assignment.index') }}" 
+                        <a href="{{ route('order') }}" 
                            class="group/btn relative inline-flex items-center gap-2 px-6 py-3 rounded-xl overflow-hidden font-black text-sm text-white transition-all hover:scale-105 active:scale-95">
                             <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-rose-600 transition-transform group-hover/btn:scale-105"></div>
                             <span class="relative flex items-center gap-2">
@@ -416,7 +416,7 @@ new class extends Component
 
                 <div class="mt-6 p-4 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-center">
                     <p class="text-xs text-slate-400">You save <span class="text-emerald-400 font-bold">${{ number_format($this->discountAmount, 2) }}</span> compared to regular pricing. 
-                        <a href="{{ route('services.assignment.index') }}" class="text-red-400 font-bold hover:text-red-300 transition-colors underline underline-offset-2">Lock in this price →</a>
+                        <a href="{{ route('order') }}" class="text-red-400 font-bold hover:text-red-300 transition-colors underline underline-offset-2">Lock in this price →</a>
                     </p>
                 </div>
             </div>
