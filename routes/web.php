@@ -97,9 +97,6 @@ Route::middleware(['auth'])->prefix('api')->group(function () {
     Route::post('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'store']);
 });
 
-// Language-specific pages — must stay last to avoid catching other routes
-Route::get('/{slug}', [ServiceController::class, 'show'])
-    ->where('slug', 'php-programming-help|java-programming-help|python-programming-help')
-    ->name('services.language.show');
+
 
 require __DIR__ . '/auth.php';

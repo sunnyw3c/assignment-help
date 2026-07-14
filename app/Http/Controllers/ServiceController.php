@@ -161,7 +161,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'PHP Programming',
-                'slug' => 'php-programming-help',
+                'slug' => 'php',
                 'icon' => '🐘',
                 'description' => 'Professional PHP development services for web applications, APIs, and backend systems.',
                 'features' => ['Laravel & Symfony', 'Custom PHP Solutions', 'API Development', 'Database Integration'],
@@ -172,7 +172,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Java Programming',
-                'slug' => 'java-programming-help',
+                'slug' => 'java',
                 'icon' => '☕',
                 'description' => 'Expert Java programming help for applications, Spring Boot projects, and enterprise solutions.',
                 'features' => ['Spring Boot & Maven', 'OOP & Design Patterns', 'Android Development', 'Enterprise Applications'],
@@ -183,7 +183,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Python Programming',
-                'slug' => 'python-programming-help',
+                'slug' => 'python',
                 'icon' => '🐍',
                 'description' => 'Professional Python programming help for Django, Flask, data science, machine learning, and automation.',
                 'features' => ['Django & Flask', 'Data Science & ML', 'Web Scraping', 'Automation Scripts'],
@@ -198,13 +198,6 @@ class ServiceController extends Controller
     public function show($slug)
     {
         $normalizedSlug = $slug;
-        if ($slug === 'java') {
-            $normalizedSlug = 'java-programming-help';
-        } elseif ($slug === 'php') {
-            $normalizedSlug = 'php-programming-help';
-        } elseif ($slug === 'python') {
-            $normalizedSlug = 'python-programming-help';
-        }
 
         // Get all services data
         $services = $this->getAllServices();
@@ -234,9 +227,6 @@ class ServiceController extends Controller
             'php' => 'programming-services.php-help',
             'java' => 'programming-services.java-help',
             'python' => 'programming-services.python-help',
-            'php-programming-help' => 'programming-services.php-help',
-            'java-programming-help' => 'programming-services.java-help',
-            'python-programming-help' => 'programming-services.python-help',
         ];
 
         // Check if we have a specific view for this service
@@ -397,7 +387,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'PHP Programming',
-                'slug' => 'php-programming-help',
+                'slug' => 'php',
                 'icon' => '🐘',
                 'description' => 'Professional PHP development services for web applications, APIs, and backend systems.',
                 'features' => ['Laravel & Symfony', 'Custom PHP Solutions', 'API Development', 'Database Integration'],
@@ -408,7 +398,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Java Programming',
-                'slug' => 'java-programming-help',
+                'slug' => 'java',
                 'icon' => '☕',
                 'description' => 'Expert Java programming help for applications, Spring Boot projects, and enterprise solutions.',
                 'features' => ['Spring Boot & Maven', 'OOP & Design Patterns', 'Android Development', 'Enterprise Applications'],
@@ -419,7 +409,7 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Python Programming',
-                'slug' => 'python-programming-help',
+                'slug' => 'python',
                 'icon' => '🐍',
                 'description' => 'Professional Python programming help for Django, Flask, data science, machine learning, and automation.',
                 'features' => ['Django & Flask', 'Data Science & ML', 'Web Scraping', 'Automation Scripts'],

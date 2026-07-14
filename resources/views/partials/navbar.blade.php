@@ -7,9 +7,9 @@
             'accent' => 'text-violet-600 dark:text-violet-400',
             'groups' => [
                 'Languages' => [
-                    ['label' => 'Python Help', 'href' => route('services.programming.show', 'python-programming-help')],
-                    ['label' => 'Java Help', 'href' => route('services.programming.show', 'java-programming-help')],
-                    ['label' => 'PHP Help', 'href' => route('services.programming.show', 'php-programming-help')],
+                    ['label' => 'Python Help', 'href' => route('services.programming.show', 'python')],
+                    ['label' => 'Java Help', 'href' => route('services.programming.show', 'java')],
+                    ['label' => 'PHP Help', 'href' => route('services.programming.show', 'php')],
                 ],
                 'Web & Apps' => [
                     ['label' => 'Web Development', 'href' => route('services.programming.show', 'web-development')],
