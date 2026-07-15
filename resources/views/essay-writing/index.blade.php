@@ -863,6 +863,7 @@
                         <!-- Written Testimonials with Countries -->
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -889,6 +890,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -915,6 +917,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -941,6 +944,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -967,6 +971,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -993,6 +998,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
                                 <div class="flex items-center justify-between mb-3">
                                     <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">

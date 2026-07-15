@@ -600,6 +600,7 @@
 
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -627,6 +628,7 @@
                             </div>
 
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -654,6 +656,7 @@
                             </div>
 
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -681,6 +684,7 @@
                             </div>
 
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -708,6 +712,7 @@
                             </div>
 
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -735,6 +740,7 @@
                             </div>
 
                             <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
                                 <div class="flex items-center mb-3">
                                     <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">

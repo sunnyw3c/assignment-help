@@ -466,6 +466,7 @@
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -486,6 +487,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -506,6 +508,7 @@
                             </div>
 
                             <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="flex items-center mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                         <meta itemprop="ratingValue" content="5">
@@ -528,6 +531,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -548,6 +552,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -568,6 +573,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
                                 <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">

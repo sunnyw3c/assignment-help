@@ -771,6 +771,7 @@
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
                                 itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -805,6 +806,7 @@
 
                             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
                                 itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -839,6 +841,7 @@
 
                             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
                                 itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -872,6 +875,7 @@
                             </div>
 
                             <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -900,6 +904,7 @@
                             </div>
 
                             <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">
@@ -928,6 +933,7 @@
                             </div>
 
                             <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
                                 <div class="flex items-center mb-4">
                                     <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
                                         itemtype="https://schema.org/Rating">

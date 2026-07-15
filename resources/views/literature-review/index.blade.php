@@ -439,6 +439,7 @@
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -459,6 +460,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -479,6 +481,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -499,6 +502,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -519,6 +523,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
@@ -539,6 +544,7 @@
                             </div>
 
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
                                 <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                                     <meta itemprop="ratingValue" content="5">
                                     <meta itemprop="bestRating" content="5">
