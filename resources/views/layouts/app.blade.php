@@ -45,6 +45,10 @@
         <meta name="author" content="@yield('author', config('app.name'))">
         <meta name="theme-color" content="#7c3aed">
 
+        <!-- Structured Data -->
+        @include('partials.structured-data')
+        @stack('structured-data')
+
         <!-- DNS Prefetch & Preconnect for Performance -->
         <link rel="dns-prefetch" href="https://fonts.bunny.net">
         <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>

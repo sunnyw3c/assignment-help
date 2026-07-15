@@ -5,6 +5,15 @@
 
     RewriteEngine On
 
+    # Canonical local host: https://assignmenthelpusa.test
+    RewriteCond %{HTTP_HOST} ^www\.assignmenthelpusa\.test$ [NC]
+    RewriteRule ^ https://assignmenthelpusa.test%{REQUEST_URI} [L,R=301]
+
+    # Force HTTPS for the canonical local host.
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^assignmenthelpusa\.test$ [NC]
+    RewriteRule ^ https://assignmenthelpusa.test%{REQUEST_URI} [L,R=301]
+
     # Exclude /blog directory from Laravel routing (for WordPress)
     RewriteCond %{REQUEST_URI} !^/blog
 

@@ -5,26 +5,6 @@
 
 
 @section('content')
-    <!-- Structured Data for Organization -->
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "Organization",
-        "name": "Assignment Help USA",
-        "description": "Professional assignment help and academic support service connecting students with expert tutors",
-        "url": "{{ url('/') }}",
-        "logo": "{{ asset('images/logo.png') }}",
-        "foundingDate": "2020",
-        "contactPoint": {
-            "@@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English"]
-        },
-        "sameAs": []
-    }
-    </script>
-
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <!-- Animated Background Elements -->

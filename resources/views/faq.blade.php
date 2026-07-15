@@ -3,30 +3,32 @@
 @section('title', 'Frequently Asked Questions - Assignment Help USA | Student FAQ')
 @section('description', 'Common questions about Assignment Help USA: Academic assistance, pricing, delivery, and quality guarantee. Get all the answers you need for your success here!')
 
+@php
+    $faqStructuredData = [
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => collect($faqCategories)
+            ->flatMap(fn ($category) => $category['questions'])
+            ->map(fn ($faq) => [
+                '@type' => 'Question',
+                'name' => $faq['question'],
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => $faq['answer'],
+                ],
+            ])
+            ->values()
+            ->all(),
+    ];
+@endphp
+
+@push('structured-data')
+    <script type="application/ld+json">
+{!! json_encode($faqStructuredData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    </script>
+@endpush
 
 @section('content')
-    <!-- Structured Data for FAQ -->
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "FAQPage",
-        "mainEntity": [
-            @foreach($faqCategories as $category)
-                @foreach($category['questions'] as $faq)
-                {
-                    "@@type": "Question",
-                    "name": "{{ $faq['question'] }}",
-                    "acceptedAnswer": {
-                        "@@type": "Answer",
-                        "text": "{{ $faq['answer'] }}"
-                    }
-                }@if(!$loop->parent->last || !$loop->last),@endif
-                @endforeach
-            @endforeach
-        ]
-    }
-    </script>
-
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <!-- Animated Background Elements -->
