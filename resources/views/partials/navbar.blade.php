@@ -43,8 +43,6 @@
                     ['label' => 'Lab Report Help', 'href' => route('services.lab-report.index')],
                 ],
                 'Subject Help' => [
-                    ['label' => 'Math Assignment Help', 'href' => route('services.math-assignment')],
-                    ['label' => 'Mathematics Help', 'href' => route('services.mathematics-assignment.index')],
                     ['label' => 'Law Assignment Help', 'href' => route('services.law-assignment.index')],
                 ],
             ],
@@ -76,9 +74,7 @@
         <div class="flex h-16 items-center justify-between sm:h-20">
             <div class="flex shrink-0 items-center">
                 <a href="{{ url('/') }}" class="flex items-center gap-2">
-                    <span class="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-xl font-black tracking-tight text-transparent dark:from-violet-400 dark:to-indigo-400 sm:text-2xl">
-                        AssignmentHelp<span class="text-slate-800 dark:text-white">USA</span>
-                    </span>
+                    <img src="{{ asset('images/logo.png') }}" alt="Assignment Help USA" class="h-8 w-auto sm:h-10">
                 </a>
             </div>
 

@@ -4,9 +4,9 @@
         <div class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8">
             <!-- Brand Column -->
             <div class="flex flex-col gap-4 max-w-sm">
-                <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400 bg-clip-text text-transparent tracking-tight">
-                    AssignmentHelp<span class="text-slate-800 dark:text-white">USA</span>
-                </span>
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('images/logo.png') }}" alt="Assignment Help USA" class="h-10 w-auto">
+                </a>
                 <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
                     Your premier academic partner. Providing reliable, plagiarism-free assistance and expert support for high school and university students across the United States. Available 24/7.
                 </p>

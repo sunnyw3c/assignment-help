@@ -24,7 +24,6 @@ const routes = [
     '/presentation-design-help',
     '/proofreading-editing-help',
     '/thesis-dissertation-help',
-    '/mathematics-assignment-help',
     '/law-assignment-help',
     '/how-it-works',
     '/about',

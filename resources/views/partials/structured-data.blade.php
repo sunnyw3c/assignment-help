@@ -14,7 +14,7 @@
             '@id' => $organizationId,
             'name' => 'Assignment Help USA',
             'url' => $siteUrl,
-            'logo' => asset('favicon.svg'),
+            'logo' => asset('images/logo.png'),
             'description' => 'Professional assignment help and academic support service for students in the United States.',
             'email' => 'support@assignmenthelpusa.com',
             'telephone' => '+1-800-555-0199',

@@ -7,504 +7,281 @@
 </head>
 <body <?php body_class('bg-gray-100'); ?>>
 <div class="min-h-screen flex flex-col">
-<nav class="bg-white shadow sticky top-0 z-50 border-b-2 border-purple-100">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- Logo -->
-        <a href="http://assignmenthelpusa.test" class="flex items-center space-x-2">
-            <img src="http://assignmenthelpusa.test/images/logo.svg" alt="Assignment Help USA" class="h-10 w-auto">
-        </a>
+@php
+    $serviceMenu = [
+        [
+            'title' => 'Programming Help',
+            'description' => 'Code, apps, data, cloud, security, and debugging.',
+            'href' => route('services.programming.index'),
+            'accent' => 'text-violet-600 dark:text-violet-400',
+            'groups' => [
+                'Languages' => [
+                    ['label' => 'Python Help', 'href' => route('services.programming.show', 'python')],
+                    ['label' => 'Java Help', 'href' => route('services.programming.show', 'java')],
+                    ['label' => 'PHP Help', 'href' => route('services.programming.show', 'php')],
+                ],
+                'Web & Apps' => [
+                    ['label' => 'Web Development', 'href' => route('services.programming.show', 'web-development')],
+                    ['label' => 'Mobile Apps', 'href' => route('services.programming.show', 'mobile-app')],
+                    ['label' => 'Desktop Apps', 'href' => route('services.programming.show', 'desktop-app')],
+                    ['label' => 'API Development', 'href' => route('services.programming.show', 'api-development')],
+                ],
+                'CS & Data' => [
+                    ['label' => 'Algorithms', 'href' => route('services.programming.show', 'algorithms')],
+                    ['label' => 'Databases', 'href' => route('services.programming.show', 'database')],
+                    ['label' => 'Machine Learning', 'href' => route('services.programming.show', 'machine-learning')],
+                ],
+                'Systems & Security' => [
+                    ['label' => 'Cybersecurity', 'href' => route('services.programming.show', 'cybersecurity')],
+                    ['label' => 'Cloud Computing', 'href' => route('services.programming.show', 'cloud-computing')],
+                    ['label' => 'DevOps', 'href' => route('services.programming.show', 'devops')],
+                    ['label' => 'Testing & QA', 'href' => route('services.programming.show', 'testing-qa')],
+                    ['label' => 'Debugging', 'href' => route('services.programming.show', 'debugging')],
+                    ['label' => 'Game Development', 'href' => route('services.programming.show', 'game-development')],
+                ],
+            ],
+        ],
+        [
+            'title' => 'Assignment Help',
+            'description' => 'General assignments, subjects, homework, and reports.',
+            'href' => route('services.index'),
+            'accent' => 'text-blue-600 dark:text-blue-400',
+            'groups' => [
+                'Core Assignment Help' => [
+                    ['label' => 'Homework Help', 'href' => route('services.homework-help.index')],
+                    ['label' => 'Lab Report Help', 'href' => route('services.lab-report.index')],
+                ],
+                'Subject Help' => [
+                    ['label' => 'Law Assignment Help', 'href' => route('services.law-assignment.index')],
+                ],
+            ],
+        ],
+        [
+            'title' => 'Essay Help',
+            'description' => 'Essays, papers, case studies, editing, and presentations.',
+            'href' => route('services.essay-writing.index'),
+            'accent' => 'text-indigo-600 dark:text-indigo-400',
+            'groups' => [
+                'Essays & Papers' => [
+                    ['label' => 'Essay Writing', 'href' => route('services.essay-writing.index')],
+                    ['label' => 'Research Paper', 'href' => route('services.research-paper.index')],
+                    ['label' => 'Case Study', 'href' => route('services.case-study.index')],
+                    ['label' => 'Literature Review', 'href' => route('services.literature-review.index')],
+                ],
+                'Long Form & Polish' => [
+                    ['label' => 'Thesis & Dissertation', 'href' => route('services.thesis-dissertation.index')],
+                    ['label' => 'Proofreading & Editing', 'href' => route('services.proofreading-editing.index')],
+                    ['label' => 'Presentation Design', 'href' => route('services.presentation-design.index')],
+                ],
+            ],
+        ],
+    ];
+@endphp
 
-        <!-- Desktop Navigation -->
-        <ul class="hidden md:flex gap-8 text-sm font-medium items-center">
-            <li><a href="http://assignmenthelpusa.test"
-                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">🏠
-                    Home</a></li>
-
-            <!-- Services Mega Menu -->
-            <li class="relative group">
-                <button id="services-menu-trigger"
-                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?> flex items-center">
-                    ⚡ Services
-                    <svg id="services-menu-arrow" class="w-4 h-4 ml-1 transition-transform duration-200" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-
-                <!-- Mega Menu Dropdown -->
-                <div id="services-mega-menu"
-                    class="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-screen max-w-6xl opacity-0 invisible transition-all duration-300 ease-in-out pointer-events-none">
-                    <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                        <div class="flex">
-                            <!-- Left Navigation Tabs -->
-                            <div class="w-64 bg-gradient-to-b from-gray-50 to-gray-100 p-6 border-r border-gray-200">
-                                <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Browse
-                                    Services</h3>
-                                <div class="space-y-2">
-                                    <!-- Programming Tab -->
-                                    <button data-tab="programming"
-                                        class="mega-menu-tab w-full text-left px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center justify-between bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg">
-                                        <div class="flex items-center">
-                                            <span class="text-xl mr-3">💻</span>
-                                            <div>
-                                                <div class="font-bold">Programming</div>
-                                                <div class="text-xs opacity-90">Web, Mobile, ML</div>
-                                            </div>
-                                        </div>
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </button>
-
-                                    <!-- Assignment Tab -->
-                                    <button data-tab="assignment"
-                                        class="mega-menu-tab w-full text-left px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center justify-between text-gray-700 hover:bg-white hover:shadow-md">
-                                        <div class="flex items-center">
-                                            <span class="text-xl mr-3">📝</span>
-                                            <div>
-                                                <div class="font-bold">Assignments</div>
-                                                <div class="text-xs text-gray-500">Academic Writing</div>
-                                            </div>
-                                        </div>
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                                <!-- Quick Stats -->
-                                <div class="mt-6 pt-6 border-t border-gray-200">
-                                    <div class="text-xs text-gray-500 mb-3">Why Choose Us</div>
-                                    <div class="space-y-2 text-xs">
-                                        <div class="flex items-center text-gray-700">
-                                            <span class="text-green-500 mr-2">✓</span>
-                                            <span>Expert Professionals</span>
-                                        </div>
-                                        <div class="flex items-center text-gray-700">
-                                            <span class="text-green-500 mr-2">✓</span>
-                                            <span>24/7 Support</span>
-                                        </div>
-                                        <div class="flex items-center text-gray-700">
-                                            <span class="text-green-500 mr-2">✓</span>
-                                            <span>Money-Back Guarantee</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Content Area -->
-                            <div class="flex-1 p-8">
-                                <!-- Programming Services Content (Default) -->
-                                <div id="programming-content" class="mega-menu-content">
-                                    <div class="flex items-center mb-6">
-                                        <div
-                                            class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
-                                            <span class="text-2xl">💻</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold text-gray-900 text-xl">Programming Services</h3>
-                                            <p class="text-sm text-gray-500">Expert development help for all your coding
-                                                needs</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mb-6">
-                                        <a href="http://assignmenthelpusa.test/programming-help/web-development"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🌐</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Web Development</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Full-stack solutions with modern
-                                                frameworks</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/mobile-app"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">📱</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Mobile Apps</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">iOS, Android & Cross-platform development
-                                            </div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/algorithms"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🔢</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Algorithms</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Data structures & algorithm optimization
-                                            </div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/database"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🗄️</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Database</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">SQL, NoSQL & database optimization</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/machine-learning"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🤖</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Machine Learning</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">AI models & ML algorithms</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/debugging"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🔧</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Code Debugging</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Bug fixes & code optimization</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/api-development"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🔗</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    API Development</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">RESTful & GraphQL APIs</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/devops"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">⚙️</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    DevOps</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">CI/CD & cloud deployment</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/programming-help/cybersecurity"
-                                            class="group/item p-4 rounded-xl hover:bg-purple-50 transition-all duration-200 border border-transparent hover:border-purple-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🛡️</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-purple-600">
-                                                    Cybersecurity</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Security & penetration testing</div>
-                                        </a>
-                                    </div>
-
-                                    <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                                        <a href="http://assignmenthelpusa.test/programming-help"
-                                            class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold text-sm group/more">
-                                            View All Programming Services
-                                            <svg class="w-4 h-4 ml-1 group-hover/more:translate-x-1 transition-transform"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7"></path>
-                                            </svg>
-                                        </a>
-                                        <a href="http://assignmenthelpusa.test/order"
-                                            class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
-                                            Get Help Now →
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Assignment Services Content (Hidden by default) -->
-                                <div id="assignment-content" class="mega-menu-content hidden">
-                                    <div class="flex items-center mb-6">
-                                        <div
-                                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
-                                            <span class="text-2xl">📝</span>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold text-gray-900 text-xl">Assignment Services</h3>
-                                            <p class="text-sm text-gray-500">Professional academic writing help for all
-                                                subjects</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mb-6">
-                                        <a href="http://assignmenthelpusa.test/essay-writing-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">✍️</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Essay Writing</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">All types of academic essays</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/research-paper-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">📄</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Research Paper</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Academic research & analysis</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/homework-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">📚</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Homework Help</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Help with daily homework tasks</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/thesis-dissertation-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🎓</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Thesis & Dissertation</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Graduate-level research work</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/mathematics-assignment-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🔢</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Math Problems</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Step-by-step math solutions</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/proofreading-editing-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">✏️</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Proofreading</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Edit & polish your work</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/lab-report-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">🔬</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">Lab
-                                                    Report</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Science lab documentation</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/case-study-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">📊</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Case Study</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Business & academic analysis</div>
-                                        </a>
-
-                                        <a href="http://assignmenthelpusa.test/literature-review-help"
-                                            class="group/item p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200">
-                                            <div class="flex items-center mb-2">
-                                                <span
-                                                    class="text-3xl mr-3 group-hover/item:scale-110 transition-transform">📖</span>
-                                                <div class="font-bold text-gray-900 group-hover/item:text-blue-600">
-                                                    Literature Review</div>
-                                            </div>
-                                            <div class="text-xs text-gray-500">Academic literature analysis</div>
-                                        </a>
-                                    </div>
-
-                                    <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-                                        
-                                        <div></div> <!-- Spacer -->
-                                        <a href="http://assignmenthelpusa.test/order"
-                                            class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg">
-                                            Order Now →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            
-            
-            <li><a href="http://assignmenthelpusa.test/experts"
-                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">👨‍🏫
-                    Experts</a></li>
-            <li><a href="http://assignmenthelpusa.test/reviews"
-                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">⭐
-                    Reviews</a></li>
-            <li><a href="http://assignmenthelpusa.test/blog"
-                    class="hover:text-purple-600 transition-colors duration-200 <?php echo 'text-gray-700'; ?>">📝
-                    Blog</a></li>
-            
-        </ul>
-
-        <!-- Desktop Auth Buttons -->
-        <div class="hidden md:flex space-x-3 items-center">
-            <?php if (!is_user_logged_in()): ?>
-                <a href="http://assignmenthelpusa.test/login"
-                    class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
-                    Login
+<nav class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900/80">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between sm:h-20">
+            <div class="flex shrink-0 items-center">
+                <a href="http://assignmenthelpusa.test" class="flex items-center gap-2">
+                    <img src="http://assignmenthelpusa.test/images/logo.png" alt="Assignment Help USA" class="h-8 w-auto sm:h-10">
                 </a>
-            <?php else: ?>
-                <a href="http://assignmenthelpusa.test/dashboard"
-                    class="text-sm text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 hover:border-purple-300 transition-all duration-200">
-                    Dashboard
-                </a>
-                <form method="POST" action="http://assignmenthelpusa.test/logout" class="inline">
-                    
-                    <button type="submit"
-                        class="text-sm text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 hover:border-red-300 transition-all duration-200">
-                        Logout
-                    </button>
-                </form>
-            <?php endif; ?>
-            <a href="http://assignmenthelpusa.test/order"
-                class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
-                Get Help Now
-            </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 max-h-screen overflow-y-auto">
-        <div class="px-4 py-4 space-y-2">
-            <a href="http://assignmenthelpusa.test"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">🏠
-                Home</a>
-
-            <!-- Mobile Services Accordion -->
-            <div class="border-b border-gray-100">
-                <button id="mobile-services-toggle"
-                    class="w-full flex items-center justify-between text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">
-                    <span>⚡ Services</span>
-                    <svg id="mobile-services-icon" class="w-4 h-4 transition-transform duration-200" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                        </path>
-                    </svg>
-                </button>
-                <div id="mobile-services-dropdown" class="hidden pl-4 pb-3 space-y-3">
-                    <!-- Programming Services -->
-                    <div class="bg-purple-50 rounded-lg p-3">
-                        <div class="font-semibold text-purple-900 mb-2 text-sm">💻 Programming</div>
-                        <div class="space-y-2">
-                            <a href="http://assignmenthelpusa.test/programming-help/web-development"
-                                class="block text-sm text-gray-700 hover:text-purple-600">🌐 Web Development</a>
-                            <a href="http://assignmenthelpusa.test/programming-help/mobile-app"
-                                class="block text-sm text-gray-700 hover:text-purple-600">📱 Mobile Apps</a>
-                            <a href="http://assignmenthelpusa.test/programming-help/algorithms"
-                                class="block text-sm text-gray-700 hover:text-purple-600">🔢 Algorithms</a>
-                            <a href="http://assignmenthelpusa.test/programming-help"
-                                class="block text-sm text-purple-600 font-semibold mt-2">View All →</a>
-                        </div>
-                    </div>
-                    <!-- Assignment Services -->
-                    <div class="bg-blue-50 rounded-lg p-3">
-                        <div class="font-semibold text-blue-900 mb-2 text-sm">📝 Assignments</div>
-                        <div class="space-y-2">
-                            <a href="http://assignmenthelpusa.test/essay-writing-help"
-                                class="block text-sm text-gray-700 hover:text-blue-600">✍️ Essay Writing</a>
-                            <a href="http://assignmenthelpusa.test/assignment-help/research-paper"
-                                class="block text-sm text-gray-700 hover:text-blue-600">📄 Research Paper</a>
-                            <a href="http://assignmenthelpusa.test/assignment-help/homework-help"
-                                class="block text-sm text-gray-700 hover:text-blue-600">📚 Homework Help</a>
-                            
-                        </div>
-                    </div>
-                    <a href="http://assignmenthelpusa.test/services"
-                        class="block text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">View
-                        All Services</a>
-                </div>
             </div>
 
-            <a href="http://assignmenthelpusa.test/programming-help"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">🔧
-                Languages</a>
-            <a href="http://assignmenthelpusa.test/how-it-works"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2">❓ How It
-                Works</a>
-            <a href="http://assignmenthelpusa.test/experts"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">👨‍🏫
-                Experts</a>
-            <a href="http://assignmenthelpusa.test/reviews"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">⭐
-                Reviews</a>
-            <a href="http://assignmenthelpusa.test/blog"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">📝
-                Blog</a>
-            <a href="http://assignmenthelpusa.test/order"
-                class="block text-gray-700 hover:text-purple-600 transition-colors duration-200 py-2 <?php echo ''; ?>">💻
-                Get Help</a>
+            <div class="hidden items-center gap-8 text-sm font-semibold lg:flex">
+                <a href="http://assignmenthelpusa.test" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white <?php echo ''; ?>">
+                    Home
+                </a>
 
-            <div class="pt-4 border-t border-gray-200 space-y-3">
+                <div class="group relative">
+                    <button id="mega-menu-trigger" class="flex items-center gap-1 py-2 text-slate-600 transition-colors hover:text-indigo-600 focus:outline-none dark:text-slate-300 dark:hover:text-white">
+                        <span>Services</span>
+                        <svg class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <div class="invisible fixed left-1/2 top-16 z-50 w-[920px] max-w-[calc(100vw-2rem)] origin-top -translate-x-1/2 scale-95 rounded-2xl border border-slate-100 bg-white p-4 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-slate-800 dark:bg-slate-900 sm:top-20">
+                        <div class="grid grid-cols-[250px_1fr] gap-4">
+                            <div class="space-y-2 rounded-xl bg-slate-50 p-2 dark:bg-slate-950/50">
+                                @foreach($serviceMenu as $section)
+                                    <button type="button" data-service-tab="{{ $loop->index }}" class="service-menu-tab w-full rounded-lg p-3 text-left transition-colors {{ $loop->index === 1 ? 'bg-white shadow-sm dark:bg-slate-800' : 'hover:bg-white dark:hover:bg-slate-800/70' }}">
+                                        <span class="{{ $section['accent'] }} block text-sm font-black">{{ $section['title'] }}</span>
+                                        <span class="mt-1 block text-[11px] font-medium leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</span>
+                                    </button>
+                                @endforeach
+
+                                <a href="http://assignmenthelpusa.test/services" class="mt-3 block rounded-lg border border-slate-200 px-3 py-2 text-center text-[10px] font-black uppercase tracking-widest text-slate-500 transition-colors hover:border-indigo-300 hover:text-indigo-600 dark:border-slate-800 dark:text-slate-400 dark:hover:border-indigo-500 dark:hover:text-white">
+                                    Browse All Services
+                                </a>
+                            </div>
+
+                            <div class="rounded-xl border border-slate-100 bg-slate-50/70 p-4 dark:border-slate-800 dark:bg-slate-950/40">
+                            @foreach($serviceMenu as $section)
+                                <div data-service-panel="{{ $loop->index }}" class="service-menu-panel {{ $loop->index === 1 ? '' : 'hidden' }}">
+                                    <div class="mb-4 flex items-start justify-between gap-4 border-b border-slate-200 pb-3 dark:border-slate-800">
+                                        <div>
+                                            <p class="{{ $section['accent'] }} text-base font-black">{{ $section['title'] }}</p>
+                                            <p class="mt-1 text-xs font-medium leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</p>
+                                        </div>
+                                        <a href="{{ $section['href'] }}" class="shrink-0 rounded-lg bg-white px-3 py-2 text-[10px] font-black uppercase tracking-widest text-slate-600 transition-colors hover:text-indigo-600 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                                            View all
+                                        </a>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-5">
+                                        @foreach($section['groups'] as $groupTitle => $links)
+                                            <div>
+                                                <p class="mb-2 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{{ $groupTitle }}</p>
+                                                <div class="grid grid-cols-2 gap-1">
+                                                    @foreach($links as $link)
+                                                        <a href="{{ $link['href'] }}" class="rounded-lg px-2.5 py-1.5 text-xs font-semibold text-slate-700 transition-colors hover:bg-white hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-800/70 dark:hover:text-white">
+                                                            {{ $link['label'] }}
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endforeach
+                            </div>
+                        </div>
+
+                        <div class="mt-5 flex items-center justify-between rounded-xl bg-slate-900 px-4 py-3 text-white dark:bg-white dark:text-slate-900">
+                            <span class="text-xs font-black uppercase tracking-widest">Need help choosing?</span>
+                            <a href="http://assignmenthelpusa.test/order" class="rounded-lg bg-white px-4 py-2 text-xs font-black text-slate-900 transition-colors hover:bg-slate-100 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="http://assignmenthelpusa.test/how-it-works" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white <?php echo ''; ?>">
+                    How It Works
+                </a>
+                <a href="http://assignmenthelpusa.test/experts" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white <?php echo ''; ?>">
+                    Experts
+                </a>
+                <a href="http://assignmenthelpusa.test/reviews" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white <?php echo ''; ?>">
+                    Reviews
+                </a>
+                <a href="http://assignmenthelpusa.test/faq" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white <?php echo ''; ?>">
+                    FAQ
+                </a>
+            </div>
+
+            <div class="hidden items-center gap-4 lg:flex">
+                <button id="theme-toggle" class="rounded-xl p-2 text-slate-500 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800" aria-label="Toggle Theme">
+                    <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                    </svg>
+                    <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+
                 <?php if (!is_user_logged_in()): ?>
-                    <a href="http://assignmenthelpusa.test/login"
-                        class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
-                        Login
+                    <a href="http://assignmenthelpusa.test/login" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
+                        Log In
+                    </a>
+                    <a href="http://assignmenthelpusa.test/register" class="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-600/10 transition-all hover:bg-indigo-700">
+                        Sign Up
                     </a>
                 <?php else: ?>
-                    <a href="http://assignmenthelpusa.test/dashboard"
-                        class="block text-center text-gray-700 hover:text-purple-600 px-4 py-2 rounded-lg border border-gray-300 transition-all duration-200">
+                    <a href="http://assignmenthelpusa.test/dashboard" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
                         Dashboard
                     </a>
-                    <form method="POST" action="http://assignmenthelpusa.test/logout">
+                    <form method="POST" action="http://assignmenthelpusa.test/logout" class="inline">
                         
-                        <button type="submit"
-                            class="w-full text-center text-red-600 hover:text-red-700 px-4 py-2 rounded-lg border border-red-200 transition-all duration-200">
+                        <button type="submit" class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
                             Logout
                         </button>
                     </form>
                 <?php endif; ?>
-                <a href="http://assignmenthelpusa.test/order"
-                    class="block text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200">
-                    Get Help Now
+
+                <a href="http://assignmenthelpusa.test/order" class="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
+                    Order Now
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 lg:hidden">
+                <button id="theme-toggle-mobile" class="rounded-xl p-2 text-slate-500 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-400 dark:hover:bg-slate-800" aria-label="Toggle Theme">
+                    <svg id="theme-toggle-light-icon-mob" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                    </svg>
+                    <svg id="theme-toggle-dark-icon-mob" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+
+                <button id="mobile-menu-btn" class="rounded-xl p-2 text-slate-600 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Toggle Menu">
+                    <svg id="mobile-menu-burger" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="mobile-menu-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:hidden">
+        <div class="flex flex-col space-y-3 px-4 pb-6 pt-4 text-base font-semibold">
+            <a href="http://assignmenthelpusa.test" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Home</a>
+
+            <div>
+                <button id="mobile-services-btn" class="flex w-full items-center justify-between rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800">
+                    <span>Services</span>
+                    <svg id="mobile-services-arrow" class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-services-list" class="hidden space-y-4 px-3 py-2 text-sm font-medium">
+                    @foreach($serviceMenu as $section)
+                        <div class="rounded-xl border border-slate-100 p-3 dark:border-slate-800">
+                            <a href="{{ $section['href'] }}" class="{{ $section['accent'] }} block text-xs font-black uppercase tracking-wider">{{ $section['title'] }}</a>
+                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</p>
+
+                            <div class="mt-3 space-y-3">
+                                @foreach($section['groups'] as $groupTitle => $links)
+                                    <div>
+                                        <p class="mb-1 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{{ $groupTitle }}</p>
+                                        <div class="grid grid-cols-1 gap-1">
+                                            @foreach($links as $link)
+                                                <a href="{{ $link['href'] }}" class="block rounded-lg px-2 py-1.5 text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+                                                    {{ $link['label'] }}
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endforeach
+
+                    <a href="http://assignmenthelpusa.test/services" class="block rounded-xl bg-slate-100 px-3 py-2 text-center text-xs font-black uppercase tracking-widest text-slate-700 dark:bg-slate-800 dark:text-slate-200">Browse All Services</a>
+                </div>
+            </div>
+
+            <a href="http://assignmenthelpusa.test/how-it-works" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">How It Works</a>
+            <a href="http://assignmenthelpusa.test/experts" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Experts</a>
+            <a href="http://assignmenthelpusa.test/reviews" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Reviews</a>
+            <a href="http://assignmenthelpusa.test/faq" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">FAQ</a>
+
+            <div class="mt-2 space-y-2 border-t border-slate-100 pt-4 dark:border-slate-800">
+                <?php if (!is_user_logged_in()): ?>
+                    <a href="http://assignmenthelpusa.test/login" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Log In</a>
+                    <a href="http://assignmenthelpusa.test/register" class="block rounded-xl bg-indigo-600 px-4 py-2.5 text-center text-white shadow-sm transition-all">Sign Up</a>
+                <?php else: ?>
+                    <a href="http://assignmenthelpusa.test/dashboard" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Dashboard</a>
+                    <form method="POST" action="http://assignmenthelpusa.test/logout" class="block w-full">
+                        
+                        <button type="submit" class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-center text-slate-700 transition-all hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
+                            Logout
+                        </button>
+                    </form>
+                <?php endif; ?>
+                <a href="http://assignmenthelpusa.test/order" class="block rounded-xl bg-slate-900 px-4 py-2.5 text-center font-bold text-white shadow-sm transition-all dark:bg-white dark:text-slate-900">
+                    Order Now
                 </a>
             </div>
         </div>
@@ -513,109 +290,106 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
 
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+        const darkIconMob = document.getElementById('theme-toggle-dark-icon-mob');
+        const lightIconMob = document.getElementById('theme-toggle-light-icon-mob');
 
-        // Mobile services accordion toggle
-        const mobileServicesToggle = document.getElementById('mobile-services-toggle');
-        const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
-        const mobileServicesIcon = document.getElementById('mobile-services-icon');
+        function syncThemeIcons() {
+            const isDark = document.documentElement.classList.contains('dark');
 
-        if (mobileServicesToggle) {
-            mobileServicesToggle.addEventListener('click', function() {
-                mobileServicesDropdown.classList.toggle('hidden');
-                mobileServicesIcon.classList.toggle('rotate-180');
-            });
+            if (darkIcon && lightIcon) {
+                lightIcon.classList.toggle('hidden', !isDark);
+                darkIcon.classList.toggle('hidden', isDark);
+            }
+
+            if (darkIconMob && lightIconMob) {
+                lightIconMob.classList.toggle('hidden', !isDark);
+                darkIconMob.classList.toggle('hidden', isDark);
+            }
         }
 
-        // Desktop Services Mega Menu Toggle
-        const servicesMenuTrigger = document.getElementById('services-menu-trigger');
-        const servicesMegaMenu = document.getElementById('services-mega-menu');
-        const servicesMenuArrow = document.getElementById('services-menu-arrow');
-        let isMegaMenuOpen = false;
+        syncThemeIcons();
 
-        if (servicesMenuTrigger && servicesMegaMenu) {
-            // Toggle mega menu on click
-            servicesMenuTrigger.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                isMegaMenuOpen = !isMegaMenuOpen;
-
-                if (isMegaMenuOpen) {
-                    servicesMegaMenu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
-                    servicesMegaMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
-                    servicesMenuArrow.classList.add('rotate-180');
+        function toggleTheme() {
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
                 } else {
-                    servicesMegaMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-                    servicesMegaMenu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
-                    servicesMenuArrow.classList.remove('rotate-180');
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
                 }
+            } else if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+
+            syncThemeIcons();
+        }
+
+        if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+        if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
+        const serviceTabs = document.querySelectorAll('.service-menu-tab');
+        const servicePanels = document.querySelectorAll('.service-menu-panel');
+
+        function setActiveServicePanel(index) {
+            serviceTabs.forEach(function(tab) {
+                const isActive = tab.dataset.serviceTab === String(index);
+                tab.classList.toggle('bg-white', isActive);
+                tab.classList.toggle('shadow-sm', isActive);
+                tab.classList.toggle('dark:bg-slate-800', isActive);
             });
 
-            // Close mega menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!servicesMenuTrigger.contains(e.target) && !servicesMegaMenu.contains(e.target)) {
-                    if (isMegaMenuOpen) {
-                        isMegaMenuOpen = false;
-                        servicesMegaMenu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-                        servicesMegaMenu.classList.remove('opacity-100', 'visible',
-                            'pointer-events-auto');
-                        servicesMenuArrow.classList.remove('rotate-180');
-                    }
-                }
-            });
-
-            // Keep mega menu open when clicking inside it
-            servicesMegaMenu.addEventListener('click', function(e) {
-                e.stopPropagation();
+            servicePanels.forEach(function(panel) {
+                panel.classList.toggle('hidden', panel.dataset.servicePanel !== String(index));
             });
         }
 
-        // Mega menu tab switching
-        const megaMenuTabs = document.querySelectorAll('.mega-menu-tab');
-        const megaMenuContents = document.querySelectorAll('.mega-menu-content');
-
-        megaMenuTabs.forEach(tab => {
-            tab.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const targetTab = this.getAttribute('data-tab');
-
-                // Update tab styles
-                megaMenuTabs.forEach(t => {
-                    if (t.getAttribute('data-tab') === targetTab) {
-                        t.classList.remove('text-gray-700', 'hover:bg-white',
-                            'hover:shadow-md');
-                        t.classList.add('bg-gradient-to-r', 'from-purple-600',
-                            'to-blue-600', 'text-white', 'shadow-lg');
-                        // Update Assignment tab colors if it's assignment
-                        if (targetTab === 'assignment') {
-                            t.classList.remove('from-purple-600', 'to-blue-600');
-                            t.classList.add('from-blue-600', 'to-indigo-600');
-                        }
-                    } else {
-                        t.classList.remove('bg-gradient-to-r', 'from-purple-600',
-                            'to-blue-600', 'from-blue-600', 'to-indigo-600',
-                            'text-white', 'shadow-lg');
-                        t.classList.add('text-gray-700', 'hover:bg-white',
-                            'hover:shadow-md');
-                    }
-                });
-
-                // Update content visibility
-                megaMenuContents.forEach(content => {
-                    if (content.id === targetTab + '-content') {
-                        content.classList.remove('hidden');
-                    } else {
-                        content.classList.add('hidden');
-                    }
-                });
+        serviceTabs.forEach(function(tab) {
+            tab.addEventListener('mouseenter', function() {
+                setActiveServicePanel(tab.dataset.serviceTab);
+            });
+            tab.addEventListener('click', function() {
+                setActiveServicePanel(tab.dataset.serviceTab);
             });
         });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const burgerIcon = document.getElementById('mobile-menu-burger');
+        const closeIcon = document.getElementById('mobile-menu-close');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden', !isHidden);
+                if (burgerIcon && closeIcon) {
+                    burgerIcon.classList.toggle('hidden', isHidden);
+                    closeIcon.classList.toggle('hidden', !isHidden);
+                }
+            });
+        }
+
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesList = document.getElementById('mobile-services-list');
+        const mobileServicesArrow = document.getElementById('mobile-services-arrow');
+
+        if (mobileServicesBtn && mobileServicesList) {
+            mobileServicesBtn.addEventListener('click', function() {
+                const isHidden = mobileServicesList.classList.contains('hidden');
+                mobileServicesList.classList.toggle('hidden', !isHidden);
+                if (mobileServicesArrow) {
+                    mobileServicesArrow.classList.toggle('rotate-180', isHidden);
+                }
+            });
+        }
     });
 </script>

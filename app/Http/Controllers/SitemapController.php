@@ -27,7 +27,6 @@ class SitemapController extends Controller
             '/research-paper-help',
             '/homework-help',
             '/thesis-dissertation-help',
-            '/mathematics-assignment-help',
             '/law-assignment-help',
             '/programming-help',
             '/case-study-help',
