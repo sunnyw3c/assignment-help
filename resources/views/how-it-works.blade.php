@@ -5,89 +5,66 @@
 
 
 @section('content')
-    <!-- Hero Section with Animated Background -->
-    <header class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0">
-            <!-- Floating Code Snippets -->
-            <div class="absolute top-20 left-10 opacity-20 animate-float-slow">
-                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-xs font-mono">
-                    <span class="text-green-400">def</span> <span class="text-blue-300">solve_problem</span>():
-                </div>
-            </div>
-            <div class="absolute top-40 right-20 opacity-20 animate-float-delayed">
-                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-xs font-mono">
-                    <span class="text-orange-400">console.log</span>(<span class="text-green-300">"Success!"</span>);
-                </div>
-            </div>
-            <div class="absolute bottom-40 left-1/4 opacity-20 animate-float">
-                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-xs font-mono">
-                    <span class="text-purple-400">&lt;div</span> <span class="text-blue-300">className</span>=<span
-                        class="text-green-300">"app"</span><span class="text-purple-400">&gt;</span>
-                </div>
-            </div>
-
-            <!-- Geometric Shapes -->
-            <div
-                class="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full animate-pulse-slow">
-            </div>
-            <div
-                class="absolute bottom-1/3 left-1/3 w-20 h-20 bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-full animate-bounce-slow">
-            </div>
-            <div
-                class="absolute top-1/2 left-1/6 w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 transform rotate-45 animate-spin-slow">
-            </div>
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-slate-900 text-white py-16 lg:py-24 dark:bg-slate-950">
+        <!-- Interactive Gradient Background Blobs -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
+            <!-- Glowing Indigo/Purple Blob -->
+            <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-[130px] animate-pulse-slow"></div>
+            <!-- Glowing Blue/Cyan Blob -->
+            <div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-500/10 to-blue-500/10 rounded-full blur-[110px] animate-pulse-slow"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-4 py-24 lg:py-32">
-            <div class="text-center max-w-4xl mx-auto">
-                <!-- Badge -->
-                <div
-                    class="inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full text-sm font-bold mb-8 animate-fade-in-up">
-                    <span class="mr-3 text-xl animate-bounce">⚡</span>
-                    SIMPLE & EFFICIENT PROCESS
+        <div class="relative z-10 section-container">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content (Column span 7) -->
+                <div class="text-left lg:col-span-7 max-w-2xl animate-fade-in-up">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-500/10 text-indigo-300 text-xs font-black uppercase tracking-wider mb-8 border border-indigo-500/20 shadow-sm shadow-indigo-500/5">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                        ⚡ Simple & Efficient Process
+                    </div>
+
+                    <!-- Main Title with multi-color gradient -->
+                    <h1 class="text-4xl sm:text-6xl font-black mb-8 leading-tight tracking-tight text-white">
+                        How Our Academic <br>
+                        <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
+                            Help Works
+                        </span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-medium">
+                        Get expert Academic assistance in just 4 simple steps. From submission to delivery, we make it seamless, secure, and stress-free.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="{{ route('order') }}"
+                            class="group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-7 py-4 rounded-xl font-black transition-all duration-300 shadow-xl shadow-purple-650/20 hover:-translate-y-1 active:scale-95">
+                            🚀 Start Your Project
+                            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#process"
+                            class="inline-flex items-center justify-center border-2 border-slate-700 hover:border-slate-500 hover:bg-slate-800/30 text-slate-300 hover:text-white px-7 py-4 rounded-xl font-black transition-all duration-300 active:scale-95">
+                            👀 See How It Works
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Main Title -->
-                <h1
-                    class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight animate-fade-in-up animation-delay-200">
-                    How Our Academic <br>
-                    <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Help Works
-                    </span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed animate-fade-in-up animation-delay-400">
-                    Get expert Academic assistance in just 4 simple steps. <br>
-                    From submission to delivery, we make it seamless and stress-free.
-                </p>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up animation-delay-600">
-                    <a href="{{ route('order') }}"
-                        class="group inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25">
-                        <span class="mr-3 text-2xl">🚀</span>
-                        Start Your Project
-                        <svg class="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </a>
-                    <a href="#process"
-                        class="inline-flex items-center justify-center border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 backdrop-blur-sm dark:hover:bg-slate-800/50">
-                        <span class="mr-3 text-2xl">👀</span>
-                        See How It Works
-                    </a>
+                <!-- Hero Image (Column span 5) -->
+                <div class="relative flex justify-center lg:justify-end lg:col-span-5 animate-fade-in-up animation-delay-200">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500/10 to-indigo-500/10 rounded-[2.8rem] blur-2xl opacity-30 pointer-events-none"></div>
+                    <div class="relative w-full max-w-md lg:max-w-full rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.35)] dark:border-slate-800/80 dark:bg-slate-900">
+                        <img src="{{ asset('images/ui/how_it_works_hero.png') }}" 
+                             alt="How Academic Help Works - Assignment Help USA" 
+                             class="w-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse dark:bg-slate-900"></div>
             </div>
         </div>
     </header>
@@ -95,7 +72,7 @@
     <!-- Interactive Process Steps -->
     <section id="process" class="py-24 bg-gray-50 relative overflow-hidden dark:bg-slate-950">
         <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-slate-950/50 dark:to-slate-900/50"></div>
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
 
         <div class="container mx-auto px-4 relative z-10">
@@ -477,7 +454,7 @@
                                 x-transition:leave="transition ease-in duration-200"
                                 x-transition:leave-start="opacity-100 transform scale-100 translate-y-0"
                                 x-transition:leave-end="opacity-0 transform scale-95 -translate-y-4"
-                                class="mt-6 bg-gradient-to-br {{ $index == 0 ? 'from-blue-50 via-white to-blue-50/50 border-blue-500/20' : ($index == 1 ? 'from-purple-50 via-white to-purple-50/50 border-purple-500/20' : ($index == 2 ? 'from-rose-50 via-white to-rose-50/50 border-rose-500/20' : 'from-emerald-50 via-white to-emerald-50/50 border-emerald-500/20')) }} rounded-3xl p-8 border-2 shadow-xl backdrop-blur-sm">
+                                class="mt-6 bg-gradient-to-br {{ $index == 0 ? 'from-blue-50 via-white to-blue-50/50 border-blue-500/20 dark:from-blue-900/20 dark:via-slate-900 dark:to-blue-900/10' : ($index == 1 ? 'from-purple-50 via-white to-purple-50/50 border-purple-500/20 dark:from-purple-900/20 dark:via-slate-900 dark:to-purple-900/10' : ($index == 2 ? 'from-rose-50 via-white to-rose-50/50 border-rose-500/20 dark:from-rose-900/20 dark:via-slate-900 dark:to-rose-900/10' : 'from-emerald-50 via-white to-emerald-50/50 border-emerald-500/20 dark:from-emerald-900/20 dark:via-slate-900 dark:to-emerald-900/10')) }} rounded-3xl p-8 border-2 shadow-xl backdrop-blur-sm">
                                 <div class="flex items-center mb-6">
                                 @if ($index == 0)
                                     <div
@@ -586,10 +563,10 @@
             <!-- Enhanced Bottom Section -->
             <div class="mt-20 text-center">
                 <div
-                    class="inline-flex items-center bg-gradient-to-r from-gray-100 to-gray-50 rounded-full px-8 py-4 shadow-lg border border-gray-200 dark:border-slate-800/80">
+                    class="inline-flex items-center bg-gradient-to-r from-gray-100 to-gray-50 dark:from-slate-800 dark:to-slate-850 rounded-full px-8 py-4 shadow-lg border border-gray-200 dark:border-slate-700">
                     <div class="flex items-center space-x-4">
                         <span class="text-gray-600 font-semibold dark:text-slate-400">Complete Process Time:</span>
-                        <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm dark:bg-slate-900">
+                        <div class="flex items-center bg-white dark:bg-slate-900 rounded-full px-4 py-2 shadow-sm border border-slate-100 dark:border-slate-700">
                             <span class="text-2xl mr-2">⚡</span>
                             <span class="font-black text-xl text-gray-900 dark:text-white">1-3 Hours</span>
                         </div>
@@ -600,6 +577,277 @@
         </div>
     </section>
 
+    <!-- Detailed Alternating Steps Section -->
+    <section class="py-24 bg-white relative overflow-hidden dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/60">
+        <!-- Subtle decorative blobs -->
+        <div class="absolute top-1/3 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue-500/10 to-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/3 right-0 w-[400px] h-[400px] bg-gradient-to-tr from-purple-500/10 to-pink-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Vertical connecting timeline line (desktop only) -->
+        <div class="hidden lg:block absolute top-[10%] bottom-[10%] left-1/2 -translate-x-1/2 w-0.5 bg-slate-100 dark:bg-slate-800/80 pointer-events-none">
+            <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-blue-500 via-purple-500 via-rose-500 to-emerald-500 opacity-30"></div>
+        </div>
+
+        <div class="section-container relative z-10 space-y-32">
+            <!-- Step 1 Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative">
+                <!-- Central Timeline Node (desktop only) -->
+                <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-4 border-blue-500 items-center justify-center font-black text-xs text-blue-500 shadow-lg shadow-blue-500/20 z-20">1</div>
+
+                <!-- Text Left (Column span 6) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest border border-blue-200 dark:bg-blue-900/30 dark:text-blue-400">
+                        Step 01
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        Submit Your Requirements & Guidelines
+                    </h3>
+                    <p class="text-slate-650 text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                        Fill out our intuitive submission form by providing your assignment parameters. Specify the programming language, framework, word count, formatting styles (APA, MLA, Harvard, Chicago), and upload your grading rubrics, lecture notes, or code templates.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-bold">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Upload rubrics, files, and templates easily
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span> Select your desired academic level & deadlines
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span> Set specific budget preferences
+                        </li>
+                    </ul>
+                </div>
+                <!-- Interactive UI Mockup Right (Column span 6) -->
+                <div class="lg:col-span-6 flex justify-center lg:justify-end animate-fade-in-up relative">
+                    <!-- Floating Document Tag -->
+                    <div class="absolute -top-5 -right-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-[10px] font-black uppercase px-3.5 py-2.5 rounded-xl shadow-xl rotate-6 animate-bounce z-20">
+                        📂 rubric_guidelines.pdf
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-500/30 shadow-[0_20px_50px_-15px_rgba(148,163,184,0.3)] dark:shadow-[0_30px_60px_-15px_rgba(30,41,59,0.5)] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-xs text-slate-400 dark:text-slate-500 font-mono">new-order-request.json</span>
+                        </div>
+                        <div class="space-y-3 font-mono text-[11px] leading-relaxed">
+                            <div class="bg-white dark:bg-slate-900/80 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 group-hover:border-blue-200 dark:group-hover:border-slate-700 transition-all">
+                                <span class="text-purple-600 dark:text-purple-400">"subject":</span> <span class="text-emerald-600 dark:text-emerald-400">"Computer Science / Data Structures"</span>
+                            </div>
+                            <div class="bg-white dark:bg-slate-900/80 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 group-hover:border-blue-200 dark:group-hover:border-slate-700 transition-all">
+                                <span class="text-purple-600 dark:text-purple-400">"deadline":</span> <span class="text-emerald-600 dark:text-emerald-400">"12 Hours (Standard)"</span>
+                            </div>
+                            <div class="bg-white dark:bg-slate-900/80 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 group-hover:border-blue-200 dark:group-hover:border-slate-700 transition-all">
+                                <span class="text-purple-600 dark:text-purple-400">"academicLevel":</span> <span class="text-emerald-600 dark:text-emerald-400">"Graduate (PhD / Master's)"</span>
+                            </div>
+                            <div class="bg-white dark:bg-slate-900/80 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 group-hover:border-blue-200 dark:group-hover:border-slate-700 transition-all flex items-center justify-between">
+                                <div>
+                                    <span class="text-purple-600 dark:text-purple-400">"guidelines":</span> <span class="text-emerald-600 dark:text-emerald-400">["grading_rubric.pdf"]</span>
+                                </div>
+                                <span class="text-[9px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 px-2 py-0.5 rounded-full font-bold border border-emerald-200 dark:border-transparent">100% Uploaded</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative">
+                <!-- Central Timeline Node (desktop only) -->
+                <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-4 border-purple-500 items-center justify-center font-black text-xs text-purple-500 shadow-lg shadow-purple-500/20 z-20">2</div>
+
+                <!-- Interactive UI Mockup Left (Column span 6) -->
+                <div class="lg:col-span-6 order-2 lg:order-1 flex justify-center lg:justify-start animate-fade-in-up relative">
+                    <!-- Floating Online Experts -->
+                    <div class="absolute -bottom-5 -left-2 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-2.5 rounded-2xl shadow-xl flex items-center gap-2 -rotate-6 z-20">
+                        <div class="flex -space-x-2">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 border-2 border-white dark:border-slate-950 flex items-center justify-center text-[10px] font-bold">👩‍🎓</div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 border-2 border-white dark:border-slate-950 flex items-center justify-center text-[10px] font-bold">👨‍🔬</div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 border-2 border-white dark:border-slate-950 flex items-center justify-center text-[10px] font-bold">👩‍💻</div>
+                        </div>
+                        <span class="text-[9px] text-slate-700 dark:text-slate-300 font-bold">12 Academic Scholars Online</span>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 hover:border-purple-300 dark:hover:border-purple-500/30 shadow-[0_20px_50px_-15px_rgba(148,163,184,0.3)] dark:shadow-[0_30px_60px_-15px_rgba(30,41,59,0.5)] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <span class="text-[10px] text-purple-600 dark:text-purple-400 font-bold uppercase tracking-wider">Expert Matching Engine</span>
+                            <span class="flex h-3.5 w-3.5 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
+                            </span>
+                        </div>
+                        <div class="space-y-5">
+                            <div class="flex items-center space-x-4 bg-white dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 group-hover:border-purple-200 dark:group-hover:border-slate-700 transition-all shadow-sm dark:shadow-none">
+                                <div class="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-xl font-bold shadow-lg shadow-purple-600/30">👨‍🎓</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <h5 class="text-sm font-black text-slate-900 dark:text-white">Dr. Elizabeth R.</h5>
+                                        <span class="text-[9px] text-purple-700 dark:text-purple-300 font-bold">99.2% Match</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400">PhD in Advanced Calculus (MIT)</p>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex justify-between text-xs mb-2">
+                                    <span class="text-slate-500 dark:text-slate-400 font-medium">Scanning Verified Scholars...</span>
+                                    <span class="text-emerald-600 dark:text-emerald-400 font-black">Expert Matched!</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-purple-500 via-indigo-500 to-emerald-500 h-full rounded-full w-full transition-all duration-1000"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text Right (Column span 6) -->
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-black uppercase tracking-widest border border-purple-200 dark:bg-purple-900/30 dark:text-purple-400">
+                        Step 02
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        Receive a Transparent Quote & Expert Match
+                    </h3>
+                    <p class="text-slate-650 text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                        Within 15 to 30 minutes, our support desk evaluates the project scope and assigns it to a verified academic scholar who matches your specific discipline. You will receive a detailed, all-inclusive quote with zero hidden fees.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-bold">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 100% matched based on tutor qualifications
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500"></span> Transparent billing with secure payment options
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500"></span> Direct contact with your scholar confirmed
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative">
+                <!-- Central Timeline Node (desktop only) -->
+                <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-4 border-rose-500 items-center justify-center font-black text-xs text-rose-500 shadow-lg shadow-rose-500/20 z-20">3</div>
+
+                <!-- Text Left (Column span 6) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-[10px] font-black uppercase tracking-widest border border-rose-200 dark:bg-rose-900/30 dark:text-rose-400">
+                        Step 03
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        Track Real-Time Progress & Collaborations
+                    </h3>
+                    <p class="text-slate-650 text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                        Log into your student dashboard at any time to monitor the progress of your assignment. Message your expert directly to upload files, clarify instructions, or download milestone drafts. We keep you updated every step of the way.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-bold">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span> Interactive message center with files sharing
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-500"></span> Milestone draft checks for long-term papers
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-500"></span> Complete transparency during drafting phases
+                        </li>
+                    </ul>
+                </div>
+                <!-- Interactive UI Mockup Right (Column span 6) -->
+                <div class="lg:col-span-6 flex justify-center lg:justify-end animate-fade-in-up relative">
+                    <!-- Floating Terminal Test Check -->
+                    <div class="absolute -bottom-5 -right-2 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-3.5 rounded-xl shadow-2xl font-mono text-[9px] text-emerald-600 dark:text-emerald-400 rotate-3 z-20">
+                        <span class="text-slate-400 dark:text-slate-500">$</span> php artisan test<br>
+                        <span class="font-bold">✓ 18 academic tests passed</span>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 hover:border-rose-300 dark:hover:border-rose-500/30 shadow-[0_20px_50px_-15px_rgba(148,163,184,0.3)] dark:shadow-[0_30px_60px_-15px_rgba(30,41,59,0.5)] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <span class="text-[10px] text-rose-600 dark:text-rose-400 font-bold uppercase tracking-wider">Project Dashboard</span>
+                            <span class="text-[9px] bg-rose-100 dark:bg-rose-500/20 text-rose-700 dark:text-rose-400 border border-rose-200 dark:border-transparent px-2 py-0.5 rounded-full font-bold">In Development</span>
+                        </div>
+                        <div class="space-y-4 text-xs font-medium">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</div>
+                                <span class="text-slate-600 dark:text-slate-300">Phase 1: Outline & Research Structure</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</div>
+                                <span class="text-slate-600 dark:text-slate-300">Phase 2: Core Drafting & Citation Layout</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-rose-100 dark:bg-rose-500/25 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-[10px] animate-pulse">●</div>
+                                <span class="text-slate-900 dark:text-white font-extrabold">Phase 3: Refinement & Rubric Compliance</span>
+                            </div>
+                            <div class="flex items-center space-x-3 opacity-50">
+                                <div class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center font-bold text-[10px]">○</div>
+                                <span class="text-slate-500 dark:text-slate-400">Phase 4: Turnitin Check & Final Quality Audit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 Details -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative">
+                <!-- Central Timeline Node (desktop only) -->
+                <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-4 border-emerald-500 items-center justify-center font-black text-xs text-emerald-500 shadow-lg shadow-emerald-500/20 z-20">4</div>
+
+                <!-- Interactive UI Mockup Left (Column span 6) -->
+                <div class="lg:col-span-6 order-2 lg:order-1 flex justify-center lg:justify-start animate-fade-in-up relative">
+                    <!-- Floating Turnitin Shield -->
+                    <div class="absolute -top-5 -left-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[10px] font-black uppercase px-4 py-2.5 rounded-xl shadow-xl -rotate-6 flex items-center gap-1 z-20">
+                        🛡️ 100% Plagiarism Clean
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-500/30 shadow-[0_20px_50px_-15px_rgba(148,163,184,0.3)] dark:shadow-[0_30px_60px_-15px_rgba(30,41,59,0.5)] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <span class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-wider">Final Deliverable Pack</span>
+                            <span class="text-[9px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-transparent px-2 py-0.5 rounded-full font-bold">Passed Quality Audit</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-white dark:bg-slate-900/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center group-hover:border-emerald-200 dark:group-hover:border-slate-700 transition-all shadow-sm dark:shadow-none">
+                                <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400">0%</div>
+                                <div class="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-wider mt-1">Plagiarism Score</div>
+                            </div>
+                            <div class="bg-white dark:bg-slate-900/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-center group-hover:border-emerald-200 dark:group-hover:border-slate-700 transition-all shadow-sm dark:shadow-none">
+                                <div class="text-2xl font-black text-slate-900 dark:text-white">A+</div>
+                                <div class="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-wider mt-1">Rubric Score</div>
+                            </div>
+                        </div>
+                        <a href="{{ route('order') }}" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95 transition-all">
+                            <span>📥 Download Completed Assignment</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Text Right (Column span 6) -->
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest border border-emerald-200 dark:bg-emerald-950/30 dark:text-emerald-400">
+                        Step 04
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        Review, Download, & Request Free Revisions
+                    </h3>
+                    <p class="text-slate-650 text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                        Once completed, your final assignment goes through a rigid quality audit, which includes editing checkmarks, citation layout inspections, and Turnitin plagiarism scans. Download the package, review the output, and ask for free revisions if any details need touchups.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300 font-bold">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Free official plagiarism report included
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Unlimited revisions for 10-14 days
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> High grades compliance guaranteed
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Interactive Features Section -->
     <section class="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white relative overflow-hidden">
         <!-- Enhanced Background Effects with Code Content -->
