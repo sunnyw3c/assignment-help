@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450" width="100%" height="100%" class="sketch-illustration">
+  <defs>
+    <!-- Goldfish Gradients -->
+    <linearGradient id="goldfishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb703" />
+      <stop offset="50%" stop-color="#fb8500" />
+      <stop offset="100%" stop-color="#ff006e" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <style>
+    /* CSS Styles and Animations */
+    .line-sketch {
+      stroke: #f8fafc;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .line-sketch-dim {
+      stroke: #64748b;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    
+    /* Goldfish swim animation */
+    .goldfish-group {
+      animation: fishSwim 12s ease-in-out infinite;
+      transform-origin: 185px 255px;
+    }
+    .fish-tail {
+      animation: tailWag 1s ease-in-out infinite;
+      transform-origin: 192px 255px;
+    }
+    
+    /* Bubbles float up */
+    .bubble {
+      animation: bubbleFloat 4s ease-in-out infinite;
+      transform-origin: bottom center;
+      opacity: 0;
+    }
+    .b1 { animation-delay: 0s; --wobble: 6px; }
+    .b2 { animation-delay: 1.2s; --wobble: -4px; }
+    .b3 { animation-delay: 2.5s; --wobble: 8px; }
+    .b4 { animation-delay: 0.6s; --wobble: -3px; }
+    .b5 { animation-delay: 1.8s; --wobble: 5px; }
+    
+    /* Steam rise */
+    .steam {
+      animation: steamRise 3.5s ease-in-out infinite;
+      stroke-dasharray: 20;
+      opacity: 0;
+    }
+    .s1 { animation-delay: 0s; }
+    .s2 { animation-delay: 1.8s; }
+    
+    /* Screen code blink and typing */
+    .cursor {
+      animation: cursorBlink 1s step-end infinite;
+    }
+    .screen-pulse {
+      animation: screenPulse 5s ease-in-out infinite;
+    }
+    .code-line {
+      stroke-dasharray: 80;
+      stroke-dashoffset: 80;
+      animation: drawCode 3.5s ease-in-out infinite alternate;
+    }
+    .cl1 { animation-delay: 0.2s; }
+    .cl2 { animation-delay: 0.8s; }
+    .cl3 { animation-delay: 1.4s; }
+    .cl4 { animation-delay: 2s; }
+
+    @keyframes fishSwim {
+      0%, 100% { transform: translate(0, 0) scaleX(1); }
+      45% { transform: translate(-18px, -4px) scaleX(1); }
+      49% { transform: translate(-18px, -4px) scaleX(-1); }
+      95% { transform: translate(6px, 3px) scaleX(-1); }
+      99% { transform: translate(6px, 3px) scaleX(1); }
+    }
+    @keyframes tailWag {
+      0%, 100% { transform: rotate(-10deg); }
+      50% { transform: rotate(15deg); }
+    }
+    @keyframes bubbleFloat {
+      0% { transform: translateY(0) scale(0.7); opacity: 0; }
+      20% { opacity: 0.7; }
+      80% { opacity: 0.7; }
+      100% { transform: translate(var(--wobble), -40px) scale(1.3); opacity: 0; }
+    }
+    @keyframes steamRise {
+      0% { transform: translateY(0); opacity: 0; stroke-dashoffset: 20; }
+      25% { opacity: 0.45; }
+      75% { opacity: 0.15; }
+      100% { transform: translateY(-35px); opacity: 0; stroke-dashoffset: 0; }
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    @keyframes screenPulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.45; }
+    }
+    @keyframes drawCode {
+      0% { stroke-dashoffset: 80; }
+      40% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <!-- Desk Base Outline -->
+  <path class="line-sketch" d="M 80 340 L 520 340" stroke-width="2.5" />
+  <!-- Thickness of Desk -->
+  <path class="line-sketch-dim" d="M 80 340 L 80 348 L 520 348 L 520 340" stroke-width="1.5" />
+  
+  <!-- Desk Legs -->
+  <path class="line-sketch-dim" d="M 110 348 L 110 440" stroke-width="2" />
+  <path class="line-sketch-dim" d="M 125 348 L 125 435" stroke-width="1.5" />
+  <path class="line-sketch-dim" d="M 480 348 L 480 440" stroke-width="2" />
+  
+  <!-- Wall socket and wire on the far left -->
+  <rect x="25" y="380" width="12" height="18" rx="2" class="line-sketch-dim" stroke-width="1.5" />
+  <circle cx="31" cy="385" r="1.5" fill="#64748b" />
+  <circle cx="31" cy="392" r="1.5" fill="#64748b" />
+  <!-- Wire plug and loop -->
+  <path class="line-sketch" d="M 31 389 C 15 400, 45 425, 60 410 C 80 395, 95 385, 110 390 L 110 355" stroke-width="1.2" stroke="#64748b" />
+
+  <!-- Stack of Books/Papers under the fishbowl -->
+  <g id="book-stack">
+    <!-- Book 1 (Bottom) -->
+    <path class="line-sketch" d="M 140 340 L 220 340 L 215 328 L 145 328 Z" stroke-dasharray="none" />
+    <path class="line-sketch-dim" d="M 140 340 L 145 328" />
+    <path class="line-sketch-dim" d="M 220 340 L 215 328" />
+    <!-- Book 2 (Middle) -->
+    <path class="line-sketch" d="M 143 328 L 217 328 L 220 318 L 148 318 Z" />
+    <path class="line-sketch-dim" d="M 143 328 L 148 318" />
+    <!-- Book 3 (Top) -->
+    <path class="line-sketch" d="M 144 318 L 222 318 L 216 308 L 152 308 Z" />
+  </g>
+
+  <!-- Fishbowl -->
+  <g id="fishbowl">
+    <!-- Spherical glass bowl shape -->
+    <circle cx="185" cy="255" r="50" class="line-sketch" stroke-width="2" stroke="#94a3b8" />
+    <!-- Inner bowl reflection/accent lines -->
+    <path class="line-sketch-dim" d="M 140 240 A 45 45 0 0 1 185 210" stroke-width="1" />
+    <path class="line-sketch-dim" d="M 220 280 A 45 45 0 0 1 185 300" stroke-width="1" />
+    <!-- Water level line -->
+    <path d="M 143 235 Q 185 240, 227 235 A 50 50 0 0 1 143 235" fill="#38bdf8" fill-opacity="0.1" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.4" />
+    
+    <!-- Bubbles -->
+    <circle class="bubble b1" cx="170" cy="275" r="2.5" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <circle class="bubble b2" cx="190" cy="285" r="1.5" fill="none" stroke="#38bdf8" stroke-width="0.8" />
+    <circle class="bubble b3" cx="178" cy="265" r="2" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <circle class="bubble b4" cx="198" cy="272" r="1" fill="none" stroke="#38bdf8" stroke-width="0.8" />
+    <circle class="bubble b5" cx="165" cy="250" r="1.8" fill="none" stroke="#38bdf8" stroke-width="0.8" />
+
+    <!-- Goldfish Group -->
+    <g class="goldfish-group">
+      <!-- Fish Body -->
+      <path d="M 170 255 C 172 248, 185 246, 192 255 C 185 264, 172 262, 170 255 Z" fill="url(#goldfishGrad)" stroke="#f97316" stroke-width="0.5" />
+      <!-- Eye -->
+      <circle cx="174" cy="253" r="1.5" fill="#ffffff" />
+      <circle cx="174" cy="253" r="0.7" fill="#000000" />
+      <!-- Small pectoral fin -->
+      <path d="M 180 258 C 182 263, 184 263, 183 258 Z" fill="#ff7f50" />
+      <!-- Wavy animated tail -->
+      <path class="fish-tail" d="M 192 255 C 198 248, 208 245, 212 252 C 208 256, 208 254, 212 258 C 208 265, 198 262, 192 255 Z" fill="url(#goldfishGrad)" stroke="#ea580c" stroke-width="0.5" />
+    </g>
+  </g>
+
+  <!-- Potted Bamboo/Plant behind monitor -->
+  <g id="plant">
+    <!-- Pot -->
+    <path class="line-sketch" d="M 255 340 L 275 340 L 271 310 L 259 310 Z" />
+    <path class="line-sketch-dim" d="M 259 310 L 271 310" stroke-width="1" />
+    <!-- Stalks -->
+    <path class="line-sketch" d="M 265 310 Q 260 220, 268 120" stroke="#059669" stroke-width="2" />
+    <path class="line-sketch-dim" d="M 262 310 Q 255 240, 258 160" stroke="#047857" stroke-width="1.5" />
+    <!-- Leaves (emerald/green accent) -->
+    <!-- Stalk 1 leaves -->
+    <path d="M 267 150 Q 250 140, 240 145 Q 255 155, 267 150 Z" fill="#10b981" opacity="0.9" />
+    <path d="M 267 180 Q 285 175, 292 185 Q 278 190, 267 180 Z" fill="#059669" opacity="0.9" />
+    <path d="M 268 120 Q 260 95, 250 90 Q 260 105, 268 120 Z" fill="#34d399" opacity="0.95" />
+    <path d="M 268 120 Q 280 100, 290 105 Q 278 115, 268 120 Z" fill="#10b981" opacity="0.95" />
+    <!-- Stalk 2 leaves -->
+    <path d="M 258 200 Q 240 205, 235 195 Q 248 192, 258 200 Z" fill="#047857" opacity="0.8" />
+    <path d="M 258 160 Q 245 150, 248 140 Q 253 150, 258 160 Z" fill="#059669" opacity="0.85" />
+  </g>
+
+  <!-- Monitor / Computer Screen -->
+  <g id="monitor">
+    <!-- Monitor stand base -->
+    <path class="line-sketch" d="M 315 320 L 355 320 L 348 312 L 322 312 Z" />
+    <!-- Monitor stand stem -->
+    <path class="line-sketch" d="M 335 312 L 335 285" stroke-width="2" />
+    <!-- Monitor outer frame -->
+    <rect x="290" y="195" width="90" height="90" rx="6" class="line-sketch" stroke-width="2" />
+    <!-- Inner Screen -->
+    <rect x="294" y="199" width="82" height="82" rx="3" fill="url(#screenGrad)" />
+    
+    <!-- Screen glow (animated pulse) -->
+    <rect x="294" y="199" width="82" height="82" rx="3" fill="url(#screenGlow)" class="screen-pulse" pointer-events="none" />
+    
+    <!-- Display contents: lines representing text/web elements -->
+    <g id="screen-content" opacity="0.85">
+      <!-- Mini Browser/IDE layout -->
+      <rect x="298" y="203" width="74" height="6" rx="1" fill="#4338ca" opacity="0.5" />
+      <circle cx="301" cy="206" r="1.2" fill="#ef4444" />
+      <circle cx="304" cy="206" r="1.2" fill="#eab308" />
+      <circle cx="307" cy="206" r="1.2" fill="#22c55e" />
+      
+      <!-- Side navigation bar -->
+      <line x1="304" y1="213" x2="304" y2="270" stroke="#475569" stroke-width="1.5" />
+      <rect x="298" y="217" width="4" height="4" rx="0.5" fill="#818cf8" />
+      <rect x="298" y="225" width="4" height="4" rx="0.5" fill="#64748b" />
+      <rect x="298" y="233" width="4" height="4" rx="0.5" fill="#64748b" />
+      
+      <!-- Editor Code Lines -->
+      <line class="code-line cl1" x1="310" y1="217" x2="340" y2="217" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" />
+      <line class="code-line cl2" x1="310" y1="225" x2="355" y2="225" stroke="#f472b6" stroke-width="1.5" stroke-linecap="round" />
+      <line class="code-line cl3" x1="315" y1="233" x2="360" y2="233" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" />
+      <line class="code-line cl4" x1="315" y1="241" x2="335" y2="241" stroke="#fb923c" stroke-width="1.5" stroke-linecap="round" />
+      
+      <!-- Blinking Terminal Cursor -->
+      <rect class="cursor" x="338" y="239" width="3" height="5" fill="#a7f3d0" />
+    </g>
+  </g>
+
+  <!-- Keyboard and Mouse -->
+  <g id="input-devices">
+    <!-- Keyboard drawing -->
+    <path class="line-sketch" d="M 310 327 L 375 327 L 370 338 L 305 338 Z" />
+    <path class="line-sketch-dim" d="M 315 330 L 365 330" stroke-dasharray="1.5 1.5" />
+    <path class="line-sketch-dim" d="M 312 334 L 362 334" stroke-dasharray="1.5 1.5" />
+    <!-- Mouse drawing -->
+    <ellipse cx="400" cy="331" rx="5" ry="3" class="line-sketch" />
+    <path class="line-sketch-dim" d="M 395 331 L 388 333" stroke-width="0.8" />
+  </g>
+
+  <!-- Coffee Mug with UVO branding and steam -->
+  <g id="coffee-mug">
+    <!-- Mug Body -->
+    <path class="line-sketch" d="M 422 315 L 436 315 L 436 339 C 436 341, 422 341, 422 339 Z" />
+    <path class="line-sketch" d="M 422 315 C 422 317, 436 317, 436 315" />
+    <!-- Handle -->
+    <path class="line-sketch" d="M 436 319 C 441 319, 441 331, 436 331" />
+    
+    <!-- UVO Text in Orange -->
+    <text x="424" y="329" font-family="'Instrument Sans', sans-serif" font-size="6" font-weight="900" fill="#f97316" letter-spacing="0.2">UVO</text>
+    
+    <!-- Rising Steam -->
+    <path class="steam s1" d="M 426 308 Q 423 298, 427 290 T 425 276" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <path class="steam s2" d="M 432 308 Q 429 300, 433 292 T 430 278" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Wooden Chair (Girl sits on it) -->
+  <g id="chair">
+    <!-- Chair backrest outline -->
+    <path class="line-sketch" d="M 488 322 L 506 322" stroke-width="2" />
+    <!-- Chair vertical struts -->
+    <path class="line-sketch-dim" d="M 498 250 L 498 322" stroke-width="1.5" />
+    <path class="line-sketch-dim" d="M 491 254 L 491 322" stroke-width="1.2" />
+    <path class="line-sketch-dim" d="M 505 254 L 505 322" stroke-width="1.2" />
+    <!-- Chair back top curve -->
+    <path class="line-sketch" d="M 488 250 Q 498 245, 508 250" stroke-width="2" />
+    <!-- Seat -->
+    <path class="line-sketch" d="M 445 322 C 455 322, 485 322, 508 322 L 505 329 L 452 329 Z" />
+    <!-- Chair legs -->
+    <path class="line-sketch-dim" d="M 455 329 L 455 420" stroke-width="2" />
+    <path class="line-sketch-dim" d="M 495 329 L 495 410" stroke-width="1.5" />
+    <path class="line-sketch-dim" d="M 504 329 L 504 400" stroke-width="1.2" />
+  </g>
+
+  <!-- The Girl -->
+  <g id="girl">
+    <!-- Hair background (dark shape) -->
+    <path d="M 458 190 C 452 170, 460 140, 480 145 C 500 140, 505 160, 503 190 C 505 210, 504 235, 502 260 C 498 270, 488 268, 484 260 C 480 230, 474 210, 458 190 Z" fill="#1e293b" />
+    
+    <!-- Face Profile -->
+    <path class="line-sketch" d="M 478 170 C 470 170, 464 175, 462 182 C 460 185, 461 187, 463 188 C 462 191, 463 194, 465 195 C 467 197, 470 198, 473 197 C 478 195, 480 190, 480 185" stroke-width="1.5" fill="#f8fafc" />
+    
+    <!-- Ear & Earring -->
+    <circle cx="482" cy="188" r="2.5" fill="none" stroke="#e2e8f0" stroke-width="1" />
+    <!-- Large hoop earring -->
+    <circle cx="482" cy="192" r="7" class="line-sketch" stroke-width="1.2" stroke="#fb923c" />
+
+    <!-- Freckles & Details -->
+    <circle cx="468" cy="188" r="0.4" fill="#94a3b8" />
+    <circle cx="469" cy="189" r="0.4" fill="#94a3b8" />
+    <circle cx="467" cy="190" r="0.4" fill="#94a3b8" />
+    
+    <!-- Closed Eye (eyelashes) -->
+    <path class="line-sketch" d="M 466 182 Q 469 184, 471 181" stroke-width="1.2" />
+    <!-- Eyebrow -->
+    <path class="line-sketch-dim" d="M 464 178 Q 468 178, 472 176" stroke-width="1" />
+    <!-- Smile -->
+    <path class="line-sketch" d="M 466 191 Q 468 193, 470 190" stroke-width="1.2" />
+
+    <!-- Torso and clothing -->
+    <path class="line-sketch" d="M 480 205 Q 465 220, 460 250 C 458 270, 462 290, 465 315 L 495 315 C 498 290, 498 260, 495 230 C 492 215, 485 208, 480 205 Z" fill="#334155" />
+    
+    <!-- T-shirt underneath -->
+    <path class="line-sketch" d="M 474 210 Q 480 216, 486 210" />
+    <path d="M 475 214 Q 480 220, 485 214" stroke="#94a3b8" stroke-width="1.2" fill="none" />
+    <!-- Small rainbow sketch on shirt -->
+    <path class="line-sketch-dim" d="M 477 226 A 4 4 0 0 1 483 226" stroke="#f43f5e" stroke-width="0.8" />
+    <path class="line-sketch-dim" d="M 476 227 A 5 5 0 0 1 484 227" stroke="#fb923c" stroke-width="0.8" />
+    <path class="line-sketch-dim" d="M 475 228 A 6 6 0 0 1 485 228" stroke="#38bdf8" stroke-width="0.8" />
+
+    <!-- Cardigan open lines -->
+    <path class="line-sketch-dim" d="M 473 211 L 468 280" stroke-width="1.2" />
+    <path class="line-sketch-dim" d="M 487 211 L 490 280" stroke-width="1.2" />
+
+    <!-- Right Arm going to mouse -->
+    <path class="line-sketch" d="M 475 220 Q 455 240, 442 270 C 435 285, 420 315, 400 326" stroke-width="2" />
+    <path class="line-sketch-dim" d="M 465 240 Q 450 260, 440 280" stroke-width="1" />
+    <!-- Sleeve cuff -->
+    <path class="line-sketch" d="M 404 322 L 400 328" stroke-width="2.2" />
+
+    <!-- Jeans and Legs sitting -->
+    <path class="line-sketch" d="M 465 315 C 460 330, 452 340, 440 348 C 425 355, 410 355, 395 352" stroke-width="2" />
+    <!-- Leg 1 (Front) -->
+    <path class="line-sketch" d="M 452 329 C 452 345, 448 360, 440 375 C 435 385, 425 410, 422 425" stroke-width="2.2" />
+    <!-- Cuff of jeans -->
+    <path class="line-sketch" d="M 425 423 L 418 425" stroke-width="2.5" />
+    <!-- Shoe 1 -->
+    <path class="line-sketch" d="M 418 425 C 414 425, 414 430, 418 431 L 426 429" stroke-width="1.8" />
+
+    <!-- Leg 2 (Back) -->
+    <path class="line-sketch-dim" d="M 465 329 C 465 345, 460 365, 452 385 C 445 400, 438 410, 436 420" stroke-width="1.8" />
+    <!-- Shoe 2 -->
+    <path class="line-sketch-dim" d="M 436 420 L 432 422 C 430 422, 430 426, 434 427 L 439 424" stroke-width="1.5" />
+  </g>
+</svg>
