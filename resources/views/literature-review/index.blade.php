@@ -438,127 +438,109 @@
                         </h2>
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "My Master's thesis literature review on educational technology was exceptional! The researcher synthesized 45 peer-reviewed sources thematically, identified clear research gaps, and connected everything to my research questions beautifully. My advisor approved it with minimal revisions. Worth every penny!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
                                         JK
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Jennifer K.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Jennifer K.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Education, Master's Student</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Needed a systematic literature review following PRISMA guidelines for my nursing dissertation. The researcher conducted comprehensive database searches, created the flow diagram, assessed study quality, and synthesized findings expertly. My committee was impressed with the methodological rigor!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">
                                         ML
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Maria L.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Maria L.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Nursing, PhD Candidate</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Psychology literature review on cognitive behavioral therapy was comprehensive and critically analyzed. The thematic organization was logical, the synthesis was insightful, and the gap identification was perfect for justifying my research. Excellent scholarly writing throughout. Highly recommend!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-xs font-bold text-white">
                                         DW
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">David W.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">David W.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Psychology, Graduate Student</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Business management literature review covered leadership theories perfectly. The researcher traced theoretical evolution chronologically, compared competing frameworks, and identified practical applications. The critical analysis was sophisticated and the APA formatting was flawless. A+"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-xs font-bold text-white">
                                         SC
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Sarah C.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Sarah C.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Business Management, MBA</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Environmental science literature review required interdisciplinary sources from ecology, policy, and economics. The researcher integrated diverse perspectives beautifully, identified contradictions in findings, and suggested future research directions. Committee approved my proposal immediately!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xs font-bold text-white">
                                         TH
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Thomas H.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Thomas H.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Environmental Science, PhD Student</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Literature Review Writing Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Social work literature review on trauma-informed care was exactly what I needed. The researcher used current peer-reviewed sources, evaluated evidence quality, and synthesized best practices from multiple perspectives. The theoretical framework section was particularly strong. Excellent service!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-xs font-bold text-white">
                                         RN
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Rachel N.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Rachel N.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Social Work, MSW Student</p>
                                     </div>
                                 </div>

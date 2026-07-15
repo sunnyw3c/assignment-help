@@ -430,139 +430,121 @@
                         </h2>
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "My Netflix case study analysis was outstanding! The competitive analysis using Porter's Five Forces was thorough, the SWOT was insightful, and the strategic recommendations for international expansion were well-justified with industry data. My MBA professor praised the depth of analysis. Got an A!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         TB
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Thomas B.</p>
+                                        <p class="font-bold text-sm text-slate-900">Thomas B.</p>
                                         <p class="text-xs text-slate-500">MBA, Strategy Course</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Tesla case study required financial analysis which I struggle with. The analyst calculated all ratios correctly, performed valuation analysis, and connected financial performance to strategic decisions beautifully. The implementation plan was detailed and practical. Excellent service!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         ND
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Nicole D.</p>
+                                        <p class="font-bold text-sm text-slate-900">Nicole D.</p>
                                         <p class="text-xs text-slate-500">Business Administration, Senior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Starbucks international expansion case was complex with so many strategic considerations. The analysis covered market entry modes, competitive landscape in emerging markets, and cultural adaptation strategies. Recommendations were backed by solid evidence. My professor was impressed!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         KP
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Kevin P.</p>
+                                        <p class="font-bold text-sm text-slate-900">Kevin P.</p>
                                         <p class="text-xs text-slate-500">International Business, MBA</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Healthcare management case on hospital operations was challenging. The analyst understood healthcare industry complexities, regulatory environment, and operational challenges perfectly. SWOT analysis was spot-on and recommendations addressed patient care quality while maintaining financial sustainability."
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         RM
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Rachel M.</p>
+                                        <p class="font-bold text-sm text-slate-900">Rachel M.</p>
                                         <p class="text-xs text-slate-500">Healthcare Administration, Graduate</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Amazon vs Walmart competitive case required deep retail industry knowledge. The analysis compared business models, supply chain strategies, and digital transformation approaches brilliantly. Alternative strategies were evaluated thoroughly. Plus got a great PowerPoint presentation for my class presentation!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         JL
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">James L.</p>
+                                        <p class="font-bold text-sm text-slate-900">James L.</p>
                                         <p class="text-xs text-slate-500">Marketing Management, MBA</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Case Study Analysis Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Startup case study on fintech company required understanding of innovation, disruption theory, and venture capital considerations. The analyst demonstrated excellent entrepreneurship knowledge. PESTEL analysis covered regulatory challenges beautifully. Implementation plan was realistic and actionable. Highly recommend!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-9 h-9 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                                         SC
                                     </div>
                                     <div>
-                                        <p class="font-bold text-sm text-slate-900" itemprop="name">Sarah C.</p>
+                                        <p class="font-bold text-sm text-slate-900">Sarah C.</p>
                                         <p class="text-xs text-slate-500">Entrepreneurship, Graduate Student</p>
                                     </div>
                                 </div>

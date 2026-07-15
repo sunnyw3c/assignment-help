@@ -431,133 +431,121 @@
                         </h2>
 
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "The constitutional law analysis was exceptional! My expert cited relevant Supreme Court precedent, explained the three-tiered scrutiny framework clearly, and applied it to the hypothetical perfectly. The Bluebook citations were flawless. Got the highest grade in my section!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         JM
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Jessica M.</p>
+                                        <p class="font-bold text-gray-900">Jessica M.</p>
                                         <p class="text-sm text-gray-600">Harvard Law School, 2L</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Needed help with a complex contracts memo involving UCC provisions and common law. The legal research was thorough, Westlaw citations were perfect, and the IRAC analysis was exactly what my professor expected. Definitely recommend for complicated assignments!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         RK
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Robert K.</p>
+                                        <p class="font-bold text-gray-900">Robert K.</p>
                                         <p class="text-sm text-gray-600">Georgetown Law, 1L</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Criminal procedure assignment on Fourth Amendment search and seizure. My expert analyzed the reasonableness test, exceptions to warrant requirement, and applied precedent beautifully. The case comparisons were sophisticated. My professor called it 'exemplary legal analysis.'"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         AL
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Amanda L.</p>
+                                        <p class="font-bold text-gray-900">Amanda L.</p>
                                         <p class="text-sm text-gray-600">NYU School of Law, 3L</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Torts essay on negligence was incredibly well-written. Hit all elements (duty, breach, causation, damages), discussed multiple theories, analyzed comparative fault, and cited Restatement provisions. The legal writing was clear and professional. Worth every dollar!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         DC
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">David C.</p>
+                                        <p class="font-bold text-gray-900">David C.</p>
                                         <p class="text-sm text-gray-600">UC Berkeley Law, 1L</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "International law assignment required analysis of treaty interpretation under Vienna Convention. The research included ICJ cases, UN documents, and scholarly commentary. Everything was properly cited. My professor was impressed by the depth of analysis. A+ work!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         SP
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Sarah P.</p>
+                                        <p class="font-bold text-gray-900">Sarah P.</p>
                                         <p class="text-sm text-gray-600">Yale Law School, LLM</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Property law memo on adverse possession was outstanding. Discussed elements, jurisdictional variations, policy rationales, and applied to a tricky fact pattern. The case analogies were spot-on. This service helped me understand complex property concepts better. Highly recommend!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         MT
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Michael T.</p>
+                                        <p class="font-bold text-gray-900">Michael T.</p>
                                         <p class="text-sm text-gray-600">Columbia Law School, 2L</p>
                                     </div>
                                 </div>

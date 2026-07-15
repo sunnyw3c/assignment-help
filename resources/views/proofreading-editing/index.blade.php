@@ -465,129 +465,111 @@
                         </h2>
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
-                                <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center gap-1 text-amber-400">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "English is my second language and I always struggle with grammar. The editor caught so many errors I didn't see and improved my sentence structure significantly. The track changes helped me learn from mistakes. My paper grade improved from B to A-!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
                                         YC
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Yuki C.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Yuki C.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">International Student, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
-                                <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center gap-1 text-amber-400">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Dissertation editing was exactly what I needed! The editor fixed all APA 7th citations, improved clarity throughout, and caught inconsistencies across chapters. Committee approved with minor revisions. Professional service and fast turnaround. Highly recommend!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
                                         PT
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Patricia T.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Patricia T.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">PhD Candidate, Psychology</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Last-minute research paper editing saved me! Submitted at midnight with 6-hour rush service. Editor delivered on time with clean document ready to submit. Fixed grammar, improved flow, corrected MLA citations. Worth every penny for the peace of mind!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-sm font-bold text-white">
                                         MJ
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Marcus J.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Marcus J.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">College Sophomore</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
-                                <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center gap-1 text-amber-400">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Substantive editing for my master's thesis provided incredible feedback. Editor pointed out weak arguments, suggested reorganization, and improved overall flow. The detailed comments helped me understand how to strengthen academic writing. Best investment for my thesis!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white">
                                         LB
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Laura B.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Laura B.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Master's Student, Sociology</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
-                                <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center gap-1 text-amber-400">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Copy editing for my history essay improved readability dramatically. The editor maintained my voice while fixing awkward sentences and unclear phrasing. Professor commented that my writing quality had improved significantly. Great learning experience seeing professional edits!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">
                                         DH
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">David H.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">David H.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">History Major, Senior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Proofreading & Editing Service"></div>
-                                <div class="mb-3 flex items-center gap-1 text-amber-400" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center gap-1 text-amber-400">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Journal manuscript editing helped me get published! The editor improved academic tone, fixed citation inconsistencies, enhanced clarity, and caught errors I missed after multiple self-reviews. Submission was accepted with minor revisions. Professional quality editing made the difference!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-sm font-bold text-white">
                                         AR
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Dr. Anna R.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Dr. Anna R.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Assistant Professor, Biology</p>
                                     </div>
                                 </div>

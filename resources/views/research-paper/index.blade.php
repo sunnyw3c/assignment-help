@@ -769,33 +769,27 @@
                         </div>
 
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
-                                itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                     <span class="text-2xl">🇺🇸</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "My 20-page psychology research paper on cognitive behavioral therapy required extensive
                                     literature review and statistical analysis. The researcher had a PhD in Clinical
                                     Psychology and delivered an exceptional paper with 45 peer-reviewed sources. My
                                     professor called it 'publication-quality work.' Got an A!"
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center">
                                         <div
                                             class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                             RW
                                         </div>
                                         <div>
-                                            <p class="font-bold text-gray-900" itemprop="name">Rachel W.</p>
+                                            <p class="font-bold text-gray-900">Rachel W.</p>
                                             <p class="text-sm text-gray-600">Columbia University, USA</p>
                                         </div>
                                     </div>
@@ -804,33 +798,27 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
-                                itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                     <span class="text-2xl">🇬🇧</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Needed help with data analysis for my economics research paper. The writer used SPSS
                                     for regression analysis and explained every statistical test clearly. All calculations
                                     were accurate, properly formatted in APA, and the methodology section was flawless.
                                     The originality report came back clean — no plagiarism at all."
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center">
                                         <div
                                             class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                             TM
                                         </div>
                                         <div>
-                                            <p class="font-bold text-gray-900" itemprop="name">Thomas M.</p>
+                                            <p class="font-bold text-gray-900">Thomas M.</p>
                                             <p class="text-sm text-gray-600">LSE, London</p>
                                         </div>
                                     </div>
@@ -839,33 +827,27 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
-                                itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                     <span class="text-2xl">🇨🇦</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "My literature review for my Master's thesis in education was overwhelming - needed to
                                     review 80+ studies. The researcher organized everything thematically, identified gaps in
                                     the literature, and created a perfect foundation for my thesis. Communication was
                                     excellent throughout."
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center">
                                         <div
                                             class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                             JK
                                         </div>
                                         <div>
-                                            <p class="font-bold text-gray-900" itemprop="name">Jennifer K.</p>
+                                            <p class="font-bold text-gray-900">Jennifer K.</p>
                                             <p class="text-sm text-gray-600">UofT, Canada</p>
                                         </div>
                                     </div>
@@ -874,88 +856,73 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "As an international student, academic English was challenging. My nursing research
                                     paper on patient outcomes required medical terminology and proper scientific formatting.
                                     The researcher had a PhD in Nursing and delivered exactly what I needed. Passed with
                                     distinction!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         AL
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Anna L.</p>
+                                        <p class="font-bold text-gray-900">Anna L.</p>
                                         <p class="text-sm text-gray-600">Nursing, Undergraduate</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "My environmental science research paper needed field data analysis and comparison with
                                     existing studies. The quality of research was incredible - used sources from Nature,
                                     Science, and Environmental Research journals. My professor asked if I planned to publish
                                     it!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         DH
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">David H.</p>
+                                        <p class="font-bold text-gray-900">David H.</p>
                                         <p class="text-sm text-gray-600">Environmental Science, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white rounded-xl p-6 shadow-md" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Research Paper Writing Service"></div>
+                            <div class="bg-white rounded-xl p-6 shadow-md">
                                 <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-xl">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "Working full-time while doing my PhD was impossible. This service helped with my
                                     dissertation methodology chapter. The researcher understood mixed-methods research
                                     perfectly and delivered rigorous work that passed my committee's review on first
                                     submission. Forever grateful!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         SP
                                     </div>
                                     <div>
-                                        <p class="font-bold text-gray-900" itemprop="name">Sarah P.</p>
+                                        <p class="font-bold text-gray-900">Sarah P.</p>
                                         <p class="text-sm text-gray-600">Sociology, PhD Candidate</p>
                                     </div>
                                 </div>

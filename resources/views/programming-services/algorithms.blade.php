@@ -631,12 +631,6 @@
             "priceCurrency": "USD",
             "lowPrice": "15",
             "highPrice": "500"
-          },
-          "aggregateRating": {
-            "@@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "2800",
-            "bestRating": "5"
           }
         }
         </script>

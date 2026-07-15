@@ -599,169 +599,139 @@
                         </h2>
 
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "My chemistry titration lab report was perfect — accurate calculations, a
                                     professional graph with a clean linear trendline, and thorough error analysis.
                                     My professor called it one of the best-formatted reports in class. Got a 98%!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white text-xs font-bold mr-3">
                                         BL
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Brian L.</p>
+                                        <p class="text-sm font-bold text-slate-900">Brian L.</p>
                                         <p class="text-xs text-slate-500">Chemistry, Sophomore</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Physics lab reports are so difficult for me, but this service made it easy.
                                     The uncertainty calculations were spot-on, the graphs had proper error bars,
                                     and the discussion connected our results to theory perfectly. Highly recommend!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white text-xs font-bold mr-3">
                                         AK
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Amanda K.</p>
+                                        <p class="text-sm font-bold text-slate-900">Amanda K.</p>
                                         <p class="text-xs text-slate-500">Physics, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "Needed help with my organic chemistry synthesis report. The writer understood
                                     reaction mechanisms perfectly, calculated percent yield correctly, and
                                     interpreted the IR and NMR spectra accurately. Excellent service!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-white text-xs font-bold mr-3">
                                         CM
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Chris M.</p>
+                                        <p class="text-sm font-bold text-slate-900">Chris M.</p>
                                         <p class="text-xs text-slate-500">Organic Chemistry, Senior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "My biology enzyme kinetics report was fantastic! The Michaelis-Menten graph had
                                     perfect curve fitting, the Km and Vmax calculations were correct, and the
                                     discussion explained enzyme behavior clearly. Professor gave it full marks!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-white text-xs font-bold mr-3">
                                         JW
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Jessica W.</p>
+                                        <p class="text-sm font-bold text-slate-900">Jessica W.</p>
                                         <p class="text-xs text-slate-500">Biochemistry, Junior</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "As a high school student, writing lab reports was new to me. This service
                                     helped me create a professional report for my AP Chemistry class with proper
                                     format, chemical equations, and data tables. I learned so much from it!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white text-xs font-bold mr-3">
                                         MR
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Mark R.</p>
+                                        <p class="text-sm font-bold text-slate-900">Mark R.</p>
                                         <p class="text-xs text-slate-500">AP Chemistry, High School</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Lab Report Writing Service"></div>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <div class="flex items-center mb-3">
-                                    <div class="flex text-yellow-400 text-sm" itemprop="reviewRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-yellow-400 text-sm">
                                         ⭐⭐⭐⭐⭐
                                     </div>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 mb-4 italic">
                                     "My environmental science field study had so much data to organize. The writer
                                     laid it out beautifully, built clear graphs of water quality over time, and
                                     linked our findings to environmental theory. Excellent work!"
                                 </p>
-                                <div class="flex items-center" itemprop="author" itemscope
-                                    itemtype="https://schema.org/Person">
+                                <div class="flex items-center">
                                     <div
                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-white text-xs font-bold mr-3">
                                         SN
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900" itemprop="name">Sarah N.</p>
+                                        <p class="text-sm font-bold text-slate-900">Sarah N.</p>
                                         <p class="text-xs text-slate-500">Environmental Science, Sophomore</p>
                                     </div>
                                 </div>

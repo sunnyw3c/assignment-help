@@ -862,26 +862,23 @@
 
                         <!-- Written Testimonials with Countries -->
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-2xl">🇺🇸</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic" itemprop="reviewBody">
+                                <p class="text-gray-700 leading-relaxed mb-4 italic">
                                     "I was struggling with my argumentative essay on climate change and had only 48 hours left. The writer delivered an exceptional essay with strong arguments and perfect APA citations. Got an A+ on my assignment!"
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             SK
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Sarah K.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Sarah K.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">UCLA, USA</p>
                                         </div>
                                     </div>
@@ -889,26 +886,23 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-xl">🇬🇧</span>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
                                     "The quality of the research essay was outstanding. My writer had a PhD in History and it really showed. Detailed analysis, scholarly sources, and impeccable Chicago-style formatting. Will definitely use again!"
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             MC
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Michael C.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Michael C.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">Oxford, UK</p>
                                         </div>
                                     </div>
@@ -916,26 +910,23 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-xl">🇨🇦</span>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
                                     "Needed help with my college application essay and was nervous about using a service. They helped me tell my story authentically while highlighting my strengths. Got accepted to my dream school!"
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             EP
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Emily P.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Emily P.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">Toronto, Canada</p>
                                         </div>
                                     </div>
@@ -943,26 +934,23 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-xl">🇦🇺</span>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
                                     "As an international student, English essays were challenging for me. This service not only delivered a great compare and contrast essay but helped me understand proper structure and academic writing conventions."
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             JL
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">James L.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">James L.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">Sydney, Australia</p>
                                         </div>
                                     </div>
@@ -970,26 +958,23 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-xl">🇸🇬</span>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
                                     "Working full-time and studying for my MBA was overwhelming. Their essay service saved me during finals week. Professional, fast, and the quality exceeded my expectations. Customer support was also incredibly helpful."
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             AR
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Amanda R.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Amanda R.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">NUS, Singapore</p>
                                         </div>
                                     </div>
@@ -997,26 +982,23 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Essay Writing Service"></div>
+                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                                 <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="5">
-                                        <meta itemprop="bestRating" content="5">
+                                    <div class="flex text-amber-400 text-sm">
                                         ★★★★★
                                     </div>
                                     <span class="text-xl">🇩🇪</span>
                                 </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic" itemprop="reviewBody">
+                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
                                     "I was skeptical at first, but the plagiarism report showed 100% originality and my professor praised the critical analysis. The revision process was smooth - they made all changes I requested within hours. Highly recommend!"
                                 </p>
-                                <div class="flex items-center justify-between" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <div class="w-9 h-9 bg-pink-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                                             DT
                                         </div>
                                         <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">David T.</p>
+                                            <p class="text-sm font-bold text-slate-900 dark:text-white">David T.</p>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">Munich, Germany</p>
                                         </div>
                                     </div>

@@ -456,127 +456,109 @@
                         </h2>
 
                         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "My thesis defense presentation was stunning! The designer transformed my dense research into clear, visually appealing slides with beautiful charts showing my data analysis results. My committee complimented the professional quality. The speaker notes helped me stay confident throughout. Successfully defended!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
                                         AL
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Andrew L.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Andrew L.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">PhD Student, Biology</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Needed a pitch deck for investors and this service delivered exactly what I needed. Professional design, compelling story flow, strong financial projections visualized beautifully. We secured seed funding! The presentation made our startup look polished and credible. Highly recommend for entrepreneurs!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">
                                         MC
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Michelle C.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Michelle C.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Startup Founder</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Marketing strategy presentation for my MBA capstone project looked amazing. Custom graphics, professional brand mockups, market analysis charts, and competitive positioning slides. Professor said it was the best-designed presentation she'd seen in years. Got an A+ on the project!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-xs font-bold text-white">
                                         JR
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">James R.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">James R.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">MBA Student</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Conference presentation on educational technology was perfect! The designer understood my research and created engaging visuals that explained complex concepts clearly. Audience engagement was high and I got great questions afterward. Several attendees asked about my presentation design!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-xs font-bold text-white">
                                         DK
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Dr. Diana K.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Dr. Diana K.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Education Researcher</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Sales presentation for a major client proposal needed to look professional and persuasive. The designer created a compelling story with great visuals, ROI calculations beautifully displayed, and strong call-to-action slides. We won the $500K contract! Investment paid off immediately."
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xs font-bold text-white">
                                         RB
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Robert B.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Robert B.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Sales Director</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900" itemscope itemtype="https://schema.org/Review">
-                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service" style="display:none"><meta itemprop="name" content="Presentation Design Service"></div>
-                                <div class="mb-3 flex items-center" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content="5">
-                                    <meta itemprop="bestRating" content="5">
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
+                                <div class="mb-3 flex items-center">
                                     <span class="text-amber-400">★★★★★</span>
                                 </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400" itemprop="reviewBody">
+                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
                                     "Classroom presentation for my teaching demonstration during job interview was outstanding. Clean design, age-appropriate graphics for elementary students, interactive elements, and clear learning objectives displayed. The hiring committee loved it and I got the teaching position!"
                                 </p>
-                                <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <div class="flex items-center gap-3">
                                     <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-xs font-bold text-white">
                                         EW
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white" itemprop="name">Emily W.</p>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Emily W.</p>
                                         <p class="text-xs text-slate-500 dark:text-slate-400">Education Graduate</p>
                                     </div>
                                 </div>

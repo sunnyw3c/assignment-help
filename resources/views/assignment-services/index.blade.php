@@ -32,11 +32,6 @@
                             "price": "{{ $service->base_price_per_page }}",
                             "priceCurrency": "USD"
                         }
-                    },
-                    "aggregateRating": {
-                        "@@type": "AggregateRating",
-                        "ratingValue": "{{ $service->rating }}",
-                        "ratingCount": "{{ $service->orders_completed }}"
                     }
                 }
             }@if(!$loop->last),@endif

@@ -378,7 +378,7 @@
 
     {{-- ===================================================
          SECTION 7 – STUDENT REVIEWS
-         SEO: AggregateRating signals; targets "programming help reviews"
+         Visible testimonials only (no self-serving review structured data)
     =================================================== --}}
     <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -719,6 +719,6 @@
     {{-- Schema Markup --}}
     <script type="application/ld+json">{"@@context":"https://schema.org","@@type":"FAQPage","mainEntity":[{"@@type":"Question","name":"Is getting programming help online safe and legal?","acceptedAnswer":{"@@type":"Answer","text":"Yes. Using a professional programming help service for academic assignments is legally permitted in most institutions, similar to using a tutor or study group."}},{"@@type":"Question","name":"How quickly can I get programming help?","acceptedAnswer":{"@@type":"Answer","text":"We accept urgent orders with delivery as fast as 1 hour for simple tasks. More complex projects typically require 24 to 72 hours."}},{"@@type":"Question","name":"What programming languages do you cover?","acceptedAnswer":{"@@type":"Answer","text":"Our experts cover 50+ languages including Python, Java, C, C++, C#, JavaScript, TypeScript, PHP, SQL, R, MATLAB, Ruby, Swift, Kotlin, Go, and Rust."}},{"@@type":"Question","name":"How much does programming help cost?","acceptedAnswer":{"@@type":"Answer","text":"Simple tasks start from $15. Standard assignments range from $25 to $60. Complex projects are quoted individually."}},{"@@type":"Question","name":"What if I am not satisfied with the delivered code?","acceptedAnswer":{"@@type":"Answer","text":"We offer free unlimited revisions within 72 hours of delivery. If not resolved, you are entitled to a refund under our money-back guarantee."}}]}</script>
 
-    <script type="application/ld+json">{"@@context":"https://schema.org","@@type":"Service","name":"Programming Help","description":"Professional programming help and coding assignment assistance for students. Expert coders available 24/7 for Python, Java, C++, JavaScript, SQL, and 50+ languages.","provider":{"@@type":"Organization","name":"AssignmentHelpUSA","url":"https://assignmenthelpusa.com"},"areaServed":"US","serviceType":"Programming Assignment Help","offers":{"@@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"15","highPrice":"500"},"aggregateRating":{"@@type":"AggregateRating","ratingValue":"4.9","reviewCount":"2600","bestRating":"5"}}</script>
+    <script type="application/ld+json">{"@@context":"https://schema.org","@@type":"Service","name":"Programming Help","description":"Professional programming help and coding assignment assistance for students. Expert coders available 24/7 for Python, Java, C++, JavaScript, SQL, and 50+ languages.","provider":{"@@type":"Organization","name":"AssignmentHelpUSA","url":"https://assignmenthelpusa.com"},"areaServed":"US","serviceType":"Programming Assignment Help","offers":{"@@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"15","highPrice":"500"}}</script>
 
 @endsection
