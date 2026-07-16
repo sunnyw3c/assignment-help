@@ -23,6 +23,7 @@ use App\Http\Controllers\PresentationDesignController;
 use App\Http\Controllers\ProofreadingEditingController;
 use App\Http\Controllers\ThesisDissertationController;
 use App\Http\Controllers\LawAssignmentController;
+use App\Http\Controllers\PricingController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,7 @@ Route::get('/thesis-dissertation-help', [ThesisDissertationController::class, 'i
 Route::get('/law-assignment-help', [LawAssignmentController::class, 'index'])->name('services.law-assignment.index');
 
 
+Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/how-it-works', [HowItWorksController::class, 'index'])->name('how-it-works');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');

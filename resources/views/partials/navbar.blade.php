@@ -148,6 +148,9 @@
                 <a href="{{ route('how-it-works') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('how-it-works') ? 'text-indigo-600 dark:text-white' : '' }}">
                     How It Works
                 </a>
+                <a href="{{ route('pricing') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('pricing') ? 'text-indigo-600 dark:text-white' : '' }}">
+                    Pricing
+                </a>
                 <a href="{{ route('experts') }}" class="text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white {{ request()->routeIs('experts') ? 'text-indigo-600 dark:text-white' : '' }}">
                     Experts
                 </a>
@@ -254,6 +257,7 @@
             </div>
 
             <a href="{{ route('how-it-works') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">How It Works</a>
+            <a href="{{ route('pricing') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Pricing</a>
             <a href="{{ route('experts') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Experts</a>
             <a href="{{ route('reviews') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Reviews</a>
             <a href="{{ route('faq') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">FAQ</a>
