@@ -206,7 +206,7 @@
                     </svg>
                 </button>
 
-                <button id="mobile-menu-btn" class="rounded-xl p-2 text-slate-600 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Toggle Menu">
+                <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="rounded-xl p-2 text-slate-600 transition-colors hover:bg-slate-100 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Toggle Menu">
                     <svg id="mobile-menu-burger" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -218,30 +218,40 @@
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:hidden">
+    <div id="mobile-menu" class="hidden max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-slate-100 bg-white transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:hidden">
         <div class="flex flex-col space-y-3 px-4 pb-6 pt-4 text-base font-semibold">
             <a href="{{ url('/') }}" class="rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Home</a>
 
             <div>
-                <button id="mobile-services-btn" class="flex w-full items-center justify-between rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800">
+                <button id="mobile-services-btn" type="button" aria-expanded="false" aria-controls="mobile-services-list" class="flex w-full items-center justify-between rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none dark:text-slate-300 dark:hover:bg-slate-800">
                     <span>Services</span>
                     <svg id="mobile-services-arrow" class="h-4 w-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div id="mobile-services-list" class="hidden space-y-4 px-3 py-2 text-sm font-medium">
+                <div id="mobile-services-list" class="hidden space-y-2 px-1 py-2 text-sm font-medium">
                     @foreach($serviceMenu as $section)
-                        <div class="rounded-xl border border-slate-100 p-3 dark:border-slate-800">
-                            <a href="{{ $section['href'] }}" class="{{ $section['accent'] }} block text-xs font-black uppercase tracking-wider">{{ $section['title'] }}</a>
-                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</p>
+                        <div class="overflow-hidden rounded-xl border border-slate-100 dark:border-slate-800">
+                            <button type="button" data-mobile-section="{{ $loop->index }}" aria-expanded="false" aria-controls="mobile-section-panel-{{ $loop->index }}" class="mobile-section-btn flex w-full items-start justify-between gap-3 p-3 text-left transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                                <span class="min-w-0">
+                                    <span class="{{ $section['accent'] }} block text-xs font-black uppercase tracking-wider">{{ $section['title'] }}</span>
+                                    <span class="mt-1 block text-xs leading-relaxed text-slate-500 dark:text-slate-400">{{ $section['description'] }}</span>
+                                </span>
+                                <svg class="mobile-section-arrow mt-0.5 h-4 w-4 shrink-0 text-slate-400 transition-transform dark:text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
 
-                            <div class="mt-3 space-y-3">
+                            <div id="mobile-section-panel-{{ $loop->index }}" class="mobile-section-panel hidden space-y-3 border-t border-slate-100 px-3 py-3 dark:border-slate-800">
+                                <a href="{{ $section['href'] }}" class="block rounded-lg bg-slate-50 px-2.5 py-1.5 text-center text-[10px] font-black uppercase tracking-widest text-slate-600 transition-colors hover:text-indigo-600 dark:bg-slate-800/60 dark:text-slate-300 dark:hover:text-white">
+                                    View all {{ $section['title'] }}
+                                </a>
                                 @foreach($section['groups'] as $groupTitle => $links)
                                     <div>
                                         <p class="mb-1 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{{ $groupTitle }}</p>
                                         <div class="grid grid-cols-1 gap-1">
                                             @foreach($links as $link)
-                                                <a href="{{ $link['href'] }}" class="block rounded-lg px-2 py-1.5 text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
+                                                <a href="{{ $link['href'] }}" class="block rounded-lg px-2 py-2 text-slate-600 transition-colors hover:bg-slate-50 hover:text-indigo-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white">
                                                     {{ $link['label'] }}
                                                 </a>
                                             @endforeach
@@ -252,7 +262,7 @@
                         </div>
                     @endforeach
 
-                    <a href="{{ route('services.index') }}" class="block rounded-xl bg-slate-100 px-3 py-2 text-center text-xs font-black uppercase tracking-widest text-slate-700 dark:bg-slate-800 dark:text-slate-200">Browse All Services</a>
+                    <a href="{{ route('services.index') }}" class="block rounded-xl bg-slate-100 px-3 py-2.5 text-center text-xs font-black uppercase tracking-widest text-slate-700 dark:bg-slate-800 dark:text-slate-200">Browse All Services</a>
                 </div>
             </div>
 
@@ -362,14 +372,19 @@
         const burgerIcon = document.getElementById('mobile-menu-burger');
         const closeIcon = document.getElementById('mobile-menu-close');
 
+        function setMobileMenu(open) {
+            if (!mobileMenu) return;
+            mobileMenu.classList.toggle('hidden', !open);
+            if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', String(open));
+            if (burgerIcon && closeIcon) {
+                burgerIcon.classList.toggle('hidden', open);
+                closeIcon.classList.toggle('hidden', !open);
+            }
+        }
+
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', function() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden', !isHidden);
-                if (burgerIcon && closeIcon) {
-                    burgerIcon.classList.toggle('hidden', isHidden);
-                    closeIcon.classList.toggle('hidden', !isHidden);
-                }
+                setMobileMenu(mobileMenu.classList.contains('hidden'));
             });
         }
 
@@ -379,12 +394,44 @@
 
         if (mobileServicesBtn && mobileServicesList) {
             mobileServicesBtn.addEventListener('click', function() {
-                const isHidden = mobileServicesList.classList.contains('hidden');
-                mobileServicesList.classList.toggle('hidden', !isHidden);
+                const willOpen = mobileServicesList.classList.contains('hidden');
+                mobileServicesList.classList.toggle('hidden', !willOpen);
+                mobileServicesBtn.setAttribute('aria-expanded', String(willOpen));
                 if (mobileServicesArrow) {
-                    mobileServicesArrow.classList.toggle('rotate-180', isHidden);
+                    mobileServicesArrow.classList.toggle('rotate-180', willOpen);
                 }
             });
         }
+
+        // Per-section accordions inside the mobile Services list — only one open at a time.
+        const mobileSectionBtns = document.querySelectorAll('.mobile-section-btn');
+
+        mobileSectionBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const panel = document.getElementById('mobile-section-panel-' + btn.dataset.mobileSection);
+                const arrow = btn.querySelector('.mobile-section-arrow');
+                const willOpen = panel && panel.classList.contains('hidden');
+
+                mobileSectionBtns.forEach(function(other) {
+                    if (other === btn) return;
+                    const otherPanel = document.getElementById('mobile-section-panel-' + other.dataset.mobileSection);
+                    const otherArrow = other.querySelector('.mobile-section-arrow');
+                    if (otherPanel) otherPanel.classList.add('hidden');
+                    if (otherArrow) otherArrow.classList.remove('rotate-180');
+                    other.setAttribute('aria-expanded', 'false');
+                });
+
+                if (panel) panel.classList.toggle('hidden', !willOpen);
+                if (arrow) arrow.classList.toggle('rotate-180', willOpen);
+                btn.setAttribute('aria-expanded', String(willOpen));
+            });
+        });
+
+        // Close the mobile menu if the viewport grows to the desktop breakpoint (lg = 1024px).
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                setMobileMenu(false);
+            }
+        });
     });
 </script>
