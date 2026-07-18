@@ -38,6 +38,106 @@
         {{-- ===================================================
              SECTION 2 – SUBJECTS GRID — 2.5rem ROUNDED CARD PATTERN
         =================================================== --}}
+        {{-- SEO overview: placed high on the page to establish topic and search intent before service details. --}}
+        <section class="relative overflow-hidden bg-white py-16 sm:py-20 dark:bg-slate-900" aria-labelledby="homework-overview-heading">
+            <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 dark:opacity-10"></div>
+
+            <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-6xl rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 shadow-[0_30px_80px_-55px_rgba(15,23,42,0.45)] sm:p-8 md:p-12 dark:border-slate-800 dark:from-slate-900 dark:to-slate-950">
+                    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+                        <div>
+                            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 dark:border-blue-900/60 dark:bg-blue-950/40">
+                                <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-extrabold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-300">Homework Help USA</span>
+                            </div>
+
+                            <h2 id="homework-overview-heading" class="mb-5 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl dark:text-white">
+                                Online Homework Help Built Around Your Course and Deadline
+                            </h2>
+                            <p class="mb-7 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
+                                Our online homework help connects college students with subject specialists for clear, original academic guidance. Share your question, grading rubric, and supporting files to receive a solution you can review, understand, and use to strengthen your own work.
+                            </p>
+
+                            <div class="mb-8 space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    </span>
+                                    <p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">Subject-matched expertise:</span> Explore homework assistance for <a href="{{ url('/homework-help/math') }}" class="font-semibold text-blue-600 underline decoration-blue-200 underline-offset-2 hover:text-blue-700 dark:text-blue-400">math</a>, science, coding, business, nursing, and writing.</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    </span>
+                                    <p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">Useful explanations:</span> Formulas, reasoning, citations, and working steps are included where required.</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-400">
+                                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                    </span>
+                                    <p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300"><span class="font-bold text-slate-900 dark:text-white">A transparent timeline:</span> The scope and delivery window are confirmed before work begins.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
+                                <a href="{{ route('order') }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 py-4 font-black text-white transition-colors hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500">
+                                    Get Homework Help
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                                </a>
+                                <a href="#subjects" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-7 py-4 font-black text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
+                                    Explore Homework Subjects
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_24px_60px_-30px_rgba(15,23,42,0.45)] dark:border-slate-800 dark:bg-slate-900">
+                                <img src="{{ asset('images/homework-help-tutoring.png') }}" alt="College student solving math homework during an online tutoring session" width="1536" height="1024" class="h-[300px] w-full object-cover object-center sm:h-[380px]" loading="lazy" decoding="async">
+                                <div class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 shadow-sm backdrop-blur-sm">
+                                    <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                                    <span class="text-[11px] font-extrabold uppercase tracking-[0.12em] text-slate-800">Student-first support</span>
+                                </div>
+                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10"></div>
+                                <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-900/55 to-transparent p-6 pt-20 text-base font-bold leading-relaxed text-white">
+                                    Clear solutions, helpful working steps, and dependable delivery for busy students.
+                                </figcaption>
+                            </figure>
+
+                            <div class="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+                                <div class="rounded-xl border border-slate-200 bg-white p-3 text-center sm:p-4 dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-lg font-black text-slate-900 sm:text-xl dark:text-white">24/7</p>
+                                    <p class="text-[10px] uppercase tracking-wide text-slate-500 sm:text-xs">Support</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-200 bg-white p-3 text-center sm:p-4 dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-lg font-black text-slate-900 sm:text-xl dark:text-white">50+</p>
+                                    <p class="text-[10px] uppercase tracking-wide text-slate-500 sm:text-xs">Subjects</p>
+                                </div>
+                                <div class="rounded-xl border border-slate-200 bg-white p-3 text-center sm:p-4 dark:border-slate-800 dark:bg-slate-900">
+                                    <p class="text-lg font-black text-slate-900 sm:text-xl dark:text-white">98%</p>
+                                    <p class="text-[10px] uppercase tracking-wide text-slate-500 sm:text-xs">On-time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mx-auto mt-6 grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-1 text-sm font-black text-slate-900 dark:text-white">Step-by-Step Solutions</h3>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">See the method behind the answer with organized calculations, reasoning, and notes.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-1 text-sm font-black text-slate-900 dark:text-white">Requirements Followed</h3>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">Your rubric, course level, file format, and citation style guide every deliverable.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+                        <h3 class="mb-1 text-sm font-black text-slate-900 dark:text-white">Private Collaboration</h3>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">Share files and receive progress updates through a secure, confidential process.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="py-16 sm:py-20 bg-slate-50 relative overflow-hidden dark:bg-slate-950" id="subjects">
             <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
             
