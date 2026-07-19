@@ -8,7 +8,11 @@
         {{-- ===================================================
              HERO SECTION — COPY FROM HOME PAGE
         =================================================== --}}
-        <x-creative-hero :service="$service" />
+        <x-creative-hero 
+            :service="$service" 
+            title="Professional Homework Help for Students Across the USA" 
+            subtitle="Get reliable online homework help from vetted US tutors. Receive step-by-step guidance across 100+ subjects to master concepts and meet tight deadlines." 
+        />
 
         {{-- ===================================================
              SECTION 1 – TRUST BAR / SOCIAL PROOF

@@ -127,11 +127,11 @@
     $isInOnlineClass = $defaultSubject && in_array($defaultSubject, $onlineClassSubjects);
 @endphp
 
-<section class="ahusa-hero relative flex items-start overflow-hidden py-24 max-lg:py-20 max-sm:py-[72px]" data-creative-hero>
+<section class="ahusa-hero relative flex items-start overflow-hidden py-16 lg:py-20 max-sm:py-12" data-creative-hero>
     <div class="ahusa-dot-grid absolute inset-0 z-0 pointer-events-none opacity-50"></div>
     <div class="ahusa-radial absolute inset-0 z-[1] pointer-events-none"></div>
 
-    <div class="relative z-[2] w-full max-w-[1260px] mx-auto px-8 max-lg:px-5 max-sm:px-3.5 flex items-start gap-11 max-lg:flex-col max-lg:gap-7 max-sm:gap-[22px] min-h-[calc(100vh-96px)] max-lg:min-h-0">
+    <div class="relative z-[2] w-full max-w-[1260px] mx-auto px-8 max-lg:px-5 max-sm:px-3.5 flex items-start gap-11 max-lg:flex-col max-lg:gap-7 max-sm:gap-[22px]">
         <div class="flex-1 min-w-0 flex flex-col gap-5 pt-2 max-lg:items-center max-lg:text-center max-lg:pt-0 max-lg:gap-4">
             @if (!empty($breadcrumbs))
                 <nav class="mb-2 self-start max-lg:mx-auto">
