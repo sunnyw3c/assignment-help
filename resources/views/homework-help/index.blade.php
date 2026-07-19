@@ -11,7 +11,7 @@
         <x-creative-hero 
             :service="$service" 
             title="Professional Homework Help for Students Across the USA" 
-            subtitle="Get reliable online homework help from vetted US tutors. Receive step-by-step guidance across 100+ subjects to master concepts and meet tight deadlines." 
+            subtitle="Get reliable online homework help from a trusted homework helper. Receive step-by-step guidance across 100+ subjects to master concepts and meet tight deadlines." 
         />
 
         {{-- ===================================================
@@ -432,10 +432,10 @@
                             <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-white/10 transition-colors">
                                 <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
                                     <span class="w-1 h-5 bg-blue-500 rounded-full inline-block"></span>
-                                    Vetted US Academic Tutors
+                                    Vetted US Homework Helpers
                                 </h3>
                                 <p>
-                                    Every <strong class="text-white font-semibold">online homework help</strong> request is paired with a subject-certified expert holding a Master's or PhD degree from accredited US institutions. From calculus derivations to literature analysis, your helper knows your course expectations inside out.
+                                    Every <strong class="text-white font-semibold">online homework help</strong> request is paired with a dedicated <strong class="text-white font-semibold">homework helper</strong> holding a Master's or PhD degree from accredited US institutions. From calculus derivations to literature analysis, your helper knows your course expectations inside out.
                                 </p>
                             </div>
 

@@ -195,10 +195,6 @@
                             d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
-                <a href="{{ route('services.index') }}"
-                    class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">
-                    View All Services
-                </a>
             </div>
         </div>
     </section>

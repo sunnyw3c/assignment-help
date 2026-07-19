@@ -7,7 +7,6 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AssignmentServiceController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\AllServicesController;
 use App\Http\Controllers\HowItWorksController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FaqController;
@@ -32,9 +31,6 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/programming-assignment-help', [LanguageController::class, 'index'])->name('languages.index');
 // Route::get('/programming-assignment-help/{slug}', [LanguageController::class, 'show'])->name('languages.show');
-
-// All Services (Programming + Assignment)
-Route::get('/services', [AllServicesController::class, 'index'])->name('services.index');
 
 // Programming Services (SEO-friendly hierarchical URLs)
 Route::get('/programming-help', [ServiceController::class, 'index'])->name('services.programming.index');

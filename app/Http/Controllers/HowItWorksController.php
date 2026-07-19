@@ -11,8 +11,8 @@ class HowItWorksController extends Controller
         $steps = [
             [
                 'step' => 1,
-                'title' => 'Submit Your Requirements',
-                'description' => 'Tell us about your programming project, including language, deadline, and specific requirements.',
+                'title' => 'Share Your Requirements',
+                'description' => 'Tell us what you need, when it is due, and any instructions or files your expert should follow.',
                 'icon' => '📝',
                 'details' => [
                     'Upload your assignment details or project brief',
@@ -24,7 +24,7 @@ class HowItWorksController extends Controller
             ],
             [
                 'step' => 2,
-                'title' => 'Expert Assignment & Quote',
+                'title' => 'Get Matched & Review Your Quote',
                 'description' => 'Within 15–30 minutes, we match you with the best expert for your project and provide a detailed, transparent quote.',
                 'icon' => '👨‍💻',
                 'details' => [
@@ -37,8 +37,8 @@ class HowItWorksController extends Controller
             ],
             [
                 'step' => 3,
-                'title' => 'Development & Progress Updates',
-                'description' => 'Your dedicated developer works on your project with regular progress updates.',
+                'title' => 'Track the Work in Progress',
+                'description' => 'Your expert follows the approved brief while you receive updates and can clarify requirements along the way.',
                 'icon' => '⚡',
                 'details' => [
                     'Real-time development progress tracking',
@@ -50,8 +50,8 @@ class HowItWorksController extends Controller
             ],
             [
                 'step' => 4,
-                'title' => 'Review & Final Delivery',
-                'description' => 'Get your completed project with documentation, testing, and free revisions.',
+                'title' => 'Review the Final Delivery',
+                'description' => 'Receive the completed work, review every requirement, and request eligible revisions if anything needs adjustment.',
                 'icon' => '✅',
                 'details' => [
                     'Complete source code with documentation',

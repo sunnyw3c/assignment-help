@@ -59,7 +59,6 @@ class SitemapController extends Controller
             '/reviews',
             '/experts',
             '/about',
-            '/services',
         ] as $path) {
             $urls[] = ['loc' => url($path), 'lastmod' => $today, 'changefreq' => 'weekly', 'priority' => '0.8'];
         }

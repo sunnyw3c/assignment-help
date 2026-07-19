@@ -26,14 +26,34 @@
                 <p class="text-purple-100 mt-2">Fill out the form below to get started</p>
             </div>
 
+@php
+    $reqDl = request('deadline');
+    $initDl = old('deadline', '');
+    if ($reqDl) {
+        if ($reqDl === '24-hours' || $reqDl === '24h') {
+            $initDl = now()->addHours(24)->format('Y-m-d\TH:i');
+        } elseif ($reqDl === '6-hours' || $reqDl === '6h') {
+            $initDl = now()->addHours(6)->format('Y-m-d\TH:i');
+        } elseif ($reqDl === '3-days') {
+            $initDl = now()->addDays(3)->format('Y-m-d\TH:i');
+        } elseif ($reqDl === '7-days') {
+            $initDl = now()->addDays(7)->format('Y-m-d\TH:i');
+        }
+    }
+    $reqLevel = request('level') ?? request('academic_level');
+    if ($reqLevel === 'undergraduate') {
+        $reqLevel = 'college';
+    }
+@endphp
+
             <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data" class="p-8 space-y-8"
                   x-data="{
-                      assignmentType: '{{ request('assignment_service') ? 'assignment' : 'programming' }}',
+                      assignmentType: '{{ request('service_type') ?? (request('assignment_service') ? 'assignment' : 'programming') }}',
                       serviceId: '{{ request('assignment_service') ?? '' }}',
-                      academicLevel: '',
-                      pages: 1,
+                      academicLevel: '{{ $reqLevel ?? 'college' }}',
+                      pages: {{ (int)(request('pages') ?? 1) }},
                       wordCount: 0,
-                      deadline: '',
+                      deadline: '{{ $initDl }}',
                       difficulty: 'Beginner',
                       assignmentTypeValue: '',
 
