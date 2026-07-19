@@ -101,7 +101,6 @@
             ['label' => 'Home', 'url' => route('home')],
         ];
         if ($serviceIsObj) {
-            $breadcrumbs[] = ['label' => 'All Services', 'url' => route('services.index')];
             $breadcrumbs[] = ['label' => $service->name, 'url' => ''];
         } elseif ($serviceIsArray) {
             $breadcrumbs[] = ['label' => 'Programming Help', 'url' => route('services.programming.index')];

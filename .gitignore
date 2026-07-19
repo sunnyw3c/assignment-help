@@ -16,6 +16,7 @@
 /public/hot
 /public/storage
 /public/build
+public/build/manifest.json
 /public/.htaccess
 /storage/*.key
 /storage/pail
