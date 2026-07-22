@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Math Homework Help & Online Solver | Step-by-Step College Math Answers')
-@section('description', 'Get expert math homework help & online step-by-step solutions for calculus, statistics, linear algebra, differential equations, and discrete math. 24/7 live tutors & 100% calculation accuracy.')
+@section('title', 'Math Homework Help & Solver | Step-by-Step Math Answers')
+@section('description', 'Get expert math homework help & step-by-step online solver solutions for calculus, statistics, algebra & ODE. 24/7 live tutors & 100% accuracy.')
 @section('canonical', route('services.homework-help.math'))
 
 @section('content')
@@ -11,8 +11,8 @@
         =================================================== --}}
         <x-creative-hero 
             :service="$service" 
-            title="Online Math Homework Solver &amp; Step-by-Step Help" 
-            subtitle="Overcome complex calculus integrals, matrix algebra, statistics regressions, and differential equations. Get guaranteed 100% accurate, step-by-step math assignment solutions from PhD mathematics experts." 
+            title="Math Homework Help &amp; Online Step-by-Step Solver" 
+            subtitle="Struggling with calculus integrals, statistics regressions, matrix algebra, or differential equations? Get <strong class='text-[#f16700]'>100% accurate, step-by-step math assignment solutions</strong> from 24/7 live PhD mathematics experts." 
             serviceType="Technical"
             defaultSubject="Mathematics"
         />
@@ -757,7 +757,7 @@
             {
               "@@type": "Service",
               "@@id": "{{ route('services.homework-help.math') }}#service",
-              "name": "Online Math Homework Solver & Step-by-Step Help",
+              "name": "Math Homework Help & Online Step-by-Step Solver",
               "serviceType": "Mathematics Homework Help & Problem Solver",
               "provider": {
                 "@@type": "EducationalOrganization",
