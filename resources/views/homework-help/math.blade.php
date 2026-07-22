@@ -4,6 +4,14 @@
 @section('description', 'Get expert math homework help & step-by-step online solver solutions for calculus, statistics, algebra & ODE. 24/7 live tutors & 100% accuracy.')
 @section('canonical', route('services.homework-help.math'))
 
+@php
+    $mathBreadcrumbs = [
+        ['label' => 'Home', 'url' => route('home')],
+        ['label' => 'Homework Help', 'url' => route('services.homework-help.index')],
+        ['label' => 'Math Homework Help', 'url' => '']
+    ];
+@endphp
+
 @section('content')
     <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
         {{-- ===================================================
@@ -15,6 +23,7 @@
             subtitle="Struggling with calculus integrals, statistics regressions, matrix algebra, or differential equations? Get <strong class='text-[#f16700]'>100% accurate, step-by-step math assignment solutions</strong> from 24/7 live PhD mathematics experts." 
             serviceType="Technical"
             defaultSubject="Mathematics"
+            :breadcrumbs="$mathBreadcrumbs"
         />
 
         {{-- ===================================================

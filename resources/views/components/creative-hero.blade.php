@@ -101,7 +101,12 @@
             ['label' => 'Home', 'url' => route('home')],
         ];
         if ($serviceIsObj) {
-            $breadcrumbs[] = ['label' => $service->name, 'url' => ''];
+            if ($defaultSubject && strtolower($defaultSubject) !== strtolower($service->name)) {
+                $breadcrumbs[] = ['label' => $service->name, 'url' => route('services.homework-help.index')];
+                $breadcrumbs[] = ['label' => $defaultSubject . ' Homework Help', 'url' => ''];
+            } else {
+                $breadcrumbs[] = ['label' => $service->name, 'url' => ''];
+            }
         } elseif ($serviceIsArray) {
             $breadcrumbs[] = ['label' => 'Programming Help', 'url' => route('services.programming.index')];
             $breadcrumbs[] = ['label' => $service['name'] ?? 'Service Details', 'url' => ''];
