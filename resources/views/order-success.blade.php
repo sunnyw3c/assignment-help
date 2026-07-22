@@ -55,11 +55,11 @@
                 </div>
 
                 @if(session('info'))
-                    <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 flex gap-3 items-start animate-fade-in">
+                    <div class="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/50 rounded-2xl p-4 flex gap-3 items-start animate-fade-in">
                         <span class="text-xl">✨</span>
                         <div>
-                            <p class="text-sm font-bold text-indigo-900">Account Created!</p>
-                            <p class="text-xs text-indigo-700 font-medium leading-relaxed">We've automatically created an account for you. You're logged in and can track your order in the dashboard.</p>
+                            <p class="text-sm font-bold text-indigo-900 dark:text-indigo-200">Account Created!</p>
+                            <p class="text-xs text-indigo-700 dark:text-indigo-300 font-medium leading-relaxed">We've automatically created an account for you. You're logged in and can track your order in the dashboard.</p>
                         </div>
                     </div>
                 @endif
@@ -68,10 +68,10 @@
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row items-center gap-4">
-            <a href="{{ route('dashboard') }}" class="w-full sm:w-auto px-10 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transform hover:-translate-y-1 transition-all shadow-xl shadow-slate-200 text-center">
+            <a href="{{ route('dashboard') }}" class="w-full sm:w-auto px-10 py-4 bg-slate-900 dark:bg-blue-600 text-white font-bold rounded-2xl hover:bg-slate-800 dark:hover:bg-blue-500 transform hover:-translate-y-1 transition-all shadow-xl shadow-slate-200 dark:shadow-none text-center">
                 View My Dashboard
             </a>
-            <a href="{{ route('order') }}" class="w-full sm:w-auto px-10 py-4 bg-white text-slate-600 font-bold rounded-2xl border-2 border-slate-100 hover:border-slate-200 transform hover:-translate-y-1 transition-all text-center">
+            <a href="{{ route('order') }}" class="w-full sm:w-auto px-10 py-4 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-200 font-bold rounded-2xl border-2 border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700 transform hover:-translate-y-1 transition-all text-center">
                 Place Another Order
             </a>
         </div>

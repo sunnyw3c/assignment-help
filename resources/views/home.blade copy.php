@@ -648,7 +648,7 @@
                     Covering Every <span class="text-blue-600">Academic Milestone.</span>
                 </h2>
                 <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto dark:text-slate-500">
-                    From high school coursework to doctoral research, our experienced assignment helper provides high-quality, confidential, and subject-specific support at every stage of your academic journey.
+                    From foundational high school coursework to advanced post-doctoral research, our USA-based experts deliver institutional precision at every stage.
                 </p>
             </div>
 
@@ -667,7 +667,7 @@
 
                     <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">High School</h3>
                     <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
-                        Support for Grades 9–12, including AP coursework, subject tutoring, and academic skill development.
+                        Foundational assistance for grades 9-12, focusing on AP coursework and GPA optimization.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
@@ -733,7 +733,7 @@
 
                     <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">Graduate</h3>
                     <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
-                        Expert support for Master's students, including thesis guidance, research support, and data analysis assistance.
+                        Sophisticated academic solutions for Master's programs, including advanced analytics and thesis work.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
@@ -767,7 +767,7 @@
 
                     <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight dark:text-white">Doctoral (PhD)</h3>
                     <p class="text-slate-500 text-sm font-medium leading-relaxed mb-8 flex-grow dark:text-slate-500">
-                        Professional support for dissertations, research proposals, manuscript editing, and publication preparation.
+                        Elite-level support for dissertation writing, research proposals, and academic publishing.
                     </p>
 
                     <div class="space-y-4 pt-8 border-t border-slate-50">
