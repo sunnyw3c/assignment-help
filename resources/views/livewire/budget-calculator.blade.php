@@ -29,16 +29,15 @@
                             <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-50 text-[10px] text-blue-700 dark:bg-blue-500/10 dark:text-blue-300">1</span>
                             Paper length
                         </label>
-                        <span class="text-xs font-medium text-slate-400">≈ {{ number_format($pages * 250) }} words</span>
                     </div>
 
-                    <div class="flex h-[41px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50 transition focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-950">
-                        <button type="button" wire:click="decrementPages" class="flex w-11 shrink-0 items-center justify-center border-r border-slate-200 text-slate-500 transition hover:bg-white hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:border-slate-700 dark:hover:bg-slate-900" aria-label="Decrease page count">
+                    <div class="flex h-[52px] overflow-hidden rounded-xl border-2 border-gray-300 bg-white transition focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-950">
+                        <button type="button" wire:click="decrementPages" class="flex w-12 shrink-0 items-center justify-center border-r-2 border-gray-300 text-slate-600 transition hover:bg-slate-100 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-900" aria-label="Decrease page count">
                             <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M4 9.25a.75.75 0 0 0 0 1.5h12a.75.75 0 0 0 0-1.5H4Z"/></svg>
                         </button>
-                        <input id="estimate-pages" type="number" min="1" max="100" wire:model.live.debounce.300ms="pages" class="min-w-0 flex-1 border-0 bg-transparent px-3 text-center text-sm font-black text-slate-900 [appearance:textfield] focus:ring-0 dark:text-white [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" aria-describedby="estimate-pages-help">
+                        <input id="estimate-pages" type="number" min="1" max="100" wire:model.live.debounce.300ms="pages" class="min-w-0 flex-1 border-0 bg-transparent px-3 text-center text-sm font-semibold text-slate-900 [appearance:textfield] focus:ring-0 dark:text-white [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" aria-describedby="estimate-pages-help">
                         <span id="estimate-pages-help" class="flex items-center text-xs font-bold text-slate-400">{{ $pages === 1 ? 'page' : 'pages' }}</span>
-                        <button type="button" wire:click="incrementPages" class="ml-3 flex w-11 shrink-0 items-center justify-center border-l border-slate-200 text-slate-500 transition hover:bg-white hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:border-slate-700 dark:hover:bg-slate-900" aria-label="Increase page count">
+                        <button type="button" wire:click="incrementPages" class="ml-3 flex w-12 shrink-0 items-center justify-center border-l-2 border-gray-300 text-slate-600 transition hover:bg-slate-100 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-900" aria-label="Increase page count">
                             <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.75 4a.75.75 0 0 0-1.5 0v5.25H4a.75.75 0 0 0 0 1.5h5.25V16a.75.75 0 0 0 1.5 0v-5.25H16a.75.75 0 0 0 0-1.5h-5.25V4Z"/></svg>
                         </button>
                     </div>
@@ -51,13 +50,13 @@
                             Academic level
                         </label>
                         <div class="relative">
-                            <select id="estimate-level" wire:model.live="academicLevel" class="h-[41px] w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 pl-3 pr-9 text-[13px] font-bold text-slate-800 transition hover:border-slate-300 focus:border-violet-500 focus:outline-none focus:ring-4 focus:ring-violet-500/10 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200 dark:hover:border-slate-600">
+                            <select id="estimate-level" wire:model.live="academicLevel" class="h-[52px] w-full appearance-none rounded-xl border-2 border-gray-300 bg-white px-4 pr-10 text-sm font-semibold text-slate-800 transition hover:border-gray-400 focus:border-violet-500 focus:outline-none focus:ring-4 focus:ring-violet-500/10 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200 dark:hover:border-slate-600">
                                 <option value="high-school">High school</option>
                                 <option value="undergraduate">Undergraduate</option>
                                 <option value="masters">Master's degree</option>
                                 <option value="phd">PhD / Doctoral</option>
                             </select>
-                            <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+                            <svg class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
                         </div>
                     </div>
 
@@ -67,7 +66,7 @@
                             Turnaround
                         </label>
                         <div class="relative">
-                            <select id="estimate-deadline" wire:model.live="deadline" class="h-[41px] w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 pl-3 pr-9 text-[13px] font-bold text-slate-800 transition hover:border-slate-300 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200 dark:hover:border-slate-600">
+                            <select id="estimate-deadline" wire:model.live="deadline" class="h-[52px] w-full appearance-none rounded-xl border-2 border-gray-300 bg-white px-4 pr-10 text-sm font-semibold text-slate-800 transition hover:border-gray-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/10 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-200 dark:hover:border-slate-600">
                                 <option value="3-hours">3 hours — urgent</option>
                                 <option value="6-hours">6 hours</option>
                                 <option value="12-hours">12 hours</option>
@@ -79,8 +78,7 @@
                                 <option value="14-days">14 days — better value</option>
                                 <option value="30-days">30 days — best value</option>
                             </select>
-                            <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
-                        </div>
+                            <svg class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
                     </div>
                 </div>
             </div>
