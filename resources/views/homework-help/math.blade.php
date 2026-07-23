@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Math Homework Help & Solver | Step-by-Step Math Answers')
-@section('description', 'Get expert math homework help & step-by-step online solver solutions for calculus, statistics, algebra & ODE. 24/7 live tutors & 100% accuracy.')
+@section('title', 'Math Homework Help & Step-by-Step Solver | 24/7 US Math Experts')
+@section('description', 'Need math homework help? Get 100% accurate, step-by-step solver solutions & live 24/7 PhD expert help for Calculus, Statistics, MyMathLab, ALEKS, Algebra & ODE.')
 @section('canonical', route('services.homework-help.math'))
 
 @php
@@ -19,8 +19,8 @@
         =================================================== --}}
         <x-creative-hero 
             :service="$service" 
-            title="Math Homework Help &amp; Online Step-by-Step Solver" 
-            subtitle="Struggling with calculus integrals, statistics regressions, matrix algebra, or differential equations? Get <strong class='text-[#f16700]'>100% accurate, step-by-step math assignment solutions</strong> from 24/7 live PhD mathematics experts." 
+            title="Math Homework Help &amp; Step-by-Step Online Solver" 
+            subtitle="Struggling with calculus integrals, MyMathLab quizzes, ALEKS assignments, statistics regressions, matrix algebra, or ODEs? Get <strong class='text-[#f16700]'>100% accurate, step-by-step math assignment solutions</strong> from 24/7 live PhD mathematics experts." 
             serviceType="Technical"
             defaultSubject="Mathematics"
             :breadcrumbs="$mathBreadcrumbs"
@@ -41,7 +41,7 @@
                     <div class="flex items-center gap-2">
                         <span class="flex h-2.5 w-2.5 animate-pulse rounded-full bg-emerald-500"></span>
                         <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                            <strong class="text-slate-900 dark:text-white">28 PhD Tutors</strong> Online Now
+                            <strong class="text-slate-900 dark:text-white">32 US PhD Tutors</strong> Online Now
                         </span>
                     </div>
                     <div class="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-800"></div>
@@ -63,7 +63,38 @@
         </section>
 
         {{-- ===================================================
-             SECTION 2 – INTERACTIVE MATH SOLVER DEMO SHOWCASE
+             SECTION 1.5 – US ONLINE HOMEWORK PORTALS BADGES
+        =================================================== --}}
+        <section class="py-12 bg-slate-100 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-6">
+                    Supported US College Math Homework Portals &amp; LMS Platforms
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm">
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-blue-600 dark:text-blue-400">📘</span> Pearson MyLab / MyMathLab
+                    </span>
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-purple-600 dark:text-purple-400">⚡</span> McGraw-Hill ALEKS
+                    </span>
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-emerald-600 dark:text-emerald-400">📊</span> Cengage WebAssign
+                    </span>
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-rose-600 dark:text-rose-400">🎓</span> Canvas LMS
+                    </span>
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-cyan-600 dark:text-cyan-400">📐</span> WileyPLUS
+                    </span>
+                    <span class="px-4 py-2.5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="text-amber-600 dark:text-amber-400">💻</span> Blackboard Learn
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 2 – INTERACTIVE MATH SOLVER DEMO SHOWCASE + GENERATED UI PREVIEW
         =================================================== --}}
         <section class="py-16 sm:py-24 bg-slate-900 relative overflow-hidden text-white" id="interactive-solver">
             <div class="absolute inset-0 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-10"></div>
@@ -74,165 +105,183 @@
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/20">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
-                        Live Interactive Demonstration
+                        Live Step-by-Step Solver Interface
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
                         See How Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Step-by-Step Math Solver</span> Works
                     </h2>
                     <p class="text-slate-400 text-lg leading-relaxed">
-                        Unlike generic automated apps that output simple final numbers, our math experts provide fully derived equations, formula citations, graph coordinates, and explanatory notes so you score top marks.
+                        Unlike automated apps that output simple final numbers, our math experts provide fully derived equations, formula citations, graph coordinates, and explanatory notes so you score top marks.
                     </p>
                 </div>
 
-                <!-- Interactive Tab Component (Alpine.js) -->
-                <div x-data="{ activeTab: 'calculus' }" class="max-w-5xl mx-auto bg-slate-800/80 backdrop-blur-xl border border-slate-700/80 rounded-3xl p-6 sm:p-10 shadow-2xl">
-                    <!-- Tab Buttons -->
-                    <div class="flex flex-wrap gap-2 mb-8 border-b border-slate-700/60 pb-6 justify-center">
-                        <button 
-                            x-on:click="activeTab = 'calculus'" 
-                            :class="activeTab === 'calculus' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
-                            class="px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 flex items-center gap-2"
-                        >
-                            <span>∫</span> Calculus (Integrals)
-                        </button>
-                        <button 
-                            x-on:click="activeTab = 'stats'" 
-                            :class="activeTab === 'stats' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
-                            class="px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 flex items-center gap-2"
-                        >
-                            <span>📊</span> Statistics (t-Test)
-                        </button>
-                        <button 
-                            x-on:click="activeTab = 'algebra'" 
-                            :class="activeTab === 'algebra' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
-                            class="px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 flex items-center gap-2"
-                        >
-                            <span>📐</span> Linear Algebra (Matrices)
-                        </button>
-                        <button 
-                            x-on:click="activeTab = 'ode'" 
-                            :class="activeTab === 'ode' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
-                            class="px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 flex items-center gap-2"
-                        >
-                            <span>⚡</span> Differential Equations
-                        </button>
-                    </div>
+                <div class="grid lg:grid-cols-12 gap-8 items-center max-w-6xl mx-auto">
+                    <!-- Interactive Tab Component (Alpine.js) -->
+                    <div x-data="{ activeTab: 'calculus' }" class="lg:col-span-7 bg-slate-800/80 backdrop-blur-xl border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                        <!-- Tab Buttons -->
+                        <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-700/60 pb-5 justify-start">
+                            <button 
+                                x-on:click="activeTab = 'calculus'" 
+                                :class="activeTab === 'calculus' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
+                                class="px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2"
+                            >
+                                <span>∫</span> Calculus
+                            </button>
+                            <button 
+                                x-on:click="activeTab = 'stats'" 
+                                :class="activeTab === 'stats' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
+                                class="px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2"
+                            >
+                                <span>📊</span> Statistics
+                            </button>
+                            <button 
+                                x-on:click="activeTab = 'algebra'" 
+                                :class="activeTab === 'algebra' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
+                                class="px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2"
+                            >
+                                <span>📐</span> Linear Algebra
+                            </button>
+                            <button 
+                                x-on:click="activeTab = 'ode'" 
+                                :class="activeTab === 'ode' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-700/50'"
+                                class="px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2"
+                            >
+                                <span>⚡</span> Differential Eq.
+                            </button>
+                        </div>
 
-                    <!-- Tab 1: Calculus -->
-                    <div x-show="activeTab === 'calculus'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-6">
-                        <div class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-700/60">
-                            <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Problem Statement</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full font-mono">MATH 2413 - Calculus I</span>
-                        </div>
-                        <div class="p-4 bg-slate-950 font-mono text-emerald-400 text-lg rounded-xl border border-slate-800">
-                            Evaluate the indefinite integral: &nbsp; <strong>∫ x · e^(2x) dx</strong>
-                        </div>
-                        <div class="space-y-4 text-slate-300 text-sm">
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
-                                    Apply Integration by Parts Formula: ∫ u dv = u·v - ∫ v du
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8">Choose u = x ⇒ du = dx &nbsp;|&nbsp; Choose dv = e^(2x) dx ⇒ v = (1/2)e^(2x)</p>
+                        <!-- Tab 1: Calculus -->
+                        <div x-show="activeTab === 'calculus'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-4">
+                            <div class="flex items-center justify-between bg-slate-900/80 p-3.5 rounded-xl border border-slate-700/60">
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Problem Statement</span>
+                                <span class="text-[10px] bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded-full font-mono">MATH 2413 - Calculus I</span>
                             </div>
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">2</span>
-                                    Substitute and Evaluate the Remaining Integral
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8 font-mono text-blue-300">∫ x·e^(2x) dx = (1/2)x·e^(2x) - ∫ (1/2)e^(2x) dx = (1/2)x·e^(2x) - (1/4)e^(2x) + C</p>
+                            <div class="p-3.5 bg-slate-950 font-mono text-emerald-400 text-base rounded-xl border border-slate-800">
+                                Evaluate the indefinite integral: &nbsp; <strong>∫ x · e^(2x) dx</strong>
                             </div>
-                            <div class="p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30 flex items-center justify-between">
-                                <div>
-                                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Final Formatted Answer</span>
-                                    <span class="font-mono text-emerald-300 font-bold text-base">Answer: (1/4) e^(2x) (2x - 1) + C</span>
+                            <div class="space-y-3 text-slate-300 text-xs sm:text-sm">
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]">1</span>
+                                        Apply Integration by Parts Formula: ∫ u dv = u·v - ∫ v du
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7">Choose u = x ⇒ du = dx &nbsp;|&nbsp; Choose dv = e^(2x) dx ⇒ v = (1/2)e^(2x)</p>
                                 </div>
-                                <span class="text-xs bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-lg font-bold">100% Verified</span>
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px]">2</span>
+                                        Substitute and Evaluate Remaining Integral
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7 font-mono text-blue-300">∫ x·e^(2x) dx = (1/2)x·e^(2x) - ∫ (1/2)e^(2x) dx = (1/2)x·e^(2x) - (1/4)e^(2x) + C</p>
+                                </div>
+                                <div class="p-3.5 bg-emerald-950/40 rounded-xl border border-emerald-500/30 flex items-center justify-between">
+                                    <div>
+                                        <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Formatted Final Output</span>
+                                        <span class="font-mono text-emerald-300 font-bold text-sm">Answer: (1/4) e^(2x) (2x - 1) + C</span>
+                                    </div>
+                                    <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-lg font-bold">100% Verified</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Statistics -->
+                        <div x-show="activeTab === 'stats'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-4" style="display: none;">
+                            <div class="flex items-center justify-between bg-slate-900/80 p-3.5 rounded-xl border border-slate-700/60">
+                                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Problem Statement</span>
+                                <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-full font-mono">STAT 3000 - Applied Statistics</span>
+                            </div>
+                            <div class="p-3.5 bg-slate-950 font-mono text-purple-300 text-xs sm:text-sm rounded-xl border border-slate-800">
+                                Two-Sample Independent t-Test: Sample A (n1=30, x̄1=85, s1=6) vs Sample B (n2=30, x̄2=80, s2=7) at α = 0.05.
+                            </div>
+                            <div class="space-y-3 text-slate-300 text-xs sm:text-sm">
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-purple-600 text-white flex items-center justify-center text-[10px]">1</span>
+                                        Formulate Hypotheses &amp; Standard Error
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7">H0: μ1 = μ2 &nbsp;vs&nbsp; H1: μ1 ≠ μ2. &nbsp; SE = √[(s1²/n1) + (s2²/n2)] = 1.683</p>
+                                </div>
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-purple-600 text-white flex items-center justify-center text-[10px]">2</span>
+                                        Test Statistic (t-value) &amp; p-value
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7 font-mono text-purple-300">t = (85 - 80) / 1.683 = 2.971 &nbsp;|&nbsp; df = 58 &nbsp;|&nbsp; p-value = 0.0043 < 0.05</p>
+                                </div>
+                                <div class="p-3.5 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
+                                    <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Statistical Conclusion</span>
+                                    <p class="text-emerald-300 text-xs font-medium mt-0.5">Reject Null Hypothesis (H0). Statistically significant difference at 5% level.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Algebra -->
+                        <div x-show="activeTab === 'algebra'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-4" style="display: none;">
+                            <div class="flex items-center justify-between bg-slate-900/80 p-3.5 rounded-xl border border-slate-700/60">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Problem Statement</span>
+                                <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-full font-mono">MATH 3330 - Linear Algebra</span>
+                            </div>
+                            <div class="p-3.5 bg-slate-950 font-mono text-amber-300 text-xs sm:text-sm rounded-xl border border-slate-800">
+                                Determinant &amp; Inverse of 2x2 Matrix A = [[4, 7], [2, 6]].
+                            </div>
+                            <div class="space-y-3 text-slate-300 text-xs sm:text-sm">
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px]">1</span>
+                                        Calculate Determinant: det(A) = ad - bc
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7 font-mono">det(A) = (4)(6) - (7)(2) = 24 - 14 = 10 ≠ 0 (Invertible)</p>
+                                </div>
+                                <div class="p-3.5 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
+                                    <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Matrix Inverse Answer</span>
+                                    <p class="font-mono text-emerald-300 text-xs font-bold mt-0.5">A^(-1) = (1/10) [[6, -7], [-2, 4]] = [[0.6, -0.7], [-0.2, 0.4]]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 4: Differential Equations -->
+                        <div x-show="activeTab === 'ode'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-4" style="display: none;">
+                            <div class="flex items-center justify-between bg-slate-900/80 p-3.5 rounded-xl border border-slate-700/60">
+                                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Problem Statement</span>
+                                <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2.5 py-1 rounded-full font-mono">MATH 3321 - Differential Equations</span>
+                            </div>
+                            <div class="p-3.5 bg-slate-950 font-mono text-cyan-300 text-xs sm:text-sm rounded-xl border border-slate-800">
+                                Solve 2nd Order Homogeneous ODE: y'' - 5y' + 6y = 0 with y(0)=2, y'(0)=5.
+                            </div>
+                            <div class="space-y-3 text-slate-300 text-xs sm:text-sm">
+                                <div class="p-3 bg-slate-900/50 rounded-xl border border-slate-700/40">
+                                    <h4 class="font-bold text-white mb-1 flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-full bg-cyan-600 text-white flex items-center justify-center text-[10px]">1</span>
+                                        Form Characteristic Equation &amp; Find Roots
+                                    </h4>
+                                    <p class="text-slate-400 text-[11px] ml-7 font-mono">r² - 5r + 6 = 0 ⇒ (r - 2)(r - 3) = 0 ⇒ r1 = 2, r2 = 3</p>
+                                </div>
+                                <div class="p-3.5 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
+                                    <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Particular Solution</span>
+                                    <p class="font-mono text-emerald-300 text-xs font-bold mt-0.5">y(t) = e^(2t) + e^(3t)</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Tab 2: Statistics -->
-                    <div x-show="activeTab === 'stats'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-6" style="display: none;">
-                        <div class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-700/60">
-                            <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Problem Statement</span>
-                            <span class="text-xs bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full font-mono">STAT 3000 - Applied Statistics</span>
-                        </div>
-                        <div class="p-4 bg-slate-950 font-mono text-purple-300 text-sm rounded-xl border border-slate-800">
-                            Conduct a Two-Sample Independent t-Test: Sample A (n1=30, x̄1=85, s1=6) vs Sample B (n2=30, x̄2=80, s2=7) at α = 0.05.
-                        </div>
-                        <div class="space-y-4 text-slate-300 text-sm">
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs">1</span>
-                                    Formulate Hypotheses &amp; Standard Error
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8">H0: μ1 = μ2 &nbsp;vs&nbsp; H1: μ1 ≠ μ2. &nbsp; SE = √[(s1²/n1) + (s2²/n2)] = √[(36/30) + (49/30)] = 1.683</p>
-                            </div>
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs">2</span>
-                                    Calculate Test Statistic (t-value) &amp; p-value
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8 font-mono text-purple-300">t = (85 - 80) / 1.683 = 2.971 &nbsp;|&nbsp; df = 58 &nbsp;|&nbsp; p-value = 0.0043 < 0.05</p>
-                            </div>
-                            <div class="p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
-                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Statistical Conclusion</span>
-                                <p class="text-emerald-300 text-xs font-medium mt-1">Reject Null Hypothesis (H0). There is a statistically significant difference between the two sample means at the 5% significance level.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 3: Algebra -->
-                    <div x-show="activeTab === 'algebra'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-6" style="display: none;">
-                        <div class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-700/60">
-                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Problem Statement</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full font-mono">MATH 3330 - Linear Algebra</span>
-                        </div>
-                        <div class="p-4 bg-slate-950 font-mono text-amber-300 text-sm rounded-xl border border-slate-800">
-                            Find the determinant and inverse of 2x2 Matrix A = [[4, 7], [2, 6]].
-                        </div>
-                        <div class="space-y-4 text-slate-300 text-sm">
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs">1</span>
-                                    Calculate Determinant: det(A) = ad - bc
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8 font-mono">det(A) = (4)(6) - (7)(2) = 24 - 14 = 10 ≠ 0 (Invertible)</p>
-                            </div>
-                            <div class="p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
-                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Matrix Inverse Answer</span>
-                                <p class="font-mono text-emerald-300 text-sm font-bold mt-1">A^(-1) = (1/10) [[6, -7], [-2, 4]] = [[0.6, -0.7], [-0.2, 0.4]]</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 4: Differential Equations -->
-                    <div x-show="activeTab === 'ode'" x-transition:enter="transition ease-out duration-300 opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="space-y-6" style="display: none;">
-                        <div class="flex items-center justify-between bg-slate-900/80 p-4 rounded-xl border border-slate-700/60">
-                            <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Problem Statement</span>
-                            <span class="text-xs bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full font-mono">MATH 3321 - Differential Equations</span>
-                        </div>
-                        <div class="p-4 bg-slate-950 font-mono text-cyan-300 text-sm rounded-xl border border-slate-800">
-                            Solve 2nd Order Homogeneous ODE: y'' - 5y' + 6y = 0 with y(0)=2, y'(0)=5.
-                        </div>
-                        <div class="space-y-4 text-slate-300 text-sm">
-                            <div class="p-4 bg-slate-900/50 rounded-xl border border-slate-700/40">
-                                <h4 class="font-bold text-white mb-1 flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-full bg-cyan-600 text-white flex items-center justify-center text-xs">1</span>
-                                    Form Characteristic Equation &amp; Find Roots
-                                </h4>
-                                <p class="text-slate-400 text-xs ml-8 font-mono">r² - 5r + 6 = 0 ⇒ (r - 2)(r - 3) = 0 ⇒ r1 = 2, r2 = 3</p>
-                            </div>
-                            <div class="p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
-                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Particular Solution</span>
-                                <p class="font-mono text-emerald-300 text-sm font-bold mt-1">y(t) = e^(2t) + e^(3t)</p>
+                    <!-- Generated UI Image Illustration Mockup -->
+                    <div class="lg:col-span-5 relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                        <div class="relative rounded-3xl bg-slate-800/90 border border-slate-700 overflow-hidden shadow-2xl p-2">
+                            <img 
+                                src="{{ asset('images/math_solver_preview.png') }}" 
+                                alt="Step by step math solver interface preview" 
+                                class="w-full h-auto rounded-2xl object-cover transform group-hover:scale-102 transition-transform duration-500"
+                                loading="lazy"
+                            />
+                            <div class="p-4 text-center">
+                                <span class="text-xs font-bold text-slate-300">Clean LaTeX &amp; Scannable Handwritten Options Available</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-10 text-center">
+                <div class="mt-12 text-center">
                     <a href="{{ route('order') }}" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold rounded-2xl hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-xl shadow-blue-600/30 hover:-translate-y-1">
                         <span>Get Your Custom Math Solution Now</span>
                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -446,7 +495,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 5 – STAGGERED 4-STEP WORKFLOW WITH BACKGROUND NUMBERS
+             SECTION 5 – STAGGERED 4-STEP WORKFLOW
         =================================================== --}}
         <section id="how-it-works" class="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden text-white">
             <div class="absolute inset-0 pointer-events-none">
@@ -468,57 +517,53 @@
                     </h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 relative max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                     <!-- Step 1 -->
-                    <div class="group relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                            <div class="absolute -right-4 -bottom-14 text-[11rem] font-black text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
-                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                <span class="text-3xl">📋</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Upload Guidelines</h3>
-                            <p class="text-sm leading-relaxed text-slate-400 relative z-10">Submit math task guidelines, specific requirements, and deadline times.</p>
+                    <div class="group relative overflow-hidden bg-slate-950 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-slate-900 hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-950/30">
+                        <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
+                        <div class="relative z-10 w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
                         </div>
+                        <h3 class="text-2xl font-black text-white mb-4 relative z-10">Upload Guidelines</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed relative z-10">Submit math task guidelines, specific requirements, and deadline times.</p>
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="group relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                            <div class="absolute -right-4 -bottom-14 text-[11rem] font-black text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
-                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                <span class="text-3xl">🎯</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Get Fair Pricing</h3>
-                            <p class="text-sm leading-relaxed text-slate-400 relative z-10">A vetted math expert reviews your calculations complexity and quotes.</p>
+                    <div class="group relative overflow-hidden bg-slate-950 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-slate-900 hover:border-emerald-500/20 hover:shadow-2xl hover:shadow-emerald-950/30 lg:mt-12">
+                        <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
+                        <div class="relative z-10 w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                         </div>
+                        <h3 class="text-2xl font-black text-white mb-4 relative z-10">Get Fair Pricing</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed relative z-10">A vetted math expert reviews your calculations complexity and provides a fair quote.</p>
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="group relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                            <div class="absolute -right-4 -bottom-14 text-[11rem] font-black text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                <span class="text-3xl">💻</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Solver Works</h3>
-                            <p class="text-sm leading-relaxed text-slate-400 relative z-10">The expert calculates math formulas, drafts steps, and double-checks equations.</p>
+                    <div class="group relative overflow-hidden bg-slate-950 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-slate-900 hover:border-amber-500/20 hover:shadow-2xl hover:shadow-amber-950/30">
+                        <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
+                        <div class="relative z-10 w-16 h-16 bg-amber-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
+                        <h3 class="text-2xl font-black text-white mb-4 relative z-10">Solver Works</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed relative z-10">The expert calculates math formulas, drafts steps, and double-checks equations.</p>
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="group relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 overflow-hidden hover:-translate-y-2 transition-transform duration-500">
-                            <div class="absolute -right-4 -bottom-14 text-[11rem] font-black text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
-                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                <span class="text-3xl">🚀</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Download &amp; Study</h3>
-                            <p class="text-sm leading-relaxed text-slate-400 relative z-10">Download scannable math solutions files and learn from step calculations.</p>
+                    <div class="group relative overflow-hidden bg-slate-950 rounded-[3rem] p-10 border border-transparent transition-all duration-500 hover:bg-slate-900 hover:border-purple-500/20 hover:shadow-2xl hover:shadow-purple-950/30 lg:mt-12">
+                        <div class="absolute -right-6 -bottom-16 text-[12rem] font-black text-white/[0.03] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
+                        <div class="relative z-10 w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-12 transition-transform">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
                         </div>
+                        <h3 class="text-2xl font-black text-white mb-4 relative z-10">Download &amp; Study</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed relative z-10">Download scannable math solution files and learn from the step-by-step calculations.</p>
                     </div>
                 </div>
             </div>
@@ -549,7 +594,7 @@
                         <div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
                             <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">The Human Expert Advantage</h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Our platform connects you with vetted human math tutors holding Master's and PhD degrees in Applied Mathematics and Statistics. Every assignment solution includes step-by-step work, state-of-the-art graphs, and formula annotations tailored to your course syllabus.
+                                Our platform connects you with vetted human math tutors holding Master's and PhD degrees in Applied Mathematics and Statistics from accredited US universities. Every assignment solution includes step-by-step work, state-of-the-art graphs, and formula annotations tailored to your course syllabus.
                             </p>
                         </div>
                     </div>
@@ -594,9 +639,76 @@
         </section>
 
         {{-- ===================================================
+             SECTION 6.5 – VERIFIED US MATH PHD TUTORS GRID (E-E-A-T)
+        =================================================== --}}
+        <section class="py-20 bg-slate-100 dark:bg-slate-900/60 border-y border-slate-200 dark:border-slate-800" id="tutors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-black uppercase tracking-widest mb-4 dark:bg-emerald-950/50 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+                        Verified Credentials &amp; E-E-A-T
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4">
+                        Meet Our Senior US Math Tutors &amp; Solvers
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">
+                        Every solution is prepared and verified by degreed experts holding advanced qualifications from leading accredited universities.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Tutor Card 1 -->
+                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left">
+                        <img 
+                            src="{{ asset('images/math_tutor_marcus.png') }}" 
+                            alt="Dr. Marcus Vance - PhD Mathematics Tutor" 
+                            class="w-24 h-24 rounded-2xl object-cover shadow-md shrink-0 border-2 border-blue-500/20"
+                            loading="lazy"
+                        />
+                        <div>
+                            <div class="flex items-center gap-2 justify-center sm:justify-start mb-1">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Dr. Marcus Vance</h3>
+                                <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-extrabold text-[10px] uppercase">PhD Math</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3">
+                                UT Austin Alum | Calculus &amp; Linear Algebra Lead
+                            </p>
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-300">
+                                <span>⭐ <strong>4.98/5</strong> Rating</span>
+                                <span>✅ <strong>1,840+</strong> Solved Tasks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tutor Card 2 -->
+                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row gap-6 items-center text-center sm:text-left">
+                        <img 
+                            src="{{ asset('images/math_tutor_elena.png') }}" 
+                            alt="Dr. Elena Rostova - PhD Statistics & Data Science Tutor" 
+                            class="w-24 h-24 rounded-2xl object-cover shadow-md shrink-0 border-2 border-purple-500/20"
+                            loading="lazy"
+                        />
+                        <div>
+                            <div class="flex items-center gap-2 justify-center sm:justify-start mb-1">
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Dr. Elena Rostova</h3>
+                                <span class="px-2 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-extrabold text-[10px] uppercase">PhD Stats</span>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3">
+                                Columbia University | Probability &amp; SPSS Lead
+                            </p>
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-300">
+                                <span>⭐ <strong>4.99/5</strong> Rating</span>
+                                <span>✅ <strong>2,150+</strong> Solved Tasks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
              SECTION 7 – STUDENT REVIEWS & TESTIMONIALS
         =================================================== --}}
-        <section class="py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800" id="reviews">
+        <section class="py-20 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800" id="reviews">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4">
@@ -684,13 +796,13 @@
                     <!-- FAQ 2 -->
                     <div x-data="{ open: false }" class="bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-blue-300 dark:bg-slate-900 dark:border-slate-800">
                         <button x-on:click="open = !open" class="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none">
-                            <span class="text-lg font-bold text-slate-900 dark:text-white">How do I submit geometry diagrams, textbook pages, or stats tables?</span>
+                            <span class="text-lg font-bold text-slate-900 dark:text-white">Can you help with online portals like MyMathLab, ALEKS, or WebAssign?</span>
                             <div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 transition-transform duration-300" :class="open ? 'rotate-180 bg-blue-600 text-white' : ''">
                                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                             </div>
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" class="px-8 pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            You can upload photos, PDF worksheets, Word documents, Excel files, or screenshots directly through our order form. Our math tutors support all input file formats.
+                            Absolutely. Our math experts assist with weekly homework sets, quizzes, and problem modules across all major online LMS platforms including Pearson MyMathLab, McGraw Hill ALEKS, Cengage WebAssign, Canvas, and WileyPLUS.
                         </div>
                     </div>
 
@@ -746,7 +858,7 @@
                         Ready to Ace Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Math Homework</span>?
                     </h2>
                     <p class="text-slate-400 text-lg mb-10">
-                        Submit your equations, calculus integrals, or stats problem set to our PhD math experts and get step-by-step solutions guaranteed for top grades.
+                        Submit your equations, calculus integrals, MyMathLab tasks, or stats problem set to our PhD math experts and get step-by-step solutions guaranteed for top grades.
                     </p>
                     <a href="{{ route('order') }}" class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-lg rounded-2xl hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-2xl shadow-blue-600/40 hover:-translate-y-1">
                         <span>Get Math Solver Help Now</span>
@@ -757,7 +869,7 @@
         </section>
 
         {{-- ===================================================
-             STRUCTURED DATA (JSON-LD)
+             STRUCTURED DATA (JSON-LD) — INCLUDES HowTo RICH SNIPPET
         =================================================== --}}
         <script type="application/ld+json">
         {
@@ -773,7 +885,7 @@
                 "name": "Assignment Help USA",
                 "url": "{{ url('/') }}"
               },
-              "description": "Get expert online math homework help and step-by-step problem solver solutions for calculus, statistics, linear algebra, differential equations, and algebra.",
+              "description": "Get expert online math homework help and step-by-step problem solver solutions for calculus, statistics, linear algebra, differential equations, MyMathLab, and algebra.",
               "areaServed": "US",
               "hasOfferCatalog": {
                 "@@type": "OfferCatalog",
@@ -782,9 +894,32 @@
                   { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Calculus Homework Help" } },
                   { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Statistics & Probability Help" } },
                   { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Linear Algebra & Matrix Solver" } },
-                  { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Differential Equations Solver" } }
+                  { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Differential Equations Solver" } },
+                  { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Pearson MyMathLab & ALEKS Homework Assistance" } }
                 ]
               }
+            },
+            {
+              "@@type": "HowTo",
+              "name": "How to Solve Indefinite Integral by Integration by Parts",
+              "description": "Step-by-step calculus derivation for solving ∫ x · e^(2x) dx using integration by parts.",
+              "step": [
+                {
+                  "@@type": "HowToStep",
+                  "name": "Choose u and dv variables",
+                  "text": "Set u = x (hence du = dx) and dv = e^(2x) dx (hence v = (1/2)e^(2x))."
+                },
+                {
+                  "@@type": "HowToStep",
+                  "name": "Apply Integration by Parts formula",
+                  "text": "Substitute variables into ∫ u dv = u·v - ∫ v du formula to obtain (1/2)x·e^(2x) - ∫ (1/2)e^(2x) dx."
+                },
+                {
+                  "@@type": "HowToStep",
+                  "name": "Evaluate and simplify constant",
+                  "text": "Integrate the remaining exponential term to get final answer: (1/4) e^(2x) (2x - 1) + C."
+                }
+              ]
             },
             {
               "@@type": "BreadcrumbList",
@@ -807,10 +942,10 @@
                 },
                 {
                   "@@type": "Question",
-                  "name": "How do I submit geometry diagrams, textbook pages, or stats tables?",
+                  "name": "Can you help with online portals like MyMathLab, ALEKS, or WebAssign?",
                   "acceptedAnswer": {
                     "@@type": "Answer",
-                    "text": "You can upload photos, PDF worksheets, Word documents, Excel files, or screenshots directly through our order form. Our math tutors support all input file formats."
+                    "text": "Yes. Our math experts assist with weekly homework sets, quizzes, and problem modules across all major online LMS platforms including Pearson MyMathLab, McGraw Hill ALEKS, Cengage WebAssign, Canvas, and WileyPLUS."
                   }
                 },
                 {
