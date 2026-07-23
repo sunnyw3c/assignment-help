@@ -95,29 +95,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="max-w-5xl mx-auto">
 
-                <!-- Breadcrumb: Home › Case Study Help -->
-                <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-                        <li><a href="{{ url('/') }}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
-                        <li><span class="text-slate-400 dark:text-slate-600">›</span></li>
-                        <li class="text-blue-600 dark:text-blue-400 font-bold" aria-current="page">Case Study Help</li>
-                    </ol> 
-                </nav>
 
-                
-                <!-- Hero Header -->
-                <header class="text-center mb-10 sm:mb-14">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/60 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-4 border border-blue-200/80 dark:bg-blue-950/50 dark:text-blue-400 dark:border-blue-800/50">
-                        <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
-                        Top-Rated Case Study Help in USA
-                    </div> 
-                    <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 mb-6 leading-tight dark:text-white" itemprop="name" id="main-heading">
-                        <span class="text-blue-600 dark:text-blue-400">Case Study Help</span> — Expert USA Academic Solutions
-                    </h1>
-                    <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed dark:text-slate-400" itemprop="description">
-                        <strong>Case Study Help</strong> made easy — our USA-based MBA writers deliver 100% original, high-scoring business case solutions using Harvard Business School (HBS) methods, SWOT, PESTEL, Porter's 5 Forces, and DuPont financial diagnostics. Get expert <strong>Case Study Help</strong> in 12–24 hours.
-                    </p>
-                </header>
 
                 <!-- Trust Guarantee Badges -->
                 <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10" id="trust-guarantees" aria-label="Service Guarantees">
