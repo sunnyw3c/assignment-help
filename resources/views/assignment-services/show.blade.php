@@ -11,28 +11,6 @@
 @section('content')
     <!-- Structured Data for Service -->
 
-
-    {{-- @if ($details && $details->faqs)
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "FAQPage",
-        "mainEntity": [
-            @foreach($details->faqs as $index => $faq)
-            {
-                "@@type": "Question",
-                "name": "{{ $faq['question'] }}",
-                "acceptedAnswer": {
-                    "@@type": "Answer",
-                    "text": "{{ $faq['answer'] }}"
-                }
-            }@if(!$loop->last),@endif
-            @endforeach
-        ]
-    }
-    </script>
-    @endif
- --}}
     <!-- Hero Section -->
     <x-creative-hero :service="$service" />
 
