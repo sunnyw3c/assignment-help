@@ -7,4 +7,17 @@ Disallow: /api/
 Disallow: /order/success/
 Disallow: /test-file-upload
 
+# Block AI scrapers using standard User-agent syntax (Googlebot compliant)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 Sitemap: https://assignmenthelpusa.com/sitemap.xml
