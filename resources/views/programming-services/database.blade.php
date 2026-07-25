@@ -1,14 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Database Assignment Help | Expert SQL & NoSQL Programming Assistance')
-@section('description', 'Struggling with complex SQL joins, ERD schema design, or MongoDB aggregations? Get expert database assignment help from vetted USA DBAs. 100% working queries.')
+@section('title', 'Database Assignment Help | SQL & Database Programming Services')
+@section('description', 'Need expert database assignment help? Get top-rated SQL query optimization, 3NF normalization, ERD diagrams & MongoDB support from US DBAs. 100% error-free!')
 
 @section('content')
     <div class="min-h-screen">
         {{-- ===================================================
-             CREATIVE HERO SECTION — DO NOT MODIFY
+             CREATIVE HERO SECTION
         =================================================== --}}
-        <x-creative-hero :service="$service" />
+        <x-creative-hero 
+            :service="$service" 
+            title="Database Assignment Help &amp; SQL Programming Assistance"
+            subtitle="Get expert database assignment help from vetted USA DBAs. From complex SQL joins, ERD schema design, 3NF normalization to MongoDB aggregations — 100% verified error-free queries delivered on time." 
+        />
 
         {{-- ===================================================
              SECTION 1 – TRUST BAR / SOCIAL PROOF
@@ -42,7 +46,53 @@
         </section>
 
         {{-- ===================================================
-             SECTION 2 – CORE DATABASES COVERED
+             SECTION 2 – VISUAL FEATURE: SQL QUERY & OPTIMIZATION SHOWCASE
+             SEO: Rich visual engagement with image asset
+        =================================================== --}}
+        <section class="bg-slate-900 py-16 text-white sm:py-20" id="query-optimization">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                            <span class="text-blue-400 text-xs font-bold uppercase tracking-wider">High-Performance Database Solutions</span>
+                        </div>
+                        <h2 class="text-3xl font-black tracking-tight sm:text-4xl text-white leading-tight">
+                            Flawless SQL Queries &amp; <br class="hidden sm:inline">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Database Query Optimization</span>
+                        </h2>
+                        <p class="mt-4 text-base text-slate-300 leading-relaxed">
+                            Writing database scripts requires deep knowledge of relational algebra, query execution plans, indexing strategies, and transaction safety. Our database experts construct clean DDL/DML code that compiles error-free on your target database server.
+                        </p>
+                        <div class="mt-8 space-y-4">
+                            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 transition-colors">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600/30 text-blue-400 text-lg font-bold">⚡</div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">Query Execution Speed Optimization</h3>
+                                    <p class="text-xs text-slate-400 mt-1">We replace heavy subqueries with CTEs (Common Table Expressions) and add strategic indexing to achieve sub-millisecond execution times.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-indigo-500/40 transition-colors">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-600/30 text-indigo-400 text-lg font-bold">🛡️</div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">ACID Transaction Guarantee</h3>
+                                    <p class="text-xs text-slate-400 mt-1">All database routines, stored procedures, and triggers are engineered to prevent race conditions, deadlocks, and data corruption.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 shadow-2xl">
+                            <img src="{{ asset('images/sql_query_optimization.png') }}" alt="SQL Query Performance Optimization IDE Dashboard" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 3 – CORE DATABASES COVERED
              SEO: Keyword coverage for search terms
         =================================================== --}}
         <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" id="db-ecosystem" aria-labelledby="db-heading">
@@ -57,7 +107,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mb-12">
                     <div class="group flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                         <span class="text-4xl group-hover:scale-110 transition-transform duration-300">🐘</span>
                         <span class="text-sm font-bold text-slate-900 dark:text-white">PostgreSQL</span>
@@ -89,11 +139,74 @@
                         <span class="text-[10px] text-slate-500">Embedded Databases</span>
                     </div>
                 </div>
+
+                {{-- Banner image insertion for visual pop --}}
+                <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-2xl group">
+                    <img src="{{ asset('images/database_ecosystem_banner.png') }}" alt="Multi-Database Engine Cloud Architecture Banner" class="w-full h-72 sm:h-96 object-cover object-center transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-slate-950/10 flex items-end p-6 sm:p-10">
+                        <div class="max-w-3xl">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+                                <span class="w-2 h-2 rounded-full bg-blue-300 animate-pulse"></span>
+                                Enterprise DBMS Architectures
+                            </span>
+                            <h3 class="text-2xl sm:text-3xl font-black text-white mt-3 leading-tight drop-shadow-md">End-to-End Support for Relational &amp; NoSQL Platforms</h3>
+                            <p class="text-sm sm:text-base text-slate-200 mt-2 leading-relaxed drop-shadow">From enterprise SQL transactions to distributed NoSQL document clusters, our database engineers ensure standard-compliant 3NF/BCNF architecture.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         {{-- ===================================================
-             SECTION 3 – WHY STUDENTS PREFER US FOR DB HELP
+             SECTION 4 – VISUAL FEATURE: ERD SCHEMA & NORMALIZATION SHOWCASE
+             SEO: High engagement image section
+        =================================================== --}}
+        <section class="bg-white py-16 dark:bg-slate-900 sm:py-20" id="erd-design">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+                    <div class="order-2 lg:order-1 relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-2xl">
+                            <img src="{{ asset('images/database_erd_preview.png') }}" alt="Entity Relationship Diagram (ERD) Normalization Visual Preview" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4 dark:bg-indigo-400/10">
+                            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                            <span class="text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">Entity-Relationship Diagrams &amp; Schema Design</span>
+                        </div>
+                        <h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl leading-tight">
+                            Mastering <span class="text-indigo-600 dark:text-indigo-400">ERD Modeling</span> &amp; <br class="hidden sm:inline">
+                            3NF / BCNF Database Normalization
+                        </h2>
+                        <p class="mt-4 text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+                            A solid database begins with conceptual model design. We construct professional Entity-Relationship Diagrams (ERDs) adhering to Crow's Foot notation, specifying primary keys, foreign keys, cardinality (1:1, 1:M, M:N), and referential integrity constraints.
+                        </p>
+                        <div class="mt-6 space-y-3">
+                            <div class="flex items-center gap-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
+                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400 text-xs font-bold">✓</span>
+                                1NF, 2NF, 3NF &amp; Boyce-Codd Normal Form (BCNF) Transformation
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
+                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400 text-xs font-bold">✓</span>
+                                Crow's Foot Notation &amp; Chen Notation ERD Mapping
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
+                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400 text-xs font-bold">✓</span>
+                                Elimination of Update, Insertion, and Deletion Anomalies
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
+                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400 text-xs font-bold">✓</span>
+                                Complete Workbench, MySQL, or Visio Diagram Export (.png, .pdf, .mwb)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- ===================================================
+             SECTION 5 – WHY STUDENTS PREFER US FOR DB HELP
              SEO: High EEAT block
         =================================================== --}}
         <section class="bg-slate-900 py-16 sm:py-20" aria-labelledby="why-heading">
@@ -175,7 +288,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 4 – TYPES OF DATABASE PROJECTS TACKLED
+             SECTION 6 – TYPES OF DATABASE PROJECTS TACKLED
         =================================================== --}}
         <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" id="db-services" aria-labelledby="services-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -190,7 +303,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-blue-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white text-xl">✍️</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">SQL Query Writing</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Writing optimized SQL queries. Support for DDL/DML scripts, nested subqueries, CTEs, complex INNER/OUTER joins, and window functions.</p>
@@ -201,7 +314,7 @@
                         </ul>
                     </article>
 
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-indigo-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-white text-xl">📊</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Schema Design &amp; ERDs</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing relational models. Creating Entity-Relationship Diagrams (ERD) using Crow's Foot notation, specifying primary/foreign key mappings, and normalizing tables.</p>
@@ -212,7 +325,7 @@
                         </ul>
                     </article>
 
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-purple-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600 text-white text-xl">⚙️</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Stored Procedures &amp; Triggers</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Writing procedural SQL routines inside databases. Implementing Oracle PL/SQL blocks, SQL Server T-SQL procedures, triggers, cursors, and transactions.</p>
@@ -223,7 +336,7 @@
                         </ul>
                     </article>
 
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-emerald-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-white text-xl">🍃</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">NoSQL Data Modeling</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Designing JSON-like document models in MongoDB, setting up Mongoose schemas, coding document aggregations, or managing key-value models in Redis.</p>
@@ -234,7 +347,7 @@
                         </ul>
                     </article>
 
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-amber-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white text-xl">💾</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database Administration (DBA)</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Managing database instances. Writing scripts for query indexing, performance tuning, transaction log analyses, user permissions, and database backup routines.</p>
@@ -245,7 +358,7 @@
                         </ul>
                     </article>
 
-                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col">
+                    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 flex flex-col hover:border-cyan-500 transition-colors">
                         <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white text-xl">🔧</div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Database Connection &amp; ORM</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 flex-grow">Connecting applications to databases. Configuring JDBC connections, JPA/Hibernate mapping files, Entity Framework configurations, or Node/Mongoose hooks.</p>
@@ -260,14 +373,14 @@
         </section>
 
         {{-- ===================================================
-             SECTION 5 – STEPS TO GET DATABASE ASSISTANCE
+             SECTION 7 – STEPS TO GET DATABASE ASSISTANCE
         =================================================== --}}
         <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="steps-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto mb-12 max-w-2xl text-center">
                     <p class="mb-3 text-xs font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">Streamlined Process</p>
                     <h2 id="steps-heading" class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl dark:text-white">
-                        Get Your Database Code in 4 Steps
+                        Get Your Database Code in 4 Simple Steps
                     </h2>
                 </div>
 
@@ -282,7 +395,7 @@
                         <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-base font-black text-white shadow-md">2</div>
                         <div class="mb-3 text-2xl">🎯</div>
                         <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Get Fair Pricing</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">A certified database engineer reviews your normalization or query guidelines and provides a quote.</p>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">A certified database engineer reviews your normalization or query guidelines and provides an instant quote.</p>
                     </div>
                     <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
                         <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-base font-black text-white shadow-md">3</div>
@@ -301,7 +414,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 6 – RISK-FREE GUARANTEES
+             SECTION 8 – RISK-FREE GUARANTEES
         =================================================== --}}
         <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="guarantee-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -348,7 +461,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 7 – STUDENT DB REVIEWS
+             SECTION 9 – STUDENT DB REVIEWS
         =================================================== --}}
         <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="reviews-heading">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -397,7 +510,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 8 – IN-DEPTH SEO CONTENT BLOCK
+             SECTION 10 – IN-DEPTH SEO CONTENT BLOCK
              SEO: Long-form keyword-rich educational material
         =================================================== --}}
         <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" aria-labelledby="content-heading">
@@ -410,7 +523,7 @@
                                 What is Database Assignment Help?
                             </h2>
                             <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                <p><strong class="text-slate-900 dark:text-white font-semibold">Database assignment help</strong> is a specialized programming service designed to support students and developers with database schema design, normalization, query creation, and server administration. Developing database code is challenging because it requires understanding mathematical relations, normalization rules, query indexes, and transaction safety states (ACID).</p>
+                                <p><strong class="text-slate-900 dark:text-white font-semibold">Database assignment help</strong> is a specialized academic and programming service designed to support students and developers with database schema design, normalization, query creation, and server administration. Developing database code is challenging because it requires understanding mathematical relations, PL/SQL blocks, normalization rules, query indexes, and transaction safety states (ACID).</p>
                                 <p>Whether you are writing complex nested SQL joins, structuring ER diagrams, coding stored procedures, or building NoSQL pipelines in MongoDB — our experts deliver optimized code and instructions to help you succeed.</p>
                                 <p>We cover all major platforms: PostgreSQL, MySQL, MS SQL Server, Oracle DB, SQLite, MongoDB, Redis, Cassandra, and Neo4j.</p>
                             </div>
@@ -432,7 +545,7 @@
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <svg class="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Recursive Triggers &amp; Loops:</strong> Debugging infinite trigger loop blocks or procedure lockups. We write clean, conditional PL/SQL and T-SQL.</span>
+                                    <span><strong class="text-slate-900 dark:text-white font-semibold">Recursive Triggers &amp; Loops:</strong> Debugging infinite trigger loop blocks or procedure lockups in Oracle PL/SQL or T-SQL. We write clean, conditional logic.</span>
                                 </li>
                             </ul>
                         </div>
@@ -445,7 +558,7 @@
                                 DBMS Technologies We Cover
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                @foreach(['PostgreSQL','MySQL','MS SQL Server','Oracle Database','SQLite','MongoDB','Redis','Cassandra','DynamoDB','MariaDB','IBM DB2','SQLite','PL/SQL','T-SQL','ERD Diagrams','BCNF Normalization','Database Indexes','REST API Connection','JDBC Connections','JPA Hibernate'] as $tech)
+                                @foreach(['PostgreSQL','MySQL','MS SQL Server','Oracle Database','SQLite','MongoDB','Redis','Cassandra','DynamoDB','MariaDB','IBM DB2','PL/SQL','T-SQL','ERD Diagrams','BCNF Normalization','Database Indexes','REST API Connection','JDBC Connections','JPA Hibernate'] as $tech)
                                 <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">{{ $tech }}</span>
                                 @endforeach
                             </div>
@@ -481,7 +594,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 9 – FAQ ACCORDION
+             SECTION 11 – FAQ ACCORDION
              SEO: Targets rich SERP results
         =================================================== --}}
         <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950" aria-labelledby="faq-heading">
@@ -548,7 +661,7 @@
         </section>
 
         {{-- ===================================================
-             SECTION 10 – FINAL CTA
+             SECTION 12 – FINAL CTA
              SEO: High converting closing block
         =================================================== --}}
         <section class="relative overflow-hidden bg-slate-900 py-16 sm:py-20">

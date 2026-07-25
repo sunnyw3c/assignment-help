@@ -51,14 +51,16 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Database Programming',
+                'hero_title' => 'Database Assignment Help &amp; SQL Programming Assistance',
+                'hero_subtitle' => 'Get expert database assignment help from vetted USA DBAs. From complex SQL joins, ERD schema design, 3NF normalization to MongoDB aggregations — 100% verified, error-free queries.',
                 'slug' => 'database',
                 'icon' => '🗄️',
                 'description' => 'Database design, SQL programming, and database management solutions.',
-                'features' => ['SQL Optimization', 'Database Design', 'NoSQL Solutions', 'Data Migration'],
+                'features' => ['SQL Query Optimization', '3NF/BCNF Database Design', 'NoSQL & MongoDB Solutions', 'ERD Schema & Migration'],
                 'price_from' => '$30',
                 'turnaround' => '3-48 hours',
-                'rating' => 4.7,
-                'orders_completed' => 800
+                'rating' => 4.9,
+                'orders_completed' => 1600
             ],
             [
                 'name' => 'Machine Learning Projects',
@@ -277,14 +279,16 @@ class ServiceController extends Controller
             ],
             [
                 'name' => 'Database Programming',
+                'hero_title' => 'Database Assignment Help &amp; SQL Programming Assistance',
+                'hero_subtitle' => 'Get expert database assignment help from vetted USA DBAs. From complex SQL joins, ERD schema design, 3NF normalization to MongoDB aggregations — 100% verified, error-free queries.',
                 'slug' => 'database',
                 'icon' => '🗄️',
                 'description' => 'Database design, SQL programming, and database management solutions.',
-                'features' => ['SQL Optimization', 'Database Design', 'NoSQL Solutions', 'Data Migration'],
+                'features' => ['SQL Query Optimization', '3NF/BCNF Database Design', 'NoSQL & MongoDB Solutions', 'ERD Schema & Migration'],
                 'price_from' => '$30',
                 'turnaround' => '3-48 hours',
-                'rating' => 4.7,
-                'orders_completed' => 800
+                'rating' => 4.9,
+                'orders_completed' => 1600
             ],
             [
                 'name' => 'Machine Learning Projects',
