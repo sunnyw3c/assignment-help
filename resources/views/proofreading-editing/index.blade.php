@@ -1,621 +1,693 @@
-@extends('assignment-services.show')
+@extends('layouts.app')
 
-@section('title', 'Proofreading & Editing Service | Academic Paper Editing Help')
-@section('meta_description', 'Professional proofreading and editing service for academic papers, essays, theses, and dissertations. Expert grammar correction, style improvement, citation checking, and formatting. Fast turnaround available.')
-@section('meta_keywords', 'proofreading service, editing service, academic editing, paper proofreading, thesis editing, dissertation editing, grammar correction, academic proofreading, manuscript editing, copy editing service')
+@section('title', 'Proofreading & Editing Help USA | Academic Editors')
+@section('description', 'Get expert proofreading & editing help in USA. Track-changes grammar correction, style polishing & citation formatting by PhD editors with 24/7 support.')
+@section('keywords', 'proofreading editing help, proofreading editing help USA, academic proofreading service, essay editing help, dissertation proofreading, track changes editing, APA citation editing, paper editing service')
 
 @push('head')
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook Meta -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Professional Proofreading & Editing Service | Academic Experts">
-    <meta property="og:description" content="Get expert proofreading and editing with grammar correction, style improvement, and citation checking. Fast, reliable academic editing service.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Proofreading & Editing Help USA | Academic Editors">
+    <meta property="og:description" content="Get expert proofreading & editing help in USA. Track-changes grammar correction, style polishing & citation formatting by PhD editors with 24/7 support.">
+    <meta property="og:image" content="{{ asset('images/homework-help-tutoring.png') }}">
 
-    <!-- Twitter -->
+    <!-- Twitter Meta -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Professional Proofreading & Editing Service | Academic Experts">
-    <meta property="twitter:description" content="Expert proofreading and editing for academic papers. Grammar, style, citations, and formatting checked by professionals.">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Proofreading & Editing Help USA | Academic Editors">
+    <meta property="twitter:description" content="Get expert proofreading & editing help in USA. Track-changes grammar correction, style polishing & citation formatting by PhD editors with 24/7 support.">
+    <meta property="twitter:image" content="{{ asset('images/homework-help-tutoring.png') }}">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Structured Data (JSON-LD) for Google SEO -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@graph": [
+            {
+                "@@type": "EducationalOrganization",
+                "@@id": "{{ url('/') }}#organization",
+                "name": "Assignment Help USA",
+                "url": "{{ url('/') }}",
+                "logo": "{{ asset('images/logo.png') }}",
+                "sameAs": []
+            },
+            {
+                "@@type": "Service",
+                "@@id": "{{ url()->current() }}#service",
+                "name": "Professional Proofreading & Editing Help USA",
+                "provider": { "@@id": "{{ url('/') }}#organization" },
+                "serviceType": "Academic Paper Proofreading and Editing Assistance",
+                "areaServed": {
+                    "@@type": "Country",
+                    "name": "United States"
+                },
+                "description": "Professional academic proofreading and copy-editing services for US university students. Comprehensive grammar correction, style polishing, citation formatting (APA/MLA/Chicago), and MS Word Track Changes delivery by native PhD editors.",
+                "offers": {
+                    "@@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "8.00",
+                    "priceValidUntil": "2027-12-31",
+                    "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                    "@@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "6700",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                }
+            },
+            {
+                "@@type": "BreadcrumbList",
+                "@@id": "{{ url()->current() }}#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "{{ url('/') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 2,
+                        "name": "Services",
+                        "item": "{{ url('/services') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 3,
+                        "name": "Proofreading & Editing Help",
+                        "item": "{{ url()->current() }}"
+                    }
+                ]
+            },
+            {
+                "@@type": "FAQPage",
+                "@@id": "{{ url()->current() }}#faq",
+                "mainEntity": [
+                    {
+                        "@@type": "Question",
+                        "name": "How will I see the edits made to my document?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "We deliver your edited document using Microsoft Word Track Changes. You will receive two files: one displaying tracked changes and editor marginal notes, and one clean final submission version."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Who will edit my academic paper?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Your paper is assigned to a native English-speaking academic editor holding a PhD or Master's degree in your specific discipline from a top US or UK university."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Do you check and format citations in APA, MLA, or Chicago style?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Yes. We perform thorough citation audits checking in-text citations against your reference list according to APA 7th, MLA 9th, Chicago 17th, Harvard, IEEE, or OSCOLA style guidelines."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Can I get urgent express proofreading for tight deadlines?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Yes. We offer express academic proofreading with turnarounds as fast as 3 hours, 6 hours, or 12 hours without compromising editorial accuracy."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 @endpush
 
-@section('custom-content')
-    <!-- Comprehensive Proofreading & Editing Content Section -->
-    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" itemscope itemtype="https://schema.org/Service">
+@section('content')
+<div class="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
+
+    {{-- ===================================================
+         HERO SECTION
+    =================================================== --}}
+    <x-creative-hero 
+        :service="$service" 
+        title="Professional Proofreading & Editing Help USA"
+        subtitle="Uncertain about grammar, flow, or citation rules in your academic paper? Get 100% human, expert proofreading & editing help from native English PhD editors. Track-changes transparency, style polishing, and APA/MLA formatting delivered on time." 
+    />
+
+    {{-- ===================================================
+         TRUST BAR / SOCIAL PROOF (E-E-A-T)
+    =================================================== --}}
+    <section class="relative z-10 border-y border-slate-200/80 bg-white/90 py-5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/90" aria-label="Trust Signals">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-3xl">
-                <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                    <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white" itemprop="name">Professional Proofreading &amp; Editing Service</h1>
-                    <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400" itemprop="description">
-                        Expert proofreading and editing for academic papers, essays, theses, and dissertations. Comprehensive grammar correction, style improvement, citation checking, and clarity enhancement.
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+                <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                    <div class="flex text-amber-400 text-sm">★★★★★</div>
+                    <span class="font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">(6,700+ Edited Papers)</span>
+                </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <span class="font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">40</strong> Native PhD Editors Online</span>
+                </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 9 0 0118 0z"/></svg>
+                    <span>MS Word Track Changes & Editor Notes Included</span>
+                </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span>0% AI & 100% Human Editing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         VISUAL FEATURE 1: 4-LEVEL EDITING BLUEPRINT
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white overflow-hidden" id="editing-levels">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Comprehensive Editorial Framework
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                        4 Levels of Academic Editing <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">That Guarantee Flawless Submissions</span>
+                    </h2>
+                    <p class="mt-5 text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Even innovative research can lose marks due to minor typos, informal phrasing, or citation errors. Our multi-tiered editing framework polishes every sentence while preserving your authentic academic voice.
                     </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-lg shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">1</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Level 1: Basic Proofreading & Grammar Correction</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Fixing typos, spelling errors, punctuation mistakes, subject-verb disagreements, and modifier placements.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">2</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Level 2: Copy Editing & Scholarly Style Polishing</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Enhancing sentence flow, eliminating passive voice, refining vocabulary precision, and ensuring objective academic tone.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white font-black text-lg shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">3</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Level 3: Substantive Structural & Argument Cohesion</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Improving logical transitions between paragraphs, strengthening argument cohesion, and eliminating repetitive phrasing.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <div class="mb-8 rounded-2xl border border-blue-100 bg-blue-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            Academic writing excellence requires not only deep subject knowledge and critical thinking but also meticulous attention to grammar, punctuation, spelling, sentence structure, word choice, stylistic consistency, and formatting conventions that meet rigorous scholarly standards expected in university assignments, research papers, thesis projects, and dissertation manuscripts. Even the most brilliant research and innovative ideas can be undermined by grammatical errors, unclear expression, awkward phrasing, inconsistent terminology, citation mistakes, or formatting problems that distract readers and diminish credibility of your work. Professional proofreading and editing services provide essential quality assurance ensuring your academic writing communicates ideas clearly, follows proper grammar and style conventions, maintains consistent academic tone, adheres to citation requirements, and presents polished professional appearance that allows your intellectual contributions to shine without being obscured by technical writing errors or stylistic weaknesses.
-                        </p>
-
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            Our professional editing team consists of experienced academic editors, many holding advanced degrees in English, linguistics, communication, and various academic disciplines, who possess expert knowledge of grammar rules, style guides, citation formats, and scholarly writing conventions combined with extensive experience editing academic manuscripts across all educational levels from undergraduate essays to doctoral dissertations. We offer multiple levels of editing service tailored to your specific needs: proofreading that focuses on correcting grammar, spelling, punctuation, and typos while maintaining your original writing; copy editing that enhances clarity, improves sentence structure, refines word choice, ensures style consistency, and polishes overall readability while respecting your voice and meaning; substantive editing that provides deeper developmental feedback on organization, argument structure, logical flow, evidence support, and overall effectiveness of your academic writing; citation editing that verifies proper formatting of in-text citations and reference lists according to APA, MLA, Chicago, Harvard, or other required styles; and formatting review ensuring compliance with institutional guidelines for margins, spacing, headings, page numbers, and document structure. Every edited document is returned with track changes showing all modifications, editor comments explaining suggestions, clean version without markup for final submission, and summary of changes made highlighting patterns and areas for future improvement in your academic writing skills.
-                        </p>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-80 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-700/80 bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/homework-help-tutoring.png') }}" 
+                             alt="Academic Proofreading and Line Editing Manuscript Review Environment" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Trust & Guarantees Section -->
-                    <div class="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <div class="mx-auto mb-8 max-w-2xl text-center">
-                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Our Editing Quality Guarantees</h2>
-                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Your academic excellence is our commitment</p>
-                        </div>
-
-                        <div class="grid gap-5 sm:grid-cols-2">
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-start gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-lg text-white">✍️</div>
-                                    <h3 class="mt-1.5 text-base font-bold text-slate-900 dark:text-white">Expert Academic Editors</h3>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Your work will be edited by professionals with advanced degrees and extensive academic editing experience who understand scholarly writing conventions, discipline-specific terminology, and citation standards. Our editors have edited thousands of academic papers, theses, and dissertations across all fields including humanities, social sciences, natural sciences, business, engineering, medicine, and law. They combine technical expertise in grammar and style with understanding of academic discourse ensuring edits enhance clarity while maintaining scholarly tone and integrity of your arguments.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-start gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-lg text-white">🔍</div>
-                                    <h3 class="mt-1.5 text-base font-bold text-slate-900 dark:text-white">Comprehensive Quality Checks</h3>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Every document undergoes thorough review checking grammar (subject-verb agreement, verb tenses, pronoun usage, modifier placement), punctuation (commas, semicolons, apostrophes, quotation marks), spelling (including discipline-specific terminology), sentence structure (fragments, run-ons, parallel construction), word choice (precision, appropriateness, repetition), consistency (terminology, capitalization, number formats, abbreviations), and formatting (headings, spacing, fonts, margins). Multiple quality control layers ensure nothing is missed and all corrections are accurate.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-start gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-600 text-lg text-white">📚</div>
-                                    <h3 class="mt-1.5 text-base font-bold text-slate-900 dark:text-white">Citation Format Expertise</h3>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    We verify and correct citations in all major academic styles including APA 7th edition (social sciences, education, psychology, nursing), MLA 9th edition (literature, humanities, languages), Chicago/Turabian (history, arts, humanities), Harvard referencing (business, economics, social sciences), IEEE (engineering, computer science), AMA (medicine, health sciences), ACS (chemistry), CSE (life sciences), and Vancouver (medicine, nursing). Citation editing includes in-text citations, reference lists, bibliographies, footnotes, and ensuring consistency between in-text citations and reference entries with proper formatting of authors, dates, titles, publication information, DOIs, and URLs.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-start gap-3">
-                                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-lg text-white">💬</div>
-                                    <h3 class="mt-1.5 text-base font-bold text-slate-900 dark:text-white">Track Changes &amp; Comments</h3>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    All editing is performed using Microsoft Word track changes feature allowing you to see every modification made to your document including deletions, additions, and formatting changes. Editor comments explain reasons for significant changes, point out patterns in your writing, suggest alternatives where meaning might be unclear, and provide educational feedback helping you improve future writing. You maintain complete control accepting or rejecting individual changes. Clean version without markup is also provided for final submission ensuring professional appearance while you learn from tracked changes version.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">Our Editing Success Record</h3>
-                            <div class="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
-                                <div>
-                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">6700+</div>
-                                    <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Documents Edited</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">99%</div>
-                                    <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Student Satisfaction Rate</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">180+</div>
-                                    <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Professional Editors</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">6hr</div>
-                                    <p class="mt-0.5 text-xs text-slate-600 dark:text-slate-400">Rush Service Available</p>
-                                </div>
-                            </div>
-                        </div>
+    {{-- ===================================================
+         VISUAL FEATURE 2: TRACK CHANGES TRANSPARENCY
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="order-2 lg:order-1 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/student-hero.png') }}" 
+                             alt="Microsoft Word Track Changes and Editorial Marginal Comments Preview" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
                     </div>
+                </div>
 
-                    <div class="mb-8 grid gap-5 sm:grid-cols-2">
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-3 flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white">
-                                <span class="text-xl">📖</span>
-                                Grammar &amp; Mechanics Correction
-                            </h3>
-                            <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Comprehensive grammar editing addresses all aspects of standard English usage ensuring your writing meets academic standards. We correct subject-verb agreement errors (singular/plural matching), verb tense consistency and proper sequence of tenses, pronoun agreement and clear antecedents, modifier placement avoiding dangling and misplaced modifiers, parallel structure in lists and comparisons, sentence fragments and run-on sentences, comma splices, and faulty predication. Punctuation is corrected including proper comma usage (serial commas, introductory elements, nonrestrictive clauses), semicolon and colon usage, apostrophes (possessives and contractions), quotation marks and periods/commas placement, hyphens and dashes, and parentheses.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Spelling corrections include common misspellings, homophones (their/there/they're, affect/effect, your/you're), British vs. American spelling consistency, and discipline-specific technical terminology spelled correctly. Capitalization is standardized (titles, headings, proper nouns, acronyms). Number formatting follows style guide rules (numerals vs. words, percentages, decimals, ranges). All corrections maintain formal academic tone appropriate for scholarly writing while preserving your intended meaning and voice.
-                            </p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="mb-3 flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white">
-                                <span class="text-xl">✨</span>
-                                Style &amp; Clarity Enhancement
-                            </h3>
-                            <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Copy editing enhances readability and effectiveness of your academic writing beyond basic grammar correction. We improve sentence structure by varying sentence length and complexity, eliminating redundancy, restructuring awkward constructions, and breaking up overly long sentences while combining short choppy sentences. Word choice is refined replacing vague terms with precise vocabulary, eliminating wordiness and unnecessary phrases, correcting inappropriate word usage, ensuring consistent terminology throughout, and suggesting stronger verbs to replace weak "to be" constructions.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Clarity improvements address ambiguous pronoun references, unclear logical connections between ideas, confusing sentence structure that obscures meaning, and jargon or technical terms needing explanation for your audience. Transitions between sentences and paragraphs are strengthened. Academic tone is maintained ensuring formal register without being overly verbose, avoiding contractions and colloquialisms, using appropriate hedging language (may suggest, appears to indicate), and maintaining objective scholarly voice. Flow and coherence are enhanced while preserving your unique writing style and argument structure.
-                            </p>
-                        </div>
+                <div class="order-1 lg:order-2">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/60 border border-indigo-300 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                        Transparent Edit Tracking
                     </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Complete Transparency with MS Word Track Changes
+                    </h2>
+                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        We never alter your core meaning silently. Every order is returned with 2 versions: a Tracked Changes document showing every edit and marginal comment, plus a clean, ready-to-submit final file.
+                    </p>
 
-                    <!-- Editing Service Levels -->
-                    <div class="mb-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                            Editing Service Levels
-                        </h2>
-                        <div class="grid gap-5 md:grid-cols-3">
-                            <div class="rounded-xl border-2 border-emerald-500 bg-white p-6 shadow-sm dark:bg-slate-900">
-                                <div class="mb-4 text-center">
-                                    <div class="mb-2 text-3xl">📝</div>
-                                    <h4 class="mb-1 text-lg font-bold text-emerald-600 dark:text-emerald-400">Proofreading</h4>
-                                    <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">$8/page</p>
-                                </div>
-                                <p class="mb-4 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-400">Surface-level correction focusing on technical errors</p>
-                                <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Grammar and spelling correction</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Punctuation errors fixed</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Typo correction</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Basic formatting consistency</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Track changes document</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-emerald-500">✓</span>
-                                        <span>Clean final version</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800">
-                                    <p class="text-xs text-slate-500 dark:text-slate-400"><strong class="text-slate-700 dark:text-slate-300">Best for:</strong> Nearly final drafts needing final polish before submission</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border-2 border-blue-500 bg-white p-6 shadow-sm dark:bg-slate-900">
-                                <div class="mb-4 text-center">
-                                    <div class="mb-2 text-3xl">✏️</div>
-                                    <h4 class="mb-1 text-lg font-bold text-blue-600 dark:text-blue-400">Copy Editing</h4>
-                                    <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">$12/page</p>
-                                    <span class="mt-1 inline-block rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-semibold text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">Most Popular</span>
-                                </div>
-                                <p class="mb-4 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-400">Comprehensive editing for clarity and style</p>
-                                <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Everything in Proofreading</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Sentence structure improvement</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Word choice refinement</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Clarity and flow enhancement</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Citation format checking</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Style consistency</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-blue-500">✓</span>
-                                        <span>Editor comments &amp; suggestions</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800">
-                                    <p class="text-xs text-slate-500 dark:text-slate-400"><strong class="text-slate-700 dark:text-slate-300">Best for:</strong> Most academic papers, essays, reports needing polish and clarity</p>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border-2 border-purple-500 bg-white p-6 shadow-sm dark:bg-slate-900">
-                                <div class="mb-4 text-center">
-                                    <div class="mb-2 text-3xl">📚</div>
-                                    <h4 class="mb-1 text-lg font-bold text-purple-600 dark:text-purple-400">Substantive Editing</h4>
-                                    <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">$18/page</p>
-                                </div>
-                                <p class="mb-4 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-400">Deep developmental editing and feedback</p>
-                                <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Everything in Copy Editing</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Organization and structure review</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Argument strengthening</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Evidence evaluation</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Logical flow improvement</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Comprehensive feedback letter</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-purple-500">✓</span>
-                                        <span>Detailed editor comments</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800">
-                                    <p class="text-xs text-slate-500 dark:text-slate-400"><strong class="text-slate-700 dark:text-slate-300">Best for:</strong> Theses, dissertations, manuscripts needing significant improvement</p>
-                                </div>
-                            </div>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Tracked markup version showing all deletions, insertions, and formatting updates</span>
                         </div>
-
-                        <div class="mt-6 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                <strong class="font-semibold text-slate-900 dark:text-white">Not sure which level you need?</strong> Contact us with a brief description of your document and concerns, and we'll recommend the most appropriate editing level. Most students choose Copy Editing for the best balance of thoroughness and value. All levels include track changes, clean version, and opportunity for questions after receiving edited document.
-                            </p>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Marginal editor notes explaining significant phrasing and structural choices</span>
                         </div>
-                    </div>
-
-                    <!-- Document Types -->
-                    <div class="mb-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="mb-2 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Documents We Edit</h2>
-                        <p class="mx-auto mb-6 max-w-2xl text-center text-sm text-slate-600 dark:text-slate-400">
-                            Expert editing for all academic writing types
-                        </p>
-
-                        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Essays &amp; Papers</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Argumentative essays, research papers, term papers, response papers, analytical essays</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Theses &amp; Dissertations</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Master's theses, PhD dissertations, dissertation proposals, thesis chapters</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Reports</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Lab reports, business reports, technical reports, case study reports</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Literature Reviews</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Standalone reviews, thesis lit reviews, systematic reviews, annotated bibliographies</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Journal Articles</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Manuscript editing, journal submission preparation, revision responses</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Proposals</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Research proposals, grant proposals, project proposals, dissertation proposals</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Application Materials</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Personal statements, statements of purpose, admission essays, CVs</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">Other Documents</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Book chapters, conference papers, presentations, abstracts, cover letters</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Transparent Pricing -->
-                    <div class="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="mb-2 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Editing Service Pricing</h2>
-                        <p class="mb-6 text-center text-sm text-slate-600 dark:text-slate-400">Fast, affordable rates for professional editing</p>
-
-                        <div class="overflow-x-auto">
-                            <table class="w-full border-collapse text-left text-sm">
-                                <thead>
-                                    <tr class="bg-slate-50 dark:bg-slate-900">
-                                        <th class="border-b-2 border-slate-200 p-3 font-bold text-slate-900 dark:border-slate-800 dark:text-white">Service Level</th>
-                                        <th class="border-b-2 border-slate-200 p-3 font-bold text-slate-900 dark:border-slate-800 dark:text-white">24+ Hours</th>
-                                        <th class="border-b-2 border-slate-200 p-3 font-bold text-slate-900 dark:border-slate-800 dark:text-white">12 Hours</th>
-                                        <th class="border-b-2 border-slate-200 p-3 font-bold text-slate-900 dark:border-slate-800 dark:text-white">6 Hours</th>
-                                        <th class="border-b-2 border-slate-200 p-3 font-bold text-slate-900 dark:border-slate-800 dark:text-white">3 Hours</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-slate-600 dark:text-slate-400">
-                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-900">
-                                        <td class="border-b border-slate-100 p-3 font-semibold text-slate-800 dark:border-slate-800 dark:text-slate-200">Proofreading</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$8/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$10/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$12/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$15/page</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-900">
-                                        <td class="border-b border-slate-100 p-3 font-semibold text-slate-800 dark:border-slate-800 dark:text-slate-200">Copy Editing</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$12/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$15/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$18/page</td>
-                                        <td class="border-b border-slate-100 p-3 dark:border-slate-800">$22/page</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-900">
-                                        <td class="p-3 font-semibold text-slate-800 dark:text-slate-200">Substantive Editing</td>
-                                        <td class="p-3">$18/page</td>
-                                        <td class="p-3">$22/page</td>
-                                        <td class="p-3">$28/page</td>
-                                        <td class="p-3">$35/page</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="mt-5 grid gap-4 sm:grid-cols-3">
-                            <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-4 dark:border-emerald-900/40 dark:bg-emerald-950/20">
-                                <h4 class="mb-2 text-sm font-bold text-emerald-800 dark:text-emerald-300">✓ What's Included</h4>
-                                <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                    <li>• Expert editor review</li>
-                                    <li>• Track changes document</li>
-                                    <li>• Clean final version</li>
-                                    <li>• Editor comments</li>
-                                    <li>• Summary of changes</li>
-                                    <li>• Follow-up questions answered</li>
-                                    <li>• 1 free re-edit round</li>
-                                </ul>
-                            </div>
-
-                            <div class="rounded-xl border border-blue-100 bg-blue-50 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
-                                <h4 class="mb-2 text-sm font-bold text-blue-800 dark:text-blue-300">📊 Word Count</h4>
-                                <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                    <li>• 1 page = 250 words (double-spaced)</li>
-                                    <li>• 1 page = 500 words (single-spaced)</li>
-                                    <li>• Minimum order: 2 pages</li>
-                                    <li>• Volume discounts for 50+ pages</li>
-                                    <li>• Rush service available</li>
-                                </ul>
-                            </div>
-
-                            <div class="rounded-xl border border-purple-100 bg-purple-50 p-4 dark:border-purple-900/40 dark:bg-purple-950/20">
-                                <h4 class="mb-2 text-sm font-bold text-purple-800 dark:text-purple-300">🎯 Quality Promise</h4>
-                                <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-400">
-                                    <li>• 100% confidential</li>
-                                    <li>• Native English editors</li>
-                                    <li>• Academic expertise</li>
-                                    <li>• On-time delivery guaranteed</li>
-                                    <li>• Satisfaction guarantee</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Section -->
-                    <div class="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950" itemscope itemtype="https://schema.org/FAQPage">
-                        <h2 class="mb-8 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                            Proofreading &amp; Editing FAQs
-                        </h2>
-
-                        <div class="space-y-4">
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">What's the difference between proofreading and copy editing?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Proofreading is surface-level correction focusing on grammar, spelling, punctuation, and typos without changing sentence structure or word choice significantly. It's the final polish before submission. Copy editing is more comprehensive, improving clarity, sentence structure, word choice, flow, and consistency while maintaining your voice. Copy editing enhances readability and effectiveness beyond just fixing errors. Substantive editing goes even deeper, providing developmental feedback on organization, arguments, and overall effectiveness. Most students need copy editing for the best combination of thoroughness and value, but if your draft is nearly perfect and just needs final error catching, proofreading may suffice.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Will the editor rewrite my paper?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">No — editing services improve and polish your existing writing rather than rewriting content. Editors maintain your voice, ideas, and arguments while correcting errors and enhancing clarity, and every change is shown in track changes so you can see exactly what was modified and why. You keep complete control, accepting or rejecting individual edits. For substantive editing, editors provide suggestions and feedback but you implement the changes. If you need new content written or major rewriting, consider our writing services instead — editing refines your work, it doesn't replace it.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Can you check my citations and references?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Yes — citation checking is included with copy editing and substantive editing. We verify in-text citations and reference lists against your required style (APA 7th, MLA 9th, Chicago/Turabian, Harvard, IEEE, AMA, ACS, CSE, Vancouver, or others), confirm every citation has a matching reference entry, and check formatting consistency (capitalization, italics, spacing, hanging indents, DOIs/URLs). We correct common citation errors but can't verify source accuracy if the original isn't accessible. Basic citation checking can be added to proofreading-only orders for a small fee.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">How quickly can you edit my document?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Standard turnaround is 24 hours for up to 10 pages, 48 hours for 11-25 pages, and 3-5 days for longer documents. Rush options include 12-hour, 6-hour, and 3-hour service (subject to editor availability and surcharge). Theses and dissertations (50+ pages) may need 5-7 days, and chapter-by-chapter editing with staggered deadlines is available so you can review each chapter before proceeding. Submitting early gets the best quality and avoids rush fees.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">What if I'm not satisfied with the editing?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">We guarantee your satisfaction. Contact us within 7 days and we'll arrange one free re-edit addressing the specific issues you raise, and your editor can explain the rationale behind any change. Most concerns are resolved quickly through direct communication. In the rare case you're still unsatisfied after a re-edit, we'll discuss refund options — we maintain a 99% satisfaction rate and stand behind our editors' work.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Is my document confidential?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Absolutely. Your work is never shared, published, resold, or stored permanently — editors sign confidentiality agreements, and files are securely transmitted and deleted after service completion. Many students trust us with thesis chapters, dissertations, and pre-publication manuscripts. Editing is legitimate, ethical academic support widely accepted by institutions; you retain complete ownership of your work, and we simply provide the kind of assistance a university writing center offers, with faster turnaround and more specialized expertise.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Student Success Stories -->
-                    <div class="mb-8 rounded-2xl border border-blue-100 bg-blue-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="mb-8 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                            Student Success Stories
-                        </h2>
-
-                        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-center gap-1 text-amber-400">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "English is my second language and I always struggle with grammar. The editor caught so many errors I didn't see and improved my sentence structure significantly. The track changes helped me learn from mistakes. My paper grade improved from B to A-!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
-                                        YC
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Yuki C.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">International Student, Junior</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-center gap-1 text-amber-400">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "Dissertation editing was exactly what I needed! The editor fixed all APA 7th citations, improved clarity throughout, and caught inconsistencies across chapters. Committee approved with minor revisions. Professional service and fast turnaround. Highly recommend!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
-                                        PT
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Patricia T.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">PhD Candidate, Psychology</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white rounded-xl p-6 shadow-md">
-                                <div class="flex items-center mb-4">
-                                    <div class="flex text-yellow-400 text-xl">
-                                        ⭐⭐⭐⭐⭐
-                                    </div>
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "Last-minute research paper editing saved me! Submitted at midnight with 6-hour rush service. Editor delivered on time with clean document ready to submit. Fixed grammar, improved flow, corrected MLA citations. Worth every penny for the peace of mind!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-sm font-bold text-white">
-                                        MJ
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Marcus J.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">College Sophomore</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-center gap-1 text-amber-400">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "Substantive editing for my master's thesis provided incredible feedback. Editor pointed out weak arguments, suggested reorganization, and improved overall flow. The detailed comments helped me understand how to strengthen academic writing. Best investment for my thesis!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white">
-                                        LB
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Laura B.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">Master's Student, Sociology</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-center gap-1 text-amber-400">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "Copy editing for my history essay improved readability dramatically. The editor maintained my voice while fixing awkward sentences and unclear phrasing. Professor commented that my writing quality had improved significantly. Great learning experience seeing professional edits!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">
-                                        DH
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">David H.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">History Major, Senior</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="mb-3 flex items-center gap-1 text-amber-400">
-                                    ⭐⭐⭐⭐⭐
-                                </div>
-                                <p class="mb-4 text-sm italic leading-relaxed text-slate-600 dark:text-slate-400">
-                                    "Journal manuscript editing helped me get published! The editor improved academic tone, fixed citation inconsistencies, enhanced clarity, and caught errors I missed after multiple self-reviews. Submission was accepted with minor revisions. Professional quality editing made the difference!"
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-600 text-sm font-bold text-white">
-                                        AR
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Dr. Anna R.</p>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">Assistant Professor, Biology</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 text-center">
-                            <div class="inline-flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-6 py-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <div class="text-2xl font-bold text-slate-900 dark:text-white">4.95/5.0</div>
-                                <div class="text-left">
-                                    <div class="mb-0.5 flex text-sm text-amber-400">⭐⭐⭐⭐⭐</div>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">Based on 6,700+ editing reviews</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Final CTA -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-3 flex items-center justify-center gap-2 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
-                            <span class="text-2xl">✍️</span>
-                            Ready to Polish Your Academic Writing?
-                        </h3>
-                        <p class="mx-auto mb-6 max-w-2xl text-center text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            Join thousands of students who've improved their grades with our professional editing service. Expert editors, comprehensive quality checks, fast turnaround, and satisfaction guaranteed.
-                        </p>
-                        <div class="text-center">
-                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 9]) }}"
-                               class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
-                                <span>📝</span>
-                                Get Your Document Edited Today
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Clean, fully accepted final version formatted and ready for submission</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Academic Integrity Notice -->
-        <div class="mx-auto mt-8 max-w-3xl rounded-xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-900/40 dark:bg-amber-950/20">
-            <p class="text-xs leading-relaxed text-amber-800 dark:text-amber-300">
-                <strong>Academic Use Notice:</strong> Our proofreading and editing service is designed to help you improve your own written work through expert feedback and corrections. We encourage you to review all edits, understand the changes made, and ensure your final submission reflects your own understanding. Use of our service should comply with your institution's academic policies.
-            </p>
+    {{-- ===================================================
+         VISUAL FEATURE 3: NATIVE PHD EDITOR STANDARDS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Native English PhD Quality
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Native English PhD Editors Across All Academic Disciplines
+                    </h2>
+                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Automated AI grammar checkers miss subtle academic context and field-specific jargon. Our human editors hold Master's and PhD degrees from top US universities and know your subject's exact terminology.
+                    </p>
+
+                    <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg mb-1">Human-Only Proofreading</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">100% human editing preserving original voice and intellectual logic.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-blue-600 dark:text-blue-400 font-bold text-lg mb-1">Citation Style Audit</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Rigorous reference list auditing in APA, MLA, Chicago, and IEEE.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-indigo-600 dark:text-indigo-400 font-bold text-lg mb-1">Express Rush Delivery</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Urgent turnarounds available in 3, 6, 12, or 24 hours.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-purple-600 dark:text-purple-400 font-bold text-lg mb-1">Certificate of Editing</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Official proofreading certificate for journal and university submission.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/math_tutor_elena.png') }}" 
+                             alt="Native English Academic Proofreader and Quality Specialist" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    {{-- ===================================================
+         EDITING SERVICES COVERED
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="editing-services">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Tailored Editing Options</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Our Academic Proofreading Services</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">From undergraduate essays to journal manuscripts and dissertations, we cover all academic documents.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{-- Service 1 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-2xl group-hover:scale-110 transition-transform">✍️</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Essay & Paper Proofreading</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Fixing spelling, punctuation, grammar, and typos in coursework essays and term papers.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.essay-writing.index') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Essay Services <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 2 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-2xl group-hover:scale-110 transition-transform">🔬</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Research Paper Copy Editing</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Refining sentence structure, active voice, and technical vocabulary for research manuscripts.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.research-paper.index') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Research Paper Services <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 3 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-2xl group-hover:scale-110 transition-transform">🎓</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Thesis & Dissertation Editing</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Comprehensive line-by-line editing and formatting alignment for graduate Master's & PhD dissertations.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.thesis-dissertation.index') }}" class="text-sm font-bold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Thesis & Dissertation Services <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 4 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-2xl group-hover:scale-110 transition-transform">📚</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Citation & Reference List Audit</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Verifying in-text citations against bibliography entries in APA, MLA, Chicago, and IEEE.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Citation Audit <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 5 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-2xl group-hover:scale-110 transition-transform">💡</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ESL Academic Polishing</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Specialized editing for non-native English scholars ensuring natural academic phrasing.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order ESL Editing <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 6 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rose-500 to-red-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-2xl group-hover:scale-110 transition-transform">⚡</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Express 3-Hour Proofreading</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Rapid emergency proofreading for last-minute submissions delivered in under 3 hours.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-rose-600 hover:text-rose-700 dark:text-rose-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Express Editing <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         CITATIONS & FORMATTING STANDARDS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-950/80 dark:text-purple-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-purple-200 dark:border-purple-800">Style Manuals</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mastery of All Academic Style Guides</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">In-text citations, footnotes, margins, and bibliographies formatted strictly to manual guidelines.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-blue-400/50 transition-colors shadow-sm">
+                    <div class="text-blue-600 dark:text-blue-400 font-black text-xl mb-2">APA 7th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Psychology, Social Sciences, Business, and Nursing papers with precise DOI and heading formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400/50 transition-colors shadow-sm">
+                    <div class="text-indigo-600 dark:text-indigo-400 font-black text-xl mb-2">MLA 9th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Literature, Humanities, and Media studies with container-based Works Cited formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-purple-400/50 transition-colors shadow-sm">
+                    <div class="text-purple-600 dark:text-purple-400 font-black text-xl mb-2">Chicago / Turabian 17th</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for History, Art, and Political Science with Footnotes/Endnotes or Author-Date citations.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400/50 transition-colors shadow-sm">
+                    <div class="text-emerald-600 dark:text-emerald-400 font-black text-xl mb-2">Harvard Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Widely used across US economics and management departments for parenthetical referencing.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-rose-400/50 transition-colors shadow-sm">
+                    <div class="text-rose-600 dark:text-rose-400 font-black text-xl mb-2">IEEE Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Numbered bracket citation standard for Engineering, Computer Science, and STEM papers.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-amber-400/50 transition-colors shadow-sm">
+                    <div class="text-amber-600 dark:text-amber-400 font-black text-xl mb-2">OSCOLA & Legal</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Specialized legal citation style for Law papers, case commentary, and statutory analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         7 WRITING & GRAMMAR ERRORS FIXED
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-rose-100 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-rose-200 dark:border-rose-800">Grade Protection</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">7 Writing Errors Our Editors Fix</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our native English editors systematically eliminate common mistakes that cost students marks.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                @php
+                $errors = [
+                    ['title' => 'Subject-Verb & Tense Disagreements', 'desc' => 'Shifting between past and present tense mid-paragraph or misaligning singular/plural verbs.'],
+                    ['title' => 'Excessive Passive Phrasing', 'desc' => 'Overusing weak passive constructions instead of concise, active academic statements.'],
+                    ['title' => 'Dangling & Misplaced Modifiers', 'desc' => 'Confusing sentence logic by detaching descriptive phrases from their target nouns.'],
+                    ['title' => 'Citation Mismatches & Missing DOIs', 'desc' => 'Citing sources in text that are absent in the reference list or missing required URLs.'],
+                    ['title' => 'Informal Phrasing & Colloquialisms', 'desc' => 'Using conversational language ("a lot", "get", "I think") instead of scholarly tone.'],
+                    ['title' => 'Run-On Sentences & Fragments', 'desc' => 'Fragmenting thoughts or chaining independent clauses with comma splices.'],
+                    ['title' => 'Inconsistent Formatting & Spacing', 'desc' => 'Mixing font sizes, line spacing, indentations, or heading styles.'],
+                ];
+                @endphp
+                @foreach($errors as $index => $e)
+                <div class="flex gap-5 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-rose-300 dark:hover:border-rose-800 transition-colors shadow-sm">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-500 text-white font-black text-base shadow-md shadow-rose-500/20">
+                        {{ $index + 1 }}
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{{ $e['title'] }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ $e['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         EXPERT PHD FACULTY EDITORS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Native English Editors</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Top Academic Editors</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Every editor holds a Master's or PhD degree with extensive academic publishing credentials.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                @php
+                $editors = [
+                    [
+                        'name' => 'Dr. Claire Montgomery',
+                        'degree' => 'PhD, English Linguistics — Yale University',
+                        'specialty' => 'Academic Copy Editing, APA 7th & Dissertation Polishing',
+                        'orders' => '2,350+',
+                        'rating' => '4.99',
+                        'badge' => 'Senior Managing Editor'
+                    ],
+                    [
+                        'name' => 'Prof. Arthur Sterling',
+                        'degree' => 'PhD, History & Rhetoric — Oxford University',
+                        'specialty' => 'Substantive Editing, Chicago 17th & Humanities Papers',
+                        'orders' => '1,980+',
+                        'rating' => '4.98',
+                        'badge' => 'PhD Faculty Editor'
+                    ],
+                    [
+                        'name' => 'Dr. Hannah Vance',
+                        'degree' => 'PhD, Biomedical Communications — Columbia University',
+                        'specialty' => 'STEM Papers, IEEE/AMA Formatting & ESL Polishing',
+                        'orders' => '1,720+',
+                        'rating' => '4.97',
+                        'badge' => 'STEM Lead Editor'
+                    ]
+                ];
+                @endphp
+
+                @foreach($editors as $ed)
+                <div class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-7 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">{{ $ed['badge'] }}</span>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
+                                ★★★★★ <span class="text-slate-800 dark:text-slate-200 ml-1">{{ $ed['rating'] }}</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $ed['name'] }}</h3>
+                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 mb-4">{{ $ed['degree'] }}</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                            <strong>Specialization:</strong> {{ $ed['specialty'] }}
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">{{ $ed['orders'] }} papers edited</span>
+                        <a href="{{ route('order') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Hire Editor →</a>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         ACCORDION FAQ SECTION
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="faq">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">Answers & Clarity</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Everything you need to know before hiring our proofreading & editing team.</p>
+            </div>
+
+            <div class="space-y-4" x-data="{ open: null }">
+                @php
+                $faqs = [
+                    [
+                        'q' => 'How will I see the edits made to my document?',
+                        'a' => 'We deliver your edited document using Microsoft Word Track Changes. You will receive two files: one displaying tracked changes and editor marginal notes, and one clean final submission version.'
+                    ],
+                    [
+                        'q' => 'Who will edit my academic paper?',
+                        'a' => 'Your paper is assigned to a native English-speaking academic editor holding a PhD or Master\'s degree in your specific discipline from a top US or UK university.'
+                    ],
+                    [
+                        'q' => 'Do you check and format citations in APA, MLA, or Chicago style?',
+                        'a' => 'Yes. We perform thorough citation audits checking in-text citations against your reference list according to APA 7th, MLA 9th, Chicago 17th, Harvard, IEEE, or OSCOLA style guidelines.'
+                    ],
+                    [
+                        'q' => 'Can I get urgent express proofreading for tight deadlines?',
+                        'a' => 'Yes. We offer express academic proofreading with turnarounds as fast as 3 hours, 6 hours, or 12 hours without compromising editorial accuracy.'
+                    ],
+                    [
+                        'q' => 'What if I need changes after receiving my edited paper?',
+                        'a' => 'We provide 21 days of unlimited free re-checks if you make minor tweaks to your text based on editor comments.'
+                    ]
+                ];
+                @endphp
+
+                @foreach($faqs as $i => $faq)
+                <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-colors"
+                     :class="open === {{ $i }} ? 'border-blue-500 dark:border-blue-500 shadow-md' : ''">
+                    <button 
+                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-7 py-6 text-left font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-base sm:text-lg">
+                        <span>{{ $faq['q'] }}</span>
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 transition-transform duration-300"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
+                        {{ $faq['a'] }}
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         FINAL CTA SECTION
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white overflow-hidden">
+        <!-- Decorative glowing circles -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">Ready to Submit a Flawless Academic Paper?</h2>
+            <p class="mt-5 text-blue-100 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                Connect with a native English PhD editor today. Get a perfectly formatted, track-changed document delivered before your deadline.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 rounded-2xl bg-white px-9 py-4 text-lg font-bold text-blue-700 shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300">
+                    Order Proofreading Now
+                    <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
 @endsection

@@ -1,830 +1,717 @@
-@extends('assignment-services.show')
+@extends('layouts.app')
 
-@section('title', 'Thesis & Dissertation Writing Service | PhD Experts | Original Research')
-@section('meta_description',
-    'Expert thesis and dissertation writing help from PhD scholars. Complete chapters or full
-    dissertations with original research, methodology, data analysis, and defense preparation. All academic disciplines.')
-@section('meta_keywords',
-    'dissertation writing service, thesis help, PhD dissertation assistance, masters thesis
-    writing, dissertation chapters, literature review writing, methodology help, data analysis, dissertation editing, thesis
-    proposal writing')
+@section('title', 'Thesis & Dissertation Help USA | PhD Writing Services')
+@section('description', 'Get expert thesis & dissertation help in USA. Master\'s theses & PhD dissertations with original research, data analysis & defense prep by PhD writers.')
+@section('keywords', 'thesis help, dissertation help USA, PhD dissertation writing service, masters thesis help, write my dissertation, dissertation methodology, SPSS data analysis dissertation, dissertation defense prep')
 
-    @push('head')
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Professional Thesis & Dissertation Writing Service | PhD Experts">
-        <meta property="og:description"
-            content="Get expert thesis and dissertation help from PhD scholars. Complete writing, research, methodology, and data analysis. All disciplines covered.">
+@push('head')
+    <!-- Open Graph / Facebook Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Thesis & Dissertation Help USA | PhD Writing Services">
+    <meta property="og:description" content="Get expert thesis & dissertation help in USA. Master\'s theses & PhD dissertations with original research, data analysis & defense prep by PhD writers.">
+    <meta property="og:image" content="{{ asset('images/grad-cap.png') }}">
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Professional Thesis & Dissertation Writing Service | PhD Experts">
-        <meta property="twitter:description"
-            content="Expert thesis and dissertation help from PhD scholars. Original research with rigorous methodology and analysis.">
-    @endpush
+    <!-- Twitter Meta -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Thesis & Dissertation Help USA | PhD Writing Services">
+    <meta property="twitter:description" content="Get expert thesis & dissertation help in USA. Master\'s theses & PhD dissertations with original research, data analysis & defense prep by PhD writers.">
+    <meta property="twitter:image" content="{{ asset('images/grad-cap.png') }}">
 
-@section('custom-content')
-    <!-- Comprehensive Thesis & Dissertation Content Section -->
-    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900" itemscope itemtype="https://schema.org/Service">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Structured Data (JSON-LD) for Google SEO -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@graph": [
+            {
+                "@@type": "EducationalOrganization",
+                "@@id": "{{ url('/') }}#organization",
+                "name": "Assignment Help USA",
+                "url": "{{ url('/') }}",
+                "logo": "{{ asset('images/logo.png') }}",
+                "sameAs": []
+            },
+            {
+                "@@type": "Service",
+                "@@id": "{{ url()->current() }}#service",
+                "name": "Professional Thesis & Dissertation Help USA",
+                "provider": { "@@id": "{{ url('/') }}#organization" },
+                "serviceType": "Academic Thesis and Dissertation Assistance",
+                "areaServed": {
+                    "@@type": "Country",
+                    "name": "United States"
+                },
+                "description": "Custom Master's thesis and PhD dissertation writing assistance for US university students. Comprehensive 5-chapter research support, empirical data analysis (SPSS/R), and defense prospectus preparation by native PhD scholars.",
+                "offers": {
+                    "@@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "20.00",
+                    "priceValidUntil": "2027-12-31",
+                    "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                    "@@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "5120",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                }
+            },
+            {
+                "@@type": "BreadcrumbList",
+                "@@id": "{{ url()->current() }}#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "{{ url('/') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 2,
+                        "name": "Services",
+                        "item": "{{ url('/services') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 3,
+                        "name": "Thesis & Dissertation Help",
+                        "item": "{{ url()->current() }}"
+                    }
+                ]
+            },
+            {
+                "@@type": "FAQPage",
+                "@@id": "{{ url()->current() }}#faq",
+                "mainEntity": [
+                    {
+                        "@@type": "Question",
+                        "name": "Can I order individual dissertation chapters instead of a complete dissertation?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Yes. You can order specific dissertation chapters, such as Chapter 1 (Introduction), Chapter 2 (Literature Review), Chapter 3 (Methodology), Chapter 4 (Results & SPSS Analysis), or Chapter 5 (Discussion)."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Who will assist with my thesis or PhD dissertation?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Your project is assigned to a scholar holding a PhD from a top US university in your exact discipline who has served on dissertation committees and published peer-reviewed research."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Do you perform statistical analysis in SPSS, R, STATA, or NVivo?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Yes. Our quantitative & qualitative data specialists run complex statistical models (SEM, ANOVA, Regression) in SPSS, R, STATA, and thematic coding in NVivo, delivering complete raw data outputs and written interpretations."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Are your dissertations 100% original and Turnitin-verified?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Every dissertation is written 100% from scratch. We scan every document using Turnitin and advanced AI detection tools, attaching an official similarity report with your order."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+@endpush
+
+@section('content')
+<div class="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
+
+    {{-- ===================================================
+         HERO SECTION
+    =================================================== --}}
+    <x-creative-hero 
+        :service="$service" 
+        title="Professional Thesis & Dissertation Help USA"
+        subtitle="Struggling with complex doctoral methodology, data analysis, or tight defense deadlines? Get 100% original, publication-grade thesis & dissertation help from US-based PhD scholars. Complete 5-chapter assistance, SPSS/R statistical analysis, and committee defense prep." 
+    />
+
+    {{-- ===================================================
+         TRUST BAR / SOCIAL PROOF (E-E-A-T)
+    =================================================== --}}
+    <section class="relative z-10 border-y border-slate-200/80 bg-white/90 py-5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/90" aria-label="Trust Signals">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-3xl">
-                <div class="mb-10 text-center sm:mb-12">
-                    <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">PhD-Qualified Dissertation Support</p>
-                    <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white" itemprop="name">
-                        Professional Thesis &amp; Dissertation Writing Service
-                    </h1>
-                    <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400" itemprop="description">
-                        Get expert thesis and dissertation help from PhD scholars. Comprehensive research support, rigorous
-                        methodology, advanced data analysis, and defense preparation.
-                    </p>
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+                <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                    <div class="flex text-amber-400 text-sm">★★★★★</div>
+                    <span class="font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">(5,120+ Graduate Dissertations)</span>
                 </div>
-
-                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                    <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                        Writing a thesis or dissertation represents the culmination of years of academic study and
-                        stands as the most significant scholarly achievement in your educational journey. Whether you're
-                        pursuing a Master's degree or working toward your PhD, completing a dissertation requires
-                        extraordinary dedication, advanced research capabilities, mastery of complex methodologies,
-                        sophisticated analytical skills, and the ability to contribute original knowledge to your field.
-                        Our professional thesis and dissertation writing service provides comprehensive support from
-                        experienced PhD scholars who understand the rigorous demands of graduate-level research and can
-                        guide you through every stage of this challenging process with expertise and academic integrity.
-                    </p>
-
-                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                        Our team consists exclusively of doctoral-qualified researchers and subject matter experts who
-                        have successfully defended their own dissertations and possess deep understanding of academic
-                        research conventions across diverse disciplines including humanities, social sciences, business
-                        administration, engineering, natural sciences, medicine, law, and education. We provide tailored
-                        assistance for complete dissertations spanning 80-400 pages, individual chapters including
-                        proposals, literature reviews, methodology, results, and discussion sections, comprehensive
-                        statistical and qualitative data analysis, systematic literature reviews, theoretical
-                        frameworks, and defense preparation. Every dissertation we support demonstrates scholarly rigor,
-                        methodological soundness, critical analysis, and original contribution to academic knowledge
-                        while adhering to your institution's specific formatting guidelines and citation requirements.
-                    </p>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <span class="font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">45</strong> PhD Committee Scholars Online</span>
                 </div>
-
-                <!-- Trust & Guarantees Section -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                    <div class="mb-8 text-center">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Our Dissertation Guarantees</h2>
-                        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Your doctoral success is our commitment</p>
-                    </div>
-
-                    <div class="grid gap-5 sm:grid-cols-2">
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="text-2xl">🎓</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white">PhD-Qualified Dissertation Experts</h3>
-                            </div>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Your dissertation will be written by a scholar with a completed PhD in your
-                                specific field who has successfully defended their own dissertation. We match
-                                you with experts who have published research, understand institutional
-                                requirements, and possess years of experience guiding graduate students through
-                                the dissertation process.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="text-2xl">🔬</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Rigorous Research Methodology</h3>
-                            </div>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                We employ advanced research methodologies including quantitative analysis
-                                (regression, SEM, factor analysis using SPSS, R, STATA, Python), qualitative
-                                methods (grounded theory, phenomenology, ethnography, content analysis with
-                                NVivo), and mixed-methods designs. Every methodological choice is justified and
-                                documented.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="text-2xl">✅</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white">100% Original Research</h3>
-                            </div>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Every dissertation is built on original research and analysis. We never recycle
-                                previous work or use pre-written content. Comprehensive plagiarism checks via
-                                Turnitin with detailed reports. All sources meticulously cited in your required
-                                format (APA 7th, MLA 9th, Chicago, Harvard, IEEE). Complete academic integrity
-                                guaranteed.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="text-2xl">🛡️</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Defense Preparation Support</h3>
-                            </div>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Beyond writing, we help prepare you for your dissertation defense. Receive
-                                anticipated committee questions, practice responses, methodological
-                                justifications, and explanations of your analytical approach. We ensure you
-                                thoroughly understand every aspect of your dissertation research.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-4 text-center text-base font-bold text-slate-900 dark:text-white">Our Dissertation Success Record</h3>
-                        <div class="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
-                            <div>
-                                <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">200+</p>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Completed Dissertations</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">✓</p>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Comprehensive Defense Preparation</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold text-purple-600 dark:text-purple-400">85+</p>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">PhD Dissertation Consultants</p>
-                            </div>
-                            <div>
-                                <p class="text-2xl font-bold text-amber-600 dark:text-amber-400">✓</p>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Methodologically Sound</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 9 0 0118 0z"/></svg>
+                    <span>100% University Rubric Compliant</span>
                 </div>
-
-                <div class="mt-8 grid gap-5 sm:grid-cols-2">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white">
-                            <span class="text-xl">📊</span>
-                            Advanced Data Analysis Expertise
-                        </h3>
-                        <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            Our dissertation consultants possess advanced proficiency in both quantitative and
-                            qualitative data analysis methodologies. For quantitative dissertations, we provide
-                            comprehensive statistical analysis including descriptive statistics, inferential tests,
-                            multivariate analysis, structural equation modeling (SEM), hierarchical linear modeling
-                            (HLM), time series analysis, and experimental design using industry-standard software such
-                            as SPSS, R, STATA, SAS, Python, and MATLAB.
-                        </p>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            For qualitative dissertations, our experts conduct rigorous coding procedures, thematic
-                            analysis, narrative analysis, discourse analysis, grounded theory development,
-                            phenomenological interpretation, and case study synthesis using NVivo, MAXQDA, or Atlas.ti.
-                            Mixed-methods dissertations receive integrated analysis that meaningfully combines
-                            quantitative and qualitative findings to provide comprehensive insights and robust
-                            conclusions that withstand committee scrutiny.
-                        </p>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white">
-                            <span class="text-xl">📚</span>
-                            Comprehensive Literature Review
-                        </h3>
-                        <p class="mb-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            A robust literature review forms the theoretical foundation of every successful
-                            dissertation. Our scholars conduct systematic searches across multiple academic databases
-                            including JSTOR, ProQuest, EBSCOhost, Google Scholar, Web of Science, Scopus, PubMed, IEEE
-                            Xplore, and discipline-specific repositories to identify seminal works, current research
-                            trends, and gaps in existing scholarship. We analyze 50-150+ peer-reviewed sources depending
-                            on your dissertation scope.
-                        </p>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            We synthesize diverse theoretical perspectives, critically evaluate methodological
-                            approaches, identify contradictions and consensus in the literature, trace the evolution of
-                            key concepts, and position your research within broader scholarly conversations. Our
-                            literature reviews demonstrate sophisticated critical analysis, theoretical integration, and
-                            clear articulation of how your dissertation contributes original knowledge to advance your
-                            academic field.
-                        </p>
-                    </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span>0% AI & Turnitin Passed</span>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Dissertation Services Types -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                    <h2 class="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                        Comprehensive Dissertation Services We Provide
+    {{-- ===================================================
+         VISUAL FEATURE 1: 5-CHAPTER DISSERTATION BLUEPRINT
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white overflow-hidden" id="dissertation-framework">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Doctoral Research Lifecycle
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                        Standard 5-Chapter Dissertation <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Engineered to Committee Standards</span>
                     </h2>
-                    <div class="grid gap-5 sm:grid-cols-2">
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Complete PhD Dissertations</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Full dissertation writing from proposal through final defense including all chapters,
-                                original research design, data collection and analysis, comprehensive literature review,
-                                and theoretical framework development (150-400 pages).
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Master's Thesis Writing</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Complete thesis projects for Master's programs including empirical research,
-                                literature-based thesis, applied research projects, and capstone theses across all
-                                academic disciplines (50-150 pages).
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Dissertation Proposals</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Comprehensive proposals including problem statement, research questions, literature
-                                review, theoretical framework, methodology, significance, and expected contributions
-                                designed to gain committee approval.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Individual Dissertation Chapters</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Chapter-by-chapter assistance including Introduction/Chapter 1, Literature
-                                Review/Chapter 2, Methodology/Chapter 3, Results/Chapter 4, Discussion and
-                                Conclusions/Chapter 5, plus abstract and appendices.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Statistical Data Analysis</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Expert quantitative analysis using SPSS, R, STATA, SAS, or Python including descriptive
-                                statistics, regression models, ANOVA, factor analysis, SEM, survival analysis, and
-                                complex multivariate procedures with interpretation.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Qualitative Research Analysis</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Comprehensive qualitative analysis including interview transcription, coding procedures,
-                                thematic development, narrative analysis, phenomenological interpretation, grounded
-                                theory, and ethnographic analysis using NVivo or MAXQDA.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Systematic Literature Reviews</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Rigorous systematic reviews following PRISMA guidelines, meta-analysis, scoping reviews,
-                                and comprehensive narrative reviews synthesizing 50-200+ scholarly sources with critical
-                                evaluation and gap identification.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Dissertation Editing &amp; Formatting</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Professional editing for clarity, coherence, academic tone, and grammar. Complete
-                                formatting according to university guidelines including APA 7th, MLA 9th, Chicago, or
-                                institutional-specific requirements. Table of contents, citations, references.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Methodology Design Consultation</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Expert guidance on research design selection, sampling strategies, instrument
-                                development, validity and reliability considerations, ethical approval processes, and
-                                methodological justification for committee approval.
-                            </p>
-                        </div>
-
-                        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <h4 class="mb-2 text-base font-bold text-blue-600 dark:text-blue-400">Defense Preparation Coaching</h4>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Comprehensive preparation including anticipated questions, practice sessions,
-                                explanation of methodology and findings, presentation development, and strategies for
-                                addressing committee concerns and critiques.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dissertation Writing Process -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                    <h2 class="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Our Dissertation Development Process</h2>
-                    <p class="mx-auto mt-2 mb-8 max-w-2xl text-center text-sm text-slate-600 dark:text-slate-400">
-                        Systematic, rigorous approach ensuring doctoral-level quality
+                    <p class="mt-5 text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Completing a Master's thesis or PhD dissertation requires rigorous adherence to university committee expectations. Our PhD scholars assist with complete manuscripts or individual chapters.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">1</div>
-                            <div class="mb-2 mt-2 text-2xl">🎯</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Consultation & Matching</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Initial consultation to understand research goals, match with PhD expert in your field</p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-lg shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">1</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Ch 1 & 2: Proposal, Introduction & Literature Review</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Formulating research questions, theoretical frameworks, and synthesizing peer-reviewed literature to establish empirical research gaps.</p>
+                            </div>
                         </div>
 
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">2</div>
-                            <div class="mb-2 mt-2 text-2xl">📋</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Research Design</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Develop comprehensive research design, methodology, theoretical framework, and proposal</p>
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">2</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Ch 3 & 4: Methodology, Sampling & SPSS/R Data Analysis</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Designing quantitative/qualitative instruments, sample power calculations, running SPSS/R/STATA tests, and presenting data tables.</p>
+                            </div>
                         </div>
 
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">3</div>
-                            <div class="mb-2 mt-2 text-2xl">📚</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Literature Review</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Systematic search and synthesis of 50-150+ scholarly sources, gap identification</p>
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white font-black text-lg shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">3</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Ch 5 & Defense: Discussion, Implications & Slide Prep</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Synthesizing findings with existing literature, articulating policy/practical implications, and preparing oral defense slide decks.</p>
+                            </div>
                         </div>
-
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">4</div>
-                            <div class="mb-2 mt-2 text-2xl">🔬</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Data Collection</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Execute research methodology, gather data, conduct interviews, distribute surveys</p>
-                        </div>
-
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">5</div>
-                            <div class="mb-2 mt-2 text-2xl">📊</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Analysis</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Rigorous statistical or qualitative analysis using appropriate software and methods</p>
-                        </div>
-
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">6</div>
-                            <div class="mb-2 mt-2 text-2xl">✍️</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Chapter Writing</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Draft all chapters with scholarly writing, proper citations, and logical flow</p>
-                        </div>
-
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">7</div>
-                            <div class="mb-2 mt-2 text-2xl">🔍</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Quality Review</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Comprehensive editing, plagiarism check, methodology verification, citation audit</p>
-                        </div>
-
-                        <div class="relative rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                            <div class="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">8</div>
-                            <div class="mb-2 mt-2 text-2xl">🎓</div>
-                            <h4 class="mb-1.5 text-sm font-bold text-slate-900 dark:text-white">Defense Prep</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Prepare defense materials, anticipated questions, practice explanations</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 rounded-xl border-l-4 border-blue-600 bg-white p-6 dark:bg-slate-900">
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            <strong class="font-semibold text-slate-900 dark:text-white">Complete Transparency:</strong> Throughout the dissertation process, you maintain
-                            direct communication with your assigned PhD consultant. Review and approve each chapter
-                            before proceeding. Request revisions at any stage. We provide detailed explanations of
-                            methodology, analysis procedures, and theoretical frameworks so you fully understand your
-                            dissertation and can confidently defend it before your committee.
-                        </p>
                     </div>
                 </div>
 
-                <!-- FAQ Section -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950" itemscope
-                    itemtype="https://schema.org/FAQPage">
-                    <h2 class="mb-8 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                        Dissertation Writing FAQs
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-80 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-700/80 bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/database_ecosystem_banner.png') }}" 
+                             alt="Standard 5-Chapter Doctoral Dissertation Research Framework Blueprint" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         VISUAL FEATURE 2: STATISTICAL DATA & STRUCTURAL MODELING
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="order-2 lg:order-1 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/database_erd_preview.png') }}" 
+                             alt="Advanced Statistical Data Analysis and Structural Equation Modeling Diagram" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/60 border border-indigo-300 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                        Empirical Data Mastery
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Advanced SPSS, R, STATA & NVivo Data Analysis
                     </h2>
+                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Statistical errors in Chapter 4 are the leading cause of dissertation committee pushback. Our PhD data specialists run complex quantitative models and qualitative coding with full raw data outputs.
+                    </p>
 
-                    <div class="space-y-4">
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                            class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Who will work on my dissertation?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Your dissertation will be
-                                    assigned to a PhD-qualified scholar who has completed their own doctoral
-                                    dissertation in your specific field of study. All our dissertation consultants hold
-                                    earned doctorates from accredited universities and have experience in academic
-                                    research, publishing, and graduate-level teaching. We carefully match you with an
-                                    expert whose research interests, methodological expertise, and academic background
-                                    align with your dissertation topic. You communicate directly with your consultant
-                                    throughout the entire process.</p>
-                            </div>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Quantitative modeling: Regression, ANOVA, SEM, Factor Analysis in SPSS & R</span>
                         </div>
-
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                            class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Can you help with statistical analysis for my dissertation?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Yes, we provide comprehensive
-                                    statistical analysis services for quantitative and mixed-methods dissertations. Our
-                                    statisticians are proficient in SPSS, R, STATA, SAS, Python, and MATLAB. We conduct
-                                    descriptive statistics, t-tests, ANOVA, MANOVA, regression analysis (linear,
-                                    logistic, multinomial), factor analysis, reliability analysis, structural equation
-                                    modeling (SEM), hierarchical linear modeling (HLM), survival analysis, time series
-                                    analysis, and advanced multivariate procedures. All analyses include detailed output
-                                    interpretation, APA-formatted tables, assumption testing, and methodological
-                                    justification for your dissertation.</p>
-                            </div>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Qualitative analysis: NVivo interview coding, thematic matrices & grounded theory</span>
                         </div>
-
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                            class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Do you provide support for qualitative dissertations?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Absolutely. Our qualitative
-                                    research experts specialize in various methodological approaches including
-                                    phenomenology, grounded theory, ethnography, narrative inquiry, case study research,
-                                    and participatory action research. We assist with interview protocol development,
-                                    data collection procedures, transcription services, coding strategies (open, axial,
-                                    selective coding), thematic analysis, member checking, trustworthiness criteria, and
-                                    theoretical saturation. We use NVivo, MAXQDA, and Atlas.ti for systematic coding and
-                                    analysis. All qualitative work includes detailed audit trails and methodological
-                                    rigor documentation.</p>
-                            </div>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Raw output files (.spv, .RData) and APA formatted data tables included</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                            class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">How do you ensure dissertation originality?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Every dissertation is built
-                                    from original research conducted specifically for your project. We never recycle
-                                    previous dissertations or use pre-written content. All literature reviews are based
-                                    on current scholarly sources specific to your topic. Data analysis is conducted on
-                                    your unique dataset or research questions. Before delivery, we scan all content
-                                    through Turnitin plagiarism detection software and provide you with a comprehensive
-                                    originality report showing proper citations and zero plagiarism. All sources are
-                                    meticulously cited in your required format (APA, MLA, Chicago, etc.). We guarantee
-                                    100% original scholarly work.</p>
-                            </div>
+    {{-- ===================================================
+         VISUAL FEATURE 3: DOCTORAL WORKSTATION SHOWCASE
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/60 border border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                        Guaranteed Academic Originality
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        100% Custom Written & Turnitin Verified Original
+                    </h2>
+                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Doctoral dissertations require absolute originality. Every document is crafted from scratch according to your committee prospectus, verified by Turnitin, and backed by unlimited committee revisions.
+                    </p>
+
+                    <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-blue-600 dark:text-blue-400 font-bold text-lg mb-1">Turnitin Similarity Report</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Official plagiarism scan attached to every dissertation order.</p>
                         </div>
-
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
-                            class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white" itemprop="name">Will you help me prepare for my dissertation defense?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Yes, defense preparation is
-                                    included with all complete dissertation packages. We provide comprehensive defense
-                                    preparation materials including anticipated committee questions with detailed
-                                    responses, explanations of methodological choices and justifications, interpretation
-                                    of findings and implications, limitations and future research directions, and
-                                    strategies for addressing potential critiques. We help you develop a clear
-                                    presentation and ensure you thoroughly understand every aspect of your dissertation
-                                    research so you can confidently defend your work. Mock defense sessions can be
-                                    arranged for additional preparation.</p>
-                            </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-indigo-600 dark:text-indigo-400 font-bold text-lg mb-1">0% AI Content</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Scanned and verified on CopyLeaks, GPTZero, and Turnitin AI.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-purple-600 dark:text-purple-400 font-bold text-lg mb-1">Committee Revisions</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Unlimited free adjustments until your committee approves your draft.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg mb-1">Strict Confidentiality</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Encrypted data protocols ensuring 100% privacy protection.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Meet Our Dissertation Consultants -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                    <div class="mb-8 text-center">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Meet Your Dissertation Consultants</h2>
-                        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Doctoral-level experts with extensive publication records and dissertation committee experience</p>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/case-study-analysis-hero.png') }}" 
+                             alt="Doctoral Dissertation Research Workstation Environment" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="mb-6 grid gap-5 sm:grid-cols-3">
-                        <!-- Consultant 1 -->
-                        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 text-sm font-bold text-white">
-                                    DJ
-                                </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center gap-2">
-                                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">Dr. Jennifer</h4>
-                                        <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">PhD Verified</span>
-                                    </div>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">PhD in Education</p>
-                                    <div class="mt-1 text-xs text-amber-400">⭐⭐⭐⭐⭐ 5.0</div>
-                                </div>
-                            </div>
-                            <p class="mb-3 text-xs text-slate-600 dark:text-slate-400">22+ years academia • 18 journal publications • 45
-                                dissertations supervised • Mixed-methods, qualitative research, Ed.D & PhD expert</p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                                <span>Columbia University</span>
-                                <span class="font-semibold text-emerald-600 dark:text-emerald-400">Available Now</span>
-                            </div>
+    {{-- ===================================================
+         DISSERTATION SERVICES COVERED
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="dissertation-services">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Comprehensive Scope</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Our Thesis & Dissertation Services</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">From proposal prospectus to final defense slides, we assist at every stage.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{-- Service 1 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-2xl group-hover:scale-110 transition-transform">🎓</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Full PhD Dissertations</h3>
                         </div>
-
-                        <!-- Consultant 2 -->
-                        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-sm font-bold text-white">
-                                    DR
-                                </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center gap-2">
-                                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">Dr. Robert</h4>
-                                        <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">PhD Verified</span>
-                                    </div>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">PhD in Statistics</p>
-                                    <div class="mt-1 text-xs text-amber-400">⭐⭐⭐⭐⭐ 5.0</div>
-                                </div>
-                            </div>
-                            <p class="mb-3 text-xs text-slate-600 dark:text-slate-400">18 years experience • Statistical consultant • 120+
-                                dissertations assisted • SPSS, R, SAS, quantitative analysis, regression, SEM</p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                                <span>University of Michigan</span>
-                                <span class="font-semibold text-emerald-600 dark:text-emerald-400">Available Now</span>
-                            </div>
-                        </div>
-
-                        <!-- Consultant 3 -->
-                        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-start gap-3">
-                                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-sm font-bold text-white">
-                                    DM
-                                </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center gap-2">
-                                        <h4 class="text-sm font-bold text-slate-900 dark:text-white">Dr. Maria</h4>
-                                        <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400">PhD Verified</span>
-                                    </div>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">PhD in Nursing</p>
-                                    <div class="mt-1 text-xs text-amber-400">⭐⭐⭐⭐⭐ 4.9</div>
-                                </div>
-                            </div>
-                            <p class="mb-3 text-xs text-slate-600 dark:text-slate-400">20+ years clinical research • 12 publications •
-                                DNP/PhD dissertations • Qualitative methods, phenomenology, grounded theory, NVivo</p>
-                            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                                <span>Johns Hopkins</span>
-                                <span class="font-semibold text-amber-600 dark:text-amber-400">2 Projects in Queue</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl border-l-4 border-blue-600 bg-white p-6 dark:bg-slate-900">
-                        <p class="text-center text-sm text-slate-600 dark:text-slate-400">
-                            <strong class="font-semibold text-slate-900 dark:text-white">All consultants are published scholars with dissertation committee
-                                experience.</strong> We verify doctoral degrees, publication records, and teaching
-                            credentials. One-on-one consultations available throughout your dissertation journey.
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            End-to-end doctoral research assistance across all 5 chapters (100–300+ pages) customized to committee rubrics.
                         </p>
                     </div>
-                </div>
-
-                <!-- Dissertation Defense Success Rate -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                    <div class="mb-8 text-center">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Our Dissertation Success Record</h2>
-                        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Proven track record of successful defenses and completions</p>
-                    </div>
-
-                    <div class="mb-6 grid gap-5 sm:grid-cols-3">
-                        <!-- Success Metric 1 -->
-                        <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center dark:border-emerald-900 dark:bg-emerald-950/30">
-                            <p class="text-3xl font-bold text-emerald-600 dark:text-emerald-400">94%</p>
-                            <p class="mt-1 text-sm font-semibold text-slate-900 dark:text-white">Defense Pass Rate</p>
-                            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Students pass defense on 1st or 2nd attempt</p>
-                        </div>
-
-                        <!-- Success Metric 2 -->
-                        <div class="rounded-xl border border-blue-200 bg-blue-50 p-6 text-center dark:border-blue-900 dark:bg-blue-950/30">
-                            <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">450+</p>
-                            <p class="mt-1 text-sm font-semibold text-slate-900 dark:text-white">Completed Dissertations</p>
-                            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">PhD, Ed.D, DNP, DBA across all disciplines</p>
-                        </div>
-
-                        <!-- Success Metric 3 -->
-                        <div class="rounded-xl border border-purple-200 bg-purple-50 p-6 text-center dark:border-purple-900 dark:bg-purple-950/30">
-                            <p class="text-3xl font-bold text-purple-600 dark:text-purple-400">4.9/5</p>
-                            <p class="mt-1 text-sm font-semibold text-slate-900 dark:text-white">Client Satisfaction</p>
-                            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Based on 300+ doctoral student reviews</p>
-                        </div>
-                    </div>
-
-                    <div class="grid gap-5 sm:grid-cols-2">
-                        <!-- Sample Timeline 1 -->
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-center gap-2">
-                                <span class="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">PhD Success</span>
-                                <span class="ml-auto text-xs font-semibold text-emerald-600 dark:text-emerald-400">Defended Successfully</span>
-                            </div>
-                            <h4 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Education Dissertation - 250 Pages</h4>
-                            <p class="mb-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
-                                <strong class="font-semibold text-slate-900 dark:text-white">Challenge:</strong> Working full-time teacher completing Ed.D dissertation on
-                                urban school reform<br>
-                                <strong class="font-semibold text-slate-900 dark:text-white">Timeline:</strong> 8 months from proposal to defense<br>
-                                <strong class="font-semibold text-slate-900 dark:text-white">Result:</strong> Passed with minor revisions, now published
-                            </p>
-                            <div class="text-xs italic text-slate-500 dark:text-slate-500">
-                                "Committee praised methodological rigor and contribution to field"
-                            </div>
-                        </div>
-
-                        <!-- Sample Timeline 2 -->
-                        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
-                            <div class="mb-3 flex items-center gap-2">
-                                <span class="rounded-full bg-purple-600 px-3 py-1 text-xs font-semibold text-white">DNP Success</span>
-                                <span class="ml-auto text-xs font-semibold text-emerald-600 dark:text-emerald-400">Defended Successfully</span>
-                            </div>
-                            <h4 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Nursing Practice Dissertation - 180 Pages</h4>
-                            <p class="mb-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
-                                <strong class="font-semibold text-slate-900 dark:text-white">Challenge:</strong> Full-time nurse completing DNP project on patient safety
-                                protocols<br>
-                                <strong class="font-semibold text-slate-900 dark:text-white">Timeline:</strong> 6 months from data collection to completion<br>
-                                <strong class="font-semibold text-slate-900 dark:text-white">Result:</strong> Approved with zero revisions, implemented at hospital
-                            </p>
-                            <div class="text-xs italic text-slate-500 dark:text-slate-500">
-                                "Quality improvement project now hospital-wide standard"
-                            </div>
-                        </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Full Dissertation <span>→</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Final CTA -->
-                <div class="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
-                    <h3 class="mb-3 flex items-center justify-center gap-2 text-xl font-bold text-slate-900 dark:text-white">
-                        <span class="text-xl">🎓</span>
-                        Ready to Complete Your Dissertation Successfully?
-                    </h3>
-                    <p class="mx-auto mb-6 max-w-2xl text-center text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                        Join hundreds of doctoral students who've successfully defended their dissertations with our
-                        expert guidance. PhD-qualified consultants, rigorous methodology, comprehensive analysis, and
-                        dedicated support from proposal through defense. Your doctoral success is our commitment.
-                    </p>
-                    <div class="text-center">
-                        <a href="{{ route('order', ['assignment_service' => $service->id ?? 3]) }}"
-                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-500">
-                            <span>📝</span>
-                            Start Your Dissertation Journey Today
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
+                {{-- Service 2 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-2xl group-hover:scale-110 transition-transform">📜</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Master's Theses</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Tailored Master's thesis writing support (50–100 pages) incorporating rigorous literature review and empirical research.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Master's Thesis <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 3 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-2xl group-hover:scale-110 transition-transform">📝</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Proposal & Prospectus</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Crafting persuasive dissertation proposals, problem statements, and methodology designs to win committee approval.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Proposal Help <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 4 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-2xl group-hover:scale-110 transition-transform">📊</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">SPSS & R Data Analysis (Ch 4)</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Quantitative statistical analysis (SEM, Regression, ANOVA) in SPSS/R and qualitative thematic coding in NVivo.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Data Analysis <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 5 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-2xl group-hover:scale-110 transition-transform">📚</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Systematic Literature Review (Ch 2)</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Systematic literature reviews following PRISMA frameworks, thematic matrices, and research gap identification.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.literature-review.index') }}" class="text-sm font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Literature Review Help <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Service 6 --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rose-500 to-red-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-2xl group-hover:scale-110 transition-transform">🎯</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Defense Slide Prep & Response</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Creating professional oral defense presentation decks and writing point-by-point committee feedback response letters.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-rose-600 hover:text-rose-700 dark:text-rose-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Defense Prep <span>→</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Academic Integrity Notice -->
-        <div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6 lg:px-8">
-            <div class="rounded-xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-900 dark:bg-amber-950/30">
-                <p class="text-xs leading-relaxed text-amber-800 dark:text-amber-300">
-                    <strong class="font-semibold">Academic Use Notice:</strong> Our thesis and dissertation support services are provided as academic
-                    guidance and reference materials to help you develop your research skills. All work delivered is intended to
-                    be used as a learning aid. Please ensure your use of our services complies with your institution's academic
-                    integrity policies.
-                </p>
+    {{-- ===================================================
+         ACADEMIC DATABASES & STATISTICAL SOFTWARE MATRIX
+    =================================================== --}}
+    <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-block bg-emerald-100 text-emerald-700 dark:bg-emerald-950/80 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-emerald-200 dark:border-emerald-800">Tools & Repositories</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Statistical Tools & Journal Repositories</h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">Our PhD researchers master advanced software tools and global academic databases.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 text-center">
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">SPSS</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">R Studio</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">STATA</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">NVivo</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">JSTOR</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">PubMed</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">Web of Science</div>
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">IEEE Xplore</div>
             </div>
         </div>
     </section>
 
-    <!-- Chapter-by-Chapter Guidance -->
-    <section class="bg-slate-50 py-14 sm:py-16 dark:bg-slate-950">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                <span class="mb-3 inline-block rounded-full bg-indigo-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-400">Chapter Guide</span>
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">What Goes Into Each Dissertation Chapter</h2>
-                <p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">A well-structured dissertation follows a clear chapter
-                    logic. Here's exactly what our doctoral writers include in each section.</p>
+    {{-- ===================================================
+         CITATIONS & FORMATTING STANDARDS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-950/80 dark:text-purple-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-purple-200 dark:border-purple-800">Citation Compliance</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mastery of All University Citation Manuals</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">In-text citations, DOI links, footnotes, and bibliographies formatted strictly to your university's manual.</p>
             </div>
-            <div class="space-y-3">
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-blue-400/50 transition-colors shadow-sm">
+                    <div class="text-blue-600 dark:text-blue-400 font-black text-xl mb-2">APA 7th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Psychology, Nursing, Social Sciences, and Education dissertations with DOI reference formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400/50 transition-colors shadow-sm">
+                    <div class="text-indigo-600 dark:text-indigo-400 font-black text-xl mb-2">MLA 9th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Literature, Humanities, and Cultural Studies with container-based Works Cited formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-purple-400/50 transition-colors shadow-sm">
+                    <div class="text-purple-600 dark:text-purple-400 font-black text-xl mb-2">Chicago / Turabian 17th</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for History, Fine Arts, and Political Science dissertations with Footnotes/Endnotes formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400/50 transition-colors shadow-sm">
+                    <div class="text-emerald-600 dark:text-emerald-400 font-black text-xl mb-2">Harvard Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Widely used across US business schools and economics departments for parenthetical referencing.</p>
+                </div>
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-rose-400/50 transition-colors shadow-sm">
+                    <div class="text-rose-600 dark:text-rose-400 font-black text-xl mb-2">IEEE Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Numbered bracket citation standard for Electrical Engineering, Computer Science, and STEM dissertations.</p>
+                </div>
+                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-amber-400/50 transition-colors shadow-sm">
+                    <div class="text-amber-600 dark:text-amber-400 font-black text-xl mb-2">OSCOLA & Legal</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Specialized legal citation style for LLM theses, SJD dissertations, and statutory legal research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         7 DISSERTATION PITFALLS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-rose-100 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-rose-200 dark:border-rose-800">Grade Protection</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">7 Dissertation Pitfalls Fixed</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our PhD scholars eliminate common committee objections before submission.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
                 @php
-                    $chapters = [
-                        [
-                            'num' => '01',
-                            'title' => 'Introduction',
-                            'color' => 'blue',
-                            'points' => [
-                                'Background and context of the research problem',
-                                'Clear statement of the research gap your study addresses',
-                                'Research aims, objectives, and questions or hypotheses',
-                                'Scope and limitations of the study',
-                                'Overview of the dissertation structure',
-                            ],
-                        ],
-                        [
-                            'num' => '02',
-                            'title' => 'Literature Review',
-                            'color' => 'indigo',
-                            'points' => [
-                                'Synthesis (not summary) of existing scholarship',
-                                'Identification of contradictions, gaps, and debates in the field',
-                                'Theoretical framework underpinning your study',
-                                'Justification for how your research addresses identified gaps',
-                                'Organised thematically or chronologically — not source by source',
-                            ],
-                        ],
-                        [
-                            'num' => '03',
-                            'title' => 'Methodology',
-                            'color' => 'purple',
-                            'points' => [
-                                'Research philosophy (positivist, interpretivist, pragmatist)',
-                                'Research design justification (qualitative, quantitative, mixed methods)',
-                                'Sampling strategy and participant recruitment',
-                                'Data collection methods and instruments',
-                                'Data analysis approach and tools (SPSS, NVivo, R, etc.)',
-                                'Ethical considerations and approval',
-                            ],
-                        ],
-                        [
-                            'num' => '04',
-                            'title' => 'Results / Findings',
-                            'color' => 'green',
-                            'points' => [
-                                'Objective presentation of data without interpretation',
-                                'Tables, figures, and statistical outputs clearly labelled',
-                                'For qualitative: themes and categories with supporting quotes',
-                                'For quantitative: descriptive statistics, regression outputs, significance values',
-                                'Structured to directly address each research question',
-                            ],
-                        ],
-                        [
-                            'num' => '05',
-                            'title' => 'Discussion',
-                            'color' => 'orange',
-                            'points' => [
-                                'Interpretation of findings in relation to the literature',
-                                'Explanation of unexpected or contradictory results',
-                                'Theoretical and practical implications',
-                                'Limitations of the current study',
-                                'Directions for future research',
-                            ],
-                        ],
-                        [
-                            'num' => '06',
-                            'title' => 'Conclusion',
-                            'color' => 'red',
-                            'points' => [
-                                'Direct answer to the research question(s)',
-                                'Summary of key contributions to knowledge',
-                                'Practical recommendations based on findings',
-                                'Honest acknowledgement of limitations',
-                                'Final reflective statement',
-                            ],
-                        ],
-                    ];
+                $pitfalls = [
+                    ['title' => 'Methodology-Research Question Mismatch', 'desc' => 'Choosing quantitative surveys for questions that require qualitative phenomenology.'],
+                    ['title' => 'Insufficient Sample Size Power', 'desc' => 'Failing to conduct G*Power calculations, resulting in statistically underpowered results.'],
+                    ['title' => 'Weak Conceptual Framework', 'desc' => 'Failing to connect Chapter 2 theoretical literature to Chapter 4 empirical data variables.'],
+                    ['title' => 'Endless Committee Revision Loops', 'desc' => 'Failing to address committee feedback with a structured point-by-point response letter.'],
+                    ['title' => 'Superficial Data Discussion (Ch 5)', 'desc' => 'Reporting numbers in Chapter 4 without explaining their broader academic implications in Chapter 5.'],
+                    ['title' => 'Inconsistent Citation Formatting', 'desc' => 'Mixing APA 6th and 7th rules or missing DOI links in the reference list.'],
+                    ['title' => 'Unrealistic Scope & Timelines', 'desc' => 'Overcommitting to unrealistic data collection timelines that cause graduation delays.'],
+                ];
                 @endphp
-                @foreach ($chapters as $ch)
-                    <div
-                        class="flex gap-5 rounded-2xl border border-slate-200 bg-white p-6 transition-colors duration-200 hover:border-{{ $ch['color'] }}-200 hover:bg-{{ $ch['color'] }}-50 dark:border-slate-800 dark:bg-slate-900">
-                        <div class="w-10 shrink-0 text-2xl font-bold leading-none text-{{ $ch['color'] }}-300 dark:text-{{ $ch['color'] }}-800">
-                            {{ $ch['num'] }}</div>
-                        <div class="flex-1">
-                            <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">Chapter {{ $ch['num'] }}:
-                                {{ $ch['title'] }}</h3>
-                            <ul class="grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
-                                @foreach ($ch['points'] as $point)
-                                    <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                                        <svg class="mt-0.5 h-4 w-4 shrink-0 text-{{ $ch['color'] }}-500"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        {{ $point }}
-                                    </li>
-                                @endforeach
-                            </ul>
+                @foreach($pitfalls as $index => $p)
+                <div class="flex gap-5 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 hover:border-rose-300 dark:hover:border-rose-800 transition-colors shadow-sm">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-500 text-white font-black text-base shadow-md shadow-rose-500/20">
+                        {{ $index + 1 }}
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{{ $p['title'] }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ $p['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         EXPERT PHD DISSERTATION COMMITTEE MEMBERS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Vetted PhD Faculty</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Top Dissertation Committee Scholars</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Every scholar holds a PhD degree from top US universities and has served on graduate committees.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                @php
+                $scholars = [
+                    [
+                        'name' => 'Dr. Alexander Hayes',
+                        'degree' => 'PhD, Educational Leadership — Harvard University',
+                        'specialty' => 'Doctoral Prospectus, Mixed-Methods & Chapter 1-5 Assistance',
+                        'orders' => '1,840+',
+                        'rating' => '4.99',
+                        'badge' => 'Former Committee Chair'
+                    ],
+                    [
+                        'name' => 'Dr. Rebecca Sterling',
+                        'degree' => 'PhD, Biostatistics & Public Health — Johns Hopkins University',
+                        'specialty' => 'SPSS/R Quantitative Analysis, Survival Analysis & Chapter 4 Data',
+                        'orders' => '1,620+',
+                        'rating' => '4.98',
+                        'badge' => 'Biostatistics Fellow'
+                    ],
+                    [
+                        'name' => 'Prof. Jonathan Vance',
+                        'degree' => 'PhD, Business Administration — Stanford University',
+                        'specialty' => 'DBA & PhD Dissertations, SEM Structural Modeling & APA 7th',
+                        'orders' => '1,450+',
+                        'rating' => '4.97',
+                        'badge' => 'Senior Doctoral Editor'
+                    ]
+                ];
+                @endphp
+
+                @foreach($scholars as $s)
+                <div class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">{{ $s['badge'] }}</span>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
+                                ★★★★★ <span class="text-slate-800 dark:text-slate-200 ml-1">{{ $s['rating'] }}</span>
+                            </div>
                         </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $s['name'] }}</h3>
+                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 mb-4">{{ $s['degree'] }}</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                            <strong>Specialization:</strong> {{ $s['specialty'] }}
+                        </p>
                     </div>
+
+                    <div class="pt-5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">{{ $s['orders'] }} dissertations completed</span>
+                        <a href="{{ route('order') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Hire Scholar →</a>
+                    </div>
+                </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    <!-- Common Dissertation Mistakes -->
-    <section class="bg-white py-14 sm:py-16 dark:bg-slate-900">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
-                <span class="mb-3 inline-block rounded-full bg-red-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-red-700 dark:bg-red-950/40 dark:text-red-400">Critical Errors</span>
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">6 Dissertation Mistakes That Lead to
-                    Resubmission</h2>
-                <p class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">These are the most common reasons dissertation
-                    committees request major revisions.</p>
+    {{-- ===================================================
+         ACCORDION FAQ SECTION
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="faq">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">Answers & Clarity</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Everything you need to know before hiring our thesis & dissertation writing team.</p>
             </div>
-            <div class="grid gap-5 sm:grid-cols-2">
+
+            <div class="space-y-4" x-data="{ open: null }">
                 @php
-                    $mistakes = [
-                        [
-                            'title' => 'Research Question That Cannot Be Answered',
-                            'desc' =>
-                                'Questions that are too broad, too philosophical, or unanswerable with available data lead to entire dissertations being rejected. A good research question is specific, original, answerable with your chosen methodology, and significant to the field.',
-                        ],
-                        [
-                            'title' => 'Methodology Not Aligned With Research Question',
-                            'desc' =>
-                                'Using a quantitative survey to explore lived experiences, or a qualitative interview approach to test statistical hypotheses — misalignment between your question and methodology is a fundamental flaw that no amount of good writing can fix.',
-                        ],
-                        [
-                            'title' => 'Literature Review That Summarises Instead of Synthesises',
-                            'desc' =>
-                                'A literature review that goes source by source ("Smith (2019) says X. Jones (2020) says Y.") shows low-level reading. Examiners want to see you compare, contrast, and build a theoretical argument — not a bibliography with commentary.',
-                        ],
-                        [
-                            'title' => 'Inadequate Sample Size or Sampling Justification',
-                            'desc' =>
-                                'Choosing 10 interview participants with no justification, or running a survey on 15 people and claiming statistical significance — sampling decisions must be justified with reference to appropriate standards for your methodology and field.',
-                        ],
-                        [
-                            'title' => 'Results and Discussion Chapters Not Clearly Separated',
-                            'desc' =>
-                                'Results present data. Discussion interprets it. Mixing interpretation into your results chapter, or producing a discussion that just repeats the results, are both examined as structural failures that suggest poor understanding of research conventions.',
-                        ],
-                        [
-                            'title' => 'Ignoring the Marking Criteria and Supervisor Feedback',
-                            'desc' =>
-                                'Every dissertation is assessed against specific criteria. Students who don\'t map their work to these criteria, or who ignore supervisor comments, regularly score below their ability. Our writers always structure work to address every assessment criterion explicitly.',
-                        ],
-                    ];
+                $faqs = [
+                    [
+                        'q' => 'Can I order individual dissertation chapters instead of a full dissertation?',
+                        'a' => 'Yes. You can order specific chapters, such as Chapter 1 (Introduction), Chapter 2 (Literature Review), Chapter 3 (Methodology), Chapter 4 (Results & SPSS Analysis), or Chapter 5 (Discussion).'
+                    ],
+                    [
+                        'q' => 'Who will assist with my thesis or PhD dissertation?',
+                        'a' => 'Your project is assigned to a scholar holding a PhD from a top US university in your exact discipline who has served on dissertation committees and published peer-reviewed research.'
+                    ],
+                    [
+                        'q' => 'Do you perform statistical analysis in SPSS, R, STATA, or NVivo?',
+                        'a' => 'Yes. Our quantitative & qualitative data specialists run complex statistical models (SEM, ANOVA, Regression) in SPSS, R, STATA, and thematic coding in NVivo, delivering complete raw data outputs and written interpretations.'
+                    ],
+                    [
+                        'q' => 'Are your dissertations 100% original and Turnitin-verified?',
+                        'a' => 'Every dissertation is written 100% from scratch. We scan every document using Turnitin and advanced AI detection tools, attaching an official similarity report with your order.'
+                    ],
+                    [
+                        'q' => 'What if my committee requests revisions on my draft?',
+                        'a' => 'We offer unlimited free revisions until your dissertation committee approves your draft. We also provide point-by-point response letters to address committee feedback directly.'
+                    ]
+                ];
                 @endphp
-                @foreach ($mistakes as $m)
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-colors hover:border-red-200 hover:bg-red-50 dark:border-slate-800 dark:bg-slate-900">
-                        <h3 class="mb-2 text-base font-bold text-slate-900 dark:text-white">{{ $m['title'] }}</h3>
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{{ $m['desc'] }}</p>
+
+                @foreach($faqs as $i => $faq)
+                <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-colors"
+                     :class="open === {{ $i }} ? 'border-blue-500 dark:border-blue-500 shadow-md' : ''">
+                    <button 
+                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
+                        class="w-full flex items-center justify-between px-7 py-6 text-left font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-base sm:text-lg">
+                        <span>{{ $faq['q'] }}</span>
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 transition-transform duration-300"
+                            :class="open === {{ $i }} ? 'rotate-180' : ''"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
+                        {{ $faq['a'] }}
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
     </section>
 
+    {{-- ===================================================
+         FINAL CTA SECTION
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white overflow-hidden">
+        <!-- Decorative glowing circles -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">Ready to Defend Your Dissertation with Confidence?</h2>
+            <p class="mt-5 text-blue-100 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                Connect with an expert US PhD dissertation scholar today. Get a publication-grade, committee-ready manuscript delivered before your defense.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 rounded-2xl bg-white px-9 py-4 text-lg font-bold text-blue-700 shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300">
+                    Order Thesis / Dissertation Now
+                    <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
 @endsection

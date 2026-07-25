@@ -1,1474 +1,488 @@
-@extends('assignment-services.show')
+@extends('layouts.app')
 
-@section('title', 'Professional Essay Writing Service USA | Expert Writers | 24/7 Support')
-@section('meta_description', 'Get expert essay writing help from professional writers in USA. 100% original, plagiarism-free essays with 24/7 support. All types: argumentative, persuasive, analytical, research & more. Fast delivery guaranteed for US students.')
-@section('meta_keywords', 'essay writing service, essay writing service USA, professional essay writers, custom essay help, academic writing, essay help online, write my essay, essay writing assistance, college essay writing, argumentative essay, research essay, cheap essay writing service, best essay writing service, essay writer online, graduate essay writing')
+@section('title', 'Essay Writing Service USA | 100% Original Essay Help')
+@section('description', 'Get expert essay writing help in USA. 100% original, plagiarism-free essays written by PhD writers with 24/7 support & fast delivery.')
+@section('keywords', 'essay writing service, essay writing service USA, professional essay writers, custom essay help, academic writing, essay help online, write my essay, argumentative essay help, college essay writing')
 
 @push('head')
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook Meta -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Professional Essay Writing Service | Expert Academic Writers">
-    <meta property="og:description" content="Get expert essay writing help from professional writers. 100% original, plagiarism-free essays with 24/7 support. All essay types covered.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Essay Writing Service USA | 100% Original Essay Help">
+    <meta property="og:description" content="Get expert essay writing help in USA. 100% original, plagiarism-free essays written by PhD writers with 24/7 support & fast delivery.">
+    <meta property="og:image" content="{{ asset('images/essay_writing_hero_banner.png') }}">
 
-    <!-- Twitter -->
+    <!-- Twitter Meta -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Professional Essay Writing Service | Expert Academic Writers">
-    <meta property="twitter:description" content="Get expert essay writing help from professional writers. 100% original, plagiarism-free essays with 24/7 support.">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Essay Writing Service USA | 100% Original Essay Help">
+    <meta property="twitter:description" content="Get expert essay writing help in USA. 100% original, plagiarism-free essays written by PhD writers with 24/7 support & fast delivery.">
+    <meta property="twitter:image" content="{{ asset('images/essay_writing_hero_banner.png') }}">
 
-    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Structured Data (JSON-LD) for Google SEO -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@graph": [
+            {
+                "@@type": "EducationalOrganization",
+                "@@id": "{{ url('/') }}#organization",
+                "name": "Assignment Help USA",
+                "url": "{{ url('/') }}",
+                "logo": "{{ asset('images/logo.png') }}",
+                "sameAs": []
+            },
+            {
+                "@@type": "Service",
+                "@@id": "{{ url()->current() }}#service",
+                "name": "Professional Essay Writing Service USA",
+                "provider": { "@@id": "{{ url('/') }}#organization" },
+                "serviceType": "Academic Essay Writing Assistance",
+                "areaServed": {
+                    "@@type": "Country",
+                    "name": "United States"
+                },
+                "description": "Custom academic essay writing assistance for US students across all academic levels. Original, Turnitin-verified essays written by native PhD & Master's writers.",
+                "offers": {
+                    "@@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "10.00",
+                    "priceValidUntil": "2027-12-31",
+                    "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                    "@@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "reviewCount": "3580",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                }
+            },
+            {
+                "@@type": "BreadcrumbList",
+                "@@id": "{{ url()->current() }}#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "{{ url('/') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 2,
+                        "name": "Services",
+                        "item": "{{ url('/services') }}"
+                    },
+                    {
+                        "@@type": "ListItem",
+                        "position": 3,
+                        "name": "Essay Writing Help",
+                        "item": "{{ url()->current() }}"
+                    }
+                ]
+            },
+            {
+                "@@type": "FAQPage",
+                "@@id": "{{ url()->current() }}#faq",
+                "mainEntity": [
+                    {
+                        "@@type": "Question",
+                        "name": "Can you write my essay overnight?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Yes. We handle urgent essay writing orders with deadlines as short as 3 hours. Rush orders are matched instantly with active US PhD and Master's writers."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "Is your essay writing service 100% plagiarism-free and AI-free?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Every essay is drafted completely from scratch based on your custom requirements. We scan every paper using Turnitin and advanced AI detectors, providing a free official report upon request."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "What citation and referencing styles do your essay writers support?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "Our writers are fluent in all academic formatting styles including APA 7th, MLA 9th, Chicago/Turabian 17th, Harvard, IEEE, and OSCOLA."
+                        }
+                    },
+                    {
+                        "@@type": "Question",
+                        "name": "What if my delivered essay needs revisions?",
+                        "acceptedAnswer": {
+                            "@@type": "Answer",
+                            "text": "We offer unlimited free revisions for 21 days after delivery. If any detail from your original prompt needs adjustments, our team resolves it within 24 hours."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 @endpush
 
-@section('custom-content')
-    <!-- Comprehensive Essay Writing Content Section -->
-    <section class="py-14 sm:py-16 bg-white dark:bg-slate-900" itemscope itemtype="https://schema.org/Service">
+@section('content')
+<div class="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
+
+    {{-- ===================================================
+         HERO SECTION
+    =================================================== --}}
+    <x-creative-hero 
+        :service="$service" 
+        title="Professional Essay Writing Service USA"
+        subtitle="Struggling with complex essay prompts or tight deadlines? Get 100% original, Turnitin-verified essay writing help from US-based PhD & Master's writers. Customized to your exact rubrics, delivered on time." 
+    />
+
+    {{-- ===================================================
+         TRUST BAR / SOCIAL PROOF (E-E-A-T)
+    =================================================== --}}
+    <section class="relative z-10 border-y border-slate-200/80 bg-white/90 py-5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/90" aria-label="Trust Signals">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-10 sm:mb-12">
-                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4" itemprop="name">Professional Essay Writing Service for Academic Excellence
-                    </h1>
-                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto" itemprop="description">
-                        Get expert essay writing help from qualified academic writers. Custom essays delivered on time with guaranteed originality and quality.
-                    </p>
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+                <div class="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                    <div class="flex text-amber-400 text-sm">★★★★★</div>
+                    <span class="font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">(3,580+ Student Reviews)</span>
                 </div>
-
-                <div class="max-w-none">
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-4">
-                            Essay writing is a fundamental skill that defines academic success across all educational
-                            levels. Whether you're crafting a persuasive <a href="{{ route('services.essay-writing.show', 'argumentative') }}" class="text-blue-600 hover:text-blue-700 font-semibold dark:text-blue-400">argumentative essay</a>, analyzing literature, or
-                            presenting a compelling narrative, our professional essay writing service provides the expertise
-                            and support you need to excel. We understand that effective essay writing requires more than
-                            just good grammar – it demands critical thinking, structured argumentation, thorough research,
-                            and the ability to communicate complex ideas with clarity and precision.
-                        </p>
-
-                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                            Our team of experienced academic writers holds advanced degrees from prestigious universities
-                            and specializes in various disciplines including humanities, social sciences, business, and STEM
-                            fields. Each essay is meticulously crafted to meet your specific requirements, whether it's
-                            adhering to MLA, APA, Chicago, or Harvard citation styles. We pride ourselves on delivering
-                            original, well-researched essays that demonstrate deep understanding of the subject matter while
-                            maintaining your unique voice and perspective throughout the writing.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-5 mb-6">
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg dark:bg-blue-950/40">✍️</span>
-                                Our Essay Writing Process
-                            </h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                Every essay we produce follows a rigorous writing process that ensures quality and
-                                authenticity. Our writers begin with comprehensive research, gathering relevant sources and
-                                evidence to support the thesis statement. They then create a detailed outline that ensures
-                                logical flow and coherent structure before drafting the essay with careful attention to
-                                introduction hooks, body paragraph development, and compelling conclusions.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                Each completed essay undergoes multiple rounds of editing and proofreading, checking for
-                                grammatical accuracy, stylistic consistency, proper citation formatting, and plagiarism-free
-                                content. We use advanced plagiarism detection software to guarantee 100% original work that
-                                passes the most stringent academic integrity standards.
-                            </p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg dark:bg-emerald-950/40">🎓</span>
-                                Essay Types We Cover
-                            </h3>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                Our essay writing service covers every essay type you might encounter in your academic
-                                journey. From analytical essays that break down complex topics to compare and contrast
-                                essays examining similarities and differences, we handle it all. We excel at argumentative
-                                and persuasive essays that present compelling cases backed by solid evidence, descriptive
-                                essays that paint vivid pictures, and narrative essays that tell engaging stories.
-                            </p>
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                We also specialize in college application essays, scholarship essays, reflective essays, and
-                                critical analysis essays. Whether you're a high school student, undergraduate, or graduate
-                                student pursuing a master's or doctoral degree, our writers adapt their approach to match
-                                your academic level and assignment requirements.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Trust & Transparency Section -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center mb-8">
-                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2">Our Commitment to You</h2>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">Transparent policies that protect your interests</p>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-5">
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg dark:bg-emerald-950/40">💯</div>
-                                    <div>
-                                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Money-Back Guarantee</h3>
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            If your essay doesn't meet the agreed requirements or is delivered late, you may be eligible for a full or partial refund. Refund requests are subject to our refund policy — contact us and we'll make it right.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg dark:bg-blue-950/40">🔐</div>
-                                    <div>
-                                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Privacy Protected</h3>
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            We never share your personal information, email, or order details with anyone. Your payment is processed through secure, encrypted channels. We don't store credit card information. Your academic privacy is our priority.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-lg dark:bg-purple-950/40">📋</div>
-                                    <div>
-                                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Free Plagiarism Report</h3>
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            Every essay is written from scratch and is plagiarism-free. An originality report is available on request. We never use pre-written templates or AI-generated content — your essay is created specifically for your brief.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-lg dark:bg-amber-950/40">✏️</div>
-                                    <div>
-                                        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Unlimited Free Revisions</h3>
-                                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                            Request as many revisions as you need within 21 days of delivery at no extra cost, provided the request is within the original order scope. If something doesn't match your instructions, we'll fix it.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 rounded-xl bg-slate-50 p-5 dark:bg-slate-900">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-4 text-center">Our Quality Standards</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">100%</div>
-                                    <p class="text-xs text-slate-600 dark:text-slate-400">Original Content</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">98%</div>
-                                    <p class="text-xs text-slate-600 dark:text-slate-400">On-Time Delivery Rate</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-1">95%</div>
-                                    <p class="text-xs text-slate-600 dark:text-slate-400">Customer Satisfaction</p>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-1">24/7</div>
-                                    <p class="text-xs text-slate-600 dark:text-slate-400">Support Available</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- How It Works - Transparent Process -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2 text-center">How Our Essay Service Works</h2>
-                        <p class="text-center text-sm text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-                            Simple, transparent process from order to delivery
-                        </p>
-
-                        <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-4">
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm relative dark:border-slate-800 dark:bg-slate-900">
-                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">1</div>
-                                <div class="text-3xl mb-2 mt-2">📝</div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Submit Details</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Fill out a simple form with your essay topic, requirements, deadline, and academic level</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm relative dark:border-slate-800 dark:bg-slate-900">
-                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">2</div>
-                                <div class="text-3xl mb-2 mt-2">💳</div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Secure Payment</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Make a secure payment through encrypted channels. Your money is held safely until delivery</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm relative dark:border-slate-800 dark:bg-slate-900">
-                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">3</div>
-                                <div class="text-3xl mb-2 mt-2">🎓</div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Writer Match</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">We assign a qualified writer with expertise in your subject area and academic level</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm relative dark:border-slate-800 dark:bg-slate-900">
-                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">4</div>
-                                <div class="text-3xl mb-2 mt-2">✍️</div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Writing & QC</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Writer researches and writes your essay. Quality team checks for plagiarism and errors</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 text-center shadow-sm relative dark:border-slate-800 dark:bg-slate-900">
-                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">5</div>
-                                <div class="text-3xl mb-2 mt-2">📨</div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Delivery & Review</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400">Receive your essay with plagiarism report. Request free revisions if needed</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 rounded-xl border-l-4 border-blue-600 bg-white p-5 dark:bg-slate-900">
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                <strong class="text-slate-900 dark:text-white">Full Transparency:</strong> You can communicate directly with your writer throughout the process. Track your order status in real-time. If you have questions or concerns at any stage, our customer support team is available 24/7 via live chat, email, or phone. We believe in complete honesty about our process, pricing, and policies.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Real Pricing Information -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2 text-center">Transparent Pricing</h2>
-                        <p class="text-center text-sm text-slate-600 dark:text-slate-400 mb-6">No hidden fees - see exactly what you'll pay</p>
-
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse text-sm">
-                                <thead>
-                                    <tr class="bg-slate-50 dark:bg-slate-900">
-                                        <th class="p-3 border-b border-slate-200 font-bold text-slate-900 dark:border-slate-800 dark:text-white">Academic Level</th>
-                                        <th class="p-3 border-b border-slate-200 font-bold text-slate-900 dark:border-slate-800 dark:text-white">14+ Days</th>
-                                        <th class="p-3 border-b border-slate-200 font-bold text-slate-900 dark:border-slate-800 dark:text-white">7 Days</th>
-                                        <th class="p-3 border-b border-slate-200 font-bold text-slate-900 dark:border-slate-800 dark:text-white">3 Days</th>
-                                        <th class="p-3 border-b border-slate-200 font-bold text-slate-900 dark:border-slate-800 dark:text-white">24 Hours</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-slate-600 dark:text-slate-400">
-                                    <tr>
-                                        <td class="p-3 border-b border-slate-100 font-semibold text-slate-900 dark:border-slate-800 dark:text-white">High School</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$10/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$12/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$15/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$20/page</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-3 border-b border-slate-100 font-semibold text-slate-900 dark:border-slate-800 dark:text-white">Undergraduate</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$15/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$18/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$22/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$28/page</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-3 border-b border-slate-100 font-semibold text-slate-900 dark:border-slate-800 dark:text-white">Graduate (Master's)</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$25/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$30/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$35/page</td>
-                                        <td class="p-3 border-b border-slate-100 dark:border-slate-800">$42/page</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-3 font-semibold text-slate-900 dark:text-white">PhD/Doctoral</td>
-                                        <td class="p-3">$35/page</td>
-                                        <td class="p-3">$40/page</td>
-                                        <td class="p-3">$48/page</td>
-                                        <td class="p-3">$55/page</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="mt-5 grid md:grid-cols-3 gap-4">
-                            <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-4 dark:border-emerald-900/40 dark:bg-emerald-950/20">
-                                <h4 class="text-sm font-bold text-emerald-900 dark:text-emerald-300 mb-2">✓ What's Included</h4>
-                                <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
-                                    <li>• Original essay written from scratch</li>
-                                    <li>• Free plagiarism report</li>
-                                    <li>• Free title page & bibliography</li>
-                                    <li>• Unlimited revisions within original scope (14 days)</li>
-                                    <li>• Direct writer communication</li>
-                                </ul>
-                            </div>
-
-                            <div class="rounded-xl border border-blue-100 bg-blue-50 p-4 dark:border-blue-900/40 dark:bg-blue-950/20">
-                                <h4 class="text-sm font-bold text-blue-900 dark:text-blue-300 mb-2">💰 Special Discounts</h4>
-                                <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
-                                    <li>• Up to 40% off every order</li>
-                                    <li>• Extra volume discount on orders over 10 pages</li>
-                                    <li>• 5% loyalty discount for returning customers</li>
-                                    <li>• Seasonal promotions</li>
-                                    <li>• Referral bonuses</li>
-                                </ul>
-                            </div>
-
-                            <div class="rounded-xl border border-purple-100 bg-purple-50 p-4 dark:border-purple-900/40 dark:bg-purple-950/20">
-                                <h4 class="text-sm font-bold text-purple-900 dark:text-purple-300 mb-2">📏 Page Specifications</h4>
-                                <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
-                                    <li>• 1 page = 250 words (double-spaced)</li>
-                                    <li>• 1 page = 500 words (single-spaced)</li>
-                                    <li>• Standard: Times New Roman, 12pt</li>
-                                    <li>• 1-inch margins on all sides</li>
-                                    <li>• Free formatting in any style</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Comprehensive Essay Types Section -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h3 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-6 text-center">
-                            Types of Essays We Cover
-                        </h3>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <a href="{{ route('services.essay-writing.show', 'argumentative') }}">
-                                    <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Argumentative Essays →</h4>
-                                </a>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-2">
-                                    Present a clear position on a debatable topic with strong evidence, logical reasoning,
-                                    and counterargument refutation.
-                                </p>
-                                <a href="{{ route('services.essay-writing.show', 'argumentative') }}"
-                                   class="text-blue-600 dark:text-blue-400 font-semibold text-xs inline-flex items-center gap-1 group">
-                                    Learn More About Argumentative Essays
-                                    <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Persuasive Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Convince readers to adopt a particular viewpoint using emotional appeals, credible
-                                    sources, and compelling rhetoric.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Analytical Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Break down complex topics, texts, or concepts into components for detailed examination
-                                    and interpretation.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Compare and Contrast Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Examine similarities and differences between two or more subjects, highlighting
-                                    meaningful connections and distinctions.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Descriptive Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Use vivid sensory details and figurative language to paint a detailed picture of a
-                                    person, place, object, or experience.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Narrative Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Tell a compelling story with a clear plot, characters, setting, and theme, often drawing
-                                    from personal experiences.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Expository Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Explain, describe, or inform about a topic using facts, statistics, and examples in a
-                                    clear, straightforward manner.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Cause and Effect Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Explore the reasons why something happened and the resulting consequences, establishing
-                                    clear causal relationships.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Reflective Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Examine personal experiences and insights, analyzing how events have shaped your
-                                    understanding and growth.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Critical Analysis Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Evaluate and interpret literary works, films, art, or theories with evidence-based
-                                    critique and scholarly insight.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Definition Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Explore the meaning of abstract concepts or terms through detailed explanation,
-                                    examples, and analysis.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Process Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Provide step-by-step instructions or explanations of how something works or how to
-                                    accomplish a specific task.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">College Application Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Craft compelling personal statements that showcase your unique qualities, experiences,
-                                    and aspirations to admissions committees.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Scholarship Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Demonstrate your qualifications, achievements, and goals to secure funding for your
-                                    education.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Research Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Conduct in-depth investigation of a topic using scholarly sources, presenting findings
-                                    with proper citations.
-                                </p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                                <h4 class="text-base font-bold text-blue-600 dark:text-blue-400 mb-2">Synthesis Essays</h4>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                                    Combine information from multiple sources to develop a new perspective or argument on a
-                                    topic.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-6 text-center">
-                            Why Choose Our Professional Essay Writing Service
-                        </h2>
-
-                        <div class="grid md:grid-cols-3 gap-4 mb-6">
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-lg mb-3 dark:bg-emerald-950/40">✅</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">100% Original Content</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Every essay is written from scratch with advanced plagiarism detection ensuring authentic, unique work.</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-lg mb-3 dark:bg-blue-950/40">🎓</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Expert PhD Writers</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Qualified academic writers with advanced degrees from top universities across all disciplines.</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-lg mb-3 dark:bg-amber-950/40">⚡</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Fast Turnaround</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Rush delivery available from 3 hours to standard timelines with guaranteed on-time delivery.</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-lg mb-3 dark:bg-emerald-950/40">💰</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Affordable Pricing</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Competitive rates starting from $10/page with discounts for first-time customers and bulk orders.</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-50 text-lg mb-3 dark:bg-purple-950/40">🔄</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Unlimited Revisions</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Free revisions within the original order scope until you're completely satisfied with your essay.</p>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-lg mb-3 dark:bg-rose-950/40">🔒</div>
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Confidential & Secure</h3>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">Your personal information and order details are protected with bank-level encryption.</p>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <a href="{{ route('order', ['assignment_service' => $service->id ?? 1]) }}"
-                                class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700">
-                                Order Your Essay Now — Get 15% Off
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Additional SEO Content -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-4">
-                            How to Choose the Best Essay Writing Service in 2025
-                        </h2>
-
-                        <div class="space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400 max-w-3xl">
-                            <p>
-                                <strong class="text-slate-900 dark:text-white">Finding a reliable essay writing service</strong> requires careful consideration of several key factors. With hundreds of essay help websites available online, it's essential to identify legitimate providers that deliver quality work. Here's what to look for when choosing an essay writing service:
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">1. Writer Qualifications and Expertise</h3>
-                            <p>
-                                The best essay writing services employ writers with advanced degrees (Master's or PhD) from accredited universities. Check if the service verifies writer credentials and allows you to communicate with your assigned writer. Professional essay writers should have expertise in specific academic disciplines and experience with various citation styles (APA, MLA, Chicago, Harvard).
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">2. Originality and Plagiarism Checks</h3>
-                            <p>
-                                A trustworthy essay service must guarantee 100% original, plagiarism-free content. All essays should be written from scratch with proper citations and references, and an originality report should be available on request.
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">3. Customer Reviews and Reputation</h3>
-                            <p>
-                                Read independent customer reviews on platforms like Trustpilot, SiteJabber, or Reddit. Look for consistent positive feedback about essay quality, meeting deadlines, customer support responsiveness, and handling revisions. Avoid services with numerous complaints about missed deadlines or poor quality.
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">4. Pricing and Value</h3>
-                            <p>
-                                Compare pricing across multiple essay writing services. Legitimate services typically charge $15-30 per page for college-level work. Be cautious of extremely cheap services (under $10/page) as they may deliver low-quality work or plagiarized content. Look for transparent pricing with no hidden fees and options for discounts on first orders or bulk assignments.
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">5. Revision Policy and Guarantees</h3>
-                            <p>
-                                The best essay services offer unlimited free revisions within a reasonable timeframe (usually 7-14 days after delivery). Check for money-back guarantees if the essay doesn't meet your requirements or is delivered late. Quality services stand behind their work with clear refund policies.
-                            </p>
-
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white mt-5 mb-1">6. Customer Support Availability</h3>
-                            <p>
-                                24/7 customer support through multiple channels (live chat, email, phone) is essential for addressing urgent questions or concerns. Test their responsiveness before placing an order - quick, helpful responses indicate a professional service.
-                            </p>
-
-                            <p class="mt-5 font-semibold text-slate-900 dark:text-white">
-                                Our essay writing service meets all these criteria with qualified PhD writers, guaranteed originality, transparent pricing, unlimited revisions within original scope, and round-the-clock customer support. We've helped thousands of students achieve academic success with high-quality, custom-written essays across all subjects and academic levels.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Section for SEO -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950" itemscope itemtype="https://schema.org/FAQPage">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-6 text-center">
-                            Frequently Asked Questions About Essay Writing Services
-                        </h2>
-
-                        <div class="space-y-4">
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">What is an essay writing service?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">An essay writing service is a professional academic assistance platform that provides custom-written essays by qualified writers. These services help students with research, writing, editing, and formatting of essays across various academic levels and subjects. Professional essay writers create original, plagiarism-free content tailored to specific requirements, citation styles (APA, MLA, Chicago, Harvard), and deadlines.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">How does your essay writing service work?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Our essay writing process is simple: (1) Submit your essay requirements including topic, length, deadline, and citation style, (2) We match you with a qualified writer who specializes in your subject area, (3) The writer conducts research and crafts your custom essay, (4) Your essay goes through quality checks and plagiarism detection, (5) You receive your completed essay and can request unlimited free revisions if needed. The entire process is transparent with 24/7 customer support available.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">Are your essay writing services legit and safe?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Yes, our essay writing service is completely legitimate and safe. We employ qualified academic writers with verified credentials, use secure payment processing, and protect your personal information with encryption. All essays are written from scratch and checked with advanced plagiarism detection software. We maintain strict confidentiality - your identity and order details remain private. Our service operates within legal boundaries as an academic assistance platform.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">How much does an essay writing service cost?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Essay writing service costs typically range from $10 to $50 per page depending on academic level, urgency, and complexity. Our pricing starts at $10/page for high school essays with standard deadlines, $15-25/page for undergraduate work, and $30-50/page for graduate-level essays or dissertations. Rush orders (3-24 hours) cost more than standard timelines (7-14 days). We offer first-time customer discounts, bulk order savings, and transparent pricing with no hidden fees.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">Can you write my essay in 24 hours?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Yes, we offer urgent essay writing with deadlines as short as 3 hours. Our express service can complete essays within 6, 12, or 24 hours while maintaining high quality standards. For rush orders, we assign your essay to writers who specialize in quick turnarounds without compromising on research quality or originality. The cost for urgent essays is higher than standard deadlines, but we guarantee on-time delivery with the same plagiarism-free guarantee and revision policy.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">What types of essays can you write?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">We write all types of academic essays including argumentative essays, persuasive essays, analytical essays, compare and contrast essays, descriptive essays, narrative essays, expository essays, cause and effect essays, reflective essays, critical analysis essays, definition essays, process essays, college application essays, scholarship essays, research essays, and synthesis essays. Our writers are experienced across all academic disciplines and citation styles (APA, MLA, Chicago, Harvard, IEEE).</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">Do you guarantee plagiarism-free essays?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Absolutely. Every essay is written from scratch by our professional writers and checked with advanced plagiarism detection software (Turnitin, Copyscape) before delivery. We guarantee 100% original content with proper citations for all sources. You receive a free plagiarism report with your essay. If any plagiarism is detected, we will rewrite the content at no additional charge or provide a full refund. Academic integrity is our top priority.</p>
-                                </div>
-                            </div>
-
-                            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" itemprop="name">Who will write my essay?</h3>
-                                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400" itemprop="text">Your essay will be written by a qualified academic writer with expertise in your subject area. All our writers hold at least a Master's degree, with many having PhDs from accredited universities. We carefully match each order with a writer who has the appropriate educational background, subject knowledge, and writing experience. You can communicate directly with your assigned writer throughout the process to provide additional instructions or clarifications.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Meet Our Expert Writers Section -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center mb-8">
-                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2">Meet Your Essay Writing Experts</h2>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">PhD-verified writers with proven expertise in academic essay writing</p>
-                        </div>
-
-                        <div class="grid md:grid-cols-3 gap-5 mb-6">
-                            <!-- Writer 1 -->
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3 mb-3">
-                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-500 text-white font-bold text-base">
-                                        DR
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-2 mb-0.5">
-                                            <h4 class="text-sm font-bold text-slate-900 dark:text-white">Dr. Rachel</h4>
-                                            <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full dark:bg-emerald-950/40 dark:text-emerald-300">Verified</span>
-                                        </div>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">PhD in English Literature</p>
-                                        <div class="flex items-center gap-1 text-xs text-amber-400 mt-1">★★★★★ <span class="text-slate-500 dark:text-slate-500">4.9</span></div>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">12+ years experience • 850+ essays completed • Specializes in argumentative & analytical essays, MLA/APA formatting</p>
-                                <div class="flex items-center justify-between text-xs text-gray-500">
-                                    <span>Oxford University</span>
-                                    <span class="text-green-600 font-semibold">Available Now</span>
-                                </div>
-                            </div>
-
-                            <!-- Writer 2 -->
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3 mb-3">
-                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-bold text-base">
-                                        PM
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-2 mb-0.5">
-                                            <h4 class="text-sm font-bold text-slate-900 dark:text-white">Prof. Michael</h4>
-                                            <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full dark:bg-emerald-950/40 dark:text-emerald-300">Verified</span>
-                                        </div>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">PhD in Social Sciences</p>
-                                        <div class="flex items-center gap-1 text-xs text-amber-400 mt-1">★★★★★ <span class="text-slate-500 dark:text-slate-500">5.0</span></div>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">9 years experience • 620+ essays completed • Expert in research essays, sociology, psychology topics</p>
-                                <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-500">
-                                    <span>Harvard University</span>
-                                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Available Now</span>
-                                </div>
-                            </div>
-
-                            <!-- Writer 3 -->
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-start gap-3 mb-3">
-                                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white font-bold text-base">
-                                        EL
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-2 mb-0.5">
-                                            <h4 class="text-sm font-bold text-slate-900 dark:text-white">Dr. Emily</h4>
-                                            <span class="bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full dark:bg-emerald-950/40 dark:text-emerald-300">Verified</span>
-                                        </div>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">PhD in Creative Writing</p>
-                                        <div class="flex items-center gap-1 text-xs text-amber-400 mt-1">★★★★★ <span class="text-slate-500 dark:text-slate-500">4.8</span></div>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">8 years experience • 580+ essays completed • Narrative, descriptive, college application essays specialist</p>
-                                <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-500">
-                                    <span>Stanford University</span>
-                                    <span class="text-orange-600 dark:text-orange-400 font-semibold">2 Orders in Queue</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="rounded-xl border-l-4 border-blue-600 bg-white p-5 dark:bg-slate-900">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 text-center">
-                                <strong class="text-slate-900 dark:text-white">All writers are verified professionals.</strong> We verify degrees, check writing samples, and test subject knowledge before hiring. You can message your assigned writer directly throughout the process.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Sample Essays Gallery -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center mb-8">
-                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2">Sample Essays - See Our Quality</h2>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">Anonymized examples of actual student essays we've completed</p>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-5">
-                            <!-- Sample 1 -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <span class="bg-blue-600 text-white text-[11px] px-2.5 py-1 rounded-full font-semibold">Argumentative Essay</span>
-                                    <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Grade: A+</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Climate Change Policy Reform</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">Environmental Science • Undergraduate • APA Format • 8 pages</p>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                    "Strong thesis with compelling evidence from peer-reviewed sources. Excellent counterargument refutation. Clear structure with smooth transitions. Citations formatted perfectly..."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="text-xs text-slate-500 dark:text-slate-500">Completed in 48 hours</div>
-                                    <button class="text-blue-600 dark:text-blue-400 font-semibold text-xs">View Sample →</button>
-                                </div>
-                            </div>
-
-                            <!-- Sample 2 -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <span class="bg-purple-600 text-white text-[11px] px-2.5 py-1 rounded-full font-semibold">Analytical Essay</span>
-                                    <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Grade: A</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Symbolism in "The Great Gatsby"</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">English Literature • High School • MLA Format • 5 pages</p>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                    "Deep literary analysis with textual evidence. Insightful interpretation of symbolism. Well-organized paragraphs with topic sentences. Proper MLA in-text citations..."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="text-xs text-slate-500 dark:text-slate-500">Completed in 72 hours</div>
-                                    <button class="text-purple-600 dark:text-purple-400 font-semibold text-xs">View Sample →</button>
-                                </div>
-                            </div>
-
-                            <!-- Sample 3 -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <span class="bg-emerald-600 text-white text-[11px] px-2.5 py-1 rounded-full font-semibold">Research Essay</span>
-                                    <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Grade: A-</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Impact of Social Media on Mental Health</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">Psychology • Graduate • APA Format • 12 pages</p>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                    "Comprehensive literature review. 25+ scholarly sources. Critical analysis of research methodologies. Well-synthesized findings with implications..."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="text-xs text-slate-500 dark:text-slate-500">Completed in 5 days</div>
-                                    <button class="text-emerald-600 dark:text-emerald-400 font-semibold text-xs">View Sample →</button>
-                                </div>
-                            </div>
-
-                            <!-- Sample 4 -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <span class="bg-orange-600 text-white text-[11px] px-2.5 py-1 rounded-full font-semibold">College Application Essay</span>
-                                    <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Accepted!</span>
-                                </div>
-                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Personal Statement - Overcoming Adversity</h4>
-                                <p class="text-xs text-slate-600 dark:text-slate-400 mb-2">High School • Common App • 650 words</p>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3">
-                                    "Authentic voice. Compelling narrative arc. Shows growth and reflection. Demonstrates character strengths. Memorable opening hook and conclusion..."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="text-xs text-slate-500 dark:text-slate-500">Student accepted to 1st choice school</div>
-                                    <button class="text-orange-600 dark:text-orange-400 font-semibold text-xs">View Sample →</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 text-center rounded-xl bg-slate-50 p-5 dark:bg-slate-900">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">
-                                <strong class="text-slate-900 dark:text-white">These are real examples (anonymized for privacy).</strong> All samples show actual work delivered to students.
-                            </p>
-                            <a href="#" class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-semibold text-sm">
-                                View Full Sample Gallery (20+ Examples)
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Student Success Stories with Countries -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <div class="text-center mb-8">
-                            <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2">Students Worldwide Trust Our Essay Service</h2>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">Real testimonials from international students in 50+ countries</p>
-                        </div>
-
-                        <!-- Video Testimonials Section -->
-                        <div class="grid md:grid-cols-2 gap-5 mb-6">
-                            <!-- Video Testimonial 1 -->
-                            <div class="rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="relative bg-slate-800 h-40 flex items-center justify-center cursor-pointer group">
-                                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-                                    <div class="relative z-10 text-center">
-                                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                                            <svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white text-sm font-semibold">Watch Sarah's Story</p>
-                                        <p class="text-slate-300 text-xs">How essay help improved her grades</p>
-                                    </div>
-                                </div>
-                                <div class="p-4">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-xl">🇬🇧</span>
-                                            <div>
-                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Sarah K.</p>
-                                                <p class="text-xs text-slate-600 dark:text-slate-400">University of London</p>
-                                            </div>
-                                        </div>
-                                        <div class="text-amber-400 text-sm">★★★★★</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Video Testimonial 2 -->
-                            <div class="rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="relative bg-blue-900 h-40 flex items-center justify-center cursor-pointer group">
-                                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-                                    <div class="relative z-10 text-center">
-                                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                                            <svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                                            </svg>
-                                        </div>
-                                        <p class="text-white text-sm font-semibold">Watch Raj's Experience</p>
-                                        <p class="text-slate-300 text-xs">International student success story</p>
-                                    </div>
-                                </div>
-                                <div class="p-4">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-xl">🇮🇳</span>
-                                            <div>
-                                                <p class="text-sm font-bold text-slate-900 dark:text-white">Raj P.</p>
-                                                <p class="text-xs text-slate-600 dark:text-slate-400">Melbourne University</p>
-                                            </div>
-                                        </div>
-                                        <div class="text-amber-400 text-sm">★★★★★</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Written Testimonials with Countries -->
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-2xl">🇺🇸</span>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed mb-4 italic">
-                                    "I was struggling with my argumentative essay on climate change and had only 48 hours left. The writer delivered an exceptional essay with strong arguments and perfect APA citations. Got an A+ on my assignment!"
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            SK
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Sarah K.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">UCLA, USA</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-emerald-950/40 dark:text-emerald-300">Grade: A+</div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-xl">🇬🇧</span>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
-                                    "The quality of the research essay was outstanding. My writer had a PhD in History and it really showed. Detailed analysis, scholarly sources, and impeccable Chicago-style formatting. Will definitely use again!"
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            MC
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Michael C.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Oxford, UK</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-emerald-950/40 dark:text-emerald-300">Grade: A</div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-xl">🇨🇦</span>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
-                                    "Needed help with my college application essay and was nervous about using a service. They helped me tell my story authentically while highlighting my strengths. Got accepted to my dream school!"
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            EP
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Emily P.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Toronto, Canada</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-blue-50 text-blue-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-blue-950/40 dark:text-blue-300">Accepted!</div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-xl">🇦🇺</span>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
-                                    "As an international student, English essays were challenging for me. This service not only delivered a great compare and contrast essay but helped me understand proper structure and academic writing conventions."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            JL
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">James L.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Sydney, Australia</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-emerald-950/40 dark:text-emerald-300">Grade: A-</div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-xl">🇸🇬</span>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
-                                    "Working full-time and studying for my MBA was overwhelming. Their essay service saved me during finals week. Professional, fast, and the quality exceeded my expectations. Customer support was also incredibly helpful."
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            AR
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">Amanda R.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">NUS, Singapore</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-emerald-950/40 dark:text-emerald-300">Grade: A</div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="flex text-amber-400 text-sm">
-                                        ★★★★★
-                                    </div>
-                                    <span class="text-xl">🇩🇪</span>
-                                </div>
-                                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-3 italic">
-                                    "I was skeptical at first, but the plagiarism report showed 100% originality and my professor praised the critical analysis. The revision process was smooth - they made all changes I requested within hours. Highly recommend!"
-                                </p>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-9 h-9 bg-pink-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            DT
-                                        </div>
-                                        <div>
-                                            <p class="text-sm font-bold text-slate-900 dark:text-white">David T.</p>
-                                            <p class="text-xs text-slate-600 dark:text-slate-400">Munich, Germany</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-semibold dark:bg-emerald-950/40 dark:text-emerald-300">Grade: A+</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Global Reach Stats -->
-                        <div class="mt-6 rounded-xl bg-white p-5 dark:bg-slate-900">
-                            <div class="text-center mb-5">
-                                <div class="inline-flex items-center rounded-lg border border-slate-200 px-5 py-3 dark:border-slate-800">
-                                    <div class="text-2xl font-bold text-slate-900 dark:text-white mr-3">4.9/5.0</div>
-                                    <div class="text-left">
-                                        <div class="flex text-amber-400 text-sm mb-0.5">★★★★★</div>
-                                        <p class="text-xs text-slate-600 dark:text-slate-400">Based on 2,500+ verified student reviews</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-sm">
-                                <div>
-                                    <p class="text-xl mb-1">🇺🇸🇬🇧🇨🇦</p>
-                                    <p class="text-slate-600 dark:text-slate-400 font-semibold text-xs">North America & UK</p>
-                                </div>
-                                <div>
-                                    <p class="text-xl mb-1">🇦🇺🇳🇿🇸🇬</p>
-                                    <p class="text-slate-600 dark:text-slate-400 font-semibold text-xs">Asia-Pacific</p>
-                                </div>
-                                <div>
-                                    <p class="text-xl mb-1">🇩🇪🇫🇷🇪🇸</p>
-                                    <p class="text-slate-600 dark:text-slate-400 font-semibold text-xs">Europe</p>
-                                </div>
-                                <div>
-                                    <p class="text-xl mb-1">🇮🇳🇦🇪🇿🇦</p>
-                                    <p class="text-slate-600 dark:text-slate-400 font-semibold text-xs">Other Regions</p>
-                                </div>
-                            </div>
-                            <p class="text-center text-sm text-slate-600 dark:text-slate-400 mt-5">
-                                <strong class="text-slate-900 dark:text-white">Trusted by students in 50+ countries.</strong> We accept international payments and work in all time zones.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- USA-Specific Targeting Section -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-4 text-center">
-                            Essay Writing Service for USA Students
-                        </h2>
-                        <div class="max-w-none">
-                            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-5 max-w-3xl mx-auto">
-                                As a <strong class="text-slate-900 dark:text-white">leading essay writing service in the United States</strong>, we understand the unique requirements of American universities and colleges. Our writers are familiar with <strong class="text-slate-900 dark:text-white">Common Application essays</strong>, state university standards, Ivy League expectations, and community college guidelines across all 50 states including California, Texas, New York, Florida, Illinois, Pennsylvania, Ohio, Georgia, North Carolina, and Michigan.
-                            </p>
-
-                            <div class="grid md:grid-cols-2 gap-5 mb-5">
-                                <div class="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-lg dark:bg-blue-950/40">🎓</span>
-                                        US University Standards
-                                    </h3>
-                                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                                        <li>• Expert knowledge of US citation styles (APA 7th, MLA 9th, Chicago 17th)</li>
-                                        <li>• Familiarity with American academic writing conventions</li>
-                                        <li>• Understanding of US grading rubrics and expectations</li>
-                                        <li>• Experience with Common App, Coalition App, and university-specific prompts</li>
-                                        <li>• Knowledge of US undergraduate and graduate program requirements</li>
-                                    </ul>
-                                </div>
-
-                                <div class="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-lg dark:bg-emerald-950/40">💰</span>
-                                        Affordable for US Students
-                                    </h3>
-                                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                                        <li>• Competitive pricing starting at $10/page for US students</li>
-                                        <li>• Secure payment via major US credit cards and PayPal</li>
-                                        <li>• Special discounts for first-time US customers (15% off)</li>
-                                        <li>• Student-friendly payment plans for large projects</li>
-                                        <li>• All times displayed in US time zones (EST/PST/CST/MST)</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="rounded-xl border-l-4 border-blue-600 bg-white p-5 dark:bg-slate-900">
-                                <p class="text-sm text-slate-600 dark:text-slate-400">
-                                    <strong class="text-slate-900 dark:text-white">Popular among students at:</strong> Harvard, Stanford, MIT, Yale, Princeton, Columbia, University of California system, NYU, University of Michigan, University of Texas, Penn State, Florida State, Ohio State, Arizona State, and hundreds of other US colleges and universities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Discipline-Specific Essay Help -->
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 mb-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-2 text-center">
-                            Essay Writing Help by Subject & Discipline
-                        </h2>
-                        <p class="text-center text-sm text-slate-600 dark:text-slate-400 mb-6 max-w-3xl mx-auto">
-                            Specialized essay writers with advanced degrees in every academic field
-                        </p>
-
-                        <div class="grid md:grid-cols-3 gap-5">
-                            <!-- Humanities & Social Sciences -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                    <span class="text-lg">📚</span>
-                                    Humanities & Social Sciences
-                                </h3>
-                                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                                    <li>• <strong class="text-slate-900 dark:text-white">English Literature Essays</strong> - literary analysis, critical essays</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">History Essays</strong> - historiography, comparative history</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Philosophy Essays</strong> - ethical arguments, logic essays</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Sociology Essays</strong> - social theory, research essays</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Psychology Essays</strong> - behavioral analysis, case studies</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Political Science Essays</strong> - policy analysis, comparative politics</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Anthropology Essays</strong> - cultural analysis, ethnographic essays</li>
-                                </ul>
-                            </div>
-
-                            <!-- Business & Economics -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                    <span class="text-lg">💼</span>
-                                    Business & Economics
-                                </h3>
-                                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                                    <li>• <strong class="text-slate-900 dark:text-white">Business Management Essays</strong> - strategy, leadership</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Marketing Essays</strong> - consumer behavior, branding</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Finance Essays</strong> - investment analysis, financial markets</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Economics Essays</strong> - macro/microeconomics, econometrics</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Accounting Essays</strong> - financial accounting, auditing</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">MBA Essays</strong> - executive leadership, strategic management</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Entrepreneurship Essays</strong> - startup strategy, innovation</li>
-                                </ul>
-                            </div>
-
-                            <!-- STEM & Healthcare -->
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-900">
-                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                    <span class="text-lg">🔬</span>
-                                    STEM & Healthcare
-                                </h3>
-                                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                                    <li>• <strong class="text-slate-900 dark:text-white">Nursing Essays</strong> - care plans, evidence-based practice</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Biology Essays</strong> - ecology, genetics, evolution</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Chemistry Essays</strong> - organic chemistry, lab analysis</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Physics Essays</strong> - quantum mechanics, theoretical physics</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Engineering Essays</strong> - technical analysis, design proposals</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Computer Science Essays</strong> - algorithms, AI ethics</li>
-                                    <li>• <strong class="text-slate-900 dark:text-white">Environmental Science Essays</strong> - climate change, sustainability</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 text-center rounded-xl bg-slate-50 p-5 dark:bg-slate-900">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">
-                                <strong class="text-slate-900 dark:text-white">Can't find your subject?</strong> We cover 75+ academic disciplines. Contact us to discuss your specific field.
-                            </p>
-                            <a href="{{ route('order') }}" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm">
-                                Get Help with Your Subject →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- How to Write Essays (Featured Snippet Optimization) -->
-                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-6 dark:border-slate-800 dark:bg-slate-950">
-                        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white mb-6 text-center">
-                            How to Write Different Types of Essays - Quick Guide
-                        </h2>
-
-                        <div class="space-y-6">
-                            <!-- How to Write Argumentative Essay -->
-                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write an Argumentative Essay</h3>
-                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                                    <div class="grid md:grid-cols-2 gap-6">
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">5 Essential Steps:</h4>
-                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
-                                                <li itemprop="text"><strong>Choose a debatable topic</strong> - Select a controversial issue with two clear sides</li>
-                                                <li itemprop="text"><strong>Research both perspectives</strong> - Gather credible evidence supporting all viewpoints</li>
-                                                <li itemprop="text"><strong>Develop your thesis</strong> - Take a clear position backed by strong arguments</li>
-                                                <li itemprop="text"><strong>Present counterarguments</strong> - Acknowledge opposing views and refute them</li>
-                                                <li itemprop="text"><strong>Write a compelling conclusion</strong> - Reinforce your position with final thoughts</li>
-                                            </ol>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Key Elements:</h4>
-                                            <ul class="text-gray-700 space-y-2">
-                                                <li>• Clear thesis statement in introduction</li>
-                                                <li>• Topic sentences for each body paragraph</li>
-                                                <li>• Evidence from credible sources (studies, statistics, expert opinions)</li>
-                                                <li>• Logical transitions between ideas</li>
-                                                <li>• Refutation of counterarguments</li>
-                                                <li>• Strong concluding statement</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
-                                        <p class="text-sm text-gray-700">
-                                            <strong>Need help?</strong> Our expert writers can craft a perfect argumentative essay following these steps. <a href="{{ route('services.essay-writing.show', 'argumentative') }}" class="text-blue-600 hover:underline">Get argumentative essay help →</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- How to Write Research Essay -->
-                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write a Research Essay</h3>
-                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                                    <div class="grid md:grid-cols-2 gap-6">
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Research Essay Process:</h4>
-                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
-                                                <li itemprop="text"><strong>Select a research topic</strong> - Choose something specific and researchable</li>
-                                                <li itemprop="text"><strong>Conduct scholarly research</strong> - Use academic databases (JSTOR, Google Scholar)</li>
-                                                <li itemprop="text"><strong>Create an annotated bibliography</strong> - Summarize and evaluate each source</li>
-                                                <li itemprop="text"><strong>Develop a thesis</strong> - Make a claim based on your research findings</li>
-                                                <li itemprop="text"><strong>Outline your essay</strong> - Organize research into logical sections</li>
-                                                <li itemprop="text"><strong>Write and cite properly</strong> - Use APA, MLA, or Chicago style</li>
-                                            </ol>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Citation Requirements:</h4>
-                                            <ul class="text-gray-700 space-y-2">
-                                                <li>• Minimum 5-10 scholarly sources (peer-reviewed journals, academic books)</li>
-                                                <li>• Proper in-text citations for all borrowed ideas</li>
-                                                <li>• Complete reference list/bibliography</li>
-                                                <li>• No Wikipedia or unreliable sources</li>
-                                                <li>• Recent sources (within 5-10 years preferred)</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 bg-green-50 rounded-lg p-4 border-l-4 border-green-600">
-                                        <p class="text-sm text-gray-700">
-                                            <strong>Research essay taking too long?</strong> Our PhD writers handle complex research and proper citations. <a href="{{ route('services.research-paper.index') }}" class="text-green-600 hover:underline">Get research paper help →</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- College Application Essay Tips -->
-                            <div class="bg-white rounded-lg p-6 border border-gray-200" itemscope itemtype="https://schema.org/HowTo">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4" itemprop="name">How to Write a College Application Essay</h3>
-                                <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                                    <div class="grid md:grid-cols-2 gap-6">
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Application Essay Strategy:</h4>
-                                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
-                                                <li itemprop="text"><strong>Read the prompt carefully</strong> - Understand what admissions wants to know</li>
-                                                <li itemprop="text"><strong>Brainstorm personal stories</strong> - Find meaningful experiences that shaped you</li>
-                                                <li itemprop="text"><strong>Show, don't tell</strong> - Use specific examples and vivid details</li>
-                                                <li itemprop="text"><strong>Be authentic</strong> - Write in your genuine voice, not how you think they want</li>
-                                                <li itemprop="text"><strong>Focus on growth</strong> - Show how experiences changed or developed you</li>
-                                                <li itemprop="text"><strong>Edit ruthlessly</strong> - Every word must serve a purpose</li>
-                                            </ol>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-bold text-lg text-gray-900 mb-3">Common Mistakes to Avoid:</h4>
-                                            <ul class="text-gray-700 space-y-2">
-                                                <li>• ❌ Writing what you think they want to hear</li>
-                                                <li>• ❌ Choosing overly common topics (sports injury, mission trip)</li>
-                                                <li>• ❌ Listing accomplishments instead of showing character</li>
-                                                <li>• ❌ Using clichés and generic statements</li>
-                                                <li>• ❌ Forgetting to proofread for grammar errors</li>
-                                                <li>• ✅ Instead: Be specific, authentic, and reflective</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Academic Level Specific Content -->
-                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
-                            Essay Writing Help by Academic Level
-                        </h2>
-
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <!-- High School Essays -->
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                                <div class="text-4xl mb-3 text-center">🎓</div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">High School Essays</h3>
-                                <ul class="text-sm text-gray-700 space-y-2">
-                                    <li>• 5-paragraph essay structure</li>
-                                    <li>• MLA format (most common)</li>
-                                    <li>• Literary analysis essays</li>
-                                    <li>• Personal narrative essays</li>
-                                    <li>• Persuasive essays</li>
-                                    <li>• Compare/contrast essays</li>
-                                </ul>
-                                <div class="mt-4 text-center">
-                                    <span class="text-lg font-bold text-blue-600">From $10/page</span>
-                                </div>
-                            </div>
-
-                            <!-- Undergraduate Essays -->
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                                <div class="text-4xl mb-3 text-center">📚</div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">College Essays</h3>
-                                <ul class="text-sm text-gray-700 space-y-2">
-                                    <li>• Research essays with citations</li>
-                                    <li>• APA, MLA, Chicago styles</li>
-                                    <li>• Critical analysis essays</li>
-                                    <li>• Argumentative essays</li>
-                                    <li>• Reflective essays</li>
-                                    <li>• Application essays</li>
-                                </ul>
-                                <div class="mt-4 text-center">
-                                    <span class="text-lg font-bold text-blue-600">From $15/page</span>
-                                </div>
-                            </div>
-
-                            <!-- Graduate Essays -->
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                                <div class="text-4xl mb-3 text-center">🎯</div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Graduate Essays</h3>
-                                <ul class="text-sm text-gray-700 space-y-2">
-                                    <li>• Advanced research essays</li>
-                                    <li>• Literature reviews</li>
-                                    <li>• Theoretical analysis</li>
-                                    <li>• Methodology essays</li>
-                                    <li>• Comprehensive exams</li>
-                                    <li>• Admission essays (MBA, MA)</li>
-                                </ul>
-                                <div class="mt-4 text-center">
-                                    <span class="text-lg font-bold text-blue-600">From $25/page</span>
-                                </div>
-                            </div>
-
-                            <!-- PhD Essays -->
-                            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
-                                <div class="text-4xl mb-3 text-center">🏆</div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">PhD Level Essays</h3>
-                                <ul class="text-sm text-gray-700 space-y-2">
-                                    <li>• Scholarly research essays</li>
-                                    <li>• Conference paper essays</li>
-                                    <li>• Grant proposal essays</li>
-                                    <li>• Publication-quality essays</li>
-                                    <li>• Comprehensive literature reviews</li>
-                                    <li>• Dissertation chapters</li>
-                                </ul>
-                                <div class="mt-4 text-center">
-                                    <span class="text-lg font-bold text-blue-600">From $35/page</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Related Services - Internal Linking -->
-                    <div class="bg-white rounded-2xl p-8 mb-8 border border-gray-200 shadow-md">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
-                            Related Academic Writing Services
-                        </h2>
-                        <p class="text-center text-gray-600 mb-8">
-                            Beyond essays, we offer comprehensive academic assistance across all writing types
-                        </p>
-
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <a href="{{ route('services.research-paper.index') }}" class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">📊</div>
-                                <h3 class="text-xl font-bold text-blue-600 group-hover:text-blue-700 mb-2">Research Paper Writing</h3>
-                                <p class="text-gray-700 text-sm mb-3">PhD-qualified researchers for comprehensive research papers with methodology, data analysis, and scholarly citations. Perfect for longer academic projects.</p>
-                                <span class="text-blue-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-
-                            <a href="{{ route('services.thesis-dissertation.index') }}" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">🎓</div>
-                                <h3 class="text-xl font-bold text-purple-600 group-hover:text-purple-700 mb-2">Thesis & Dissertation Help</h3>
-                                <p class="text-gray-700 text-sm mb-3">Expert assistance for Master's thesis and PhD dissertations including proposal writing, literature reviews, methodology, and defense preparation.</p>
-                                <span class="text-purple-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-
-                            <a href="{{ route('services.proofreading-editing.index') }}" class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">✏️</div>
-                                <h3 class="text-xl font-bold text-green-600 group-hover:text-green-700 mb-2">Proofreading & Editing</h3>
-                                <p class="text-gray-700 text-sm mb-3">Professional editing for your completed essays with grammar correction, style improvement, citation checking, and formatting in all academic styles.</p>
-                                <span class="text-green-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-
-                            <a href="{{ route('services.homework-help.index') }}" class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">📝</div>
-                                <h3 class="text-xl font-bold text-orange-600 group-hover:text-orange-700 mb-2">Homework Help</h3>
-                                <p class="text-gray-700 text-sm mb-3">Quick homework assistance across all subjects with step-by-step solutions. Perfect for daily assignments and short essay questions from 3 hours.</p>
-                                <span class="text-orange-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-
-                            <a href="{{ route('services.literature-review.index') }}" class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">📚</div>
-                                <h3 class="text-xl font-bold text-indigo-600 group-hover:text-indigo-700 mb-2">Literature Review Writing</h3>
-                                <p class="text-gray-700 text-sm mb-3">Systematic literature reviews with critical analysis, synthesis of sources, gap identification for research papers, theses, and dissertations.</p>
-                                <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-
-                            <a href="{{ route('services.case-study.index') }}" class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-100 hover:shadow-lg transition-all duration-300 group">
-                                <div class="text-4xl mb-3">💼</div>
-                                <h3 class="text-xl font-bold text-teal-600 group-hover:text-teal-700 mb-2">Case Study Analysis</h3>
-                                <p class="text-gray-700 text-sm mb-3">Business case study analysis with SWOT, strategic frameworks, financial analysis, and recommendations for MBA and management courses.</p>
-                                <span class="text-teal-600 font-semibold text-sm inline-flex items-center">
-                                    Learn More →
-                                </span>
-                            </a>
-                        </div>
-
-                        <div class="mt-8 text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-100">
-                            <p class="text-gray-700 font-semibold mb-3">
-                                Not sure which service you need?
-                            </p>
-                            <a href="{{ route('order') }}" class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                                Tell Us What You Need
-                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <span class="font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">42</strong> Experts Online Now</span>
+                </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 9 0 0118 0z"/></svg>
+                    <span>0% AI & 100% Turnitin Passed</span>
+                </div>
+                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
+                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span>100% Confidential & Secure</span>
                 </div>
             </div>
-        </div>
-
-        <!-- Academic Integrity Notice -->
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8 max-w-5xl mx-auto">
-            <p class="text-sm text-amber-800 leading-relaxed">
-                <strong>Academic Use Notice:</strong> Our essay writing assistance is provided as academic writing guidance and reference material to help you develop your writing skills. All work delivered is intended to be used as a learning aid. Please ensure your use of our services complies with your institution's academic integrity policies.
-            </p>
         </div>
     </section>
 
-    <!-- Common Essay Writing Mistakes Section -->
-    <section class="py-14 sm:py-16 bg-white">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 sm:mb-12">
-                <span class="inline-block bg-red-100 text-red-700 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">What to Avoid</span>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-3">7 Common Essay Writing Mistakes That Cost Students Grades</h2>
-                <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">Our expert writers see the same errors repeatedly. Avoid these and your essay stands out immediately.</p>
+    {{-- ===================================================
+         VISUAL FEATURE 1: ESSAY STRUCTURE BLUEPRINT
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white overflow-hidden" id="essay-structure">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Academic Excellence Blueprint
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                        Structured PEEL/TEEL Writing <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">That Guarantees Top Grades</span>
+                    </h2>
+                    <p class="mt-5 text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Writing an A+ academic essay requires more than elegant phrasing—it demands rigorous structural logic, bulletproof thesis statements, and seamless evidence integration. Our writers craft every paragraph following standard university criteria.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-lg shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">1</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Hook & Thesis Statement Precision</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Every essay opens with a compelling context hook and formulates a clear, arguable thesis statement that guides the entire discussion.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">2</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">PEEL Paragraph Structure</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Body paragraphs follow Point, Evidence (scholarly peer-reviewed citations), Explanation, and Link back to the primary thesis.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300 group">
+                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white font-black text-lg shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">3</div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Synthesis & Conclusion Impact</h3>
+                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Instead of simple repetition, our conclusions synthesize key findings and articulate broader academic implications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-80 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-700/80 bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/essay_structure_blueprint.png') }}" 
+                             alt="Academic Essay Structure Blueprint Diagram" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         VISUAL FEATURE 2: PLAGIARISM & AI CHECK SHOWCASE
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="order-2 lg:order-1 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
+                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
+                        <img src="{{ asset('images/plagiarism_ai_check_preview.png') }}" 
+                             alt="Turnitin Plagiarism and 0% AI Content Verification Report Preview" 
+                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                             loading="lazy">
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        100% Uncompromised Integrity
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Zero Plagiarism & Zero AI Content Guarantee
+                    </h2>
+                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+                        Academic integrity is non-negotiable. Unlike generic services that rely on AI generators or recycled templates, every essay we write is drafted from scratch by subject matter experts.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Official Turnitin similarity report included with your order</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Verified 0% AI detection on CopyLeaks, GPTZero & Turnitin AI</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Custom written exclusively to your specific rubric and guidelines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         TYPES OF ESSAYS WE COVER
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="essay-types">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Complete Academic Scope</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Types of Essays We Expertly Craft</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Whether high school, undergraduate, or postgraduate level, our qualified essay writers handle all paper formats.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{-- Card 1: Argumentative --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-2xl group-hover:scale-110 transition-transform">⚔️</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Argumentative Essays</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Presenting compelling positions backed by empirical evidence, logical deduction, and structured counterargument refutation.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.essay-writing.show', 'argumentative') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Argumentative Essay Help <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Card 2: Analytical --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-2xl group-hover:scale-110 transition-transform">🔍</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Analytical Essays</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Deconstructing complex literature, scientific studies, or historical events into core components for critical evaluation.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Analytical Essay <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Card 3: Persuasive --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-2xl group-hover:scale-110 transition-transform">🎯</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Persuasive Essays</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Combining emotional resonance, credible rhetoric, and authoritative sources to convince readers of your stance.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Persuasive Essay <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Card 4: Compare & Contrast --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-2xl group-hover:scale-110 transition-transform">⚖️</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Compare & Contrast</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Analyzing similarities and distinctions between theories, historical eras, literary works, or scientific methods.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Comparison Essay <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Card 5: Research Essays --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-2xl group-hover:scale-110 transition-transform">📚</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Research Papers</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            In-depth research incorporating peer-reviewed journals (JSTOR, PubMed, IEEE) and thorough citation synthesis.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('services.research-paper.index') }}" class="text-sm font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Research Paper Help <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Card 6: Application & Admission --}}
+                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rose-500 to-red-600"></div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-2xl group-hover:scale-110 transition-transform">🎓</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">College Applications</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Crafting personal statements and Common App essays that capture admissions committees' attention.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <a href="{{ route('order') }}" class="text-sm font-bold text-rose-600 hover:text-rose-700 dark:text-rose-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Order Application Essay <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         CITATIONS & FORMATTING STANDARDS
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-950/80 dark:text-purple-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-purple-200 dark:border-purple-800">Academic Formatting</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mastery of All Citation Styles</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">In-text citations, footnotes, endnotes, and reference lists tailored precisely to your university's guidelines.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-blue-400/50 transition-colors shadow-sm">
+                    <div class="text-blue-600 dark:text-blue-400 font-black text-xl mb-2">APA 7th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Psychology, Nursing, Social Sciences, and Business. Includes author-date citations and reference lists.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400/50 transition-colors shadow-sm">
+                    <div class="text-indigo-600 dark:text-indigo-400 font-black text-xl mb-2">MLA 9th Edition</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for English Literature, Cultural Studies, and Humanities. Includes author-page citations and Works Cited.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-purple-400/50 transition-colors shadow-sm">
+                    <div class="text-purple-600 dark:text-purple-400 font-black text-xl mb-2">Chicago / Turabian 17th</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for History, Fine Arts, and Political Science. Notes-Bibliography and Author-Date formatting.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400/50 transition-colors shadow-sm">
+                    <div class="text-emerald-600 dark:text-emerald-400 font-black text-xl mb-2">Harvard Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Widely used across US and international universities for economics, management, and life sciences.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-rose-400/50 transition-colors shadow-sm">
+                    <div class="text-rose-600 dark:text-rose-400 font-black text-xl mb-2">IEEE Style</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Numbered citation standard for Computer Science, Electrical Engineering, and Technical essays.</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 dark:bg-slate-950 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-amber-400/50 transition-colors shadow-sm">
+                    <div class="text-amber-600 dark:text-amber-400 font-black text-xl mb-2">OSCOLA & Legal</div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Specialized legal citation style for Law essays, case commentary, and statutory analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ===================================================
+         7 COMMON ESSAY MISTAKES
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-rose-100 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-rose-200 dark:border-rose-800">Grade Protection</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">7 Common Essay Errors Fixed</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Avoid these frequent pitfalls that cost students valuable rubric marks.</p>
+            </div>
+
             <div class="grid md:grid-cols-2 gap-6">
                 @php
                 $mistakes = [
-                    ['title' => 'Weak or Missing Thesis Statement', 'desc' => 'Your thesis should make a specific, arguable claim — not just state a topic. "Social media affects teens" is a topic. "Social media increases anxiety in teenagers by reducing face-to-face interaction" is a thesis.'],
-                    ['title' => 'No Paragraph Structure (PEEL/TEEL)', 'desc' => 'Each body paragraph needs a Point, Evidence, Explanation, and Link back to the thesis. Paragraphs without this structure read as unorganised and lose marks on both content and coherence criteria.'],
-                    ['title' => 'Relying on Quotes Instead of Analysis', 'desc' => 'Quotations support your argument — they don\'t replace it. Students who over-quote and under-analyse consistently score lower. The analysis around the quote is where your marks come from.'],
-                    ['title' => 'Ignoring the Marking Rubric', 'desc' => 'Most students don\'t read the rubric carefully. Every rubric tells you exactly what the marker rewards. Our writers always read it before writing a single word.'],
-                    ['title' => 'Poor Introduction and Conclusion', 'desc' => 'An introduction should hook, provide context, and state the thesis — in that order. A conclusion should synthesise (not just summarise) and leave the reader with something to think about.'],
-                    ['title' => 'Inconsistent Citation Formatting', 'desc' => 'Mixing APA and MLA in the same essay, inconsistent in-text citation formats, or a reference list that doesn\'t match the citations in the body — all avoidable errors that signal carelessness.'],
-                    ['title' => 'Writing in First Person When Not Instructed', 'desc' => 'Academic essays default to third person unless explicitly told otherwise. "I think" and "In my opinion" weaken your argument — replace with "The evidence suggests" or "This indicates."'],
+                    ['title' => 'Vague or Unarguable Thesis', 'desc' => 'Stating a general topic instead of taking a definitive, evidence-backed position.'],
+                    ['title' => 'Unstructured Body Paragraphs', 'desc' => 'Failing to follow PEEL structure, causing arguments to feel fragmented.'],
+                    ['title' => 'Over-quoting Without Analysis', 'desc' => 'Inserting lengthy quotes without explaining their analytical significance.'],
+                    ['title' => 'Inconsistent Citation Formatting', 'desc' => 'Mixing APA and MLA rules or missing bibliography entries.'],
+                    ['title' => 'Weak Transitions & Flow', 'desc' => 'Abrupt shifts between ideas without logical connective phrasing.'],
+                    ['title' => 'Ignoring Marking Rubrics', 'desc' => 'Missing specific lecturer requirements and weighting criteria.'],
+                    ['title' => 'Colloquial Language & First-Person', 'desc' => 'Using informal phrasing ("I think") instead of objective scholarly tone.'],
                 ];
                 @endphp
-                @foreach($mistakes as $i => $m)
-                <div class="flex gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50 hover:border-red-200 hover:bg-red-50 transition-colors duration-200">
-                    <div class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
-                        <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
+                @foreach($mistakes as $index => $m)
+                <div class="flex gap-5 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-rose-300 dark:hover:border-rose-800 transition-colors shadow-sm">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-500 text-white font-black text-base shadow-md shadow-rose-500/20">
+                        {{ $index + 1 }}
                     </div>
                     <div>
-                        <h3 class="font-bold text-gray-900 mb-1">{{ $m['title'] }}</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">{{ $m['desc'] }}</p>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{{ $m['title'] }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ $m['desc'] }}</p>
                     </div>
                 </div>
                 @endforeach
@@ -1476,40 +490,66 @@
         </div>
     </section>
 
-    <!-- Meet Our Essay Writers -->
-    <section class="py-14 sm:py-16 bg-blue-50">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 sm:mb-12">
-                <span class="inline-block bg-blue-100 text-blue-700 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Our Writers</span>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-3">Meet the Experts Behind Your Essay</h2>
-                <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">Every writer on our team holds at least a Master's degree and has passed a rigorous vetting process covering writing quality, subject knowledge, and deadline reliability.</p>
+    {{-- ===================================================
+         EXPERT WRITERS SHOWCASE
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Vetted Academic Experts</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Top-Rated Essay Writers</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Every writer holds a Master's or PhD degree from top US universities and passes stringent quality verification.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-5">
+
+            <div class="grid md:grid-cols-3 gap-8">
                 @php
                 $writers = [
-                    ['name' => 'Dr. Sarah Mitchell', 'degree' => 'PhD, English Literature — University of Edinburgh', 'speciality' => 'Argumentative & Analytical Essays, Literary Analysis, Humanities', 'orders' => '1,240+', 'rating' => '4.97', 'avatar' => 'SM', 'color' => 'blue'],
-                    ['name' => 'James Okafor', 'degree' => 'MA, Political Science — London School of Economics', 'speciality' => 'Persuasive Essays, Political Theory, Sociology, Social Sciences', 'orders' => '890+', 'rating' => '4.95', 'avatar' => 'JO', 'color' => 'indigo'],
-                    ['name' => 'Dr. Priya Sharma', 'degree' => 'PhD, Psychology — University of Melbourne', 'speciality' => 'Reflective Essays, Psychology, Nursing, Healthcare Writing', 'orders' => '1,050+', 'rating' => '4.96', 'avatar' => 'PS', 'color' => 'purple'],
+                    [
+                        'name' => 'Dr. Sarah Mitchell',
+                        'degree' => 'PhD, English Literature — Columbia University',
+                        'specialty' => 'Argumentative & Literary Analysis Essays',
+                        'orders' => '1,420+',
+                        'rating' => '4.98',
+                        'badge' => 'Top 1% Writer'
+                    ],
+                    [
+                        'name' => 'Prof. Marcus Vance',
+                        'degree' => 'PhD, Political Economy — Harvard University',
+                        'specialty' => 'Persuasive, History & Social Science Papers',
+                        'orders' => '1,180+',
+                        'rating' => '4.96',
+                        'badge' => 'Senior Academic Editor'
+                    ],
+                    [
+                        'name' => 'Dr. Elena Rostova',
+                        'degree' => 'PhD, Psychology — UC Berkeley',
+                        'specialty' => 'APA Formatting, Reflective & Clinical Essays',
+                        'orders' => '950+',
+                        'rating' => '4.97',
+                        'badge' => 'PhD Subject Specialist'
+                    ]
                 ];
                 @endphp
+
                 @foreach($writers as $w)
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-white text-base bg-{{ $w['color'] }}-500">
-                            {{ $w['avatar'] }}
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900">{{ $w['name'] }}</h3>
-                            <div class="flex items-center gap-1 text-sm text-yellow-500">
-                                ★★★★★ <span class="text-gray-500 ml-1">{{ $w['rating'] }}</span>
+                <div class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-7 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">{{ $w['badge'] }}</span>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
+                                ★★★★★ <span class="text-slate-800 dark:text-slate-200 ml-1">{{ $w['rating'] }}</span>
                             </div>
                         </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $w['name'] }}</h3>
+                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 mb-4">{{ $w['degree'] }}</p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                            <strong>Specialization:</strong> {{ $w['specialty'] }}
+                        </p>
                     </div>
-                    <p class="text-xs text-indigo-600 font-semibold mb-2">{{ $w['degree'] }}</p>
-                    <p class="text-sm text-gray-600 mb-4 leading-relaxed"><strong>Specialises in:</strong> {{ $w['speciality'] }}</p>
-                    <div class="flex items-center justify-between text-sm pt-3 border-t border-gray-100">
-                        <span class="text-gray-500">{{ $w['orders'] }} orders completed</span>
-                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Available</span>
+
+                    <div class="pt-5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm">
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">{{ $w['orders'] }} completed</span>
+                        <a href="{{ route('order') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Hire Writer →</a>
                     </div>
                 </div>
                 @endforeach
@@ -1517,46 +557,86 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-14 sm:py-16 bg-white">
-        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 sm:mb-12">
-                <span class="inline-block bg-gray-100 text-gray-700 text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">FAQ</span>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-3">Frequently Asked Questions About Our Essay Writing Service</h2>
-                <p class="text-gray-500 text-base sm:text-lg">Everything students ask before placing their first order.</p>
+    {{-- ===================================================
+         ACCORDION FAQ SECTION
+    =================================================== --}}
+    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="faq">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">Answers & Clarity</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Everything you need to know before hiring our essay writing team.</p>
             </div>
+
             <div class="space-y-4" x-data="{ open: null }">
                 @php
                 $faqs = [
-                    ['q' => 'Can you write my essay overnight?', 'a' => 'Yes. We handle urgent essays with deadlines as short as 3 hours. Rush orders are matched to available expert writers immediately after submission. For same-day delivery, place your order as early as possible so the writer has maximum time to research and write.'],
-                    ['q' => 'Will my essay be plagiarism-free?', 'a' => 'Every essay is written from scratch specifically for your requirements. Before delivery, it is scanned through plagiarism detection software and the report is included with your order. We guarantee 100% original content — no recycled work, no AI-generated text passed off as original.'],
-                    ['q' => 'What referencing style do you use?', 'a' => 'Our writers work fluently in APA, MLA, Chicago, Harvard, OSCOLA, Vancouver, and any other style your institution requires. Just specify it in your order instructions and we handle all in-text citations, footnotes, and the reference list.'],
-                    ['q' => 'What if the essay doesn\'t match my requirements?', 'a' => 'We offer unlimited free revisions within the original scope of your requirements. If something doesn\'t match your brief, submit a revision request with specific notes and we\'ll fix it — typically within 24 hours, often faster.'],
-                    ['q' => 'Do you write essays for all academic levels?', 'a' => 'Yes — from high school papers to postgraduate essays. Each order is matched to a writer with relevant qualifications for your academic level. PhD-level essays go to our doctoral writers; undergraduate essays are handled by writers with at least a bachelor\'s or master\'s degree in your subject.'],
-                    ['q' => 'How do I send my essay requirements?', 'a' => 'Use our order form to describe your essay topic, word count, academic level, deadline, referencing style, and any specific instructions from your lecturer. You can also upload reading lists, marking rubrics, or lecture slides — the more detail you provide, the better the result.'],
-                    ['q' => 'Is it safe to use an essay writing service?', 'a' => 'Your personal information and order details are encrypted and never shared with third parties. We don\'t store card details and payments are processed securely. Your writer doesn\'t know your identity and you don\'t need to reveal it.'],
-                    ['q' => 'How much does an essay cost?', 'a' => 'Pricing depends on academic level, word count, and deadline. A standard undergraduate essay starts from $15 per page with a 7-day deadline. Urgent or postgraduate orders are priced higher. Use our price calculator on this page to get an instant estimate for your specific requirements.'],
+                    [
+                        'q' => 'Can you write my essay overnight or within 3 hours?',
+                        'a' => 'Yes. We handle urgent essay orders with deadlines as short as 3 hours. Rush orders are assigned immediately to active US writers specializing in express academic turnarounds.'
+                    ],
+                    [
+                        'q' => 'Will my essay be 100% plagiarism-free and AI-free?',
+                        'a' => 'Absolutely. Every essay is written from scratch according to your specific brief. We run every document through Turnitin and advanced AI detectors, attaching a free similarity report upon request.'
+                    ],
+                    [
+                        'q' => 'What referencing and citation styles do you support?',
+                        'a' => 'Our academic writers are experts in APA 7th, MLA 9th, Chicago/Turabian 17th, Harvard, IEEE, OSCOLA, and custom university styles.'
+                    ],
+                    [
+                        'q' => 'What if the delivered essay needs changes?',
+                        'a' => 'We provide 21 days of unlimited free revisions within your original brief scope. If any detail needs tweaking, your writer will update it promptly within 24 hours.'
+                    ],
+                    [
+                        'q' => 'Is your essay writing help confidential?',
+                        'a' => 'Yes. We enforce strict privacy and data encryption standards. Your identity, email, and assignment details are never shared with third parties or your institution.'
+                    ]
                 ];
                 @endphp
+
                 @foreach($faqs as $i => $faq)
-                <div class="border border-gray-200 rounded-xl overflow-hidden">
-                    <button
+                <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-colors"
+                     :class="open === {{ $i }} ? 'border-blue-500 dark:border-blue-500 shadow-md' : ''">
+                    <button 
                         x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
-                        class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
-                        :class="open === {{ $i }} ? 'bg-blue-50' : 'bg-white'">
-                        <span class="font-semibold text-gray-900 pr-4">{{ $faq['q'] }}</span>
-                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 transition-transform duration-200"
+                        class="w-full flex items-center justify-between px-7 py-6 text-left font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-base sm:text-lg">
+                        <span>{{ $faq['q'] }}</span>
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 transition-transform duration-300"
                             :class="open === {{ $i }} ? 'rotate-180' : ''"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
-                    <div x-show="open === {{ $i }}" x-collapse class="px-6 pb-5 bg-blue-50">
-                        <p class="text-gray-700 leading-relaxed">{{ $faq['a'] }}</p>
+                    <div x-show="open === {{ $i }}" x-collapse class="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
+                        {{ $faq['a'] }}
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
     </section>
+
+    {{-- ===================================================
+         FINAL CTA SECTION
+    =================================================== --}}
+    <section class="relative py-20 lg:py-24 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white overflow-hidden">
+        <!-- Decorative glowing circles -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">Ready to Boost Your Essay Marks?</h2>
+            <p class="mt-5 text-blue-100 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                Connect with an expert US essay writer today. Get an original, flawlessly cited paper delivered before your deadline.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 rounded-2xl bg-white px-9 py-4 text-lg font-bold text-blue-700 shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300">
+                    Order Essay Now
+                    <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
 @endsection
