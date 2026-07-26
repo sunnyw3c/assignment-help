@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'DevOps Assignment Help | Vetted CI/CD, Docker & K8s Specialists')
-@section('description', 'Struggling with Dockerfiles, Kubernetes manifests, GitHub Actions pipelines, or Terraform modules? Get expert DevOps assignment help from USA engineers.')
+@section('title', 'DevOps & Cloud Automation Help USA | Docker & Kubernetes')
+@section('description', 'Get expert DevOps help in the USA. Vetted cloud engineers configure Docker containers, Kubernetes clusters, Terraform scripts & CI/CD pipelines. Fast delivery.')
 
 @section('content')
     <div class="min-h-screen">

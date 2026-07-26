@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Machine Learning Assignment Help | Expert ML Programming USA')
-@section('description', 'Struggling with PyTorch, TensorFlow, or scikit-learn? Get expert machine learning assignment help from vetted USA data scientists. 100% working code & metrics.')
+@section('title', 'Machine Learning Help USA | PyTorch, TensorFlow & Sklearn')
+@section('description', 'Get expert machine learning help in the USA. Vetted US data scientists train PyTorch neural networks, Scikit-learn models & Jupyter reports. Fast 24/7 delivery.')
 
 @section('content')
     <div class="min-h-screen">

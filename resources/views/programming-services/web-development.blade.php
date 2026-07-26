@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Web Development Assignment Help | Expert Coding Projects USA')
-@section('description', 'Struggling with React, Vue, Angular, PHP, Node.js, or HTML/CSS? Get expert web development assignment help from vetted USA programmers. 100% working code, on-time.')
+@section('title', 'Web Development Help USA | Full-Stack React, Node & Tailwind')
+@section('description', 'Get expert web development help in the USA. Vetted US developers build responsive React, Vue, Node.js, Next.js & REST API web applications. Fast delivery.')
 
 @section('content')
     <div class="min-h-screen">

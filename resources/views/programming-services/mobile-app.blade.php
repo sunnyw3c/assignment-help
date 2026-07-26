@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Mobile App Assignment Help | Android & iOS Programming Assistance')
-@section('description', 'Struggling with Flutter, React Native, Swift, or Kotlin? Get expert mobile app assignment help from vetted USA developers. 100% working code, emulator tested.')
+@section('title', 'Mobile App Coding Help USA | Flutter, React Native & Swift')
+@section('description', 'Get expert mobile app development help in the USA. Vetted US developers code Flutter, React Native, Swift iOS & Kotlin Android applications. Fast 24/7 support.')
 
 @section('content')
     <div class="min-h-screen">

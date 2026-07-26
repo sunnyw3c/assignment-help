@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Code Debugging Assignment Help | Expert Bug Fixing Services')
-@section('description', 'Struggling with compiler errors, memory leaks, segment faults, or runtime exceptions? Get expert code debugging assignment help from vetted programmers. 100% working code.')
+@section('title', 'Code Debugging & Fixing Help USA | Fast Error Diagnostics')
+@section('description', 'Get expert code debugging help in the USA. Senior US software engineers diagnose memory leaks, stack traces, null pointers & syntax bugs fast. 24/7 support.')
 
 @section('content')
     <div class="min-h-screen">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Database Assignment Help | SQL & Database Programming Services')
-@section('description', 'Need expert database assignment help? Get top-rated SQL query optimization, 3NF normalization, ERD diagrams & MongoDB support from US DBAs. 100% error-free!')
+@section('title', 'Database & SQL Help USA | ERD Diagrams, 3NF & MySQL Coders')
+@section('description', 'Get expert database & SQL help in the USA. Vetted US DBAs build 3NF ERD schemas, complex SQL queries, PostgreSQL & MongoDB aggregations. Fast 24/7 delivery.')
 
 @section('content')
     <div class="min-h-screen">

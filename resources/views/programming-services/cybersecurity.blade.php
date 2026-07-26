@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Cybersecurity Assignment Help | Expert Cryptography & Security Programming Assistance')
-@section('description', 'Struggling with cryptography algorithms, secure coding patches, or penetration testing reports? Get expert cybersecurity assignment help from certified CEH/CISSP experts.')
+@section('title', 'Cybersecurity & Pen Testing Help USA | CEH Security Coders')
+@section('description', 'Get expert cybersecurity help in the USA. Certified CEH/CISSP experts assist with cryptography, network penetration testing, Wireshark & OWASP secure coding.')
 
 @section('content')
     <div class="min-h-screen">

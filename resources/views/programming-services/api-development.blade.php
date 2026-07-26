@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'API Development Assignment Help | Expert Backend & REST Coding Assistance')
-@section('description', 'Struggling with REST API endpoints, JWT auth, GraphQL schemas, or Postman environments? Get expert API development assignment help from USA developers.')
+@section('title', 'REST API Development Help USA | FastAPI, Node & JWT Auth')
+@section('description', 'Get expert API development help in the USA. Vetted US backend engineers build RESTful endpoints, GraphQL, JWT authentication & Postman docs. Fast delivery.')
 
 @section('content')
     <div class="min-h-screen">
