@@ -46,6 +46,8 @@
         <meta name="author" content="@yield('author', config('app.name'))">
         <meta name="theme-color" content="#7c3aed">
 
+        @stack('preloads')
+
         <!-- Structured Data -->
         @include('partials.structured-data')
         @stack('structured-data')

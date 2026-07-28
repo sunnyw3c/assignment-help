@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@push('preloads')
+    <link rel="preload"
+          as="image"
+          href="{{ asset('images/java_hero_banner.webp') }}"
+          imagesrcset="{{ asset('images/java_hero_banner-640w.webp') }} 640w,
+                       {{ asset('images/java_hero_banner-768w.webp') }} 768w,
+                       {{ asset('images/java_hero_banner.webp') }} 1024w"
+          imagesizes="(min-width: 1024px) 50vw, 100vw"
+          type="image/webp">
+@endpush
+
 @section('title', 'Java Programming Help USA | Clean OOP & Spring Boot Code')
 @section('description', 'Get expert Java programming help in the USA. Vetted US developers build clean OOP classes, Spring Boot APIs, multithreading & JUnit tests. Fast 24/7 delivery.')
 
@@ -159,10 +170,18 @@
                                 <span class="text-xs font-bold">100% Compilable Code</span>
                             </div>
 
-                            <img src="{{ asset('images/java_hero_banner.png') }}" 
+                            <img src="{{ asset('images/java_hero_banner.webp') }}"
+                                 srcset="{{ asset('images/java_hero_banner-640w.webp') }} 640w,
+                                         {{ asset('images/java_hero_banner-768w.webp') }} 768w,
+                                         {{ asset('images/java_hero_banner.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 50vw, 100vw"
                                  alt="Top-Rated Java Programming Help USA - Spring Boot and Object-Oriented Development" 
-                                 class="w-full h-auto rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                                 loading="eager" />
+                                 class="w-full h-auto rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                 width="1024"
+                                 height="1024"
+                                 loading="eager"
+                                 fetchpriority="high"
+                                 decoding="async" />
                                  
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
                             
@@ -294,10 +313,17 @@
                     {{-- Image & Verification Column --}}
                     <div class="lg:col-span-5 space-y-6">
                         <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-950 p-2">
-                            <img src="{{ asset('images/java_ide_preview.png') }}" 
+                            <img src="{{ asset('images/java_ide_preview.webp') }}"
+                                 srcset="{{ asset('images/java_ide_preview-640w.webp') }} 640w,
+                                         {{ asset('images/java_ide_preview-768w.webp') }} 768w,
+                                         {{ asset('images/java_ide_preview.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 42vw, 100vw"
                                  alt="IntelliJ IDEA Java Code Execution and JUnit Passing Tests" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                         </div>
 
                         <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-4">
@@ -345,10 +371,17 @@
                     {{-- Image Column --}}
                     <div class="lg:col-span-5">
                         <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg bg-slate-950 p-2">
-                            <img src="{{ asset('images/java_ecosystem_map.png') }}" 
+                            <img src="{{ asset('images/java_ecosystem_map.webp') }}"
+                                 srcset="{{ asset('images/java_ecosystem_map-640w.webp') }} 640w,
+                                         {{ asset('images/java_ecosystem_map-768w.webp') }} 768w,
+                                         {{ asset('images/java_ecosystem_map.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 42vw, 100vw"
                                  alt="Java Ecosystem Architecture Map" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                         </div>
                     </div>
 
@@ -580,10 +613,17 @@
                     {{-- Image Column --}}
                     <div class="lg:col-span-5">
                         <div class="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg bg-slate-950 p-2">
-                            <img src="{{ asset('images/java_expert_tutor.png') }}" 
+                            <img src="{{ asset('images/java_expert_tutor.webp') }}"
+                                 srcset="{{ asset('images/java_expert_tutor-640w.webp') }} 640w,
+                                         {{ asset('images/java_expert_tutor-768w.webp') }} 768w,
+                                         {{ asset('images/java_expert_tutor.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 50vw, 100vw"
                                  alt="Senior Java Programming Expert Conducting Code Review" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                             <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700 text-white flex items-center justify-between text-xs">
                                 <div class="flex items-center gap-2">
                                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
