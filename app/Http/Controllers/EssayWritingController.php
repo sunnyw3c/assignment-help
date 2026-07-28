@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
-use Illuminate\Http\Request;
 
 class EssayWritingController extends Controller
 {
@@ -27,6 +26,12 @@ class EssayWritingController extends Controller
      */
     public function show($slug)
     {
+        $customViews = [
+            'argumentative' => 'essay-writing.argumentative',
+        ];
+
+        abort_unless(isset($customViews[$slug]), 404);
+
         $service = Service::with('details')
             ->where('slug', 'essay-writing')
             ->where('is_active', true)
@@ -34,13 +39,6 @@ class EssayWritingController extends Controller
 
         $details = $service->details;
 
-        // Check for custom view, otherwise use generic
-        $customViews = [
-            'argumentative' => 'essay-writing.argumentative',
-        ];
-
-        $view = $customViews[$slug] ?? 'essay-writing.index';
-
-        return view($view, compact('service', 'details'));
+        return view($customViews[$slug], compact('service', 'details'));
     }
 }

@@ -8,6 +8,26 @@ use Illuminate\Http\Request;
 class AssignmentServiceController extends Controller
 {
     /**
+     * Legacy database-driven URLs that duplicate dedicated SEO landing pages.
+     *
+     * Keeping these URLs as permanent redirects consolidates indexing signals
+     * instead of serving two self-canonical versions of the same service.
+     */
+    private const CANONICAL_ROUTES = [
+        'essay-writing' => 'services.essay-writing.index',
+        'research-paper' => 'services.research-paper.index',
+        'homework-help' => 'services.homework-help.index',
+        'thesis-dissertation' => 'services.thesis-dissertation.index',
+        'lab-report' => 'services.lab-report.index',
+        'case-study' => 'services.case-study.index',
+        'literature-review' => 'services.literature-review.index',
+        'presentation-design' => 'services.presentation-design.index',
+        'proofreading-editing' => 'services.proofreading-editing.index',
+        'math-problem-solving' => 'services.homework-help.math',
+        'law-assignment' => 'services.law-assignment.index',
+    ];
+
+    /**
      * Display a listing of assignment help services.
      */
     public function index()
@@ -25,6 +45,10 @@ class AssignmentServiceController extends Controller
      */
     public function show($slug)
     {
+        if (isset(self::CANONICAL_ROUTES[$slug])) {
+            return redirect()->route(self::CANONICAL_ROUTES[$slug], status: 301);
+        }
+
         $service = Service::with('details')
             ->where('slug', $slug)
             ->where('is_active', true)
@@ -32,14 +56,7 @@ class AssignmentServiceController extends Controller
 
         $details = $service->details;
 
-        // Check for custom view, otherwise use generic
-        $customViews = [
-            'law-assignment' => 'assignment-services.law-assignment',
-        ];
-
-        $view = $customViews[$slug] ?? 'assignment-services.show';
-
-        return view($view, compact('service', 'details'));
+        return view('assignment-services.show', compact('service', 'details'));
     }
 
     /**
