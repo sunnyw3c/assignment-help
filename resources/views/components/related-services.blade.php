@@ -46,7 +46,7 @@
                     <span class="text-2xl group-hover:scale-110 transition-transform">{{ $item['icon'] }}</span>
                     <div>
                         <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ $item['name'] }}</h3>
-                        <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">{{ $item['type'] }}</span>
+                        <span class="text-[10px] font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">{{ $item['type'] }}</span>
                     </div>
                 </a>
             @endforeach

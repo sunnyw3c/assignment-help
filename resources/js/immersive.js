@@ -38,19 +38,36 @@ class SmoothScroll {
 
 // Scroll Progress Indicator
 function initScrollProgress() {
+    let maxScroll = Math.max(
+        document.documentElement.scrollHeight - window.innerHeight,
+        1
+    );
+    let frameRequested = false;
     const progressBar = document.createElement('div');
     progressBar.className = 'scroll-progress';
     document.body.appendChild(progressBar);
 
     const updateProgress = () => {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrolled = window.scrollY;
-        const progress = (scrolled / scrollHeight) * 100;
-        progressBar.style.transform = `scaleX(${progress / 100})`;
+        frameRequested = false;
+        const progress = Math.min(window.scrollY / maxScroll, 1);
+        progressBar.style.transform = `scaleX(${progress})`;
     };
 
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
+    const requestProgressUpdate = () => {
+        if (frameRequested) return;
+        frameRequested = true;
+        requestAnimationFrame(updateProgress);
+    };
+
+    window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+    window.addEventListener('resize', () => {
+        maxScroll = Math.max(
+            document.documentElement.scrollHeight - window.innerHeight,
+            1
+        );
+        requestProgressUpdate();
+    }, { passive: true });
+    requestAnimationFrame(updateProgress);
 }
 
 // Parallax Effect
@@ -59,21 +76,31 @@ function initParallax() {
 
     if (parallaxElements.length === 0) return;
 
+    const measurements = Array.from(parallaxElements, el => ({
+        el,
+        speed: parseFloat(el.dataset.parallax) || 0.5,
+        top: el.getBoundingClientRect().top + window.scrollY,
+    }));
+    let frameRequested = false;
+
     const updateParallax = () => {
+        frameRequested = false;
         const scrollY = window.scrollY;
 
-        parallaxElements.forEach(el => {
-            const speed = parseFloat(el.dataset.parallax) || 0.5;
-            const rect = el.getBoundingClientRect();
-            const elementTop = rect.top + scrollY;
-            const offset = (scrollY - elementTop) * speed;
-
+        measurements.forEach(({ el, speed, top }) => {
+            const offset = (scrollY - top) * speed;
             el.style.transform = `translateY(${offset}px)`;
         });
     };
 
-    window.addEventListener('scroll', updateParallax, { passive: true });
-    updateParallax();
+    const requestParallaxUpdate = () => {
+        if (frameRequested) return;
+        frameRequested = true;
+        requestAnimationFrame(updateParallax);
+    };
+
+    window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+    requestAnimationFrame(updateParallax);
 }
 
 // Gradient Follow Cursor Effect
@@ -152,12 +179,11 @@ function initRippleEffect() {
 
     rippleElements.forEach(el => {
         el.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
-
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
+            const ripple = document.createElement('span');
 
             ripple.style.width = ripple.style.height = `${size}px`;
             ripple.style.left = `${x}px`;
@@ -258,13 +284,12 @@ function initTouchRipple() {
 
     rippleElements.forEach(el => {
         el.addEventListener('touchstart', function(e) {
-            const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
-
             const touch = e.touches[0];
             const size = Math.max(rect.width, rect.height);
             const x = touch.clientX - rect.left - size / 2;
             const y = touch.clientY - rect.top - size / 2;
+            const ripple = document.createElement('span');
 
             ripple.style.width = ripple.style.height = `${size}px`;
             ripple.style.left = `${x}px`;
@@ -301,14 +326,6 @@ function initViewportOptimizations() {
     if (window.innerWidth < 640) {
         document.documentElement.style.setProperty('--animation-duration', '0.4s');
     }
-
-    // Handle orientation changes
-    window.addEventListener('orientationchange', () => {
-        setTimeout(() => {
-            window.scrollTo(0, window.scrollY + 1);
-            window.scrollTo(0, window.scrollY - 1);
-        }, 100);
-    });
 
     // Handle window resize
     let resizeTimer;

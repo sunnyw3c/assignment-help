@@ -7,7 +7,7 @@
                 <a href="{{ url('/') }}">
                     <img src="{{ asset('images/logo.png') }}" alt="Assignment Help USA" class="h-10 w-auto">
                 </a>
-                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                     Your premier academic partner. Providing reliable, plagiarism-free assistance and expert support for high school and university students across the United States. Available 24/7.
                 </p>
                 <div class="flex items-center gap-3">
@@ -56,7 +56,7 @@
                             <span class="text-indigo-600 dark:text-indigo-400">📞</span>
                             <span class="text-slate-600 dark:text-slate-400">+1 (800) 555-0199</span>
                         </span>
-                        <span class="text-xs text-slate-400 mt-2 font-normal">
+                        <span class="text-xs text-slate-600 dark:text-slate-400 mt-2 font-normal">
                             USA-based customer support active 24/7. Response times under 15 minutes.
                         </span>
                     </div>
@@ -65,12 +65,12 @@
         </div>
 
         <!-- Academic Disclaimer -->
-        <div class="border-t border-slate-200 dark:border-slate-900 mt-10 pt-6 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+        <div class="border-t border-slate-200 dark:border-slate-900 mt-10 pt-6 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             <p><strong>Disclaimer:</strong> AssignmentHelpUSA.com provides model solutions, reference papers, and study materials intended strictly for research and learning purposes. We strongly advise students to use our materials as reference guides to improve their skills and complete their own original academic work.</p>
         </div>
 
         <!-- Bottom Divider & Copyright -->
-        <div class="border-t border-slate-200 dark:border-slate-900 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+        <div class="border-t border-slate-200 dark:border-slate-900 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-600 dark:text-slate-400">
             <div>
                 &copy; {{ date('Y') }} AssignmentHelpUSA. All rights reserved.
             </div>

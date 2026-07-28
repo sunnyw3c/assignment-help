@@ -38,7 +38,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-center sm:text-left">
                     <div class="flex items-center gap-2.5">
-                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm" aria-label="Rated 5 out of 5">★★★★★</div>
                         <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
                         <span class="text-xs text-slate-500 dark:text-slate-400">(1,350+ Java reviews)</span>
                     </div>
@@ -88,15 +88,15 @@
                         {{-- Feature Checklist --}}
                         <div class="space-y-3 pt-1">
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Custom Java Source Code (.java files &amp; complete package directory)</span>
                             </div>
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Maven pom.xml or Gradle build scripts configured automatically</span>
                             </div>
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Step-by-step README.md guide for IntelliJ IDEA, Eclipse, or NetBeans</span>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                             {{-- Tab 1: Spring Boot Controller --}}
                             <div x-show="activeTab === 'springboot'" class="space-y-1">
                                 <p><span class="text-purple-400">package</span> com.assignmenthelp.controller;</p>
-                                <p class="text-slate-500">// Fully documented Spring Boot 3 REST API Endpoint</p>
+                                <p class="text-slate-400">// Fully documented Spring Boot 3 REST API Endpoint</p>
                                 <p><span class="text-purple-400">import</span> org.springframework.web.bind.annotation.*;</p>
                                 <p><span class="text-purple-400">import</span> org.springframework.http.ResponseEntity;</p>
                                 <p><span class="text-purple-400">import</span> com.assignmenthelp.service.StudentService;</p>
@@ -266,18 +266,18 @@
                             {{-- Tab 2: JUnit Test --}}
                             <div x-show="activeTab === 'junit'" class="space-y-1" style="display: none;">
                                 <p><span class="text-purple-400">package</span> com.assignmenthelp.test;</p>
-                                <p class="text-slate-500">// JUnit 5 &amp; Mockito Unit Testing Suite</p>
+                                <p class="text-slate-400">// JUnit 5 &amp; Mockito Unit Testing Suite</p>
                                 <p><span class="text-purple-400">import</span> org.junit.jupiter.api.Test;</p>
                                 <p><span class="text-purple-400">import</span> static org.junit.jupiter.api.Assertions.*;</p>
                                 <br>
                                 <p><span class="text-purple-400">class</span> <span class="text-blue-300">StudentServiceTest</span> {</p>
                                 <p class="pl-4"><span class="text-yellow-400">@Test</span></p>
                                 <p class="pl-4"><span class="text-purple-400">void</span> <span class="text-blue-300">shouldReturnStudentWhenValidIdProvided</span>() {</p>
-                                <p class="pl-8"><span class="text-slate-500">// Arrange</span></p>
+                                <p class="pl-8"><span class="text-slate-400">// Arrange</span></p>
                                 <p class="pl-8">Long studentId = 101L;</p>
-                                <p class="pl-8"><span class="text-slate-500">// Act</span></p>
+                                <p class="pl-8"><span class="text-slate-400">// Act</span></p>
                                 <p class="pl-8">StudentDTO result = studentService.findById(studentId);</p>
-                                <p class="pl-8"><span class="text-slate-500">// Assert</span></p>
+                                <p class="pl-8"><span class="text-slate-400">// Assert</span></p>
                                 <p class="pl-8">assertNotNull(result);</p>
                                 <p class="pl-8">assertEquals(<span class="text-emerald-300">"Java OOP Specialist"</span>, result.getTrackName());</p>
                                 <p class="pl-4">}</p>
@@ -287,7 +287,7 @@
                             {{-- Tab 3: Concurrency --}}
                             <div x-show="activeTab === 'concurrency'" class="space-y-1" style="display: none;">
                                 <p><span class="text-purple-400">package</span> com.assignmenthelp.concurrency;</p>
-                                <p class="text-slate-500">// Thread Pool Executor &amp; Synchronization Locks</p>
+                                <p class="text-slate-400">// Thread Pool Executor &amp; Synchronization Locks</p>
                                 <p><span class="text-purple-400">import</span> java.util.concurrent.*;</p>
                                 <br>
                                 <p><span class="text-purple-400">public class</span> <span class="text-blue-300">ParallelTaskExecutor</span> {</p>
@@ -416,7 +416,7 @@
                 {{-- Full-Width SEO Tag Cloud Card --}}
                 <div class="mt-6 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
                     <h3 class="mb-4 flex items-center gap-3 text-lg font-black text-slate-900 dark:text-white">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-600 text-white text-base">⭐</span>
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-700 text-white text-base">⭐</span>
                         Java Technologies &amp; Tools We Cover
                     </h3>
                     <div class="flex flex-wrap gap-2">
@@ -462,13 +462,13 @@
                     {{-- Card 2 --}}
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between hover:border-blue-500 transition-all">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl font-bold mb-4">02</div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-xl font-bold mb-4">02</div>
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Spring Boot Web APIs &amp; JPA Persistence</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                                 Building REST controllers, Spring Data JPA repositories, Hibernate entity mappings, database connection pools, and Spring Security filters.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-emerald-700 dark:text-emerald-400">
                             <span>PostgreSQL / MySQL</span>
                             <span>Swagger OpenAPI</span>
                         </div>
@@ -492,13 +492,13 @@
                     {{-- Card 4 --}}
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between hover:border-blue-500 transition-all">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl font-bold mb-4">04</div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-700 text-white flex items-center justify-center text-xl font-bold mb-4">04</div>
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">JavaFX &amp; Swing GUI Applications</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                                 Designing desktop user interfaces using JavaFX FXML layouts, Scene Builder, custom CSS styling, action listener event handlers, and Swing components.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-amber-600 dark:text-amber-400">
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-amber-700 dark:text-amber-400">
                             <span>FXML &amp; Controllers</span>
                             <span>Responsive UI</span>
                         </div>
@@ -507,13 +507,13 @@
                     {{-- Card 5 --}}
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between hover:border-blue-500 transition-all">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center text-xl font-bold mb-4">05</div>
+                            <div class="w-12 h-12 rounded-xl bg-cyan-700 text-white flex items-center justify-center text-xl font-bold mb-4">05</div>
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Data Structures &amp; Algorithm Optimization</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                                 Implementing custom Binary Search Trees, Graphs, HashMaps, Heap Priority Queues, Sorting algorithms, Big-O time complexity analysis, and recursion.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-cyan-600 dark:text-cyan-400">
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-cyan-700 dark:text-cyan-400">
                             <span>Big-O Analysis</span>
                             <span>Optimal Memory</span>
                         </div>
@@ -651,7 +651,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <h3 class="text-sm font-bold text-slate-900 dark:text-white truncate">{{ $name }}</h3>
-                                    <div class="flex items-center gap-1 text-xs text-amber-500 font-bold shrink-0">
+                                    <div class="flex items-center gap-1 text-xs text-amber-700 dark:text-amber-400 font-bold shrink-0">
                                         <span>★</span>
                                         <span>{{ $rating }}</span>
                                         <span class="text-[10px] font-normal text-slate-500">({{ $projects }})</span>
@@ -697,7 +697,7 @@
                     <div class="group relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">📝</span>
                             </div>
@@ -712,7 +712,7 @@
                     <div class="group relative lg:mt-16">
                         <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">🎯</span>
                             </div>
@@ -727,7 +727,7 @@
                     <div class="group relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">⚡</span>
                             </div>
@@ -742,7 +742,7 @@
                     <div class="group relative lg:mt-16">
                         <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">✅</span>
                             </div>
@@ -762,7 +762,7 @@
         <section class="py-14 sm:py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-black uppercase tracking-widest text-amber-500">Student Reviews</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-amber-700 dark:text-amber-400">Student Reviews</span>
                     <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mt-2">
                         What Students Say About Our <span class="text-blue-600 dark:text-blue-400">Java Programming Help</span>
                     </h2>
@@ -770,7 +770,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "I was struggling with Spring Data JPA entity mappings for my web services final assignment. The expert structured the repository files, added database validations, and included clean JUnit tests. Best Java programming help!"
                         </p>
@@ -781,7 +781,7 @@
                     </div>
 
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "My JavaFX GUI project required complex FXML views and event controllers. The code delivered was extremely clean, fully documented with inline comments, and ran perfectly on IntelliJ IDEA."
                         </p>
@@ -792,7 +792,7 @@
                     </div>
 
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "Had persistent thread deadlock crashes in my Java concurrency simulation project. The helper traced the synchronized loop, implemented ReentrantLocks, and explained the solution inside the README."
                         </p>
