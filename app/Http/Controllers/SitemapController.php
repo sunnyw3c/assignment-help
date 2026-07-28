@@ -13,6 +13,11 @@ class SitemapController extends Controller
         return response($xml, 200)->header('Content-Type', 'application/xml');
     }
 
+    public function html()
+    {
+        return view('sitemap-html');
+    }
+
     private function buildUrls(): array
     {
         $today = now()->toDateString();
@@ -50,6 +55,11 @@ class SitemapController extends Controller
 
         // Priority 0.9 — essay-writing sub-page with custom view
         $urls[] = ['loc' => url('/essay-writing-help/argumentative'), 'lastmod' => $today, 'changefreq' => 'monthly', 'priority' => '0.9'];
+
+        // Priority 0.9 — homework-help sub-pages (math, nursing, physics)
+        foreach (['math', 'nursing', 'physics'] as $subject) {
+            $urls[] = ['loc' => url("/homework-help/{$subject}"), 'lastmod' => $today, 'changefreq' => 'monthly', 'priority' => '0.9'];
+        }
 
         // Priority 0.8 — trust/conversion pages
         foreach ([

@@ -1136,5 +1136,6 @@
           }
         }
         </script>
+        <x-related-services currentSlug="python" />
     </div>
 @endsection

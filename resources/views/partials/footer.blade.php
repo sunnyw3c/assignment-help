@@ -22,7 +22,7 @@
 
             <!-- Links Sections Wrapper -->
             <div class="flex flex-col sm:flex-row gap-10 sm:gap-16">
-                <!-- Column 1: Quick Links -->
+                <!-- Column 1: Company -->
                 <div class="flex flex-col gap-4 min-w-[150px]">
                     <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Company</h4>
                     <div class="flex flex-col gap-2.5 text-sm font-medium">
@@ -38,8 +38,9 @@
                     <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Services</h4>
                     <div class="flex flex-col gap-2.5 text-sm font-medium">
                         <a href="{{ route('services.programming.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Programming Help</a>
-                        <a href="{{ route('services.essay-writing.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Essay Writing</a>
-                        <a href="{{ route('services.thesis-dissertation.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Writing</a>
+                        <a href="{{ route('services.essay-writing.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Essay Writing Help</a>
+                        <a href="{{ route('services.thesis-dissertation.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Writing Help</a>
+                        <a href="{{ route('services.homework-help.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Homework Help</a>
                     </div>
                 </div>
 
@@ -63,14 +64,20 @@
             </div>
         </div>
 
+        <!-- Academic Disclaimer -->
+        <div class="border-t border-slate-200 dark:border-slate-900 mt-10 pt-6 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p><strong>Disclaimer:</strong> AssignmentHelpUSA.com provides model solutions, reference papers, and study materials intended strictly for research and learning purposes. We strongly advise students to use our materials as reference guides to improve their skills and complete their own original academic work.</p>
+        </div>
+
         <!-- Bottom Divider & Copyright -->
-        <div class="border-t border-slate-200 dark:border-slate-900 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+        <div class="border-t border-slate-200 dark:border-slate-900 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
             <div>
                 &copy; {{ date('Y') }} AssignmentHelpUSA. All rights reserved.
             </div>
             <div class="flex gap-6">
-                <a href="#" class="hover:text-slate-700 dark:hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-700 dark:hover:text-white transition-colors">Terms of Service</a>
+                <a href="{{ route('sitemap.html') }}" class="hover:text-slate-700 dark:hover:text-white transition-colors">Sitemap</a>
+                <a href="{{ route('privacy-policy') }}" class="hover:text-slate-700 dark:hover:text-white transition-colors">Privacy Policy</a>
+                <a href="{{ route('terms-of-service') }}" class="hover:text-slate-700 dark:hover:text-white transition-colors">Terms of Service</a>
             </div>
         </div>
     </div>

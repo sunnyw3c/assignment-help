@@ -199,6 +199,9 @@
         </div>
     </section>
 
+    <!-- Related Services Internal Link Mesh -->
+    <x-related-services :currentSlug="$service['slug'] ?? ''" />
+
     <!-- Custom Styles -->
     <style>
         @@keyframes float {

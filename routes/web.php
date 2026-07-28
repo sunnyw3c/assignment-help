@@ -27,6 +27,7 @@ use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('/sitemap', [SitemapController::class, 'html'])->name('sitemap.html');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/programming-assignment-help', [LanguageController::class, 'index'])->name('languages.index');

@@ -290,5 +290,6 @@
           ]
         }
         </script>
+        <x-related-services currentSlug="nursing" />
     </div>
 @endsection

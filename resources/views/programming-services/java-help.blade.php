@@ -1035,5 +1035,6 @@
           }
         }
         </script>
+        <x-related-services currentSlug="java" />
     </div>
 @endsection
