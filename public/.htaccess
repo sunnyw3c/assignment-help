@@ -53,11 +53,14 @@
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/json "access plus 1 year"
 </IfModule>
 
 <IfModule mod_headers.c>
-    <FilesMatch "\.(?:avif|webp|jpe?g|png|gif|svg|ico|woff2?|css|js)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
+    <FilesMatch "\.(?:avif|webp|jpe?g|png|gif|svg|ico|woff2?|css|js|json)$">
+        Header always set Cache-Control "public, max-age=31536000, immutable"
+        Header always set CDN-Cache-Control "public, max-age=31536000"
+        Header always set Cloudflare-CDN-Cache-Control "public, max-age=31536000"
     </FilesMatch>
 </IfModule>
 

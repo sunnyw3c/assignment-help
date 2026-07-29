@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
+@section('defer_app_css', true)
 @section('title', 'PHP Programming Help USA | Expert Laravel 11 & Web Coders')
 @section('description', 'Get expert PHP programming help in the USA. Vetted US developers code Laravel 11 apps, Symfony APIs, Eloquent ORM & PHPUnit test suites. Fast 24/7 delivery.')
 
 @section('content')
-    <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div class="php-service-page min-h-screen bg-slate-50 dark:bg-slate-950">
         {{-- ===================================================
              CREATIVE HERO SECTION
         =================================================== --}}
@@ -27,7 +28,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-center sm:text-left">
                     <div class="flex items-center gap-2.5">
-                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm" aria-label="Rated 5 out of 5">★★★★★</div>
                         <span class="text-sm font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
                         <span class="text-xs text-slate-500 dark:text-slate-400">(1,150+ PHP reviews)</span>
                     </div>
@@ -77,15 +78,15 @@
                         {{-- Feature Checklist --}}
                         <div class="space-y-3 pt-1">
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Custom PHP 8.x Source Code (.php files &amp; PSR-4 autoload directory)</span>
                             </div>
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Composer json &amp; Eloquent database migrations configured</span>
                             </div>
                             <div class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
-                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
+                                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 flex items-center justify-center text-xs shrink-0">✓</div>
                                 <span>Step-by-step README.md guide for XAMPP, Herd, PhpStorm, or VS Code</span>
                             </div>
                         </div>
@@ -159,10 +160,18 @@
                                 <span class="text-xs font-bold">Compilable Code Guarantee</span>
                             </div>
 
-                            <img src="{{ asset('images/php_hero_banner.png') }}" 
+                            <img src="{{ asset('images/php_hero_banner.webp') }}"
+                                 srcset="{{ asset('images/php_hero_banner-640w.webp') }} 640w,
+                                         {{ asset('images/php_hero_banner-768w.webp') }} 768w,
+                                         {{ asset('images/php_hero_banner.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 50vw, 100vw"
                                  alt="Top-Rated PHP Programming Help USA - Laravel 11 and Object-Oriented Development" 
-                                 class="w-full h-auto rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                                 loading="eager" />
+                                 class="w-full h-auto rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 fetchpriority="low"
+                                 decoding="async" />
                                  
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
                             
@@ -199,7 +208,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" x-data="{ activeTab: 'controller' }">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-code-tabs>
                     {{-- IDE Window Column --}}
                     <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl">
                         {{-- Editor Top Bar --}}
@@ -213,13 +222,13 @@
                             
                             {{-- Code Tabs --}}
                             <div class="flex gap-1 text-xs">
-                                <button @click="activeTab = 'controller'" :class="activeTab === 'controller' ? 'bg-blue-600 text-white font-bold' : 'bg-slate-800 text-slate-400 hover:text-white'" class="px-3 py-1 rounded-lg transition-colors">
+                                <button type="button" data-code-tab="controller" aria-selected="true" class="px-3 py-1 rounded-lg transition-colors bg-blue-600 text-white font-bold">
                                     UserController.php
                                 </button>
-                                <button @click="activeTab = 'test'" :class="activeTab === 'test' ? 'bg-blue-600 text-white font-bold' : 'bg-slate-800 text-slate-400 hover:text-white'" class="px-3 py-1 rounded-lg transition-colors">
+                                <button type="button" data-code-tab="test" aria-selected="false" class="px-3 py-1 rounded-lg transition-colors bg-slate-800 text-slate-400 hover:text-white">
                                     UserTest.php
                                 </button>
-                                <button @click="activeTab = 'composer'" :class="activeTab === 'composer' ? 'bg-blue-600 text-white font-bold' : 'bg-slate-800 text-slate-400 hover:text-white'" class="px-3 py-1 rounded-lg transition-colors">
+                                <button type="button" data-code-tab="composer" aria-selected="false" class="px-3 py-1 rounded-lg transition-colors bg-slate-800 text-slate-400 hover:text-white">
                                     composer.json
                                 </button>
                             </div>
@@ -228,7 +237,7 @@
                         {{-- Code Panels --}}
                         <div class="p-5 font-mono text-xs leading-relaxed overflow-x-auto min-h-[300px]">
                             {{-- Tab 1: UserController --}}
-                            <div x-show="activeTab === 'controller'" class="space-y-1 text-slate-300">
+                            <div data-code-panel="controller" class="space-y-1 text-slate-300">
                                 <p><span class="text-purple-400">&lt;?php</span></p>
                                 <br>
                                 <p><span class="text-purple-400">namespace</span> App\Http\Controllers;</p>
@@ -237,7 +246,7 @@
                                 <br>
                                 <p><span class="text-purple-400">class</span> <span class="text-blue-300">UserController</span> <span class="text-purple-400">extends</span> Controller {</p>
                                 <p class="pl-4"><span class="text-purple-400">public function</span> <span class="text-blue-300">index</span>(): JsonResponse {</p>
-                                <p class="pl-8"><span class="text-slate-500">// Fetch active users with eager-loaded posts</span></p>
+                                <p class="pl-8"><span class="text-slate-400">// Fetch active users with eager-loaded posts</span></p>
                                 <p class="pl-8">$users = User::<span class="text-blue-300">with</span>(<span class="text-emerald-400">'posts'</span>)-&gt;<span class="text-blue-300">where</span>(<span class="text-emerald-400">'active'</span>, true)-&gt;<span class="text-blue-300">get</span>();</p>
                                 <p class="pl-8"><span class="text-purple-400">return</span> response()-&gt;<span class="text-blue-300">json</span>([<span class="text-emerald-400">'status'</span> =&gt; <span class="text-emerald-400">'success'</span>, <span class="text-emerald-400">'data'</span> =&gt; $users]);</p>
                                 <p class="pl-4">}</p>
@@ -245,7 +254,7 @@
                             </div>
 
                             {{-- Tab 2: UserTest --}}
-                            <div x-show="activeTab === 'test'" class="space-y-1 text-slate-300" x-cloak>
+                            <div data-code-panel="test" class="hidden space-y-1 text-slate-300">
                                 <p><span class="text-purple-400">&lt;?php</span></p>
                                 <br>
                                 <p><span class="text-purple-400">use</span> App\Models\User;</p>
@@ -261,7 +270,7 @@
                             </div>
 
                             {{-- Tab 3: composer.json --}}
-                            <div x-show="activeTab === 'composer'" class="space-y-1 text-slate-300" x-cloak>
+                            <div data-code-panel="composer" class="hidden space-y-1 text-slate-300">
                                 <p>{</p>
                                 <p class="pl-4"><span class="text-blue-300">"name"</span>: <span class="text-emerald-400">"assignmenthelp/php-app"</span>,</p>
                                 <p class="pl-4"><span class="text-blue-300">"require"</span>: {</p>
@@ -288,10 +297,17 @@
                     {{-- Image Column --}}
                     <div class="lg:col-span-5 space-y-6">
                         <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-xl bg-slate-950 p-2">
-                            <img src="{{ asset('images/php_hero_banner.png') }}" 
+                            <img src="{{ asset('images/php_code_execution.webp') }}"
+                                 srcset="{{ asset('images/php_code_execution-640w.webp') }} 640w,
+                                         {{ asset('images/php_code_execution-768w.webp') }} 768w,
+                                         {{ asset('images/php_code_execution.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 42vw, 100vw"
                                  alt="PhpStorm PHP 8 Code Execution and Pest Passing Tests" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                         </div>
                     </div>
                 </div>
@@ -318,10 +334,17 @@
                     {{-- Image Column --}}
                     <div class="lg:col-span-5">
                         <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg bg-slate-950 p-2">
-                            <img src="{{ asset('images/php_ecosystem_map.png') }}" 
+                            <img src="{{ asset('images/php_ecosystem_map.webp') }}"
+                                 srcset="{{ asset('images/php_ecosystem_map-640w.webp') }} 640w,
+                                         {{ asset('images/php_ecosystem_map-768w.webp') }} 768w,
+                                         {{ asset('images/php_ecosystem_map.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 42vw, 100vw"
                                  alt="PHP Ecosystem Architecture Map" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                         </div>
                     </div>
 
@@ -390,7 +413,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Core OOP &amp; Classes</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Designing abstract PHP structures. Coding OOP classes, inheritance loops, namespaces, traits, and interface separations using PHP 8.x attributes.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• Class properties &amp; traits</li>
                             <li>• PHP namespaces &amp; PSR standards</li>
                             <li>• Polymorphic interface override</li>
@@ -403,7 +426,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Laravel Web Applications</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Building server web systems. Coding Laravel routes, Blade templates, middleware parameters, controller actions, and Livewire layouts.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• Blade template configurations</li>
                             <li>• Middleware route protections</li>
                             <li>• Livewire responsive actions</li>
@@ -416,7 +439,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Database &amp; Eloquent ORM</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Managing database data persistence. Writing database migrations, Eloquent relationships (hasMany, belongsTo), raw PDO requests, and SQLite syncs.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• Laravel migrations structure</li>
                             <li>• Eloquent relationships mapping</li>
                             <li>• Raw PDO query transactions</li>
@@ -429,7 +452,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">RESTful API Controllers</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Designing application backend endpoints. Structuring JSON payloads, setting up JWT auth rules, handling resource policies, and rate limits.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• JWT backend authorizations</li>
                             <li>• Resource serialization classes</li>
                             <li>• CORS header configurations</li>
@@ -442,7 +465,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">WordPress Theme &amp; Plugin</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Customizing WordPress systems. Coding action hooks, filter configurations, custom themes, plugin actions, and WooCommerce integrations.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• Theme template overrides</li>
                             <li>• Action &amp; filter hook calls</li>
                             <li>• WooCommerce checkout setup</li>
@@ -455,7 +478,7 @@
                             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Composer &amp; Testing</h3>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Managing package installations. Syncing composer.json dependencies, configuring autoloading namespaces, and coding PHPUnit/Pest test blocks.</p>
                         </div>
-                        <ul class="text-xs text-slate-500 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <ul class="text-xs text-slate-600 dark:text-slate-300 font-semibold space-y-1.5 border-t border-slate-200 dark:border-slate-700 pt-4">
                             <li>• Composer package synchronization</li>
                             <li>• PHPUnit test cases execution</li>
                             <li>• PSR-4 autoloading configurations</li>
@@ -472,7 +495,7 @@
         <section class="py-14 sm:py-16 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Environment Support</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Environment Support</span>
                     <h2 class="text-3xl font-black text-slate-900 dark:text-white mt-2">
                         Supported PHP Versions, Frameworks &amp; Tools
                     </h2>
@@ -538,10 +561,17 @@
                     {{-- Image Column --}}
                     <div class="lg:col-span-5">
                         <div class="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg bg-slate-950 p-2">
-                            <img src="{{ asset('images/php_expert_tutor.png') }}" 
+                            <img src="{{ asset('images/php_expert_tutor.webp') }}"
+                                 srcset="{{ asset('images/php_expert_tutor-640w.webp') }} 640w,
+                                         {{ asset('images/php_expert_tutor-768w.webp') }} 768w,
+                                         {{ asset('images/php_expert_tutor.webp') }} 1024w"
+                                 sizes="(min-width: 1024px) 42vw, 100vw"
                                  alt="Senior PHP Programming Expert Conducting Code Review" 
-                                 class="w-full h-auto rounded-xl object-cover" 
-                                 loading="lazy" />
+                                 class="w-full h-auto rounded-xl object-cover"
+                                 width="1024"
+                                 height="1024"
+                                 loading="lazy"
+                                 decoding="async" />
                             <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700 text-white flex items-center justify-between text-xs">
                                 <div class="flex items-center gap-2">
                                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -569,7 +599,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <h3 class="text-sm font-bold text-slate-900 dark:text-white truncate">{{ $name }}</h3>
-                                    <div class="flex items-center gap-1 text-xs text-amber-500 font-bold shrink-0">
+                                    <div class="flex items-center gap-1 text-xs text-amber-700 dark:text-amber-400 font-bold shrink-0">
                                         <span>★</span>
                                         <span>{{ $rating }}</span>
                                         <span class="text-[10px] font-normal text-slate-500">({{ $projects }})</span>
@@ -615,7 +645,7 @@
                     <div class="group relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">01</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">📝</span>
                             </div>
@@ -630,7 +660,7 @@
                     <div class="group relative lg:mt-16">
                         <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">02</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">🎯</span>
                             </div>
@@ -645,7 +675,7 @@
                     <div class="group relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">03</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">⚡</span>
                             </div>
@@ -660,7 +690,7 @@
                     <div class="group relative lg:mt-16">
                         <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-25 transition-opacity duration-500"></div>
                         <div class="relative h-full bg-white dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-7 overflow-hidden hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl">
-                            <div class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
+                            <div aria-hidden="true" class="absolute -right-4 -bottom-12 text-[10rem] font-black text-slate-100 dark:text-white/[0.04] leading-none select-none group-hover:scale-110 transition-transform duration-700 ease-out">04</div>
                             <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                                 <span class="text-2xl">✅</span>
                             </div>
@@ -680,7 +710,7 @@
         <section class="py-14 sm:py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-black uppercase tracking-widest text-amber-500">Student Reviews</span>
+                    <span class="text-xs font-black uppercase tracking-widest text-amber-700 dark:text-amber-400">Student Reviews</span>
                     <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mt-2">
                         What Students Say About Our <span class="text-blue-600 dark:text-blue-400">PHP Programming Help</span>
                     </h2>
@@ -688,35 +718,35 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "I was struggling to link Laravel database migrations with custom Eloquent hasMany models. The developer resolved the relationships, created the seeders, and verified the database loaded cleanly."
                         </p>
                         <div class="pt-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center text-xs">
                             <span class="font-bold text-slate-900 dark:text-white">Ethan P.</span>
-                            <span class="text-slate-500">Penn State &middot; Laravel MVC</span>
+                            <span class="text-slate-600 dark:text-slate-400">Penn State &middot; Laravel MVC</span>
                         </div>
                     </div>
 
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "Had an assignment requiring building a custom MVC routing architecture in core PHP. The expert structured clean controller classes, mapped path variables, and documented everything."
                         </p>
                         <div class="pt-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center text-xs">
                             <span class="font-bold text-slate-900 dark:text-white">Chloe D.</span>
-                            <span class="text-slate-500">USC &middot; Custom Router</span>
+                            <span class="text-slate-600 dark:text-slate-400">USC &middot; Custom Router</span>
                         </div>
                     </div>
 
                     <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-                        <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+                        <div class="flex text-amber-700 dark:text-amber-400 text-sm mb-3" aria-label="Rated 5 out of 5">★★★★★</div>
                         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic mb-4">
                             "Stuck trying to capture user form submissions and save them inside a custom database table in WordPress. The PHP expert coded a clean plugin using actions and database hooks."
                         </p>
                         <div class="pt-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center text-xs">
                             <span class="font-bold text-slate-900 dark:text-white">William K.</span>
-                            <span class="text-slate-500">UC Berkeley &middot; WordPress Plugin</span>
+                            <span class="text-slate-600 dark:text-slate-400">UC Berkeley &middot; WordPress Plugin</span>
                         </div>
                     </div>
                 </div>
@@ -986,3 +1016,29 @@
         <x-related-services currentSlug="php" />
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        document.querySelectorAll('[data-code-tabs]').forEach(tabGroup => {
+            const activeClasses = ['bg-blue-600', 'text-white', 'font-bold'];
+            const inactiveClasses = ['bg-slate-800', 'text-slate-400', 'hover:text-white'];
+
+            tabGroup.querySelectorAll('[data-code-tab]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.dataset.codeTab;
+
+                    tabGroup.querySelectorAll('[data-code-tab]').forEach(tab => {
+                        const active = tab === button;
+                        tab.setAttribute('aria-selected', String(active));
+                        activeClasses.forEach(className => tab.classList.toggle(className, active));
+                        inactiveClasses.forEach(className => tab.classList.toggle(className, !active));
+                    });
+
+                    tabGroup.querySelectorAll('[data-code-panel]').forEach(panel => {
+                        panel.classList.toggle('hidden', panel.dataset.codePanel !== selectedTab);
+                    });
+                });
+            });
+        });
+    </script>
+@endpush

@@ -5,7 +5,13 @@
             <!-- Brand Column -->
             <div class="flex flex-col gap-4 max-w-sm">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="Assignment Help USA" class="h-10 w-auto">
+                    <img src="{{ asset('images/logo-320w.webp') }}"
+                         alt="Assignment Help USA"
+                         class="h-10 w-auto"
+                         width="320"
+                         height="60"
+                         loading="lazy"
+                         decoding="async">
                 </a>
                 <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                     Your premier academic partner. Providing reliable, plagiarism-free assistance and expert support for high school and university students across the United States. Available 24/7.

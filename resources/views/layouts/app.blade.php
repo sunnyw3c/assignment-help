@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+      @hasSection('uses_livewire') data-livewire @endif
+      @hasSection('uses_axios') data-axios @endif>
     <head>
         <meta charset="utf-8">
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY7PPKE8KE"></script>
+        <!-- Queue analytics immediately, but fetch its third-party script after page load. -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-TY7PPKE8KE');
+
+            window.addEventListener('load', () => {
+                const loadAnalytics = () => {
+                    const script = document.createElement('script');
+                    script.async = true;
+                    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TY7PPKE8KE';
+                    document.head.appendChild(script);
+                };
+
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadAnalytics, { timeout: 4000 });
+                } else {
+                    setTimeout(loadAnalytics, 2000);
+                }
+            }, { once: true });
         </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,14 +67,6 @@
         @include('partials.structured-data')
         @stack('structured-data')
 
-        <!-- DNS Prefetch & Preconnect for Performance -->
-        <link rel="dns-prefetch" href="https://fonts.bunny.net">
-        <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-
-        <!-- Preload Critical Resources -->
-        <link rel="preload" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"></noscript>
-
         <!-- Critical CSS Inline (Above the Fold) -->
         <style>
             /* Critical CSS for immediate rendering */
@@ -84,30 +91,30 @@
             }
         </script>
 
-        <!-- Scripts with defer for non-blocking and better TBT -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @hasSection('defer_app_css')
+            <link rel="preload"
+                  href="{{ asset('fonts/figtree-latin-800-normal.woff2') }}"
+                  as="font"
+                  type="font/woff2"
+                  crossorigin>
+            <style data-critical-css>
+                @include('partials.php-critical-css')
+            </style>
+            <link rel="preload"
+                  href="{{ Vite::asset('resources/css/app.css') }}"
+                  as="style"
+                  onload="this.onload=null;this.rel='stylesheet'">
+            <noscript>
+                <link rel="stylesheet" href="{{ Vite::asset('resources/css/app.css') }}">
+            </noscript>
+            @vite('resources/js/app.js')
+        @else
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @endif
 
-        <!-- Livewire Styles -->
-        @livewireStyles
-
-        <!-- Optimize font loading to not block main thread -->
-        <script>
-            // Use requestIdleCallback for non-critical font loading
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(() => {
-                    if ('fonts' in document) {
-                        document.fonts.load('1em figtree');
-                    }
-                });
-            } else {
-                // Fallback for browsers without requestIdleCallback
-                setTimeout(() => {
-                    if ('fonts' in document) {
-                        document.fonts.load('1em figtree');
-                    }
-                }, 1);
-            }
-        </script>
+        @hasSection('uses_livewire')
+            @livewireStyles
+        @endif
     </head>
     <body class="font-sans antialiased bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         <div class="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-950">
@@ -131,22 +138,37 @@
             @include('partials.footer')
         </div>
 
-        <!-- Livewire Scripts -->
-        @livewireScripts
+        @hasSection('uses_livewire')
+            @livewireScripts
+        @endif
         @stack('scripts')
 
-        <!--Start of Tawk.to Script-->
+        <!-- Load chat after the critical rendering window or on first interaction. -->
         <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/69f589f1b402371c38a67ece/1jnji5mje';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
+            var Tawk_API = Tawk_API || {};
+            var Tawk_LoadStart;
+
+            (() => {
+                let loaded = false;
+                const loadChat = () => {
+                    if (loaded) return;
+                    loaded = true;
+                    Tawk_LoadStart = new Date();
+
+                    const script = document.createElement('script');
+                    script.async = true;
+                    script.src = 'https://embed.tawk.to/69f589f1b402371c38a67ece/1jnji5mje';
+                    script.charset = 'UTF-8';
+                    script.setAttribute('crossorigin', '*');
+                    document.head.appendChild(script);
+                };
+
+                ['pointerdown', 'keydown', 'touchstart'].forEach(eventName => {
+                    window.addEventListener(eventName, loadChat, { once: true, passive: true });
+                });
+
+                window.addEventListener('load', () => setTimeout(loadChat, 8000), { once: true });
+            })();
         </script>
-        <!--End of Tawk.to Script-->
     </body>
 </html>

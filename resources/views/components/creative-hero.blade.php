@@ -10,20 +10,10 @@
 ])
 
 @php
-    $orderPageSubjects = [];
-    $subjectsPath = base_path('subjects.json');
-
-    if (file_exists($subjectsPath)) {
-        $subjectsList = json_decode(file_get_contents($subjectsPath), true);
-
-        if (is_array($subjectsList)) {
-            asort($subjectsList);
-            $orderPageSubjects = array_values(array_unique($subjectsList));
-        }
-    }
-
-    $writingSubjects = $orderPageSubjects ?: ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
-    $technicalSubjects = $orderPageSubjects ?: ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
+    // The full subject catalog is loaded after the critical rendering path.
+    // Rendering it into two selects added 3,400+ DOM nodes to every landing page.
+    $writingSubjects = ['Essay Writing','Research Paper','Dissertation / Thesis','Case Study','Coursework','Literature Review','Book Report','Nursing','Law','MBA','History','Psychology','Sociology','English','Philosophy','Other'];
+    $technicalSubjects = ['Python','Java','C / C++','JavaScript / TypeScript','Data Science','Machine Learning','Database / SQL','Mathematics','Statistics','Electrical Engineering','Mechanical Engineering','Civil Engineering','Physics','Chemistry','Accounting / Finance','Other'];
     $onlineClassSubjects = ['Business / MBA','Computer Science','Nursing / Healthcare','Mathematics','English / Writing','History / Social Sciences','Psychology','Law','Accounting','Engineering','Science','Other'];
 
     // Determine the service object type (Array or Object)
@@ -132,7 +122,9 @@
     $isInOnlineClass = $defaultSubject && in_array($defaultSubject, $onlineClassSubjects);
 @endphp
 
-<section class="ahusa-hero relative flex items-start overflow-hidden py-16 lg:py-20 max-sm:py-12" data-creative-hero>
+<section class="ahusa-hero relative flex items-start overflow-hidden py-16 lg:py-20 max-sm:py-12"
+         data-creative-hero
+         data-subject-catalog="{{ asset('subjects-v1.json') }}">
     <div class="ahusa-dot-grid absolute inset-0 z-0 pointer-events-none opacity-50"></div>
     <div class="ahusa-radial absolute inset-0 z-[1] pointer-events-none"></div>
 
@@ -235,50 +227,49 @@
                     <div class="{{ $serviceType === 'Writing' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Writing">
                         <div class="ahusa-field-row">
                             <div class="ahusa-field-col">
-                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                                <label for="hero-writing-email" class="sr-only">Email address</label>
+                                <input id="hero-writing-email" type="email" name="email" required placeholder="Email" class="ahusa-input">
                             </div>
                             <div class="ahusa-field-col">
-                                @include('components.creative-hero-phone')
+                                @include('components.creative-hero-phone', ['idPrefix' => 'hero-writing'])
                             </div>
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
-                                <select class="ahusa-select" data-subject-select>
+                                <label for="hero-writing-subject" class="sr-only">Subject or course code</label>
+                                <select id="hero-writing-subject" class="ahusa-select" data-subject-select data-lazy-subjects>
                                     <option value="">Subject / Course Code</option>
                                     @if ($defaultSubject && !$isInWriting && $serviceType === 'Writing')
                                         <option selected>{{ $defaultSubject }}</option>
                                     @endif
-                                    @foreach ($writingSubjects as $sub)
-                                        <option {{ ($defaultSubject && $isInWriting && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
-                                    @endforeach
                                 </select>
                                 @include('components.creative-hero-deadline')
                                 @include('components.creative-hero-pages')
                             </div>
-                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description')</div>
+                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description', ['idPrefix' => 'hero-writing'])</div>
                         </div>
                     </div>
 
                     <div class="{{ $serviceType === 'Technical' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Technical">
                         <div class="ahusa-field-row">
                             <div class="ahusa-field-col">
-                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                                <label for="hero-technical-email" class="sr-only">Email address</label>
+                                <input id="hero-technical-email" type="email" name="email" required placeholder="Email" class="ahusa-input">
                             </div>
                             <div class="ahusa-field-col">
-                                @include('components.creative-hero-phone')
+                                @include('components.creative-hero-phone', ['idPrefix' => 'hero-technical'])
                             </div>
                         </div>
                         <div class="ahusa-field-row">
-                            <select class="ahusa-select" data-subject-select>
+                            <label for="hero-technical-subject" class="sr-only">Technology or subject</label>
+                            <select id="hero-technical-subject" class="ahusa-select" data-subject-select data-lazy-subjects>
                                 <option value="">Select Technology / Subject</option>
                                 @if ($defaultSubject && !$isInTechnical && $serviceType === 'Technical')
                                     <option selected>{{ $defaultSubject }}</option>
                                 @endif
-                                @foreach ($technicalSubjects as $sub)
-                                    <option {{ ($defaultSubject && $isInTechnical && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
-                                @endforeach
                             </select>
-                            <select class="ahusa-select" data-difficulty-select>
+                            <label for="hero-technical-difficulty" class="sr-only">Difficulty level</label>
+                            <select id="hero-technical-difficulty" class="ahusa-select" data-difficulty-select>
                                 <option value="">Difficulty Level</option>
                                 <option>Beginner / Undergraduate</option>
                                 <option>Intermediate / Graduate</option>
@@ -300,21 +291,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description')</div>
+                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description', ['idPrefix' => 'hero-technical'])</div>
                         </div>
                     </div>
 
                     <div class="{{ $serviceType === 'Online Class' ? 'flex' : 'hidden' }} flex-col gap-2" data-service-panel="Online Class">
                         <div class="ahusa-field-row">
                             <div class="ahusa-field-col">
-                                <input type="email" name="email" required placeholder="Email" class="ahusa-input">
+                                <label for="hero-online-class-email" class="sr-only">Email address</label>
+                                <input id="hero-online-class-email" type="email" name="email" required placeholder="Email" class="ahusa-input">
                             </div>
                             <div class="ahusa-field-col">
-                                @include('components.creative-hero-phone')
+                                @include('components.creative-hero-phone', ['idPrefix' => 'hero-online-class'])
                             </div>
                         </div>
                         <div class="ahusa-field-row">
-                            <select class="ahusa-select" data-subject-select>
+                            <label for="hero-online-class-subject" class="sr-only">Course or subject name</label>
+                            <select id="hero-online-class-subject" class="ahusa-select" data-subject-select>
                                 <option value="">Course / Subject Name</option>
                                 @if ($defaultSubject && !$isInOnlineClass && $serviceType === 'Online Class')
                                     <option selected>{{ $defaultSubject }}</option>
@@ -323,7 +316,8 @@
                                     <option {{ ($defaultSubject && $isInOnlineClass && strtolower($defaultSubject) === strtolower($sub)) ? 'selected' : '' }}>{{ $sub }}</option>
                                 @endforeach
                             </select>
-                            <select class="ahusa-select" data-class-duration>
+                            <label for="hero-online-class-duration" class="sr-only">Class duration</label>
+                            <select id="hero-online-class-duration" class="ahusa-select" data-class-duration>
                                 <option value="">Class Duration</option>
                                 @foreach (['1 Week','2 Weeks','1 Month','2 Months','Full Semester','Full Year'] as $duration)
                                     <option>{{ $duration }}</option>
@@ -332,7 +326,8 @@
                         </div>
                         <div class="ahusa-field-row items-start">
                             <div class="ahusa-field-col flex flex-col gap-2">
-                                <input type="url" placeholder="Course Platform URL (optional)" class="ahusa-input" data-class-url>
+                                <label for="hero-online-class-url" class="sr-only">Course platform URL</label>
+                                <input id="hero-online-class-url" type="url" placeholder="Course Platform URL (optional)" class="ahusa-input" data-class-url>
                                 @include('components.creative-hero-deadline')
                                 <div class="ahusa-box">
                                     <span class="ahusa-box-title">What needs to be done?</span>
@@ -346,7 +341,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description')</div>
+                            <div class="ahusa-field-col flex flex-col gap-2">@include('components.creative-hero-description', ['idPrefix' => 'hero-online-class'])</div>
                         </div>
                     </div>
 
@@ -839,11 +834,58 @@
                     const errorBox = form.querySelector('[data-form-error]');
                     let activeService = 'Writing';
                     let pages = 1;
+                    let subjectCatalogPromise;
 
                     const activePanel = () => form.querySelector(`[data-service-panel="${activeService}"]`);
                     const activeSubject = () => activePanel().querySelector('[data-subject-select]');
                     const activeDeadline = () => activePanel().querySelector('[data-deadline-input]');
                     const activePhone = () => activePanel().querySelector('[data-phone]');
+
+                    const getSubjectCatalog = () => {
+                        if (!subjectCatalogPromise) {
+                            subjectCatalogPromise = fetch(hero.dataset.subjectCatalog, {
+                                headers: { Accept: 'application/json' },
+                                credentials: 'same-origin'
+                            }).then(response => {
+                                if (!response.ok) throw new Error('Unable to load subjects');
+                                return response.json();
+                            });
+                        }
+
+                        return subjectCatalogPromise;
+                    };
+
+                    const hydrateSubjects = async select => {
+                        if (!select || select.dataset.subjectsLoaded === 'true' || select.dataset.subjectsLoading === 'true') return;
+
+                        select.dataset.subjectsLoading = 'true';
+                        const selectedValue = select.value;
+
+                        try {
+                            const subjects = await getSubjectCatalog();
+                            const existing = new Set(Array.from(select.options, option => option.value.toLowerCase()));
+                            const fragment = document.createDocumentFragment();
+
+                            subjects.forEach(subject => {
+                                const value = String(subject).trim();
+                                if (!value || existing.has(value.toLowerCase())) return;
+
+                                const option = document.createElement('option');
+                                option.value = value;
+                                option.textContent = value;
+                                fragment.appendChild(option);
+                                existing.add(value.toLowerCase());
+                            });
+
+                            select.appendChild(fragment);
+                            select.value = selectedValue;
+                            select.dataset.subjectsLoaded = 'true';
+                        } catch {
+                            subjectCatalogPromise = null;
+                        } finally {
+                            delete select.dataset.subjectsLoading;
+                        }
+                    };
 
                     const setDeadlineValue = (wrap, date) => {
                         const input = wrap.querySelector('[data-deadline-input]');
@@ -927,7 +969,7 @@
                         submit.textContent = serviceLabels[activeService];
                     };
 
-                    const setService = service => {
+                    const setService = (service, loadSubjects = true) => {
                         activeService = service;
                         serviceInput.value = service;
                         form.querySelectorAll('[data-service-tab]').forEach(tab => tab.classList.toggle('is-active', tab.dataset.serviceTab === service));
@@ -942,6 +984,7 @@
                         });
                         setError('');
                         updateSubmit();
+                        if (loadSubjects) hydrateSubjects(activeSubject());
                     };
 
                     const updateWords = () => {
@@ -1011,7 +1054,14 @@
                         updateSubmit();
                     }));
                     form.querySelectorAll('[data-phone]').forEach(input => input.addEventListener('input', updateSubmit));
-                    form.querySelectorAll('[data-subject-select]').forEach(select => select.addEventListener('change', updateSubmit));
+                    form.querySelectorAll('[data-subject-select]').forEach(select => {
+                        select.addEventListener('change', updateSubmit);
+
+                        if (select.matches('[data-lazy-subjects]')) {
+                            select.addEventListener('focus', () => hydrateSubjects(select));
+                            select.addEventListener('pointerenter', () => hydrateSubjects(select), { once: true });
+                        }
+                    });
                     form.querySelectorAll('[data-deadline-wrap]').forEach(wrap => {
                         const picker = wrap.querySelector('[data-deadline-picker]');
                         const input = wrap.querySelector('[data-deadline-input]');
@@ -1082,7 +1132,7 @@
                         composeDescription();
                     });
 
-                    setService('{{ $serviceType }}');
+                    setService('{{ $serviceType }}', false);
                     updateWords();
                     updateDeadlineLabels();
                 });

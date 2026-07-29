@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('uses_axios', true)
 @section('content')
 
     <div class="py-12" x-data="{

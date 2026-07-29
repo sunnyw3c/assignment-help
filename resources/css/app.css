@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/figtree-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/figtree-latin-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/figtree-latin-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/figtree-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800 900;
+    font-display: swap;
+    src: url('/fonts/figtree-latin-800-normal.woff2') format('woff2');
+}
+
 /* ============================================================
  * CANONICAL SECTION CONTAINER
  * Matches the navbar/footer layout: max-w-7xl, responsive px.
@@ -101,6 +141,16 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     overflow-x: clip;
+}
+
+/*
+ * Keep long service-page sections outside the initial rendering work.
+ * The first section remains fully rendered; later sections are activated
+ * automatically as they approach the viewport.
+ */
+.php-service-page > section:nth-of-type(n + 2) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
 }
 
 body {

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('uses_axios', true)
 @section('content')
 
     <div class="min-h-screen py-6 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300 relative overflow-hidden" 
@@ -549,4 +550,3 @@
     </div>
 
 @endsection
-

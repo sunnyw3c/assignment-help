@@ -49,3 +49,69 @@ it('publishes one canonical on the supported essay subpage', function () {
 
     expect(substr_count($response->getContent(), 'rel="canonical"'))->toBe(1);
 });
+
+it('publishes explicit dimensions for every image on the PHP service page', function () {
+    $response = $this->withoutVite()->get('/programming-help/php');
+
+    $response->assertOk();
+
+    $document = new DOMDocument;
+    @$document->loadHTML($response->getContent());
+
+    $imagesWithoutDimensions = [];
+
+    foreach ($document->getElementsByTagName('img') as $image) {
+        if (! $image->hasAttribute('width') || ! $image->hasAttribute('height')) {
+            $imagesWithoutDimensions[] = $image->getAttribute('src');
+        }
+    }
+
+    expect($imagesWithoutDimensions)->toBe([]);
+});
+
+it('associates every PHP service form select with a label', function () {
+    $response = $this->withoutVite()->get('/programming-help/php');
+
+    $response->assertOk();
+
+    $document = new DOMDocument;
+    @$document->loadHTML($response->getContent());
+    $xpath = new DOMXPath($document);
+    $unlabelledSelects = [];
+
+    foreach ($document->getElementsByTagName('select') as $select) {
+        $id = $select->getAttribute('id');
+        $labels = $id === '' ? null : $xpath->query(sprintf('//label[@for="%s"]', $id));
+
+        if ($id === '' || $labels === false || $labels->length === 0) {
+            $unlabelledSelects[] = $id ?: $select->getAttribute('name');
+        }
+    }
+
+    expect($unlabelledSelects)->toBe([]);
+});
+
+it('keeps the PHP service critical rendering path lean', function () {
+    $response = $this->withoutVite()->get('/programming-help/php');
+
+    $response->assertOk();
+
+    $html = $response->getContent();
+    $document = new DOMDocument;
+    @$document->loadHTML($html);
+
+    expect($document->getElementsByTagName('option')->length)->toBeLessThan(100)
+        ->and($html)->toContain('data-critical-css')
+        ->and($html)->toContain('subjects-v1.json')
+        ->and($html)->not->toContain('/vendor/livewire/livewire');
+});
+
+it('uses distinct responsive images for PHP page illustrations', function () {
+    $response = $this->withoutVite()->get('/programming-help/php');
+
+    $response->assertOk()
+        ->assertSee('images/php_hero_banner.webp', false)
+        ->assertSee('images/php_code_execution.webp', false)
+        ->assertSee('images/php_ecosystem_map.webp', false)
+        ->assertSee('images/php_expert_tutor.webp', false);
+});

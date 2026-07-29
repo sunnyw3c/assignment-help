@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('uses_livewire', true)
 @section('title', 'Academic Assignment Help | Expert Writing Services')
 @section('description', 'Professional academic assignment help for USA students. Expert researchers provide quality writing services for essays, reports, and more. Success starts here!')
 

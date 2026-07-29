@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('uses_livewire', true)
 @section('title', 'Place Order - Get Academic Help')
 
 @section('content')

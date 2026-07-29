@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "build:critical": "node scripts/extract-critical-css.mjs",
         "dev": "vite"
     },
     "devDependencies": {

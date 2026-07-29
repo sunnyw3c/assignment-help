@@ -1,5 +1,3 @@
-import './bootstrap';
-
 const immersiveSelector = [
     '[data-parallax]',
     '.gradient-follow',
@@ -24,8 +22,15 @@ if (document.readyState === 'loading') {
     loadImmersiveInteractions();
 }
 
-// Livewire 3 handles Alpine discovery and start automatically.
-// Only import/assign if you need to extend Alpine globally.
-import Alpine from 'alpinejs';
-window.Alpine = Alpine;
-// Alpine.start(); // Removed to prevent multiple instances warning
+if (document.documentElement.hasAttribute('data-axios')) {
+    import('./bootstrap');
+}
+
+// Livewire includes Alpine on opted-in pages. Other pages only download Alpine
+// when their rendered markup actually contains an Alpine component.
+if (!document.documentElement.hasAttribute('data-livewire') && document.querySelector('[x-data]')) {
+    import('alpinejs').then(({ default: Alpine }) => {
+        window.Alpine = Alpine;
+        Alpine.start();
+    });
+}

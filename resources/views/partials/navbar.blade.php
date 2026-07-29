@@ -74,7 +74,12 @@
         <div class="flex h-16 items-center justify-between sm:h-20">
             <div class="flex shrink-0 items-center">
                 <a href="{{ url('/') }}" class="flex items-center gap-2">
-                    <img src="{{ asset('images/logo.png') }}" alt="Assignment Help USA" class="h-8 w-auto sm:h-10">
+                    <img src="{{ asset('images/logo-320w.webp') }}"
+                         alt="Assignment Help USA"
+                         class="h-8 w-auto sm:h-10"
+                         width="320"
+                         height="60"
+                         decoding="async">
                 </a>
             </div>
 

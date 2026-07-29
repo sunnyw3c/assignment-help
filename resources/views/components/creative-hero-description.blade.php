@@ -1,5 +1,6 @@
 <div class="w-full min-w-0 border-[1.5px] border-[var(--desc-bdr)] rounded-[10px] bg-[var(--desc-bg)] overflow-hidden flex flex-col flex-1 min-h-[145px] transition-[border-color,box-shadow] duration-[180ms] focus-within:border-[#f16700] focus-within:shadow-[0_0_0_3px_rgba(241,103,0,0.13)]">
-    <textarea placeholder="Description (Write/Attach)" data-base-description class="flex-1 resize-none px-3 py-[10px] border-0 bg-transparent text-[13px] text-[var(--desc-clr)] placeholder:text-[var(--i-ph)] leading-[1.55] min-h-[90px] outline-none shadow-none"></textarea>
+    <label for="{{ $idPrefix ?? 'hero-order' }}-description" class="sr-only">Assignment description</label>
+    <textarea id="{{ $idPrefix ?? 'hero-order' }}-description" placeholder="Description (Write/Attach)" data-base-description class="flex-1 resize-none px-3 py-[10px] border-0 bg-transparent text-[13px] text-[var(--desc-clr)] placeholder:text-[var(--i-ph)] leading-[1.55] min-h-[90px] outline-none shadow-none"></textarea>
     <div class="flex flex-col gap-2 px-3 py-[6px] border-t border-t-[var(--att-bdr)] bg-[var(--att-bg)]">
         <div class="flex items-center gap-2">
             <button type="button" data-attach class="flex items-center gap-[5px] bg-transparent border-0 p-0 text-[11.5px] font-bold text-[var(--att-clr)] cursor-pointer outline-none transition-colors duration-150 hover:text-[#f16700]">

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('uses_livewire', true)
 @section('title', 'Pricing & Plans | Transparent Assignment Help Rates - Assignment Help USA')
 @section('description', 'Simple, transparent pricing for assignment help. Plans from $15/page with up to 40% off, free plagiarism reports, and unlimited revisions. Get an instant quote today.')
 
