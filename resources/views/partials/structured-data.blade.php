@@ -4,6 +4,9 @@
     $pageUrl = $canonicalUrl !== '' ? $canonicalUrl : url()->current();
     $pageTitle = trim($__env->yieldContent('title', 'Assignment Help USA | Expert Academic Support'));
     $pageDescription = trim($__env->yieldContent('description', 'Expert academic support and assignment help available 24/7.'));
+    $primaryImage = trim($__env->yieldContent('primary_image'));
+    $dateModified = trim($__env->yieldContent('date_modified'));
+    $mainEntityId = trim($__env->yieldContent('schema_main_entity'));
     $organizationId = $siteUrl . '#organization';
     $websiteId = $siteUrl . '#website';
     $webpageId = rtrim($pageUrl, '/') . '#webpage';
@@ -17,7 +20,6 @@
             'logo' => asset('images/logo.png'),
             'description' => 'Professional assignment help and academic support service for students in the United States.',
             'email' => 'support@assignmenthelpusa.com',
-            'telephone' => '+1-800-555-0199',
             'areaServed' => [
                 '@type' => 'Country',
                 'name' => 'United States',
@@ -27,7 +29,6 @@
                     '@type' => 'ContactPoint',
                     'contactType' => 'customer support',
                     'email' => 'support@assignmenthelpusa.com',
-                    'telephone' => '+1-800-555-0199',
                     'availableLanguage' => ['English'],
                     'areaServed' => 'US',
                 ],
@@ -93,6 +94,25 @@
     if ($segments->isNotEmpty()) {
         $webPage['breadcrumb'] = [
             '@id' => rtrim($pageUrl, '/') . '#breadcrumb',
+        ];
+    }
+
+    if ($primaryImage !== '') {
+        $webPage['primaryImageOfPage'] = [
+            '@type' => 'ImageObject',
+            '@id' => rtrim($pageUrl, '/') . '#primaryimage',
+            'url' => $primaryImage,
+            'contentUrl' => $primaryImage,
+        ];
+    }
+
+    if ($dateModified !== '') {
+        $webPage['dateModified'] = $dateModified;
+    }
+
+    if ($mainEntityId !== '') {
+        $webPage['mainEntity'] = [
+            '@id' => $mainEntityId,
         ];
     }
 

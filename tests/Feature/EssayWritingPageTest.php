@@ -17,8 +17,8 @@ class EssayWritingPageTest extends TestCase
         $response = $this->withoutVite()->get('/essay-writing-help');
 
         $response->assertOk();
-        $response->assertSee('Professional Essay Writing Service USA');
-        $response->assertSee('Structured PEEL/TEEL Writing');
-        $response->assertSee('Frequently Asked Questions');
+        $response->assertSee('Essay writing help built around');
+        $response->assertSee('What our essay writing service can help with');
+        $response->assertSee('Essay writing help FAQs');
     }
 }

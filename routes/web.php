@@ -36,6 +36,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/programming-help', [ServiceController::class, 'index'])->name('services.programming.index');
 Route::get('/programming-help/{slug}', [ServiceController::class, 'show'])->name('services.programming.show');
 
+Route::get('/services', [AssignmentServiceController::class, 'index'])->name('services.assignment.index');
 Route::get('/assignment-help/{slug}', [AssignmentServiceController::class, 'show'])->name('services.assignment.show');
 Route::post('/assignment-help/calculate-price', [AssignmentServiceController::class, 'calculatePrice'])->name('services.assignment.calculate-price');
 
@@ -54,7 +55,8 @@ Route::get('/lab-report-help', [LabReportController::class, 'index'])->name('ser
 Route::get('/literature-review-help', [LiteratureReviewController::class, 'index'])->name('services.literature-review.index');
 Route::get('/presentation-design-help', [PresentationDesignController::class, 'index'])->name('services.presentation-design.index');
 Route::get('/proofreading-editing-help', [ProofreadingEditingController::class, 'index'])->name('services.proofreading-editing.index');
-Route::get('/thesis-dissertation-help', [ThesisDissertationController::class, 'index'])->name('services.thesis-dissertation.index');
+Route::get('/thesis-help', [ThesisDissertationController::class, 'thesis'])->name('services.thesis.index');
+Route::get('/dissertation-help', [ThesisDissertationController::class, 'dissertation'])->name('services.dissertation.index');
 Route::get('/law-assignment-help', [LawAssignmentController::class, 'index'])->name('services.law-assignment.index');
 
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');

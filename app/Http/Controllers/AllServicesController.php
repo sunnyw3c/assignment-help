@@ -19,6 +19,7 @@ class AllServicesController extends Controller
         // Get assignment services from database
         $assignmentServices = Service::with('details')
             ->active()
+            ->whereNotIn('slug', config('service-pages.blocked_slugs', []))
             ->ordered()
             ->get();
 

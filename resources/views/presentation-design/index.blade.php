@@ -359,8 +359,8 @@
                         </p>
                     </div>
                     <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('services.thesis-dissertation.index') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Thesis & Dissertation Services <span>→</span>
+                        <a href="{{ route('services.dissertation.index') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                            Dissertation Help <span>→</span>
                         </a>
                     </div>
                 </div>

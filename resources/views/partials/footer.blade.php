@@ -45,7 +45,8 @@
                     <div class="flex flex-col gap-2.5 text-sm font-medium">
                         <a href="{{ route('services.programming.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Programming Help</a>
                         <a href="{{ route('services.essay-writing.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Essay Writing Help</a>
-                        <a href="{{ route('services.thesis-dissertation.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Writing Help</a>
+                        <a href="{{ route('services.thesis.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Help</a>
+                        <a href="{{ route('services.dissertation.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Dissertation Help</a>
                         <a href="{{ route('services.homework-help.index') }}" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Homework Help</a>
                     </div>
                 </div>

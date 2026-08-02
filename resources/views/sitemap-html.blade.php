@@ -89,7 +89,8 @@
                     <li><a href="{{ route('services.research-paper.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">📄 Research Paper Help</a></li>
                     <li><a href="{{ route('services.case-study.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">📊 Case Study Help</a></li>
                     <li><a href="{{ route('services.literature-review.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">📚 Literature Review Help</a></li>
-                    <li><a href="{{ route('services.thesis-dissertation.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">🎓 Thesis &amp; Dissertation Help</a></li>
+                    <li><a href="{{ route('services.thesis.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">📝 Thesis Help</a></li>
+                    <li><a href="{{ route('services.dissertation.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">📚 Dissertation Help</a></li>
                     <li><a href="{{ route('services.presentation-design.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">🎨 Presentation Design Help</a></li>
                     <li><a href="{{ route('services.proofreading-editing.index') }}" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">✏️ Proofreading &amp; Editing Help</a></li>
                 </ul>

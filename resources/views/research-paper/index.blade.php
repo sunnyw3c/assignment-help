@@ -1,727 +1,390 @@
 @extends('layouts.app')
 
-@section('title', 'Research Paper Help USA | PhD Research Paper Writers')
-@section('description', 'Get expert research paper help in USA. Original empirical papers, literature reviews & statistical analysis written by PhD researchers with 24/7 support.')
-@section('keywords', 'research paper help, research paper help USA, research paper writing service, write my research paper, PhD research writers, literature review help, empirical research paper, spss data analysis help')
+@section('title', 'Research Paper Help for College Students | Assignment Help USA')
+@section('description', 'Get research paper help with questions, scholarly sources, literature synthesis, methodology, structure, citations, editing, and college deadlines.')
+@section('canonical', url('/research-paper-help'))
+@section('og_image', asset('images/research-paper/research-paper-help-og.jpg'))
+@section('twitter_image', asset('images/research-paper/research-paper-help-og.jpg'))
+@section('primary_image', asset('images/research-paper/research-paper-help-student.jpg'))
+@section('date_modified', '2026-08-03')
+@section('schema_main_entity', url('/research-paper-help') . '#service')
 
-@push('head')
-    <!-- Open Graph / Facebook Meta -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Research Paper Help USA | PhD Research Paper Writers">
-    <meta property="og:description" content="Get expert research paper help in USA. Original empirical papers, literature reviews & statistical analysis written by PhD researchers with 24/7 support.">
-    <meta property="og:image" content="{{ asset('images/research_paper_hero_banner.png') }}">
-
-    <!-- Twitter Meta -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="Research Paper Help USA | PhD Research Paper Writers">
-    <meta property="twitter:description" content="Get expert research paper help in USA. Original empirical papers, literature reviews & statistical analysis written by PhD researchers with 24/7 support.">
-    <meta property="twitter:image" content="{{ asset('images/research_paper_hero_banner.png') }}">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ url()->current() }}">
-
-    <!-- Structured Data (JSON-LD) for Google SEO -->
+@push('structured-data')
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@graph": [
-            {
-                "@@type": "EducationalOrganization",
-                "@@id": "{{ url('/') }}#organization",
-                "name": "Assignment Help USA",
-                "url": "{{ url('/') }}",
-                "logo": "{{ asset('images/logo.png') }}",
-                "sameAs": []
-            },
-            {
-                "@@type": "Service",
-                "@@id": "{{ url()->current() }}#service",
-                "name": "Professional Research Paper Help USA",
-                "provider": { "@@id": "{{ url('/') }}#organization" },
-                "serviceType": "Academic Research Paper Assistance",
-                "areaServed": {
-                    "@@type": "Country",
-                    "name": "United States"
-                },
-                "description": "Custom academic research paper assistance for US university students. Original empirical studies, literature reviews, and statistical data analysis written by native PhD researchers.",
-                "offers": {
-                    "@@type": "Offer",
-                    "priceCurrency": "USD",
-                    "price": "15.00",
-                    "priceValidUntil": "2027-12-31",
-                    "availability": "https://schema.org/InStock"
-                },
-                "aggregateRating": {
-                    "@@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "4210",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                }
-            },
-            {
-                "@@type": "BreadcrumbList",
-                "@@id": "{{ url()->current() }}#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "{{ url('/') }}"
-                    },
-                    {
-                        "@@type": "ListItem",
-                        "position": 2,
-                        "name": "Services",
-                        "item": "{{ url('/services') }}"
-                    },
-                    {
-                        "@@type": "ListItem",
-                        "position": 3,
-                        "name": "Research Paper Help",
-                        "item": "{{ url()->current() }}"
-                    }
-                ]
-            },
-            {
-                "@@type": "FAQPage",
-                "@@id": "{{ url()->current() }}#faq",
-                "mainEntity": [
-                    {
-                        "@@type": "Question",
-                        "name": "Who will write my research paper?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Your research paper is assigned to a subject-matter expert holding a PhD or Master's degree from a top US university with published research experience in peer-reviewed journals."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "Do you provide statistical analysis in SPSS, R, or Python for empirical papers?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Yes. Our quantitative researchers perform advanced data analysis using SPSS, R, Python, STATA, and NVivo for qualitative coding, providing output logs and data interpretation."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "Are your research papers 100% original and verified by Turnitin?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Every research paper is written from scratch using peer-reviewed sources. We scan every paper with Turnitin and AI detection tools, attaching a free similarity report upon request."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "Can I get urgent research paper help with tight deadlines?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Yes. We accommodate express research paper requests with turnarounds as fast as 6 to 12 hours. Express orders are assigned immediately to senior PhD researchers."
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        '@id' => url('/research-paper-help') . '#service',
+        'name' => 'Research Paper Help',
+        'serviceType' => 'Academic research paper planning, source, writing, citation, and editing support',
+        'url' => url('/research-paper-help'),
+        'description' => 'Research paper help for US college students, including assignment analysis, research questions, source evaluation, literature synthesis, organization, methodology, citations, revision, and proofreading.',
+        'image' => asset('images/research-paper/research-paper-help-student.jpg'),
+        'provider' => [
+            '@type' => 'Organization',
+            '@id' => rtrim(config('app.url') ?: url('/'), '/') . '#organization',
+            'name' => 'Assignment Help USA',
+        ],
+        'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'United States',
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 @endpush
 
 @section('content')
-<div class="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
-
-    {{-- ===================================================
-         HERO SECTION
-    =================================================== --}}
-    <x-creative-hero 
-        :service="$service" 
-        title="Professional Research Paper Help USA"
-        subtitle="Need high-impact academic research assistance? Get 100% original, peer-reviewed research paper writing help from US-based PhD researchers. Rigorous methodology, SPSS/R data analysis, and flawless APA/IEEE citations delivered on time." 
+<div class="min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+    <x-creative-hero
+        :service="$service"
+        title="Research Paper Help for <span class='text-[#f16700]'>Evidence-Led Academic Work</span>"
+        subtitle="Get focused support with your research question, scholarly sources, literature synthesis, methodology, structure, citations, and revision. Every project is developed around your prompt, rubric, academic level, and required format."
+        :stats="[
+            ['Brief-led', 'Research planning'],
+            ['Source-aware', 'Evidence use'],
+            ['Format-ready', 'Citation support'],
+        ]"
+        :features="[
+            'Original support for your assignment brief',
+            'Research and source-evaluation guidance',
+            'Citation, revision, and formatting support',
+            'Secure and confidential ordering',
+        ]"
+        :breadcrumbs="[
+            ['label' => 'Home', 'url' => route('home')],
+            ['label' => 'Research Paper Help', 'url' => ''],
+        ]"
     />
 
-    {{-- ===================================================
-         TRUST BAR / SOCIAL PROOF (E-E-A-T)
-    =================================================== --}}
-    <section class="relative z-10 border-y border-slate-200/80 bg-white/90 py-5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/90" aria-label="Trust Signals">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
-                <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
-                    <div class="flex text-amber-400 text-sm">★★★★★</div>
-                    <span class="font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
-                    <span class="text-xs text-slate-500 dark:text-slate-400">(4,210+ US Research Papers)</span>
-                </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+    <section class="relative z-10 border-y border-slate-200/80 bg-white/95 py-5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95" aria-label="Research paper service features">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-4 px-4 sm:px-6 lg:px-8">
+            @foreach ([
+                ['Research question and scope', 'blue'],
+                ['Scholarly source synthesis', 'emerald'],
+                ['Methods and structure', 'violet'],
+                ['Citations and final review', 'orange'],
+            ] as [$label, $color])
+                @php
+                    $iconClass = match ($color) {
+                        'blue' => 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400',
+                        'emerald' => 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400',
+                        'violet' => 'bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400',
+                        default => 'bg-orange-50 text-orange-600 dark:bg-orange-500/10 dark:text-orange-400',
+                    };
+                @endphp
+                <div class="flex items-center gap-2.5 text-sm font-bold text-slate-700 dark:text-slate-200">
+                    <span class="flex h-8 w-8 items-center justify-center rounded-lg {{ $iconClass }}">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                     </span>
-                    <span class="font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">38</strong> PhD Researchers Online</span>
+                    {{ $label }}
                 </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 9 0 0118 0z"/></svg>
-                    <span>100% Peer-Reviewed Sources (JSTOR / IEEE)</span>
-                </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                    <span>0% AI & Turnitin Verified</span>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 
-    {{-- ===================================================
-         VISUAL FEATURE 1: RESEARCH METHODOLOGY BLUEPRINT
-    =================================================== --}}
-    <section class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white overflow-hidden" id="research-methodology">
-        <!-- Background Ambient Glow -->
-        <div class="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
-
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                        Rigorous Empirical Framework
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-                        End-to-End Academic Research <br class="hidden sm:inline">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">Engineered by PhD Specialists</span>
-                    </h2>
-                    <p class="mt-5 text-slate-300 leading-relaxed text-base sm:text-lg">
-                        Executing a publication-grade research paper requires methodological precision, critical literature synthesis, and empirical validation. Our team guides your paper through all critical academic phases.
-                    </p>
-
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-lg shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">1</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Hypothesis & Problem Statement Formulation</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Defining precise research questions, null/alternative hypotheses, and clear scope alignment with target academic rubrics.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">2</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Peer-Reviewed Literature Synthesis</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Systematically surveying current studies from JSTOR, PubMed, ScienceDirect, and IEEE to identify research gaps and theoretical frameworks.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white font-black text-lg shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">3</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Data Analysis & Empirical Findings (SPSS / R / Python)</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Executing quantitative statistical tests (ANOVA, Regression, Chi-Square) or qualitative thematic coding with full transparency and data logs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-80 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-700/80 bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/lab_data_analysis_preview.png') }}" 
-                             alt="Empirical Research Data Analysis and Statistical Synthesis Preview" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         VISUAL FEATURE 2: PLAGIARISM & AI CHECK SHOWCASE
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div class="order-2 lg:order-1 relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/lab_report_hero_banner.png') }}" 
-                             alt="Peer-Reviewed Scholarly Research and Turnitin Originality Verification" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-
-                <div class="order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Authentic Scholarly Standards
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                        Zero Plagiarism & 0% AI Content Guarantee
-                    </h2>
-                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-                        University plagiarism checkers and AI detection algorithms are stricter than ever. Every research paper we produce is written 100% from scratch by qualified PhD researchers using verified academic sources.
-                    </p>
-
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Official Turnitin originality report attached to every research order</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Verified 0% AI score on CopyLeaks, GPTZero & Turnitin AI Detection</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white font-black text-sm shadow-md shadow-emerald-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Primary and secondary peer-reviewed references cited accurately</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         VISUAL FEATURE 3: SCHOLAR WORKSTATION SHOWCASE
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/60 border border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
-                        Academic Excellence
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                        Tailored for US Undergraduate, Master's & Doctoral Research
-                    </h2>
-                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-                        Whether you need a term paper, an empirical thesis chapter, or a complex meta-analysis, our PhD writers adapt their research methodology to match your university's exact rubric standards.
-                    </p>
-
-                    <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-blue-600 dark:text-blue-400 font-bold text-lg mb-1">Empirical Studies</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Quantitative data analysis, SPSS output interpretation, and experimental design.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-indigo-600 dark:text-indigo-400 font-bold text-lg mb-1">Literature Reviews</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Systematic thematic synthesis identifying research gaps in JSTOR and IEEE.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-purple-600 dark:text-purple-400 font-bold text-lg mb-1">Case Study Research</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">In-depth qualitative inquiry using NVivo coding, field data, and industry frameworks.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg mb-1">Thesis & Dissertations</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Comprehensive chapter assistance from proposal defense to final discussion.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/research_paper_hero_banner.png') }}" 
-                             alt="Professional PhD Research Paper Workstation Environment" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         RESEARCH PAPER CATEGORIES & TYPES
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="research-types">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Specialized Disciplines</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Types of Research Papers We Write</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our PhD researchers specialize across STEM, Humanities, Business, Medicine, and Social Sciences.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {{-- Category 1 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-2xl group-hover:scale-110 transition-transform">📊</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Quantitative & Empirical Papers</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Hypothesis testing, regression modeling, survey design, and statistical data execution in SPSS, R, Python, or STATA.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Quantitative Paper <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Category 2 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-2xl group-hover:scale-110 transition-transform">📚</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Systematic Literature Reviews</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Comprehensive PRISMA literature reviews synthesizing hundreds of peer-reviewed articles to identify research gaps.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Literature Review <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Category 3 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 to-pink-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-2xl group-hover:scale-110 transition-transform">🔬</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Qualitative Case Studies</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Thematic analysis, interview transcript coding (NVivo), grounded theory, and qualitative research design.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('services.case-study.index') }}" class="text-sm font-bold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Case Study Research Help <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Category 4 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-2xl group-hover:scale-110 transition-transform">💻</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Computer Science & STEM Papers</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Algorithm complexity analysis, machine learning model evaluation, IEEE formatted technical research papers.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order STEM Research Paper <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Category 5 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-2xl group-hover:scale-110 transition-transform">🏥</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Nursing & Medical Papers</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Evidence-based practice (EBP) papers, clinical trial reviews, PubMed references, and APA 7th health research.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Nursing Research <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Category 6 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rose-500 to-red-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-2xl group-hover:scale-110 transition-transform">📜</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Thesis & Dissertation Chapters</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Proposal writing, methodology design, results chapter drafting, and comprehensive dissertation defense prep.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-rose-600 hover:text-rose-700 dark:text-rose-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Dissertation Help <span>→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         ACADEMIC DATABASES INTEGRATION SHOWCASE
-    =================================================== --}}
-    <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="inline-block bg-emerald-100 text-emerald-700 dark:bg-emerald-950/80 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-emerald-200 dark:border-emerald-800">Academic Sources</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Direct Access to Global Journal Databases</h2>
-                <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">We cite recent, high-impact peer-reviewed journals to satisfy the strictest US university rubrics.</p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    JSTOR
-                </div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    PubMed
-                </div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    IEEE Xplore
-                </div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    ScienceDirect
-                </div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    Scopus
-                </div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    Web of Science
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         CITATIONS & FORMATTING STANDARDS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-950/80 dark:text-purple-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-purple-200 dark:border-purple-800">Citation Compliance</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mastery of All Citation Formats</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">In-text citations, DOI links, footnotes, and bibliographies formatted strictly to your department's manual.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-blue-400/50 transition-colors shadow-sm">
-                    <div class="text-blue-600 dark:text-blue-400 font-black text-xl mb-2">APA 7th Edition</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Psychology, Nursing, Social Sciences, and Business research papers with DOI reference formatting.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400/50 transition-colors shadow-sm">
-                    <div class="text-indigo-600 dark:text-indigo-400 font-black text-xl mb-2">MLA 9th Edition</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for English Literature, Media, and Cultural Studies with container-based Works Cited formatting.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-purple-400/50 transition-colors shadow-sm">
-                    <div class="text-purple-600 dark:text-purple-400 font-black text-xl mb-2">Chicago / Turabian 17th</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for History, Art, and Political Science with Footnotes/Endnotes or Author-Date citations.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400/50 transition-colors shadow-sm">
-                    <div class="text-emerald-600 dark:text-emerald-400 font-black text-xl mb-2">Harvard Style</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Widely used across US economics and management departments for parenthetical referencing.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-rose-400/50 transition-colors shadow-sm">
-                    <div class="text-rose-600 dark:text-rose-400 font-black text-xl mb-2">IEEE Style</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Numbered bracket citation standard for Engineering, Computer Science, and Technical research.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-amber-400/50 transition-colors shadow-sm">
-                    <div class="text-amber-600 dark:text-amber-400 font-black text-xl mb-2">OSCOLA & Legal</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Specialized legal citation style for Law research, case law commentary, and statutory analysis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         7 COMMON RESEARCH PAPER PITFALLS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-rose-100 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-rose-200 dark:border-rose-800">Grade Protection</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">7 Research Paper Pitfalls Fixed</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our PhD researchers systematically eliminate errors that cost students top marks.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                @php
-                $pitfalls = [
-                    ['title' => 'Weak Research Gap Formulation', 'desc' => 'Failing to establish why the study is necessary relative to existing literature.'],
-                    ['title' => 'Flawed Statistical Methodology', 'desc' => 'Applying wrong test models (e.g. running linear regression without checking normality).'],
-                    ['title' => 'Superficial Literature Synthesis', 'desc' => 'Summarizing papers individually instead of synthesizing themes and trends.'],
-                    ['title' => 'Outdated or Uncredible Sources', 'desc' => 'Citing blogs or outdated papers instead of peer-reviewed journals from the last 5 years.'],
-                    ['title' => 'Inconsistent In-Text Citations', 'desc' => 'Mixing APA and Chicago rules or leaving cited works out of the reference list.'],
-                    ['title' => 'Overstated Discussion Claims', 'desc' => 'Drawing conclusions that exceed empirical data findings without stating study limitations.'],
-                    ['title' => 'Rubric Misalignment', 'desc' => 'Failing to meet specific university section weighting and formatting requirements.'],
-                ];
-                @endphp
-                @foreach($pitfalls as $index => $p)
-                <div class="flex gap-5 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 hover:border-rose-300 dark:hover:border-rose-800 transition-colors shadow-sm">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-500 text-white font-black text-base shadow-md shadow-rose-500/20">
-                        {{ $index + 1 }}
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{{ $p['title'] }}</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ $p['desc'] }}</p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         EXPERT PHD RESEARCHERS SHOWCASE
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Vetted PhD Faculty</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Top-Rated Research Specialists</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Every researcher holds a PhD or Master's degree from top US institutions with extensive publishing credentials.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                @php
-                $researchers = [
-                    [
-                        'name' => 'Dr. Robert Chen',
-                        'degree' => 'PhD, Applied Statistics — MIT',
-                        'specialty' => 'SPSS/R Quantitative Analysis, Econometrics & Data Modeling',
-                        'orders' => '1,650+',
-                        'rating' => '4.99',
-                        'badge' => 'Senior Research Fellow'
-                    ],
-                    [
-                        'name' => 'Dr. Katherine Sterling',
-                        'degree' => 'PhD, Clinical Psychology — Stanford University',
-                        'specialty' => 'Qualitative Research, APA 7th Literature Reviews & Medical Papers',
-                        'orders' => '1,410+',
-                        'rating' => '4.97',
-                        'badge' => 'PhD Faculty Specialist'
-                    ],
-                    [
-                        'name' => 'Prof. David Thorne',
-                        'degree' => 'PhD, Computer Science — Columbia University',
-                        'specialty' => 'IEEE Technical Research, AI Model Evaluation & STEM Papers',
-                        'orders' => '1,120+',
-                        'rating' => '4.98',
-                        'badge' => 'STEM Lead Writer'
-                    ]
-                ];
-                @endphp
-
-                @foreach($researchers as $r)
-                <div class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-                    <div>
-                        <div class="flex items-center justify-between mb-5">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">{{ $r['badge'] }}</span>
-                            <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
-                                ★★★★★ <span class="text-slate-800 dark:text-slate-200 ml-1">{{ $r['rating'] }}</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $r['name'] }}</h3>
-                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 mb-4">{{ $r['degree'] }}</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                            <strong>Specialization:</strong> {{ $r['specialty'] }}
-                        </p>
-                    </div>
-
-                    <div class="pt-5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm">
-                        <span class="text-slate-500 dark:text-slate-400 font-medium">{{ $r['orders'] }} papers completed</span>
-                        <a href="{{ route('order') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Hire Researcher →</a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         ACCORDION FAQ SECTION
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="faq">
-        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">Answers & Clarity</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Everything you need to know before hiring our research paper writing team.</p>
-            </div>
-
-            <div class="space-y-4" x-data="{ open: null }">
-                @php
-                $faqs = [
-                    [
-                        'q' => 'Who will write my research paper?',
-                        'a' => 'Your paper is matched to a researcher holding a PhD or Master\'s degree in your specific academic field. We verify academic credentials and writing background before assignment.'
-                    ],
-                    [
-                        'q' => 'Do you handle quantitative data analysis in SPSS, R, or Python?',
-                        'a' => 'Yes. Our quantitative researchers execute advanced statistical tests (ANOVA, Regression, Chi-Square, SEM) in SPSS, R, Python, and STATA, delivering clean data output files alongside full text interpretation.'
-                    ],
-                    [
-                        'q' => 'Will my research paper be 100% original and Turnitin-verified?',
-                        'a' => 'Every research paper is drafted from scratch using peer-reviewed sources from JSTOR, PubMed, and IEEE. We attach a free official Turnitin originality report with your order.'
-                    ],
-                    [
-                        'q' => 'Can you write urgent research papers on short deadlines?',
-                        'a' => 'Yes. We accommodate urgent research paper requests with express turnarounds as short as 6 to 12 hours. Express orders are assigned immediately to available senior PhD researchers.'
-                    ],
-                    [
-                        'q' => 'What if my research paper needs revisions?',
-                        'a' => 'We offer 21 days of unlimited free revisions within your original prompt instructions. Any required tweaks are handled promptly within 24 hours.'
-                    ]
-                ];
-                @endphp
-
-                @foreach($faqs as $i => $faq)
-                <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-colors"
-                     :class="open === {{ $i }} ? 'border-blue-500 dark:border-blue-500 shadow-md' : ''">
-                    <button 
-                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
-                        class="w-full flex items-center justify-between px-7 py-6 text-left font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-base sm:text-lg">
-                        <span>{{ $faq['q'] }}</span>
-                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 transition-transform duration-300"
-                            :class="open === {{ $i }} ? 'rotate-180' : ''"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div x-show="open === {{ $i }}" x-collapse class="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
-                        {{ $faq['a'] }}
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         FINAL CTA SECTION
-    =================================================== --}}
-    <section class="relative py-20 lg:py-24 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white overflow-hidden">
-        <!-- Decorative glowing circles -->
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">Ready to Publish a Top-Tier Research Paper?</h2>
-            <p class="mt-5 text-blue-100 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-                Connect with an expert US PhD researcher today. Get an original, peer-reviewed paper with flawless methodology delivered before your deadline.
+    <div class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 text-sm sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+            <p class="text-slate-600 dark:text-slate-400">
+                <span class="font-bold text-slate-900 dark:text-white">Prepared by the Assignment Help USA Editorial Team</span>
+                <span class="mx-2 text-slate-300 dark:text-slate-700" aria-hidden="true">|</span>
+                Updated <time datetime="2026-08-03">August 3, 2026</time>
             </p>
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 rounded-2xl bg-white px-9 py-4 text-lg font-bold text-blue-700 shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300">
-                    Order Research Paper Now
-                    <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
+            <a href="{{ route('about') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">About our academic support team <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+
+    <nav class="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950" aria-label="On this page">
+        <div class="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-4 sm:px-6 lg:px-8">
+            <span class="shrink-0 px-2 py-2 text-xs font-black uppercase tracking-[.18em] text-slate-500">On this page</span>
+            @foreach ([
+                ['Overview', '#overview'],
+                ['Support', '#support'],
+                ['Paper types', '#paper-types'],
+                ['Research process', '#process'],
+                ['Source check', '#sources'],
+                ['Paper structure', '#structure'],
+                ['FAQs', '#faqs'],
+            ] as [$label, $anchor])
+                <a href="{{ $anchor }}" class="shrink-0 rounded-lg px-3 py-2 text-xs font-bold text-slate-600 transition hover:bg-white hover:text-blue-600 hover:shadow-sm dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-blue-400">{{ $label }}</a>
+            @endforeach
+        </div>
+    </nav>
+
+    <section id="overview" class="relative scroll-mt-24 overflow-hidden bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="research-overview-heading">
+        <div class="absolute -left-28 top-10 h-72 w-72 rounded-full bg-blue-500/5 blur-3xl"></div>
+        <div class="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-orange-500/5 blur-3xl"></div>
+        <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.02fr_.98fr] lg:px-8">
+            <div>
+                <span class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-[11px] font-black uppercase tracking-[.18em] text-orange-700 dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-300">
+                    <span class="h-2 w-2 rounded-full bg-[#f16700]"></span>
+                    Question. Investigate. Explain.
+                </span>
+                <h2 id="research-overview-heading" class="mt-6 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white">
+                    Research paper help built around <span class="text-blue-600 dark:text-blue-400">a defensible inquiry</span>
+                </h2>
+                <p class="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">
+                    A research paper does more than collect facts. It asks a focused question, positions that question within existing scholarship, evaluates evidence, and develops a reasoned answer. The exact structure depends on the discipline and assignment: an empirical psychology paper, historical analysis, engineering report, and literature-based argument do not use the same method.
+                </p>
+                <p class="mt-4 text-base leading-8 text-slate-600 dark:text-slate-300">
+                    Our research paper help can begin with a prompt or an existing draft. We account for the rubric, academic level, required readings, permitted source types, word count, and citation style. Delivered material is intended as a model and learning resource that you should review and use according to your institution's academic-integrity rules.
+                </p>
+
+                <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                    @foreach (['Researchable question and scope', 'Credible, relevant source selection', 'Synthesis instead of source-by-source summary', 'Transparent citations and references'] as $point)
+                        <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-200">
+                            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white">
+                                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </span>
+                            {{ $point }}
+                        </div>
+                    @endforeach
+                </div>
+
+                <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                    <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="group inline-flex items-center justify-center gap-3 rounded-2xl bg-blue-600 px-7 py-4 text-sm font-black text-white shadow-[0_12px_30px_-12px_rgba(37,99,235,.65)] transition hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl">
+                        Get Research Paper Help
+                        <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
+                    <a href="{{ route('how-it-works') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-7 py-4 text-sm font-black text-slate-700 transition hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">How It Works</a>
+                </div>
+            </div>
+
+            <figure class="group relative">
+                <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-blue-600/20 via-transparent to-orange-500/20 blur-xl"></div>
+                <div class="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                    <img src="{{ asset('images/research-paper/research-paper-help-student.jpg') }}"
+                         alt="College student evaluating journal articles, research notes, and data in a university library"
+                         width="1536" height="1024"
+                         class="h-[360px] w-full rounded-[1.55rem] object-cover object-center transition duration-700 group-hover:scale-[1.02] sm:h-[470px]"
+                         loading="lazy" decoding="async">
+                </div>
+                <figcaption class="absolute -bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/95 p-4 shadow-xl backdrop-blur sm:left-8 sm:right-auto dark:border-slate-700 dark:bg-slate-900/95">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white shadow-lg shadow-orange-500/25">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 6h8m-8 4h8m-8 4h5M6 6h.01M6 10h.01M6 14h.01M4 19h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </span>
+                    <span><strong class="block text-sm text-slate-900 dark:text-white">Evidence needs interpretation</strong><span class="text-xs text-slate-500 dark:text-slate-400">Question, source, method, finding, significance</span></span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="support" class="scroll-mt-24 bg-slate-50 py-20 sm:py-24 dark:bg-slate-950" aria-labelledby="research-support-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center">
+                <span class="text-xs font-black uppercase tracking-[.22em] text-blue-600 dark:text-blue-400">Focused academic support</span>
+                <h2 id="research-support-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">What our research paper service can help with</h2>
+                <p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">Request support for the complete project or for the stage currently blocking your progress.</p>
+            </div>
+
+            <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['01', 'Prompt and rubric analysis', 'Clarify the task, intended audience, scope, required sections, source expectations, and assessment criteria.', 'bg-blue-500'],
+                    ['02', 'Research question development', 'Turn a broad topic into a focused, feasible question and a working claim that can evolve with the evidence.', 'bg-emerald-500'],
+                    ['03', 'Search and source strategy', 'Develop keywords, distinguish source types, and select evidence for relevance, authority, method, and currency.', 'bg-violet-500'],
+                    ['04', 'Literature synthesis', 'Group sources by themes, debates, methods, or findings to show relationships rather than writing a list of summaries.', 'bg-orange-500'],
+                    ['05', 'Drafting and revision', 'Connect claims, evidence, analysis, limitations, and transitions while keeping the paper aligned with its central question.', 'bg-cyan-500'],
+                    ['06', 'Citations and formatting', 'Review in-text citations, notes, references, headings, tables, figures, and document format against the required style.', 'bg-rose-500'],
+                ] as [$number, $heading, $copy, $badgeClass])
+                    <article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
+                        <span class="flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-black text-white shadow-lg {{ $badgeClass }}">{{ $number }}</span>
+                        <h3 class="mt-6 text-xl font-black text-slate-900 dark:text-white">{{ $heading }}</h3>
+                        <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ $copy }}</p>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
 
+    <section id="paper-types" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="paper-types-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-black uppercase tracking-[.22em] text-[#f16700]">Research paper types</span>
+                    <h2 id="paper-types-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Different questions require different research designs</h2>
+                    <p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">A useful research plan follows the discipline, available evidence, and assignment—not a universal template.</p>
+                </div>
+                <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="inline-flex items-center gap-2 text-sm font-black text-blue-600 hover:text-blue-700 dark:text-blue-400">Discuss your paper <span aria-hidden="true">&rarr;</span></a>
+            </div>
+
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['Analytical research papers', 'Examine a question, text, theory, event, or body of evidence and develop an interpretation supported by analysis.', null],
+                    ['Argumentative research papers', 'Take a defensible position, compare competing explanations, and respond to credible counterarguments.', route('services.essay-writing.show', 'argumentative')],
+                    ['Empirical research papers', 'Report a transparent quantitative, qualitative, or mixed-method investigation using an appropriate disciplinary structure.', null],
+                    ['Literature-based papers', 'Synthesize and evaluate existing scholarship to identify patterns, disagreements, limitations, or research gaps.', route('services.literature-review.index')],
+                    ['Case-based research', 'Investigate a bounded organization, event, policy, person, community, or problem using relevant evidence and context.', route('services.case-study.index')],
+                    ['Policy and applied research', 'Define a practical problem, assess options against clear criteria, and develop an evidence-based recommendation.', null],
+                ] as [$heading, $copy, $url])
+                    <article class="flex flex-col rounded-3xl border border-slate-200 bg-slate-50 p-6 transition hover:border-blue-200 hover:bg-white hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60 dark:hover:border-blue-500/30 dark:hover:bg-slate-800">
+                        <h3 class="text-lg font-black text-slate-900 dark:text-white">{{ $heading }}</h3>
+                        <p class="mt-3 flex-1 text-sm leading-6 text-slate-600 dark:text-slate-300">{{ $copy }}</p>
+                        @if ($url)
+                            <a href="{{ $url }}" class="mt-5 text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Explore related support <span aria-hidden="true">&rarr;</span></a>
+                        @endif
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="relative scroll-mt-24 overflow-hidden bg-slate-900 py-20 sm:py-24" aria-labelledby="research-process-heading">
+        <div class="absolute inset-0 opacity-[.035] [background-image:radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] [background-size:28px_28px]"></div>
+        <div class="absolute -left-24 top-0 h-80 w-80 rounded-full bg-blue-600/20 blur-[100px]"></div>
+        <div class="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-orange-500/15 blur-[100px]"></div>
+        <div class="absolute left-1/2 top-8 -translate-x-1/2 select-none text-[7rem] font-black tracking-tighter text-white/[.018] sm:text-[11rem]" aria-hidden="true">RESEARCH</div>
+        <div class="relative mx-auto grid max-w-7xl items-start gap-14 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:px-8">
+            <div class="lg:sticky lg:top-28">
+                <span class="inline-flex rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-2 text-[11px] font-black uppercase tracking-[.2em] text-blue-300">Research roadmap</span>
+                <h2 id="research-process-heading" class="mt-6 text-3xl font-black leading-tight tracking-tight text-white sm:text-5xl">From a broad topic to a supported conclusion</h2>
+                <p class="mt-6 text-base leading-8 text-slate-300">Research develops through iteration. Searching can narrow the question, conflicting evidence can reshape the claim, and revision can reveal missing sources or limitations.</p>
+                <div class="mt-6 flex gap-3 rounded-2xl border border-emerald-400/20 bg-emerald-400/[.07] p-4">
+                    <span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300" aria-hidden="true">&#8634;</span>
+                    <div>
+                        <p class="text-sm font-black text-emerald-200">Keep the question, evidence, and claim connected</p>
+                        <p class="mt-1 text-sm leading-6 text-slate-400">When one changes, revisit the others before polishing the final draft.</p>
+                    </div>
+                </div>
+                <div class="mt-8 rounded-2xl border border-white/10 bg-white/[.04] p-5">
+                    <p class="text-sm font-bold text-white">Is the project mainly a synthesis of previous studies?</p>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Our literature review page explains thematic organization, critical comparison, and research-gap development.</p>
+                    <a href="{{ route('services.literature-review.index') }}" class="mt-4 inline-flex items-center gap-2 text-sm font-black text-blue-300 transition hover:text-white">Explore literature review help <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+
+            <div class="relative rounded-[2rem] border border-white/10 bg-slate-950/45 p-4 shadow-2xl shadow-blue-950/30 backdrop-blur-sm sm:p-7">
+                <div class="mb-7 flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+                    <div class="flex items-center gap-2" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span></div>
+                    <p class="font-mono text-[10px] font-bold uppercase tracking-[.16em] text-slate-500">research-roadmap / working file</p>
+                </div>
+                <div class="absolute left-10 top-28 h-[calc(100%-13rem)] w-px bg-gradient-to-b from-blue-500 via-violet-500 to-orange-500 sm:left-1/2" aria-hidden="true"></div>
+                <ol class="space-y-5">
+                    @foreach ([
+                        ['Frame', 'Define the research problem', 'Translate the prompt into a focused, feasible question with clear boundaries and significance.', 'Research question', 'hover:border-blue-400/40', 'bg-blue-500', 'text-blue-300', 'bg-blue-400/10'],
+                        ['Discover', 'Search strategically', 'Develop keywords and use citation trails, subject databases, catalogs, and other appropriate discovery tools.', 'Source set', 'hover:border-emerald-400/40', 'bg-emerald-500', 'text-emerald-300', 'bg-emerald-400/10'],
+                        ['Evaluate', 'Read and synthesize evidence', 'Assess source quality, record usable notes, compare findings, and organize relationships among sources.', 'Evidence map', 'hover:border-violet-400/40', 'bg-violet-500', 'text-violet-300', 'bg-violet-400/10'],
+                        ['Build', 'Develop the paper', 'Refine the claim, choose an appropriate structure, and connect each section to the central inquiry.', 'Working draft', 'hover:border-fuchsia-400/40', 'bg-fuchsia-500', 'text-fuchsia-300', 'bg-fuchsia-400/10'],
+                        ['Verify', 'Revise and document', 'Test the reasoning, acknowledge limits, confirm source attribution, and complete the required format.', 'Final review', 'hover:border-orange-400/40', 'bg-orange-500', 'text-orange-300', 'bg-orange-400/10'],
+                    ] as $index => [$stage, $heading, $copy, $output, $hoverClass, $dotClass, $textClass, $tintClass])
+                        <li class="group relative ml-14 rounded-2xl border border-white/10 bg-white/[.055] p-5 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/[.09] hover:shadow-xl sm:ml-0 sm:w-[calc(50%-1.75rem)] {{ $index % 2 ? 'sm:ml-auto' : 'sm:mr-auto' }} {{ $hoverClass }}">
+                            <span class="absolute -left-[2.65rem] top-5 flex h-8 w-8 items-center justify-center rounded-full border-4 border-slate-950 text-[10px] font-black text-white shadow-lg {{ $dotClass }} {{ $index % 2 ? 'sm:-left-[2.75rem]' : 'sm:-right-[2.75rem] sm:left-auto' }}">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                            <div class="mb-3 flex items-center justify-between gap-3"><span class="text-[9px] font-black uppercase tracking-[.2em] {{ $textClass }}">{{ $stage }}</span><span class="rounded-full px-2.5 py-1 text-[9px] font-bold text-slate-300 {{ $tintClass }}">{{ $output }}</span></div>
+                            <h3 class="font-black text-white">{{ $heading }}</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">{{ $copy }}</p>
+                        </li>
+                    @endforeach
+                </ol>
+                <div class="relative mt-7 overflow-hidden rounded-2xl border border-orange-300/20 bg-gradient-to-r from-orange-400/10 via-white/[.04] to-blue-400/10 p-5">
+                    <div class="absolute -right-5 -top-8 text-7xl font-black text-white/[.035]" aria-hidden="true">?</div>
+                    <p class="text-[10px] font-black uppercase tracking-[.2em] text-orange-300">Final research checkpoint</p>
+                    <p class="mt-2 pr-8 text-sm font-bold leading-6 text-white">Can a reader trace each major conclusion back to relevant evidence and understand the limits of the claim?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sources" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="source-check-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+                <div>
+                    <span class="text-xs font-black uppercase tracking-[.22em] text-emerald-600 dark:text-emerald-400">Source-quality check</span>
+                    <h2 id="source-check-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">A scholarly source is useful only when it fits the question</h2>
+                    <p class="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">Peer review can be valuable, but it is not the only test. Depending on the project, primary documents, datasets, government reports, technical standards, court decisions, interviews, or archival material may also be appropriate. Evaluation should consider how the evidence was produced and how it will be used.</p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    @foreach ([
+                        ['Authority', 'Who created the source, and what relevant expertise, institution, or firsthand position do they have?', 'A'],
+                        ['Relevance', 'Does the source directly help answer the research question at the right depth and scope?', 'R'],
+                        ['Method', 'How were the evidence and conclusions produced, and are the limitations visible?', 'M'],
+                        ['Currency', 'Does the field require recent evidence, or is an older foundational or primary source appropriate?', 'C'],
+                        ['Corroboration', 'How does the source agree, disagree, or connect with other credible evidence?', 'C'],
+                        ['Traceability', 'Can readers locate the original work, data, quotation, or claim through complete citation details?', 'T'],
+                    ] as [$heading, $copy, $letter])
+                        <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/60">
+                            <div class="flex items-center gap-3"><span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500 text-xs font-black text-white">{{ $letter }}</span><h3 class="font-black text-slate-900 dark:text-white">{{ $heading }}</h3></div>
+                            <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{{ $copy }}</p>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="structure" class="scroll-mt-24 border-y border-slate-200 bg-slate-50 py-20 sm:py-24 dark:border-slate-800 dark:bg-slate-950" aria-labelledby="paper-structure-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center">
+                <span class="text-xs font-black uppercase tracking-[.22em] text-violet-600 dark:text-violet-400">Paper architecture</span>
+                <h2 id="paper-structure-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Common research-paper sections and their purpose</h2>
+                <p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">Not every paper uses every section. Follow the assignment, discipline, and required reporting convention.</p>
+            </div>
+            <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['Introduction', 'Establish the problem, context, significance, scope, and central question or claim.'],
+                    ['Literature review', 'Synthesize relevant scholarship and show where the current inquiry sits within the conversation.'],
+                    ['Method or approach', 'Explain how evidence was selected, collected, analyzed, or interpreted so the process is understandable.'],
+                    ['Results or findings', 'Present relevant observations or outcomes clearly without overstating what the evidence establishes.'],
+                    ['Discussion', 'Interpret the findings, connect them to the question and prior research, and consider alternatives and limits.'],
+                    ['Conclusion', 'Answer the central question, explain the contribution, and identify implications or appropriate next steps.'],
+                ] as $index => [$heading, $copy])
+                    <article class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <span class="absolute right-5 top-3 text-5xl font-black text-slate-100 dark:text-slate-800" aria-hidden="true">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <h3 class="relative text-xl font-black text-slate-900 dark:text-white">{{ $heading }}</h3>
+                        <p class="relative mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ $copy }}</p>
+                    </article>
+                @endforeach
+            </div>
+
+            <div class="mt-10 grid gap-5 lg:grid-cols-2">
+                <div class="rounded-3xl border border-blue-200 bg-blue-50 p-6 dark:border-blue-500/20 dark:bg-blue-500/10">
+                    <p class="text-xs font-black uppercase tracking-[.18em] text-blue-700 dark:text-blue-300">Research paper vs. standard essay</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300">Both need a focused argument and clear structure, but research papers usually require a more explicit search process, deeper engagement with scholarship, and—in empirical work—a transparent method. For a shorter thesis-led assignment, <a href="{{ route('services.essay-writing.index') }}" class="font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-300">essay writing help</a> may be the better match.</p>
+                </div>
+                <div class="rounded-3xl border border-orange-200 bg-orange-50 p-6 dark:border-orange-500/20 dark:bg-orange-500/10">
+                    <p class="text-xs font-black uppercase tracking-[.18em] text-orange-700 dark:text-orange-300">Citation styles</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300">APA, MLA, Chicago, IEEE, Harvard, and other styles differ in how they document authors, dates, titles, locators, notes, and references. The assignment or department guide takes priority, and every in-text citation should connect to a complete reference entry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="research-faq-heading">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <span class="text-xs font-black uppercase tracking-[.22em] text-blue-600 dark:text-blue-400">Questions before you begin</span>
+                <h2 id="research-faq-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Research paper help FAQs</h2>
+            </div>
+            <div class="mt-12 space-y-4">
+                @foreach ([
+                    ['What should I provide with my research paper order?', 'Send the complete prompt, rubric, academic level, deadline, word count, citation style, required readings, approved topic or question, and any draft, notes, feedback, data, or source restrictions.'],
+                    ['Can I request help with only one part of the paper?', 'Yes. Support can focus on the research question, search strategy, annotated notes, literature synthesis, outline, a specific section, citations, revision, or final proofreading.'],
+                    ['Do all research papers need primary data or statistical analysis?', 'No. Many assignments are based on published scholarship, textual evidence, cases, archives, policies, or other existing materials. Data collection and statistical testing should be used only when the prompt and research design require them.'],
+                    ['How are sources selected?', 'Sources are considered for relevance, authority, method, currency, corroboration, and traceability. The appropriate mix depends on the discipline and may include peer-reviewed studies as well as suitable primary or institutional sources.'],
+                    ['Can you follow a specific citation style or department template?', 'Yes. Provide the required style edition, department guide, template, or sample. Citations, references, headings, tables, figures, spacing, and front matter can then be checked against those instructions.'],
+                    ['Can an existing draft be revised?', 'Yes. Include the draft, rubric, instructor feedback, and the type of review you need. Substantive revision addresses the question, evidence, organization, and reasoning before sentence-level proofreading and formatting.'],
+                ] as [$question, $answer])
+                    <details class="group rounded-2xl border border-slate-200 bg-slate-50 open:border-blue-200 open:bg-white open:shadow-lg dark:border-slate-700 dark:bg-slate-800/60 dark:open:border-blue-500/30 dark:open:bg-slate-800">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 text-left font-black text-slate-900 marker:content-none dark:text-white">
+                            {{ $question }}
+                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-slate-700 dark:text-blue-400" aria-hidden="true">+</span>
+                        </summary>
+                        <p class="px-6 pb-6 text-sm leading-7 text-slate-600 dark:text-slate-300">{{ $answer }}</p>
+                    </details>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-700 via-indigo-700 to-slate-900 py-20 text-white sm:py-24" aria-labelledby="research-cta-heading">
+        <div class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-orange-400/20 blur-3xl"></div>
+        <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <span class="text-xs font-black uppercase tracking-[.22em] text-blue-200">Start with the brief</span>
+            <h2 id="research-cta-heading" class="mt-4 text-3xl font-black tracking-tight sm:text-5xl">Turn a complex research assignment into a clear plan</h2>
+            <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-blue-100">Share your question, rubric, sources, notes, data, or current draft. We will help identify the appropriate next step for the assignment.</p>
+            <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+                <a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 text-sm font-black text-blue-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-blue-50">Get Research Paper Help</a>
+                <a href="{{ route('services.proofreading-editing.index') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-black text-white transition hover:bg-white/15">I already have a draft</a>
+            </div>
+        </div>
+    </section>
 </div>
 @endsection

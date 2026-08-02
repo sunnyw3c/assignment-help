@@ -2,45 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
-use Illuminate\Http\Request;
-
 class ThesisDissertationController extends Controller
 {
     /**
-     * Display the thesis and dissertation service page.
+     * Display the master's thesis support page.
      */
-    public function index()
+    public function thesis()
     {
-        $service = Service::with('details')
-            ->where('slug', 'thesis-dissertation')
-            ->where('is_active', true)
-            ->firstOrFail();
-
-        $details = $service->details;
-
-        return view('thesis-dissertation.index', compact('service', 'details'));
+        return view('thesis-dissertation.thesis');
     }
 
     /**
-     * Display specific thesis/dissertation sub-service page.
+     * Display the doctoral dissertation support page.
      */
-    public function show($slug)
+    public function dissertation()
     {
-        $service = Service::with('details')
-            ->where('slug', 'thesis-dissertation')
-            ->where('is_active', true)
-            ->firstOrFail();
-
-        $details = $service->details;
-
-        // Check for custom view, otherwise use generic
-        $customViews = [
-            // Add custom views as needed
-        ];
-
-        $view = $customViews[$slug] ?? 'thesis-dissertation.index';
-
-        return view($view, compact('service', 'details'));
+        return view('thesis-dissertation.dissertation');
     }
 }

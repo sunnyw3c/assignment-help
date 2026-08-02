@@ -8,32 +8,13 @@ use Illuminate\Http\Request;
 class AssignmentServiceController extends Controller
 {
     /**
-     * Legacy database-driven URLs that duplicate dedicated SEO landing pages.
-     *
-     * Keeping these URLs as permanent redirects consolidates indexing signals
-     * instead of serving two self-canonical versions of the same service.
-     */
-    private const CANONICAL_ROUTES = [
-        'essay-writing' => 'services.essay-writing.index',
-        'research-paper' => 'services.research-paper.index',
-        'homework-help' => 'services.homework-help.index',
-        'thesis-dissertation' => 'services.thesis-dissertation.index',
-        'lab-report' => 'services.lab-report.index',
-        'case-study' => 'services.case-study.index',
-        'literature-review' => 'services.literature-review.index',
-        'presentation-design' => 'services.presentation-design.index',
-        'proofreading-editing' => 'services.proofreading-editing.index',
-        'math-problem-solving' => 'services.homework-help.math',
-        'law-assignment' => 'services.law-assignment.index',
-    ];
-
-    /**
      * Display a listing of assignment help services.
      */
     public function index()
     {
         $services = Service::with('details')
             ->active()
+            ->whereNotIn('slug', config('service-pages.blocked_slugs', []))
             ->ordered()
             ->get();
 
@@ -45,8 +26,14 @@ class AssignmentServiceController extends Controller
      */
     public function show($slug)
     {
-        if (isset(self::CANONICAL_ROUTES[$slug])) {
-            return redirect()->route(self::CANONICAL_ROUTES[$slug], status: 301);
+        if (in_array($slug, config('service-pages.blocked_slugs', []), true)) {
+            abort(404);
+        }
+
+        $canonicalRoute = config("service-pages.canonical_routes.{$slug}");
+
+        if ($canonicalRoute) {
+            return redirect()->route($canonicalRoute, status: 301);
         }
 
         $service = Service::with('details')

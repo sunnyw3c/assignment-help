@@ -3,6 +3,7 @@
     'title' => null,
     'subtitle' => null,
     'serviceType' => null,
+    'orderServiceType' => null,
     'defaultSubject' => null,
     'stats' => null,
     'features' => null,
@@ -191,7 +192,7 @@
                 <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data" class="flex flex-col gap-[11px] max-sm:gap-[9px]" data-hero-form>
                     @csrf
                     <input type="hidden" name="source" value="creative_hero">
-                    <input type="hidden" name="service_type" value="Writing" data-service-input>
+                    <input type="hidden" name="service_type" value="{{ $orderServiceType ?: 'Writing' }}" data-service-input data-writing-service="{{ $orderServiceType }}">
                     <input type="hidden" name="subject" data-subject-input>
                     <input type="hidden" name="title" data-title-input>
                     <input type="hidden" name="pages" value="1" data-pages-input>
@@ -971,7 +972,9 @@
 
                     const setService = (service, loadSubjects = true) => {
                         activeService = service;
-                        serviceInput.value = service;
+                        serviceInput.value = service === 'Writing' && serviceInput.dataset.writingService
+                            ? serviceInput.dataset.writingService
+                            : service;
                         form.querySelectorAll('[data-service-tab]').forEach(tab => tab.classList.toggle('is-active', tab.dataset.serviceTab === service));
                         form.querySelectorAll('[data-service-panel]').forEach(panel => {
                             const active = panel.dataset.servicePanel === service;

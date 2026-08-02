@@ -19,7 +19,8 @@ $assignmentServices = [
     ['route' => 'services.essay-writing.index', 'label' => 'Essay Writing'],
     ['route' => 'services.research-paper.index', 'label' => 'Research Paper'],
     ['route' => 'services.homework-help.index', 'label' => 'Homework Help'],
-    ['route' => 'services.thesis-dissertation.index', 'label' => 'Thesis & Dissertation'],
+    ['route' => 'services.thesis.index', 'label' => 'Thesis Help'],
+    ['route' => 'services.dissertation.index', 'label' => 'Dissertation Help'],
     ['route' => 'services.assignment.show', 'param' => 'math-problem-solving', 'label' => 'Math Problems'],
     ['route' => 'services.proofreading-editing.index', 'label' => 'Proofreading'],
     ['route' => 'services.lab-report.index', 'label' => 'Lab Report'],
@@ -27,7 +28,7 @@ $assignmentServices = [
     ['route' => 'services.literature-review.index', 'label' => 'Literature Review'],
 ];
 
-describe('Navbar - Desktop (md+)', function () use ($programmingServices, $assignmentServices) {
+describe('Navbar - Desktop (md+)', function () {
 
     it('renders desktop navigation with hidden md:flex on the home page', function () {
         $response = $this->get('/');
@@ -176,7 +177,7 @@ describe('Navbar - Mobile', function () {
 
 });
 
-describe('Mega Menu - Content', function () use ($programmingServices, $assignmentServices) {
+describe('Mega Menu - Content', function () use ($programmingServices) {
 
     it('has programming content section', function () {
         $response = $this->get('/');
@@ -224,7 +225,8 @@ describe('Mega Menu - Content', function () use ($programmingServices, $assignme
         $response->assertSee(route('services.essay-writing.index'), false);
         $response->assertSee(route('services.research-paper.index'), false);
         $response->assertSee(route('services.homework-help.index'), false);
-        $response->assertSee(route('services.thesis-dissertation.index'), false);
+        $response->assertSee(route('services.thesis.index'), false);
+        $response->assertSee(route('services.dissertation.index'), false);
         $response->assertSee(route('services.lab-report.index'), false);
         $response->assertSee(route('services.case-study.index'), false);
     });

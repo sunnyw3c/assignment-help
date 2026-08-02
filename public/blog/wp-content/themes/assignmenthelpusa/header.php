@@ -69,7 +69,8 @@
                     ['label' => 'Literature Review', 'href' => route('services.literature-review.index')],
                 ],
                 'Long Form & Polish' => [
-                    ['label' => 'Thesis & Dissertation', 'href' => route('services.thesis-dissertation.index')],
+                    ['label' => 'Thesis Help', 'href' => route('services.thesis.index')],
+                    ['label' => 'Dissertation Help', 'href' => route('services.dissertation.index')],
                     ['label' => 'Proofreading & Editing', 'href' => route('services.proofreading-editing.index')],
                     ['label' => 'Presentation Design', 'href' => route('services.presentation-design.index')],
                 ],

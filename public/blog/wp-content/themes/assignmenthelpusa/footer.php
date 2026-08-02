@@ -31,7 +31,8 @@
                         <a href="http://assignmenthelpusa.test/services" class="hover:text-indigo-600 dark:hover:text-white transition-colors">All Services</a>
                         <a href="http://assignmenthelpusa.test/programming-help" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Programming Help</a>
                         <a href="http://assignmenthelpusa.test/essay-writing-help" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Essay Writing</a>
-                        <a href="http://assignmenthelpusa.test/thesis-dissertation-help" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Writing</a>
+                        <a href="http://assignmenthelpusa.test/thesis-help" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Thesis Help</a>
+                        <a href="http://assignmenthelpusa.test/dissertation-help" class="hover:text-indigo-600 dark:hover:text-white transition-colors">Dissertation Help</a>
                     </div>
                 </div>
 
@@ -61,8 +62,8 @@
                 &copy; <?php echo date('Y'); ?> AssignmentHelpUSA. All rights reserved.
             </div>
             <div class="flex gap-6">
-                <a href="#" class="hover:text-slate-700 dark:hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-700 dark:hover:text-white transition-colors">Terms of Service</a>
+                <a href="http://assignmenthelpusa.test/privacy-policy" class="hover:text-slate-700 dark:hover:text-white transition-colors">Privacy Policy</a>
+                <a href="http://assignmenthelpusa.test/terms-of-service" class="hover:text-slate-700 dark:hover:text-white transition-colors">Terms of Service</a>
             </div>
         </div>
     </div>

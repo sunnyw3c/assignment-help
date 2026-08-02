@@ -31,7 +31,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-                <span class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Internal Directory</span>
                 <h2 class="text-2xl font-black text-slate-900 dark:text-white mt-1">{!! $title !!}</h2>
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">{!! $subtitle !!}</p>
             </div>

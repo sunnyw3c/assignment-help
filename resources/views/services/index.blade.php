@@ -177,7 +177,8 @@
                         </div>
 
                         <div class="mt-auto flex gap-3">
-                            <a href="{{ route('services.assignment.show', $service->slug) }}"
+                            @php($canonicalRoute = config("service-pages.canonical_routes.{$service->slug}"))
+                            <a href="{{ $canonicalRoute ? route($canonicalRoute) : route('services.assignment.show', $service->slug) }}"
                                 class="flex-1 rounded-xl border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition-colors hover:border-indigo-600 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-indigo-400 dark:hover:text-indigo-400">
                                 Learn More
                             </a>

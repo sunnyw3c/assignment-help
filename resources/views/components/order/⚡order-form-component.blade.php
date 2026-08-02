@@ -9,6 +9,7 @@ new class extends Component {
 
     // Form fields
     public $assignmentType = 'writing'; // writing, technical, online_class
+    public $requestedService = '';
     public $serviceId = '';
     public $academicLevel = 'undergraduate';
     public $subject = 'general';
@@ -38,6 +39,13 @@ new class extends Component {
 
     public function mount()
     {
+        $requestedService = request()->query('service_type');
+
+        if (in_array($requestedService, ['thesis', 'dissertation'], true)) {
+            $this->requestedService = $requestedService;
+            $this->assignmentType = 'writing';
+        }
+
         if (auth()->check()) {
             $this->email = auth()->user()->email;
         }
@@ -154,6 +162,7 @@ new class extends Component {
     {
         $rules = [
             'assignmentType' => 'required|in:writing,technical,online_class',
+            'requestedService' => 'nullable|in:thesis,dissertation',
             'email' => 'required|email',
             'deadline' => 'required_unless:assignmentType,online_class',
             'description' => 'nullable|string',
@@ -225,7 +234,7 @@ new class extends Component {
         $assignment = \App\Models\Assignment::create([
             'user_id' => $user->id,
             'order_number' => $orderNumber,
-            'service_type' => $this->assignmentType,
+            'service_type' => $this->requestedService ?: $this->assignmentType,
             'service_id' => $this->serviceId ?: null,
             'subject' => $this->assignmentType === 'online_class' ? $this->courseCode : $this->subject,
             'title' => $this->assignmentType === 'online_class' ? $this->onlineServiceType : $this->title,
@@ -249,6 +258,7 @@ new class extends Component {
                 'duration_unit' => $this->durationUnit,
                 'login_required' => $this->loginRequired,
                 'online_service_type' => $this->onlineServiceType,
+                'requested_service' => $this->requestedService ?: null,
             ]),
         ]);
 

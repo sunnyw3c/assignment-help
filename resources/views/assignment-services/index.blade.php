@@ -148,7 +148,8 @@
                         @endif
 
                         <div class="mt-auto flex gap-3">
-                            <a href="{{ route('services.assignment.show', $service->slug) }}" class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400">
+                            @php($canonicalRoute = config("service-pages.canonical_routes.{$service->slug}"))
+                            <a href="{{ $canonicalRoute ? route($canonicalRoute) : route('services.assignment.show', $service->slug) }}" class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400">
                                 Learn More
                                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

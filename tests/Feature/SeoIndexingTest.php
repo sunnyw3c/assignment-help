@@ -15,7 +15,6 @@ it('permanently redirects duplicate assignment service URLs to canonical landing
     ['/assignment-help/essay-writing', 'services.essay-writing.index'],
     ['/assignment-help/research-paper', 'services.research-paper.index'],
     ['/assignment-help/homework-help', 'services.homework-help.index'],
-    ['/assignment-help/thesis-dissertation', 'services.thesis-dissertation.index'],
     ['/assignment-help/lab-report', 'services.lab-report.index'],
     ['/assignment-help/case-study', 'services.case-study.index'],
     ['/assignment-help/literature-review', 'services.literature-review.index'],
@@ -27,6 +26,23 @@ it('permanently redirects duplicate assignment service URLs to canonical landing
 
 it('returns a real 404 for unsupported essay subpages', function () {
     $this->get('/essay-writing-help/not-a-real-service')->assertNotFound();
+});
+
+it('does not expose the obsolete combined thesis dissertation assignment URL', function () {
+    $this->seed(AssignmentServicesSeeder::class);
+
+    $this->assertDatabaseMissing('services', ['slug' => 'thesis-dissertation']);
+    $this->get('/assignment-help/thesis-dissertation')->assertNotFound();
+
+    $servicesPage = $this->withoutVite()->get('/services');
+
+    $servicesPage
+        ->assertOk()
+        ->assertDontSee('/assignment-help/thesis-dissertation', false)
+        ->assertDontSee('Thesis & Dissertation Help');
+
+    view()->flushState();
+    app('livewire')->flushState();
 });
 
 it('publishes a single self-referencing canonical on the reviews page', function () {

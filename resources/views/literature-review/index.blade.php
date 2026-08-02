@@ -1,717 +1,238 @@
 @extends('layouts.app')
 
-@section('title', 'Literature Review Help USA | PhD Literature Review Writers')
-@section('description', 'Get expert literature review help in USA. Comprehensive synthesis, PRISMA systematic methodology & research gap identification by PhD writers with 24/7 support.')
-@section('keywords', 'literature review help, literature review help USA, literature review writing service, write my literature review, PRISMA systematic literature review, thesis literature review, dissertation literature review help, literature synthesis')
+@section('title', 'Literature Review Help for College Students | Assignment Help USA')
+@section('description', 'Get literature review help with research questions, source searches, synthesis matrices, thematic organization, critical analysis, gaps, and citations.')
+@section('canonical', url('/literature-review-help'))
+@section('og_image', asset('images/literature-review/literature-review-help-og.jpg'))
+@section('twitter_image', asset('images/literature-review/literature-review-help-og.jpg'))
+@section('primary_image', asset('images/literature-review/literature-review-synthesis-board.jpg'))
+@section('date_modified', '2026-08-03')
+@section('schema_main_entity', url('/literature-review-help') . '#service')
 
-@push('head')
-    <!-- Open Graph / Facebook Meta -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Literature Review Help USA | PhD Literature Review Writers">
-    <meta property="og:description" content="Get expert literature review help in USA. Comprehensive synthesis, PRISMA systematic methodology & research gap identification by PhD writers with 24/7 support.">
-    <meta property="og:image" content="{{ asset('images/books-stack.png') }}">
-
-    <!-- Twitter Meta -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="Literature Review Help USA | PhD Literature Review Writers">
-    <meta property="twitter:description" content="Get expert literature review help in USA. Comprehensive synthesis, PRISMA systematic methodology & research gap identification by PhD writers with 24/7 support.">
-    <meta property="twitter:image" content="{{ asset('images/books-stack.png') }}">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ url()->current() }}">
-
-    <!-- Structured Data (JSON-LD) for Google SEO -->
+@push('structured-data')
     <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@graph": [
-            {
-                "@@type": "EducationalOrganization",
-                "@@id": "{{ url('/') }}#organization",
-                "name": "Assignment Help USA",
-                "url": "{{ url('/') }}",
-                "logo": "{{ asset('images/logo.png') }}",
-                "sameAs": []
-            },
-            {
-                "@@type": "Service",
-                "@@id": "{{ url()->current() }}#service",
-                "name": "Professional Literature Review Help USA",
-                "provider": { "@@id": "{{ url('/') }}#organization" },
-                "serviceType": "Academic Literature Review Writing Assistance",
-                "areaServed": {
-                    "@@type": "Country",
-                    "name": "United States"
-                },
-                "description": "Custom academic literature review writing assistance for US university students. Systematic PRISMA reviews, thematic synthesis, and research gap identification by native PhD writers.",
-                "offers": {
-                    "@@type": "Offer",
-                    "priceCurrency": "USD",
-                    "price": "15.00",
-                    "priceValidUntil": "2027-12-31",
-                    "availability": "https://schema.org/InStock"
-                },
-                "aggregateRating": {
-                    "@@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "2850",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                }
-            },
-            {
-                "@@type": "BreadcrumbList",
-                "@@id": "{{ url()->current() }}#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "{{ url('/') }}"
-                    },
-                    {
-                        "@@type": "ListItem",
-                        "position": 2,
-                        "name": "Services",
-                        "item": "{{ url('/services') }}"
-                    },
-                    {
-                        "@@type": "ListItem",
-                        "position": 3,
-                        "name": "Literature Review Help",
-                        "item": "{{ url()->current() }}"
-                    }
-                ]
-            },
-            {
-                "@@type": "FAQPage",
-                "@@id": "{{ url()->current() }}#faq",
-                "mainEntity": [
-                    {
-                        "@@type": "Question",
-                        "name": "What is the difference between an annotated bibliography and a literature review?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "An annotated bibliography lists sources with individual summaries. A literature review synthesizes sources thematically, analyzing connections, theoretical frameworks, and research gaps."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "Do you write PRISMA systematic literature reviews?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Yes. Our PhD researchers execute systematic reviews following PRISMA guidelines, including search strategy matrices, inclusion/exclusion criteria, and flowcharts."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "How many peer-reviewed sources do you include in a literature review?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "We tailor source counts to your rubric requirements, typically incorporating 20 to 100+ recent peer-reviewed journal articles from JSTOR, PubMed, Web of Science, and IEEE."
-                        }
-                    },
-                    {
-                        "@@type": "Question",
-                        "name": "Are your literature reviews 100% original and Turnitin-verified?",
-                        "acceptedAnswer": {
-                            "@@type": "Answer",
-                            "text": "Every literature review is written completely from scratch. We run every document through Turnitin and AI detection tools, attaching a free similarity report upon request."
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        '@id' => url('/literature-review-help') . '#service',
+        'name' => 'Literature Review Help',
+        'serviceType' => 'Academic literature search, synthesis, organization, citation, and editing support',
+        'url' => url('/literature-review-help'),
+        'description' => 'Literature review help for US college students, including question development, search planning, source evaluation, synthesis matrices, thematic organization, critical comparison, research gaps, citations, and revision.',
+        'image' => asset('images/literature-review/literature-review-synthesis-board.jpg'),
+        'provider' => [
+            '@type' => 'Organization',
+            '@id' => rtrim(config('app.url') ?: url('/'), '/') . '#organization',
+            'name' => 'Assignment Help USA',
+        ],
+        'areaServed' => ['@type' => 'Country', 'name' => 'United States'],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 @endpush
 
 @section('content')
-<div class="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
-
-    {{-- ===================================================
-         HERO SECTION
-    =================================================== --}}
-    <x-creative-hero 
-        :service="$service" 
-        title="Professional Literature Review Help USA"
-        subtitle="Struggling to synthesize complex academic studies or identify research gaps? Get expert, 100% original literature review writing help from US PhD researchers. PRISMA systematic reviews, theoretical framework mapping, and APA/IEEE citations delivered on time." 
+<div class="min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+    <x-creative-hero
+        :service="$service"
+        title="Literature Review Help for <span class='text-[#f16700]'>Critical Source Synthesis</span>"
+        subtitle="Build a literature review around a focused question, transparent search plan, relevant scholarship, meaningful themes, critical comparison, and accurate citations. Support is matched to your discipline, review type, and assignment requirements."
+        :stats="[
+            ['Question-led', 'Review scope'],
+            ['Source-aware', 'Critical reading'],
+            ['Theme-driven', 'Synthesis'],
+        ]"
+        :features="[
+            'Review type matched to the assignment',
+            'Source-search and selection guidance',
+            'Thematic synthesis instead of summary lists',
+            'Citation, revision, and formatting support',
+        ]"
+        :breadcrumbs="[
+            ['label' => 'Home', 'url' => route('home')],
+            ['label' => 'Literature Review Help', 'url' => ''],
+        ]"
     />
 
-    {{-- ===================================================
-         TRUST BAR / SOCIAL PROOF (E-E-A-T)
-    =================================================== --}}
-    <section class="relative z-10 border-y border-slate-200/80 bg-white/90 py-5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/90" aria-label="Trust Signals">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
-                <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20">
-                    <div class="flex text-amber-400 text-sm">★★★★★</div>
-                    <span class="font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
-                    <span class="text-xs text-slate-500 dark:text-slate-400">(2,850+ Literature Reviews)</span>
-                </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                    </span>
-                    <span class="font-semibold text-slate-700 dark:text-slate-300"><strong class="text-slate-900 dark:text-white">34</strong> PhD Researchers Online</span>
-                </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 9 0 0118 0z"/></svg>
-                    <span>PRISMA & Systematic Review Compliant</span>
-                </div>
-                <div class="hidden h-5 w-px bg-slate-300 md:block dark:bg-slate-700"></div>
-                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                    <span>0% AI & Turnitin Passed</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         VISUAL FEATURE 1: LITERATURE SYNTHESIS BLUEPRINT
-    =================================================== --}}
-    <section class="relative py-20 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-white overflow-hidden" id="literature-synthesis">
-        <!-- Background Ambient Glow -->
-        <div class="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/15 rounded-full filter blur-3xl pointer-events-none"></div>
-
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                        Rigorous Synthesis Methodology
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-                        Critical Literature Synthesis <br class="hidden sm:inline">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">That Establishes Research Gaps</span>
-                    </h2>
-                    <p class="mt-5 text-slate-300 leading-relaxed text-base sm:text-lg">
-                        A top-scoring literature review goes far beyond summarizing sources individually. It synthesizes scholarly perspectives, maps theoretical frameworks, and justifies your research questions.
-                    </p>
-
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-lg shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">1</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Systematic Source Identification</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Searching JSTOR, PubMed, Web of Science, and IEEE for seminal works, current studies (last 5 years), and peer-reviewed articles.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">2</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Thematic & Conceptual Synthesis</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Grouping sources into logical thematic matrices, comparing contrasting arguments, and highlighting methodological patterns.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300 group">
-                            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white font-black text-lg shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">3</div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">Unanswered Research Gap Formulation</h3>
-                                <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">Identifying clear theoretical, empirical, or methodological gaps that justify your specific research project or thesis statement.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-80 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-700/80 bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/books-stack.png') }}" 
-                             alt="Academic Literature Review Library Books and Source Synthesis Preview" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         VISUAL FEATURE 2: THEORETICAL FRAMEWORK MAPPING
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div class="order-2 lg:order-1 relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/case-study-frameworks.png') }}" 
-                             alt="Theoretical and Conceptual Framework Mapping Diagram" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-
-                <div class="order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/60 border border-indigo-300 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
-                        Conceptual Framework Mastery
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                        Theoretical Framework & Variable Mapping
-                    </h2>
-                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-                        A strong literature review anchors your paper to established academic theories. We construct clear theoretical and conceptual framework sections that connect variables, theories, and empirical research.
-                    </p>
-
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Integration of foundational seminal theories and modern adaptations</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Conceptual model diagrams illustrating independent & dependent variables</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 transition-colors">
-                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white font-black text-sm shadow-md shadow-indigo-500/30">✓</span>
-                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">PRISMA flowcharts for systematic reviews upon request</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         VISUAL FEATURE 3: 0% AI & TURNITIN SHOWCASE
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                        100% Originality Guarantee
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                        Zero Plagiarism & 0% AI Content Verified
-                    </h2>
-                    <p class="mt-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-                        Literature reviews must reflect genuine scholarly engagement, not generic AI summaries. Our PhD researchers write every sentence from scratch, providing verified Turnitin reports with every order.
-                    </p>
-
-                    <div class="mt-8 grid sm:grid-cols-2 gap-4">
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-emerald-600 dark:text-emerald-400 font-bold text-lg mb-1">Turnitin Passed</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Official similarity report demonstrating 0% unquoted text matching.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-blue-600 dark:text-blue-400 font-bold text-lg mb-1">0% AI Score</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Scanned on CopyLeaks, GPTZero, and Turnitin AI detection tools.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-indigo-600 dark:text-indigo-400 font-bold text-lg mb-1">Seminal & Recent Sources</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Balancing historical foundational works with 2021-2026 peer-reviewed studies.</p>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="text-purple-600 dark:text-purple-400 font-bold text-lg mb-1">Full Citation Accuracy</div>
-                            <p class="text-xs text-slate-600 dark:text-slate-400">Every in-text citation matches the bibliography with DOI links.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-70 transition duration-700"></div>
-                    <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 shadow-2xl">
-                        <img src="{{ asset('images/science_tutors_lab.png') }}" 
-                             alt="Peer-Reviewed Literature Database Searching and Originality Verification" 
-                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                             loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         TYPES OF LITERATURE REVIEWS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="review-types">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Comprehensive Types</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Types of Literature Reviews We Write</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our PhD researchers handle all literature review methodologies across all academic disciplines.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {{-- Type 1 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-2xl group-hover:scale-110 transition-transform">📋</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Systematic Reviews (PRISMA)</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Following PRISMA guidelines with search strategies, eligibility criteria, study quality appraisal, and flowcharts.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Systematic Review <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Type 2 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-2xl group-hover:scale-110 transition-transform">📖</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Narrative & Critical Reviews</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Synthesizing research themes, critical evaluation of methodology, and comprehensive overview of academic fields.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Narrative Review <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Type 3 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-500 to-pink-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-950/60 text-2xl group-hover:scale-110 transition-transform">🔍</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Scoping Reviews & Mapping</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Mapping available evidence, clarifying key concepts, and identifying nature/extent of research in emerging topics.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-purple-600 hover:text-purple-700 dark:text-purple-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Scoping Review <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Type 4 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-2xl group-hover:scale-110 transition-transform">📊</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Meta-Analyses</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Statistical pooling of quantitative effect sizes across multiple empirical studies for conclusive evidence synthesis.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('services.research-paper.index') }}" class="text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Research Paper Services <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Type 5 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-2xl group-hover:scale-110 transition-transform">💡</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Integrative Reviews</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Combining experimental and non-experimental research to provide a comprehensive understanding of healthcare and social phenomena.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Integrative Review <span>→</span>
-                        </a>
-                    </div>
-                </div>
-
-                {{-- Type 6 --}}
-                <div class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rose-500 to-red-600"></div>
-                    <div>
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-2xl group-hover:scale-110 transition-transform">📜</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Thesis & Dissertation Chapters</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Drafting Chapter 2 of Master's theses and PhD dissertations with extensive theoretical and empirical literature coverage.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                        <a href="{{ route('order') }}" class="text-sm font-bold text-rose-600 hover:text-rose-700 dark:text-rose-400 inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-                            Order Thesis Literature Chapter <span>→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         ACADEMIC DATABASES MATRIX
-    =================================================== --}}
-    <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="inline-block bg-emerald-100 text-emerald-700 dark:bg-emerald-950/80 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-emerald-200 dark:border-emerald-800">Scholarly Repositories</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Access to Premier Academic Databases</h2>
-                <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">We systematically index sources across all major global repositories.</p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 text-center">
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">JSTOR</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">PubMed</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">Web of Science</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">Scopus</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">IEEE Xplore</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">ProQuest</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">PsycINFO</div>
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200 text-xs">ScienceDirect</div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         CITATIONS & FORMATTING STANDARDS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-950/80 dark:text-purple-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-purple-200 dark:border-purple-800">Citation Compliance</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mastery of All Citation Formats</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">In-text citations, DOI links, footnotes, and bibliographies formatted strictly to your department's manual.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-blue-400/50 transition-colors shadow-sm">
-                    <div class="text-blue-600 dark:text-blue-400 font-black text-xl mb-2">APA 7th Edition</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for Psychology, Nursing, Social Sciences, and Business literature reviews with DOI reference formatting.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400/50 transition-colors shadow-sm">
-                    <div class="text-indigo-600 dark:text-indigo-400 font-black text-xl mb-2">MLA 9th Edition</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for English Literature, Media, and Cultural Studies with container-based Works Cited formatting.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-purple-400/50 transition-colors shadow-sm">
-                    <div class="text-purple-600 dark:text-purple-400 font-black text-xl mb-2">Chicago / Turabian 17th</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Standard for History, Art, and Political Science with Footnotes/Endnotes or Author-Date citations.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400/50 transition-colors shadow-sm">
-                    <div class="text-emerald-600 dark:text-emerald-400 font-black text-xl mb-2">Harvard Style</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Widely used across US economics and management departments for parenthetical referencing.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-rose-400/50 transition-colors shadow-sm">
-                    <div class="text-rose-600 dark:text-rose-400 font-black text-xl mb-2">IEEE Style</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Numbered bracket citation standard for Engineering, Computer Science, and Technical reviews.</p>
-                </div>
-                <div class="rounded-3xl bg-white dark:bg-slate-900 p-6 border border-slate-200/80 dark:border-slate-800 hover:border-amber-400/50 transition-colors shadow-sm">
-                    <div class="text-amber-600 dark:text-amber-400 font-black text-xl mb-2">OSCOLA & Legal</div>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Specialized legal citation style for Law literature reviews, case law commentary, and statutory analysis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ===================================================
-         7 LITERATURE REVIEW PITFALLS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-white dark:bg-slate-900">
-        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-rose-100 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-rose-200 dark:border-rose-800">Grade Protection</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">7 Literature Review Errors Fixed</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Our PhD writers systematically fix errors that cause literature reviews to lose marks.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
+    <section class="relative z-10 border-y border-slate-200/80 bg-white/95 py-5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95" aria-label="Literature review service features">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-4 px-4 sm:px-6 lg:px-8">
+            @foreach ([
+                ['Focused scope and question', 'blue'],
+                ['Search and source strategy', 'emerald'],
+                ['Synthesis matrix and themes', 'violet'],
+                ['Critical analysis and citations', 'orange'],
+            ] as [$label, $color])
                 @php
-                $pitfalls = [
-                    ['title' => 'Summary Listing Instead of Synthesis', 'desc' => 'Listing studies one by one without connecting themes, patterns, or contrasting perspectives.'],
-                    ['title' => 'Missing Seminal & Foundational Works', 'desc' => 'Focusing only on recent articles while ignoring core historical theories that define the discipline.'],
-                    ['title' => 'Weak or Missing Research Gap Definition', 'desc' => 'Failing to highlight unanswered questions or empirical gaps that justify the study.'],
-                    ['title' => 'Over-reliance on Low-Quality Sources', 'desc' => 'Citing non-peer-reviewed websites instead of high-impact journal articles.'],
-                    ['title' => 'Lack of Conceptual Framework', 'desc' => 'Failing to present a coherent theoretical framework that guides literature categorization.'],
-                    ['title' => 'Inconsistent Citation Formatting', 'desc' => 'Mixing APA and MLA styles or missing DOI links in the bibliography.'],
-                    ['title' => 'Passive Tone & Uncritical Acceptance', 'desc' => 'Accepting published findings without evaluating study limitations and sample biases.'],
-                ];
+                    $iconClass = match ($color) {
+                        'blue' => 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400',
+                        'emerald' => 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400',
+                        'violet' => 'bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400',
+                        default => 'bg-orange-50 text-orange-600 dark:bg-orange-500/10 dark:text-orange-400',
+                    };
                 @endphp
-                @foreach($pitfalls as $index => $p)
-                <div class="flex gap-5 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 hover:border-rose-300 dark:hover:border-rose-800 transition-colors shadow-sm">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-500 text-white font-black text-base shadow-md shadow-rose-500/20">
-                        {{ $index + 1 }}
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1">{{ $p['title'] }}</h3>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ $p['desc'] }}</p>
-                    </div>
+                <div class="flex items-center gap-2.5 text-sm font-bold text-slate-700 dark:text-slate-200"><span class="flex h-8 w-8 items-center justify-center rounded-lg {{ $iconClass }}"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></span>{{ $label }}</div>
+            @endforeach
+        </div>
+    </section>
+
+    <div class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 text-sm sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+            <p class="text-slate-600 dark:text-slate-400"><span class="font-bold text-slate-900 dark:text-white">Prepared by the Assignment Help USA Editorial Team</span><span class="mx-2 text-slate-300 dark:text-slate-700" aria-hidden="true">|</span>Updated <time datetime="2026-08-03">August 3, 2026</time></p>
+            <a href="{{ route('about') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">About our academic support team <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+
+    <nav class="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950" aria-label="On this page">
+        <div class="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-4 sm:px-6 lg:px-8">
+            <span class="shrink-0 px-2 py-2 text-xs font-black uppercase tracking-[.18em] text-slate-500">On this page</span>
+            @foreach ([['Overview', '#overview'], ['Support', '#support'], ['Review types', '#review-types'], ['Synthesis process', '#process'], ['Summary vs synthesis', '#synthesis'], ['Organization', '#organization'], ['PRISMA', '#systematic'], ['FAQs', '#faqs']] as [$label, $anchor])
+                <a href="{{ $anchor }}" class="shrink-0 rounded-lg px-3 py-2 text-xs font-bold text-slate-600 transition hover:bg-white hover:text-blue-600 hover:shadow-sm dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-blue-400">{{ $label }}</a>
+            @endforeach
+        </div>
+    </nav>
+
+    <section id="overview" class="relative scroll-mt-24 overflow-hidden bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="review-overview-heading">
+        <div class="absolute -left-28 top-10 h-72 w-72 rounded-full bg-blue-500/5 blur-3xl"></div><div class="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-orange-500/5 blur-3xl"></div>
+        <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.02fr_.98fr] lg:px-8">
+            <div>
+                <span class="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-[11px] font-black uppercase tracking-[.18em] text-orange-700 dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-300"><span class="h-2 w-2 rounded-full bg-[#f16700]"></span>Search. Compare. Synthesize.</span>
+                <h2 id="review-overview-heading" class="mt-6 text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white">Literature review help that maps <span class="text-blue-600 dark:text-blue-400">the scholarly conversation</span></h2>
+                <p class="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">A literature review explains how relevant scholarship relates to a focused topic, problem, or question. It compares findings, concepts, methods, and interpretations; evaluates strengths and limitations; and shows what is established, contested, developing, or still uncertain.</p>
+                <p class="mt-4 text-base leading-8 text-slate-600 dark:text-slate-300">It is not a sequence of article summaries. Sources should interact within an organizing idea such as a theme, debate, method, theory, or historical development. The appropriate search depth and reporting method depend on whether the assignment calls for a course review, dissertation chapter, scoping review, systematic review, or another form of evidence synthesis.</p>
+                <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                    @foreach (['A question that defines the scope', 'Transparent inclusion decisions', 'Source-to-source comparison', 'A gap supported by the reviewed evidence'] as $point)
+                        <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-200"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>{{ $point }}</div>
+                    @endforeach
                 </div>
+                <div class="mt-9 flex flex-col gap-3 sm:flex-row"><a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="group inline-flex items-center justify-center gap-3 rounded-2xl bg-blue-600 px-7 py-4 text-sm font-black text-white shadow-[0_12px_30px_-12px_rgba(37,99,235,.65)] transition hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl">Get Literature Review Help <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></a><a href="{{ route('how-it-works') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-7 py-4 text-sm font-black text-slate-700 transition hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">How It Works</a></div>
+            </div>
+
+            <figure class="group relative">
+                <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-blue-600/20 via-transparent to-orange-500/20 blur-xl"></div>
+                <div class="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                    <img src="{{ asset('images/literature-review/literature-review-synthesis-board.jpg') }}" srcset="{{ asset('images/literature-review/literature-review-synthesis-board-768.jpg') }} 768w, {{ asset('images/literature-review/literature-review-synthesis-board-1200.jpg') }} 1200w, {{ asset('images/literature-review/literature-review-synthesis-board.jpg') }} 1536w" sizes="(max-width: 1023px) calc(100vw - 2rem), 48vw" alt="Evidence synthesis board connecting academic studies across themes, debates, methods, and research gaps" width="1536" height="1024" class="h-[360px] w-full rounded-[1.55rem] object-cover object-center transition duration-700 group-hover:scale-[1.02] sm:h-[470px]" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="absolute -bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/95 p-4 shadow-xl backdrop-blur sm:left-8 sm:right-auto dark:border-slate-700 dark:bg-slate-900/95"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white shadow-lg shadow-orange-500/25"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span><span><strong class="block text-sm text-slate-900 dark:text-white">Sources become a pattern</strong><span class="text-xs text-slate-500 dark:text-slate-400">Themes, debates, methods, limitations, gaps</span></span></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="support" class="scroll-mt-24 bg-slate-50 py-20 sm:py-24 dark:bg-slate-950" aria-labelledby="review-support-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center"><span class="text-xs font-black uppercase tracking-[.22em] text-blue-600 dark:text-blue-400">Focused academic support</span><h2 id="review-support-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">What our literature review service can help with</h2><p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">Start with a broad topic, a research question, a source folder, a synthesis matrix, or an existing draft.</p></div>
+            <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['01', 'Scope and review question', 'Define the topic boundaries, purpose, audience, timeframe, concepts, populations, contexts, and appropriate review type.', 'bg-blue-500'],
+                    ['02', 'Search strategy', 'Develop concepts, synonyms, subject terms, Boolean combinations, discovery routes, date limits, and source-selection criteria.', 'bg-emerald-500'],
+                    ['03', 'Critical source reading', 'Record each source’s question, theory, method, sample or evidence, findings, limitations, relevance, and citation details.', 'bg-violet-500'],
+                    ['04', 'Synthesis matrix', 'Compare sources across shared dimensions so agreements, contradictions, methods, trends, and missing evidence become visible.', 'bg-orange-500'],
+                    ['05', 'Organization and drafting', 'Build sections around ideas and relationships, using multiple sources within paragraphs rather than one source at a time.', 'bg-cyan-500'],
+                    ['06', 'Revision and citations', 'Review balance, claim strength, transitions, gap logic, source attribution, references, and alignment with the assignment.', 'bg-rose-500'],
+                ] as [$number, $heading, $copy, $badgeClass])
+                    <article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"><span class="flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-black text-white shadow-lg {{ $badgeClass }}">{{ $number }}</span><h3 class="mt-6 text-xl font-black text-slate-900 dark:text-white">{{ $heading }}</h3><p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ $copy }}</p></article>
                 @endforeach
             </div>
         </div>
     </section>
 
-    {{-- ===================================================
-         EXPERT PHD LITERATURE SPECIALISTS
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <section id="review-types" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="review-types-heading">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-blue-100 text-blue-700 dark:bg-blue-950/80 dark:text-blue-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3 border border-blue-200 dark:border-blue-800">Vetted PhD Faculty</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Top Literature Review Writers</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Every writer holds a PhD or Master's degree with extensive publishing credentials.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                @php
-                $specialists = [
-                    [
-                        'name' => 'Dr. Eleanor Vance',
-                        'degree' => 'PhD, English & Comparative Literature — Columbia University',
-                        'specialty' => 'Thematic Literature Synthesis & MLA 9th Citation Standards',
-                        'orders' => '1,520+',
-                        'rating' => '4.99',
-                        'badge' => 'Top 1% Literature Specialist'
-                    ],
-                    [
-                        'name' => 'Dr. Aris Thorne',
-                        'degree' => 'PhD, Public Health & Medicine — Oxford University',
-                        'specialty' => 'PRISMA Systematic Reviews, Meta-Analyses & PubMed Searching',
-                        'orders' => '1,340+',
-                        'rating' => '4.98',
-                        'badge' => 'Systematic Review Fellow'
-                    ],
-                    [
-                        'name' => 'Prof. Julian Mercer',
-                        'degree' => 'PhD, Sociology & Behavioral Science — Harvard University',
-                        'specialty' => 'Theoretical Framework Mapping & Qualitative Literature Reviews',
-                        'orders' => '1,190+',
-                        'rating' => '4.97',
-                        'badge' => 'Senior Academic Editor'
-                    ]
-                ];
-                @endphp
-
-                @foreach($specialists as $s)
-                <div class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-                    <div>
-                        <div class="flex items-center justify-between mb-5">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">{{ $s['badge'] }}</span>
-                            <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
-                                ★★★★★ <span class="text-slate-800 dark:text-slate-200 ml-1">{{ $s['rating'] }}</span>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $s['name'] }}</h3>
-                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 mb-4">{{ $s['degree'] }}</p>
-                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                            <strong>Specialization:</strong> {{ $s['specialty'] }}
-                        </p>
-                    </div>
-
-                    <div class="pt-5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm">
-                        <span class="text-slate-500 dark:text-slate-400 font-medium">{{ $s['orders'] }} reviews completed</span>
-                        <a href="{{ route('order') }}" class="font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400">Hire Specialist →</a>
-                    </div>
-                </div>
+            <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end"><div class="max-w-3xl"><span class="text-xs font-black uppercase tracking-[.22em] text-[#f16700]">Choose by purpose</span><h2 id="review-types-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Common literature review types are not interchangeable</h2><p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">Use the terminology in your assignment or discipline. If the review type is not specified, clarify the expected purpose and method before searching.</p></div><a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="inline-flex items-center gap-2 text-sm font-black text-blue-600 hover:text-blue-700 dark:text-blue-400">Discuss your review <span aria-hidden="true">&rarr;</span></a></div>
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                @foreach ([
+                    ['Narrative or traditional review', 'Provides a critical overview of a topic or debate using a reasoned, discipline-appropriate selection and synthesis of scholarship.'],
+                    ['Dissertation or thesis chapter', 'Situates a research project, establishes conceptual and methodological context, and shows how the study relates to prior work.'],
+                    ['Scoping review', 'Maps the extent, characteristics, concepts, or gaps in a broad body of evidence using a transparent review method.'],
+                    ['Systematic review', 'Uses a pre-specified question, eligibility criteria, reproducible search, screening, appraisal, extraction, and synthesis process.'],
+                    ['Theoretical or conceptual review', 'Compares theories, models, definitions, or conceptual relationships and develops a framework for understanding the topic.'],
+                    ['Integrative review', 'Combines and critically examines diverse forms of research to generate a broader understanding or new conceptual perspective.'],
+                ] as [$heading, $copy])
+                    <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition hover:border-blue-200 hover:bg-white hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60 dark:hover:border-blue-500/30 dark:hover:bg-slate-800"><h3 class="text-lg font-black text-slate-900 dark:text-white">{{ $heading }}</h3><p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{{ $copy }}</p></article>
                 @endforeach
             </div>
         </div>
     </section>
 
-    {{-- ===================================================
-         ACCORDION FAQ SECTION
-    =================================================== --}}
-    <section class="py-20 lg:py-24 bg-slate-50 dark:bg-slate-950" id="faq">
+    <section id="process" class="relative scroll-mt-24 overflow-hidden bg-slate-900 py-20 sm:py-24" aria-labelledby="synthesis-process-heading">
+        <div class="absolute inset-0 opacity-[.035] [background-image:radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] [background-size:28px_28px]"></div><div class="absolute -left-24 top-0 h-80 w-80 rounded-full bg-blue-600/20 blur-[100px]"></div><div class="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-orange-500/15 blur-[100px]"></div><div class="absolute left-1/2 top-8 -translate-x-1/2 select-none text-[6rem] font-black tracking-tighter text-white/[.018] sm:text-[10rem]" aria-hidden="true">SYNTHESIS</div>
+        <div class="relative mx-auto grid max-w-7xl items-start gap-14 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:px-8">
+            <div class="lg:sticky lg:top-28"><span class="inline-flex rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-2 text-[11px] font-black uppercase tracking-[.2em] text-blue-300">Synthesis blueprint</span><h2 id="synthesis-process-heading" class="mt-6 text-3xl font-black leading-tight tracking-tight text-white sm:text-5xl">From scattered articles to a structured account of the field</h2><p class="mt-6 text-base leading-8 text-slate-300">The process is iterative. Reading can reshape the question, comparison can expose missing search terms, and drafting can reveal that a claimed gap is not yet supported.</p><div class="mt-6 flex gap-3 rounded-2xl border border-emerald-400/20 bg-emerald-400/[.07] p-4"><span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300" aria-hidden="true">&#8634;</span><div><p class="text-sm font-black text-emerald-200">A gap is a conclusion, not a starting slogan</p><p class="mt-1 text-sm leading-6 text-slate-400">It should follow from the scope, search, comparison, and limitations of the reviewed evidence.</p></div></div><div class="mt-8 rounded-2xl border border-white/10 bg-white/[.04] p-5"><p class="text-sm font-bold text-white">Need a complete study rather than a review of studies?</p><p class="mt-2 text-sm leading-6 text-slate-400">Research papers may include original analysis, methods, results, and discussion beyond the literature review.</p><a href="{{ route('services.research-paper.index') }}" class="mt-4 inline-flex items-center gap-2 text-sm font-black text-blue-300 transition hover:text-white">Explore research paper help <span aria-hidden="true">&rarr;</span></a></div></div>
+            <div class="relative rounded-[2rem] border border-white/10 bg-slate-950/45 p-4 shadow-2xl shadow-blue-950/30 backdrop-blur-sm sm:p-7">
+                <div class="mb-7 flex items-center justify-between gap-4 border-b border-white/10 pb-5"><div class="flex items-center gap-2" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span></div><p class="font-mono text-[10px] font-bold uppercase tracking-[.16em] text-slate-500">synthesis-matrix / working file</p></div>
+                <div class="absolute left-10 top-28 h-[calc(100%-13rem)] w-px bg-gradient-to-b from-blue-500 via-violet-500 to-orange-500 sm:left-1/2" aria-hidden="true"></div>
+                <ol class="space-y-5">
+                    @foreach ([
+                        ['Frame', 'Define the review purpose', 'Translate the assignment into a focused question, boundaries, and review type.', 'Scope statement', 'hover:border-blue-400/40', 'bg-blue-500', 'text-blue-300', 'bg-blue-400/10'],
+                        ['Find', 'Search and document', 'Combine concepts and synonyms, record search decisions, and follow relevant citation trails.', 'Search record', 'hover:border-emerald-400/40', 'bg-emerald-500', 'text-emerald-300', 'bg-emerald-400/10'],
+                        ['Extract', 'Build the evidence matrix', 'Capture comparable details about questions, theories, methods, findings, limits, and relevance.', 'Source matrix', 'hover:border-violet-400/40', 'bg-violet-500', 'text-violet-300', 'bg-violet-400/10'],
+                        ['Connect', 'Identify relationships', 'Group agreements, tensions, patterns, changes, methodological differences, and unresolved issues.', 'Synthesis map', 'hover:border-fuchsia-400/40', 'bg-fuchsia-500', 'text-fuchsia-300', 'bg-fuchsia-400/10'],
+                        ['Explain', 'Draft and verify the review', 'Build idea-led sections, qualify claims, test the gap, cite accurately, and revise for balance.', 'Critical review', 'hover:border-orange-400/40', 'bg-orange-500', 'text-orange-300', 'bg-orange-400/10'],
+                    ] as $index => [$stage, $heading, $copy, $output, $hoverClass, $dotClass, $textClass, $tintClass])
+                        <li class="group relative ml-14 rounded-2xl border border-white/10 bg-white/[.055] p-5 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/[.09] hover:shadow-xl sm:ml-0 sm:w-[calc(50%-1.75rem)] {{ $index % 2 ? 'sm:ml-auto' : 'sm:mr-auto' }} {{ $hoverClass }}"><span class="absolute -left-[2.65rem] top-5 flex h-8 w-8 items-center justify-center rounded-full border-4 border-slate-950 text-[10px] font-black text-white shadow-lg {{ $dotClass }} {{ $index % 2 ? 'sm:-left-[2.75rem]' : 'sm:-right-[2.75rem] sm:left-auto' }}">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span><div class="mb-3 flex items-center justify-between gap-3"><span class="text-[9px] font-black uppercase tracking-[.2em] {{ $textClass }}">{{ $stage }}</span><span class="rounded-full px-2.5 py-1 text-[9px] font-bold text-slate-300 {{ $tintClass }}">{{ $output }}</span></div><h3 class="font-black text-white">{{ $heading }}</h3><p class="mt-2 text-sm leading-6 text-slate-400">{{ $copy }}</p></li>
+                    @endforeach
+                </ol>
+                <div class="relative mt-7 overflow-hidden rounded-2xl border border-orange-300/20 bg-gradient-to-r from-orange-400/10 via-white/[.04] to-blue-400/10 p-5"><div class="absolute -right-5 -top-8 text-7xl font-black text-white/[.035]" aria-hidden="true">≠</div><p class="text-[10px] font-black uppercase tracking-[.2em] text-orange-300">Final synthesis checkpoint</p><p class="mt-2 pr-8 text-sm font-bold leading-6 text-white">Does each section compare multiple sources around an idea instead of moving through the bibliography one author at a time?</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="synthesis" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="summary-synthesis-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center"><span class="text-xs font-black uppercase tracking-[.22em] text-[#f16700]">The central writing skill</span><h2 id="summary-synthesis-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Summary reports sources; synthesis explains relationships</h2></div>
+            <div class="mt-12 grid overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl lg:grid-cols-2 dark:border-slate-700">
+                <div class="bg-rose-50 p-7 sm:p-9 dark:bg-rose-500/10"><span class="text-[10px] font-black uppercase tracking-[.2em] text-rose-700 dark:text-rose-300">Source-by-source summary</span><h3 class="mt-4 text-xl font-black text-slate-900 dark:text-white">One article, then the next</h3><div class="mt-6 space-y-3">@foreach (['Author A found…', 'Author B argued…', 'Author C examined…'] as $line)<p class="rounded-xl border border-rose-200 bg-white/80 px-4 py-3 text-sm text-slate-600 dark:border-rose-500/20 dark:bg-slate-900/50 dark:text-slate-300">{{ $line }}</p>@endforeach</div><p class="mt-5 text-sm leading-6 text-rose-800 dark:text-rose-200">The reader receives information but must discover the pattern alone.</p></div>
+                <div class="bg-emerald-50 p-7 sm:p-9 dark:bg-emerald-500/10"><span class="text-[10px] font-black uppercase tracking-[.2em] text-emerald-700 dark:text-emerald-300">Source synthesis</span><h3 class="mt-4 text-xl font-black text-slate-900 dark:text-white">One idea, several sources in relation</h3><div class="mt-6 rounded-2xl border border-emerald-200 bg-white/85 p-5 text-sm leading-7 text-slate-700 dark:border-emerald-500/20 dark:bg-slate-900/50 dark:text-slate-200">Across the studies, participation improved when support was sustained, although the reported effect varied with program length, measurement method, and participant context.</div><div class="mt-4 flex flex-wrap gap-2">@foreach (['Agreement', 'Difference', 'Method', 'Context', 'Limitation'] as $tag)<span class="rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-bold text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300">{{ $tag }}</span>@endforeach</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organization" class="scroll-mt-24 border-y border-slate-200 bg-slate-50 py-20 sm:py-24 dark:border-slate-800 dark:bg-slate-950" aria-labelledby="review-organization-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl text-center"><span class="text-xs font-black uppercase tracking-[.22em] text-violet-600 dark:text-violet-400">Structure follows purpose</span><h2 id="review-organization-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Five useful ways to organize a literature review</h2><p class="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">Long reviews often combine patterns. Use headings that communicate the logic of the review rather than generic labels such as “Source One.”</p></div>
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+                @foreach ([['Thematic', 'Group evidence around recurring topics, factors, outcomes, or problems.'], ['Debate', 'Organize competing positions, explanations, interpretations, or schools of thought.'], ['Methodological', 'Compare research designs, measures, samples, analytical methods, or evidence types.'], ['Chronological', 'Trace how concepts, findings, or approaches developed—without merely listing dates.'], ['Theoretical', 'Compare frameworks, definitions, assumptions, applications, and explanatory limits.']] as $index => [$heading, $copy])
+                    <article class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"><span class="absolute right-4 top-2 text-5xl font-black text-slate-100 dark:text-slate-800" aria-hidden="true">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span><h3 class="relative text-lg font-black text-slate-900 dark:text-white">{{ $heading }}</h3><p class="relative mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">{{ $copy }}</p></article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="systematic" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="systematic-heading">
+        <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:px-8">
+            <div><span class="text-xs font-black uppercase tracking-[.22em] text-emerald-600 dark:text-emerald-400">Systematic-review reality check</span><h2 id="systematic-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">PRISMA improves reporting; it does not replace the review method</h2><p class="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">PRISMA 2020 helps authors report why a systematic review was conducted, which methods were used, and what was found. A credible systematic review still needs an appropriate protocol, pre-specified eligibility criteria, a reproducible search, transparent screening, suitable appraisal, structured extraction, and a justified synthesis method.</p><p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">Do not add a PRISMA flow diagram to a traditional course literature review simply to make it look systematic. Follow the review type, disciplinary method, and instructor requirements.</p></div>
+            <div class="grid gap-4 sm:grid-cols-2">
+                @foreach ([['Protocol first', 'Plan the question, eligibility criteria, search, screening, extraction, appraisal, and synthesis before results influence decisions.'], ['Reproducible search', 'Record databases or sources, dates, search strings, limits, deduplication, and supplementary search methods.'], ['Transparent selection', 'Document how records were screened, why studies were excluded, and how disagreements or duplicates were handled.'], ['Appropriate synthesis', 'Choose narrative, thematic, quantitative, qualitative, or other methods that fit the question and included evidence.']] as [$heading, $copy])
+                    <article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-500/20 dark:bg-emerald-500/10"><div class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-white"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span><h3 class="font-black text-slate-900 dark:text-white">{{ $heading }}</h3></div><p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{{ $copy }}</p></article>
+                @endforeach
+            </div>
+            <aside class="lg:col-span-2 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm leading-7 text-slate-700 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-slate-300" aria-label="Literature review guidance sources"><strong class="text-slate-900 dark:text-white">Research basis:</strong> This guide draws on literature-review guidance from the <a href="https://writingcenter.gmu.edu/writing-resources/research-based-writing/writing-a-literature-review" class="font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-300">George Mason University Writing Center</a>, systematic-review guidance from the <a href="https://www.prisma-statement.org/" class="font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-300">PRISMA Statement</a>, and search and selection guidance from the <a href="https://training.cochrane.org/handbook/current/chapter-04" class="font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-300">Cochrane Handbook</a>. Your assignment and disciplinary guidance take priority.</aside>
+        </div>
+    </section>
+
+    <section class="border-y border-slate-200 bg-slate-50 py-16 dark:border-slate-800 dark:bg-slate-950" aria-labelledby="related-support-heading">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 id="related-support-heading" class="text-center text-2xl font-black text-slate-900 dark:text-white">Choose the service that matches your current stage</h2><div class="mt-8 grid gap-4 md:grid-cols-4">@foreach ([[route('services.research-paper.index'), 'Research paper help', 'For a source-led paper that may also include methods, analysis, findings, and discussion.'], [route('services.thesis.index'), 'Thesis help', 'For a master’s or honors research project with a defined scope and program-specific requirements.'], [route('services.dissertation.index'), 'Dissertation help', 'For a doctoral project managed across proposal, research, committee review, and defense milestones.'], [route('services.proofreading-editing.index'), 'Proofreading and editing help', 'For an existing review that needs structural revision, clarity, citations, or a final proof.']] as [$url, $heading, $copy])<a href="{{ $url }}" class="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/30"><strong class="text-blue-600 group-hover:text-blue-700 dark:text-blue-400">{{ $heading }} <span aria-hidden="true">&rarr;</span></strong><span class="mt-2 block text-sm leading-6 text-slate-600 dark:text-slate-300">{{ $copy }}</span></a>@endforeach</div></div>
+    </section>
+
+    <section id="faqs" class="scroll-mt-24 bg-white py-20 sm:py-24 dark:bg-slate-900" aria-labelledby="review-faq-heading">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="inline-block bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-3">Answers & Clarity</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg">Everything you need to know before hiring our literature review team.</p>
-            </div>
-
-            <div class="space-y-4" x-data="{ open: null }">
-                @php
-                $faqs = [
-                    [
-                        'q' => 'What is the difference between an annotated bibliography and a literature review?',
-                        'a' => 'An annotated bibliography lists sources with individual summaries. A literature review synthesizes sources thematically, analyzing connections, theoretical frameworks, and research gaps.'
-                    ],
-                    [
-                        'q' => 'Do you write PRISMA systematic literature reviews?',
-                        'a' => 'Yes. Our PhD researchers execute systematic reviews following PRISMA guidelines, including search strategy matrices, inclusion/exclusion criteria, and flowcharts.'
-                    ],
-                    [
-                        'q' => 'How many peer-reviewed sources do you include in a literature review?',
-                        'a' => 'We tailor source counts to your rubric requirements, typically incorporating 20 to 100+ recent peer-reviewed journal articles from JSTOR, PubMed, Web of Science, and IEEE.'
-                    ],
-                    [
-                        'q' => 'Are your literature reviews 100% original and Turnitin-verified?',
-                        'a' => 'Every literature review is written completely from scratch. We run every document through Turnitin and AI detection tools, attaching a free similarity report upon request.'
-                    ],
-                    [
-                        'q' => 'What if my literature review needs revisions?',
-                        'a' => 'We offer 21 days of unlimited free revisions within your original prompt instructions. Any required tweaks are handled promptly within 24 hours.'
-                    ]
-                ];
-                @endphp
-
-                @foreach($faqs as $i => $faq)
-                <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm transition-colors"
-                     :class="open === {{ $i }} ? 'border-blue-500 dark:border-blue-500 shadow-md' : ''">
-                    <button 
-                        x-on:click="open = open === {{ $i }} ? null : {{ $i }}"
-                        class="w-full flex items-center justify-between px-7 py-6 text-left font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-base sm:text-lg">
-                        <span>{{ $faq['q'] }}</span>
-                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 transition-transform duration-300"
-                            :class="open === {{ $i }} ? 'rotate-180' : ''"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div x-show="open === {{ $i }}" x-collapse class="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
-                        {{ $faq['a'] }}
-                    </div>
-                </div>
+            <div class="text-center"><span class="text-xs font-black uppercase tracking-[.22em] text-blue-600 dark:text-blue-400">Questions before you begin</span><h2 id="review-faq-heading" class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl dark:text-white">Literature review help FAQs</h2></div>
+            <div class="mt-12 space-y-4">
+                @foreach ([
+                    ['What is the difference between a literature review and an annotated bibliography?', 'An annotated bibliography normally presents sources as separate entries with a citation and note. A literature review organizes multiple sources in relation to a question and synthesizes their themes, debates, methods, findings, and limitations.'],
+                    ['How many sources should a literature review include?', 'There is no universal number. The appropriate source set depends on the question, review type, field, academic level, timeframe, word count, and assignment requirements. Relevance and adequate coverage matter more than reaching an arbitrary count.'],
+                    ['Does every literature review need recent peer-reviewed journal articles?', 'No. Recent peer-reviewed studies may be important, but seminal works, books, primary materials, policy documents, technical reports, or other evidence may also be necessary. Source choices should fit the field and review question.'],
+                    ['Can you help with a systematic or scoping review?', 'Support can address question framing, protocol planning, search documentation, eligibility criteria, screening records, extraction tables, synthesis organization, reporting, and editing. The exact method and reporting guideline must match the review type and discipline.'],
+                    ['How is a research gap identified?', 'A defensible gap emerges from comparing the reviewed evidence. It may involve an unresolved question, conflicting findings, an underexamined context or population, a methodological limitation, a conceptual problem, or evidence that has not kept pace with change.'],
+                    ['Can an existing literature review be revised?', 'Yes. Provide the review, assignment, rubric, source list or library, supervisor feedback, required style, and the areas causing concern. Review can focus on scope, synthesis, organization, critical analysis, gap logic, citations, or proofreading.'],
+                ] as [$question, $answer])
+                    <details class="group rounded-2xl border border-slate-200 bg-slate-50 open:border-blue-200 open:bg-white open:shadow-lg dark:border-slate-700 dark:bg-slate-800/60 dark:open:border-blue-500/30 dark:open:bg-slate-800"><summary class="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 text-left font-black text-slate-900 marker:content-none dark:text-white">{{ $question }}<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-slate-700 dark:text-blue-400" aria-hidden="true">+</span></summary><p class="px-6 pb-6 text-sm leading-7 text-slate-600 dark:text-slate-300">{{ $answer }}</p></details>
                 @endforeach
             </div>
         </div>
     </section>
 
-    {{-- ===================================================
-         FINAL CTA SECTION
-    =================================================== --}}
-    <section class="relative py-20 lg:py-24 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white overflow-hidden">
-        <!-- Decorative glowing circles -->
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">Ready to Master Your Literature Review?</h2>
-            <p class="mt-5 text-blue-100 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-                Connect with an expert US PhD literature specialist today. Get a comprehensive, flawlessly cited literature review delivered before your deadline.
-            </p>
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <a href="{{ route('order') }}" class="group inline-flex items-center gap-3 rounded-2xl bg-white px-9 py-4 text-lg font-bold text-blue-700 shadow-xl hover:bg-slate-100 hover:scale-105 transition-all duration-300">
-                    Order Literature Review Now
-                    <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-            </div>
-        </div>
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-700 via-indigo-700 to-slate-900 py-20 text-white sm:py-24" aria-labelledby="review-cta-heading">
+        <div class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl"></div><div class="absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-orange-400/20 blur-3xl"></div>
+        <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"><span class="text-xs font-black uppercase tracking-[.22em] text-blue-200">Start with the review question</span><h2 id="review-cta-heading" class="mt-4 text-3xl font-black tracking-tight sm:text-5xl">Turn a source collection into a critical synthesis</h2><p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-blue-100">Share the assignment, question, review type, rubric, search notes, source library, matrix, feedback, or current draft. We will help identify the appropriate next step.</p><div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><a href="{{ route('order', ['assignment_service' => $service->id]) }}" class="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 text-sm font-black text-blue-700 shadow-xl transition hover:-translate-y-0.5 hover:bg-blue-50">Get Literature Review Help</a><a href="{{ route('services.proofreading-editing.index') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-black text-white transition hover:bg-white/15">I already have a draft</a></div></div>
     </section>
-
 </div>
 @endsection
