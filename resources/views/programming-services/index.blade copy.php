@@ -8,7 +8,7 @@
     {{-- CREATIVE HERO SECTION — DO NOT MODIFY --}}
     <x-creative-hero
         title="Expert Programming Help for Better Grades"
-        subtitle="Get expert programming help to complete your coding assignments perfectly and on time. We provide professional academic support for students in computer science, software engineering, data science, IT, and related fields."
+        subtitle="From debugging a single function to building complete applications — get clean, commented, working code from certified USA developers. Guaranteed on-time delivery."
         service-type="Technical"
     />
 
