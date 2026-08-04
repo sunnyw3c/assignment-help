@@ -2,45 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('/fonts/figtree-latin-400-normal.woff2') format('woff2');
-}
+/* ============================================================
+ * SYSTEM FONT STACK — Zero-download premium typography
+ *
+ * Uses the best native UI fonts on each platform for instant
+ * rendering (no FOIT/FOUT, no network requests).
+ *
+ * Stack priority:
+ *   1. "Inter"         — pre-installed on many modern systems
+ *   2. system-ui       — OS default (San Francisco on macOS/iOS,
+ *                        Segoe UI on Windows, Roboto on Android)
+ *   3. -apple-system   — older Safari/macOS fallback
+ *   4. BlinkMacSystemFont — older Chrome/macOS fallback
+ *   5. "Segoe UI"      — Windows 7–10
+ *   6. Roboto          — Android / Chrome OS
+ *   7. "Helvetica Neue"— older macOS
+ *   8. Arial           — universal fallback
+ *   9. sans-serif       — final generic fallback
+ * ============================================================ */
 
-@font-face {
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('/fonts/figtree-latin-500-normal.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('/fonts/figtree-latin-600-normal.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('/fonts/figtree-latin-700-normal.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 800 900;
-    font-display: swap;
-    src: url('/fonts/figtree-latin-800-normal.woff2') format('woff2');
-}
 
 /* ============================================================
  * CANONICAL SECTION CONTAINER

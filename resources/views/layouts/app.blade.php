@@ -71,7 +71,7 @@
         <style>
             /* Critical CSS for immediate rendering */
             body {
-                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
                 margin: 0;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -92,11 +92,7 @@
         </script>
 
         @hasSection('defer_app_css')
-            <link rel="preload"
-                  href="{{ asset('fonts/figtree-latin-800-normal.woff2') }}"
-                  as="font"
-                  type="font/woff2"
-                  crossorigin>
+
             <style data-critical-css>
                 @include('partials.php-critical-css')
             </style>
