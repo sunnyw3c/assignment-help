@@ -16,7 +16,7 @@ new class extends Component {
     public $difficulty = 'Intermediate';
     public $deadline = '7-days';
     public $pages = 1;
-    public $spacing = 'double'; // double (275 words), single (550 words)
+    public $spacing = 'double'; // double (250 words), single (500 words)
     public $files = [];
     public $tempFiles = []; // For Livewire 3 file upload handling
     public $email = '';
@@ -43,50 +43,17 @@ new class extends Component {
         }
     }
 
-    // Pricing constants
-    public $discount = 0.40; // 40% base discount
+    // Pricing constants. Sourced from App\Services\OrderPricingService so the
+    // order form and the "edit my brief" endpoint can never quote differently.
+    public $discount = \App\Services\OrderPricingService::BASE_DISCOUNT;
 
-    public $levelPrices = [
-        'high-school' => 15,
-        'undergraduate' => 20,
-        'masters' => 30,
-        'phd' => 45,
-    ];
+    public $levelPrices = \App\Services\OrderPricingService::LEVEL_PRICES;
 
-    public $urgencyMultipliers = [
-        '3-hours' => 2.5,
-        '6-hours' => 2.0,
-        '12-hours' => 1.8,
-        '24-hours' => 1.5,
-        '2-days' => 1.3,
-        '3-days' => 1.2,
-        '5-days' => 1.1,
-        '7-days' => 1.0,
-        '14-days' => 0.9,
-        '30-days' => 0.8,
-    ];
+    public $urgencyMultipliers = \App\Services\OrderPricingService::URGENCY_MULTIPLIERS;
 
-    public $subjectMultipliers = [
-        'general' => 1.0,
-        'programming' => 1.3,
-        'engineering' => 1.2,
-        'law' => 1.2,
-        'nursing' => 1.15,
-        'business' => 1.1,
-    ];
+    public $subjectMultipliers = \App\Services\OrderPricingService::SUBJECT_MULTIPLIERS;
 
-    public $volumeDiscounts = [
-        1 => 0,
-        2 => 0.05,
-        3 => 0.10,
-        5 => 0.15,
-        8 => 0.20,
-        10 => 0.25,
-        15 => 0.30,
-        20 => 0.35,
-        30 => 0.40,
-        50 => 0.45,
-    ];
+    public $volumeDiscounts = \App\Services\OrderPricingService::VOLUME_DISCOUNTS;
 
     public function incrementPages()
     {
@@ -198,8 +165,8 @@ new class extends Component {
         $orderNumber = $legacyService->generateOrderNumber($user->id);
         $originalPrice = $legacyService->calculatePrice('USD', (int) $this->pages, $this->deadline);
 
-        // Calculate word count based on legacy logic: 250 words per page
-        $wordCount = (int) $this->pages * 250;
+        // Word count follows the selected spacing (250 double / 500 single)
+        $wordCount = (int) $this->pages * $this->wordsPerPage;
 
         // Create order/assignment
         $assignment = \App\Models\Assignment::create([
@@ -252,7 +219,7 @@ new class extends Component {
             session()->flash('info', 'An account has been created for you. You are now logged in.');
         }
 
-        return redirect()->route('dashboard', $orderNumber);
+        return redirect()->route('dashboard.details', $orderNumber);
     }
 
     #[Computed]
@@ -303,7 +270,7 @@ new class extends Component {
     #[Computed]
     public function wordsPerPage()
     {
-        return $this->spacing === 'single' ? 550 : 275;
+        return $this->spacing === 'single' ? 500 : 250;
     }
 
     #[Computed]
@@ -332,21 +299,21 @@ new class extends Component {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <!-- LEFT COLUMN - ORDER FORM -->
             <div class="md:col-span-2 order-1 md:order-1">
-                <div class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
-                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-4 sm:p-6 text-white">
-                        <h2 class="text-lg sm:text-2xl font-bold">Assignment Details</h2>
-                        <p class="text-purple-100 mt-1 sm:mt-2 text-sm sm:text-base">Fill out the form below to get started</p>
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-3.5 sm:px-5 text-white">
+                        <h2 class="text-base sm:text-lg font-bold">Assignment Details</h2>
+                        <p class="text-purple-100 mt-0.5 text-xs sm:text-sm">Fill out the form below to get started</p>
                     </div>
 
-                    <div class="p-4 sm:p-6 md:p-10 space-y-6 sm:space-y-10">
+                    <div class="p-4 sm:p-5 md:p-6 space-y-5 sm:space-y-6">
                         <!-- Premium Category Switcher -->
                         <div class="relative">
-                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-3 sm:mb-4 uppercase tracking-wider">Select Service Category</label>
-                            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                            <label class="block text-[11px] font-semibold text-slate-500 mb-2 uppercase tracking-wide">Select Service Category</label>
+                            <div class="grid grid-cols-3 gap-2">
                                 <button type="button" wire:click="$set('assignmentType', 'writing')"
-                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'writing' ? 'border-purple-600 bg-purple-50/50 shadow-lg shadow-purple-200/50' : 'border-slate-100 hover:border-purple-200 bg-white' }}">
-                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
-                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'writing' ? 'bg-purple-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-purple-100 group-hover:text-purple-600' }}">✍️</div>
+                                    class="relative group px-2.5 py-2.5 sm:px-3 rounded-lg border transition-all text-left {{ $assignmentType === 'writing' ? 'border-purple-600 bg-purple-50' : 'border-slate-100 hover:border-purple-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                                        <div class="w-7 h-7 rounded-md flex items-center justify-center text-base {{ $assignmentType === 'writing' ? 'bg-purple-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-purple-100 group-hover:text-purple-600' }}">✍️</div>
                                         <div class="text-center sm:text-left">
                                             <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'writing' ? 'text-purple-900' : 'text-slate-600' }}">Writing</div>
                                             <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Essays, Research</div>
@@ -360,9 +327,9 @@ new class extends Component {
                                 </button>
 
                                 <button type="button" wire:click="$set('assignmentType', 'technical')"
-                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'technical' ? 'border-indigo-600 bg-indigo-50/50 shadow-lg shadow-indigo-200/50' : 'border-slate-100 hover:border-indigo-200 bg-white' }}">
-                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
-                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'technical' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600' }}">⚙️</div>
+                                    class="relative group px-2.5 py-2.5 sm:px-3 rounded-lg border transition-all text-left {{ $assignmentType === 'technical' ? 'border-indigo-600 bg-indigo-50' : 'border-slate-100 hover:border-indigo-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                                        <div class="w-7 h-7 rounded-md flex items-center justify-center text-base {{ $assignmentType === 'technical' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600' }}">⚙️</div>
                                         <div class="text-center sm:text-left">
                                             <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'technical' ? 'text-indigo-900' : 'text-slate-600' }}">Technical</div>
                                             <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Coding, Math</div>
@@ -376,9 +343,9 @@ new class extends Component {
                                 </button>
 
                                 <button type="button" wire:click="$set('assignmentType', 'online_class')"
-                                    class="relative group px-3 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border-2 transition-all duration-300 text-left {{ $assignmentType === 'online_class' ? 'border-emerald-600 bg-emerald-50/50 shadow-lg shadow-emerald-200/50' : 'border-slate-100 hover:border-emerald-200 bg-white' }}">
-                                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
-                                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl {{ $assignmentType === 'online_class' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-600' }}">🎓</div>
+                                    class="relative group px-2.5 py-2.5 sm:px-3 rounded-lg border transition-all text-left {{ $assignmentType === 'online_class' ? 'border-emerald-600 bg-emerald-50' : 'border-slate-100 hover:border-emerald-200 bg-white' }}">
+                                    <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                                        <div class="w-7 h-7 rounded-md flex items-center justify-center text-base {{ $assignmentType === 'online_class' ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-600' }}">🎓</div>
                                         <div class="text-center sm:text-left">
                                             <div class="font-bold text-xs sm:text-sm {{ $assignmentType === 'online_class' ? 'text-emerald-900' : 'text-slate-600' }}">Online Class</div>
                                             <div class="text-[9px] sm:text-[10px] text-slate-400 font-medium hidden sm:block">Portal, Exams</div>
@@ -394,24 +361,24 @@ new class extends Component {
                         </div>
 
                         <!-- User Contact Info -->
-                        <div class="space-y-4 pt-4 border-t border-slate-100 animate-fade-in-up">
-                            <label class="block text-sm font-bold text-slate-700 uppercase tracking-wider">Contact Information</label>
+                        <div class="space-y-2 pt-4 border-t border-slate-100 animate-fade-in-up">
+                            <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Contact Information</label>
                             <div class="relative group">
-                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-purple-600 transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-purple-600 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
                                 <input type="email" wire:model.blur="email" placeholder="Enter your email address for order updates"
-                                    class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 pl-12 focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 pl-9 text-sm placeholder:text-slate-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
                                 @error('email') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                             </div>
                         </div>
 
                         <!-- Writing Category Fields -->
                         @if($assignmentType === 'writing')
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in-up">
                                 <div>
-                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Subject Area *</label>
-                                    <select wire:model.live="subject" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Subject Area *</label>
+                                    <select wire:model.live="subject" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="general">📚 General / Essays</option>
                                         <option value="law">⚖️ Law / Legal Studies</option>
                                         <option value="nursing">🏥 Nursing / Healthcare</option>
@@ -422,8 +389,8 @@ new class extends Component {
                                     @error('subject') <span class="text-red-500 text-[10px] mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Academic Level *</label>
-                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Academic Level *</label>
+                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="high-school">🎓 High School</option>
                                         <option value="undergraduate">🎓 Undergraduate</option>
                                         <option value="masters">🎓 Master's</option>
@@ -432,24 +399,24 @@ new class extends Component {
                                     @error('academicLevel') <span class="text-red-500 text-[10px] mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="col-span-full">
-                                    <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">Reference Style *</label>
-                                    <div class="flex flex-wrap gap-2">
+                                    <label class="block text-[11px] font-semibold text-slate-500 mb-2 uppercase tracking-wide">Reference Style *</label>
+                                    <div class="flex flex-wrap gap-1.5">
                                         @foreach(['APA 7th', 'MLA 9th', 'Harvard', 'Chicago', 'Oxford', 'Turabian', 'OSCOLA', 'Other'] as $style)
                                             <button type="button" wire:click="$set('referenceStyle', '{{ $style }}')"
-                                                class="px-4 py-2 rounded-full border-2 text-[10px] sm:text-xs font-bold transition-all duration-300 {{ $referenceStyle === $style ? 'border-purple-600 bg-purple-600 text-white shadow-lg shadow-purple-200' : 'border-slate-100 bg-white text-slate-500 hover:border-purple-200 hover:text-purple-600' }}">
+                                                class="px-3 py-1.5 rounded-md border text-xs font-medium transition-all {{ $referenceStyle === $style ? 'border-purple-600 bg-purple-600 text-white' : 'border-slate-200 bg-white text-slate-500 hover:border-purple-300 hover:text-purple-600' }}">
                                                 {{ $style }}
                                             </button>
                                         @endforeach
                                     </div>
 
                                     @if($referenceStyle === 'Other')
-                                        <div class="mt-4 animate-fade-in-up">
+                                        <div class="mt-2.5 animate-fade-in-up">
                                             <div class="relative group">
-                                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-purple-500">
+                                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-purple-500">
                                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                                 </div>
                                                 <input type="text" wire:model="customReferenceStyle" placeholder="Specify your reference style (e.g. Vancouver, IEEE, Bluebook...)"
-                                                    class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 pl-11 focus:border-purple-500 focus:bg-white focus:outline-none transition-all text-sm">
+                                                    class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 pl-9 placeholder:text-slate-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-all text-sm">
                                             </div>
                                         </div>
                                     @endif
@@ -459,10 +426,10 @@ new class extends Component {
 
                         <!-- Technical Category Fields -->
                         @if($assignmentType === 'technical')
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in-up">
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Technical Subject *</label>
-                                    <select wire:model.live="subject" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Technical Subject *</label>
+                                    <select wire:model.live="subject" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="programming">💻 Programming</option>
                                         <option value="engineering">⚡ Engineering</option>
                                         <option value="math">🧮 Mathematics / Calculus</option>
@@ -472,14 +439,14 @@ new class extends Component {
                                     @error('subject') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Software / Language *</label>
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Software / Language *</label>
                                     <input type="text" wire:model="softwareLanguage" placeholder="e.g. Python, Matlab, SPSS, AutoCad"
-                                        class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all">
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm placeholder:text-slate-400 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all">
                                     @error('softwareLanguage') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Difficulty Level</label>
-                                    <select wire:model.live="difficulty" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Difficulty Level</label>
+                                    <select wire:model.live="difficulty" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="Beginner">🟢 Beginner / Basic</option>
                                         <option value="Intermediate">🟡 Intermediate / Standard</option>
                                         <option value="Advanced">🔴 Advanced / Complex</option>
@@ -487,8 +454,8 @@ new class extends Component {
                                     @error('difficulty') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Academic Level *</label>
-                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-indigo-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Academic Level *</label>
+                                    <select wire:model.live="academicLevel" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-indigo-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="undergraduate">🎓 Undergraduate</option>
                                         <option value="masters">🎓 Master's</option>
                                         <option value="phd">🎓 PhD/Doctoral</option>
@@ -500,16 +467,16 @@ new class extends Component {
 
                         <!-- Online Class Category Fields -->
                         @if($assignmentType === 'online_class')
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in-up">
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Course Name / Code *</label>
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Course Name / Code *</label>
                                     <input type="text" wire:model="courseCode" placeholder="e.g. CS101 - Intro to Programming"
-                                        class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all">
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm placeholder:text-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all">
                                     @error('courseCode') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Service Needed *</label>
-                                    <select wire:model.live="onlineServiceType" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Service Needed *</label>
+                                    <select wire:model.live="onlineServiceType" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-emerald-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                         <option value="Full Course Help">🏢 Full Semester / Course help</option>
                                         <option value="Weekly Assignment">📅 Weekly Online Tasks</option>
                                         <option value="Live Exam">⏱️ Live Exam / Quiz Help</option>
@@ -517,11 +484,11 @@ new class extends Component {
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Duration *</label>
-                                    <div x-data="{ count: @entangle('duration').live }" class="flex items-center gap-3">
-                                        <input type="number" x-model.number="count" min="1"
-                                            class="w-24 bg-slate-50 border-2 border-slate-100 rounded-xl p-4 text-center font-bold focus:border-emerald-500 focus:bg-white focus:outline-none transition-all [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
-                                        <select wire:model.live="durationUnit" class="flex-1 bg-slate-50 border-2 border-slate-100 rounded-xl p-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Duration *</label>
+                                    <div class="flex items-center gap-2">
+                                        <input type="number" wire:model.live="duration" min="1"
+                                            class="w-16 bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-2 text-sm text-center font-semibold focus:border-emerald-500 focus:bg-white focus:outline-none transition-all [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+                                        <select wire:model.live="durationUnit" class="flex-1 bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-emerald-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                             <option value="weeks">Weeks</option>
                                             <option value="hours">Hours (for Exams)</option>
                                             <option value="sessions">Sessions</option>
@@ -530,10 +497,10 @@ new class extends Component {
                                     @error('duration') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="flex items-center">
-                                    <label class="relative flex items-center gap-3 p-4 bg-emerald-50/50 rounded-xl border-2 border-emerald-100 cursor-pointer group hover:bg-emerald-50 transition-colors">
-                                        <input type="checkbox" wire:model="loginRequired" class="w-5 h-5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                                    <label class="relative flex items-center gap-2.5 py-2.5 px-3 bg-emerald-50/50 rounded-lg border border-emerald-100 cursor-pointer group hover:bg-emerald-50 transition-colors w-full">
+                                        <input type="checkbox" wire:model="loginRequired" class="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
                                         <div>
-                                            <div class="text-sm font-bold text-emerald-900">Portal Credentials Needed</div>
+                                            <div class="text-sm font-semibold text-emerald-900">Portal Credentials Needed</div>
                                             <div class="text-[10px] text-emerald-700">Encrypted & 100% Secure</div>
                                         </div>
                                     </label>
@@ -544,16 +511,16 @@ new class extends Component {
                         <!-- Title, Difficulty, Deadline, Pages -->
                         <div class="space-y-6 pt-4 border-t border-slate-100">
                             @if($assignmentType !== 'online_class')
-                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                                     <div class="sm:col-span-2">
-                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Project / Essay Title *</label>
+                                        <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Project / Essay Title *</label>
                                         <input type="text" wire:model="title" placeholder="Enter the topic or title"
-                                            class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm placeholder:text-slate-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-all">
                                         @error('title') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                                     </div>
                                     <div>
-                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Deadline *</label>
-                                        <select wire:model.live="deadline" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl p-3 sm:p-4 text-sm sm:text-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
+                                        <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Deadline *</label>
+                                        <select wire:model.live="deadline" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm focus:border-purple-500 focus:bg-white focus:outline-none transition-all cursor-pointer">
                                             <option value="">Select Deadline</option>
                                             <option value="3-hours">3 Hours (Very Urgent)</option>
                                             <option value="6-hours">6 Hours</option>
@@ -570,121 +537,53 @@ new class extends Component {
                                 </div>
 
                                 <!-- Page Counter Section -->
-                                <div class="space-y-3 sm:space-y-4">
-                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                                        <label class="block text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider">Number of Pages *</label>
-                                        <div class="flex items-center gap-2">
-                                            <span class="px-2 sm:px-3 py-1 bg-purple-100 text-purple-700 text-[10px] sm:text-xs font-bold rounded-full border border-purple-200 shadow-sm animate-pulse-slow">
-                                                ~{{ number_format($pages * $this->wordsPerPage) }} Words
-                                            </span>
-                                            <span class="px-2 sm:px-3 py-1 bg-indigo-100 text-indigo-700 text-[10px] sm:text-xs font-bold rounded-full border border-indigo-200 shadow-sm">
-                                                {{ ucfirst($spacing) }} Spaced
-                                            </span>
+                                <div class="space-y-1.5">
+                                    <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide">Length &amp; Spacing *</label>
+
+                                    <div class="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-1.5">
+                                        {{-- Driven by wire:click: the entangle directive emits window.Livewire, which Livewire 4 does not define. --}}
+                                        <div class="flex items-center rounded-md border border-slate-200 bg-white">
+                                            <button type="button" wire:click="decrementPages" {{ $pages <= 1 ? 'disabled' : '' }}
+                                                class="w-7 h-7 text-slate-400 hover:text-purple-600 flex items-center justify-center transition-colors disabled:opacity-40" aria-label="Decrease pages">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"></path></svg>
+                                            </button>
+                                            <input type="number" wire:model.live="pages" min="1" max="100" aria-label="Number of pages"
+                                                class="w-9 text-center text-sm font-semibold text-slate-900 bg-transparent border-0 focus:ring-0 focus:outline-none p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+                                            <button type="button" wire:click="incrementPages" {{ $pages >= 100 ? 'disabled' : '' }}
+                                                class="w-7 h-7 text-slate-400 hover:text-purple-600 flex items-center justify-center transition-colors disabled:opacity-40" aria-label="Increase pages">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
+                                            </button>
                                         </div>
-                                    </div>
 
-                                    <div class="bg-white border-2 border-slate-100 rounded-2xl sm:rounded-[2rem] p-4 sm:p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500 group relative overflow-hidden">
-                                        <!-- Animated Background Glow -->
-                                        <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-100/50 rounded-full blur-3xl group-hover:bg-purple-200/50 transition-colors duration-500"></div>
+                                        <span class="text-xs text-slate-400">{{ $pages === 1 ? 'page' : 'pages' }}</span>
 
-                                        <div class="relative flex flex-col items-center gap-4 sm:gap-8 md:flex-row md:justify-between">
-                                            <!-- Main Interactive Counter -->
-                                            <div x-data="{
-                                                count: @entangle('pages').live,
-                                                increment() { if(this.count < 100) this.count++ },
-                                                decrement() { if(this.count > 1) this.count-- }
-                                            }" class="flex items-center gap-3 sm:gap-6 bg-slate-50/80 p-3 sm:p-4 rounded-xl sm:rounded-[1.5rem] border border-slate-100 shadow-inner w-full md:w-auto justify-center">
-                                                <button type="button" @click="decrement()"
-                                                    class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100 flex-shrink-0" aria-label="Decrease pages">
-                                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"></path></svg>
+                                        <!-- Spacing segmented switch -->
+                                        <div class="flex rounded-md border border-slate-200 bg-white p-0.5 ml-auto">
+                                            @foreach(['double' => '250', 'single' => '500'] as $mode => $wpp)
+                                                <button type="button" wire:click="$set('spacing', '{{ $mode }}')"
+                                                    class="px-2.5 py-1 rounded text-[11px] font-medium transition-colors {{ $spacing === $mode ? 'bg-purple-600 text-white' : 'text-slate-500 hover:text-purple-600' }}">
+                                                    {{ ucfirst($mode) }}
+                                                    <span class="{{ $spacing === $mode ? 'text-purple-200' : 'text-slate-400' }}">{{ $wpp }}</span>
                                                 </button>
-
-                                                <div class="flex flex-col items-center justify-center min-w-[80px] sm:min-w-[110px] text-center">
-                                                    <input type="number" x-model.number="count" min="1" max="100"
-                                                        class="w-full text-center text-3xl sm:text-5xl font-black text-slate-900 bg-transparent border-0 focus:ring-0 focus:outline-none p-0 leading-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
-                                                    <div class="text-[10px] font-bold text-purple-600 uppercase tracking-widest mt-1">Pages</div>
-                                                </div>
-
-                                                <button type="button" @click="increment()"
-                                                    class="w-12 h-12 sm:w-16 sm:h-16 bg-white hover:bg-emerald-50 text-slate-400 hover:text-emerald-500 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-90 border border-slate-100 flex-shrink-0" aria-label="Increase pages">
-                                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
-                                                </button>
-                                            </div>
-
-                                            <!-- Stats Column -->
-                                            <div class="flex flex-row md:flex-col gap-3 w-full md:w-auto justify-center">
-                                                <div class="flex items-center gap-2">
-                                                    <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-600 text-white flex items-center justify-center text-base sm:text-xl shadow-lg shadow-purple-200">✍️</span>
-                                                    <div>
-                                                        <div class="text-[10px] sm:text-xs font-black text-slate-400 uppercase tracking-widest">Volume</div>
-                                                        <div class="text-sm sm:text-xl font-black text-slate-900">~{{ number_format($pages * $this->wordsPerPage) }} <span class="text-purple-600">Words</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center gap-2">
-                                                    <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-indigo-500 text-white flex items-center justify-center text-base sm:text-xl shadow-lg shadow-indigo-100">📄</span>
-                                                    <div>
-                                                        <div class="text-[10px] sm:text-xs font-black text-slate-400 uppercase tracking-widest">Spacing</div>
-                                                        <div class="text-sm sm:text-lg font-bold text-slate-700">{{ ucfirst($spacing) }}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
+
+                                        <!-- Live total -->
+                                        <span class="px-2 py-1 rounded-md bg-purple-50 text-purple-700 text-[11px] font-semibold tabular-nums">
+                                            ~{{ number_format($pages * $this->wordsPerPage) }} words
+                                        </span>
                                     </div>
 
-                                    <!-- Spacing Toggle Bar -->
-                                    <div class="grid grid-cols-2 gap-2 sm:gap-4">
-                                        <button type="button" wire:click="$set('spacing', 'double')"
-                                            class="flex items-center justify-between p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all {{ $spacing === 'double' ? 'border-indigo-600 bg-indigo-50 shadow-md' : 'border-slate-100 bg-white hover:border-indigo-200' }}">
-                                            <div class="flex items-center gap-2 sm:gap-3">
-                                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex-shrink-0 flex items-center justify-center {{ $spacing === 'double' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-400' }}">
-                                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                                                </div>
-                                                <div class="text-left">
-                                                    <div class="text-[10px] sm:text-xs font-bold {{ $spacing === 'double' ? 'text-indigo-900' : 'text-slate-600' }}">Double Spaced</div>
-                                                    <div class="text-[9px] sm:text-[10px] text-slate-400">275 Words/page</div>
-                                                </div>
-                                            </div>
-                                            @if($spacing === 'double') <svg class="w-4 h-4 text-indigo-600 hidden sm:block flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
-                                        </button>
-
-                                        <button type="button" wire:click="$set('spacing', 'single')"
-                                            class="flex items-center justify-between p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all {{ $spacing === 'single' ? 'border-orange-600 bg-orange-50 shadow-md' : 'border-slate-100 bg-white hover:border-orange-200' }}">
-                                            <div class="flex items-center gap-2 sm:gap-3">
-                                                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex-shrink-0 flex items-center justify-center {{ $spacing === 'single' ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-400' }}">
-                                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
-                                                </div>
-                                                <div class="text-left">
-                                                    <div class="text-[10px] sm:text-xs font-bold {{ $spacing === 'single' ? 'text-orange-900' : 'text-slate-600' }}">Single Spaced</div>
-                                                    <div class="text-[9px] sm:text-[10px] text-slate-400">550 Words/page</div>
-                                                </div>
-                                            </div>
-                                            @if($spacing === 'single') <svg class="w-4 h-4 text-orange-600 hidden sm:block flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> @endif
-                                        </button>
-                                    </div>
-
-                                    <!-- Informational Bar -->
-                                    <div class="bg-indigo-50/30 rounded-xl sm:rounded-2xl border border-indigo-100/50 p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
-                                        <div class="flex items-center gap-2 sm:gap-3">
-                                            <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white shadow-sm rounded-lg sm:rounded-xl flex-shrink-0 flex items-center justify-center text-base sm:text-xl">📐</div>
-                                            <div>
-                                                <div class="text-xs sm:text-sm font-bold text-indigo-900">Academic Standard Formatting</div>
-                                                <div class="text-[9px] sm:text-[10px] text-indigo-600 font-medium">Times New Roman - 12pt - 1" Margins</div>
-                                            </div>
-                                        </div>
-                                        <div class="text-left sm:text-right pl-10 sm:pl-0">
-                                            <div class="text-xs font-bold text-indigo-900">{{ $this->wordsPerPage }} Words</div>
-                                            <div class="text-[10px] text-indigo-600 font-medium">Per Page Average</div>
-                                        </div>
-                                    </div>
+                                    <p class="text-[10px] text-slate-400 px-0.5">Times New Roman · 12pt · 1" margins</p>
                                 </div>
                             @endif
                         </div>
 
                         <!-- Description -->
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">Requirements</label>
-                            <textarea wire:model="description" rows="6" placeholder="Describe your requirements in detail..."
-                                      class="w-full border-2 border-gray-300 rounded-lg p-4 focus:border-purple-500 focus:outline-none transition-colors"></textarea>
+                            <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Requirements</label>
+                            <textarea wire:model="description" rows="4" placeholder="Describe your requirements in detail..."
+                                      class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm placeholder:text-slate-400 focus:border-purple-500 focus:bg-white focus:outline-none transition-all"></textarea>
                             @error('description') <span class="text-red-500 text-xs mt-1 block font-medium">{{ $message }}</span> @enderror
                         </div>
 
@@ -696,9 +595,9 @@ new class extends Component {
                                 // Handle file drop
                             }
                         }">
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">
-                                📎 Upload Files (Optional)
-                                <span class="text-xs font-normal text-gray-500 ml-2">- Multiple files supported</span>
+                            <label class="block text-[11px] font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                                Upload Files (Optional)
+                                <span class="normal-case font-normal text-slate-400 ml-1">— multiple supported</span>
                             </label>
 
                             <!-- Drag & Drop Area -->
@@ -716,8 +615,8 @@ new class extends Component {
                                         );
                                     }
                                 "
-                                :class="dragging ? 'border-purple-500 bg-purple-50 scale-[1.02]' : 'border-gray-300'"
-                                class="file-upload-area card-3d-hover gradient-follow border-2 border-dashed rounded-xl p-6 sm:p-8 text-center hover:border-purple-400 transition-all duration-400 ease-custom touch-manipulation">
+                                :class="dragging ? 'border-purple-500 bg-purple-50' : 'border-slate-200'"
+                                class="file-upload-area border border-dashed rounded-lg px-4 py-5 text-center hover:border-purple-400 transition-all touch-manipulation">
 
                                 <input
                                     type="file"
@@ -728,12 +627,12 @@ new class extends Component {
                                     accept=".pdf,.doc,.docx,.zip,.rar,.txt,.jpg,.jpeg,.png">
 
                                 <label for="files-upload" class="cursor-pointer block">
-                                    <div class="text-4xl sm:text-5xl mb-3 sm:mb-4 animate-bounce-slow">📁</div>
-                                    <div class="space-y-2">
-                                        <p class="text-base sm:text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors">
+                                    <div class="text-2xl mb-1.5">📁</div>
+                                    <div class="space-y-0.5">
+                                        <p class="text-sm font-semibold text-purple-600 hover:text-purple-700 transition-colors">
                                             Click to browse or drag files here
                                         </p>
-                                        <p class="text-xs sm:text-sm text-gray-500">
+                                        <p class="text-xs text-slate-400">
                                             PDF, DOC, DOCX, ZIP, Images • Max 10MB per file
                                         </p>
                                     </div>
@@ -771,15 +670,15 @@ new class extends Component {
 
                             <!-- Uploaded Files List with Immersive Design -->
                             @if (!empty($files))
-                                <div class="mt-4 space-y-2">
-                                    <p class="text-sm font-semibold text-gray-700">
-                                        📋 Uploaded Files ({{ count($files) }})
+                                <div class="mt-3 space-y-1.5">
+                                    <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">
+                                        Uploaded Files ({{ count($files) }})
                                     </p>
 
                                     @foreach ($files as $index => $file)
-                                        <div class="glass-card p-3 sm:p-4 rounded-lg flex items-center gap-3 sm:gap-4 group hover-lift animate-fade-in">
+                                        <div class="border border-slate-200 bg-slate-50 px-3 py-2 rounded-lg flex items-center gap-2.5 group animate-fade-in">
                                             <!-- File Icon -->
-                                            <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg sm:text-xl">
+                                            <div class="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-md flex items-center justify-center text-sm">
                                                 @php
                                                     $ext = strtolower(pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION));
                                                     $icon = match($ext) {
@@ -795,10 +694,10 @@ new class extends Component {
 
                                             <!-- File Info -->
                                             <div class="flex-1 min-w-0">
-                                                <p class="text-sm sm:text-base font-semibold text-gray-800 truncate">
+                                                <p class="text-sm font-medium text-slate-700 truncate">
                                                     {{ $file->getClientOriginalName() }}
                                                 </p>
-                                                <p class="text-xs sm:text-sm text-gray-500">
+                                                <p class="text-[11px] text-slate-400">
                                                     {{ number_format($file->getSize() / 1024, 1) }} KB
                                                 </p>
                                             </div>
@@ -807,8 +706,8 @@ new class extends Component {
                                             <button
                                                 type="button"
                                                 wire:click="removeFile({{ $index }})"
-                                                class="btn-press ripple-effect flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-110 touch-manipulation">
-                                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                class="flex-shrink-0 w-7 h-7 text-slate-400 hover:bg-red-50 hover:text-red-600 rounded-md transition-colors flex items-center justify-center touch-manipulation">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                                                 </svg>
                                             </button>
@@ -819,10 +718,10 @@ new class extends Component {
                         </div>
 
                         <!-- Submit Button -->
-                        <div class="flex justify-center pt-4 sm:pt-6">
+                        <div class="flex justify-center pt-2">
                             <button type="submit"
                                     wire:loading.attr="disabled"
-                                    class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 sm:px-12 py-3.5 sm:py-4 rounded-xl sm:rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                                    class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-2.5 rounded-lg text-sm font-semibold transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
                                 <span wire:loading.remove wire:target="submit">
                                     {{ $assignmentType === 'programming' ? '🚀 Get Programming Help' : '📝 Submit Assignment' }}
                                 </span>

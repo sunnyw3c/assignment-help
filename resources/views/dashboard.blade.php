@@ -1,40 +1,15 @@
 @extends('layouts.app')
 
-@section('uses_axios', true)
 @section('content')
 
     <div class="py-12" x-data="{
-        assignments: [],
-        loading: true,
+        assignments: {{ Js::from($assignments) }},
         filter: 'all',
         showMessaging: false,
         activeAssignment: null,
         messages: [],
         newMessage: '',
         messageLoading: false,
-        apiError: null,
-        async fetchAssignments() {
-            this.loading = true;
-            this.apiError = null;
-            try {
-                const url = '/api/assignments';
-                
-                const response = await window.axios.get(url);
-                
-                const data = response.data;
-                this.assignments = Array.isArray(data.data) ? data.data : [];
-                console.log('Assignments loaded:', this.assignments.length);
-            } catch (error) {
-                console.error('Error fetching assignments:', error);
-                this.apiError = error.message || 'Failed to connect to server';
-                if (error.response) {
-                    this.apiError += ` (Status: ${error.response.status})`;
-                }
-                this.assignments = [];
-            } finally {
-                this.loading = false;
-            }
-        },
         async openMessaging(assignment) {
             if (!assignment) return;
             this.activeAssignment = assignment;
@@ -88,8 +63,6 @@
             const searchTerm = (this.filter || '').toLowerCase();
             return arr.filter(a => ((a.status || '')).toLowerCase() === searchTerm);
         },
-
-        /* Debug: Highlight ID is {{ $highlight_id ?? "not set" }} */
         getStatusColor(status) {
             if (!status) return 'bg-slate-50 text-slate-700 border-slate-100';
             const colors = {
@@ -103,7 +76,7 @@
             };
             return colors[status.toLowerCase()] || 'bg-slate-50 text-slate-700 border-slate-100';
         }
-    }" x-init="fetchAssignments()">
+    }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             
             <!-- Welcome Section -->
@@ -126,22 +99,25 @@
             </div>
 
             <!-- Stats Ribbon -->
+            @php
+                $statusCounts = collect($assignments)->countBy(fn ($a) => strtolower($a['status'] ?? 'pending'));
+            @endphp
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Total Orders</p>
-                    <p class="text-3xl font-black text-slate-900" x-text="assignments.length">0</p>
+                    <p class="text-3xl font-black text-slate-900">{{ count($assignments) }}</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Active</p>
-                    <p class="text-3xl font-black text-blue-600" x-text="assignments.filter(a => ['In Progress', 'Assigned'].includes(a.status)).length">0</p>
+                    <p class="text-3xl font-black text-blue-600">{{ $statusCounts->get('in progress', 0) + $statusCounts->get('assigned', 0) }}</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Pending / New</p>
-                    <p class="text-3xl font-black text-amber-500" x-text="assignments.filter(a => ['Pending', 'New'].includes(a.status)).length">0</p>
+                    <p class="text-3xl font-black text-amber-500">{{ $statusCounts->get('pending', 0) + $statusCounts->get('new', 0) }}</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Completed</p>
-                    <p class="text-3xl font-black text-emerald-500" x-text="assignments.filter(a => a.status === 'Completed').length">0</p>
+                    <p class="text-3xl font-black text-emerald-500">{{ $statusCounts->get('completed', 0) }}</p>
                 </div>
             </div>
 
@@ -152,120 +128,137 @@
                     <h3 class="text-xl font-black text-slate-900 tracking-tight">Your Assignments</h3>
                     
                     <div class="flex bg-slate-100 p-1 rounded-xl overflow-x-auto max-w-full">
-                        <template x-for="t in ['all', 'new', 'assigned', 'in progress', 'completed']">
-                            <button x-on:click="filter = t" 
-                                :class="filter === t ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
-                                class="px-4 py-2 rounded-lg text-sm font-bold capitalize transition-all whitespace-nowrap"
-                                x-text="t">
-                            </button>
-                        </template>
+                        @foreach (['all', 'new', 'assigned', 'in progress', 'completed'] as $tab)
+                            <button x-on:click="filter = '{{ $tab }}'"
+                                :class="filter === '{{ $tab }}' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
+                                class="px-4 py-2 rounded-lg text-sm font-bold capitalize transition-all whitespace-nowrap">{{ $tab }}</button>
+                        @endforeach
                     </div>
                 </div>
 
                 <!-- Table Container -->
                 <div class="overflow-x-auto">
-                    <!-- Loading State -->
-                    <div x-show="loading" class="p-12 space-y-4">
-                        <template x-for="i in 5">
-                            <div class="flex gap-4 animate-pulse">
-                                <div class="h-12 bg-slate-100 rounded-xl flex-1"></div>
-                                <div class="h-12 bg-slate-100 rounded-xl w-32"></div>
-                                <div class="h-12 bg-slate-100 rounded-xl w-24"></div>
+                    @forelse ($assignments as $assignment)
+                        @if ($loop->first)
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-slate-50/50">
+                                        <tr>
+                                            <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Order Details</th>
+                                            <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Deadline</th>
+                                            <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Amount</th>
+                                            <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Status</th>
+                                            <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-50">
+                        @endif
+
+                        @php
+                            $status = $assignment['status'] ?? 'Pending';
+                            $paymentStatus = $assignment['payment_status'] ?? 'unpaid';
+                            $amountPaid = (float) ($assignment['amount_paid'] ?? 0);
+                            $amountDue = (float) ($assignment['amount_due'] ?? 0);
+                            $detailsUrl = route('dashboard.details', $assignment['order_number']);
+                            $icon = match ($assignment['service_type'] ?? null) {
+                                'writing' => '✍️',
+                                'technical' => '⚙️',
+                                default => '🎓',
+                            };
+                            $statusClass = [
+                                'new' => 'bg-amber-50 text-amber-700 border-amber-100',
+                                'pending' => 'bg-amber-50 text-amber-700 border-amber-100',
+                                'in progress' => 'bg-blue-50 text-blue-700 border-blue-100',
+                                'assigned' => 'bg-indigo-50 text-indigo-700 border-indigo-100',
+                                'completed' => 'bg-emerald-50 text-emerald-700 border-emerald-100',
+                                'cancelled' => 'bg-red-50 text-red-700 border-red-100',
+                                'rework' => 'bg-purple-50 text-purple-700 border-purple-100',
+                            ][strtolower($status)] ?? 'bg-slate-50 text-slate-700 border-slate-100';
+                            $paymentClass = [
+                                'paid' => 'bg-emerald-50 text-emerald-600 border-emerald-200',
+                                'unpaid' => 'bg-rose-50 text-rose-600 border-rose-200',
+                                'partial' => 'bg-sky-50 text-sky-600 border-sky-200',
+                            ][strtolower($paymentStatus)] ?? 'bg-slate-50 text-slate-600 border-slate-200';
+                        @endphp
+
+                        <tr class="hover:bg-slate-50/50 transition-colors group"
+                            x-show="filter === 'all' || filter === @js(strtolower($status))">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-xl text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                                        <span>{{ $icon }}</span>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-0.5">
+                                            <a href="{{ $detailsUrl }}" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">{{ $assignment['title'] }}</a>
+                                            <span class="px-2 py-0.5 bg-slate-100 text-[10px] font-black text-slate-500 rounded-md uppercase tracking-tighter">#{{ $assignment['order_number'] }}</span>
+                                        </div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase tracking-tight">{{ $assignment['subject'] }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex items-center gap-2 text-slate-600">
+                                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-medium">{{ $assignment['deadline'] }}</span>
+                                </div>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-black text-slate-900 leading-none">${{ number_format((float) ($assignment['budget'] ?? 0), 2) }}</span>
+                                    <div class="flex items-center gap-1.5 mt-1">
+                                        @if ($amountPaid > 0)
+                                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+${{ number_format($amountPaid, 2) }}</span>
+                                        @endif
+                                        @if ($amountDue > 0)
+                                            <span class="text-[10px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded">Due: ${{ number_format($amountDue, 2) }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex flex-col gap-1.5">
+                                    <span class="{{ $statusClass }} px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border inline-flex items-center">{{ $status }}</span>
+                                    <span class="{{ $paymentClass }} inline-flex items-center px-3 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest border w-fit">{{ $paymentStatus }}</span>
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 text-right">
+                                <div class="flex items-center justify-end gap-2">
+                                    <button type="button" x-on:click="openMessaging(@js($assignment))" class="p-2 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                                    </button>
+                                    <a href="{{ $detailsUrl }}" class="p-2 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all">
+                                        Manage
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        @if ($loop->last)
+                                    </tbody>
+                                </table>
                             </div>
-                        </template>
-                    </div>
+                        @endif
+                    @empty
+                        <!-- Empty State -->
+                        <div class="p-20 text-center">
+                            <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl opacity-50">📂</div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">No assignments found</h4>
+                            <p class="text-slate-500 mb-8 max-w-xs mx-auto">Get started by placing your first assignment request with us today.</p>
+                            <a href="{{ route('order') }}" class="inline-flex px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-100">
+                                Place New Order
+                            </a>
+                        </div>
+                    @endforelse
 
-                <!-- Data List (Full Table) -->
-                <!-- Data List (Full Table) -->
-                <div x-show="!loading && filteredAssignments.length > 0" class="overflow-x-auto">
-                    <table class="w-full text-left">
-                        <thead class="bg-slate-50/50">
-                            <tr>
-                                <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Order Details</th>
-                                <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Deadline</th>
-                                <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Amount</th>
-                                <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest">Status</th>
-                                <th class="px-8 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-right">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-50">
-                            <template x-for="assignment in filteredAssignments" :key="assignment.id">
-                                <tr class="hover:bg-slate-50/50 transition-colors group">
-                                    <td class="px-8 py-6">
-                                        <div class="flex items-center gap-4">
-                                            <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-xl text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                                                <span x-text="assignment.service_type === 'writing' ? '✍️' : (assignment.service_type === 'technical' ? '⚙️' : '🎓')"></span>
-                                            </div>
-                                            <div>
-                                                <div class="flex items-center gap-2 mb-0.5">
-                                                    <a :href="'/dashboard/' + assignment.order_number" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors" x-text="assignment.title"></a>
-                                                    <span class="px-2 py-0.5 bg-slate-100 text-[10px] font-black text-slate-500 rounded-md uppercase tracking-tighter" x-text="'#' + assignment.order_number"></span>
-                                                </div>
-                                                <p class="text-xs font-bold text-slate-400 uppercase tracking-tight" x-text="assignment.subject"></p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-8 py-6">
-                                        <div class="flex items-center gap-2 text-slate-600">
-                                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                            <span class="font-medium" x-text="assignment.deadline"></span>
-                                        </div>
-                                    </td>
-                                    <td class="px-8 py-6">
-                                        <div class="flex flex-col">
-                                            <span class="text-lg font-black text-slate-900 leading-none">$<span x-text="(parseFloat(assignment.budget) || 0).toFixed(2)"></span></span>
-                                            <div class="flex items-center gap-1.5 mt-1">
-                                                <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded" x-show="parseFloat(assignment.amount_paid) > 0" x-text="'+$' + (parseFloat(assignment.amount_paid) || 0).toFixed(2)"></span>
-                                                <span class="text-[10px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded" x-show="parseFloat(assignment.amount_due) > 0" x-text="'Due: $' + (parseFloat(assignment.amount_due) || 0).toFixed(2)"></span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-8 py-6">
-                                        <div class="flex flex-col gap-1.5">
-                                            <span :class="getStatusColor(assignment.status)" class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border inline-flex items-center" x-text="assignment.status"></span>
-                                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest border w-fit"
-                                                :class="{
-                                                    'bg-emerald-50 text-emerald-600 border-emerald-200': assignment.payment_status === 'paid',
-                                                    'bg-rose-50 text-rose-600 border-rose-200': assignment.payment_status === 'unpaid',
-                                                    'bg-sky-50 text-sky-600 border-sky-200': assignment.payment_status === 'partial'
-                                                }"
-                                                x-text="assignment.payment_status">
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="px-8 py-6 text-right">
-                                        <div class="flex items-center justify-end gap-2">
-                                            <button x-on:click="openMessaging(assignment)" class="p-2 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all">
-                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-                                            </button>
-                                            <a :href="'/dashboard/' + assignment.order_number" class="p-2 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-all opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">
-                                                Manage
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </template>
-                        </tbody>
-                    </table>
-                </div>
-
-
-
-                    <!-- Empty State -->
-                    <div x-show="!loading && filteredAssignments.length === 0" class="p-20 text-center">
-                        <template x-if="apiError">
-                            <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 font-bold inline-block animate-shake">
-                                ⚠️ <span x-text="apiError"></span>
-                                <button x-on:click="fetchAssignments()" class="ml-4 text-red-800 underline hover:text-red-900">Retry</button>
-                            </div>
-                        </template>
-                        <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl opacity-50">📂</div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">No assignments found</h4>
-                        <p class="text-slate-500 mb-8 max-w-xs mx-auto">Get started by placing your first assignment request with us today.</p>
-                        <a href="{{ route('order') }}" class="inline-flex px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-100">
-                            Place New Order
-                        </a>
-                    </div>
+                    <!-- Shown when a filter hides every row -->
+                    @if (count($assignments) > 0)
+                        <div class="p-20 text-center" x-show="filteredAssignments.length === 0" x-cloak>
+                            <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl opacity-50">📂</div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">No matching assignments</h4>
+                            <p class="text-slate-500 mb-8 max-w-xs mx-auto">No orders match this filter. Try selecting a different tab.</p>
+                        </div>
+                    @endif
                 </div>
             </div>
 

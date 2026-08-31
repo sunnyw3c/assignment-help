@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AssignmentServiceController;
 use App\Http\Controllers\CaseStudyController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EssayWritingController;
 use App\Http\Controllers\ExpertController;
 use App\Http\Controllers\FaqController;
@@ -71,18 +72,10 @@ Route::get('/order', [OrderController::class, 'create'])->name('order');
 Route::get('/order/success/{assignment}', [OrderController::class, 'success'])->name('order.success')->middleware(['auth']);
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
-Route::get('/dashboard', function () {
-    return view('dashboard', [
-        'header' => 'Student Dashboard',
-    ]);
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/dashboard/{id}', function ($id) {
-    return view('assignment-details', [
-        'order_number' => $id,
-        'header' => 'Assignment Details',
-    ]);
-})->middleware(['auth', 'verified'])->name('dashboard.details');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/{order_number}', [DashboardController::class, 'show'])->name('dashboard.details');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -92,6 +85,8 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->prefix('api')->group(function () {
     Route::get('/assignments', [\App\Http\Controllers\Api\AssignmentApiController::class, 'index']);
+    Route::patch('/assignments/{assignment}', [\App\Http\Controllers\Api\AssignmentApiController::class, 'update']);
+    Route::post('/assignments/{assignment}/price-preview', [\App\Http\Controllers\Api\AssignmentApiController::class, 'previewPrice']);
     Route::post('/assignments/{assignment}/upload-file', [\App\Http\Controllers\Api\AssignmentApiController::class, 'uploadFile']);
     Route::get('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'index']);
     Route::post('/assignments/{assignment}/messages', [\App\Http\Controllers\Api\AssignmentMessageController::class, 'store']);

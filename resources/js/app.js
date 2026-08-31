@@ -22,15 +22,29 @@ if (document.readyState === 'loading') {
     loadImmersiveInteractions();
 }
 
-if (document.documentElement.hasAttribute('data-axios')) {
-    import('./bootstrap');
-}
+// Alpine components call window.axios inside x-init, so axios has to be on the
+// window before Alpine.start() runs — otherwise the two dynamic imports race and
+// x-init throws on an undefined window.axios.
+const axiosReady = document.documentElement.hasAttribute('data-axios')
+    ? import('./bootstrap')
+    : Promise.resolve();
 
 // Livewire includes Alpine on opted-in pages. Other pages only download Alpine
-// when their rendered markup actually contains an Alpine component.
-if (!document.documentElement.hasAttribute('data-livewire') && document.querySelector('[x-data]')) {
-    import('alpinejs').then(({ default: Alpine }) => {
+// when their rendered markup actually contains an Alpine component. The [x-data]
+// probe has to wait for the body to exist — this bundle is a module in <head>,
+// so at top level the component markup has not been parsed yet.
+const startAlpine = () => {
+    if (document.documentElement.hasAttribute('data-livewire')) return;
+    if (!document.querySelector('[x-data]')) return;
+
+    Promise.all([axiosReady, import('alpinejs')]).then(([, { default: Alpine }]) => {
         window.Alpine = Alpine;
         Alpine.start();
     });
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startAlpine, { once: true });
+} else {
+    startAlpine();
 }

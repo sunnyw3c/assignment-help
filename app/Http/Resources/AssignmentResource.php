@@ -28,6 +28,7 @@ class AssignmentResource extends JsonResource
             'amount_paid' => $this->amount_paid ?? 0,
             'amount_due' => $this->amount_due ?? 0,
             'status' => $this->status ?? 'Pending',
+            'is_editable' => \App\Http\Controllers\Api\AssignmentApiController::isEditable($this->resource),
             'academic_level' => $this->academic_level,
             'description' => $this->description,
             'specific_requirements' => $this->specific_requirements,
