@@ -34,13 +34,21 @@ const axiosReady = document.documentElement.hasAttribute('data-axios')
 // probe has to wait for the body to exist — this bundle is a module in <head>,
 // so at top level the component markup has not been parsed yet.
 const startAlpine = () => {
+    if (window.Alpine) return;
     if (document.documentElement.hasAttribute('data-livewire')) return;
     if (!document.querySelector('[x-data]')) return;
 
-    Promise.all([axiosReady, import('alpinejs')]).then(([, { default: Alpine }]) => {
-        window.Alpine = Alpine;
-        Alpine.start();
-    });
+    Promise.all([axiosReady, import('alpinejs')])
+        .then(([, { default: Alpine }]) => {
+            window.Alpine = Alpine;
+            Alpine.start();
+        })
+        .catch((error) => {
+            // Pages whose entire body sits inside <template x-if> render blank
+            // when this import fails, so make the cause visible rather than
+            // leaving a silently empty page.
+            console.error('Alpine failed to load; interactive content will not render.', error);
+        });
 };
 
 if (document.readyState === 'loading') {
@@ -48,3 +56,9 @@ if (document.readyState === 'loading') {
 } else {
     startAlpine();
 }
+
+// A dynamic import that fails once (stale chunk hash after a deploy, a dropped
+// connection) never retries on its own. Give it one more chance after load.
+window.addEventListener('load', () => {
+    if (!window.Alpine) startAlpine();
+});
