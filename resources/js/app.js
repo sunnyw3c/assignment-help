@@ -33,10 +33,18 @@ const axiosReady = document.documentElement.hasAttribute('data-axios')
 // when their rendered markup actually contains an Alpine component. The [x-data]
 // probe has to wait for the body to exist — this bundle is a module in <head>,
 // so at top level the component markup has not been parsed yet.
+// Guards against a second Alpine.start(). window.Alpine is only assigned once
+// the dynamic import resolves, so the DOMContentLoaded call and the load
+// fallback could both get past that check while the first import was still in
+// flight, starting Alpine twice over the same tree.
+let alpineBootstrapped = false;
+
 const startAlpine = () => {
-    if (window.Alpine) return;
+    if (alpineBootstrapped || window.Alpine) return;
     if (document.documentElement.hasAttribute('data-livewire')) return;
     if (!document.querySelector('[x-data]')) return;
+
+    alpineBootstrapped = true;
 
     Promise.all([axiosReady, import('alpinejs')])
         .then(([, { default: Alpine }]) => {
@@ -44,6 +52,11 @@ const startAlpine = () => {
             Alpine.start();
         })
         .catch((error) => {
+            // A dynamic import that fails once (stale chunk hash after a
+            // deploy, a dropped connection) never retries on its own. Clearing
+            // the flag lets the load fallback have one more go.
+            alpineBootstrapped = false;
+
             // Pages whose entire body sits inside <template x-if> render blank
             // when this import fails, so make the cause visible rather than
             // leaving a silently empty page.
@@ -57,8 +70,6 @@ if (document.readyState === 'loading') {
     startAlpine();
 }
 
-// A dynamic import that fails once (stale chunk hash after a deploy, a dropped
-// connection) never retries on its own. Give it one more chance after load.
 window.addEventListener('load', () => {
     if (!window.Alpine) startAlpine();
 });
