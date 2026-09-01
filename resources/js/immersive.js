@@ -199,15 +199,28 @@ function initRippleEffect() {
 
 // Page Transition Effect
 function initPageTransitions() {
-    // Add fade-in animation to page on load
-    document.body.style.opacity = '0';
+    const revealBody = () => {
+        document.body.style.transition = 'opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        document.body.style.opacity = '1';
+    };
 
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.body.style.transition = 'opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            document.body.style.opacity = '1';
-        }, 100);
-    });
+    // This module is dynamically imported, so it can land on either side of the
+    // window 'load' event. Hiding the body and then waiting for a 'load' that
+    // has already fired leaves the page permanently blank — which is what the
+    // heavier pages (Livewire + chat widget) were hitting.
+    if (document.readyState === 'complete') {
+        revealBody();
+    } else {
+        document.body.style.opacity = '0';
+
+        window.addEventListener('load', () => {
+            setTimeout(revealBody, 100);
+        }, { once: true });
+
+        // Safety net: never leave the page invisible if 'load' is delayed or
+        // never fires (a hung third-party script, a stalled image).
+        setTimeout(revealBody, 3000);
+    }
 
     // Handle navigation links
     const links = document.querySelectorAll('a:not([target="_blank"])');
@@ -216,17 +229,38 @@ function initPageTransitions() {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
 
-            // Only apply to internal links
-            if (href && !href.startsWith('#') && !href.startsWith('http')) {
-                e.preventDefault();
+            if (!href || href.startsWith('#') || href.startsWith('http')) return;
 
-                document.body.style.opacity = '0';
+            // Leave anything that is not a plain left-click navigation to the
+            // browser: modifier-clicks open a new tab, and fading out the page
+            // we are staying on would blank it for good.
+            if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 400);
-            }
+            // Non-navigating or browser-handled hrefs must not fade the page.
+            if (/^(javascript:|mailto:|tel:|data:|blob:)/i.test(href)) return;
+            if (link.hasAttribute('download') || link.hasAttribute('target')) return;
+
+            // Livewire/Alpine wire their own click behaviour onto some links.
+            if (link.hasAttribute('wire:click') || link.hasAttribute('x-on:click') || link.hasAttribute('@click')) return;
+
+            e.preventDefault();
+
+            document.body.style.opacity = '0';
+
+            // If the navigation is blocked or the user comes back via bfcache,
+            // make sure the page is not left invisible.
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400);
+
+            setTimeout(revealBody, 2000);
         });
+    });
+
+    // Restoring from the back/forward cache replays the faded-out body we left
+    // behind when navigating away, so force it visible again.
+    window.addEventListener('pageshow', (e) => {
+        if (e.persisted) revealBody();
     });
 }
 
