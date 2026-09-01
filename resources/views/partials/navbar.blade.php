@@ -176,11 +176,10 @@
                 </button>
 
                 @guest
+                    {{-- No sign-up link: registration is order-driven, and the
+                         "Order Now" button below already leads there. --}}
                     <a href="{{ route('login') }}" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
                         Log In
-                    </a>
-                    <a href="{{ route('register') }}" class="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-600/10 transition-all hover:bg-indigo-700">
-                        Sign Up
                     </a>
                 @else
                     <a href="{{ route('dashboard') }}" class="text-sm font-semibold text-slate-700 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white">
@@ -276,8 +275,9 @@
 
             <div class="mt-2 space-y-2 border-t border-slate-100 pt-4 dark:border-slate-800">
                 @guest
+                    {{-- No sign-up link: registration is order-driven, and the
+                         "Order Now" button below already leads there. --}}
                     <a href="{{ route('login') }}" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Log In</a>
-                    <a href="{{ route('register') }}" class="block rounded-xl bg-indigo-600 px-4 py-2.5 text-center text-white shadow-sm transition-all">Sign Up</a>
                 @else
                     <a href="{{ route('dashboard') }}" class="block rounded-xl px-4 py-2.5 text-center text-slate-700 transition-colors hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-slate-800">Dashboard</a>
                     <form method="POST" action="{{ route('logout') }}" class="block w-full">

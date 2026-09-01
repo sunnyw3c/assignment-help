@@ -1,19 +1,26 @@
 <?php
 
-test('registration screen can be rendered', function () {
-    $response = $this->get('/register');
+use Illuminate\Support\Facades\Route;
 
-    $response->assertStatus(200);
+// Self-serve registration is currently disabled — the first order creates the
+// account instead (see OrderController::store). The routes in routes/auth.php
+// are commented out; re-enable these tests alongside them.
+
+test('registration screen is not reachable', function () {
+    $this->get('/register')->assertNotFound();
 });
 
-test('new users can register', function () {
-    $response = $this->post('/register', [
+test('registration cannot be posted', function () {
+    $this->post('/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
         'password' => 'password',
         'password_confirmation' => 'password',
-    ]);
+    ])->assertNotFound();
 
-    $this->assertAuthenticated();
-    $response->assertRedirect(route('dashboard', absolute: false));
+    $this->assertGuest();
+});
+
+test('the register route is not defined', function () {
+    expect(Route::has('register'))->toBeFalse();
 });

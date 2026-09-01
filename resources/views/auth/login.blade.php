@@ -1,47 +1,77 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-guest-layout title="Log in">
+    <x-auth-header
+        :title="__('Log in to your account')"
+        :description="__('Enter your email and password below to continue.')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <!-- Session Status -->
+    <x-auth-session-status :status="session('status')" />
+
+    <form method="POST" action="{{ route('login') }}" class="space-y-5">
         @csrf
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <label for="email" class="auth-label">{{ __('Email address') }}</label>
+            <input id="email" name="email" type="email" value="{{ old('email') }}"
+                   class="auth-input" placeholder="you@example.com"
+                   required autofocus autocomplete="username"
+                   @error('email') aria-invalid="true" @enderror>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <div x-data="{ show: false }">
+            <div class="flex items-baseline justify-between">
+                <label for="password" class="auth-label">{{ __('Password') }}</label>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" class="auth-link mb-1.5 text-xs font-medium">
+                        {{ __('Forgot password?') }}
+                    </a>
+                @endif
+            </div>
+
+            <div class="relative">
+                <input id="password" name="password"
+                       x-bind:type="show ? 'text' : 'password'"
+                       class="auth-input pe-10" placeholder="{{ __('Password') }}"
+                       required autocomplete="current-password"
+                       @error('password') aria-invalid="true" @enderror>
+
+                <button type="button" class="auth-reveal" x-on:click="show = !show"
+                        x-bind:aria-label="show ? '{{ __('Hide password') }}' : '{{ __('Show password') }}'">
+                    <svg x-show="!show" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1 1 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178a1 1 0 010 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <svg x-show="show" x-cloak class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243" />
+                    </svg>
+                </button>
+            </div>
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+        <label for="remember_me" class="flex w-fit cursor-pointer items-center gap-2.5">
+            <input id="remember_me" name="remember" type="checkbox"
+                   class="auth-check focus:ring-2 focus:ring-indigo-500/40 focus:ring-offset-0">
+            <span class="auth-muted text-sm">{{ __('Remember me') }}</span>
+        </label>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
+        <button type="submit" class="auth-btn">
+            {{ __('Log in') }}
+        </button>
     </form>
+
+    <p class="auth-muted mt-6 text-center text-sm">
+        {{ __("Don't have an account?") }}
+        @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="auth-link font-semibold">{{ __('Sign up') }}</a>
+        @else
+            {{-- No self-serve registration: the first order creates the account. --}}
+            <a href="{{ route('order') }}" class="auth-link font-semibold">{{ __('Place an order') }}</a>
+        @endif
+    </p>
 </x-guest-layout>
