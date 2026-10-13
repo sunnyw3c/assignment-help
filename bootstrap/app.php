@@ -16,6 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => \App\Http\Middleware\RequireRole::class,
         ]);
         $middleware->statefulApi();
+        $middleware->validateCsrfTokens(except: [
+            'mail/unsubscribe/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

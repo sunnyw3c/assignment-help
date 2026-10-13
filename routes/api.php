@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Admin\AuthController;
 use App\Http\Controllers\Api\Admin\MailController;
 use App\Http\Controllers\Api\Admin\MessageController;
 use App\Http\Controllers\Api\Admin\OrderController;
+use App\Http\Controllers\Api\Admin\ReviewController as AdminReviewController;
 use App\Http\Controllers\Api\Admin\StatsController;
 use App\Http\Controllers\Api\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -45,10 +46,22 @@ Route::prefix('admin')->group(function () {
         Route::get('/writers', [UserController::class, 'writers']);
         Route::get('/writers/{user}', [UserController::class, 'showWriter']);
 
-        // Writer create/update — admin + manager only
+        // Writer create/update/delete — admin + manager only
         Route::middleware('role:admin,manager')->group(function () {
             Route::post('/writers', [UserController::class, 'storeWriter']);
             Route::post('/writers/{user}', [UserController::class, 'updateWriter']);
+            Route::patch('/writers/{user}', [UserController::class, 'updateWriter']);
+            Route::delete('/writers/{user}', [UserController::class, 'destroyWriter']);
+            Route::patch('/writers/{user}/availability', [UserController::class, 'toggleAvailability']);
+
+            // Reviews — admin + manager only
+            Route::get('/reviews', [AdminReviewController::class, 'index']);
+            Route::post('/reviews', [AdminReviewController::class, 'store']);
+            Route::get('/reviews/{review}', [AdminReviewController::class, 'show']);
+            Route::patch('/reviews/{review}', [AdminReviewController::class, 'update']);
+            Route::post('/reviews/{review}', [AdminReviewController::class, 'update']);
+            Route::delete('/reviews/{review}', [AdminReviewController::class, 'destroy']);
+            Route::patch('/reviews/{review}/toggle-approval', [AdminReviewController::class, 'toggleApproval']);
 
             // Mail
             Route::post('/mail/send', [MailController::class, 'send']);

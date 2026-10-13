@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AssignmentServicesSeeder::class,
             RoleSeeder::class,
+            ReviewSeeder::class,
+            WriterSeeder::class,
         ]);
     }
 }

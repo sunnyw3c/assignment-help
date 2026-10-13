@@ -13,6 +13,7 @@ use App\Http\Controllers\LabReportController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LawAssignmentController;
 use App\Http\Controllers\LiteratureReviewController;
+use App\Http\Controllers\MarketingUnsubscribeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PresentationDesignController;
 use App\Http\Controllers\PricingController;
@@ -24,6 +25,12 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ThesisDissertationController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/mail/unsubscribe/{token}', [MarketingUnsubscribeController::class, 'show'])
+    ->middleware('signed')
+    ->name('mail.unsubscribe');
+Route::post('/mail/unsubscribe/{token}', [MarketingUnsubscribeController::class, 'store'])
+    ->middleware('signed');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 Route::get('/sitemap', [SitemapController::class, 'html'])->name('sitemap.html');
