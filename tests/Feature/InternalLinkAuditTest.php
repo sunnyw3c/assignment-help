@@ -21,7 +21,8 @@ class InternalLinkAuditTest extends TestCase
             '/sitemap.xml',
             '/order',
             '/login',
-            '/register',
+            // '/register' — self-serve registration is disabled; ordering
+            // creates the account instead.
             '/forgot-password',
         ];
         $queued = array_fill_keys($queue, true);

@@ -13,7 +13,12 @@ export default defineConfig({
         cssCodeSplit: true,
         sourcemap: false,
         minify: 'esbuild',
-        target: 'es2015',
+        // Must stay >= es2019. Alpine's reactivity is built on Proxy, and
+        // esbuild's es2015 target rewrites the getters/spread it relies on into
+        // forms the proxy no longer intercepts. Alpine then starts cleanly and
+        // throws nothing, but every x-data component evaluates to an empty
+        // object, so x-text bindings render blank.
+        target: 'es2020',
         // Reduce chunk size to minimize main thread blocking
         rollupOptions: {
             output: {

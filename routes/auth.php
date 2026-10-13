@@ -12,10 +12,14 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisteredUserController::class, 'create'])
-        ->name('register');
-
-    Route::post('register', [RegisteredUserController::class, 'store']);
+    // Self-serve registration is disabled for now: placing a first order
+    // creates the account automatically (see OrderController::store). Restore
+    // these two routes — and the "Sign Up" links in partials/navbar.blade.php —
+    // to turn it back on. Views/controller are kept in place deliberately.
+    // Route::get('register', [RegisteredUserController::class, 'create'])
+    //     ->name('register');
+    //
+    // Route::post('register', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');

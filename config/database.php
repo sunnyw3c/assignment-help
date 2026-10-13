@@ -57,8 +57,10 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            // PDO::MYSQL_ATTR_SSL_CA is deprecated on PHP 8.5; the notice it emits
+            // corrupts every response body (it broke /livewire/livewire.js).
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                (class_exists(\Pdo\Mysql::class) ? \Pdo\Mysql::ATTR_SSL_CA : PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
 
@@ -77,8 +79,10 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            // PDO::MYSQL_ATTR_SSL_CA is deprecated on PHP 8.5; the notice it emits
+            // corrupts every response body (it broke /livewire/livewire.js).
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                (class_exists(\Pdo\Mysql::class) ? \Pdo\Mysql::ATTR_SSL_CA : PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
 

@@ -2,6 +2,10 @@
 
 @section('title', 'Place Order - Get Academic Help')
 
+{{-- Livewire ships its own Alpine build; this stops app.js from starting a
+     second copy and leaving @entangle bindings dead. --}}
+@section('uses_livewire', true)
+
 @section('content')
 <div class="min-h-screen bg-slate-50/60 py-6 sm:py-10 relative overflow-hidden">
     {{-- Subtle Ambient Mesh Background --}}
