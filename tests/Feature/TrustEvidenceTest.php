@@ -55,3 +55,13 @@ it('renders reviews page with server-rendered reviews, aggregate rating, and sch
     $response->assertSee('"@type": "AggregateRating"', false);
     $response->assertSee('"ratingValue":', false);
 });
+
+it('seeds writers successfully via WriterSeeder', function () {
+    $this->seed(\Database\Seeders\WriterSeeder::class);
+
+    $this->assertDatabaseHas('users', [
+        'email' => 'sarah.jenkins@assignmenthelpusa.com',
+        'name' => 'Dr. Sarah Jenkins',
+    ]);
+});
+

@@ -266,7 +266,6 @@ class WriterSeeder extends Seeder
                 [
                     'name' => $data['name'],
                     'password' => Hash::make('WriterPass2026!'),
-                    'role' => 'writer',
                     'photo' => $data['photo'],
                     'title' => $data['title'],
                     'bio' => $data['bio'],
